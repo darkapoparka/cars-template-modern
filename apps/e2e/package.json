@@ -1,0 +1,27 @@
+{
+  "name": "e2e",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf playwright-report test-results node_modules",
+    "e2e": "playwright test",
+    "e2e:public": "node run-public-gate.mjs",
+    "e2e:public:list": "node run-public-gate.mjs --list",
+    "e2e:release": "node ../../scripts/run-authenticated-preview.mjs",
+    "e2e:release:direct": "playwright test --config=playwright.release.config.ts",
+    "e2e:headed": "playwright test --headed",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@clerk/testing": "2.2.11",
+    "@playwright/test": "1.61.1",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "25.3.5",
+    "api": "workspace:*",
+    "app": "workspace:*",
+    "typescript": "^5.9.3",
+    "web": "workspace:*"
+  }
+}

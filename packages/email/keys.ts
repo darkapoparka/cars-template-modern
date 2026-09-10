@@ -1,0 +1,25 @@
+import { createEnv } from "@t3-oss/env-nextjs";
+import { z } from "zod";
+
+export const keys = () =>
+  createEnv({
+    emptyStringAsUndefined: true,
+    skipValidation: process.env.SKIP_ENV_VALIDATION === "true",
+    server: {
+      RESEND_FROM: z
+        .string()
+        .email()
+        .refine((value) => value === value.trim())
+        .optional(),
+      RESEND_TOKEN: z
+        .string()
+        .startsWith("re_")
+        .min(12)
+        .refine((value) => value === value.trim())
+        .optional(),
+    },
+    runtimeEnv: {
+      RESEND_FROM: process.env.RESEND_FROM,
+      RESEND_TOKEN: process.env.RESEND_TOKEN,
+    },
+  });

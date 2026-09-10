@@ -1,0 +1,30 @@
+{
+  "name": "@repo/storage",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./client": "./client.ts",
+    "./inventory-imports": "./inventory-imports.ts",
+    "./keys": "./keys.ts",
+    "./photo-processing": "./photo-processing.ts",
+    "./private-documents": "./private-documents.ts",
+    "./upload-policy": "./upload-policy.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@repo/marketplace-domain": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.13.10",
+    "@vercel/blob": "^2.3.1",
+    "server-only": "^0.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "vitest": "^4.0.18"
+  }
+}

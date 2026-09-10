@@ -1,0 +1,46 @@
+{
+  "name": "@repo/marketplace",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./categories": "./categories.ts",
+    "./commerce": "./commerce.ts",
+    "./dealer": "./dealer.ts",
+    "./directory": "./directory.ts",
+    "./external-inventory": "./external-inventory.ts",
+    "./filters": "./filters.ts",
+    "./format": "./format.ts",
+    "./inventory-contract": "./inventory-contract.ts",
+    "./inventory-csv": "./inventory-csv.ts",
+    "./inventory-policy": "./inventory-policy.ts",
+    "./lead-site": "./lead-site.ts",
+    "./lead-input": "./lead-input.ts",
+    "./listing-input": "./listing-input.ts",
+    "./listing-lifecycle": "./listing-lifecycle.ts",
+    "./mock-data": "./mock-data.ts",
+    "./mock-directory": "./mock-directory.ts",
+    "./organization-verification": "./organization-verification.ts",
+    "./providers": "./providers.ts",
+    "./registry": "./registry.ts",
+    "./routes": "./routes.ts",
+    "./search-params": "./search-params.ts",
+    "./types": "./types.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@repo/marketplace-domain": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

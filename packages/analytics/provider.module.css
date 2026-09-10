@@ -1,0 +1,48 @@
+.consentRegion,
+.preferencesRegion {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  background: var(--background);
+}
+
+.consentRegion {
+  justify-content: center;
+  padding: max(0.5rem, env(safe-area-inset-top, 0px))
+    max(0.5rem, env(safe-area-inset-right, 0px)) 0.5rem
+    max(0.5rem, env(safe-area-inset-left, 0px));
+}
+
+.consentPanel {
+  width: min(100%, 32rem);
+}
+
+:global(html[data-analytics-consent-resolved="true"]) .consentRegion {
+  display: none;
+}
+
+.preferencesRegion {
+  justify-content: flex-end;
+  padding: 0.75rem max(0.75rem, env(safe-area-inset-right, 0px))
+    calc(4.75rem + env(safe-area-inset-bottom, 0px))
+    max(0.75rem, env(safe-area-inset-left, 0px));
+}
+
+.preferencesButton {
+  max-width: 100%;
+  white-space: normal;
+}
+
+@media (min-width: 64rem) {
+  .consentRegion {
+    padding: max(0.75rem, env(safe-area-inset-top, 0px))
+      max(0.75rem, env(safe-area-inset-right, 0px)) 0.75rem
+      max(0.75rem, env(safe-area-inset-left, 0px));
+  }
+
+  .preferencesRegion {
+    padding: 0.75rem max(0.75rem, env(safe-area-inset-right, 0px))
+      max(0.75rem, env(safe-area-inset-bottom, 0px))
+      max(0.75rem, env(safe-area-inset-left, 0px));
+  }
+}

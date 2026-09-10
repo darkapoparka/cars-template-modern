@@ -1,0 +1,42 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "crons": [
+    {
+      "path": "/cron/keep-alive",
+      "schedule": "0 1 * * *"
+    },
+    {
+      "path": "/cron/auth-recovery",
+      "schedule": "*/10 * * * *"
+    },
+    {
+      "path": "/cron/inventory-import-scans",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/cron/inventory-imports",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/cron/inventory-reconciliation",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/cron/verification-expiry",
+      "schedule": "15 * * * *"
+    },
+    {
+      "path": "/cron/inventory-import-retention",
+      "schedule": "15 2 * * *"
+    },
+    {
+      "path": "/cron/kyb-retention",
+      "schedule": "45 2 * * *"
+    },
+    {
+      "path": "/cron/listing-media-cleanup",
+      "schedule": "0 3 * * *"
+    }
+  ]
+}

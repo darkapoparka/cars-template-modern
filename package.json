@@ -1,0 +1,50 @@
+{
+  "name": "day-night-auto-group-showroom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "db:studio": "pnpm --filter studio studio",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "test": "pnpm unit",
+    "unit": "turbo test --filter=!e2e",
+    "e2e": "pnpm --filter e2e e2e",
+    "e2e:public": "pnpm --filter e2e e2e:public",
+    "typecheck": "turbo typecheck",
+    "ci:affected": "turbo run test typecheck build --affected",
+    "release:preflight": "node scripts/release-preflight.mjs --target=preview",
+    "release:preflight:production": "node scripts/release-preflight.mjs --target=production",
+    "release:preflight:contracts": "node scripts/release-preflight.mjs --target=contracts",
+    "release:readiness:preview": "node scripts/release-preflight.mjs --target=preview --format=readiness-json",
+    "release:readiness:production": "node scripts/release-preflight.mjs --target=production --format=readiness-json",
+    "release:preflight:test": "node --test scripts/package-architecture.test.mjs scripts/release-preflight.test.mjs scripts/authenticated-preview-contract.test.mjs scripts/next-typegen.test.mjs apps/studio/studio.test.mjs",
+    "verify": "pnpm release:preflight:contracts && pnpm release:preflight:test && pnpm check && pnpm boundaries && pnpm unit && pnpm typecheck && pnpm audit --prod --audit-level=high && pnpm build",
+    "verify:release": "pnpm release:preflight && pnpm verify && pnpm --filter e2e e2e:release",
+    "analyze": "turbo analyze",
+    "boundaries": "turbo boundaries",
+    "bump-deps": "pnpm dlx npm-check-updates --deep -u && pnpm install",
+    "bump-ui": "pnpm dlx shadcn@latest add --all --overwrite -c packages/design-system",
+    "migrate": "cd packages/database && pnpm exec prisma format && pnpm exec prisma generate && pnpm exec prisma migrate dev",
+    "migrate:deploy": "cd packages/database && pnpm exec prisma generate && pnpm exec prisma migrate deploy",
+    "db:push": "cd packages/database && pnpm exec prisma format && pnpm exec prisma generate && pnpm exec prisma db push",
+    "clean": "git clean -xdf node_modules"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.6",
+    "@repo/typescript-config": "workspace:*",
+    "@turbo/gen": "^2.8.14",
+    "@types/node": "^25.3.5",
+    "turbo": "^2.8.14",
+    "typescript": "^5.9.3",
+    "ultracite": "7.2.5",
+    "vitest": "^4.0.18"
+  },
+  "engines": {
+    "node": ">=22.22.0 <23",
+    "pnpm": "11.4.0"
+  },
+  "packageManager": "pnpm@11.4.0",
+  "type": "module"
+}

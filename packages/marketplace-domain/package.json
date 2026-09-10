@@ -1,0 +1,45 @@
+{
+  "name": "@repo/marketplace-domain",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./commerce": "./commerce.ts",
+    "./dealer": "./dealer.ts",
+    "./directory": "./directory.ts",
+    "./external-inventory": "./external-inventory.ts",
+    "./global-registry": "./global-registry.ts",
+    "./inventory-contract": "./inventory-contract.ts",
+    "./inventory-csv": "./inventory-csv.ts",
+    "./inventory-policy": "./inventory-policy.ts",
+    "./lead-input": "./lead-input.ts",
+    "./listing-input": "./listing-input.ts",
+    "./listing-lifecycle": "./listing-lifecycle.ts",
+    "./listing-routes": "./listing-routes.ts",
+    "./organization-verification": "./organization-verification.ts",
+    "./private-artifacts": "./private-artifacts.ts",
+    "./provider-ports": "./provider-ports.ts",
+    "./search": "./search.ts",
+    "./taxonomy": "./taxonomy.ts",
+    "./testing/mock-data": "./testing/mock-data.ts",
+    "./types": "./types.ts",
+    "./vehicle-catalog": "./vehicle-catalog.ts",
+    "./vehicle-taxonomy": "./vehicle-taxonomy.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "25.3.5",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

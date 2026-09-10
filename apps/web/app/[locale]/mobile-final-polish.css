@@ -1,0 +1,208 @@
+/* Final mobile-only compatibility polish for the Day & Night public experience. */
+
+@media (max-width: 1023px) {
+  /* dvh alone does not shrink with the software keyboard on Safari/Chrome. */
+  html[data-mobile-viewport="true"] [data-mobile-overlay="fullscreen"] {
+    top: var(--mobile-visible-top, 0px) !important;
+    bottom: auto !important;
+    left: 0 !important;
+    height: var(--mobile-visible-height, 100dvh) !important;
+    max-height: var(--mobile-visible-height, 100dvh) !important;
+    translate: 0 0 !important;
+    transition-property: opacity, transform !important;
+  }
+
+  html[data-mobile-keyboard="true"]
+    [data-vaul-drawer-direction="bottom"][role="dialog"] {
+    bottom: var(--mobile-keyboard-inset, 0px) !important;
+    max-height: calc(var(--mobile-visible-height, 100dvh) - 12px) !important;
+    margin-top: 0 !important;
+    transition-property: opacity, transform !important;
+  }
+
+  html[data-mobile-keyboard="true"] [data-slot="dealer-bottom-nav"] {
+    visibility: hidden;
+  }
+
+  [role="dialog"] :is(input, textarea, select) {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  /* Native-feeling horizontal rails without desktop scrollbar chrome. */
+  .no-scrollbar,
+  [data-slot="mobile-import-routes"] nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .no-scrollbar::-webkit-scrollbar,
+  [data-slot="mobile-import-routes"] nav::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* Internal sheet/dialog scrolling remains available but visually quiet. */
+  [data-slot="mobile-marketplace-overlay-scroll-body"],
+  [data-slot="mobile-import-source-search-body"],
+  [data-slot="mobile-financing-scroll-body"],
+  [data-slot="drawer-content"] [data-slot="command-list"] {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  [data-slot="mobile-marketplace-overlay-scroll-body"]::-webkit-scrollbar,
+  [data-slot="mobile-import-source-search-body"]::-webkit-scrollbar,
+  [data-slot="mobile-financing-scroll-body"]::-webkit-scrollbar,
+  [data-slot="drawer-content"] [data-slot="command-list"]::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* Keep the search field to one explicit, accessible clear action. */
+  [data-slot="mobile-inventory-search-header"]
+    input[type="search"]::-webkit-search-cancel-button,
+  [data-slot="mobile-inventory-search-header"]
+    input[type="search"]::-webkit-search-decoration {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /*
+   * The legacy stylesheet used DOM-shape :has() selectors for full-screen
+   * filters. Restore the explicit component contract: fixed shell, stable
+   * header/footer, and exactly one scrollable body.
+   */
+  [data-slot="mobile-marketplace-overlay"] {
+    display: flex !important;
+    overflow: hidden !important;
+    overscroll-behavior: none !important;
+    scroll-padding-bottom: 0 !important;
+  }
+
+  [data-slot="mobile-marketplace-overlay"]
+    > [data-slot="mobile-marketplace-overlay-header"] {
+    position: static !important;
+    top: auto !important;
+  }
+
+  [data-slot="mobile-marketplace-overlay"]
+    > [data-slot="mobile-marketplace-overlay-scroll-body"] {
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: contain;
+  }
+
+  [data-slot="mobile-marketplace-overlay"]
+    > [data-slot="mobile-marketplace-overlay-footer"] {
+    padding-top: 0.5rem !important;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)) !important;
+    margin-top: 0 !important;
+  }
+
+  [data-slot="lease-vehicle-selector"] [data-slot="lease-finance-action"] {
+    height: 48px;
+    min-height: 48px;
+    font-size: 15px;
+    font-weight: 650;
+    line-height: 20px;
+    color: white;
+    letter-spacing: -0.005em;
+    background: var(--lead-site-accent);
+    border-radius: 0.75rem;
+  }
+
+  [data-slot="lease-vehicle-selector"] [data-slot="lease-finance-action"] svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  [data-slot="lease-vehicle-selector"] [data-slot="lease-finance-action"]:hover,
+  [data-slot="lease-vehicle-selector"]
+    [data-slot="lease-finance-action"]:active {
+    background: var(--lead-site-accent-hover);
+  }
+
+  /*
+   * Import cards preserve the accepted CTA hierarchy while their mobile
+   * spacing is owned by explicit content/action slots instead of last-child.
+   */
+  article[data-slot="external-inventory-card"]
+  > div[data-slot="external-inventory-content"] {
+    padding: 0.625rem 0.75rem;
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"] {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.375rem;
+    padding-top: 0.375rem;
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot] {
+    height: 44px;
+    min-height: 44px;
+    padding-inline: 0.75rem;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 18px;
+    border-radius: 0.625rem;
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-source-action"] {
+    min-width: 6rem;
+    color: white;
+    background: #18181b;
+    border-color: transparent;
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-source-action"]:hover,
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-source-action"]:active {
+    background: #09090b;
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-import-action"] {
+    color: white;
+    background: var(--lead-site-accent);
+  }
+
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-import-action"]:hover,
+  article[data-slot="external-inventory-card"]
+    > div[data-slot="external-inventory-content"]
+    > div[data-slot="external-inventory-action-row"]
+    > a[data-slot="external-inventory-import-action"]:active {
+    background: var(--lead-site-accent-hover);
+  }
+
+  /* Compact docks stay readable and subordinate to content. */
+  [data-slot="marketplace-bottom-nav"] > div > a {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+}

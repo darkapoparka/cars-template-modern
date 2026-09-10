@@ -1,0 +1,9 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "test": {
+      "env": ["BLOB_READ_WRITE_TOKEN"]
+    }
+  }
+}

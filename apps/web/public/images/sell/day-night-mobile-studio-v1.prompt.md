@@ -1,0 +1,7 @@
+# Mobile Sell background
+
+Generated with the built-in imagegen tool, 2026-09-04. Decorative fictional studio artwork, not a photograph of the dealer premises or a vehicle offered for sale. Used only as an empty-alt background on the mobile Sell screen. Existing listing photos remain unchanged.
+
+## Final prompt
+
+Use case: photorealistic-natural. Asset type: portrait mobile automotive app background, not a UI mockup. Create a restrained architectural editorial photograph of an anonymous contemporary automotive appraisal studio. Tall portrait composition. Upper 60 percent is quiet pale warm-gray plaster wall and soft daylight, very low visual detail and ample negative space for dark interface text. In the lower third, a partial dark graphite car silhouette at a slight rear three-quarter angle, parked in a clean concrete vehicle inspection bay; crop naturally, understated and secondary to architecture. Realistic proportions and believable tactile materials, natural soft window light, matte concrete floor, architectural magazine photography, neutral whites and graphite. No dramatic spotlights, no neon, no glow, no smoke, no glossy CGI, no futuristic tunnel, no people, no logos, no letters, no numbers, no signage, no watermark. This is atmospheric fictional studio artwork, not an inventory listing photo. Professional calm, functional mobile app backdrop, not a dealership advertising poster.

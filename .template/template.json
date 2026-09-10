@@ -1,0 +1,44 @@
+{
+  "key": "modern",
+  "name": "Modern",
+  "aliases": [
+    "6212"
+  ],
+  "path": "templates/modern",
+  "version": "2026.09.06-refresh-1",
+  "family": "modern",
+  "stack": "next-monorepo",
+  "sourcePort": 6212,
+  "libraryPort": 6462,
+  "entry": "/cars",
+  "homes": [
+    {
+      "id": "main",
+      "route": "/cars"
+    }
+  ],
+  "desktop": 7,
+  "mobile": 8.5,
+  "priority": "shortlist",
+  "readiness": "source-branded-candidate",
+  "reskinEffort": "medium",
+  "brandFiles": [
+    "packages/marketplace/lead-site.ts",
+    "packages/marketplace",
+    "apps/web/public",
+    "apps/web/app"
+  ],
+  "note": "Compact stock-first storefront. Full workspace retained, independently installed and verified on 6462 in existing static demo mode. Prisma generation and web typecheck passed; provider services remain unconfigured.",
+  "sourceSnapshot": {
+    "source": "M:\\leads-cars\\projects\\bulgaria\\day-night-auto-group",
+    "head": "7c635fee1c8fadca317a8a65d5887c0c455b021d",
+    "branch": "codex/mobile-header-contact-refinement",
+    "includesDirtyFiles": true,
+    "files": 1368,
+    "bytes": 95855002
+  },
+  "personalizationRequired": true,
+  "crmRegistration": "not-performed",
+  "refreshedAt": "2026-09-06T20:48:34.551Z",
+  "refreshEvidence": "J:/cars/audits/2026-09-06/asko96-build/refresh-complete.json"
+}

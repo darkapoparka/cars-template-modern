@@ -1,0 +1,37 @@
+{
+  "name": "@repo/cms",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./components/body": "./components/body.tsx",
+    "./components/code-block": "./components/code-block.tsx",
+    "./components/feed": "./components/feed.tsx",
+    "./components/image": "./components/image.tsx",
+    "./components/toc": "./components/toc.tsx",
+    "./components/toolbar": "./components/toolbar.tsx",
+    "./keys": "./keys.ts",
+    "./next-config": "./next-config.ts",
+    "./typescript-config.json": "./typescript-config.json"
+  },
+  "scripts": {
+    "dev": "basehub dev",
+    "analyze": "basehub",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.13.10",
+    "basehub": "^9.5.3",
+    "react": "19.2.4",
+    "server-only": "^0.0.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "25.3.5",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "next": "16.2.11"
+  }
+}

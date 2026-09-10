@@ -1,0 +1,9 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "test": {
+      "env": ["CLERK_*", "NEXT_PUBLIC_CLERK_*", "VERCEL*"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title>Example Motors showroom</title>
+  <desc>Neutral placeholder artwork for a dealer sales demo.</desc>
+  <rect width="1600" height="900" fill="#f4f4f5"/>
+  <path d="M0 650h1600v250H0z" fill="#e4e4e7"/>
+  <path d="M270 605h1060l-98-234c-25-58-81-96-144-96H548c-68 0-130 41-155 104L270 605Z" fill="#27272a"/>
+  <path d="m496 415-67 153h736l-62-153c-15-36-50-59-89-59H585c-39 0-74 23-89 59Z" fill="#a1a1aa"/>
+  <circle cx="506" cy="650" r="104" fill="#18181b"/>
+  <circle cx="506" cy="650" r="49" fill="#d4d4d8"/>
+  <circle cx="1094" cy="650" r="104" fill="#18181b"/>
+  <circle cx="1094" cy="650" r="49" fill="#d4d4d8"/>
+  <path d="M739 356v212M429 568h736" stroke="#71717a" stroke-width="8"/>
+  <path d="M277 594h160M1164 594h157" stroke="#ea580c" stroke-linecap="round" stroke-width="20"/>
+</svg>

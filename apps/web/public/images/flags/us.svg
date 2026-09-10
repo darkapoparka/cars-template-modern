@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" role="img" aria-label="United States">
+  <rect width="30" height="20" fill="#fff"/>
+  <g fill="#b22234"><path d="M0 0h30v1.54H0zM0 3.08h30v1.54H0zM0 6.15h30v1.54H0zM0 9.23h30v1.54H0zM0 12.31h30v1.54H0zM0 15.38h30v1.54H0zM0 18.46h30V20H0z"/></g>
+  <path fill="#3c3b6e" d="M0 0h12.8v10.77H0z"/>
+  <g fill="#fff"><circle cx="2" cy="2" r=".45"/><circle cx="5" cy="2" r=".45"/><circle cx="8" cy="2" r=".45"/><circle cx="11" cy="2" r=".45"/><circle cx="3.5" cy="4.6" r=".45"/><circle cx="6.5" cy="4.6" r=".45"/><circle cx="9.5" cy="4.6" r=".45"/><circle cx="2" cy="7.2" r=".45"/><circle cx="5" cy="7.2" r=".45"/><circle cx="8" cy="7.2" r=".45"/><circle cx="11" cy="7.2" r=".45"/></g>
+</svg>

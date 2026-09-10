@@ -1,0 +1,3120 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated"
+}
+
+datasource db {
+  provider     = "postgresql"
+  relationMode = "foreignKeys"
+}
+
+enum AccountStatus {
+  active
+  disabled
+  deleted
+}
+
+enum SellerProfileStatus {
+  unclaimed
+  active
+  disabled
+  deleted
+}
+
+enum DealerOrgType {
+  dealer
+  manufacturer
+  importer
+  distributor
+}
+
+enum OrganizationDirectoryStatus {
+  draft
+  published
+  hidden
+  archived
+}
+
+enum OrganizationDirectoryClaimStatus {
+  unclaimed
+  pending
+  claimed
+}
+
+enum OrganizationDirectoryClaimRequestStatus {
+  pending
+  in_review
+  approved
+  rejected
+  withdrawn
+}
+
+enum OrganizationDirectoryClaimEvidenceKind {
+  business_email
+  registry_record
+  website_control
+  other
+}
+
+enum OrganizationDirectorySourceKind {
+  first_party
+  partner
+  researched
+  government_registry
+}
+
+enum OrganizationBrandRelationshipType {
+  sells
+  imports
+  services
+  authorized_dealer
+  official_importer
+  official_distributor
+  manufacturer
+}
+
+enum OrganizationEvidenceStatus {
+  self_reported
+  pending_review
+  verified
+  expired
+  rejected
+}
+
+enum VerificationStatus {
+  unverified
+  pending
+  verified
+  rejected
+}
+
+enum DealerSubscriptionStatus {
+  trialing
+  active
+  past_due
+  paused
+  canceled
+}
+
+enum DealerRole {
+  owner
+  manager
+  sales
+  viewer
+}
+
+enum DealerMemberStatus {
+  active
+  invited
+  disabled
+}
+
+enum VehicleCategory {
+  car
+  truck
+  motorbike
+  van
+  lease
+}
+
+enum ListingStatus {
+  draft
+  pending_review
+  active
+  paused
+  sold
+  expired
+  rejected
+  archived
+}
+
+enum SellerType {
+  private
+  dealer
+}
+
+enum PriceType {
+  fixed
+  negotiable
+  lease_monthly
+  finance_estimate
+}
+
+enum PriceCurrency {
+  BGN
+  EUR
+}
+
+enum FuelType {
+  gasoline
+  diesel
+  hybrid
+  plug_in_hybrid
+  electric
+  lpg
+  cng
+  other
+}
+
+enum Transmission {
+  automatic
+  manual
+  semi_automatic
+}
+
+enum BodyType {
+  hatchback
+  sedan
+  wagon
+  suv
+  coupe
+  convertible
+  pickup
+  van
+  minibus
+  motorcycle
+  scooter
+  truck
+  other
+}
+
+enum VehicleTaxonomySourceKind {
+  government
+  manufacturer
+  commercial
+  curated
+}
+
+enum VehicleTaxonomyEntityKind {
+  make
+  model
+  derivative
+  generation
+  trim
+  powertrain
+}
+
+enum ProviderJobStatus {
+  queued
+  processing
+  done
+  failed
+  skipped
+  canceled
+}
+
+enum UploadSessionStatus {
+  authorized
+  uploading
+  completed
+  expired
+  canceled
+}
+
+enum MediaUploadStatus {
+  pending
+  uploaded
+  rejected
+  deleted
+}
+
+enum MediaCleanupStatus {
+  none
+  pending
+  processing
+  done
+  failed
+}
+
+enum TrustEvidenceKind {
+  identity
+  vin
+  history
+  service
+  damage
+  odometer
+  inspection
+  warranty
+}
+
+enum TrustEvidenceState {
+  seller_declared
+  verified
+  unavailable
+  rejected
+  expired
+}
+
+enum TrustEvidenceSource {
+  seller
+  dealer
+  automarket
+  provider
+  admin
+}
+
+enum TrustRiskLevel {
+  low
+  medium
+  high
+}
+
+enum LeadStatus {
+  new
+  viewed
+  contacted
+  qualified
+  won
+  lost
+  closed
+  spam
+}
+
+enum LeadSource {
+  listing
+  dealer_profile
+  saved_search
+  feed
+  qr
+  short_link
+  import
+}
+
+enum LeadChannel {
+  web_form
+  in_app
+  phone
+  email
+  dealer_feed
+}
+
+enum LeadIntent {
+  availability
+  finance
+  test_drive
+  trade_in
+  general
+}
+
+enum ConversationStatus {
+  open
+  closed
+  blocked
+}
+
+enum ConversationParticipantRole {
+  buyer
+  private_seller
+  dealer_member
+}
+
+enum MessageKind {
+  text
+  system
+}
+
+enum MessageStatus {
+  sent
+  edited
+  deleted
+}
+
+enum AlertCadence {
+  off
+  instant
+  daily
+  weekly
+}
+
+enum AlertChannel {
+  email
+  in_app
+}
+
+enum DeliveryStatus {
+  queued
+  processing
+  sent
+  delivered
+  failed
+  skipped
+}
+
+enum ModerationReason {
+  duplicate
+  fraud_risk
+  incorrect_details
+  prohibited_content
+  seller_behavior
+  other
+}
+
+enum ModerationSource {
+  buyer_report
+  system_flag
+  admin_review
+}
+
+enum ModerationSeverity {
+  low
+  medium
+  high
+}
+
+enum ModerationStatus {
+  new
+  reviewing
+  resolved
+  dismissed
+}
+
+enum AuditActorType {
+  account
+  admin
+  system
+  provider
+}
+
+enum BillingProvider {
+  stripe
+}
+
+enum BillingAccountStatus {
+  pending
+  active
+  past_due
+  disabled
+}
+
+enum SubscriptionStatus {
+  trialing
+  active
+  past_due
+  paused
+  canceled
+  incomplete
+}
+
+enum EntitlementGrantStatus {
+  trialing
+  active
+  grace
+  suspended
+  expired
+  revoked
+}
+
+enum EntitlementGrantSource {
+  subscription
+  trial
+  operator
+  migration
+}
+
+enum PromotionPlacement {
+  search_top
+  category_featured
+  lease_partner
+}
+
+enum PromotionStatus {
+  scheduled
+  active
+  paused
+  ended
+  canceled
+}
+
+enum PromotionPaymentStatus {
+  unpaid
+  pending
+  paid
+  included_credit
+  refund_pending
+  partially_refunded
+  refunded
+  failed
+  canceled
+}
+
+enum PromotionCancellationStatus {
+  not_requested
+  requested
+  accepted
+  rejected
+}
+
+enum PromotionEventType {
+  created
+  payment_confirmed
+  activated
+  paused
+  resumed
+  expired
+  cancellation_requested
+  canceled
+  refund_requested
+  refunded
+  failed
+}
+
+enum OrganizationOnboardingStatus {
+  registered
+  profile_incomplete
+  kyb_pending
+  in_review
+  approved
+  rejected
+  suspended
+}
+
+enum OrganizationKybStatus {
+  not_started
+  pending
+  in_review
+  verified
+  rejected
+  expired
+  suspended
+}
+
+enum AuthorizationStatus {
+  pending
+  active
+  suspended
+  revoked
+  expired
+  rejected
+}
+
+enum ClerkOrgProvisioningStatus {
+  requested
+  clerk_creating
+  clerk_created
+  projected
+  completed
+  retry_scheduled
+  reconciling
+  validation_failed
+  policy_rejected
+}
+
+enum ExternalIdentitySyncStatus {
+  received
+  applying
+  applied
+  ignored_stale
+  retry_scheduled
+  failed
+}
+
+enum OrganizationLegalEntityType {
+  sole_proprietor
+  partnership
+  private_company
+  public_company
+  nonprofit
+  government
+  other
+}
+
+enum OrganizationKybCaseStatus {
+  draft
+  awaiting_documents
+  ready_for_submission
+  submitted
+  provider_pending
+  needs_information
+  manual_review
+  approved
+  rejected
+  cancelled
+}
+
+enum KybProviderCheckStatus {
+  pending
+  passed
+  failed
+  review_required
+  unavailable
+  expired
+}
+
+enum KybDocumentUploadStatus {
+  authorized
+  completed
+  revoked
+  expired
+}
+
+enum KybDocumentStatus {
+  authorized
+  uploaded
+  quarantined
+  scanning
+  accepted
+  rejected
+  superseded
+  purge_pending
+  purged
+  purge_dead_letter
+}
+
+enum KybReviewDecisionOutcome {
+  needs_information
+  approved
+  rejected
+}
+
+enum OrganizationVerificationGrantStatus {
+  active
+  suspended
+  revoked
+  expired
+}
+
+enum OrganizationVerificationEventType {
+  legal_entity_updated
+  case_created
+  case_transitioned
+  document_authorized
+  document_uploaded
+  document_accepted
+  document_rejected
+  provider_result_recorded
+  information_requested
+  approved
+  rejected
+  grant_suspended
+  grant_reactivated
+  grant_revoked
+  grant_expired
+  projection_refreshed
+}
+
+enum VerificationActorType {
+  account
+  admin
+  system
+  provider
+}
+
+enum InventoryCredentialPurpose {
+  ingress_bearer
+  feed_fetch
+}
+
+enum InventoryCredentialBindingStatus {
+  pending
+  active
+  retiring
+  revoked
+  failed
+}
+
+enum InventoryImportStatus {
+  created
+  uploaded
+  scan_pending
+  mapping_required
+  preview_queued
+  previewing
+  ready
+  apply_queued
+  applying
+  applied
+  applied_with_issues
+  failed
+  cancelled
+  expired
+}
+
+enum InventoryArtifactKind {
+  original
+  normalized_chunk
+  issue_export
+}
+
+enum InventoryArtifactScanStatus {
+  pending
+  clean
+  infected
+  unavailable
+  rejected
+}
+
+enum InventoryImportChunkStatus {
+  pending
+  applying
+  completed
+  completed_with_issues
+  failed
+}
+
+enum InventoryHashBasis {
+  raw_legacy
+  normalized_v1
+}
+
+enum InventorySourceKind {
+  legacy
+  manual
+  csv
+  json
+  https_feed
+  api
+  webhook
+  sftp
+  dms
+}
+
+enum InventorySourceStatus {
+  pending
+  active
+  paused
+  degraded
+  disabled
+}
+
+enum InventorySyncMode {
+  incremental
+  full_snapshot
+}
+
+enum InventorySyncRunStatus {
+  queued
+  receiving
+  validating
+  applying
+  completed
+  completed_with_issues
+  failed
+}
+
+enum InventorySyncTrigger {
+  manual
+  upload
+  api
+  webhook
+  scheduled
+  reconciliation
+}
+
+enum InventoryRecordStatus {
+  received
+  normalized
+  rejected
+  missing
+  tombstoned
+  quarantined
+}
+
+enum InventoryValidationState {
+  valid
+  invalid
+  quarantined
+}
+
+enum InventoryIssueSeverity {
+  warning
+  error
+  blocking
+}
+
+enum VehicleIdentityStatus {
+  provisional
+  canonical
+  disputed
+  merged
+}
+
+enum InventoryRightsKind {
+  owned
+  consigned
+  mandated
+  manufacturer
+  distributor
+  brokerage
+}
+
+enum InventoryOfferStatus {
+  draft
+  available
+  reserved
+  sold
+  withdrawn
+  stale
+  quarantined
+}
+
+enum MarketStatus {
+  draft
+  active
+  suspended
+}
+
+enum PublicationChannel {
+  public_marketplace
+  dealer_feed
+}
+
+enum MarketPublicationStatus {
+  draft
+  pending_eligibility
+  published
+  paused
+  rejected
+  withdrawn
+  expired
+}
+
+enum PublicationEligibilityDecision {
+  eligible
+  ineligible
+  review_required
+}
+
+enum PriceConversionStatus {
+  native
+  converted_estimate
+  unavailable
+}
+
+enum LandedCostStatus {
+  not_calculated
+  quote_required
+  unavailable
+}
+
+model MarketplaceAccount {
+  id                       String                              @id @default(cuid())
+  clerkUserId              String                              @unique
+  status                   AccountStatus                       @default(active)
+  deletedAt                DateTime?
+  createdAt                DateTime                            @default(now())
+  updatedAt                DateTime                            @updatedAt
+  sellerProfile            SellerProfile?
+  dealerMemberships        DealerMember[]
+  createdListings          MarketplaceListing[]                @relation("ListingCreator")
+  listingStatusEvents      ListingStatusEvent[]                @relation("StatusEventActor")
+  priceSnapshots           ListingPriceSnapshot[]              @relation("PriceSnapshotActor")
+  uploadSessions           MediaUploadSession[]
+  uploadedImages           MarketplaceListingImage[]           @relation("ImageUploader")
+  photoJobs                ListingPhotoJob[]                   @relation("PhotoJobActor")
+  listingGenerations       ListingGeneration[]                 @relation("GenerationActor")
+  vinDecodeJobs            ListingVinDecodeJob[]               @relation("VinJobActor")
+  reviewedSupplierTrust    SupplierTrustReview[]               @relation("SupplierReviewReviewer")
+  reviewedListingTrust     ListingTrustEvidence[]              @relation("ListingEvidenceReviewer")
+  reportedModeration       ModerationReport[]                  @relation("ModerationReporter")
+  assignedModeration       ModerationReport[]                  @relation("ModerationAssignee")
+  buyerLeads               Lead[]                              @relation("LeadBuyer")
+  conversationParticipants ConversationParticipant[]
+  savedListings            SavedListing[]
+  savedSearches            SavedSearch[]
+  savedSearchDeliveries    SavedSearchDelivery[]
+  auditEntries             AuditLog[]                          @relation("AuditActor")
+  clerkOrgProvisionings    ClerkOrgProvisioning[]
+  legalEntitiesUpdated     OrganizationLegalEntity[]           @relation("LegalEntityUpdater")
+  kybCasesSubmitted        OrganizationKybCase[]               @relation("KybCaseSubmitter")
+  kybCasesAssigned         OrganizationKybCase[]               @relation("KybCaseAssignee")
+  kybUploadSessions        KybDocumentUploadSession[]
+  kybDocumentsUploaded     KybDocument[]                       @relation("KybDocumentUploader")
+  kybDecisionsReviewed     KybReviewDecision[]                 @relation("KybDecisionReviewer")
+  verificationEvents       OrganizationVerificationEvent[]     @relation("VerificationEventActor")
+  inventoryMappingsCreated InventoryCsvMappingVersion[]
+  inventoryImportsCreated  InventoryImportSession[]
+  directoryClaimsSubmitted OrganizationDirectoryClaimRequest[] @relation("DirectoryClaimApplicant")
+  directoryClaimsReviewed  OrganizationDirectoryClaimRequest[] @relation("DirectoryClaimReviewer")
+  directoryDraftsUpdated   OrganizationDirectoryProfileDraft[] @relation("DirectoryDraftUpdater")
+  entitlementGrantsCreated EntitlementGrant[]                  @relation("EntitlementGrantCreator")
+  entitlementUsageEvents   EntitlementUsageEvent[]             @relation("EntitlementUsageActor")
+  promotionEvents          ListingPromotionEvent[]             @relation("PromotionEventActor")
+
+  @@index([status, deletedAt])
+}
+
+model SellerProfile {
+  id                 String                  @id @default(cuid())
+  accountId          String?                 @unique
+  status             SellerProfileStatus     @default(active)
+  displayName        String
+  city               String
+  region             String?
+  country            String                  @default("Bulgaria")
+  verificationStatus VerificationStatus      @default(unverified)
+  deletedAt          DateTime?
+  createdAt          DateTime                @default(now())
+  updatedAt          DateTime                @updatedAt
+  account            MarketplaceAccount?     @relation(fields: [accountId], references: [id], onDelete: Restrict)
+  listings           MarketplaceListing[]
+  leads              Lead[]
+  conversations      Conversation[]
+  supplierTrust      SupplierTrustReview[]
+  entitlementGrants  EntitlementGrant[]
+  entitlementUsage   EntitlementUsageEvent[]
+
+  @@index([status, updatedAt])
+  @@index([verificationStatus, updatedAt])
+  @@index([city])
+}
+
+model DealerOrg {
+  id                            String                              @id @default(cuid())
+  slug                          String                              @unique
+  clerkOrgId                    String                              @unique
+  orgType                       DealerOrgType                       @default(dealer)
+  legalName                     String?
+  displayName                   String
+  logoUrl                       String?
+  brandColor                    String?
+  backdropPreset                String?
+  addressLine1                  String?
+  addressLine2                  String?
+  city                          String?
+  region                        String?
+  country                       String?
+  countryCode                   String?                             @db.Char(2)
+  registrationCountryCode       String?                             @db.Char(2)
+  registrationNumber            String?
+  vatId                         String?
+  eoriNumber                    String?
+  defaultLocale                 String                              @default("en")
+  defaultCurrencyCode           String                              @default("EUR") @db.Char(3)
+  timeZone                      String                              @default("UTC")
+  onboardingStatus              OrganizationOnboardingStatus        @default(registered)
+  kybStatus                     OrganizationKybStatus               @default(not_started)
+  kybVerifiedAt                 DateTime?
+  kybExpiresAt                  DateTime?
+  profileCompletedAt            DateTime?
+  phone                         String?
+  email                         String?
+  websiteUrl                    String?
+  websiteFeedEnabled            Boolean                             @default(false)
+  verificationStatus            VerificationStatus                  @default(pending)
+  subscriptionStatus            DealerSubscriptionStatus            @default(trialing)
+  currentKybCaseId              String?                             @unique
+  currentVerificationGrantId    String?                             @unique
+  verificationProjectionVersion Int                                 @default(0)
+  verificationProjectionEventId String?
+  verificationProjectionHash    String?
+  verificationProjectedAt       DateTime?
+  clerkProviderUpdatedAt        DateTime?
+  clerkLastSyncedAt             DateTime?
+  clerkDeletedAt                DateTime?
+  deletedAt                     DateTime?
+  createdAt                     DateTime                            @default(now())
+  updatedAt                     DateTime                            @updatedAt
+  members                       DealerMember[]
+  listings                      MarketplaceListing[]
+  listingStatusEvents           ListingStatusEvent[]                @relation("StatusEventDealer")
+  leads                         Lead[]
+  conversations                 Conversation[]
+  uploadSessions                MediaUploadSession[]
+  listingGenerations            ListingGeneration[]
+  photoJobs                     ListingPhotoJob[]
+  vinDecodeJobs                 ListingVinDecodeJob[]
+  supplierTrust                 SupplierTrustReview[]
+  billingAccount                DealerBillingAccount?
+  promotions                    ListingPromotion[]
+  promotionEvents               ListingPromotionEvent[]
+  entitlementGrants             EntitlementGrant[]
+  entitlementUsage              EntitlementUsageEvent[]
+  auditEntries                  AuditLog[]
+  capabilities                  DealerOrgCapability[]
+  marketPermissions             OrganizationMarketPermission[]
+  inventorySources              InventorySource[]
+  sourceInventoryRecords        SourceInventoryRecord[]
+  inventoryRightsGrants         InventoryRightsGrant[]
+  inventoryOffers               InventoryOffer[]
+  marketPublications            MarketPublication[]
+  legalEntity                   OrganizationLegalEntity?
+  kybCases                      OrganizationKybCase[]               @relation("KybCaseOrganization")
+  currentKybCase                OrganizationKybCase?                @relation("CurrentKybCase", fields: [currentKybCaseId, id], references: [id, dealerOrgId], onDelete: Restrict)
+  kybUploadSessions             KybDocumentUploadSession[]
+  kybDocuments                  KybDocument[]
+  kybProviderChecks             KybProviderCheck[]
+  kybReviewDecisions            KybReviewDecision[]
+  verificationGrants            OrganizationVerificationGrant[]     @relation("VerificationGrantOrganization")
+  currentVerificationGrant      OrganizationVerificationGrant?      @relation("CurrentVerificationGrant", fields: [currentVerificationGrantId, id], references: [id, dealerOrgId], onDelete: Restrict)
+  verificationEvents            OrganizationVerificationEvent[]
+  verificationProjectionEvent   OrganizationVerificationEvent?      @relation("VerificationProjectionEvent", fields: [verificationProjectionEventId, id], references: [id, dealerOrgId], onDelete: Restrict, map: "DealerOrg_verificationProjectionEventId_fkey")
+  inventoryCredentialBindings   InventorySourceCredentialBinding[]
+  inventoryMappings             InventoryCsvMappingVersion[]
+  inventoryImportSessions       InventoryImportSession[]
+  inventoryImportArtifacts      InventoryImportArtifact[]
+  inventoryImportPreviews       InventoryImportPreview[]
+  directoryEntry                OrganizationDirectoryEntry?
+  directoryClaims               OrganizationDirectoryClaimRequest[]
+
+  @@unique([currentKybCaseId, id])
+  @@unique([currentVerificationGrantId, id])
+  @@index([orgType, verificationStatus])
+  @@index([city, orgType])
+  @@index([deletedAt])
+}
+
+model OrganizationDirectoryEntry {
+  id                        String                              @id @default(cuid())
+  slug                      String                              @unique
+  dealerOrgId               String?                             @unique
+  orgType                   DealerOrgType
+  status                    OrganizationDirectoryStatus         @default(draft)
+  claimStatus               OrganizationDirectoryClaimStatus    @default(unclaimed)
+  sourceKind                OrganizationDirectorySourceKind     @default(first_party)
+  displayName               String
+  legalName                 String?
+  headline                  String?
+  description               String?
+  logoUrl                   String?
+  profileImageUrl           String?
+  websiteUrl                String?
+  phone                     String?
+  email                     String?
+  city                      String?
+  region                    String?
+  country                   String?
+  headquartersCountryCode   String?                             @db.Char(2)
+  vehicleCategories         VehicleCategory[]                   @default([])
+  services                  String[]                            @default([])
+  sourceUrl                 String?
+  sourceCheckedAt           DateTime?
+  inventoryLastConfirmedAt  DateTime?
+  inventoryLocalCount       Int                                 @default(0)
+  inventoryInTransitCount   Int                                 @default(0)
+  inventorySourceStockCount Int                                 @default(0)
+  inventoryOrderableCount   Int                                 @default(0)
+  publishedAt               DateTime?
+  createdAt                 DateTime                            @default(now())
+  updatedAt                 DateTime                            @updatedAt
+  dealerOrg                 DealerOrg?                          @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  tradeLanes                OrganizationTradeLane[]
+  brandRelationships        OrganizationBrandRelationship[]
+  claimRequests             OrganizationDirectoryClaimRequest[]
+  profileDraft              OrganizationDirectoryProfileDraft?
+
+  @@index([status, orgType, publishedAt(sort: Desc)])
+  @@index([headquartersCountryCode, status])
+  @@index([claimStatus, status])
+}
+
+model OrganizationDirectoryClaimRequest {
+  id                  String                                  @id @default(cuid())
+  directoryEntryId    String
+  applicantAccountId  String
+  claimantDealerOrgId String
+  reviewerAccountId   String?
+  requestKey          String
+  status              OrganizationDirectoryClaimRequestStatus @default(pending)
+  evidenceKind        OrganizationDirectoryClaimEvidenceKind
+  authorityRole       String
+  businessEmail       String?
+  evidenceUrl         String?
+  evidenceSummary     String
+  reviewReasonCode    String?
+  reviewNote          String?
+  version             Int                                     @default(1)
+  submittedAt         DateTime                                @default(now())
+  reviewedAt          DateTime?
+  withdrawnAt         DateTime?
+  createdAt           DateTime                                @default(now())
+  updatedAt           DateTime                                @updatedAt
+  directoryEntry      OrganizationDirectoryEntry              @relation(fields: [directoryEntryId], references: [id], onDelete: Restrict)
+  applicantAccount    MarketplaceAccount                      @relation("DirectoryClaimApplicant", fields: [applicantAccountId], references: [id], onDelete: Restrict)
+  claimantDealerOrg   DealerOrg                               @relation(fields: [claimantDealerOrgId], references: [id], onDelete: Restrict)
+  reviewerAccount     MarketplaceAccount?                     @relation("DirectoryClaimReviewer", fields: [reviewerAccountId], references: [id], onDelete: Restrict)
+
+  @@unique([applicantAccountId, requestKey], map: "OrganizationDirectoryClaimRequest_applicantAccountId_requestKey")
+  @@index([status, submittedAt])
+  @@index([directoryEntryId, status, submittedAt], map: "OrganizationDirectoryClaimRequest_directoryEntryId_status_submi")
+  @@index([claimantDealerOrgId, status], map: "OrganizationDirectoryClaimRequest_claimantDealerOrgId_status_id")
+  @@index([reviewerAccountId, reviewedAt], map: "OrganizationDirectoryClaimRequest_reviewerAccountId_reviewedAt_")
+}
+
+model OrganizationDirectoryProfileDraft {
+  id                 String                     @id @default(cuid())
+  directoryEntryId   String                     @unique
+  payload            Json
+  version            Int                        @default(1)
+  updatedByAccountId String
+  createdAt          DateTime                   @default(now())
+  updatedAt          DateTime                   @updatedAt
+  directoryEntry     OrganizationDirectoryEntry @relation(fields: [directoryEntryId], references: [id], onDelete: Cascade)
+  updatedByAccount   MarketplaceAccount         @relation("DirectoryDraftUpdater", fields: [updatedByAccountId], references: [id], onDelete: Restrict)
+
+  @@index([updatedByAccountId, updatedAt], map: "OrganizationDirectoryProfileDraft_updatedByAccountId_updatedAt_")
+}
+
+model OrganizationTradeLane {
+  id                       String                     @id @default(cuid())
+  directoryEntryId         String
+  originCountryCode        String                     @db.Char(2)
+  destinationCountryCode   String                     @db.Char(2)
+  serviceKinds             String[]                   @default([])
+  vehicleCategories        VehicleCategory[]          @default([])
+  estimatedDeliveryMinDays Int?
+  estimatedDeliveryMaxDays Int?
+  active                   Boolean                    @default(true)
+  lastConfirmedAt          DateTime?
+  createdAt                DateTime                   @default(now())
+  updatedAt                DateTime                   @updatedAt
+  directoryEntry           OrganizationDirectoryEntry @relation(fields: [directoryEntryId], references: [id], onDelete: Cascade)
+
+  @@unique([directoryEntryId, originCountryCode, destinationCountryCode], map: "OrganizationTradeLane_directoryEntryId_originCountryCode_destin")
+  @@index([originCountryCode, destinationCountryCode, active], map: "OrganizationTradeLane_originCountryCode_destinationCountryCode_")
+  @@index([destinationCountryCode, active])
+}
+
+model OrganizationBrandRelationship {
+  id                String                            @id @default(cuid())
+  directoryEntryId  String
+  brandName         String
+  relationshipType  OrganizationBrandRelationshipType
+  marketCountryCode String?                           @db.Char(2)
+  evidenceStatus    OrganizationEvidenceStatus        @default(self_reported)
+  evidenceUrl       String?
+  evidenceCheckedAt DateTime?
+  verifiedAt        DateTime?
+  expiresAt         DateTime?
+  createdAt         DateTime                          @default(now())
+  updatedAt         DateTime                          @updatedAt
+  directoryEntry    OrganizationDirectoryEntry        @relation(fields: [directoryEntryId], references: [id], onDelete: Cascade)
+
+  @@unique([directoryEntryId, brandName, relationshipType, marketCountryCode], map: "OrganizationBrandRelationship_directoryEntryId_brandName_relati")
+  /// Global (NULL-market) uniqueness is enforced by a partial index in the migration.
+  @@index([brandName, relationshipType, evidenceStatus], map: "OrganizationBrandRelationship_brandName_relationshipType_eviden")
+  @@index([marketCountryCode, evidenceStatus], map: "OrganizationBrandRelationship_marketCountryCode_evidenceStatus_")
+}
+
+model DealerMember {
+  id                     String                    @id @default(cuid())
+  dealerOrgId            String
+  accountId              String
+  clerkMembershipId      String?                   @unique
+  clerkProviderUpdatedAt DateTime?
+  clerkLastEventId       String?
+  clerkDeletedAt         DateTime?
+  clerkSourceRole        String?
+  clerkLastSyncedAt      DateTime?
+  disabledAt             DateTime?
+  role                   DealerRole                @default(sales)
+  status                 DealerMemberStatus        @default(active)
+  createdAt              DateTime                  @default(now())
+  updatedAt              DateTime                  @updatedAt
+  dealerOrg              DealerOrg                 @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  account                MarketplaceAccount        @relation(fields: [accountId], references: [id], onDelete: Restrict)
+  assignedLeads          Lead[]
+  participants           ConversationParticipant[]
+
+  @@unique([dealerOrgId, accountId])
+  @@index([accountId, status])
+  @@index([dealerOrgId, status, role])
+  @@index([clerkProviderUpdatedAt])
+}
+
+model ClerkOrgProvisioning {
+  id                   String                     @id @default(cuid())
+  applicantAccountId   String
+  requestKey           String
+  requestedDisplayName String
+  requestedOrgType     DealerOrgType
+  requestedCountryCode String                     @db.Char(2)
+  status               ClerkOrgProvisioningStatus @default(requested)
+  clerkOrgId           String?                    @unique
+  attemptCount         Int                        @default(0)
+  nextAttemptAt        DateTime?
+  errorCode            String?
+  requestedAt          DateTime                   @default(now())
+  clerkCreatedAt       DateTime?
+  projectedAt          DateTime?
+  completedAt          DateTime?
+  createdAt            DateTime                   @default(now())
+  updatedAt            DateTime                   @updatedAt
+  applicantAccount     MarketplaceAccount         @relation(fields: [applicantAccountId], references: [id], onDelete: Restrict)
+
+  @@unique([applicantAccountId, requestKey])
+  @@index([status, nextAttemptAt])
+}
+
+model ExternalIdentitySyncEvent {
+  id                 String                     @id @default(cuid())
+  provider           String
+  providerEventId    String
+  aggregateType      String
+  aggregateId        String
+  eventType          String
+  payloadHash        String
+  providerOccurredAt DateTime
+  receivedAt         DateTime                   @default(now())
+  appliedAt          DateTime?
+  status             ExternalIdentitySyncStatus @default(received)
+  attemptCount       Int                        @default(0)
+  nextAttemptAt      DateTime?
+  errorCode          String?
+  createdAt          DateTime                   @default(now())
+  updatedAt          DateTime                   @updatedAt
+
+  @@unique([provider, providerEventId])
+  @@index([provider, aggregateType, aggregateId, providerOccurredAt])
+  @@index([status, nextAttemptAt])
+}
+
+model OrganizationLegalEntity {
+  id                           String                          @id @default(cuid())
+  dealerOrgId                  String                          @unique
+  entityType                   OrganizationLegalEntityType
+  legalName                    String
+  tradingName                  String?
+  registrationCountryCode      String                          @db.Char(2)
+  registrationNumber           String
+  registrationNumberNormalized String
+  incorporationDate            DateTime?
+  addressLine1                 String
+  addressLine2                 String?
+  city                         String
+  region                       String?
+  postalCode                   String?
+  addressCountryCode           String                          @db.Char(2)
+  vatId                        String?
+  taxId                        String?
+  eoriNumber                   String?
+  dataVersion                  Int                             @default(1)
+  updatedByAccountId           String?
+  createdAt                    DateTime                        @default(now())
+  updatedAt                    DateTime                        @updatedAt
+  dealerOrg                    DealerOrg                       @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  updatedByAccount             MarketplaceAccount?             @relation("LegalEntityUpdater", fields: [updatedByAccountId], references: [id], onDelete: Restrict)
+  kybCases                     OrganizationKybCase[]
+  verificationGrants           OrganizationVerificationGrant[]
+
+  @@unique([id, dealerOrgId])
+  @@unique([registrationCountryCode, registrationNumberNormalized])
+  @@index([legalName])
+}
+
+model OrganizationKybCase {
+  id                        String                          @id @default(cuid())
+  dealerOrgId               String
+  legalEntityId             String
+  attempt                   Int
+  status                    OrganizationKybCaseStatus       @default(draft)
+  providerKey               String?
+  providerCaseReference     String?
+  policyVersion             String                          @default("m2-v1")
+  requirementsVersion       String                          @default("m2-v1")
+  submittedByAccountId      String?
+  assignedReviewerAccountId String?
+  supersedesCaseId          String?
+  version                   Int                             @default(1)
+  submittedAt               DateTime?
+  decidedAt                 DateTime?
+  cancelledAt               DateTime?
+  createdAt                 DateTime                        @default(now())
+  updatedAt                 DateTime                        @updatedAt
+  dealerOrg                 DealerOrg                       @relation("KybCaseOrganization", fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  currentForOrganization    DealerOrg?                      @relation("CurrentKybCase")
+  legalEntity               OrganizationLegalEntity         @relation(fields: [legalEntityId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  submittedByAccount        MarketplaceAccount?             @relation("KybCaseSubmitter", fields: [submittedByAccountId], references: [id], onDelete: Restrict)
+  assignedReviewerAccount   MarketplaceAccount?             @relation("KybCaseAssignee", fields: [assignedReviewerAccountId], references: [id], onDelete: Restrict)
+  supersedesCase            OrganizationKybCase?            @relation("KybCaseSupersession", fields: [supersedesCaseId], references: [id], onDelete: Restrict)
+  replacementCases          OrganizationKybCase[]           @relation("KybCaseSupersession")
+  uploadSessions            KybDocumentUploadSession[]
+  documents                 KybDocument[]
+  providerChecks            KybProviderCheck[]
+  reviewDecisions           KybReviewDecision[]
+  verificationGrants        OrganizationVerificationGrant[]
+  events                    OrganizationVerificationEvent[]
+
+  @@unique([dealerOrgId, attempt])
+  @@unique([providerKey, providerCaseReference])
+  @@unique([id, dealerOrgId])
+  @@index([status, updatedAt])
+  @@index([assignedReviewerAccountId, status, updatedAt])
+}
+
+model KybProviderCheck {
+  id                     String                 @id @default(cuid())
+  dealerOrgId            String
+  kybCaseId              String
+  checkType              String
+  providerKey            String
+  providerCheckReference String?
+  status                 KybProviderCheckStatus @default(pending)
+  normalizedResultCode   String?
+  riskLevel              String?
+  summary                String?
+  idempotencyKey         String                 @unique
+  requestedAt            DateTime               @default(now())
+  completedAt            DateTime?
+  expiresAt              DateTime?
+  createdAt              DateTime               @default(now())
+  updatedAt              DateTime               @updatedAt
+  dealerOrg              DealerOrg              @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  kybCase                OrganizationKybCase    @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+
+  @@index([kybCaseId, status])
+  @@index([providerKey, providerCheckReference])
+}
+
+model KybDocumentUploadSession {
+  id                   String                  @id @default(cuid())
+  dealerOrgId          String
+  kybCaseId            String
+  requestedByAccountId String
+  opaquePrefix         String                  @unique
+  allowedMimeTypes     String[]
+  maxFiles             Int                     @default(1)
+  maxBytes             Int                     @default(10485760)
+  status               KybDocumentUploadStatus @default(authorized)
+  expiresAt            DateTime
+  completedAt          DateTime?
+  revokedAt            DateTime?
+  createdAt            DateTime                @default(now())
+  updatedAt            DateTime                @updatedAt
+  dealerOrg            DealerOrg               @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  kybCase              OrganizationKybCase     @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  requestedByAccount   MarketplaceAccount      @relation(fields: [requestedByAccountId], references: [id], onDelete: Restrict)
+  documents            KybDocument[]
+
+  @@unique([id, dealerOrgId, kybCaseId])
+  @@index([dealerOrgId, status, expiresAt])
+}
+
+model KybDocument {
+  id                   String                    @id @default(cuid())
+  dealerOrgId          String
+  kybCaseId            String
+  uploadSessionId      String?
+  kind                 String
+  status               KybDocumentStatus         @default(authorized)
+  storageProvider      String
+  storageKey           String?                   @unique
+  mimeType             String
+  verifiedByteSize     Int?
+  sha256               String?
+  encryptionKeyVersion String?
+  uploadedByAccountId  String
+  supersedesDocumentId String?
+  retentionPolicy      String
+  retainUntil          DateTime?
+  legalHold            Boolean                   @default(false)
+  purgeRequestedAt     DateTime?
+  purgeLeaseToken      String?
+  purgeLeaseExpiresAt  DateTime?
+  purgeAttemptCount    Int                       @default(0)
+  purgeLastAttemptAt   DateTime?
+  purgeLastErrorCode   String?
+  purgedAt             DateTime?
+  purgeDeadLetteredAt  DateTime?
+  createdAt            DateTime                  @default(now())
+  updatedAt            DateTime                  @updatedAt
+  dealerOrg            DealerOrg                 @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  kybCase              OrganizationKybCase       @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  uploadSession        KybDocumentUploadSession? @relation(fields: [uploadSessionId, dealerOrgId, kybCaseId], references: [id, dealerOrgId, kybCaseId], onDelete: Restrict)
+  uploadedByAccount    MarketplaceAccount        @relation("KybDocumentUploader", fields: [uploadedByAccountId], references: [id], onDelete: Restrict)
+  supersedesDocument   KybDocument?              @relation("KybDocumentSupersession", fields: [supersedesDocumentId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  replacementDocuments KybDocument[]             @relation("KybDocumentSupersession")
+
+  @@unique([id, dealerOrgId])
+  @@index([kybCaseId, status, createdAt])
+  @@index([status, retainUntil])
+  @@index([purgeLeaseExpiresAt])
+}
+
+model KybReviewDecision {
+  id                String                         @id @default(cuid())
+  dealerOrgId       String
+  kybCaseId         String
+  outcome           KybReviewDecisionOutcome
+  reasonCodes       String[]
+  reviewerNote      String?
+  policyVersion     String                         @default("m2-v1")
+  reviewerAccountId String
+  requestId         String                         @unique
+  decidedAt         DateTime                       @default(now())
+  createdAt         DateTime                       @default(now())
+  dealerOrg         DealerOrg                      @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  kybCase           OrganizationKybCase            @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  reviewerAccount   MarketplaceAccount             @relation("KybDecisionReviewer", fields: [reviewerAccountId], references: [id], onDelete: Restrict)
+  verificationGrant OrganizationVerificationGrant?
+
+  @@unique([id, dealerOrgId])
+  @@index([kybCaseId, decidedAt])
+}
+
+model OrganizationVerificationGrant {
+  id                     String                              @id @default(cuid())
+  dealerOrgId            String
+  legalEntityId          String
+  kybCaseId              String
+  decisionId             String                              @unique
+  status                 OrganizationVerificationGrantStatus @default(active)
+  validFrom              DateTime                            @default(now())
+  validUntil             DateTime
+  suspendedAt            DateTime?
+  revokedAt              DateTime?
+  expiredAt              DateTime?
+  terminalReasonCode     String?
+  policyVersion          String                              @default("m2-v1")
+  version                Int                                 @default(1)
+  createdAt              DateTime                            @default(now())
+  updatedAt              DateTime                            @updatedAt
+  dealerOrg              DealerOrg                           @relation("VerificationGrantOrganization", fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  currentForOrganization DealerOrg?                          @relation("CurrentVerificationGrant")
+  legalEntity            OrganizationLegalEntity             @relation(fields: [legalEntityId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  kybCase                OrganizationKybCase                 @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  decision               KybReviewDecision                   @relation(fields: [decisionId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  events                 OrganizationVerificationEvent[]
+
+  @@unique([id, dealerOrgId])
+  @@unique([decisionId, dealerOrgId])
+  @@index([dealerOrgId, status, validUntil])
+  @@index([status, validUntil])
+}
+
+model OrganizationVerificationEvent {
+  id                        String                            @id @default(cuid())
+  dealerOrgId               String
+  kybCaseId                 String?
+  verificationGrantId       String?
+  sequence                  BigInt
+  eventType                 OrganizationVerificationEventType
+  beforeKybStatus           OrganizationKybStatus?
+  afterKybStatus            OrganizationKybStatus?
+  actorType                 VerificationActorType
+  actorAccountId            String?
+  providerKey               String?
+  providerEventId           String?                           @unique
+  requestId                 String?                           @unique
+  correlationId             String?
+  reasonCodes               String[]
+  metadata                  Json?
+  occurredAt                DateTime                          @default(now())
+  receivedAt                DateTime                          @default(now())
+  dealerOrg                 DealerOrg                         @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  kybCase                   OrganizationKybCase?              @relation(fields: [kybCaseId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  verificationGrant         OrganizationVerificationGrant?    @relation(fields: [verificationGrantId, dealerOrgId], references: [id, dealerOrgId], onDelete: Restrict)
+  actorAccount              MarketplaceAccount?               @relation("VerificationEventActor", fields: [actorAccountId], references: [id], onDelete: Restrict)
+  projectedForOrganizations DealerOrg[]                       @relation("VerificationProjectionEvent")
+
+  @@unique([dealerOrgId, sequence])
+  @@unique([id, dealerOrgId])
+  @@index([dealerOrgId, occurredAt])
+  @@index([kybCaseId, occurredAt])
+}
+
+model MarketplaceListing {
+  id                          String                    @id @default(cuid())
+  slug                        String                    @unique
+  category                    VehicleCategory
+  status                      ListingStatus             @default(draft)
+  title                       String
+  description                 String
+  priceAmountMinor            Int
+  priceCurrency               PriceCurrency             @default(BGN)
+  priceType                   PriceType                 @default(fixed)
+  monthlyAmountMinor          Int?
+  monthlyCurrency             PriceCurrency?
+  badges                      String[]                  @default([])
+  make                        String
+  model                       String
+  derivative                  String?
+  trim                        String?
+  vehicleMakeId               String?
+  vehicleModelId              String?
+  vehicleDerivativeId         String?
+  vehicleGenerationId         String?
+  vehicleTrimId               String?
+  vehiclePowertrainId         String?
+  year                        Int
+  bodyType                    BodyType
+  fuelType                    FuelType
+  transmission                Transmission
+  mileageValue                Int
+  mileageUnit                 String                    @default("km")
+  enginePowerHp               Int?
+  colorExterior               String?
+  vin                         String?
+  vinLast4                    String?
+  locationCity                String
+  locationRegion              String?
+  locationCountry             String                    @default("Bulgaria")
+  latitude                    Decimal?                  @db.Decimal(9, 6)
+  longitude                   Decimal?                  @db.Decimal(9, 6)
+  sellerId                    String
+  sellerType                  SellerType
+  sellerDisplayName           String
+  sellerVerificationStatus    VerificationStatus        @default(pending)
+  sellerCity                  String
+  sellerProfileId             String?
+  dealerOrgId                 String?
+  canonicalVehicleId          String?
+  inventoryOfferId            String?                   @unique
+  marketPublicationId         String?                   @unique
+  createdByAccountId          String?
+  projectionVersion           Int                       @default(0)
+  projectionInputHash         String?
+  sourceUpdatedAt             DateTime?
+  sourceLastConfirmedAt       DateTime?
+  freshUntil                  DateTime?
+  projectedAt                 DateTime?
+  originCountryCode           String?                   @db.Char(2)
+  deliveryCountryCodes        String[]                  @default([])
+  nativePriceAmountMinor      BigInt?
+  nativePriceCurrencyCode     String?                   @db.Char(3)
+  nativePriceCurrencyExponent Int?
+  priceConversionStatus       PriceConversionStatus     @default(native)
+  priceConvertedAt            DateTime?
+  landedCostStatus            LandedCostStatus          @default(not_calculated)
+  sourceKind                  InventorySourceKind?
+  sourceDisplayName           String?
+  sourceExternalReference     String?
+  supplierOrgType             DealerOrgType?
+  supplierKybStatus           OrganizationKybStatus?
+  supplierTrustStatus         VerificationStatus?
+  documentCount               Int                       @default(0)
+  promoted                    Boolean                   @default(false)
+  submittedAt                 DateTime?
+  publishedAt                 DateTime?
+  pausedAt                    DateTime?
+  soldAt                      DateTime?
+  expiredAt                   DateTime?
+  rejectedAt                  DateTime?
+  archivedAt                  DateTime?
+  statusChangedAt             DateTime                  @default(now())
+  version                     Int                       @default(1)
+  deletedAt                   DateTime?
+  createdAt                   DateTime                  @default(now())
+  updatedAt                   DateTime                  @updatedAt
+  sellerProfile               SellerProfile?            @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  dealerOrg                   DealerOrg?                @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  canonicalVehicle            CanonicalVehicle?         @relation(fields: [canonicalVehicleId], references: [id], onDelete: Restrict)
+  inventoryOffer              InventoryOffer?           @relation(fields: [inventoryOfferId], references: [id], onDelete: Restrict)
+  marketPublication           MarketPublication?        @relation(fields: [marketPublicationId, inventoryOfferId], references: [id, supplierOfferId], onDelete: Restrict)
+  createdByAccount            MarketplaceAccount?       @relation("ListingCreator", fields: [createdByAccountId], references: [id], onDelete: SetNull)
+  vehicleMake                 VehicleMake?              @relation(fields: [vehicleMakeId], references: [id], onDelete: Restrict)
+  vehicleModel                VehicleModelFamily?       @relation(fields: [vehicleModelId], references: [id], onDelete: Restrict)
+  vehicleDerivative           VehicleDerivative?        @relation(fields: [vehicleDerivativeId], references: [id], onDelete: Restrict)
+  vehicleGeneration           VehicleGeneration?        @relation(fields: [vehicleGenerationId], references: [id], onDelete: Restrict)
+  vehicleTrim                 VehicleTrim?              @relation(fields: [vehicleTrimId], references: [id], onDelete: Restrict)
+  vehiclePowertrain           VehiclePowertrain?        @relation(fields: [vehiclePowertrainId], references: [id], onDelete: Restrict)
+  images                      MarketplaceListingImage[]
+  statusEvents                ListingStatusEvent[]
+  priceSnapshots              ListingPriceSnapshot[]
+  uploadSessions              MediaUploadSession[]
+  leads                       Lead[]
+  conversations               Conversation[]
+  listingGenerations          ListingGeneration[]
+  photoJobs                   ListingPhotoJob[]
+  vinDecodeJobs               ListingVinDecodeJob[]
+  trustEvidence               ListingTrustEvidence[]
+  moderationReports           ModerationReport[]
+  savedListings               SavedListing[]
+  savedSearchMatches          SavedSearchMatch[]
+  promotions                  ListingPromotion[]
+
+  @@unique([marketPublicationId, inventoryOfferId])
+  @@index([status, category, publishedAt(sort: Desc), id])
+  @@index([status, category, promoted, publishedAt(sort: Desc), id])
+  @@index([status, category, priceAmountMinor, id])
+  @@index([status, category, year(sort: Desc), id])
+  @@index([status, category, mileageValue, id])
+  @@index([status, category, make, model, publishedAt(sort: Desc)])
+  @@index([status, category, fuelType, publishedAt(sort: Desc)])
+  @@index([status, category, transmission, publishedAt(sort: Desc)])
+  @@index([status, category, bodyType, publishedAt(sort: Desc)])
+  @@index([dealerOrgId, status, updatedAt(sort: Desc)])
+  @@index([sellerProfileId, status, updatedAt(sort: Desc)])
+  @@index([sellerId])
+  @@index([canonicalVehicleId, status])
+  @@index([vehicleMakeId, vehicleModelId, status, publishedAt(sort: Desc)], map: "MarketplaceListing_taxonomy_status_publishedAt_idx")
+  @@index([vehicleDerivativeId, status, publishedAt(sort: Desc)])
+  @@index([originCountryCode, status, category, publishedAt(sort: Desc)])
+  @@index([freshUntil, status])
+  @@index([deliveryCountryCodes], type: Gin, map: "MarketplaceListing_deliveryCountryCodes_gin_idx")
+}
+
+model DealerOrgCapability {
+  id            String              @id @default(cuid())
+  dealerOrgId   String
+  capabilityKey String
+  status        AuthorizationStatus @default(pending)
+  policyVersion String              @default("m1-v1")
+  requestedAt   DateTime            @default(now())
+  approvedAt    DateTime?
+  expiresAt     DateTime?
+  suspendedAt   DateTime?
+  revokedAt     DateTime?
+  metadata      Json?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  dealerOrg     DealerOrg           @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+
+  @@unique([dealerOrgId, capabilityKey])
+  @@index([capabilityKey, status, expiresAt])
+  @@index([dealerOrgId, status])
+}
+
+model Market {
+  id                      String                         @id @default(cuid())
+  code                    String                         @unique
+  countryCode             String?                        @db.Char(2)
+  status                  MarketStatus                   @default(draft)
+  defaultLocale           String                         @default("en")
+  supportedLocales        String[]                       @default(["en"])
+  defaultCurrencyCode     String                         @db.Char(3)
+  defaultCurrencyExponent Int                            @default(2)
+  createdAt               DateTime                       @default(now())
+  updatedAt               DateTime                       @updatedAt
+  organizationPermissions OrganizationMarketPermission[]
+  inventoryRightsGrants   InventoryRightsGrant[]
+  publications            MarketPublication[]
+
+  @@index([status, countryCode])
+}
+
+model OrganizationMarketPermission {
+  id            String              @id @default(cuid())
+  dealerOrgId   String
+  marketId      String
+  permissionKey String              @default("inventory.publish")
+  category      VehicleCategory
+  status        AuthorizationStatus @default(pending)
+  validFrom     DateTime            @default(now())
+  validUntil    DateTime?
+  policyVersion String              @default("m1-v1")
+  reasonCode    String?
+  createdAt     DateTime            @default(now())
+  updatedAt     DateTime            @updatedAt
+  dealerOrg     DealerOrg           @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  market        Market              @relation(fields: [marketId], references: [id], onDelete: Restrict)
+  publications  MarketPublication[]
+
+  @@unique([dealerOrgId, marketId, permissionKey, category])
+  @@unique([id, dealerOrgId, marketId])
+  @@index([marketId, permissionKey, category, status, validUntil])
+  @@index([dealerOrgId, status, validUntil])
+}
+
+model InventorySource {
+  id                          String                             @id @default(cuid())
+  supplierOrgId               String
+  sourceKey                   String                             @unique @default(cuid())
+  name                        String
+  kind                        InventorySourceKind
+  providerKey                 String                             @default("generic")
+  status                      InventorySourceStatus              @default(pending)
+  syncMode                    InventorySyncMode                  @default(incremental)
+  externalAccountReference    String?
+  credentialReference         String?                            @unique
+  config                      Json?
+  mediaRightsStatus           AuthorizationStatus                @default(pending)
+  expectedIntervalMinutes     Int                                @default(1440)
+  staleAfterMinutes           Int                                @default(2880)
+  missingGraceRuns            Int                                @default(2)
+  cursor                      String?
+  etag                        String?
+  lastAttemptAt               DateTime?
+  lastSuccessfulSyncAt        DateTime?
+  lastCompleteSnapshotAt      DateTime?
+  lastAppliedBatchGeneratedAt DateTime?
+  nextExpectedSyncAt          DateTime?
+  consecutiveFailureCount     Int                                @default(0)
+  configVersion               Int                                @default(1)
+  dataRevision                Int                                @default(0)
+  statusReasonCode            String?
+  activatedAt                 DateTime?
+  pausedAt                    DateTime?
+  disabledAt                  DateTime?
+  applyLeaseToken             String?
+  applyLeaseExpiresAt         DateTime?
+  applyLeaseSessionId         String?
+  credentialHealthStatus      InventoryCredentialBindingStatus?
+  credentialVerifiedAt        DateTime?
+  deletedAt                   DateTime?
+  createdAt                   DateTime                           @default(now())
+  updatedAt                   DateTime                           @updatedAt
+  supplierOrg                 DealerOrg                          @relation(fields: [supplierOrgId], references: [id], onDelete: Restrict)
+  syncRuns                    InventorySyncRun[]
+  sourceRecords               SourceInventoryRecord[]
+  sourceRevisions             SourceInventoryRevision[]
+  syncIssues                  InventorySyncIssue[]
+  rightsGrants                InventoryRightsGrant[]
+  offers                      InventoryOffer[]
+  marketPublications          MarketPublication[]
+  credentialBindings          InventorySourceCredentialBinding[]
+  csvMappings                 InventoryCsvMappingVersion[]
+  importSessions              InventoryImportSession[]
+  importArtifacts             InventoryImportArtifact[]
+  inventoryImportPreviews     InventoryImportPreview[]
+
+  @@unique([id, supplierOrgId])
+  @@unique([supplierOrgId, name])
+  @@index([supplierOrgId, status])
+  @@index([status, nextExpectedSyncAt])
+  @@index([status, lastSuccessfulSyncAt])
+}
+
+model InventorySourceCredentialBinding {
+  id                  String                           @id @default(cuid())
+  dealerOrgId         String
+  inventorySourceId   String
+  purpose             InventoryCredentialPurpose
+  credentialReference String                           @unique
+  status              InventoryCredentialBindingStatus @default(pending)
+  version             Int
+  activatedAt         DateTime?
+  retiringUntil       DateTime?
+  revokedAt           DateTime?
+  verifiedAt          DateTime?
+  failureCode         String?
+  createdAt           DateTime                         @default(now())
+  updatedAt           DateTime                         @updatedAt
+  dealerOrg           DealerOrg                        @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  inventorySource     InventorySource                  @relation(fields: [inventorySourceId, dealerOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+
+  @@unique([inventorySourceId, purpose, version])
+  @@index([inventorySourceId, purpose, status])
+  @@index([status, retiringUntil])
+}
+
+model InventoryCsvMappingVersion {
+  id                 String                   @id @default(cuid())
+  dealerOrgId        String
+  inventorySourceId  String
+  version            Int
+  templateId         String                   @default("automarket.inventory.csv.v1")
+  contractVersion    String                   @default("automarket.inventory.v1")
+  delimiter          String
+  headerFingerprint  String
+  canonicalMappings  Json
+  transforms         Json
+  mappingHash        String
+  createdByAccountId String
+  createdAt          DateTime                 @default(now())
+  dealerOrg          DealerOrg                @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  inventorySource    InventorySource          @relation(fields: [inventorySourceId, dealerOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  createdByAccount   MarketplaceAccount       @relation(fields: [createdByAccountId], references: [id], onDelete: Restrict)
+  importSessions     InventoryImportSession[]
+
+  @@unique([id, inventorySourceId])
+  @@unique([inventorySourceId, version])
+  @@unique([inventorySourceId, mappingHash])
+  @@index([dealerOrgId, createdAt])
+}
+
+model InventoryImportSession {
+  id                         String                      @id @default(cuid())
+  dealerOrgId                String
+  inventorySourceId          String
+  createdByAccountId         String
+  version                    Int                         @default(1)
+  status                     InventoryImportStatus       @default(created)
+  mode                       InventorySyncMode
+  completeSnapshot           Boolean                     @default(false)
+  sourceGeneratedAt          DateTime
+  logicalBatchId             String
+  snapshotToken              String                      @unique
+  mappingVersionId           String?
+  sourceConfigVersion        Int
+  sourceDataRevision         Int
+  artifactSha256             String?
+  artifactByteSize           Int?
+  rowCount                   Int                         @default(0)
+  validRowCount              Int                         @default(0)
+  quarantinedRowCount        Int                         @default(0)
+  chunkCount                 Int                         @default(0)
+  applyDataRevision          Int?
+  fullSnapshotAcknowledgedAt DateTime?
+  quarantineAcknowledgedAt   DateTime?
+  absenceReconciledAt        DateTime?
+  reprocessOfSessionId       String?
+  expiresAt                  DateTime
+  applyRequestedAt           DateTime?
+  appliedAt                  DateTime?
+  failedAt                   DateTime?
+  cancelledAt                DateTime?
+  createdAt                  DateTime                    @default(now())
+  updatedAt                  DateTime                    @updatedAt
+  dealerOrg                  DealerOrg                   @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  inventorySource            InventorySource             @relation(fields: [inventorySourceId, dealerOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  createdByAccount           MarketplaceAccount          @relation(fields: [createdByAccountId], references: [id], onDelete: Restrict)
+  mappingVersion             InventoryCsvMappingVersion? @relation(fields: [mappingVersionId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+  reprocessOfSession         InventoryImportSession?     @relation("InventoryImportReprocess", fields: [reprocessOfSessionId], references: [id], onDelete: Restrict)
+  reprocessSessions          InventoryImportSession[]    @relation("InventoryImportReprocess")
+  artifacts                  InventoryImportArtifact[]
+  previews                   InventoryImportPreview[]
+  chunks                     InventoryImportChunk[]
+  syncRuns                   InventorySyncRun[]
+
+  @@unique([id, inventorySourceId])
+  @@unique([id, dealerOrgId, inventorySourceId])
+  @@unique([inventorySourceId, logicalBatchId])
+  @@index([dealerOrgId, status, createdAt(sort: Desc)])
+  @@index([inventorySourceId, status, createdAt(sort: Desc)])
+  @@index([status, expiresAt])
+}
+
+model InventoryImportArtifact {
+  id                        String                      @id @default(cuid())
+  dealerOrgId               String
+  inventorySourceId         String
+  importSessionId           String
+  kind                      InventoryArtifactKind
+  storageProvider           String
+  storageKey                String                      @unique
+  mimeType                  String
+  byteSize                  Int
+  sha256                    String
+  scanStatus                InventoryArtifactScanStatus @default(pending)
+  scannedAt                 DateTime?
+  verifiedAt                DateTime
+  scanProviderName          String?
+  scanProviderEventId       String?
+  scanResultDigest          String?
+  scanRequestedProviderName String?
+  scanProviderReference     String?
+  scanCallbackToken         String?                     @unique
+  scanRequestedAt           DateTime?
+  scanRequestAttemptCount   Int                         @default(0)
+  scanRequestLeaseToken     String?
+  scanRequestLeaseExpiresAt DateTime?
+  scanRequestLastErrorCode  String?
+  retainUntil               DateTime
+  legalHold                 Boolean                     @default(false)
+  purgeRequestedAt          DateTime?
+  purgeLeaseToken           String?
+  purgeLeaseExpiresAt       DateTime?
+  purgeAttemptCount         Int                         @default(0)
+  purgeLastAttemptAt        DateTime?
+  purgeLastErrorCode        String?
+  purgedAt                  DateTime?
+  purgeDeadLetteredAt       DateTime?
+  createdAt                 DateTime                    @default(now())
+  updatedAt                 DateTime                    @updatedAt
+  dealerOrg                 DealerOrg                   @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  inventorySource           InventorySource             @relation(fields: [inventorySourceId, dealerOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  importSession             InventoryImportSession      @relation(fields: [importSessionId, dealerOrgId, inventorySourceId], references: [id, dealerOrgId, inventorySourceId], onDelete: Restrict)
+
+  @@unique([importSessionId, kind, sha256])
+  @@unique([scanProviderName, scanProviderEventId], map: "InventoryImportArtifact_scanProviderName_scanProviderEventId_ke")
+  @@index([scanStatus, createdAt])
+  @@index([scanStatus, scanRequestLeaseExpiresAt], map: "InventoryImportArtifact_scanStatus_scanRequestLeaseExpiresAt_id")
+  @@index([purgedAt, retainUntil])
+  @@index([purgedAt, purgeDeadLetteredAt, legalHold, retainUntil], map: "InventoryImportArtifact_purgedAt_purgeDeadLetteredAt_legalHold_")
+  @@index([purgeLeaseExpiresAt])
+}
+
+model InventoryImportPreview {
+  id                        String                        @id @default(cuid())
+  dealerOrgId               String
+  inventorySourceId         String
+  importSessionId           String
+  previewVersion            Int
+  artifactHash              String
+  mappingHash               String
+  contractVersion           String
+  previewDigest             String
+  sourceConfigVersion       Int
+  sourceDataRevision        Int
+  validCount                Int                           @default(0)
+  quarantinedCount          Int                           @default(0)
+  blockingCount             Int                           @default(0)
+  missingCount              Int                           @default(0)
+  heldCount                 Int                           @default(0)
+  wouldUnpublishCount       Int                           @default(0)
+  projectedPublicationCount Int                           @default(0)
+  expiresAt                 DateTime
+  createdAt                 DateTime                      @default(now())
+  dealerOrg                 DealerOrg                     @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  inventorySource           InventorySource               @relation(fields: [inventorySourceId, dealerOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  importSession             InventoryImportSession        @relation(fields: [importSessionId, dealerOrgId, inventorySourceId], references: [id, dealerOrgId, inventorySourceId], onDelete: Restrict)
+  issues                    InventoryImportPreviewIssue[]
+
+  @@unique([id, dealerOrgId, inventorySourceId, importSessionId])
+  @@unique([importSessionId, previewVersion])
+  @@unique([importSessionId, previewDigest])
+  @@index([dealerOrgId, createdAt(sort: Desc)])
+  @@index([expiresAt])
+}
+
+model InventoryImportPreviewIssue {
+  id                String                 @id @default(cuid())
+  dealerOrgId       String
+  inventorySourceId String
+  importSessionId   String
+  previewId         String
+  rowNumber         Int?
+  fieldPath         String?
+  issueCode         String
+  severity          InventoryIssueSeverity
+  safeMessage       String
+  createdAt         DateTime               @default(now())
+  preview           InventoryImportPreview @relation(fields: [previewId, dealerOrgId, inventorySourceId, importSessionId], references: [id, dealerOrgId, inventorySourceId, importSessionId], onDelete: Restrict)
+
+  @@index([previewId, severity, rowNumber])
+  @@index([dealerOrgId, issueCode, createdAt])
+}
+
+model InventoryImportChunk {
+  id                    String                        @id @default(cuid())
+  dealerOrgId           String
+  inventorySourceId     String
+  importSessionId       String
+  chunkIndex            Int
+  firstRowNumber        Int
+  lastRowNumber         Int
+  recordCount           Int
+  normalizedDigest      String
+  status                InventoryImportChunkStatus    @default(pending)
+  currentAttemptOrdinal Int                           @default(0)
+  completedAt           DateTime?
+  createdAt             DateTime                      @default(now())
+  updatedAt             DateTime                      @updatedAt
+  importSession         InventoryImportSession        @relation(fields: [importSessionId, dealerOrgId, inventorySourceId], references: [id, dealerOrgId, inventorySourceId], onDelete: Restrict)
+  attempts              InventoryImportChunkAttempt[]
+
+  @@unique([id, dealerOrgId, inventorySourceId])
+  @@unique([importSessionId, chunkIndex])
+  @@index([inventorySourceId, status, chunkIndex])
+}
+
+model InventoryImportChunkAttempt {
+  id                String                     @id @default(cuid())
+  dealerOrgId       String
+  inventorySourceId String
+  importChunkId     String
+  ordinal           Int
+  idempotencyKey    String                     @unique
+  leaseToken        String                     @unique
+  syncRunId         String?                    @unique
+  status            InventoryImportChunkStatus @default(pending)
+  errorCode         String?
+  startedAt         DateTime                   @default(now())
+  heartbeatAt       DateTime                   @default(now())
+  leaseExpiresAt    DateTime
+  completedAt       DateTime?
+  createdAt         DateTime                   @default(now())
+  importChunk       InventoryImportChunk       @relation(fields: [importChunkId, dealerOrgId, inventorySourceId], references: [id, dealerOrgId, inventorySourceId], onDelete: Restrict)
+  syncRun           InventorySyncRun?          @relation(fields: [syncRunId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+
+  @@unique([importChunkId, ordinal])
+  @@unique([syncRunId, inventorySourceId])
+  @@index([inventorySourceId, status, startedAt])
+  @@index([status, leaseExpiresAt])
+}
+
+model InventorySyncRun {
+  id                   String                       @id @default(cuid())
+  inventorySourceId    String
+  idempotencyKey       String
+  externalBatchId      String?
+  mode                 InventorySyncMode
+  trigger              InventorySyncTrigger
+  status               InventorySyncRunStatus       @default(queued)
+  schemaVersion        String                       @default("automarket.inventory.v1")
+  sourceGeneratedAt    DateTime
+  payloadSha256        String?
+  payloadStorageKey    String?
+  payloadByteSize      Int?
+  snapshotToken        String?
+  receivedCount        Int                          @default(0)
+  unchangedCount       Int                          @default(0)
+  changedCount         Int                          @default(0)
+  rejectedCount        Int                          @default(0)
+  missingCount         Int                          @default(0)
+  projectedCount       Int                          @default(0)
+  unpublishedCount     Int                          @default(0)
+  errorCount           Int                          @default(0)
+  attemptCount         Int                          @default(0)
+  startedAt            DateTime                     @default(now())
+  completedAt          DateTime?
+  errorCode            String?
+  errorMessage         String?
+  metadata             Json?
+  importSessionId      String?
+  importChunkIndex     Int?
+  importAttemptOrdinal Int?
+  reprocessOfRunId     String?
+  createdAt            DateTime                     @default(now())
+  updatedAt            DateTime                     @updatedAt
+  inventorySource      InventorySource              @relation(fields: [inventorySourceId], references: [id], onDelete: Restrict)
+  issues               InventorySyncIssue[]
+  revisions            SourceInventoryRevision[]
+  lastSeenRecords      SourceInventoryRecord[]      @relation("SourceRecordLastSeenRun")
+  importSession        InventoryImportSession?      @relation(fields: [importSessionId], references: [id], onDelete: Restrict)
+  importChunkAttempt   InventoryImportChunkAttempt?
+
+  @@unique([inventorySourceId, idempotencyKey])
+  @@unique([inventorySourceId, externalBatchId])
+  @@unique([id, inventorySourceId])
+  @@index([inventorySourceId, status, startedAt(sort: Desc)])
+  @@index([status, startedAt])
+  @@index([importSessionId, importChunkIndex, importAttemptOrdinal])
+}
+
+model InventorySyncIssue {
+  id                String                 @id @default(cuid())
+  inventorySourceId String
+  syncRunId         String
+  sourceRecordId    String?
+  externalRecordKey String?
+  rowNumber         Int?
+  fieldPath         String?
+  errorCode         String
+  severity          InventoryIssueSeverity
+  message           String
+  details           Json?
+  createdAt         DateTime               @default(now())
+  inventorySource   InventorySource        @relation(fields: [inventorySourceId], references: [id], onDelete: Restrict)
+  syncRun           InventorySyncRun       @relation(fields: [syncRunId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+  sourceRecord      SourceInventoryRecord? @relation(fields: [sourceRecordId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+
+  @@index([syncRunId, severity, rowNumber])
+  @@index([inventorySourceId, createdAt])
+  @@index([sourceRecordId, createdAt])
+  @@index([errorCode, createdAt])
+}
+
+model SourceInventoryRecord {
+  id                     String                    @id @default(cuid())
+  supplierOrgId          String
+  inventorySourceId      String
+  externalRecordKey      String
+  status                 InventoryRecordStatus     @default(received)
+  currentRevision        Int                       @default(0)
+  payloadHash            String?
+  sourceVersion          String?
+  sourceUpdatedAt        DateTime?
+  normalizationVersion   String?
+  firstSeenAt            DateTime                  @default(now())
+  lastSeenAt             DateTime                  @default(now())
+  lastConfirmedAt        DateTime?
+  missingSinceAt         DateTime?
+  consecutiveMissingRuns Int                       @default(0)
+  tombstonedAt           DateTime?
+  quarantinedAt          DateTime?
+  lastSeenSyncRunId      String?
+  lastSeenSnapshotToken  String?
+  hashBasis              InventoryHashBasis        @default(raw_legacy)
+  canonicalVehicleId     String?
+  createdAt              DateTime                  @default(now())
+  updatedAt              DateTime                  @updatedAt
+  supplierOrg            DealerOrg                 @relation(fields: [supplierOrgId], references: [id], onDelete: Restrict)
+  inventorySource        InventorySource           @relation(fields: [inventorySourceId, supplierOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  lastSeenSyncRun        InventorySyncRun?         @relation("SourceRecordLastSeenRun", fields: [lastSeenSyncRunId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+  canonicalVehicle       CanonicalVehicle?         @relation(fields: [canonicalVehicleId], references: [id], onDelete: Restrict)
+  revisions              SourceInventoryRevision[]
+  issues                 InventorySyncIssue[]
+  offer                  InventoryOffer?
+
+  @@unique([id, supplierOrgId])
+  @@unique([id, inventorySourceId])
+  @@unique([inventorySourceId, externalRecordKey])
+  @@index([inventorySourceId, status, lastSeenAt])
+  @@index([supplierOrgId, status, updatedAt(sort: Desc)])
+  @@index([canonicalVehicleId])
+}
+
+model SourceInventoryRevision {
+  id                    String                   @id @default(cuid())
+  sourceRecordId        String
+  inventorySourceId     String
+  syncRunId             String
+  revision              Int
+  payloadHash           String
+  normalizedPayloadHash String?
+  rawPayloadHash        String?
+  hashBasis             InventoryHashBasis       @default(raw_legacy)
+  rawPayload            Json?
+  normalizedPayload     Json
+  sourceVersion         String?
+  sourceUpdatedAt       DateTime?
+  normalizationVersion  String
+  validationState       InventoryValidationState
+  validationErrors      Json?
+  receivedAt            DateTime                 @default(now())
+  rawPayloadExpiresAt   DateTime?
+  rawPayloadPurgedAt    DateTime?
+  sourceRecord          SourceInventoryRecord    @relation(fields: [sourceRecordId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+  inventorySource       InventorySource          @relation(fields: [inventorySourceId], references: [id], onDelete: Restrict)
+  syncRun               InventorySyncRun         @relation(fields: [syncRunId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+
+  @@unique([sourceRecordId, revision])
+  @@index([sourceRecordId, payloadHash])
+  @@index([syncRunId])
+  @@index([inventorySourceId, receivedAt(sort: Desc)])
+}
+
+model VehicleTaxonomySource {
+  id             String                     @id @default(cuid())
+  key            String                     @unique
+  name           String
+  kind           VehicleTaxonomySourceKind
+  url            String?
+  license        String?
+  marketCodes    String[]                   @default([])
+  datasetVersion String?
+  publishedAt    DateTime?
+  retrievedAt    DateTime?
+  isActive       Boolean                    @default(true)
+  createdAt      DateTime                   @default(now())
+  updatedAt      DateTime                   @updatedAt
+  references     VehicleTaxonomyReference[]
+
+  @@index([kind, isActive])
+}
+
+model VehicleMake {
+  id                String                     @id @default(cuid())
+  slug              String                     @unique
+  name              String
+  normalizedName    String                     @unique
+  aliases           String[]                   @default([])
+  sortOrder         Int                        @default(0)
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  models            VehicleModelFamily[]
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@index([isActive, sortOrder, name])
+}
+
+model VehicleModelFamily {
+  id                String                     @id @default(cuid())
+  makeId            String
+  category          VehicleCategory
+  slug              String
+  name              String
+  normalizedName    String
+  aliases           String[]                   @default([])
+  fromYear          Int?
+  toYear            Int?
+  sortOrder         Int                        @default(0)
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  make              VehicleMake                @relation(fields: [makeId], references: [id], onDelete: Restrict)
+  derivatives       VehicleDerivative[]
+  generations       VehicleGeneration[]
+  trims             VehicleTrim[]
+  powertrains       VehiclePowertrain[]
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@unique([makeId, category, slug])
+  @@unique([makeId, category, normalizedName])
+  @@index([category, isActive, sortOrder, name])
+}
+
+model VehicleDerivative {
+  id                String                     @id @default(cuid())
+  modelId           String
+  slug              String
+  name              String
+  normalizedName    String
+  aliases           String[]                   @default([])
+  bodyType          BodyType?
+  fromYear          Int?
+  toYear            Int?
+  sortOrder         Int                        @default(0)
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  model             VehicleModelFamily         @relation(fields: [modelId], references: [id], onDelete: Restrict)
+  trims             VehicleTrim[]
+  powertrains       VehiclePowertrain[]
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@unique([modelId, slug])
+  @@unique([modelId, normalizedName])
+  @@unique([id, modelId])
+  @@index([modelId, isActive, sortOrder, name])
+  @@index([bodyType, isActive])
+}
+
+model VehicleGeneration {
+  id                String                     @id @default(cuid())
+  modelId           String
+  code              String
+  normalizedCode    String
+  name              String?
+  aliases           String[]                   @default([])
+  fromYear          Int?
+  toYear            Int?
+  sortOrder         Int                        @default(0)
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  model             VehicleModelFamily         @relation(fields: [modelId], references: [id], onDelete: Restrict)
+  trims             VehicleTrim[]
+  powertrains       VehiclePowertrain[]
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@unique([modelId, normalizedCode])
+  @@unique([id, modelId])
+  @@index([modelId, fromYear, toYear])
+}
+
+model VehicleTrim {
+  id                String                     @id @default(cuid())
+  modelId           String
+  derivativeId      String?
+  generationId      String?
+  name              String
+  normalizedName    String
+  marketCodes       String[]                   @default([])
+  fromYear          Int?
+  toYear            Int?
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  model             VehicleModelFamily         @relation(fields: [modelId], references: [id], onDelete: Restrict)
+  derivative        VehicleDerivative?         @relation(fields: [derivativeId, modelId], references: [id, modelId], onDelete: Restrict)
+  generation        VehicleGeneration?         @relation(fields: [generationId, modelId], references: [id, modelId], onDelete: Restrict)
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@unique([modelId, derivativeId, generationId, normalizedName, marketCodes], map: "VehicleTrim_scope_name_key")
+  @@index([modelId, isActive, name])
+  @@index([derivativeId, generationId])
+  @@index([marketCodes], type: Gin)
+}
+
+model VehiclePowertrain {
+  id                String                     @id @default(cuid())
+  modelId           String
+  derivativeId      String?
+  generationId      String?
+  name              String
+  normalizedName    String
+  fuelType          FuelType?
+  transmission      Transmission?
+  marketCodes       String[]                   @default([])
+  fromYear          Int?
+  toYear            Int?
+  isActive          Boolean                    @default(true)
+  createdAt         DateTime                   @default(now())
+  updatedAt         DateTime                   @updatedAt
+  model             VehicleModelFamily         @relation(fields: [modelId], references: [id], onDelete: Restrict)
+  derivative        VehicleDerivative?         @relation(fields: [derivativeId, modelId], references: [id, modelId], onDelete: Restrict)
+  generation        VehicleGeneration?         @relation(fields: [generationId, modelId], references: [id, modelId], onDelete: Restrict)
+  sourceReferences  VehicleTaxonomyReference[]
+  canonicalVehicles CanonicalVehicle[]
+  publicListings    MarketplaceListing[]
+
+  @@unique([modelId, derivativeId, generationId, normalizedName, marketCodes], map: "VehiclePowertrain_scope_name_key")
+  @@index([modelId, isActive, name])
+  @@index([derivativeId, generationId])
+  @@index([marketCodes], type: Gin)
+}
+
+model VehicleTaxonomyReference {
+  id            String                    @id @default(cuid())
+  sourceId      String
+  entityKind    VehicleTaxonomyEntityKind
+  externalId    String
+  label         String?
+  sourceVersion String?
+  metadata      Json?
+  makeId        String?
+  modelId       String?
+  derivativeId  String?
+  generationId  String?
+  trimId        String?
+  powertrainId  String?
+  createdAt     DateTime                  @default(now())
+  updatedAt     DateTime                  @updatedAt
+  source        VehicleTaxonomySource     @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+  make          VehicleMake?              @relation(fields: [makeId], references: [id], onDelete: Restrict)
+  model         VehicleModelFamily?       @relation(fields: [modelId], references: [id], onDelete: Restrict)
+  derivative    VehicleDerivative?        @relation(fields: [derivativeId], references: [id], onDelete: Restrict)
+  generation    VehicleGeneration?        @relation(fields: [generationId], references: [id], onDelete: Restrict)
+  trim          VehicleTrim?              @relation(fields: [trimId], references: [id], onDelete: Restrict)
+  powertrain    VehiclePowertrain?        @relation(fields: [powertrainId], references: [id], onDelete: Restrict)
+
+  @@unique([sourceId, entityKind, externalId])
+  @@index([makeId])
+  @@index([modelId])
+  @@index([derivativeId])
+  @@index([generationId])
+  @@index([trimId])
+  @@index([powertrainId])
+}
+
+model CanonicalVehicle {
+  id                  String                  @id @default(cuid())
+  canonicalKey        String                  @unique
+  identityStatus      VehicleIdentityStatus   @default(provisional)
+  category            VehicleCategory
+  vinNormalized       String?                 @unique @db.VarChar(17)
+  vinLast4            String?
+  make                String
+  model               String
+  derivative          String?
+  trim                String?
+  vehicleMakeId       String?
+  vehicleModelId      String?
+  vehicleDerivativeId String?
+  vehicleGenerationId String?
+  vehicleTrimId       String?
+  vehiclePowertrainId String?
+  year                Int
+  bodyType            BodyType
+  fuelType            FuelType
+  transmission        Transmission
+  colorExterior       String?
+  identityFingerprint String?
+  canonicalRevision   Int                     @default(1)
+  mergedIntoVehicleId String?
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  mergedIntoVehicle   CanonicalVehicle?       @relation("CanonicalVehicleMerge", fields: [mergedIntoVehicleId], references: [id], onDelete: Restrict)
+  mergedVehicles      CanonicalVehicle[]      @relation("CanonicalVehicleMerge")
+  vehicleMake         VehicleMake?            @relation(fields: [vehicleMakeId], references: [id], onDelete: Restrict)
+  vehicleModel        VehicleModelFamily?     @relation(fields: [vehicleModelId], references: [id], onDelete: Restrict)
+  vehicleDerivative   VehicleDerivative?      @relation(fields: [vehicleDerivativeId], references: [id], onDelete: Restrict)
+  vehicleGeneration   VehicleGeneration?      @relation(fields: [vehicleGenerationId], references: [id], onDelete: Restrict)
+  vehicleTrim         VehicleTrim?            @relation(fields: [vehicleTrimId], references: [id], onDelete: Restrict)
+  vehiclePowertrain   VehiclePowertrain?      @relation(fields: [vehiclePowertrainId], references: [id], onDelete: Restrict)
+  sourceRecords       SourceInventoryRecord[]
+  offers              InventoryOffer[]
+  publicListings      MarketplaceListing[]
+
+  @@index([vinNormalized, identityStatus])
+  @@index([identityFingerprint, identityStatus])
+  @@index([make, model, year])
+  @@index([vehicleMakeId, vehicleModelId, year])
+  @@index([vehicleDerivativeId, vehicleGenerationId])
+  @@index([mergedIntoVehicleId])
+}
+
+model InventoryRightsGrant {
+  id                String              @id @default(cuid())
+  supplierOrgId     String
+  inventorySourceId String
+  marketId          String?
+  kind              InventoryRightsKind
+  category          VehicleCategory
+  makeNormalized    String?
+  scopeKey          String
+  status            AuthorizationStatus @default(pending)
+  validFrom         DateTime            @default(now())
+  validUntil        DateTime?
+  policyVersion     String              @default("m1-v1")
+  evidenceReference String?
+  evidenceSummary   Json?
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+  supplierOrg       DealerOrg           @relation(fields: [supplierOrgId], references: [id], onDelete: Restrict)
+  inventorySource   InventorySource     @relation(fields: [inventorySourceId, supplierOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  market            Market?             @relation(fields: [marketId], references: [id], onDelete: Restrict)
+  offers            InventoryOffer[]
+  publications      MarketPublication[]
+
+  @@unique([inventorySourceId, scopeKey])
+  @@unique([id, supplierOrgId])
+  @@unique([id, inventorySourceId, supplierOrgId])
+  @@index([inventorySourceId, category, status, validUntil])
+  @@index([supplierOrgId, status, validUntil])
+}
+
+model InventoryOffer {
+  id                     String                @id @default(cuid())
+  supplierOrgId          String
+  inventorySourceId      String
+  sourceRecordId         String                @unique
+  canonicalVehicleId     String
+  externalOfferKey       String
+  inventoryRightsGrantId String?
+  status                 InventoryOfferStatus  @default(draft)
+  stockNumber            String?
+  title                  String
+  description            String
+  localizedContent       Json?
+  media                  Json?
+  priceAmountMinor       BigInt
+  priceCurrencyCode      String                @db.Char(3)
+  priceCurrencyExponent  Int                   @default(2)
+  taxTreatment           String                @default("unspecified")
+  mileageValue           Int
+  mileageUnit            String                @default("km")
+  physicalCountryCode    String                @db.Char(2)
+  physicalCountry        String
+  physicalRegion         String?
+  physicalCity           String
+  availableFrom          DateTime?
+  firstSeenAt            DateTime              @default(now())
+  lastSeenAt             DateTime              @default(now())
+  lastConfirmedAt        DateTime
+  sourceUpdatedAt        DateTime?
+  freshUntil             DateTime
+  reservedAt             DateTime?
+  soldAt                 DateTime?
+  withdrawnAt            DateTime?
+  staleAt                DateTime?
+  version                Int                   @default(1)
+  deletedAt              DateTime?
+  createdAt              DateTime              @default(now())
+  updatedAt              DateTime              @updatedAt
+  supplierOrg            DealerOrg             @relation(fields: [supplierOrgId], references: [id], onDelete: Restrict)
+  inventorySource        InventorySource       @relation(fields: [inventorySourceId, supplierOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  sourceRecord           SourceInventoryRecord @relation(fields: [sourceRecordId, inventorySourceId], references: [id, inventorySourceId], onDelete: Restrict)
+  canonicalVehicle       CanonicalVehicle      @relation(fields: [canonicalVehicleId], references: [id], onDelete: Restrict)
+  inventoryRightsGrant   InventoryRightsGrant? @relation(fields: [inventoryRightsGrantId, inventorySourceId, supplierOrgId], references: [id, inventorySourceId, supplierOrgId], onDelete: Restrict)
+  publications           MarketPublication[]
+  publicListing          MarketplaceListing?
+
+  @@unique([id, supplierOrgId])
+  @@unique([id, inventorySourceId, supplierOrgId])
+  @@unique([sourceRecordId, supplierOrgId])
+  @@unique([sourceRecordId, inventorySourceId])
+  @@unique([inventorySourceId, externalOfferKey])
+  @@index([supplierOrgId, status, updatedAt(sort: Desc)])
+  @@index([canonicalVehicleId, status])
+  @@index([status, freshUntil])
+}
+
+model MarketPublication {
+  id                          String                             @id @default(cuid())
+  supplierOrgId               String
+  inventorySourceId           String
+  supplierOfferId             String
+  marketId                    String
+  marketPermissionId          String?
+  inventoryRightsGrantId      String?
+  channel                     PublicationChannel                 @default(public_marketplace)
+  status                      MarketPublicationStatus            @default(draft)
+  eligibilityDecision         PublicationEligibilityDecision?
+  eligibilityReasonCodes      String[]                           @default([])
+  eligibilityPolicyVersion    String                             @default("m1-v1")
+  eligibilityInputHash        String?
+  eligibilityEvaluatedAt      DateTime?
+  eligibilityExpiresAt        DateTime?
+  offerVersion                Int                                @default(1)
+  nativePriceAmountMinor      BigInt
+  nativePriceCurrencyCode     String                             @db.Char(3)
+  nativePriceCurrencyExponent Int                                @default(2)
+  displayPriceAmountMinor     Int?
+  displayPriceCurrency        PriceCurrency?
+  priceConversionStatus       PriceConversionStatus              @default(native)
+  priceConvertedAt            DateTime?
+  landedCostStatus            LandedCostStatus                   @default(not_calculated)
+  freshUntil                  DateTime
+  publishedAt                 DateTime?
+  pausedAt                    DateTime?
+  withdrawnAt                 DateTime?
+  expiredAt                   DateTime?
+  version                     Int                                @default(1)
+  createdAt                   DateTime                           @default(now())
+  updatedAt                   DateTime                           @updatedAt
+  supplierOrg                 DealerOrg                          @relation(fields: [supplierOrgId], references: [id], onDelete: Restrict)
+  inventorySource             InventorySource                    @relation(fields: [inventorySourceId, supplierOrgId], references: [id, supplierOrgId], onDelete: Restrict)
+  supplierOffer               InventoryOffer                     @relation(fields: [supplierOfferId, inventorySourceId, supplierOrgId], references: [id, inventorySourceId, supplierOrgId], onDelete: Restrict)
+  market                      Market                             @relation(fields: [marketId], references: [id], onDelete: Restrict)
+  marketPermission            OrganizationMarketPermission?      @relation(fields: [marketPermissionId, supplierOrgId, marketId], references: [id, dealerOrgId, marketId], onDelete: Restrict)
+  inventoryRightsGrant        InventoryRightsGrant?              @relation(fields: [inventoryRightsGrantId, inventorySourceId, supplierOrgId], references: [id, inventorySourceId, supplierOrgId], onDelete: Restrict)
+  eligibilityEvaluations      PublicationEligibilityEvaluation[]
+  publicListing               MarketplaceListing?
+  leads                       Lead[]
+
+  @@unique([supplierOfferId, marketId, channel])
+  @@unique([id, supplierOfferId])
+  @@index([marketId, channel, status, publishedAt(sort: Desc)])
+  @@index([inventorySourceId, status, updatedAt(sort: Desc)])
+  @@index([supplierOrgId, status, updatedAt(sort: Desc)])
+  @@index([status, eligibilityExpiresAt])
+  @@index([status, freshUntil])
+}
+
+model PublicationEligibilityEvaluation {
+  id                  String                         @id @default(cuid())
+  marketPublicationId String
+  decision            PublicationEligibilityDecision
+  reasonCodes         String[]                       @default([])
+  policyVersion       String
+  inputHash           String
+  inputSnapshot       Json
+  evaluatedAt         DateTime                       @default(now())
+  expiresAt           DateTime?
+  marketPublication   MarketPublication              @relation(fields: [marketPublicationId], references: [id], onDelete: Restrict)
+
+  @@unique([marketPublicationId, policyVersion, inputHash])
+  @@index([marketPublicationId, evaluatedAt(sort: Desc)])
+  @@index([decision, expiresAt])
+}
+
+model ListingStatusEvent {
+  id               String              @id @default(cuid())
+  listingId        String
+  fromStatus       ListingStatus?
+  toStatus         ListingStatus
+  reasonCode       String?
+  note             String?
+  actorAccountId   String?
+  actorDealerOrgId String?
+  requestId        String?             @unique
+  createdAt        DateTime            @default(now())
+  listing          MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  actorAccount     MarketplaceAccount? @relation("StatusEventActor", fields: [actorAccountId], references: [id], onDelete: SetNull)
+  actorDealerOrg   DealerOrg?          @relation("StatusEventDealer", fields: [actorDealerOrgId], references: [id], onDelete: SetNull)
+
+  @@index([listingId, createdAt(sort: Desc)])
+  @@index([actorDealerOrgId, createdAt(sort: Desc)])
+  @@index([toStatus, createdAt])
+}
+
+model ListingPriceSnapshot {
+  id                 String              @id @default(cuid())
+  listingId          String
+  amountMinor        Int
+  currency           PriceCurrency
+  priceType          PriceType
+  monthlyAmountMinor Int?
+  monthlyCurrency    PriceCurrency?
+  source             String
+  actorAccountId     String?
+  createdAt          DateTime            @default(now())
+  listing            MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  actorAccount       MarketplaceAccount? @relation("PriceSnapshotActor", fields: [actorAccountId], references: [id], onDelete: SetNull)
+
+  @@index([listingId, createdAt(sort: Desc)])
+  @@index([createdAt])
+}
+
+model MediaUploadSession {
+  id                 String                    @id @default(cuid())
+  listingId          String
+  createdByAccountId String
+  dealerOrgId        String?
+  status             UploadSessionStatus       @default(authorized)
+  maxFiles           Int
+  maxBytes           Int
+  acceptedCount      Int                       @default(0)
+  acceptedBytes      Int                       @default(0)
+  expiresAt          DateTime
+  completedAt        DateTime?
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+  listing            MarketplaceListing        @relation(fields: [listingId], references: [id], onDelete: Restrict)
+  createdByAccount   MarketplaceAccount        @relation(fields: [createdByAccountId], references: [id], onDelete: Restrict)
+  dealerOrg          DealerOrg?                @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  images             MarketplaceListingImage[]
+
+  @@index([listingId, status, expiresAt])
+  @@index([createdByAccountId, status, createdAt])
+  @@index([dealerOrgId, status, createdAt])
+  @@index([status, expiresAt])
+}
+
+model MarketplaceListingImage {
+  id                  String              @id @default(cuid())
+  listingId           String
+  uploadSessionId     String?
+  uploadedByAccountId String?
+  url                 String
+  alt                 String
+  position            Int                 @default(0)
+  originalUrl         String?
+  processedUrl        String?
+  storageProvider     String              @default("external")
+  storageKey          String?
+  originalFilename    String?
+  contentType         String?
+  byteSize            Int?
+  sha256              String?
+  width               Int?
+  height              Int?
+  uploadStatus        MediaUploadStatus   @default(uploaded)
+  processingStatus    ProviderJobStatus   @default(skipped)
+  processingProvider  String?
+  processingMetadata  Json?
+  cleanupStatus       MediaCleanupStatus  @default(none)
+  cleanupAttempts     Int                 @default(0)
+  cleanupAfter        DateTime?
+  deletedAt           DateTime?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  listing             MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Restrict)
+  uploadSession       MediaUploadSession? @relation(fields: [uploadSessionId], references: [id], onDelete: SetNull)
+  uploadedByAccount   MarketplaceAccount? @relation("ImageUploader", fields: [uploadedByAccountId], references: [id], onDelete: SetNull)
+  photoJobs           ListingPhotoJob[]
+
+  @@unique([listingId, position])
+  @@unique([storageProvider, storageKey])
+  @@index([listingId, uploadStatus, position])
+  @@index([processingStatus, createdAt])
+  @@index([cleanupStatus, cleanupAfter])
+  @@index([sha256])
+}
+
+model ListingPhotoJob {
+  id                 String                  @id @default(cuid())
+  dealerOrgId        String?
+  listingId          String
+  imageId            String
+  createdByAccountId String?
+  originalUrl        String
+  processedUrl       String?
+  backdropPreset     String?
+  provider           String                  @default("stub")
+  status             ProviderJobStatus       @default(queued)
+  errorMessage       String?
+  metadata           Json?
+  idempotencyKey     String                  @unique
+  attemptCount       Int                     @default(0)
+  startedAt          DateTime?
+  nextAttemptAt      DateTime?
+  completedAt        DateTime?
+  createdAt          DateTime                @default(now())
+  updatedAt          DateTime                @updatedAt
+  dealerOrg          DealerOrg?              @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  listing            MarketplaceListing      @relation(fields: [listingId], references: [id], onDelete: Restrict)
+  image              MarketplaceListingImage @relation(fields: [imageId], references: [id], onDelete: Restrict)
+  createdByAccount   MarketplaceAccount?     @relation("PhotoJobActor", fields: [createdByAccountId], references: [id], onDelete: SetNull)
+
+  @@index([dealerOrgId, status, createdAt])
+  @@index([imageId])
+  @@index([listingId])
+  @@index([status, nextAttemptAt])
+  @@index([provider, status, createdAt])
+}
+
+model ListingGeneration {
+  id                     String              @id @default(cuid())
+  dealerOrgId            String
+  listingId              String
+  createdByAccountId     String?
+  vin                    String?
+  inputPhotoUrls         String[]            @default([])
+  inputNotes             String?
+  generatedTitle         String?
+  generatedDescriptionBg String?
+  generatedDescriptionEn String?
+  generatedShortCopy     String?
+  generatedSocialCaption String?
+  provider               String              @default("stub")
+  model                  String?
+  promptVersion          String              @default("phase1a-stub-v1")
+  status                 ProviderJobStatus   @default(queued)
+  errorMessage           String?
+  metadata               Json?
+  idempotencyKey         String              @unique
+  attemptCount           Int                 @default(0)
+  startedAt              DateTime?
+  completedAt            DateTime?
+  nextAttemptAt          DateTime?
+  createdAt              DateTime            @default(now())
+  updatedAt              DateTime            @updatedAt
+  dealerOrg              DealerOrg           @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  listing                MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Restrict)
+  createdByAccount       MarketplaceAccount? @relation("GenerationActor", fields: [createdByAccountId], references: [id], onDelete: SetNull)
+
+  @@index([dealerOrgId, createdAt])
+  @@index([listingId])
+  @@index([status, nextAttemptAt])
+  @@index([provider, status, createdAt])
+}
+
+model ListingVinDecodeJob {
+  id                 String              @id @default(cuid())
+  listingId          String
+  dealerOrgId        String?
+  createdByAccountId String?
+  vin                String
+  provider           String              @default("stub")
+  status             ProviderJobStatus   @default(queued)
+  decodedSpec        Json?
+  providerReference  String?
+  metadata           Json?
+  errorMessage       String?
+  idempotencyKey     String              @unique
+  attemptCount       Int                 @default(0)
+  startedAt          DateTime?
+  completedAt        DateTime?
+  nextAttemptAt      DateTime?
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  listing            MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Restrict)
+  dealerOrg          DealerOrg?          @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  createdByAccount   MarketplaceAccount? @relation("VinJobActor", fields: [createdByAccountId], references: [id], onDelete: SetNull)
+
+  @@index([listingId, createdAt(sort: Desc)])
+  @@index([dealerOrgId, status, createdAt])
+  @@index([status, nextAttemptAt])
+  @@index([provider, status, createdAt])
+}
+
+model SupplierTrustReview {
+  id                  String              @id @default(cuid())
+  dealerOrgId         String?
+  sellerProfileId     String?
+  status              VerificationStatus  @default(pending)
+  riskLevel           TrustRiskLevel
+  evidenceKinds       String[]            @default([])
+  provider            String?
+  providerReference   String?
+  policyKey           String
+  evidenceSummary     Json?
+  submittedAt         DateTime            @default(now())
+  reviewedAt          DateTime?
+  expiresAt           DateTime?
+  reviewedByAccountId String?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  dealerOrg           DealerOrg?          @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  sellerProfile       SellerProfile?      @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  reviewedByAccount   MarketplaceAccount? @relation("SupplierReviewReviewer", fields: [reviewedByAccountId], references: [id], onDelete: SetNull)
+
+  @@index([dealerOrgId, status, submittedAt])
+  @@index([sellerProfileId, status, submittedAt])
+  @@index([status, riskLevel, submittedAt])
+  @@index([expiresAt])
+}
+
+model ListingTrustEvidence {
+  id                  String              @id @default(cuid())
+  listingId           String
+  kind                TrustEvidenceKind
+  state               TrustEvidenceState
+  sourceType          TrustEvidenceSource
+  sourceProvider      String?
+  sourceReference     String?
+  summary             String
+  policyKey           String?
+  reviewedAt          DateTime?
+  expiresAt           DateTime?
+  reviewedByAccountId String?
+  metadata            Json?
+  isCurrent           Boolean             @default(true)
+  supersededAt        DateTime?
+  createdAt           DateTime            @default(now())
+  updatedAt           DateTime            @updatedAt
+  listing             MarketplaceListing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  reviewedByAccount   MarketplaceAccount? @relation("ListingEvidenceReviewer", fields: [reviewedByAccountId], references: [id], onDelete: SetNull)
+
+  @@index([listingId, kind, createdAt(sort: Desc)])
+  @@index([state, expiresAt])
+}
+
+model ModerationReport {
+  id                     String              @id @default(cuid())
+  listingId              String?
+  reporterAccountId      String?
+  assignedAdminAccountId String?
+  source                 ModerationSource
+  reason                 ModerationReason
+  severity               ModerationSeverity
+  status                 ModerationStatus    @default(new)
+  details                String
+  flags                  String[]            @default([])
+  listingTitleSnapshot   String
+  sellerIdSnapshot       String
+  resolutionCode         String?
+  resolvedAt             DateTime?
+  createdAt              DateTime            @default(now())
+  updatedAt              DateTime            @updatedAt
+  listing                MarketplaceListing? @relation(fields: [listingId], references: [id], onDelete: SetNull)
+  reporterAccount        MarketplaceAccount? @relation("ModerationReporter", fields: [reporterAccountId], references: [id], onDelete: SetNull)
+  assignedAdminAccount   MarketplaceAccount? @relation("ModerationAssignee", fields: [assignedAdminAccountId], references: [id], onDelete: SetNull)
+
+  @@index([status, severity, createdAt])
+  @@index([listingId, createdAt])
+  @@index([reporterAccountId, createdAt])
+  @@index([assignedAdminAccountId, status, updatedAt])
+}
+
+model AuditLog {
+  id             String              @id @default(cuid())
+  actorType      AuditActorType
+  actorAccountId String?
+  dealerOrgId    String?
+  action         String
+  entityType     String
+  entityId       String
+  requestId      String?             @unique
+  before         Json?
+  after          Json?
+  metadata       Json?
+  ipHash         String?
+  createdAt      DateTime            @default(now())
+  actorAccount   MarketplaceAccount? @relation("AuditActor", fields: [actorAccountId], references: [id], onDelete: SetNull)
+  dealerOrg      DealerOrg?          @relation(fields: [dealerOrgId], references: [id], onDelete: SetNull)
+
+  @@index([entityType, entityId, createdAt(sort: Desc)])
+  @@index([actorAccountId, createdAt(sort: Desc)])
+  @@index([dealerOrgId, createdAt(sort: Desc)])
+  @@index([action, createdAt])
+}
+
+model Lead {
+  id                      String              @id @default(cuid())
+  listingId               String?
+  dealerOrgId             String?
+  sellerProfileId         String?
+  buyerAccountId          String?
+  assignedDealerMemberId  String?
+  marketPublicationId     String?
+  buyerCountryCode        String?             @db.Char(2)
+  buyerLocale             String?
+  buyerVerificationStatus VerificationStatus  @default(pending)
+  buyerVerifiedAt         DateTime?
+  inquiryDedupeKey        String?             @unique
+  buyerName               String?
+  phone                   String?
+  email                   String?
+  contactMethod           String              @default("form")
+  message                 String?
+  status                  LeadStatus          @default(new)
+  source                  LeadSource          @default(listing)
+  channel                 LeadChannel         @default(web_form)
+  intent                  LeadIntent?
+  qualificationSummary    String?
+  score                   Int?
+  firstViewedAt           DateTime?
+  respondedAt             DateTime?
+  closedAt                DateTime?
+  deletedAt               DateTime?
+  createdAt               DateTime            @default(now())
+  updatedAt               DateTime            @updatedAt
+  listing                 MarketplaceListing? @relation(fields: [listingId], references: [id], onDelete: SetNull)
+  dealerOrg               DealerOrg?          @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  sellerProfile           SellerProfile?      @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  buyerAccount            MarketplaceAccount? @relation("LeadBuyer", fields: [buyerAccountId], references: [id], onDelete: SetNull)
+  assignedDealerMember    DealerMember?       @relation(fields: [assignedDealerMemberId], references: [id], onDelete: SetNull)
+  marketPublication       MarketPublication?  @relation(fields: [marketPublicationId], references: [id], onDelete: Restrict)
+  conversation            Conversation?
+
+  @@index([buyerAccountId, createdAt(sort: Desc)])
+  @@index([dealerOrgId, status, createdAt(sort: Desc)])
+  @@index([sellerProfileId, status, createdAt(sort: Desc)])
+  @@index([assignedDealerMemberId, status, updatedAt])
+  @@index([listingId, createdAt(sort: Desc)])
+  @@index([marketPublicationId, createdAt(sort: Desc)])
+  @@index([status, createdAt])
+}
+
+model Conversation {
+  id              String                    @id @default(cuid())
+  leadId          String?                   @unique
+  listingId       String?
+  dealerOrgId     String?
+  sellerProfileId String?
+  status          ConversationStatus        @default(open)
+  subject         String
+  lastMessageAt   DateTime?
+  closedAt        DateTime?
+  createdAt       DateTime                  @default(now())
+  updatedAt       DateTime                  @updatedAt
+  lead            Lead?                     @relation(fields: [leadId], references: [id], onDelete: SetNull)
+  listing         MarketplaceListing?       @relation(fields: [listingId], references: [id], onDelete: SetNull)
+  dealerOrg       DealerOrg?                @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  sellerProfile   SellerProfile?            @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  participants    ConversationParticipant[]
+  messages        ConversationMessage[]
+  readStates      ConversationReadState[]
+
+  @@index([dealerOrgId, status, lastMessageAt(sort: Desc)])
+  @@index([sellerProfileId, status, lastMessageAt(sort: Desc)])
+  @@index([listingId, lastMessageAt(sort: Desc)])
+}
+
+model ConversationParticipant {
+  id             String                      @id @default(cuid())
+  conversationId String
+  accountId      String
+  dealerMemberId String?
+  role           ConversationParticipantRole
+  joinedAt       DateTime                    @default(now())
+  leftAt         DateTime?
+  conversation   Conversation                @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  account        MarketplaceAccount          @relation(fields: [accountId], references: [id], onDelete: Restrict)
+  dealerMember   DealerMember?               @relation(fields: [dealerMemberId], references: [id], onDelete: Restrict)
+  sentMessages   ConversationMessage[]
+  readState      ConversationReadState?
+
+  @@unique([conversationId, accountId])
+  @@index([accountId, leftAt, conversationId])
+  @@index([dealerMemberId, conversationId])
+}
+
+model ConversationMessage {
+  id                  String                   @id @default(cuid())
+  conversationId      String
+  senderParticipantId String?
+  kind                MessageKind              @default(text)
+  status              MessageStatus            @default(sent)
+  body                String
+  clientMessageId     String?
+  createdAt           DateTime                 @default(now())
+  editedAt            DateTime?
+  deletedAt           DateTime?
+  conversation        Conversation             @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderParticipant   ConversationParticipant? @relation(fields: [senderParticipantId], references: [id], onDelete: SetNull)
+  readStates          ConversationReadState[]
+
+  @@unique([conversationId, clientMessageId])
+  @@index([conversationId, createdAt, id])
+  @@index([senderParticipantId, createdAt])
+}
+
+model ConversationReadState {
+  id                String                  @id @default(cuid())
+  conversationId    String
+  participantId     String                  @unique
+  lastReadMessageId String?
+  lastReadAt        DateTime?
+  createdAt         DateTime                @default(now())
+  updatedAt         DateTime                @updatedAt
+  conversation      Conversation            @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  participant       ConversationParticipant @relation(fields: [participantId], references: [id], onDelete: Cascade)
+  lastReadMessage   ConversationMessage?    @relation(fields: [lastReadMessageId], references: [id], onDelete: SetNull)
+
+  @@unique([conversationId, participantId])
+  @@index([participantId, updatedAt])
+  @@index([conversationId, lastReadAt])
+}
+
+model SavedListing {
+  id        String             @id @default(cuid())
+  accountId String
+  listingId String
+  createdAt DateTime           @default(now())
+  account   MarketplaceAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  listing   MarketplaceListing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@unique([accountId, listingId])
+  @@index([accountId, createdAt(sort: Desc)])
+}
+
+model SavedSearch {
+  id                      String                @id @default(cuid())
+  accountId               String
+  title                   String
+  description             String?
+  filters                 Json
+  cadence                 AlertCadence          @default(daily)
+  enabled                 Boolean               @default(true)
+  channel                 AlertChannel          @default(email)
+  timezone                String                @default("Europe/Sofia")
+  newMatches              Int                   @default(0)
+  lastRunAt               DateTime?
+  nextRunAt               DateTime?
+  lastSuccessfulRunAt     DateTime?
+  lastMatchedAt           DateTime?
+  cursorPublishedAt       DateTime?
+  consecutiveFailureCount Int                   @default(0)
+  createdAt               DateTime              @default(now())
+  updatedAt               DateTime              @updatedAt
+  account                 MarketplaceAccount    @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  matches                 SavedSearchMatch[]
+  deliveries              SavedSearchDelivery[]
+
+  @@index([accountId, updatedAt(sort: Desc)])
+  @@index([enabled, nextRunAt])
+  @@index([cadence, nextRunAt])
+}
+
+model SavedSearchMatch {
+  id             String             @id @default(cuid())
+  savedSearchId  String
+  listingId      String
+  firstMatchedAt DateTime           @default(now())
+  lastMatchedAt  DateTime           @default(now())
+  notifiedAt     DateTime?
+  savedSearch    SavedSearch        @relation(fields: [savedSearchId], references: [id], onDelete: Cascade)
+  listing        MarketplaceListing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@unique([savedSearchId, listingId])
+  @@index([savedSearchId, notifiedAt, firstMatchedAt])
+  @@index([listingId, firstMatchedAt])
+}
+
+model SavedSearchDelivery {
+  id                String             @id @default(cuid())
+  savedSearchId     String
+  accountId         String
+  channel           AlertChannel
+  provider          String
+  providerMessageId String?
+  status            DeliveryStatus     @default(queued)
+  dedupeKey         String             @unique
+  targetHash        String?
+  matchCount        Int                @default(0)
+  scheduledAt       DateTime
+  attemptedAt       DateTime?
+  sentAt            DateTime?
+  deliveredAt       DateTime?
+  failedAt          DateTime?
+  errorCode         String?
+  metadata          Json?
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+  savedSearch       SavedSearch        @relation(fields: [savedSearchId], references: [id], onDelete: Cascade)
+  account           MarketplaceAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerMessageId])
+  @@index([status, scheduledAt])
+  @@index([savedSearchId, createdAt(sort: Desc)])
+  @@index([accountId, createdAt(sort: Desc)])
+}
+
+model DealerBillingAccount {
+  id                 String               @id @default(cuid())
+  dealerOrgId        String               @unique
+  provider           BillingProvider      @default(stripe)
+  providerCustomerId String
+  status             BillingAccountStatus @default(pending)
+  defaultCurrency    PriceCurrency        @default(EUR)
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  dealerOrg          DealerOrg            @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  subscriptions      DealerSubscription[]
+  promotions         ListingPromotion[]
+
+  @@unique([provider, providerCustomerId])
+  @@index([status, updatedAt])
+}
+
+model DealerSubscription {
+  id                     String               @id @default(cuid())
+  billingAccountId       String
+  providerSubscriptionId String               @unique
+  providerPriceId        String
+  planKey                String
+  status                 SubscriptionStatus
+  currentPeriodStart     DateTime?
+  currentPeriodEnd       DateTime?
+  trialEnd               DateTime?
+  cancelAtPeriodEnd      Boolean              @default(false)
+  canceledAt             DateTime?
+  entitlementsSnapshot   Json?
+  createdAt              DateTime             @default(now())
+  updatedAt              DateTime             @updatedAt
+  billingAccount         DealerBillingAccount @relation(fields: [billingAccountId], references: [id], onDelete: Restrict)
+
+  @@index([billingAccountId, status, currentPeriodEnd])
+  @@index([status, currentPeriodEnd])
+}
+
+model EntitlementGrant {
+  id                   String                  @id @default(cuid())
+  dealerOrgId          String?
+  sellerProfileId      String?
+  planKey              String
+  status               EntitlementGrantStatus
+  source               EntitlementGrantSource
+  policyVersion        String
+  effectiveFrom        DateTime
+  effectiveUntil       DateTime?
+  graceUntil           DateTime?
+  entitlementsSnapshot Json
+  idempotencyKey       String                  @unique
+  sourceReference      String?
+  createdByAccountId   String?
+  createdAt            DateTime                @default(now())
+  updatedAt            DateTime                @updatedAt
+  dealerOrg            DealerOrg?              @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  sellerProfile        SellerProfile?          @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  createdByAccount     MarketplaceAccount?     @relation("EntitlementGrantCreator", fields: [createdByAccountId], references: [id], onDelete: SetNull)
+  usageEvents          EntitlementUsageEvent[]
+
+  @@index([dealerOrgId, status, effectiveFrom, effectiveUntil], map: "EntitlementGrant_dealer_status_window_idx")
+  @@index([sellerProfileId, status, effectiveFrom, effectiveUntil], map: "EntitlementGrant_seller_status_window_idx")
+  @@index([source, sourceReference])
+}
+
+model EntitlementUsageEvent {
+  id               String              @id @default(cuid())
+  grantId          String?
+  dealerOrgId      String?
+  sellerProfileId  String?
+  actorAccountId   String?
+  featureKey       String
+  delta            Int
+  idempotencyKey   String              @unique
+  periodStart      DateTime
+  periodEnd        DateTime
+  sourceEntityType String?
+  sourceEntityId   String?
+  metadata         Json?
+  createdAt        DateTime            @default(now())
+  grant            EntitlementGrant?   @relation(fields: [grantId], references: [id], onDelete: Restrict)
+  dealerOrg        DealerOrg?          @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  sellerProfile    SellerProfile?      @relation(fields: [sellerProfileId], references: [id], onDelete: Restrict)
+  actorAccount     MarketplaceAccount? @relation("EntitlementUsageActor", fields: [actorAccountId], references: [id], onDelete: SetNull)
+
+  @@index([dealerOrgId, featureKey, periodStart, periodEnd], map: "EntitlementUsageEvent_dealer_feature_period_idx")
+  @@index([sellerProfileId, featureKey, periodStart, periodEnd], map: "EntitlementUsageEvent_seller_feature_period_idx")
+  @@index([grantId, createdAt])
+  @@index([sourceEntityType, sourceEntityId])
+}
+
+model ListingPromotion {
+  id                        String                      @id @default(cuid())
+  listingId                 String?
+  dealerOrgId               String
+  billingAccountId          String
+  productKey                String
+  placement                 PromotionPlacement
+  status                    PromotionStatus             @default(scheduled)
+  paymentStatus             PromotionPaymentStatus      @default(unpaid)
+  cancellationStatus        PromotionCancellationStatus @default(not_requested)
+  amountMinor               Int
+  refundAmountMinor         Int                         @default(0)
+  currency                  PriceCurrency
+  idempotencyKey            String?                     @unique
+  providerCheckoutSessionId String?                     @unique
+  providerPaymentIntentId   String?                     @unique
+  activatedByEventId        String?                     @unique
+  listingTitleSnapshot      String
+  disclosureLabel           String                      @default("Promoted")
+  startsAt                  DateTime
+  endsAt                    DateTime
+  activatedAt               DateTime?
+  canceledAt                DateTime?
+  endedAt                   DateTime?
+  createdAt                 DateTime                    @default(now())
+  updatedAt                 DateTime                    @updatedAt
+  listing                   MarketplaceListing?         @relation(fields: [listingId], references: [id], onDelete: SetNull)
+  dealerOrg                 DealerOrg                   @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  billingAccount            DealerBillingAccount        @relation(fields: [billingAccountId], references: [id], onDelete: Restrict)
+  events                    ListingPromotionEvent[]
+
+  @@index([dealerOrgId, status, startsAt])
+  @@index([listingId, status, endsAt])
+  @@index([placement, status, startsAt, endsAt])
+  @@index([paymentStatus, cancellationStatus, updatedAt])
+}
+
+model ListingPromotionEvent {
+  id                String                  @id @default(cuid())
+  promotionId       String
+  dealerOrgId       String
+  eventType         PromotionEventType
+  idempotencyKey    String                  @unique
+  providerEventId   String?                 @unique
+  actorAccountId    String?
+  fromStatus        PromotionStatus?
+  toStatus          PromotionStatus?
+  fromPaymentStatus PromotionPaymentStatus?
+  toPaymentStatus   PromotionPaymentStatus?
+  metadata          Json?
+  occurredAt        DateTime                @default(now())
+  createdAt         DateTime                @default(now())
+  promotion         ListingPromotion        @relation(fields: [promotionId], references: [id], onDelete: Restrict)
+  dealerOrg         DealerOrg               @relation(fields: [dealerOrgId], references: [id], onDelete: Restrict)
+  actorAccount      MarketplaceAccount?     @relation("PromotionEventActor", fields: [actorAccountId], references: [id], onDelete: SetNull)
+
+  @@index([promotionId, occurredAt])
+  @@index([dealerOrgId, occurredAt])
+  @@index([eventType, occurredAt])
+}

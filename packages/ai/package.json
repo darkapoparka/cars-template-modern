@@ -1,0 +1,27 @@
+{
+  "name": "@repo/ai",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./keys": "./keys.ts",
+    "./lib/models": "./lib/models.ts",
+    "./listing-copy": "./listing-copy.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^3.0.41",
+    "@repo/marketplace-domain": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.13.10",
+    "ai": "^6.0.116",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "25.3.5"
+  }
+}

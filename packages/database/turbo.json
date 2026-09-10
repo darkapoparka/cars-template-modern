@@ -1,0 +1,22 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": ["DATABASE_URL", "SHADOW_DATABASE_URL"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*local"],
+      "outputs": ["generated/**"]
+    },
+    "test": {
+      "dependsOn": ["build", "^test"],
+      "env": ["DATABASE_URL", "SHADOW_DATABASE_URL"],
+      "inputs": ["$TURBO_DEFAULT$", ".env", ".env.*local"],
+      "outputs": []
+    },
+    "typecheck": {
+      "dependsOn": ["build", "^typecheck"],
+      "outputs": []
+    }
+  }
+}

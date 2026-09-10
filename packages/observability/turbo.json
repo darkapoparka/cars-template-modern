@@ -1,0 +1,15 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "test": {
+      "env": [
+        "BETTER*",
+        "NEXT_PUBLIC_SENTRY_DSN",
+        "NEXT_RUNTIME",
+        "SENTRY_*",
+        "VERCEL*"
+      ]
+    }
+  }
+}

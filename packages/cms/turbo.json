@@ -1,0 +1,12 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "extends": ["//"],
+  "tasks": {
+    "analyze": {
+      "env": ["BASEHUB_TOKEN"]
+    },
+    "dev": {
+      "env": ["BASEHUB_TOKEN"]
+    }
+  }
+}
