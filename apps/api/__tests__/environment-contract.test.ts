@@ -21,6 +21,19 @@ describe("runtime environment contract", () => {
     expect(() => assertRuntimeEnvironmentContract(localOrigins)).not.toThrow();
   });
 
+  it("accepts one HTTPS origin when callers explicitly allow sharing", () => {
+    const sharedOrigin = "https://template-preview.automarket.bg";
+    expect(() =>
+      assertRuntimeEnvironmentContract({
+        allowSharedOrigins: true,
+        apiUrl: sharedOrigin,
+        appUrl: sharedOrigin,
+        webUrl: sharedOrigin,
+        vercelEnvironment: "production",
+      })
+    ).not.toThrow();
+  });
+
   it("accepts distinct HTTPS origins and explicit disabled capabilities", () => {
     expect(() =>
       assertRuntimeEnvironmentContract({

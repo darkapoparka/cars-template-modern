@@ -1,4 +1,5 @@
 export interface RuntimeEnvironmentContractInput {
+  readonly allowSharedOrigins?: boolean;
   readonly apiUrl?: string;
   readonly appUrl?: string;
   readonly capabilityFlags?: Readonly<Record<string, string | undefined>>;
@@ -159,6 +160,7 @@ const addDeploymentIssues = (
 };
 
 export const getRuntimeEnvironmentContractIssues = ({
+  allowSharedOrigins = false,
   apiUrl,
   appUrl,
   capabilityFlags = {},
@@ -182,7 +184,11 @@ export const getRuntimeEnvironmentContractIssues = ({
     getExactOrigin("NEXT_PUBLIC_API_URL", apiUrl, isDeployment, issues),
   ];
 
-  if (origins.every(Boolean) && new Set(origins).size !== origins.length) {
+  if (
+    !allowSharedOrigins &&
+    origins.every(Boolean) &&
+    new Set(origins).size !== origins.length
+  ) {
     issues.push(
       "NEXT_PUBLIC_WEB_URL, NEXT_PUBLIC_APP_URL, and NEXT_PUBLIC_API_URL must be distinct origins"
     );

@@ -18,6 +18,8 @@ pnpm --filter web exec next dev -H 127.0.0.1 -p 6462
 ```
 These values are for local review, not hosted production configuration. Do not invent provider credentials.
 
+For Vercel static-demo deployments, the web app derives the deployment HTTPS origin from Vercel-provided metadata and intentionally collapses web/app/api public origins to that one host. This exception is enabled only when `leadSite.staticDemoMode` is true; full production mode still requires distinct real service origins.
+
 ## Framework checks
 - `pnpm --filter web typecheck`
 - `pnpm --filter web build  # with the documented preview environment`

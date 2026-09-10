@@ -297,3 +297,6 @@ packages/database/generated
 /artifacts/
 **/artifacts/
 /tmp/
+
+.vercel
+.env*.local
