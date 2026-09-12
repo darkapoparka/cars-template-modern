@@ -157,7 +157,10 @@ export const MobileImportSourceSearch = ({
                 <Button
                   aria-label={copy.clear}
                   className="size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300"
-                  onClick={() => setSourceUrl("")}
+                  onClick={() => {
+                    setSourceUrl("");
+                    inputRef.current?.focus({ preventScroll: true });
+                  }}
                   size="icon"
                   type="button"
                   variant="ghost"

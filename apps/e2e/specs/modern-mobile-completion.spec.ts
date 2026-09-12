@@ -256,3 +256,54 @@ for (const route of ["/sell", "/guides?topic=import&q=qa-no-article"]) {
     }
   });
 }
+
+for (const viewport of [
+  { width: 320, height: 700 },
+  { width: 844, height: 390 },
+]) {
+  test(`clearing import link keeps typing focus at ${viewport.width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+    await page.goto("/imports");
+    const trigger = page.getByRole("button", {
+      name: "Отворете полето за линк към обява",
+      exact: true,
+    });
+    await trigger.tap();
+    const dialog = page.locator('[data-slot="mobile-import-source-search"]');
+    const input = dialog.getByRole("textbox", {
+      name: "Линк към обявата",
+      exact: true,
+    });
+    await input.fill("https://example.com/vehicle");
+    await dialog
+      .getByRole("button", { name: "Изчистете линка", exact: true })
+      .tap();
+    await expect(input).toHaveValue("");
+    await expect(input).toBeFocused();
+    await expect(
+      dialog.getByRole("button", { name: "Изпратете линка", exact: true })
+    ).toBeDisabled();
+    await page.keyboard.type("https://example.com/replacement");
+    await expect(input).toHaveValue("https://example.com/replacement");
+    await dialog
+      .getByRole("button", { name: "Затворете търсенето", exact: true })
+      .tap();
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+    await trigger.tap();
+    await expect(input).toHaveValue("https://example.com/replacement");
+    await input.fill("not-a-url");
+    await dialog
+      .getByRole("button", { name: "Изпратете линка", exact: true })
+      .tap();
+    await expect(dialog).toBeVisible();
+    expect(
+      await input.evaluate(
+        (element: HTMLInputElement) => element.validity.typeMismatch
+      )
+    ).toBe(true);
+    expect(new URL(page.url()).pathname).toBe("/imports");
+  });
+}

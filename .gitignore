@@ -317,3 +317,5 @@ packages/database/generated
 !/docs/implementation/2026-09-12-mobile-final-verification/*.md
 /docs/implementation/2026-09-12-mobile/*
 !/docs/implementation/2026-09-12-mobile/*.md
+/docs/implementation/2026-09-12-mobile-continuation/*
+!/docs/implementation/2026-09-12-mobile-continuation/*.md
