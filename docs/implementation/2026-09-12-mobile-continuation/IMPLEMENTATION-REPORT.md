@@ -39,3 +39,16 @@ Visually reviewed the cleared Import link input at 320px (`import-cleared-320.pn
 - Command exit statuses are retained in `final-checks.json`.
 
 The completed focused browser runs total 12 engine cases: 8 for service help and 4 for link focus. Repeated runs are not additional unique coverage.
+
+## Final cross-engine regression and handoff
+
+`pnpm --filter e2e e2e:mobile --output=../../docs/implementation/2026-09-12-mobile-continuation/mobile-complete` completed successfully: **94 passed**, comprising 47 Chromium and 47 WebKit cases, with no failures, retries or skips. Evidence: `mobile-complete.log`, `mobile-complete-status.json` and the `mobile-complete/` browser output directory. This total includes the 12 new engine cases; focused reruns are not added again.
+The suite exercises listing geometry at 320/360/390/430px and 844x390 landscape, Sell draft/edit/reset/validation, import and leasing drawers, filters and URL state, article navigation, menu/gallery focus and automated accessibility checks. It blocks non-read HTTP methods rather than submitting real enquiries.
+
+Completed local implementation commits:
+- `894e775` — shared help readiness and Import keyboard scrolling.
+- `78469e6` — Import listing-link focus, regression tests and local-evidence ignore rules.
+
+The final preview request to `/cars` returned HTTP 200. The original preview remains bound to `127.0.0.1:3001`, PID 42588; it was not replaced or restarted. Branch `astra` retains checkpoint `7bad6bb` as an ancestor.
+Only two production source files changed. No desktop redesign, dependency upgrade, live provider submission, database migration, push or deployment was performed.
+The separate historical public/SEO and production-outage suites, release contracts and production dependency audit were not rerun in this continuation. No new production build, performance certification or physical-device acceptance is claimed.
