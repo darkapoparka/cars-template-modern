@@ -4,6 +4,7 @@ import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import type { MobileFormDraft } from "../../components/mobile-form-draft";
 import { MobileVehicleTaxonomyFields } from "../../components/mobile-vehicle-taxonomy-fields";
+import { PublicContactFields } from "../../components/public-contact-fields";
 import { ImportOriginField } from "./import-origin-field";
 import {
   importRequestCopy,
@@ -149,56 +150,13 @@ export const ImportContactFields = ({
       data-slot="import-contact-details"
     >
       <div className="grid gap-3 sm:grid-cols-3">
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-name">
-            {text.name}
-          </Label>
-          <Input
-            autoComplete="name"
-            className={importRequestInputClassName}
-            defaultValue={draft.name}
-            id="import-name"
-            maxLength={100}
-            minLength={2}
-            name="name"
-            placeholder={text.namePlaceholder}
-            required
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-phone">
-            {text.phone}
-          </Label>
-          <Input
-            autoComplete="tel"
-            className={importRequestInputClassName}
-            defaultValue={draft.phone}
-            id="import-phone"
-            maxLength={40}
-            minLength={7}
-            name="phone"
-            placeholder={text.phonePlaceholder}
-            required
-            type="tel"
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-email">
-            {text.email}
-          </Label>
-          <Input
-            autoComplete="email"
-            className={importRequestInputClassName}
-            defaultValue={draft.email}
-            id="import-email"
-            maxLength={254}
-            name="email"
-            placeholder={text.emailPlaceholder}
-            type="email"
-          />
-        </div>
+        <PublicContactFields
+          copy={text}
+          draft={draft}
+          idPrefix="import"
+          inputClassName={importRequestInputClassName}
+          labelClassName="text-xs"
+        />
       </div>
     </fieldset>
   );

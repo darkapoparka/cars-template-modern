@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
-import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { leadSite } from "@repo/marketplace/lead-site";
 import { getMobileQuickPillClassName } from "@repo/marketplace-ui";
@@ -27,7 +26,12 @@ import {
 } from "./mobile-financing-policy";
 import type { MobileFormDraft } from "./mobile-form-draft";
 
+import { toFinancingContactFormData } from "../../../lib/financing-contact-payload";
+import { PublicContactFields } from "./public-contact-fields";
+
 const initialState: ContactActionState = { status: "idle" };
+const submitFinancingRequest = (previous: ContactActionState, draft: FormData) =>
+  submitContactRequest(previous, toFinancingContactFormData(draft));
 
 const SubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
   const { pending } = useFormStatus();
@@ -66,7 +70,7 @@ export const FinancingRequestForm = ({
   const [term, setTerm] = useState(draft.term ?? request.term);
   const [note, setNote] = useState(draft.note ?? "");
   const [state, formAction] = useActionState(
-    submitContactRequest,
+    submitFinancingRequest,
     initialState
   );
   const message = buildFinancingContactMessage({
@@ -179,57 +183,13 @@ export const FinancingRequestForm = ({
       </fieldset>
 
       <div className="mt-5 grid gap-4">
-        <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="finance-name">
-            {copy.name}
-          </Label>
-          <Input
-            autoComplete="name"
-            className="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-[16px] shadow-none focus-visible:ring-zinc-900/25"
-            defaultValue={draft.name}
-            id="finance-name"
-            maxLength={100}
-            minLength={2}
-            name="name"
-            placeholder={copy.namePlaceholder}
-            required
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="finance-phone">
-            {copy.phone}
-          </Label>
-          <Input
-            autoComplete="tel"
-            className="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-[16px] shadow-none focus-visible:ring-zinc-900/25"
-            defaultValue={draft.phone}
-            id="finance-phone"
-            inputMode="tel"
-            maxLength={40}
-            minLength={7}
-            name="phone"
-            placeholder={copy.phonePlaceholder}
-            required
-            type="tel"
-          />
-        </div>
-
-        <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="finance-email">
-            {copy.email}
-          </Label>
-          <Input
-            autoComplete="email"
-            className="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-[16px] shadow-none focus-visible:ring-zinc-900/25"
-            defaultValue={draft.email}
-            id="finance-email"
-            maxLength={254}
-            name="email"
-            placeholder={copy.emailPlaceholder}
-            type="email"
-          />
-        </div>
+        <PublicContactFields
+          copy={copy}
+          draft={draft}
+          idPrefix="finance"
+          inputClassName="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-[16px] shadow-none focus-visible:ring-zinc-900/25"
+          labelClassName="font-medium text-[13px]"
+        />
 
         <div className="grid gap-1.5">
           <Label className="font-medium text-[13px]" htmlFor="finance-note">
