@@ -23,11 +23,13 @@ export function BlankImportRequestLink({
   defaultOrigin,
   href,
   isBg,
+  submissionAvailable,
 }: {
   fullWidth?: boolean;
   defaultOrigin: string;
   href: string;
   isBg: boolean;
+  submissionAvailable: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const [ready, setReady] = useState(false);
@@ -90,6 +92,7 @@ export function BlankImportRequestLink({
           formRef={formRef}
           locale={locale}
           privacyHref={getLocalizedPath(locale, "/legal/privacy")}
+          submissionAvailable={submissionAvailable}
         />
       </MobileMarketplaceOverlay>
     </>

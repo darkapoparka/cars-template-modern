@@ -15,6 +15,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
 import { MobileVisibleViewport } from "./components/mobile-visible-viewport";
@@ -95,7 +96,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
               <TooltipProvider>{children}</TooltipProvider>
             </AnalyticsProvider>
           )}
-          <MobileFinancingInterceptor locale={normalizedLocale} />
+          <MobileFinancingInterceptor
+            locale={normalizedLocale}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
+          />
           <Toaster />
         </ThemeProvider>
         {leadSite.staticDemoMode ||

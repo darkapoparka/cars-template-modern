@@ -30,8 +30,10 @@ const isUnmodifiedPrimaryClick = (event: MouseEvent) =>
 
 export const MobileFinancingInterceptor = ({
   locale,
+  submissionAvailable,
 }: {
   locale: "bg" | "en";
+  submissionAvailable: boolean;
 }) => {
   const copy = financingRequestCopy[locale];
   const [open, setOpen] = useState(false);
@@ -136,6 +138,7 @@ export const MobileFinancingInterceptor = ({
             key={requestKey}
             locale={locale}
             request={request}
+            submissionAvailable={submissionAvailable}
           />
         </Suspense>
       ) : null}

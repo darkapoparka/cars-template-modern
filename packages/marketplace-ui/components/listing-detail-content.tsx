@@ -147,7 +147,7 @@ export const ListingDetailContent = ({
             </h2>
             <Button
               asChild
-              className="h-9 gap-1 rounded-lg px-2 font-semibold text-[14px] text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950"
+              className="h-11 gap-1 rounded-lg px-2 font-semibold text-[14px] text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950 lg:h-9"
               variant="ghost"
             >
               <Link href={backHref}>

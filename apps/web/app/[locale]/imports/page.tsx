@@ -17,6 +17,7 @@ import { ArrowRight, Globe2, Search } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicExternalInventory } from "@/lib/public-external-inventory";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
@@ -150,7 +151,7 @@ const pageCopy = {
     sourceLabel: "Линк към обявата",
     sourcePlaceholder: "Поставете линк към обявата",
     sourcePlaceholderLong: "Поставете линк към конкретна обява",
-    submitLabel: "Изпратете линка",
+    submitLabel: "Продължете с този линк",
     submitText: "Поискай оферта",
   },
   en: {
@@ -183,7 +184,7 @@ const pageCopy = {
     sourceLabel: "Vehicle listing link",
     sourcePlaceholder: "Paste listing link",
     sourcePlaceholderLong: "Paste a specific listing link",
-    submitLabel: "Submit the link",
+    submitLabel: "Continue with this link",
     submitText: "Request a quote",
   },
 } as const;
@@ -423,6 +424,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                     defaultSourceUrl={defaultSourceUrl}
                     locale={normalizedLocale}
                     privacyHref={localize("/legal/privacy")}
+                    submissionAvailable={isPublicContactSubmissionAvailable()}
                   />
                 </div>
               </div>

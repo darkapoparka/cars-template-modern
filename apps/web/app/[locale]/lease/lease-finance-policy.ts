@@ -81,7 +81,7 @@ export const leaseSelectorCopy = {
   bg: {
     clearSelection: "Премахнете избора",
     depositLabel: "Предпочитана първоначална вноска",
-    depositShortLabel: "Вноска",
+    depositShortLabel: "Първоначална вноска",
     depositOptions: [
       { label: "Ще уточним", value: "flexible" },
       { label: "10%", value: "10" },

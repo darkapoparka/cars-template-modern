@@ -38,7 +38,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
                 : "Open address in Google Maps"
             }
             asChild
-            className="h-10 shrink-0 gap-1.5 rounded-xl border border-zinc-200 bg-white px-3 font-semibold text-[13px] shadow-none hover:bg-zinc-50 lg:h-9 lg:rounded-lg"
+            className="h-11 shrink-0 gap-1.5 rounded-xl border border-zinc-200 bg-white px-3 font-semibold text-[13px] shadow-none hover:bg-zinc-50 lg:h-9 lg:rounded-lg"
             variant="secondary"
           >
             <a href={leadSite.mapsUrl} rel="noreferrer" target="_blank">

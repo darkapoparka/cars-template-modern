@@ -14,6 +14,15 @@ export const importRequestSelectClassName =
 
 export const importRequestCopy = {
   bg: {
+    attachedDescription:
+      "Линкът е добавен. Оставете контакт, за да уточним заявката.",
+    attachedLink: "Добавен линк",
+    editLink: "Промени",
+    additionalDetails: "Допълнителни данни (по избор)",
+    vehicleRequirement:
+      "Добавете линк или изберете марка и модел. Останалите данни са по избор.",
+    requiredMake: "Марка *",
+    requiredModel: "Модел *",
     budget: "Бюджет (по избор) ",
     budgetPlaceholder: "напр. до 50 000 €",
     email: "Имейл (по избор)",
@@ -51,6 +60,15 @@ export const importRequestCopy = {
     year: "Година (по избор)",
   },
   en: {
+    attachedDescription:
+      "Link attached. Leave your contact details to discuss the request.",
+    attachedLink: "Attached link",
+    editLink: "Edit",
+    additionalDetails: "Additional details (optional)",
+    vehicleRequirement:
+      "Add a listing link or choose a make and model. The remaining details are optional.",
+    requiredMake: "Make *",
+    requiredModel: "Model *",
     budget: "Budget (optional)",
     budgetPlaceholder: "e.g. up to €50,000",
     email: "Email (optional)",

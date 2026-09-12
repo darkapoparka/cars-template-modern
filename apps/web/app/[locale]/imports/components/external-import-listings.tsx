@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { BlankImportRequestLink } from "./blank-import-request-link";
 
 interface ExternalImportListingsProps {
@@ -303,6 +304,7 @@ export const ExternalImportListings = ({
             defaultOrigin={selectedOrigin}
             href={blankRequestHref}
             isBg={isBg}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
           />
         ) : null}
       </div>
@@ -323,6 +325,7 @@ export const ExternalImportListings = ({
             defaultOrigin={selectedOrigin}
             href={blankRequestHref}
             isBg={isBg}
+            submissionAvailable={isPublicContactSubmissionAvailable()}
           />
         ) : null}
       </div>

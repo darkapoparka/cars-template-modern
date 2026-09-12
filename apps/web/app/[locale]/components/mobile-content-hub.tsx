@@ -222,10 +222,10 @@ export const MobileContentHub = ({
                     <span aria-hidden="true">·</span>
                     <span className="shrink-0">{item.meta}</span>
                   </div>
-                  <h2 className="mt-1 line-clamp-2 font-semibold text-[16px] leading-5 tracking-tight">
+                  <h2 className="mt-1 line-clamp-3 font-semibold text-[16px] leading-5 tracking-tight lg:line-clamp-2">
                     {item.title}
                   </h2>
-                  <p className="mt-1 line-clamp-2 text-[12.5px] text-zinc-600 leading-[17px]">
+                  <p className="mt-1 line-clamp-1 text-[12.5px] text-zinc-600 leading-[17px] lg:line-clamp-2">
                     {item.description}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-[12px]">

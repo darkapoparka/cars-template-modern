@@ -98,7 +98,7 @@ export function LeaseSelectedVehicle({
       </div>
       {onSelect ? (
         <button
-          aria-label={`${vehicle.title}, ${vehicle.priceLabel}`}
+          aria-label={`${locale === "bg" ? "Изберете" : "Select"} ${vehicle.title}, ${vehicle.priceLabel}`}
           aria-pressed={selected}
           className="absolute inset-0 rounded-xl focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-[-2px] active:bg-black/5"
           data-vehicle-selected={selected}

@@ -1,5 +1,124 @@
 import { expect, test } from "@playwright/test";
 
+test("make and model search narrow choices without losing filter selection", async ({
+  page,
+}) => {
+  await page.goto("/cars");
+  await page
+    .getByRole("button", { name: "Отвори филтрите", exact: true })
+    .tap();
+  await page.getByRole("button", { name: "Марка и модел, Всички марки" }).tap();
+  const dialog = page.getByRole("dialog");
+  await dialog.getByRole("searchbox").fill("bmw");
+  await expect(
+    dialog.getByRole("button", { name: "Audi", exact: true })
+  ).toBeHidden();
+  await dialog.getByRole("button", { name: "BMW", exact: true }).tap();
+  await dialog.getByRole("searchbox").fill("x5");
+  await expect(
+    dialog.getByRole("button", { name: "X3", exact: true })
+  ).toBeHidden();
+  await dialog.getByRole("button", { name: "X5", exact: true }).tap();
+  await dialog
+    .getByRole("button", { name: "Покажи обявите", exact: true })
+    .tap();
+  await expect
+    .poll(() => new URL(page.url()).searchParams.get("model"))
+    .toBe("X5");
+});
+
+test("linked import edits preserve preparation details and change required labels", async ({
+  page,
+}) => {
+  await page.goto(
+    "/imports?sourceUrl=https%3A%2F%2Fexample.com%2Fcar#import-request"
+  );
+  const form = page.locator('[data-slot="import-request-form"]');
+  await expect(
+    form.locator('[data-slot="import-vehicle-details"]')
+  ).toBeHidden();
+  await form
+    .getByRole("button", { name: "Допълнителни данни (по избор)", exact: true })
+    .tap();
+  await form.locator('input[name="budget"]').fill("30000 EUR");
+  await form.getByRole("button", { name: "Промени", exact: true }).tap();
+  const source = form.locator('input[name="sourceUrl"]');
+  await expect(source).toBeFocused();
+  await source.fill("");
+  await expect(form.locator('label[for="import-mobile-make"]')).toHaveText(
+    "Марка *"
+  );
+  await expect(form.locator('input[name="budget"]')).toHaveValue("30000 EUR");
+  await source.fill("https://example.com/replacement");
+  await expect(form.locator('label[for="import-mobile-make"]')).not.toHaveText(
+    "Марка *"
+  );
+  await expect(form.locator('input[name="budget"]')).toHaveValue("30000 EUR");
+  const values = await form.evaluate((element: HTMLFormElement) =>
+    new FormData(element).getAll("sourceUrl")
+  );
+  expect(values).toEqual(["https://example.com/replacement"]);
+  const year = form.locator('input[name="year"]');
+  await year.fill("1");
+  await form
+    .getByRole("button", { name: "Допълнителни данни (по избор)", exact: true })
+    .tap();
+  await expect(year).toBeHidden();
+  expect(
+    await form.evaluate((element: HTMLFormElement) => element.reportValidity())
+  ).toBe(false);
+  await expect(year).toBeVisible();
+  await expect(year).toBeFocused();
+});
+
+test("Sell back keeps the draft and returns focus without clearing", async ({
+  page,
+}) => {
+  await page.goto("/sell");
+  const trigger = page.locator('[data-slot="mobile-sell-manual-entry"]');
+  await trigger.tap();
+  const dialog = page.getByRole("dialog");
+  await dialog.locator('textarea[name="notes"]').fill("Keep on back");
+  await dialog
+    .getByRole("button", { name: "Назад към продажбата", exact: true })
+    .tap();
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await trigger.tap();
+  await expect(dialog.locator('textarea[name="notes"]')).toHaveValue(
+    "Keep on back"
+  );
+});
+
+test("linked import edit and expansion wait for hydration", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  });
+  try {
+    const page = await context.newPage();
+    await page.goto(
+      new URL("/imports?sourceUrl=https%3A%2F%2Fexample.com%2Fcar", baseURL)
+        .href
+    );
+    const form = page.locator('[data-slot="import-request-form"]');
+    await expect(
+      form.getByRole("button", { name: "Промени", exact: true })
+    ).toBeDisabled();
+    await expect(
+      form.getByRole("button", {
+        name: "Допълнителни данни (по избор)",
+        exact: true,
+      })
+    ).toBeDisabled();
+  } finally {
+    await context.close();
+  }
+});
+
 test.beforeEach(async ({ page }) => {
   // Exercise only local preview UI. Never send enquiries or call providers.
   await page.route("**/*", (route) =>
@@ -37,7 +156,7 @@ for (const [category, make, model] of [
       };
     });
     expect(values).toEqual({ make: [make], model: [model], category });
-    await form.getByRole("button", { name: "Продължете към контакт" }).click();
+    await form.getByRole("button", { name: "Преглед преди обаждане" }).click();
     await expect
       .poll(() => new URL(page.url()).searchParams.get("make"))
       .toBe(make);
@@ -60,6 +179,24 @@ test("clearing a Sell draft also clears its refresh source", async ({
   );
   const dialog = page.getByRole("dialog");
   await expect(dialog).toBeVisible();
+  await dialog
+    .getByRole("button", { name: "Изчисти въведените данни", exact: true })
+    .click();
+  await expect(dialog.locator('input[name="vin"]')).toHaveValue(
+    "WBA12345678901234"
+  );
+  await dialog
+    .getByRole("button", { name: "Запази данните", exact: true })
+    .click();
+  await expect(
+    dialog.getByRole("button", {
+      name: "Изчисти въведените данни",
+      exact: true,
+    })
+  ).toBeFocused();
+  await dialog
+    .getByRole("button", { name: "Изчисти въведените данни", exact: true })
+    .click();
   await dialog
     .getByRole("button", { name: "Изчисти данните", exact: true })
     .click();
@@ -283,7 +420,10 @@ for (const viewport of [
     await expect(input).toHaveValue("");
     await expect(input).toBeFocused();
     await expect(
-      dialog.getByRole("button", { name: "Изпратете линка", exact: true })
+      dialog.getByRole("button", {
+        name: "Продължете с този линк",
+        exact: true,
+      })
     ).toBeDisabled();
     await page.keyboard.type("https://example.com/replacement");
     await expect(input).toHaveValue("https://example.com/replacement");
@@ -296,7 +436,7 @@ for (const viewport of [
     await expect(input).toHaveValue("https://example.com/replacement");
     await input.fill("not-a-url");
     await dialog
-      .getByRole("button", { name: "Изпратете линка", exact: true })
+      .getByRole("button", { name: "Продължете с този линк", exact: true })
       .tap();
     await expect(dialog).toBeVisible();
     expect(

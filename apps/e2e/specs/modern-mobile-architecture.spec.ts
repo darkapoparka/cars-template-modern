@@ -15,7 +15,7 @@ test("financing remains dismissible while its deferred form loads", async ({
   page,
 }) => {
   await page.goto("/lease");
-  await page.locator('button[aria-label^="BMW X5 M50d,"]').click();
+  await page.locator('button[aria-label^="Изберете BMW X5 M50d,"]').click();
   const trigger = page.getByRole("link", { name: "Поискайте оферта" });
   await expect(trigger).toBeVisible();
   await page.waitForLoadState("networkidle");
@@ -41,13 +41,13 @@ test("financing remains dismissible while its deferred form loads", async ({
     await expect(trigger).toBeFocused();
     release();
     await trigger.tap();
-    await expect(dialog.locator('input[name="name"]')).toBeVisible();
-    await dialog.locator('input[name="name"]').fill("Architecture QA");
+    await expect(
+      dialog.locator('[data-slot="public-contact-unavailable"]')
+    ).toBeVisible();
+    await expect(dialog.locator('input[name="name"]')).toHaveCount(0);
     await page.keyboard.press("Escape");
     await trigger.tap();
-    await expect(dialog.locator('input[name="name"]')).toHaveValue(
-      "Architecture QA"
-    );
+    await expect(dialog.locator('a[href^="tel:"]')).toBeVisible();
   } finally {
     release();
   }

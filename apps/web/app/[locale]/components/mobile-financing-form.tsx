@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { type RefObject, useActionState, useState } from "react";
 import { useFormStatus } from "react-dom";
+import { toFinancingContactFormData } from "../../../lib/financing-contact-payload";
 import {
   type ContactActionState,
   submitContactRequest,
@@ -25,13 +26,14 @@ import {
   financingTermOptions,
 } from "./mobile-financing-policy";
 import type { MobileFormDraft } from "./mobile-form-draft";
-
-import { toFinancingContactFormData } from "../../../lib/financing-contact-payload";
 import { PublicContactFields } from "./public-contact-fields";
+import { PublicContactUnavailable } from "./public-contact-unavailable";
 
 const initialState: ContactActionState = { status: "idle" };
-const submitFinancingRequest = (previous: ContactActionState, draft: FormData) =>
-  submitContactRequest(previous, toFinancingContactFormData(draft));
+const submitFinancingRequest = (
+  previous: ContactActionState,
+  draft: FormData
+) => submitContactRequest(previous, toFinancingContactFormData(draft));
 
 const SubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
   const { pending } = useFormStatus();
@@ -57,11 +59,13 @@ export const FinancingRequestForm = ({
   formRef,
   locale,
   request,
+  submissionAvailable,
 }: {
   draft: MobileFormDraft;
   formRef: RefObject<HTMLFormElement | null>;
   locale: "bg" | "en";
   request: FinancingRequest;
+  submissionAvailable: boolean;
 }) => {
   const copy = financingRequestCopy[locale];
   const [deposit, setDeposit] = useState(
@@ -79,6 +83,15 @@ export const FinancingRequestForm = ({
     note,
     request: { ...request, term },
   });
+
+  if (!submissionAvailable) {
+    return (
+      <div className="overflow-y-auto px-4 pb-6">
+        <p className="mb-4 font-semibold text-[16px]">{request.vehicle}</p>
+        <PublicContactUnavailable locale={locale} />
+      </div>
+    );
+  }
 
   if (state.status === "success") {
     return (

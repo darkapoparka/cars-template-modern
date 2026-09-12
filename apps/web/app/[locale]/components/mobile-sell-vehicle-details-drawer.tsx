@@ -6,15 +6,15 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { leadSite } from "@repo/marketplace";
 import {
+  MobileMarketplaceOverlayBackAction,
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayHeader,
-  MobileMarketplaceOverlayIconAction,
   MobileMarketplaceOverlayShell,
   mobileMarketplaceOverlayFieldClassName,
   mobileMarketplaceOverlayInputClassName,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
-import { ArrowRight, RotateCcw } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import {
@@ -60,8 +60,17 @@ export const MobileSellVehicleDetailsDrawer = ({
   const hasCompleteVin = isCompleteVehicleVin(vin);
   const [draft, setDraft] = useState(initialDraft);
   const [resetKey, setResetKey] = useState(0);
+  const [confirmReset, setConfirmReset] = useState(false);
   const vinRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const resetRef = useRef<HTMLButtonElement>(null);
+  const close = () => {
+    if (formRef.current) {
+      setDraft(readSellVehicleDraft(readMobileFormDraft(formRef.current)));
+    }
+    setConfirmReset(false);
+    onOpenChange(false);
+  };
 
   return (
     <MobileMarketplaceOverlayShell
@@ -87,6 +96,7 @@ export const MobileSellVehicleDetailsDrawer = ({
       onOpenChange={(nextOpen) => {
         if (!nextOpen && formRef.current) {
           setDraft(readSellVehicleDraft(readMobileFormDraft(formRef.current)));
+          setConfirmReset(false);
         }
         onOpenChange(nextOpen);
       }}
@@ -95,28 +105,10 @@ export const MobileSellVehicleDetailsDrawer = ({
       <MobileMarketplaceOverlayHeader
         description={content.formDescription}
         leftAction={
-          <MobileMarketplaceOverlayIconAction
-            ariaLabel={
-              locale === "bg" ? "Изчисти данните" : "Clear vehicle details"
-            }
-            onClick={() => {
-              const emptyDraft = parseSellVehicleDraft();
-              setDraft(emptyDraft);
-              onVinChange("");
-              const url = new URL(window.location.href);
-              for (const field of Object.keys(emptyDraft)) {
-                url.searchParams.delete(field);
-              }
-              window.history.replaceState(
-                window.history.state,
-                "",
-                `${url.pathname}${url.search}${url.hash}`
-              );
-              setResetKey((value) => value + 1);
-            }}
-          >
-            <RotateCcw aria-hidden="true" className="size-[18px]" />
-          </MobileMarketplaceOverlayIconAction>
+          <MobileMarketplaceOverlayBackAction
+            ariaLabel={content.backToSell}
+            onClick={close}
+          />
         }
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={content.close} />
@@ -130,6 +122,7 @@ export const MobileSellVehicleDetailsDrawer = ({
         data-slot="mobile-sell-details-form"
         key={resetKey}
         method="get"
+        onInput={() => setConfirmReset(false)}
         ref={formRef}
       >
         <input name="intent" type="hidden" value="sell" />
@@ -180,7 +173,7 @@ export const MobileSellVehicleDetailsDrawer = ({
             makeLabel={content.make}
             makePlaceholder={content.make}
             modelLabel={content.model}
-            modelPlaceholder="X5"
+            modelPlaceholder={content.modelExample}
             required={!hasCompleteVin}
             variant="sell"
           />
@@ -202,7 +195,7 @@ export const MobileSellVehicleDetailsDrawer = ({
               max={vehicleYearMaximum}
               min={vehicleYearMinimum}
               name="year"
-              placeholder="2022"
+              placeholder={content.yearExample}
               required={!hasCompleteVin}
               type="number"
             />
@@ -222,7 +215,7 @@ export const MobileSellVehicleDetailsDrawer = ({
               max={vehicleMileageMaximum}
               min={0}
               name="mileage"
-              placeholder="62 000"
+              placeholder={content.mileageExample}
               required={!hasCompleteVin}
               type="number"
             />
@@ -255,12 +248,63 @@ export const MobileSellVehicleDetailsDrawer = ({
           <p className="mt-2 text-center text-[13px] text-muted-foreground leading-5">
             {content.directCall}{" "}
             <Link
-              className="font-semibold text-foreground underline-offset-4 hover:underline"
+              className="inline-flex min-h-11 items-center px-2 font-semibold text-foreground underline-offset-4 hover:underline"
               href={leadSite.phoneHref}
             >
               {leadSite.phoneDisplay}
             </Link>
           </p>
+          <div className="mt-2 text-center">
+            {confirmReset ? (
+              <fieldset aria-label={content.clearTitle}>
+                <p className="text-[13px] text-zinc-600">
+                  {content.clearConfirm}
+                </p>
+                <button
+                  className="min-h-11 rounded-lg px-4 font-semibold text-[14px] text-red-700 focus-visible:outline-2 focus-visible:outline-ring"
+                  onClick={() => {
+                    const emptyDraft = parseSellVehicleDraft();
+                    setDraft(emptyDraft);
+                    onVinChange("");
+                    const url = new URL(window.location.href);
+                    for (const field of Object.keys(emptyDraft)) {
+                      url.searchParams.delete(field);
+                    }
+                    window.history.replaceState(
+                      window.history.state,
+                      "",
+                      `${url.pathname}${url.search}${url.hash}`
+                    );
+                    setResetKey((value) => value + 1);
+                    setConfirmReset(false);
+                    requestAnimationFrame(() => vinRef.current?.focus());
+                  }}
+                  type="button"
+                >
+                  {content.clearAction}
+                </button>
+                <button
+                  className="min-h-11 rounded-lg px-4 font-medium text-[14px] focus-visible:outline-2 focus-visible:outline-ring"
+                  onClick={() => {
+                    setConfirmReset(false);
+                    requestAnimationFrame(() => resetRef.current?.focus());
+                  }}
+                  type="button"
+                >
+                  {content.keepAction}
+                </button>
+              </fieldset>
+            ) : (
+              <button
+                className="min-h-11 rounded-lg px-4 text-[13px] text-zinc-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
+                onClick={() => setConfirmReset(true)}
+                ref={resetRef}
+                type="button"
+              >
+                {content.resetAction}
+              </button>
+            )}
+          </div>
         </div>
       </form>
     </MobileMarketplaceOverlayShell>

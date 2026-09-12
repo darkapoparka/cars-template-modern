@@ -86,12 +86,27 @@ interface MobileDealerQuickFiltersProps {
   readonly items: readonly MobileQuickFilterItem[];
 }
 
-const getMobileSearchText = (isBg: boolean, totalListings: number) => {
+const getMobileSearchText = (
+  isBg: boolean,
+  totalListings: number,
+  category: VehicleCategory
+) => {
+  const nouns = {
+    car: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    lease: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    motorbike: {
+      bg: ["мотоциклет", "мотоциклета"],
+      en: ["motorcycle", "motorcycles"],
+    },
+    truck: { bg: ["камион", "камиона"], en: ["truck", "trucks"] },
+    van: { bg: ["бус", "буса"], en: ["van", "vans"] },
+  };
+  const noun = nouns[category][isBg ? "bg" : "en"][totalListings === 1 ? 0 : 1];
   if (isBg) {
-    return `Търси ${totalListings} ${totalListings === 1 ? "автомобил" : "автомобила"}`;
+    return `Търси ${totalListings} ${noun}`;
   }
 
-  return `Search ${totalListings} ${totalListings === 1 ? "vehicle" : "vehicles"}`;
+  return `Search ${totalListings} ${noun}`;
 };
 
 const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
@@ -332,7 +347,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchLabel={getMobileSearchText(isBg, totalListings)}
+          searchLabel={getMobileSearchText(isBg, totalListings, category)}
         />
       </div>
     </div>
@@ -354,7 +369,7 @@ export const MobileDealerDiscoveryHeader = ({
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchLabel = getMobileSearchText(isBg, totalListings);
+  const searchLabel = getMobileSearchText(isBg, totalListings, category);
 
   return (
     <div className="bg-zinc-950 text-white">

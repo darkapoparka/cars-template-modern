@@ -80,7 +80,7 @@ test("VIN-only continuation, edit and reload preserve the VIN", async ({
     .click();
   const dialog = page.getByRole("dialog");
   await dialog.locator('input[name="vin"]').fill(syntheticVin);
-  await dialog.getByRole("button", { name: "Продължете към контакт" }).click();
+  await dialog.getByRole("button", { name: "Преглед преди обаждане" }).click();
   await expect(page).toHaveURL(contactHandoffPattern);
   await expect(
     page.locator('[data-slot="sell-selected-vehicle"]')
@@ -117,7 +117,7 @@ test("manual draft preserves values, notes, cancel state and explicit reset", as
   await expect(dialog.locator('textarea[name="notes"]')).toHaveValue(
     "Retained audit note"
   );
-  await dialog.getByRole("button", { name: "Продължете към контакт" }).click();
+  await dialog.getByRole("button", { name: "Преглед преди обаждане" }).click();
   await expect(page).toHaveURL(contactHandoffPattern);
   await expect(
     page.locator('[data-slot="sell-contact-handoff"]')
@@ -128,6 +128,9 @@ test("manual draft preserves values, notes, cancel state and explicit reset", as
   await expect(
     page.getByRole("dialog").locator('input[name="year"]')
   ).toHaveValue("2020");
+  await page
+    .getByRole("button", { name: "Изчисти въведените данни", exact: true })
+    .click();
   await page
     .getByRole("button", { name: "Изчисти данните", exact: true })
     .click();
@@ -147,7 +150,7 @@ test("partial VIN and empty manual details cannot continue", async ({
     .click();
   const dialog = page.getByRole("dialog");
   await dialog.locator('input[name="vin"]').fill("SHORT");
-  await dialog.getByRole("button", { name: "Продължете към контакт" }).click();
+  await dialog.getByRole("button", { name: "Преглед преди обаждане" }).click();
   expect(
     await dialog
       .locator('input[name="vin"]')
@@ -155,7 +158,7 @@ test("partial VIN and empty manual details cannot continue", async ({
   ).toBe(true);
   await expect(page).toHaveURL(sellRoutePattern);
   await dialog.locator('input[name="vin"]').fill("");
-  await dialog.getByRole("button", { name: "Продължете към контакт" }).click();
+  await dialog.getByRole("button", { name: "Преглед преди обаждане" }).click();
   expect(
     await dialog
       .locator('input[name="year"]')
@@ -283,11 +286,11 @@ test("filter apply, refresh, cancel and reset use the same URL state", async ({
   await expect(page).not.toHaveURL(makeFilterPattern);
 });
 
-test("leasing selection and request preferences survive reopening without submission", async ({
+test("leasing selection survives reopening with an honest phone handoff", async ({
   page,
 }) => {
   await page.goto("/lease");
-  await page.locator('button[aria-label^="BMW X5 M50d,"]').click();
+  await page.locator('button[aria-label^="Изберете BMW X5 M50d,"]').click();
   await expect
     .poll(() => new URL(page.url()).searchParams.get("vehicle"))
     .toBeTruthy();
@@ -297,25 +300,18 @@ test("leasing selection and request preferences survive reopening without submis
     page.getByRole("button", { name: "Премахнете избора" })
   ).toBeVisible();
   await page.getByRole("link", { name: "Поискайте оферта" }).click();
-  let dialog = page.getByRole("dialog");
-  await dialog.getByRole("button", { name: "36 мес.", exact: true }).click();
-  await dialog.getByRole("button", { name: "20%", exact: true }).click();
-  await dialog
-    .getByRole("textbox", { name: "Име", exact: true })
-    .fill("Mobile QA");
+  const dialog = page.getByRole("dialog");
+  await expect(
+    dialog.locator('[data-slot="public-contact-unavailable"]')
+  ).toBeVisible();
+  await expect(dialog.locator('input[name="name"]')).toHaveCount(0);
+  await expect(dialog.locator('a[href^="tel:"]')).toBeVisible();
   await page.keyboard.press("Escape");
   await expect(dialog).toBeHidden();
   await page.getByRole("link", { name: "Поискайте оферта" }).click();
-  dialog = page.getByRole("dialog");
   await expect(
-    dialog.getByRole("textbox", { name: "Име", exact: true })
-  ).toHaveValue("Mobile QA");
-  await expect(
-    dialog.getByRole("button", { name: "36 мес.", exact: true })
-  ).toHaveAttribute("aria-pressed", "true");
-  await expect(
-    dialog.getByRole("button", { name: "20%", exact: true })
-  ).toHaveAttribute("aria-pressed", "true");
+    dialog.locator('[data-slot="public-contact-unavailable"]')
+  ).toBeVisible();
   await page.keyboard.press("Escape");
   expect(page.url()).toBe(selectionUrl);
   await page.getByRole("button", { name: "Премахнете избора" }).click();
@@ -336,14 +332,14 @@ test("import request preserves the draft and its nested country picker", async (
     .getByRole("button", { name: "Опишете автомобил", exact: true })
     .click();
   let dialog = page.getByRole("dialog");
-  await dialog.locator('input[name="name"]').fill("Mobile QA");
+  await dialog.locator('input[name="budget"]').fill("30000 EUR");
   await page.keyboard.press("Escape");
   await expect(dialog).toBeHidden();
   await page
     .getByRole("button", { name: "Опишете автомобил", exact: true })
     .click();
   dialog = page.getByRole("dialog");
-  await expect(dialog.locator('input[name="name"]')).toHaveValue("Mobile QA");
+  await expect(dialog.locator('input[name="budget"]')).toHaveValue("30000 EUR");
   await dialog
     .getByRole("button", {
       name: "Държава на произход: Изберете държава",
@@ -356,8 +352,8 @@ test("import request preserves the draft and its nested country picker", async (
     .getByRole("button", { name: "Германия", exact: true })
     .click();
   await expect(
-    page.getByRole("dialog").locator('input[name="name"]')
-  ).toHaveValue("Mobile QA");
+    page.getByRole("dialog").locator('input[name="budget"]')
+  ).toHaveValue("30000 EUR");
   await expect(
     page.getByRole("button", {
       name: "Държава на произход: Германия",

@@ -19,14 +19,22 @@ import { leadSite } from "@repo/marketplace";
 import {
   AlertCircle,
   CheckCircle2,
+  ChevronDown,
   LoaderCircle,
   Phone,
   Send,
 } from "lucide-react";
 import Link from "next/link";
-import { type RefObject, useActionState } from "react";
+import {
+  type RefObject,
+  useActionState,
+  useEffect,
+  useId,
+  useState,
+} from "react";
 import { useFormStatus } from "react-dom";
 import type { MobileFormDraft } from "../../components/mobile-form-draft";
+import { PublicContactUnavailable } from "../../components/public-contact-unavailable";
 import {
   type ContactActionState,
   submitContactRequest,
@@ -35,7 +43,10 @@ import {
   ImportContactFields,
   ImportVehicleFields,
 } from "./import-request-fields";
-import { importRequestCopy } from "./import-request-policy";
+import {
+  importRequestCopy,
+  importRequestInputClassName,
+} from "./import-request-policy";
 
 interface ImportRequestFormProps {
   defaultOrigin: string;
@@ -45,6 +56,7 @@ interface ImportRequestFormProps {
   formRef?: RefObject<HTMLFormElement | null>;
   locale: "bg" | "en";
   privacyHref: string;
+  submissionAvailable: boolean;
 }
 
 const initialState: ContactActionState = { status: "idle" };
@@ -125,12 +137,33 @@ export const ImportRequestForm = ({
   formRef,
   locale,
   privacyHref,
+  submissionAvailable,
 }: ImportRequestFormProps) => {
   const text = importRequestCopy[locale];
+  const [sourceUrl, setSourceUrl] = useState(
+    draft.sourceUrl ?? defaultSourceUrl
+  );
+  const hasSource = Boolean(sourceUrl.trim());
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   const [state, formAction] = useActionState(
     (previousState: ContactActionState, formData: FormData) =>
       submitImportRequest(previousState, formData, locale),
     initialState
+  );
+
+  const contactFields = submissionAvailable ? (
+    <ImportContactFields draft={draft} key="contact" locale={locale} />
+  ) : null;
+  const vehicleFields = (
+    <ImportVehicleSection
+      defaultOrigin={defaultOrigin}
+      draft={draft}
+      key="vehicle"
+      locale={locale}
+      ready={ready}
+      sourceUrl={sourceUrl}
+    />
   );
 
   if (state.status === "success") {
@@ -163,18 +196,27 @@ export const ImportRequestForm = ({
         >
           {text.formTitle}
         </h2>
-        <CardDescription className="max-w-2xl text-sm leading-6 sm:text-base lg:mx-auto lg:text-center">
-          {text.formDescription}
-        </CardDescription>
+        {submissionAvailable ? (
+          <CardDescription className="max-w-2xl text-sm leading-6 sm:text-base lg:mx-auto lg:text-center">
+            {hasSource ? text.attachedDescription : text.formDescription}
+          </CardDescription>
+        ) : (
+          <PublicContactUnavailable locale={locale} />
+        )}
       </CardHeader>
 
       <CardContent
         className={embedded ? "px-4 pb-4" : "px-5 pb-5 sm:px-7 sm:pb-7"}
       >
         <form
-          action={formAction}
-          className="grid gap-4"
+          action={submissionAvailable ? formAction : undefined}
+          className="flex flex-col gap-4"
           data-slot="import-request-form"
+          onSubmit={(event) => {
+            if (!submissionAvailable) {
+              event.preventDefault();
+            }
+          }}
           ref={formRef}
         >
           <div
@@ -198,29 +240,162 @@ export const ImportRequestForm = ({
             </Alert>
           ) : null}
 
-          <ImportVehicleFields
-            defaultOrigin={draft.origin ?? defaultOrigin}
-            defaultSourceUrl={draft.sourceUrl ?? defaultSourceUrl}
-            draft={draft}
+          <ImportAttachedLink
             locale={locale}
+            onChange={setSourceUrl}
+            ready={ready}
+            sourceUrl={sourceUrl}
           />
-          <ImportContactFields draft={draft} locale={locale} />
+          {hasSource
+            ? [contactFields, vehicleFields]
+            : [vehicleFields, contactFields]}
 
-          <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xl text-muted-foreground text-xs leading-5">
-              {text.privacyPrefix}{" "}
-              <Link
-                className="font-medium text-foreground underline-offset-4 hover:underline"
-                href={privacyHref}
-              >
-                {text.privacyText}
-              </Link>
-              .
-            </p>
-            <ImportRequestSubmitButton locale={locale} />
-          </div>
+          {submissionAvailable ? (
+            <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-xl text-muted-foreground text-xs leading-5">
+                {text.privacyPrefix}{" "}
+                <Link
+                  className="font-medium text-foreground underline-offset-4 hover:underline"
+                  href={privacyHref}
+                >
+                  {text.privacyText}
+                </Link>
+                .
+              </p>
+              <ImportRequestSubmitButton locale={locale} />
+            </div>
+          ) : null}
         </form>
       </CardContent>
     </Card>
+  );
+};
+
+const ImportAttachedLink = ({
+  locale,
+  onChange,
+  ready,
+  sourceUrl,
+}: {
+  locale: "bg" | "en";
+  onChange: (value: string) => void;
+  ready: boolean;
+  sourceUrl: string;
+}) => {
+  const text = importRequestCopy[locale];
+  const [editingSource, setEditingSource] = useState(false);
+  const sourceId = useId();
+  const hasSource = Boolean(sourceUrl.trim());
+  return (
+    <div className="grid gap-1.5" data-slot="import-attached-link">
+      {hasSource && !editingSource ? (
+        <div className="flex min-w-0 items-center gap-2 rounded-xl bg-zinc-100 px-3">
+          <div className="min-w-0 flex-1 py-2">
+            <p className="text-[12px] text-zinc-600">{text.attachedLink}</p>
+            <p className="truncate text-[14px] text-zinc-950" title={sourceUrl}>
+              {sourceUrl}
+            </p>
+          </div>
+          <button
+            className="min-h-11 shrink-0 rounded-lg px-2 font-semibold text-[14px] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
+            disabled={!ready}
+            onClick={() => {
+              setEditingSource(true);
+              requestAnimationFrame(() =>
+                document.getElementById(sourceId)?.focus()
+              );
+            }}
+            type="button"
+          >
+            {text.editLink}
+          </button>
+        </div>
+      ) : null}
+      <div className={hasSource && !editingSource ? "hidden" : "grid gap-1.5"}>
+        <Label className="text-[13px]" htmlFor={sourceId}>
+          {text.sourceUrl}
+        </Label>
+        <Input
+          className={importRequestInputClassName}
+          id={sourceId}
+          inputMode="url"
+          maxLength={500}
+          name="sourceUrl"
+          onChange={(event) => {
+            setEditingSource(true);
+            onChange(event.target.value);
+          }}
+          onInvalid={() => setEditingSource(true)}
+          placeholder={text.sourceUrlPlaceholder}
+          readOnly={!ready}
+          type="url"
+          value={sourceUrl}
+        />
+      </div>
+    </div>
+  );
+};
+
+const ImportVehicleSection = ({
+  defaultOrigin,
+  draft,
+  locale,
+  ready,
+  sourceUrl,
+}: {
+  defaultOrigin: string;
+  draft: MobileFormDraft;
+  locale: "bg" | "en";
+  ready: boolean;
+  sourceUrl: string;
+}) => {
+  const text = importRequestCopy[locale];
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const detailsId = useId();
+  const hasSource = Boolean(sourceUrl.trim());
+  return (
+    <div>
+      {hasSource ? (
+        <button
+          aria-controls={detailsId}
+          aria-expanded={detailsOpen}
+          className="flex min-h-11 w-full items-center justify-between rounded-lg text-left font-medium text-[14px] focus-visible:outline-2 focus-visible:outline-ring lg:hidden"
+          disabled={!ready}
+          onClick={() => setDetailsOpen((value) => !value)}
+          type="button"
+        >
+          {text.additionalDetails}
+          <ChevronDown
+            aria-hidden="true"
+            className={`size-4 shrink-0 ${detailsOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+      ) : (
+        <p className="mb-3 text-[13px] text-zinc-600 leading-5">
+          {text.vehicleRequirement}
+        </p>
+      )}
+      <div
+        className={hasSource && !detailsOpen ? "hidden lg:block" : "block"}
+        id={detailsId}
+        onInvalidCapture={(event) => {
+          if (hasSource && !detailsOpen) {
+            const field = event.target as HTMLInputElement;
+            setDetailsOpen(true);
+            requestAnimationFrame(() => {
+              field.focus();
+              field.reportValidity();
+            });
+          }
+        }}
+      >
+        <ImportVehicleFields
+          defaultOrigin={draft.origin ?? defaultOrigin}
+          draft={draft}
+          locale={locale}
+          sourceUrl={sourceUrl}
+        />
+      </div>
+    </div>
   );
 };

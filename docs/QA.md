@@ -47,6 +47,17 @@ On the tested routes, exercise navigation, mobile menu/open-close behavior, one 
 ## Runtime truthfulness
 Check console/page errors. Forms, chat widgets and calculators may be demo interactions; record that clearly unless real delivery/integration is configured and tested. A localhost 200 response is not a deploy verification.
 
+## Mobile request regression checks
+- Import: a supplied listing link remains visible and editable; optional vehicle details expand without losing the draft. Without a link, make and model are labelled as required. Link edit and expansion controls wait for hydration.
+- Delivery readiness: Import and mobile financing show the phone handoff when delivery is unavailable. Configured delivery retains contact fields and real submission; never simulate successful delivery.
+- Sell: Back and dismissal preserve unfinished details, clear requires confirmation, and clearing removes draft query parameters without removing unrelated parameters. The entry and review action explain the phone handoff.
+- Leasing: term and initial-payment controls describe request preferences, not recalculation of the advertised monthly estimate. Selecting a vehicle preserves existing card geometry.
+- Discovery/PDP: make/model search retains filter URL state; overview shows mileage, fuel and transmission; phone, gallery and map actions remain reachable.
+
+Run `pnpm --filter web test` and `pnpm --filter @repo/marketplace-ui test`. The web Vitest config uses automatic JSX transformation for component rendering while Next retains its own JSX configuration.
+
+With the local demo already running, set `E2E_BASE_URL` to its actual origin and run `pnpm --filter e2e exec playwright test --config=playwright.modern.config.ts`. The browser tests block enquiry submissions. For a bounded WebKit check, select `modern-mobile-completion.spec.ts` and `modern-mobile-architecture.spec.ts` with `--project=modern-mobile-webkit`.
+
 ## Final identity search
 Search the full lead copy for: `Day & Night|Day Night|day-night|0877 733 110|Атанас Манчев|kristiankirilov` plus the old domain/social/logo filenames. Provenance/history files can retain source names if clearly historical; active UI/data/metadata cannot.
 

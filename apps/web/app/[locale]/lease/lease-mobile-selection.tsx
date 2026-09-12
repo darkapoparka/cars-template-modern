@@ -225,6 +225,14 @@ export const LeaseMobileSelection = ({
                 vehicle={selectedVehicle}
               />
             </div>
+            <p
+              className="mt-3 text-[13px] text-zinc-600 leading-5"
+              data-slot="lease-preference-explanation"
+            >
+              {locale === "bg"
+                ? "Срокът и първоначалната вноска са предпочитания за заявката. Месечната сума е ориентировъчна; условията се уточняват индивидуално."
+                : "Term and initial payment are request preferences. The monthly amount is indicative; terms are confirmed individually."}
+            </p>
             <Button
               asChild
               className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-[650] text-[15px] text-white leading-5 tracking-[-0.005em] shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
@@ -242,6 +250,11 @@ export const LeaseMobileSelection = ({
           </>
         ) : (
           <div className="mt-3 grid gap-2" data-slot="lease-vehicle-inventory">
+            <p className="pb-1 text-[13px] text-zinc-600 leading-5">
+              {locale === "bg"
+                ? "Изберете автомобил за оферта"
+                : "Select a vehicle for an offer"}
+            </p>
             {filtered.length ? (
               filtered.map((vehicle) => (
                 <LeaseSelectedVehicle

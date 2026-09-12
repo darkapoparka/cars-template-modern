@@ -13,12 +13,12 @@ import {
 
 export const ImportVehicleFields = ({
   defaultOrigin,
-  defaultSourceUrl,
+  sourceUrl,
   draft = {},
   locale,
 }: {
   defaultOrigin: string;
-  defaultSourceUrl: string;
+  sourceUrl: string;
   draft?: MobileFormDraft;
   locale: "bg" | "en";
 }) => {
@@ -39,30 +39,15 @@ export const ImportVehicleFields = ({
           placeholder={text.originPlaceholder}
         />
 
-        <div className="hidden gap-1.5 lg:grid">
-          <Label className="text-xs" htmlFor="import-source-url">
-            {text.sourceUrl}
-          </Label>
-          <Input
-            className={importRequestInputClassName}
-            defaultValue={defaultSourceUrl}
-            id="import-source-url"
-            inputMode="url"
-            maxLength={500}
-            name="sourceUrl"
-            placeholder={text.sourceUrlPlaceholder}
-            type="url"
-          />
-        </div>
-
         <MobileVehicleTaxonomyFields
           initialMake={draft.make}
           initialModel={draft.model}
           locale={locale}
-          makeLabel={text.make}
+          makeLabel={sourceUrl.trim() ? text.make : text.requiredMake}
           makePlaceholder={text.makePlaceholder}
-          modelLabel={text.model}
+          modelLabel={sourceUrl.trim() ? text.model : text.requiredModel}
           modelPlaceholder={text.modelPlaceholder}
+          required={!sourceUrl.trim()}
           variant="import"
         />
       </div>

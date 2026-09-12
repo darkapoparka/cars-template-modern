@@ -7,6 +7,7 @@ import type {
   VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
 import { ChevronRight, Search } from "lucide-react";
+import { useState } from "react";
 import {
   getMarketplaceControlCopy,
   type MarketplaceFilterView,
@@ -217,56 +218,74 @@ const DiscoveryMakeView = ({
   setDraft,
   setView,
   taxonomy,
-}: DiscoveryFilterViewProps) => (
-  <div className="grid grid-cols-2 gap-2 p-4">
-    <Button
-      className={cn(
-        "h-12 rounded-xl",
-        draft.make
-          ? marketplaceOptionButtonClassName
-          : marketplaceSelectedOptionButtonClassName
-      )}
-      onClick={() => {
-        setDraft({
-          ...draft,
-          derivative: undefined,
-          make: undefined,
-          model: undefined,
-          trim: undefined,
-        });
-        setView("main");
-      }}
-      variant={draft.make ? "secondary" : "default"}
-    >
-      {isBg ? "Всички марки" : "All makes"}
-    </Button>
-    {taxonomy.map((item) => (
+}: DiscoveryFilterViewProps) => {
+  const [query, setQuery] = useState("");
+  const options = taxonomy.filter((item) =>
+    item.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())
+  );
+  return (
+    <div className="grid grid-cols-2 gap-2 p-4">
+      <TaxonomySearch
+        label={isBg ? "Търси марка" : "Search makes"}
+        onChange={setQuery}
+        value={query}
+      />
       <Button
-        aria-pressed={draft.make === item.name}
         className={cn(
           "h-12 rounded-xl",
-          draft.make === item.name
-            ? marketplaceSelectedOptionButtonClassName
-            : marketplaceOptionButtonClassName
+          draft.make
+            ? marketplaceOptionButtonClassName
+            : marketplaceSelectedOptionButtonClassName
         )}
-        key={item.slug}
         onClick={() => {
           setDraft({
             ...draft,
             derivative: undefined,
-            make: item.name,
+            make: undefined,
             model: undefined,
             trim: undefined,
           });
-          setView("model");
+          setView("main");
         }}
-        variant={draft.make === item.name ? "default" : "secondary"}
+        variant={draft.make ? "secondary" : "default"}
       >
-        {item.name}
+        {isBg ? "Всички марки" : "All makes"}
       </Button>
-    ))}
-  </div>
-);
+      {options.map((item) => (
+        <Button
+          aria-pressed={draft.make === item.name}
+          className={cn(
+            "h-12 rounded-xl",
+            draft.make === item.name
+              ? marketplaceSelectedOptionButtonClassName
+              : marketplaceOptionButtonClassName
+          )}
+          key={item.slug}
+          onClick={() => {
+            setDraft({
+              ...draft,
+              derivative: undefined,
+              make: item.name,
+              model: undefined,
+              trim: undefined,
+            });
+            setView("model");
+          }}
+          variant={draft.make === item.name ? "default" : "secondary"}
+        >
+          {item.name}
+        </Button>
+      ))}
+      {options.length === 0 ? (
+        <output className="col-span-2 py-3 text-[14px] text-zinc-600">
+          {isBg
+            ? "Няма намерена марка. Променете търсенето."
+            : "No make found. Try another search."}
+        </output>
+      ) : null}
+    </div>
+  );
+};
 
 const DiscoveryModelView = ({
   draft,
@@ -275,11 +294,20 @@ const DiscoveryModelView = ({
   setView,
   taxonomy,
 }: DiscoveryFilterViewProps) => {
+  const [query, setQuery] = useState("");
   const selectedModels =
     taxonomy.find((item) => item.name === draft.make)?.models ?? [];
+  const options = selectedModels.filter((item) =>
+    item.name.toLocaleLowerCase().includes(query.trim().toLocaleLowerCase())
+  );
 
   return (
     <div className="grid grid-cols-2 gap-2 p-4">
+      <TaxonomySearch
+        label={isBg ? "Търси модел" : "Search models"}
+        onChange={setQuery}
+        value={query}
+      />
       <Button
         className={cn(
           "h-12 rounded-xl",
@@ -300,7 +328,7 @@ const DiscoveryModelView = ({
       >
         {isBg ? "Всички модели" : "All models"}
       </Button>
-      {selectedModels.map((item) => (
+      {options.map((item) => (
         <Button
           aria-pressed={draft.model === item.name}
           className={cn(
@@ -324,9 +352,38 @@ const DiscoveryModelView = ({
           {item.name}
         </Button>
       ))}
+      {options.length === 0 ? (
+        <output className="col-span-2 py-3 text-[14px] text-zinc-600">
+          {isBg
+            ? "Няма намерен модел. Променете търсенето."
+            : "No model found. Try another search."}
+        </output>
+      ) : null}
     </div>
   );
 };
+
+const TaxonomySearch = ({
+  label,
+  onChange,
+  value,
+}: {
+  label: string;
+  onChange: (value: string) => void;
+  value: string;
+}) => (
+  <label className="col-span-2 mb-1 flex h-12 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 focus-within:outline-2 focus-within:outline-ring">
+    <Search aria-hidden="true" className="size-[18px] shrink-0 text-zinc-500" />
+    <span className="sr-only">{label}</span>
+    <input
+      className="min-w-0 flex-1 bg-transparent text-[16px] outline-none"
+      onChange={(event) => onChange(event.target.value)}
+      placeholder={label}
+      type="search"
+      value={value}
+    />
+  </label>
+);
 
 const DiscoveryMoreFiltersView = ({
   draft,

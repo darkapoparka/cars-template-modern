@@ -17,6 +17,7 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
+import { getVehicleCardSpecFacts } from "../lib/vehicle-card-policy";
 import { ListingActions } from "./listing-actions";
 import { ListingBackLink } from "./listing-back-link";
 
@@ -167,6 +168,15 @@ export const MobileListingSummary = ({
       <h1 className="mt-3 text-pretty break-words font-semibold text-section-title">
         {listing.title}
       </h1>
+      <p
+        className="mt-2 text-[14px] text-zinc-600 leading-5"
+        data-slot="listing-mobile-key-facts"
+      >
+        {getVehicleCardSpecFacts(listing, locale)
+          .filter((fact) => fact.id !== "year")
+          .map((fact) => fact.value)
+          .join(" · ")}
+      </p>
       {showPhysicalLocation ? (
         <p className="mt-2 text-meta text-muted-foreground">
           {formatVehicleLocation(physicalLocation, locale)}
