@@ -19,3 +19,12 @@ The actual content boundaries include `packages/marketplace/lead-site.ts`, `pack
 ## Historical documents
 
 Source-era roadmaps, audits, execution logs, migration plans, legacy copies and dated refactor evidence retain their original context. They are not new assignments. AGENTS routes current tasks. Preserve licenses and provenance; do not rewrite old results as fresh verification.
+## Main is the working branch
+
+The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
+
+An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
+
+## Source consolidation, 13 September 2026
+
+The owner requested integration of all preserved source into main and removal of obsolete branches. Existing implementation checkpoints are committed on main; earlier reports describing an uncommitted checkout are historical. Owner visual review and an approved Cars template release remain separate requirements.
