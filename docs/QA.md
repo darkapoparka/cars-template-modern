@@ -52,7 +52,7 @@ Check console/page errors. Forms, chat widgets and calculators may be demo inter
 - Delivery readiness: Import and mobile financing show the phone handoff when delivery is unavailable. Configured delivery retains contact fields and real submission; never simulate successful delivery.
 - Sell: Back and dismissal preserve unfinished details, clear requires confirmation, and clearing removes draft query parameters without removing unrelated parameters. The entry and review action explain the phone handoff.
 - Leasing: term and initial-payment controls describe request preferences, not recalculation of the advertised monthly estimate. Selecting a vehicle preserves existing card geometry.
-- Discovery/PDP: make/model search retains filter URL state; overview shows mileage, fuel and transmission; phone, gallery and map actions remain reachable.
+- Discovery/PDP: make/model search retains filter URL state; compact mobile segments switch Overview/Details with touch and keyboard. Vehicle specifications remain in Details without a duplicate metadata row below the title. Phone, gallery and map actions remain reachable.
 
 Run `pnpm --filter web test` and `pnpm --filter @repo/marketplace-ui test`. The web Vitest config uses automatic JSX transformation for component rendering while Next retains its own JSX configuration.
 

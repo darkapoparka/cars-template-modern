@@ -138,7 +138,7 @@ export const ListingDetailsTabs = ({
       <div className="mb-4 lg:hidden" data-slot="listing-details-tabs-mobile">
         <div
           aria-label={copy.ariaLabel}
-          className="-mx-4 grid grid-cols-2 border-zinc-200 border-b bg-card px-4"
+          className="mt-3 inline-grid grid-cols-2 rounded-xl bg-zinc-100 p-0.5"
           role="tablist"
         >
           {mobileTabs.map((tab) => {
@@ -148,10 +148,10 @@ export const ListingDetailsTabs = ({
               <button
                 aria-controls={`listing-mobile-panel-${tab.id}`}
                 aria-selected={isActive}
-                className={`relative inline-flex h-[52px] items-center justify-center px-3 text-[17px] leading-none transition-colors duration-150 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                className={`relative inline-flex h-11 min-w-[100px] items-center justify-center rounded-[10px] px-4 text-[14px] leading-none transition-colors duration-150 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
                   isActive
-                    ? "font-semibold text-zinc-950 after:absolute after:inset-x-0 after:-bottom-px after:h-[3px] after:bg-[var(--lead-site-accent)] after:content-['']"
-                    : "font-semibold text-zinc-500 hover:text-zinc-800 active:bg-zinc-100 active:text-zinc-950"
+                    ? "bg-white font-semibold text-zinc-950 shadow-sm"
+                    : "font-medium text-zinc-600 hover:text-zinc-950 active:bg-zinc-200"
                 }`}
                 id={`listing-mobile-tab-${tab.id}`}
                 key={tab.id}
@@ -173,7 +173,7 @@ export const ListingDetailsTabs = ({
         {mobileTabs.map((tab) => (
           <div
             aria-labelledby={`listing-mobile-tab-${tab.id}`}
-            className="pt-5 pb-1"
+            className="pt-4 pb-1"
             hidden={mobileActiveTab !== tab.id}
             id={`listing-mobile-panel-${tab.id}`}
             key={tab.id}
