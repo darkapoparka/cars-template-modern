@@ -27,7 +27,8 @@
     "./registry": "./registry.ts",
     "./routes": "./routes.ts",
     "./search-params": "./search-params.ts",
-    "./types": "./types.ts"
+    "./types": "./types.ts",
+    "./inventory-search": "./inventory-search.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",

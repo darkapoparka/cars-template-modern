@@ -8,6 +8,7 @@ import {
 } from "@repo/design-system/components/ui/popover";
 import { cn } from "@repo/design-system/lib/utils";
 import { type MarketplaceSearchParams, vehicleMakes } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import {
   ArrowRight,
   Check,
@@ -418,6 +419,7 @@ export const getLeadMastheadMode = ({
 
 export const DesktopLeadServiceSurface = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   compact,
   filters,
@@ -430,6 +432,7 @@ export const DesktopLeadServiceSurface = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -457,6 +460,7 @@ export const DesktopLeadServiceSurface = ({
       locale={locale}
       onApply={onApply}
       query={query}
+      searchListings={searchListings}
       setQuery={setQuery}
     />
   );

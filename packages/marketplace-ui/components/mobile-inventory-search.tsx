@@ -7,8 +7,8 @@ import {
   formatMileage,
   formatMoney,
   getListingPath,
-  type VehicleListing,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { CarFront, Search, X } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -27,7 +27,7 @@ import {
 
 interface MobileInventorySearchProps {
   readonly isBg: boolean;
-  readonly listings: readonly VehicleListing[];
+  readonly listings: readonly InventorySearchListing[];
   readonly locale?: string;
   readonly onOpenChange: (open: boolean) => void;
   readonly onSearch: (query: string) => void;

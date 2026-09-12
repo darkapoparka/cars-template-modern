@@ -38,3 +38,15 @@ describe("desktop search policy", () => {
     expect(rememberMarketplaceSearchQuery("BMW", "vehicles")).toEqual([]);
   });
 });
+
+it("does not fabricate vehicle suggestions when no inventory is supplied", () => {
+  const groups = getDesktopSearchSuggestionGroups({
+    isBg: false,
+    query: "",
+    recentSearches: [],
+    scope: "vehicles",
+  });
+  expect(
+    groups.flatMap((group) => group.items).filter((item) => item.listing)
+  ).toEqual([]);
+});

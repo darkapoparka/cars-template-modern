@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
+import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
   getPublicVehicleTaxonomy,
@@ -106,6 +107,10 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
           inventoryFacets={facets}
           listings={listings}
           locale={locale}
+          searchListings={getPublicInventorySearchListings(
+            filters.category,
+            listings
+          )}
           taxonomy={taxonomy}
           totalListings={totalListings}
         />

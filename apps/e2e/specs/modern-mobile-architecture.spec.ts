@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+const listingRoutePattern = /\/listing\//;
+
 test.beforeEach(async ({ page }) => {
   // Exercise the local UI without sending enquiries or invoking providers.
   await page.route("**/*", (route) =>
@@ -50,3 +52,31 @@ test("financing remains dismissible while its deferred form loads", async ({
     release();
   }
 });
+
+for (const width of [390, 1440]) {
+  test(`search uses the supplied inventory beyond the filtered results at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto("/cars?make=BMW&model=X5");
+    if (width < 1024) {
+      await page.locator('[data-slot="mobile-discovery-search"]').tap();
+      const dialog = page.getByRole("dialog");
+      await dialog.getByRole("searchbox").fill("M4");
+      await dialog
+        .getByRole("button")
+        .filter({ hasText: "BMW M4 Competition" })
+        .first()
+        .tap();
+    } else {
+      await page
+        .getByLabel("Търсене на автомобили", { exact: true })
+        .fill("M4");
+      await page.getByText("BMW M4 Competition", { exact: true }).click();
+    }
+    await expect(page).toHaveURL(listingRoutePattern);
+    await expect(page.locator("h1").first()).toContainText(
+      "BMW M4 Competition"
+    );
+  });
+}

@@ -19,6 +19,7 @@ import {
   type VehicleCategory,
   withCategory,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
@@ -221,6 +222,7 @@ export const DesktopCategoryPickerContent = ({
 
 export const DesktopDiscoverySearch = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   compact,
   filters,
@@ -231,6 +233,7 @@ export const DesktopDiscoverySearch = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -292,6 +295,7 @@ export const DesktopDiscoverySearch = ({
           compact={compact}
           isBg={isBg}
           label={localizeMarketplace(isBg, "Търсене", "Search")}
+          listings={searchListings}
           locale={locale}
           onOpenChange={(open) => {
             setSearchMenuOpen(open);

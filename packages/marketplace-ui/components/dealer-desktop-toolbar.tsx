@@ -2,6 +2,7 @@
 
 import { Dialog } from "@repo/design-system/components/ui/dialog";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import {
@@ -14,6 +15,7 @@ import { DesktopSearchAssistant } from "./desktop-search-assistant";
 
 export const DealerDesktopToolbar = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   filterCount,
   filters,
@@ -27,6 +29,7 @@ export const DealerDesktopToolbar = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   filterCount: number;
   filters: MarketplaceSearchParams;
@@ -91,6 +94,7 @@ export const DealerDesktopToolbar = ({
               compact
               isBg={isBg}
               label={isBg ? "Търсене" : "Search"}
+              listings={searchListings}
               locale={locale}
               onQueryChange={setQuery}
               onSearch={(q) => onApply({ q })}
