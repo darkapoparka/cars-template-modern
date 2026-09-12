@@ -2,7 +2,11 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./specs",
-  testMatch: ["modern-mobile.spec.ts", "modern-mobile-completion.spec.ts"],
+  testMatch: [
+    "modern-mobile.spec.ts",
+    "modern-mobile-completion.spec.ts",
+    "modern-mobile-service-help.spec.ts",
+  ],
   timeout: 45_000,
   expect: { timeout: 10_000 },
   fullyParallel: false,

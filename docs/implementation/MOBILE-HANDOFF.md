@@ -12,7 +12,8 @@ Preserve any later user edits. Never reset, clean or replace the local branch wi
 A local commit is not a push or deployment; neither was requested for this checkpoint.
 
 ## Implementation evidence
-Read `2026-09-12-mobile-final-verification/IMPLEMENTATION-REPORT.md` first.
+Read `2026-09-12-mobile-continuation/IMPLEMENTATION-REPORT.md` first for focused work after checkpoint `7bad6bb`.
+The prior full baseline is recorded in `2026-09-12-mobile-final-verification/IMPLEMENTATION-REPORT.md`.
 The prior completed baseline reports 82 mobile browser cases, 50 public/SEO cases, 2 production outage cases,
 348 relevant unit tests and 83 release contracts, with passing typecheck/lint/boundaries.
 Those numbers belong to the implementation pass, not this version-control checkpoint.

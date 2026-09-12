@@ -11,7 +11,13 @@ import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-m
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { mobileHeaderIconActionClassName } from "@repo/marketplace-ui/lib/mobile-header-icon-action";
 import { Info } from "lucide-react";
-import { type MouseEventHandler, type Ref, useRef, useState } from "react";
+import {
+  type MouseEventHandler,
+  type Ref,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 export function MobileServiceHelpButton({
   disabled = false,
@@ -24,13 +30,18 @@ export function MobileServiceHelpButton({
   onClick: MouseEventHandler<HTMLButtonElement>;
   ref?: Ref<HTMLButtonElement>;
 }) {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
   return (
     <button
       aria-haspopup="dialog"
       aria-label={title}
       className={mobileHeaderIconActionClassName}
       data-slot="mobile-service-help"
-      disabled={disabled}
+      disabled={disabled || !ready}
       onClick={onClick}
       ref={ref}
       title={title}
@@ -85,7 +96,12 @@ export function MobileServiceHelp({
             </div>
             <DrawerDescription className="sr-only">{title}</DrawerDescription>
           </DrawerHeader>
-          <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
+          <section
+            aria-label={title}
+            className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] focus-visible:outline-2 focus-visible:outline-zinc-500 focus-visible:outline-offset-[-2px]"
+            // biome-ignore lint/a11y/noNoninteractiveTabindex: This scrollable panel needs keyboard focus.
+            tabIndex={0}
+          >
             <dl>
               {faqs.map((item) => (
                 <div className="mb-5 last:mb-0" key={item.question}>
@@ -98,7 +114,7 @@ export function MobileServiceHelp({
                 </div>
               ))}
             </dl>
-          </div>
+          </section>
         </DrawerContent>
       </Drawer>
     </>
