@@ -52,3 +52,5 @@ Search the full lead copy for: `Day & Night|Day Night|day-night|0877 733 110|–ê—
 
 ## Done gate
 Do not mark ready until checks pass or each failure is explicitly documented with impact. Report exactly which commands, routes and widths were tested.
+
+Current cross-repository ownership, approved releases, dealer-copy workflow and standalone/mounted limits: [Cars integration](CARS-INTEGRATION.md).
