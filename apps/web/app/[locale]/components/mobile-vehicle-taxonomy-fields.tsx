@@ -144,7 +144,9 @@ export const MobileVehicleTaxonomyFields = ({
 
       event.preventDefault();
       if (window.matchMedia("(min-width: 1024px)").matches) {
-        form.querySelector<HTMLElement>(`[name="${missingField}"]`)?.focus();
+        form
+          .querySelector<HTMLElement>(`#${idPrefix}-${missingField}`)
+          ?.focus();
         return;
       }
       setOpenPicker(missingField);
@@ -154,7 +156,7 @@ export const MobileVehicleTaxonomyFields = ({
 
     form.addEventListener("submit", handleSubmit);
     return () => form.removeEventListener("submit", handleSubmit);
-  }, [make, model, required]);
+  }, [idPrefix, make, model, required]);
 
   let desktopFields: ReactNode;
   if (variant === "sell" && selectedVehicle && make && model) {
@@ -199,7 +201,6 @@ export const MobileVehicleTaxonomyFields = ({
             aria-required={required}
             className={vehicleTaxonomySelectClassName}
             id={`${idPrefix}-make`}
-            name="make"
             onChange={(event) => {
               setMake(event.target.value);
               setModel("");
@@ -209,6 +210,9 @@ export const MobileVehicleTaxonomyFields = ({
             <option disabled value="">
               {makePlaceholder}
             </option>
+            {make && !vehicleMakes.includes(make) ? (
+              <option value={make}>{make}</option>
+            ) : null}
             {vehicleMakes.map((option) => (
               <option key={option} value={option}>
                 {option}
@@ -226,7 +230,6 @@ export const MobileVehicleTaxonomyFields = ({
             disabled={!make}
             id={`${idPrefix}-model`}
             maxLength={80}
-            name="model"
             onChange={(event) => setModel(event.target.value)}
             placeholder={modelPlaceholder}
             value={model}
@@ -245,7 +248,6 @@ export const MobileVehicleTaxonomyFields = ({
             className={vehicleTaxonomyInputClassName}
             id={`${idPrefix}-make`}
             maxLength={80}
-            name="make"
             onChange={(event) => {
               setMake(event.target.value);
               setModel("");
@@ -262,7 +264,6 @@ export const MobileVehicleTaxonomyFields = ({
             className={vehicleTaxonomyInputClassName}
             id={`${idPrefix}-model`}
             maxLength={120}
-            name="model"
             onChange={(event) => setModel(event.target.value)}
             placeholder={modelPlaceholder}
             value={model}
@@ -274,6 +275,9 @@ export const MobileVehicleTaxonomyFields = ({
 
   return (
     <div className="contents" ref={rootRef}>
+      {/* Serialize state once; hidden desktop selects may reject custom makes. */}
+      <input name="make" type="hidden" value={make} />
+      <input name="model" type="hidden" value={model} />
       <div
         className={
           variant === "sell"

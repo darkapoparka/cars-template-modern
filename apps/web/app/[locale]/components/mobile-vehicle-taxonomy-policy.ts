@@ -61,8 +61,8 @@ export const getRequiredVehicleTaxonomyField = (
   make: string,
   model: string
 ): VehicleTaxonomyPickerKind | null => {
-  if (!make) {
+  if (!make.trim()) {
     return "make";
   }
-  return model ? null : "model";
+  return model.trim() ? null : "model";
 };

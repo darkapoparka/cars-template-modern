@@ -25,10 +25,13 @@ describe("marketplace result toolbar policy", () => {
     const filters = parseMarketplaceSearchParams({
       make: "BMW",
       model: "X5",
-      priceMax: 100000,
+      priceMax: 100_000,
     });
     const chips = getActiveFilterChips(filters, "en");
     expect(chips.map((chip) => chip.id)).toEqual(["make-model", "price"]);
-    expect(chips[0]?.updates).toMatchObject({ make: undefined, model: undefined });
+    expect(chips[0]?.updates).toMatchObject({
+      make: undefined,
+      model: undefined,
+    });
   });
 });

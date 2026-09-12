@@ -22,11 +22,8 @@ export const MediaUploader = ({ listingId }: MediaUploaderProps) => {
   const [uploading, setUploading] = useState(false);
   const selectedFilesLabel =
     files.length > 0 ? `Качи ${files.length} снимки` : "Качи снимки";
-  const uploadLabel = uploading
-    ? "Качване…"
-    : failed
-      ? "Опитай отново"
-      : selectedFilesLabel;
+  const idleUploadLabel = failed ? "Опитай отново" : selectedFilesLabel;
+  const uploadLabel = uploading ? "Качване…" : idleUploadLabel;
 
   const startUpload = async () => {
     try {

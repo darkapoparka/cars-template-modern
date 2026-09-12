@@ -39,13 +39,13 @@ export const getDesktopQuickFilterClassName = (
   let surfaceClassName = "bg-control text-foreground hover:bg-control-hover";
   if (active) {
     surfaceClassName =
-      "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-hover)]";
+      "border-zinc-950 bg-zinc-950 text-white hover:border-zinc-800 hover:bg-zinc-800";
   } else if (elevated) {
-    surfaceClassName = "bg-card text-foreground hover:bg-card/80";
+    surfaceClassName = "bg-white text-zinc-800";
   }
 
   return cn(
-    "h-11 rounded-full border-0 px-4 font-semibold text-base transition-colors duration-150 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+    "h-10 rounded-full border border-zinc-300 bg-white px-4 font-semibold text-sm text-zinc-800 shadow-sm transition-[background-color,border-color,box-shadow,color] duration-150 hover:border-zinc-400 hover:bg-zinc-50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
     surfaceClassName
   );
 };
@@ -446,7 +446,9 @@ export const DesktopQuickRangeDialog = ({
             <DialogTitle className="text-lg text-zinc-950 leading-7">
               {title}
             </DialogTitle>
-            <DialogDescription className="sr-only">{description}</DialogDescription>
+            <DialogDescription className="sr-only">
+              {description}
+            </DialogDescription>
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}

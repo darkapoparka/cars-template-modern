@@ -9,6 +9,7 @@ import {
 import { Home, Search } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { PublicRecoveryFrame } from "@/components/public-recovery-frame";
 import { Footer } from "./components/footer";
 
 const NotFound = () => {
@@ -21,7 +22,7 @@ const NotFound = () => {
     : `Page not found | ${leadSite.name}`;
 
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground">
+    <PublicRecoveryFrame locale={isBg ? "bg" : "en"}>
       <title>{pageTitle}</title>
       <a
         className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -29,7 +30,13 @@ const NotFound = () => {
       >
         {isBg ? "Към основното съдържание" : "Skip to main content"}
       </a>
-      <header className="border-border border-b bg-card">
+      <header
+        className={
+          leadSite.staticDemoMode
+            ? "hidden border-border border-b bg-card lg:block"
+            : "border-border border-b bg-card"
+        }
+      >
         <div
           className={`${marketplaceContentFrameClassName} flex h-[68px] items-center justify-between`}
         >
@@ -56,7 +63,7 @@ const NotFound = () => {
       </header>
 
       <main
-        className="grid min-h-[calc(100dvh-68px)] flex-1 place-items-center px-4 py-12"
+        className="grid flex-1 place-items-center px-4 py-10"
         id="main-content"
         tabIndex={-1}
       >
@@ -88,8 +95,10 @@ const NotFound = () => {
           </div>
         </section>
       </main>
-      <Footer locale={isBg ? "bg" : "en"} />
-    </div>
+      <div className="hidden lg:block">
+        <Footer locale={isBg ? "bg" : "en"} />
+      </div>
+    </PublicRecoveryFrame>
   );
 };
 

@@ -1,4 +1,4 @@
-> Historical source instructions. Active template ownership is in the root AGENTS.md and docs/CARS-INTEGRATION.md.
+> Historical instructions only; follow the repository root AGENTS.md.
 
 # Modern template instructions
 

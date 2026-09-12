@@ -27,6 +27,7 @@ import {
   type ListingOrganizationRole,
   type ListingSellerRole,
 } from "../lib/listing-truth";
+import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
   getVehicleCardBadgeLabels,
@@ -52,7 +53,6 @@ import {
   getVehicleCardSecondaryPriceLabel,
   vehicleCardToneClassNames,
 } from "../lib/vehicle-card-view-policy";
-import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 
 const sellerRoleIcons = {
@@ -122,7 +122,7 @@ const VehiclePriceSummary = ({
   return (
     <div className="min-w-0">
       <p
-        className="whitespace-nowrap font-bold text-foreground text-lg tabular-nums leading-5 tracking-tight"
+        className="whitespace-nowrap font-bold text-[17px] text-foreground tabular-nums leading-[19px] tracking-tight lg:text-lg lg:leading-5 min-[360px]:text-lg min-[360px]:leading-5"
         data-slot="vehicle-card-price"
       >
         {formatVehicleCardMoney(pricePolicy.primaryPrice, variant, locale)}
@@ -469,12 +469,15 @@ const MobileDealerVehicleCardContent = ({
   locale?: string;
 }) => (
   <Link
-    className={cn(mobileVehicleCardContentClassName, "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden")}
+    className={cn(
+      mobileVehicleCardContentClassName,
+      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+    )}
     href={listingHref}
   >
     <div className="min-w-0 space-y-0.5">
       <h2
-        className="line-clamp-2 font-medium text-base text-foreground leading-5 tracking-tight"
+        className="line-clamp-2 font-medium text-[15px] text-foreground leading-[18px] tracking-tight min-[360px]:text-base min-[360px]:leading-5"
         data-slot="vehicle-card-title"
       >
         {getVehicleCardTitle(listing, "comparison")}
@@ -520,7 +523,7 @@ const ComparisonVehicleCardContent = ({
       {presentation === "discovery" ? (
         <div data-slot="vehicle-card-title-row">
           <h2
-            className="line-clamp-2 min-w-0 font-medium text-card-title text-foreground"
+            className="line-clamp-2 min-w-0 font-medium text-card-title text-foreground lg:min-h-10"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >

@@ -1,18 +1,23 @@
 import { mobileFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  type SellVehicleCategory,
+  sellCategoryLabels,
+} from "../../../lib/sell-vehicle-draft";
+
+export {
+  isCompleteVehicleVin,
+  normalizeVehicleVin,
+} from "../../../lib/sell-vehicle-draft";
 export const mobileSellVehicleCategoryOptions = {
-  bg: [
-    { label: "Автомобил", value: "car" },
-    { label: "Камион", value: "truck" },
-    { label: "Мотоциклет", value: "motorbike" },
-    { label: "Бус", value: "van" },
-  ],
-  en: [
-    { label: "Car", value: "car" },
-    { label: "Truck", value: "truck" },
-    { label: "Motorbike", value: "motorbike" },
-    { label: "Van", value: "van" },
-  ],
-} as const;
+  bg: Object.entries(sellCategoryLabels.bg).map(([value, label]) => ({
+    value: value as SellVehicleCategory,
+    label,
+  })),
+  en: Object.entries(sellCategoryLabels.en).map(([value, label]) => ({
+    value: value as SellVehicleCategory,
+    label,
+  })),
+};
 
 export const mobileSellVehicleCopy = {
   bg: {
@@ -30,10 +35,11 @@ export const mobileSellVehicleCopy = {
       {
         description:
           "VIN или марка, модел, година и пробег са достатъчни за начало.",
-        title: "Изпращате основните данни",
+        title: "Подгответе основните данни",
       },
       {
-        description: "Уточняваме удобен час и преглеждаме автомобила на място.",
+        description:
+          "Обадете ни се с данните, за да обсъдим удобен час за оглед.",
         title: "Организираме оглед",
       },
       {
@@ -71,11 +77,11 @@ export const mobileSellVehicleCopy = {
       {
         description:
           "A VIN or make, model, year and mileage is enough to begin.",
-        title: "Send the essentials",
+        title: "Prepare the essentials",
       },
       {
         description:
-          "We agree a convenient time and inspect the vehicle in person.",
+          "Call us with the details to discuss a convenient inspection time.",
         title: "Arrange an inspection",
       },
       {
@@ -98,14 +104,6 @@ export const mobileSellVehicleCopy = {
     year: "Year",
   },
 } as const;
-
-const invalidVinCharactersPattern = /[^A-HJ-NPR-Z0-9]/g;
-
-export const normalizeVehicleVin = (value: string) =>
-  value.toUpperCase().replace(invalidVinCharactersPattern, "").slice(0, 17);
-
-export const isCompleteVehicleVin = (value: string) =>
-  normalizeVehicleVin(value).length === 17;
 
 export const mobileSellInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none ${mobileFormFocusClassName}`;
 export const mobileSellSelectClassName =

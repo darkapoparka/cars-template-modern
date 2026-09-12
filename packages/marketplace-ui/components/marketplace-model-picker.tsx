@@ -33,19 +33,19 @@ import {
   type MarketplaceModelInventoryCount,
 } from "../lib/model-picker-options";
 import {
+  ModelPickerSections,
+  marketplaceFilledPickerOptionButtonClassName,
+  marketplaceOptionButtonClassName,
+  marketplaceSelectedFilledPickerOptionButtonClassName,
+  marketplaceSelectedOptionButtonClassName,
+} from "./marketplace-model-picker-options";
+import {
   MobileMarketplaceOverlay,
   MobileMarketplaceOverlayBackAction,
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayIconAction,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "./mobile-marketplace-overlay";
-import {
-  marketplaceFilledPickerOptionButtonClassName,
-  marketplaceOptionButtonClassName,
-  marketplaceSelectedFilledPickerOptionButtonClassName,
-  marketplaceSelectedOptionButtonClassName,
-  ModelPickerSections,
-} from "./marketplace-model-picker-options";
 
 const getInitialMakeModelStep = (
   filters: MarketplaceSearchParams
@@ -62,9 +62,178 @@ const getMakeModelDrawerTitle = (
     return copy.makeModel.selectMake;
   }
   if (step === "derivative") {
-    return [make, model].filter(Boolean).join(" ") || copy.makeModel.selectDerivative;
+    return (
+      [make, model].filter(Boolean).join(" ") || copy.makeModel.selectDerivative
+    );
   }
   return make;
+};
+
+const ModelDerivativeOption = ({
+  item,
+  isSelected,
+  locale,
+  model,
+  onSelect,
+}: {
+  item: VehicleTaxonomyModelOption["derivatives"][number];
+  isSelected: boolean;
+  locale?: string;
+  model?: string;
+  onSelect: (value: string) => void;
+}) => {
+  const yearRange = formatMarketplaceModelYearRange(item, locale);
+  return (
+    <Button
+      aria-pressed={isSelected}
+      className={cn(
+        "h-auto min-h-14 w-full justify-between whitespace-normal rounded-lg px-4 py-2.5 text-left",
+        isSelected
+          ? marketplaceSelectedFilledPickerOptionButtonClassName
+          : marketplaceFilledPickerOptionButtonClassName
+      )}
+      onClick={() => onSelect(item.name)}
+      variant={isSelected ? "default" : "secondary"}
+    >
+      <span className="min-w-0 flex-1">
+        <span className="block font-semibold leading-5">
+          {getMarketplaceDerivativeDisplayName(model ?? "", item.name)}
+        </span>
+        {item.bodyType || yearRange ? (
+          <span
+            className={cn(
+              "block text-meta",
+              isSelected ? "text-background/70" : "text-muted-foreground"
+            )}
+          >
+            {[
+              item.bodyType ? formatBodyType(item.bodyType, locale) : undefined,
+              yearRange,
+            ]
+              .filter(Boolean)
+              .join(" · ")}
+          </span>
+        ) : null}
+      </span>
+      {isSelected ? (
+        <Check aria-hidden="true" className="size-5" strokeWidth={2.4} />
+      ) : null}
+    </Button>
+  );
+};
+
+const MakeModelSearchField = ({
+  step,
+  isDesktop,
+  search,
+  onSearch,
+  locale,
+}: {
+  step: "make" | "model";
+  isDesktop: boolean;
+  search: string;
+  onSearch: (value: string) => void;
+  locale?: string;
+}) => {
+  const copy = getMarketplaceControlCopy(locale);
+  return (
+    <div className="relative mt-3 block">
+      <Search
+        aria-hidden="true"
+        className={cn(
+          "absolute top-1/2 -translate-y-1/2 text-muted-foreground",
+          isDesktop ? "left-3 size-4" : "left-3.5 size-[18px]"
+        )}
+      />
+      <Input
+        aria-label={copy.makeModel.searchAriaLabel}
+        autoFocus={isDesktop}
+        className={cn(
+          "focus-visible:border-[var(--lead-site-accent)] focus-visible:ring-[var(--lead-site-accent)]/35",
+          isDesktop
+            ? "h-10 rounded-lg bg-secondary pl-9"
+            : "h-12 rounded-xl border-0 bg-zinc-100 pl-10 text-[16px] shadow-none"
+        )}
+        onChange={(event) => onSearch(event.target.value)}
+        placeholder={
+          step === "make"
+            ? copy.makeModel.searchMakes
+            : copy.makeModel.searchModels
+        }
+        value={search}
+      />
+    </div>
+  );
+};
+
+const ModelDerivativeOptions = ({
+  selectedModel,
+  model,
+  derivative,
+  locale,
+  onSelect,
+}: {
+  selectedModel?: VehicleTaxonomyModelOption;
+  model?: string;
+  derivative?: string;
+  locale?: string;
+  onSelect: (value: string | undefined) => void;
+}) => {
+  const copy = getMarketplaceControlCopy(locale);
+  return (
+    <div className="space-y-3" data-slot="derivative-options">
+      <div className="px-1">
+        <p className="font-semibold text-body">
+          {copy.makeModel.derivativeHeading}
+        </p>
+        <p className="mt-0.5 text-meta text-muted-foreground">
+          {copy.makeModel.derivativeDescription}
+        </p>
+      </div>
+      <div className="grid grid-cols-1 gap-2">
+        <Button
+          aria-pressed={derivative === undefined}
+          className={cn(
+            "h-auto min-h-14 w-full justify-between whitespace-normal rounded-lg px-4 py-2.5 text-left",
+            derivative === undefined
+              ? marketplaceSelectedFilledPickerOptionButtonClassName
+              : marketplaceFilledPickerOptionButtonClassName
+          )}
+          onClick={() => onSelect(undefined)}
+          variant={derivative === undefined ? "default" : "secondary"}
+        >
+          <span className="min-w-0 flex-1">
+            <span className="block font-semibold leading-5">
+              {copy.makeModel.anyDerivative}
+            </span>
+            <span
+              className={cn(
+                "block text-meta",
+                derivative === undefined
+                  ? "text-background/70"
+                  : "text-muted-foreground"
+              )}
+            >
+              {copy.makeModel.anyDerivativeDescription}
+            </span>
+          </span>
+          {derivative === undefined ? (
+            <Check aria-hidden="true" className="size-5" strokeWidth={2.4} />
+          ) : null}
+        </Button>
+        {(selectedModel?.derivatives ?? []).map((item) => (
+          <ModelDerivativeOption
+            isSelected={derivative === item.name}
+            item={item}
+            key={item.slug}
+            locale={locale}
+            model={model}
+            onSelect={onSelect}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export const MarketplaceMakeModelPicker = ({
@@ -90,7 +259,9 @@ export const MarketplaceMakeModelPicker = ({
   const [step, setStep] = useState<"derivative" | "make" | "model">("make");
   const [make, setMake] = useState<string | undefined>(filters.make);
   const [model, setModel] = useState<string | undefined>(filters.model);
-  const [derivative, setDerivative] = useState<string | undefined>(filters.derivative);
+  const [derivative, setDerivative] = useState<string | undefined>(
+    filters.derivative
+  );
   const [search, setSearch] = useState("");
   const copy = getMarketplaceControlCopy(locale);
 
@@ -122,15 +293,18 @@ export const MarketplaceMakeModelPicker = ({
   }, [filters, initialStep, open, taxonomy]);
 
   const makes = useMemo(
-    () => taxonomy.filter((item) => item.name.toLowerCase().includes(search.toLowerCase())),
+    () =>
+      taxonomy.filter((item) =>
+        item.name.toLowerCase().includes(search.toLowerCase())
+      ),
     [search, taxonomy]
   );
   const models = useMemo(() => {
     if (!make) {
       return [];
     }
-    return (taxonomy.find((item) => item.name === make)?.models ?? []).filter((item) =>
-      item.name.toLowerCase().includes(search.toLowerCase())
+    return (taxonomy.find((item) => item.name === make)?.models ?? []).filter(
+      (item) => item.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [make, search, taxonomy]);
   const modelGroups = useMemo(
@@ -188,34 +362,24 @@ export const MarketplaceMakeModelPicker = ({
   };
 
   const searchField = step !== "derivative" && (
-    <div className="relative mt-3 block">
-      <Search
-        aria-hidden="true"
-        className={cn(
-          "absolute top-1/2 -translate-y-1/2 text-muted-foreground",
-          isDesktop ? "left-3 size-4" : "left-3.5 size-[18px]"
-        )}
-      />
-      <Input
-        aria-label={copy.makeModel.searchAriaLabel}
-        autoFocus={isDesktop}
-        className={cn(
-          "focus-visible:border-[var(--lead-site-accent)] focus-visible:ring-[var(--lead-site-accent)]/35",
-          isDesktop
-            ? "h-10 rounded-lg bg-secondary pl-9"
-            : "h-12 rounded-xl border-0 bg-zinc-100 pl-10 text-[16px] shadow-none"
-        )}
-        onChange={(event) => setSearch(event.target.value)}
-        placeholder={step === "make" ? copy.makeModel.searchMakes : copy.makeModel.searchModels}
-        value={search}
-      />
-    </div>
+    <MakeModelSearchField
+      isDesktop={isDesktop}
+      locale={locale}
+      onSearch={setSearch}
+      search={search}
+      step={step}
+    />
   );
 
   const pickerContent = (
     <>
       {step === "make" ? (
-        <div className={cn("grid gap-2", isDesktop ? "grid-cols-3" : "grid-cols-2")}>
+        <div
+          className={cn(
+            "grid gap-2",
+            isDesktop ? "grid-cols-4" : "grid-cols-2"
+          )}
+        >
           {makes.map((item) => (
             <Button
               aria-pressed={make === item.name}
@@ -257,77 +421,13 @@ export const MarketplaceMakeModelPicker = ({
       ) : null}
 
       {step === "derivative" ? (
-        <div className="space-y-3" data-slot="derivative-options">
-          <div className="px-1">
-            <p className="font-semibold text-body">{copy.makeModel.derivativeHeading}</p>
-            <p className="mt-0.5 text-meta text-muted-foreground">
-              {copy.makeModel.derivativeDescription}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-2">
-            <Button
-              aria-pressed={derivative === undefined}
-              className={cn(
-                "h-auto min-h-14 w-full justify-between whitespace-normal rounded-lg px-4 py-2.5 text-left",
-                derivative === undefined
-                  ? marketplaceSelectedFilledPickerOptionButtonClassName
-                  : marketplaceFilledPickerOptionButtonClassName
-              )}
-              onClick={() => setDerivative(undefined)}
-              variant={derivative === undefined ? "default" : "secondary"}
-            >
-              <span className="min-w-0 flex-1">
-                <span className="block font-semibold leading-5">{copy.makeModel.anyDerivative}</span>
-                <span
-                  className={cn(
-                    "block text-meta",
-                    derivative === undefined ? "text-background/70" : "text-muted-foreground"
-                  )}
-                >
-                  {copy.makeModel.anyDerivativeDescription}
-                </span>
-              </span>
-              {derivative === undefined ? <Check aria-hidden="true" className="size-5" strokeWidth={2.4} /> : null}
-            </Button>
-            {(selectedModel?.derivatives ?? []).map((item) => {
-              const isSelected = derivative === item.name;
-              const yearRange = formatMarketplaceModelYearRange(item, locale);
-              return (
-                <Button
-                  aria-pressed={isSelected}
-                  className={cn(
-                    "h-auto min-h-14 w-full justify-between whitespace-normal rounded-lg px-4 py-2.5 text-left",
-                    isSelected
-                      ? marketplaceSelectedFilledPickerOptionButtonClassName
-                      : marketplaceFilledPickerOptionButtonClassName
-                  )}
-                  key={item.slug}
-                  onClick={() => setDerivative(item.name)}
-                  variant={isSelected ? "default" : "secondary"}
-                >
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold leading-5">
-                      {getMarketplaceDerivativeDisplayName(model ?? "", item.name)}
-                    </span>
-                    {item.bodyType || yearRange ? (
-                      <span
-                        className={cn(
-                          "block text-meta",
-                          isSelected ? "text-background/70" : "text-muted-foreground"
-                        )}
-                      >
-                        {[item.bodyType ? formatBodyType(item.bodyType, locale) : undefined, yearRange]
-                          .filter(Boolean)
-                          .join(" · ")}
-                      </span>
-                    ) : null}
-                  </span>
-                  {isSelected ? <Check aria-hidden="true" className="size-5" strokeWidth={2.4} /> : null}
-                </Button>
-              );
-            })}
-          </div>
-        </div>
+        <ModelDerivativeOptions
+          derivative={derivative}
+          locale={locale}
+          model={model}
+          onSelect={setDerivative}
+          selectedModel={selectedModel}
+        />
       ) : null}
     </>
   );
@@ -337,8 +437,8 @@ export const MarketplaceMakeModelPicker = ({
       className={cn(
         "min-h-0 p-4",
         step === "derivative"
-          ? "h-[min(26rem,calc(100dvh-12rem))] flex-none"
-          : "h-80 flex-none"
+          ? "h-[min(28rem,calc(100dvh-12rem))] flex-none"
+          : "h-[24rem] flex-none"
       )}
     >
       {pickerContent}
@@ -346,13 +446,15 @@ export const MarketplaceMakeModelPicker = ({
   ) : (
     <div className="p-4">{pickerContent}</div>
   );
-  const title = getMakeModelDrawerTitle(step, make, model, locale) ?? copy.makeModel.selectMake;
+  const title =
+    getMakeModelDrawerTitle(step, make, model, locale) ??
+    copy.makeModel.selectMake;
 
   if (isDesktop) {
     return (
       <Dialog onOpenChange={onOpenChange} open={open}>
         <DialogContent
-          className="flex max-h-[calc(100dvh-4rem)] w-[calc(100vw-2rem)] flex-col gap-0 overflow-hidden rounded-xl border-border/80 bg-card p-0 shadow-none sm:max-w-lg"
+          className="flex max-h-[calc(100dvh-4rem)] w-[calc(100vw-3rem)] flex-col gap-0 overflow-hidden rounded-2xl border-border/80 bg-card p-0 shadow-2xl sm:max-w-[54rem]"
           data-slot="make-model-dialog"
           showCloseButton={false}
         >
@@ -386,7 +488,9 @@ export const MarketplaceMakeModelPicker = ({
                 </Button>
               </DialogClose>
             </div>
-            <DialogDescription className="sr-only">{copy.makeModel.description}</DialogDescription>
+            <DialogDescription className="sr-only">
+              {copy.makeModel.description}
+            </DialogDescription>
             {searchField}
           </DialogHeader>
           {pickerBody}
@@ -399,7 +503,10 @@ export const MarketplaceMakeModelPicker = ({
               >
                 {copy.actions.clear}
               </Button>
-              <Button className="h-11 flex-1 rounded-lg shadow-none" onClick={handleApply}>
+              <Button
+                className="h-11 flex-1 rounded-lg shadow-none"
+                onClick={handleApply}
+              >
                 {copy.actions.showResults}
               </Button>
             </div>
@@ -413,7 +520,10 @@ export const MarketplaceMakeModelPicker = ({
     <MobileMarketplaceOverlay
       description={copy.makeModel.description}
       footer={
-        <Button className={mobileMarketplaceOverlayPrimaryActionClassName} onClick={handleApply}>
+        <Button
+          className={mobileMarketplaceOverlayPrimaryActionClassName}
+          onClick={handleApply}
+        >
           {copy.actions.showResults}
         </Button>
       }

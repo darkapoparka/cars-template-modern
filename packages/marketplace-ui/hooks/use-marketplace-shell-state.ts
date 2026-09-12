@@ -5,11 +5,15 @@ import { useEffect, useRef, useState } from "react";
 
 const listingViewPreferenceKey = "automarket:listing-view-mode";
 
-export const useMarketplaceListingViewMode = (defaultViewMode: ListingViewMode) => {
+export const useMarketplaceListingViewMode = (
+  defaultViewMode: ListingViewMode
+) => {
   const [viewMode, setViewMode] = useState<ListingViewMode>(defaultViewMode);
 
   useEffect(() => {
-    const storedPreference = window.localStorage.getItem(listingViewPreferenceKey);
+    const storedPreference = window.localStorage.getItem(
+      listingViewPreferenceKey
+    );
     if (storedPreference === "grid" || storedPreference === "list") {
       setViewMode(storedPreference);
     }

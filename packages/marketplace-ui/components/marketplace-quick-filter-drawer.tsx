@@ -6,7 +6,7 @@ import type {
   MarketplaceSearchParams,
   QuickFilterKey,
 } from "@repo/marketplace";
-import { Eraser } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
   getLocalizedMarketplaceCityName,
@@ -98,7 +98,7 @@ export const MarketplaceQuickFilterDrawer = ({
               }
             }}
           >
-            <Eraser aria-hidden="true" className="size-[18px]" />
+            <RotateCcw aria-hidden="true" className="size-[18px]" />
           </MobileMarketplaceOverlayIconAction>
         ) : undefined
       }

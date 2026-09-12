@@ -8,7 +8,9 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
+  readonly financingArtworkPath: string;
   readonly heroPath: string;
   readonly locale: string;
   readonly logoPath: string;
@@ -17,6 +19,9 @@ export interface LeadSiteConfig {
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly sellCategoryAssets: Readonly<
+    Record<"car" | "motorbike" | "truck" | "van", string>
+  >;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -31,6 +36,14 @@ export const leadSite: LeadSiteConfig = {
   accent: "#c40101",
   address: "ул. „Атанас Манчев“ 18, Студентски град",
   city: "София",
+  district: { bg: "Студентски град", en: "Studentski grad" },
+  sellCategoryAssets: {
+    car: "/lead-sell-car-v1.png",
+    motorbike: "/lead-sell-motorcycle-v1.png",
+    truck: "/lead-sell-truck-v1.png",
+    van: "/lead-sell-van-v1.png",
+  },
+  financingArtworkPath: "/images/services/leasing-keys-red-v1.webp",
   contactUrl: "tel:+359877733110",
   country: "България",
   countryCode: "BG",

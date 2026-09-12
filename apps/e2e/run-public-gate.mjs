@@ -385,6 +385,8 @@ try {
     } finally {
       await stopPublicServer(publicPort);
       restorePublicNextEnv();
+      // Release this isolated cache before the next mode builds another app.
+      await cleanPublicE2EDist(mode);
     }
   }
 } finally {

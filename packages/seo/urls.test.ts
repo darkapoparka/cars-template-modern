@@ -13,13 +13,16 @@ describe("Day & Night SEO URLs", () => {
   it("normalizes Bulgarian variants and falls back to the route default", () => {
     expect(normalizeSeoLocale("bg-BG")).toBe("bg");
     expect(normalizeSeoLocale("en_US")).toBe("en");
-    expect(normalizeSeoLocale("de")).toBe("en");
+    expect(normalizeSeoLocale("de")).toBe("bg");
   });
 
-  it("keeps the established English default and Bulgarian prefix", () => {
-    expect(getLocalizedPath("en", "/cars")).toBe("/cars");
-    expect(getLocalizedPath("bg", "/cars")).toBe("/bg/cars");
-    expect(getLocalizedPath("bg", "/")).toBe("/bg");
+  it("uses the configured Bulgarian default and explicit English prefix", () => {
+    expect(getLocalizedPath("en", "/cars")).toBe("/en/cars");
+    expect(getLocalizedPath("bg", "/cars")).toBe("/cars");
+    expect(getLocalizedPath("bg", "/")).toBe("/");
+    expect(getLocalizedPath("en", "/cars", { defaultLocale: "en" })).toBe(
+      "/cars"
+    );
   });
 
   it("builds clean absolute canonical URLs", () => {
@@ -37,8 +40,8 @@ describe("Day & Night SEO URLs", () => {
         baseUrl: "https://day-night.example",
       })
     ).toEqual({
-      en: "https://day-night.example/cars",
-      "bg-BG": "https://day-night.example/bg/cars",
+      en: "https://day-night.example/en/cars",
+      "bg-BG": "https://day-night.example/cars",
       "x-default": "https://day-night.example/cars",
     });
   });

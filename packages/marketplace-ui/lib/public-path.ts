@@ -1,3 +1,8 @@
+import {
+  defaultLocale,
+  normalizeLocale,
+} from "@repo/internationalization/config";
+
 const leadingSlashPattern = /^\//;
 const supportedLocalePrefix = /^\/(?:bg|en)(?=\/|$)/;
 
@@ -6,9 +11,9 @@ export const getLocalizedPublicPath = (
   path: string
 ) => {
   const normalizedPath = leadingSlashPattern.test(path) ? path : `/${path}`;
-  const normalizedLocale = locale?.trim().toLowerCase().split("-")[0];
+  const normalizedLocale = normalizeLocale(locale);
 
-  if (!normalizedLocale || normalizedLocale === "en") {
+  if (normalizedLocale === defaultLocale) {
     return normalizedPath;
   }
 
@@ -39,13 +44,8 @@ export const getLocaleSwitchTarget = (
 
   return {
     locale: targetLocale,
-    // The default locale is canonically unprefixed, but switching from a
-    // persisted Bulgarian preference needs an explicit /en request so the
-    // proxy can update its HttpOnly cookie before redirecting to the canonical
-    // English URL.
-    path:
-      targetLocale === "en"
-        ? `/en${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`
-        : getLocalizedPublicPath(targetLocale, pathWithoutLocale),
+    // Explicit locale requests update the preference cookie even when switching
+    // to the unprefixed default language. The proxy performs canonicalization.
+    path: `/${targetLocale}${pathWithoutLocale === "/" ? "" : pathWithoutLocale}`,
   };
 };

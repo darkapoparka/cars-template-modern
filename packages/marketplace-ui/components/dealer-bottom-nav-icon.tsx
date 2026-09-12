@@ -1,7 +1,9 @@
 import { createElement } from "react";
 import { hugeiconsNavigation } from "../lib/icons/hugeicons-navigation";
 
-const navigationPositions: Partial<Record<keyof typeof hugeiconsNavigation, string>> = { car: "0%", import: "25%", sell: "50%", lease: "75%", menu: "100%" };
+const navigationPositions: Partial<
+  Record<keyof typeof hugeiconsNavigation, string>
+> = { car: "0%", import: "25%", sell: "50%", lease: "75%", menu: "100%" };
 
 export function DealerBottomNavIcon({
   name,
@@ -13,7 +15,21 @@ export function DealerBottomNavIcon({
   const position = navigationPositions[name];
   if (position !== undefined) {
     return (
-      <span aria-hidden="true" className="block h-8 w-10 shrink-0" data-icon-family="generated-assets" data-nav-icon={name} style={{ backgroundImage: name === "sell" || name === "lease" ? "url(/images/services/navigation-assets-v2.png)" : "url(/images/services/navigation-assets-v1.png)", backgroundSize: "500% auto", backgroundPosition: `${position} 50%`, backgroundRepeat: "no-repeat" }} />
+      <span
+        aria-hidden="true"
+        className="block h-8 w-10 shrink-0"
+        data-icon-family="generated-assets"
+        data-nav-icon={name}
+        style={{
+          backgroundImage:
+            name === "sell" || name === "lease"
+              ? "url(/images/services/navigation-assets-v2.png)"
+              : "url(/images/services/navigation-assets-v1.png)",
+          backgroundSize: "500% auto",
+          backgroundPosition: `${position} 50%`,
+          backgroundRepeat: "no-repeat",
+        }}
+      />
     );
   }
   return (

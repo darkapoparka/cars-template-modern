@@ -184,18 +184,26 @@ export const PublicRouteLoading = ({
       </div>
 
       <div className="animate-pulse space-y-2 motion-reduce:animate-none lg:hidden">
-        {loadingCards.slice(0, 2).map((card) => (
-          <div className="flex overflow-hidden rounded-xl bg-card" key={card}>
-            <div className="h-[7.5rem] w-[7.5rem] shrink-0 bg-secondary" />
-            <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-3 py-2.5">
+        {loadingCards.slice(0, 3).map((card) => (
+          <div
+            className="flex min-h-28 overflow-hidden rounded-xl bg-card"
+            key={card}
+          >
+            <div className="w-[32%] min-w-24 max-w-36 shrink-0 bg-secondary min-[360px]:w-[34%]" />
+            <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-2 py-2.5 min-[360px]:gap-2 min-[360px]:px-2.5 min-[360px]:py-3">
               <div className="space-y-1">
-                <div className="h-5 w-3/5 rounded bg-secondary" />
-                <div className="h-3 w-4/5 rounded bg-secondary" />
-                <div className="h-3 w-2/5 rounded bg-secondary" />
+                <div className="h-4 w-4/5 rounded bg-secondary" />
+                <div className="h-4 w-3/5 rounded bg-secondary" />
               </div>
               <div className="space-y-1">
-                <div className="h-5 w-2/5 rounded bg-secondary" />
-                <div className="h-3 w-1/3 rounded bg-secondary" />
+                <div className="h-[19px] w-2/5 rounded bg-secondary" />
+                <div className="h-3 w-1/2 rounded bg-secondary" />
+              </div>
+              <div className="grid grid-cols-2 gap-1">
+                <div className="h-[22px] rounded-md bg-secondary" />
+                <div className="h-[22px] rounded-md bg-secondary" />
+                <div className="h-[22px] rounded-md bg-secondary" />
+                <div className="h-[22px] rounded-md bg-secondary" />
               </div>
             </div>
           </div>
@@ -257,11 +265,31 @@ export const ListingDetailLoading = () => (
         </div>
         <div className="animate-pulse space-y-6 px-4 py-5 motion-reduce:animate-none lg:px-0 lg:py-6">
           <div className="space-y-3 lg:hidden">
-            <div className="h-7 w-2/5 rounded bg-secondary" />
+            <div className="flex items-end justify-between gap-4">
+              <div className="h-7 w-2/5 rounded bg-secondary" />
+              <div className="h-4 w-1/3 rounded bg-secondary" />
+            </div>
             <div className="h-6 w-4/5 rounded bg-secondary" />
-            <div className="h-4 w-1/2 rounded bg-secondary" />
+            <div className="grid grid-cols-2 gap-1">
+              <div className="h-6 rounded-md bg-secondary" />
+              <div className="h-6 rounded-md bg-secondary" />
+              <div className="h-6 rounded-md bg-secondary" />
+              <div className="h-6 rounded-md bg-secondary" />
+            </div>
+            <div className="h-12 w-full rounded-xl bg-secondary" />
           </div>
-          <section className="space-y-4">
+          <section className="lg:hidden">
+            <div className="grid grid-cols-2 border-zinc-200 border-b">
+              <div className="mx-3 h-12 border-[var(--lead-site-accent)] border-b-2" />
+              <div className="mx-3 h-12" />
+            </div>
+            <div className="space-y-3 pt-4">
+              <div className="h-4 w-full rounded bg-secondary" />
+              <div className="h-4 w-5/6 rounded bg-secondary" />
+              <div className="h-4 w-3/5 rounded bg-secondary" />
+            </div>
+          </section>
+          <section className="hidden space-y-4 lg:block">
             <div className="h-5 w-44 rounded bg-secondary" />
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-6">
               {loadingFilters.map((filter) => (
@@ -272,7 +300,7 @@ export const ListingDetailLoading = () => (
               ))}
             </div>
           </section>
-          <section className="space-y-3 border-border lg:border-t lg:pt-8">
+          <section className="hidden space-y-3 border-border lg:block lg:border-t lg:pt-8">
             <div className="h-5 w-28 rounded bg-secondary" />
             <div className="h-4 w-full max-w-3xl rounded bg-secondary" />
             <div className="h-4 w-5/6 max-w-3xl rounded bg-secondary" />

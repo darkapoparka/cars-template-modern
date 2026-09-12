@@ -12,6 +12,8 @@ import {
   TooManyPublicSupportRequestsError,
 } from "./public-support-rate-limit";
 
+import { publicContactLimits } from "./public-contact-contract";
+
 const validListingSlugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const maxPublicSupportFormBytes = 16 * 1024;
 const publicSupportFields = new Set([
@@ -58,7 +60,7 @@ const publicSupportRequestSchema = z
       emptyToUndefined,
       z
         .email()
-        .max(254)
+        .max(publicContactLimits.email.max)
         .transform((value) => value.toLowerCase())
         .optional()
     ),
@@ -73,9 +75,9 @@ const publicSupportRequestSchema = z
     message: z.string().trim().max(3000),
     mileage: optionalInteger(0, 10_000_000),
     model: z.string().trim().max(120).optional(),
-    name: z.string().trim().min(2).max(100),
+    name: z.string().trim().min(publicContactLimits.name.min).max(publicContactLimits.name.max),
     origin: z.enum(["CN", "DE", "US", "JP", "KR"]).optional(),
-    phone: z.string().trim().min(7).max(40).optional(),
+    phone: z.string().trim().min(publicContactLimits.phone.min).max(publicContactLimits.phone.max).optional(),
     sourceUrl: z.preprocess(emptyToUndefined, z.url().max(500).optional()),
     topic: z.enum(["dealer", "importer", "buyer", "other"]),
     website: z.string().trim().max(120),

@@ -2,6 +2,7 @@
 
 import { Dialog } from "@repo/design-system/components/ui/dialog";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import {
@@ -14,6 +15,7 @@ import { DesktopSearchAssistant } from "./desktop-search-assistant";
 
 export const DealerDesktopToolbar = ({
   assistantSlot,
+  searchListings,
   categoryCounts,
   filterCount,
   filters,
@@ -27,6 +29,7 @@ export const DealerDesktopToolbar = ({
   setQuery,
 }: {
   assistantSlot?: ReactNode;
+  searchListings?: readonly InventorySearchListing[];
   categoryCounts?: DesktopCategoryInventoryCount[];
   filterCount: number;
   filters: MarketplaceSearchParams;
@@ -38,6 +41,7 @@ export const DealerDesktopToolbar = ({
   onOpenModel: () => void;
   query: string;
   setQuery: (query: string) => void;
+  totalListings: number;
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -52,7 +56,10 @@ export const DealerDesktopToolbar = ({
   return (
     <div className="dealer-desktop-toolbar hidden lg:block">
       <div className="dealer-desktop-search-band">
-        <div className="dealer-desktop-query-row">
+        <div
+          className="dealer-desktop-query-row"
+          style={{ maxWidth: "none", margin: 0 }}
+        >
           <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
             <DesktopCategoryPickerTrigger
               categoryIcon={
@@ -87,6 +94,7 @@ export const DealerDesktopToolbar = ({
               compact
               isBg={isBg}
               label={isBg ? "Търсене" : "Search"}
+              listings={searchListings}
               locale={locale}
               onQueryChange={setQuery}
               onSearch={(q) => onApply({ q })}

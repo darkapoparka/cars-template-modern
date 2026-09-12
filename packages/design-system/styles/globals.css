@@ -279,15 +279,6 @@
   }
 }
 
-[data-slot="drawer-content"][data-state="open"][data-vaul-drawer-direction="bottom"] {
-  transform: translate3d(0, 0, 0) !important;
-}
-
-[data-slot="drawer-content"][data-state="closed"][data-vaul-drawer-direction="bottom"] {
-  pointer-events: none;
-  transform: translate3d(0, 100%, 0) !important;
-}
-
 /* Typography plugin */
 @utility prose {
   --tw-prose-body: var(--color-foreground);

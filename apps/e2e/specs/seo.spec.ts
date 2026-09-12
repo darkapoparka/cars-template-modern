@@ -1,9 +1,12 @@
 import { expect, type Page, test } from "@playwright/test";
+import { leadSite } from "@repo/marketplace/lead-site";
 
 const invalidSitemapPathPattern = /undefined|\[locale\]/;
 const hydrationErrorPattern = /hydration|Minified React error #418/i;
 const httpUrlPattern = /^https?:\/\//;
 const noindexFollowPattern = /noindex.*follow/i;
+const normalizedMakeUrlPattern = /\/cars\/bmw\?fuel=diesel$/;
+const englishGuideHrefPattern = /^\/en\/guides\//;
 
 const getStructuredData = async (page: Page) => {
   const entries = await page
@@ -53,21 +56,29 @@ test.describe("SEO contracts", () => {
 
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
-      `${origin}/bg/guides`
+      `${origin}/guides`
     );
     await expect(
       page.locator('link[rel="alternate"][hreflang="bg-BG"]')
-    ).toHaveAttribute("href", `${origin}/bg/guides`);
-    await expect(
-      page.locator('link[rel="alternate"][hreflang="en"]')
     ).toHaveAttribute("href", `${origin}/guides`);
+    const englishAlternate = page.locator(
+      'link[rel="alternate"][hreflang="en"]'
+    );
+    if (leadSite.staticDemoMode) {
+      await expect(englishAlternate).toHaveCount(0);
+    } else {
+      await expect(englishAlternate).toHaveAttribute(
+        "href",
+        `${origin}/en/guides`
+      );
+    }
     await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
       "content",
-      `${origin}/-/opengraph-image.png`
+      `${origin}/lead-hero.jpg`
     );
     await expect(page.locator('meta[name="twitter:image"]')).toHaveAttribute(
       "content",
-      `${origin}/-/opengraph-image.png`
+      `${origin}/lead-hero.jpg`
     );
   });
 
@@ -113,11 +124,11 @@ test.describe("SEO contracts", () => {
     page,
   }) => {
     await page.goto("/bg/cars/BMW?fuel=diesel");
-    expect(new URL(page.url()).pathname).toBe("/bg/cars/bmw");
+    await expect(page).toHaveURL(normalizedMakeUrlPattern);
     expect(new URL(page.url()).searchParams.get("fuel")).toBe("diesel");
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
-      `${new URL(page.url()).origin}/bg/cars/bmw`
+      `${new URL(page.url()).origin}/cars/bmw`
     );
   });
 
@@ -142,4 +153,64 @@ test.describe("SEO contracts", () => {
     );
     expect(consoleErrors.join("\n")).not.toMatch(hydrationErrorPattern);
   });
+});
+
+test("English content routes obey the configured public language policy", async ({
+  page,
+}) => {
+  if (leadSite.staticDemoMode) {
+    const response = await page.request.get("/en/guides?topic=import", {
+      maxRedirects: 0,
+    });
+    expect(response.status()).toBe(308);
+    expect(new URL(response.headers().location, response.url()).pathname).toBe(
+      "/guides"
+    );
+    expect(
+      new URL(response.headers().location, response.url()).searchParams.get(
+        "topic"
+      )
+    ).toBe("import");
+    await page.goto("/en/guides?topic=import");
+    await expect(page.locator("html")).toHaveAttribute("lang", "bg");
+    const origin = new URL(page.url()).origin;
+    await expect(page).toHaveURL(`${origin}/guides?topic=import`);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      `${origin}/guides`
+    );
+    await expect(
+      page.locator('link[rel="alternate"][hreflang="en"]')
+    ).toHaveCount(0);
+    const article = page.locator('main a[href*="/guides/"]').first();
+    await expect(article).not.toHaveAttribute("href", englishGuideHrefPattern);
+    const articleHref = await article.getAttribute("href");
+    expect(articleHref).toBeTruthy();
+    await article.click();
+    await expect(page).toHaveURL(new URL(articleHref as string, origin).href);
+    await expect(page.locator("html")).toHaveAttribute("lang", "bg");
+    await page.goBack();
+    await expect(page).toHaveURL(`${origin}/guides?topic=import`);
+    return;
+  }
+  await page.goto("/en/guides");
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText(
+    "Guides and articles"
+  );
+  const origin = new URL(page.url()).origin;
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+    "href",
+    `${origin}/en/guides`
+  );
+  const article = page.locator('main a[href*="/guides/"]').first();
+  await expect(article).toHaveAttribute("href", englishGuideHrefPattern);
+  const articleHref = await article.getAttribute("href");
+  expect(articleHref).toBeTruthy();
+  await article.click();
+  await expect(page).toHaveURL(new URL(articleHref as string, origin).href);
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.goBack();
+  await expect(page).toHaveURL(`${origin}/en/guides`);
 });

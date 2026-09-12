@@ -1,4 +1,4 @@
-import type { VehicleListing } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 
 export type MobileSearchItem =
   | {
@@ -11,7 +11,7 @@ export type MobileSearchItem =
       id: string;
       kind: "listing";
       label: string;
-      listing: VehicleListing;
+      listing: InventorySearchListing;
     }
   | {
       id: string;
@@ -47,13 +47,13 @@ const searchTokens = (query: string) =>
 const matchesSearchTokens = (haystack: string, tokens: readonly string[]) =>
   tokens.every((token) => haystack.includes(token));
 
-const listingSearchText = (listing: VehicleListing) =>
+const listingSearchText = (listing: InventorySearchListing) =>
   [listing.title, listing.spec.make, listing.spec.model, listing.spec.trim]
     .filter(Boolean)
     .join(" ")
     .toLocaleLowerCase();
 
-const uniqueMakes = (listings: readonly VehicleListing[]) => {
+const uniqueMakes = (listings: readonly InventorySearchListing[]) => {
   const makes: string[] = [];
 
   for (const listing of listings) {
@@ -65,7 +65,7 @@ const uniqueMakes = (listings: readonly VehicleListing[]) => {
   return makes;
 };
 
-const uniqueModels = (listings: readonly VehicleListing[]) => {
+const uniqueModels = (listings: readonly InventorySearchListing[]) => {
   const models: { make: string; model: string }[] = [];
 
   for (const listing of listings) {
@@ -79,7 +79,7 @@ const uniqueModels = (listings: readonly VehicleListing[]) => {
   return models;
 };
 
-const listingLabel = (listing: VehicleListing) =>
+const listingLabel = (listing: InventorySearchListing) =>
   listing.title.replace(leadingListingYearPattern, "");
 
 const matchingMakesForQuery = (
@@ -97,7 +97,7 @@ const matchingMakesForQuery = (
 };
 
 const matchingListingsForQuery = (
-  listings: readonly VehicleListing[],
+  listings: readonly InventorySearchListing[],
   tokens: readonly string[]
 ) => {
   if (tokens.length === 0) {
@@ -131,7 +131,7 @@ const makeChipGroup = (
 
 const modelChipGroup = (
   isBg: boolean,
-  listings: readonly VehicleListing[]
+  listings: readonly InventorySearchListing[]
 ): MobileSearchGroup | undefined => {
   const models = uniqueModels(listings).slice(0, modelLimit);
   if (models.length === 0) {
@@ -153,7 +153,7 @@ const modelChipGroup = (
 
 const listingRowGroup = (
   isBg: boolean,
-  listings: readonly VehicleListing[]
+  listings: readonly InventorySearchListing[]
 ): MobileSearchGroup | undefined => {
   if (listings.length === 0) {
     return undefined;
@@ -177,7 +177,7 @@ export const getMobileInventorySearchGroups = ({
   query,
 }: {
   isBg: boolean;
-  listings: readonly VehicleListing[];
+  listings: readonly InventorySearchListing[];
   locale?: string;
   query: string;
 }): MobileSearchGroup[] => {

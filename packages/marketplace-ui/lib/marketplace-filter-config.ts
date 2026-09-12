@@ -51,9 +51,13 @@ export const marketplacePriceRange = [0, 200_000] as const;
 export const marketplaceYearRange = [1990, 2026] as const;
 export const marketplaceMileageRange = [0, 250_000] as const;
 
-export const marketplacePricePresets = [40_000, 60_000, 100_000, 150_000] as const;
+export const marketplacePricePresets = [
+  40_000, 60_000, 100_000, 150_000,
+] as const;
 export const marketplaceYearPresets = [2018, 2020, 2022, 2024] as const;
-export const marketplaceMileagePresets = [50_000, 100_000, 150_000, 200_000] as const;
+export const marketplaceMileagePresets = [
+  50_000, 100_000, 150_000, 200_000,
+] as const;
 
 export const marketplaceBodyFilterOptions: readonly {
   labelBg: string;
@@ -102,7 +106,10 @@ export const marketplaceTransmissionLabelsBg: Record<Transmission, string> = {
   semi_automatic: "Полуавтоматик",
 };
 
-export const marketplaceSortLabelsBg: Record<MarketplaceSearchParams["sort"], string> = {
+export const marketplaceSortLabelsBg: Record<
+  MarketplaceSearchParams["sort"],
+  string
+> = {
   recommended: "Препоръчани",
   newest: "Най-нови",
   price_asc: "Цена нагоре",
@@ -111,7 +118,9 @@ export const marketplaceSortLabelsBg: Record<MarketplaceSearchParams["sort"], st
   year_desc: "Най-нова година",
 };
 
-export const marketplaceCurrency = leadSite.staticDemoMode ? leadSite.currency : "BGN";
+export const marketplaceCurrency = leadSite.staticDemoMode
+  ? leadSite.currency
+  : "BGN";
 
 export const marketplaceSearchCurrency: MarketplaceSearchParams["currency"] =
   leadSite.currency === "BGN" || leadSite.currency === "EUR"

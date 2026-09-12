@@ -35,7 +35,7 @@ const leadingYearPattern = /^\d{4}\s+/;
 
 const pageCopy = {
   bg: {
-    badge: "Финансиране от Day & Night",
+    badge: `Финансиране от ${leadSite.shortName}`,
     description:
       "Изберете автомобил от наличностите и се свържете с нас за индивидуална оферта. Параметрите се уточняват според автомобила и вашия профил.",
     faqTitle: "Често задавани въпроси",
@@ -51,8 +51,7 @@ const pageCopy = {
         question: "Каква първоначална вноска е необходима?",
       },
       {
-        answer:
-          "Необходимите документи зависят от конкретния случай. Екипът на Day & Night ще ви даде точен списък още при първия разговор.",
+        answer: `Необходимите документи зависят от конкретния случай. Екипът на ${leadSite.shortName} ще ви даде точен списък още при първия разговор.`,
         question: "Какви документи ще са ми нужни?",
       },
       {
@@ -64,7 +63,7 @@ const pageCopy = {
     title: "Финансиране за следващия ви автомобил",
   },
   en: {
-    badge: "Financing from Day & Night",
+    badge: `Financing from ${leadSite.shortName}`,
     description:
       "Choose a vehicle from our inventory and contact us for a tailored offer. The terms are confirmed for the vehicle and your individual profile.",
     faqTitle: "Frequently asked questions",
@@ -80,8 +79,7 @@ const pageCopy = {
         question: "What initial payment is required?",
       },
       {
-        answer:
-          "Required documents depend on the individual case. The Day & Night team will give you an exact list during the first conversation.",
+        answer: `Required documents depend on the individual case. The ${leadSite.shortName} team will give you an exact list during the first conversation.`,
         question: "Which documents will I need?",
       },
       {
@@ -103,8 +101,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Индивидуална оферта за финансиране на автомобил от Day & Night Auto Group."
-      : "A tailored vehicle financing offer from Day & Night Auto Group.",
+      ? `Индивидуална оферта за финансиране на автомобил от ${leadSite.name}.`
+      : `A tailored vehicle financing offer from ${leadSite.name}.`,
     locale,
     path: "/lease",
     title: isBg ? "Финансиране на автомобил" : "Vehicle financing",

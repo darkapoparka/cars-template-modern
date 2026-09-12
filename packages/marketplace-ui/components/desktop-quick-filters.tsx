@@ -278,7 +278,7 @@ export const DesktopQuickFilters = ({
                 active={Boolean(filters.mileageMax)}
                 className={cn(
                   desktopQuickFilterRailItemClassName,
-                  "hidden min-[75rem]:inline-flex"
+                  "hidden min-[85rem]:inline-flex"
                 )}
                 dataSlot="desktop-quick-filter"
                 description={localizeMarketplace(
@@ -341,7 +341,7 @@ export const DesktopQuickFilters = ({
                 )}
                 className={cn(
                   desktopQuickFilterRailItemClassName,
-                  "hidden min-[75rem]:inline-flex"
+                  "hidden min-[85rem]:inline-flex"
                 )}
                 dataSlot="desktop-quick-filter"
                 elevated={elevated}
@@ -369,7 +369,10 @@ export const DesktopQuickFilters = ({
                       "Всички скорости",
                       "Any transmission"
                     )}
-                    className={desktopQuickFilterRailItemClassName}
+                    className={cn(
+                      desktopQuickFilterRailItemClassName,
+                      "hidden min-[96rem]:inline-flex"
+                    )}
                     dataSlot="desktop-quick-filter"
                     elevated={elevated}
                     isBg={isBg}
@@ -400,7 +403,10 @@ export const DesktopQuickFilters = ({
                       "Всички типове",
                       "Any body type"
                     )}
-                    className={desktopQuickFilterRailItemClassName}
+                    className={cn(
+                      desktopQuickFilterRailItemClassName,
+                      "hidden min-[96rem]:inline-flex"
+                    )}
                     dataSlot="desktop-quick-filter"
                     elevated={elevated}
                     isBg={isBg}

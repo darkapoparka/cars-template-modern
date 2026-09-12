@@ -9,23 +9,23 @@ import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { cn } from "@repo/design-system/lib/utils";
-import {
-  getListingPath,
-  leadSite,
-  parseMarketplaceSearchParams,
-  vehicleCategories,
-  vehicleMakes,
-} from "@repo/marketplace";
+import { leadSite, vehicleCategories } from "@repo/marketplace";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
-import { VehicleCard } from "@repo/marketplace-ui/components/vehicle-card";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getPublicMarketplaceListings } from "@/lib/public-marketplace-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
+import {
+  parseSellVehicleDraft,
+  sellCategoryLabels,
+  serializeSellVehicleDraft,
+  vehicleMileageMaximum,
+  vehicleYearMaximum,
+  vehicleYearMinimum,
+} from "@/lib/sell-vehicle-draft";
 import { MobileSellVehicleExperience } from "../components/mobile-sell-vehicle-experience";
 import { MobileVehicleTaxonomyFields } from "../components/mobile-vehicle-taxonomy-fields";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
@@ -58,8 +58,7 @@ const pageCopy = {
         question: "Какви данни са необходими?",
       },
       {
-        answer:
-          "Финалната оценка се прави след оглед на място в шоурума ни в Студентски град, София.",
+        answer: `Финалната оценка се прави след оглед на място в шоурума ни в ${leadSite.district.bg}, София.`,
         question: "Може ли оценка само по снимки?",
       },
       {
@@ -105,8 +104,7 @@ const pageCopy = {
         question: "What information do you need?",
       },
       {
-        answer:
-          "The final appraisal follows an in-person inspection at our showroom in Studentski grad, Sofia.",
+        answer: `The final appraisal follows an in-person inspection at our showroom in ${leadSite.district.en}, Sofia.`,
         question: "Can you appraise it from photos only?",
       },
       {
@@ -132,45 +130,16 @@ const pageCopy = {
   },
 } as const;
 
-const categoryLabels = {
-  bg: {
-    car: "Автомобил",
-    motorbike: "Мотоциклет",
-    truck: "Камион",
-    van: "Бус",
-  },
-  en: {
-    car: "Car",
-    motorbike: "Motorbike",
-    truck: "Truck",
-    van: "Van",
-  },
-} as const;
-
+const categoryLabels = sellCategoryLabels;
+const sellCategoryAssets = leadSite.sellCategoryAssets;
 const sellableCategories = vehicleCategories.filter(
   (category) => category.id !== "lease"
 );
-
-const sellCategoryAssets = {
-  car: "/lead-sell-car-v1.png",
-  motorbike: "/lead-sell-motorcycle-v1.png",
-  truck: "/lead-sell-truck-v1.png",
-  van: "/lead-sell-van-v1.png",
-} as const;
 
 const inputClassName =
   "h-11 rounded-lg border-transparent bg-secondary shadow-none";
 const selectClassName =
   "h-11 w-full rounded-lg border border-transparent bg-secondary px-3 text-sm outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";
-
-const getQueryValue = (
-  query: Record<string, string | string[] | undefined>,
-  key: string
-) => {
-  const value = query[key];
-  const firstValue = Array.isArray(value) ? value[0] : value;
-  return typeof firstValue === "string" ? firstValue.trim() : "";
-};
 
 export const generateMetadata = async ({
   params,
@@ -200,23 +169,16 @@ export default async function SellPage({
   const normalizedLocale = normalizeSeoLocale(locale);
   const copy = pageCopy[normalizedLocale];
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
-  const { listings } = await getPublicMarketplaceListings(
-    parseMarketplaceSearchParams({ category: "car" })
-  );
 
-  const requestedCategory = getQueryValue(query, "category");
-  const requestedMake = getQueryValue(query, "make");
-  const requestedModel = getQueryValue(query, "model");
-  const initialCategory = sellableCategories.some(
-    (category) => category.id === requestedCategory
-  )
-    ? requestedCategory
-    : "car";
-  const initialMake = vehicleMakes.includes(requestedMake) ? requestedMake : "";
-  const initialModel = requestedModel.slice(0, 80);
-  const initialMileage = getQueryValue(query, "mileage");
-  const initialNotes = getQueryValue(query, "notes").slice(0, 500);
-  const initialYear = getQueryValue(query, "year");
+  const initialDraft = parseSellVehicleDraft(query);
+  const {
+    category: initialCategory,
+    make: initialMake,
+    model: initialModel,
+    mileage: initialMileage,
+    notes: initialNotes,
+    year: initialYear,
+  } = initialDraft;
   const hasSelectedVehicle = Boolean(initialMake && initialModel);
   const selectedVehicleAsset =
     sellCategoryAssets[initialCategory as keyof typeof sellCategoryAssets] ??
@@ -232,28 +194,8 @@ export default async function SellPage({
       <main className="lg:min-h-[38rem]">
         <MobileSellVehicleExperience
           contactHref={localize("/contact")}
-          inventory={
-            listings.length ? (
-              listings
-                .slice(0, 6)
-                .map((listing) => (
-                  <VehicleCard
-                    density="compact"
-                    href={localize(getListingPath(listing))}
-                    key={listing.id}
-                    listing={listing}
-                    locale={normalizedLocale}
-                    presentation="discovery"
-                  />
-                ))
-            ) : (
-              <p className="py-6 text-center text-sm text-zinc-600">
-                {normalizedLocale === "bg"
-                  ? "В момента няма налични автомобили."
-                  : "No cars are currently available."}
-              </p>
-            )
-          }
+          initialDraft={initialDraft}
+          key={serializeSellVehicleDraft(initialDraft)}
           locale={normalizedLocale}
         />
         <div
@@ -313,6 +255,7 @@ export default async function SellPage({
                   method="get"
                 >
                   <input name="intent" type="hidden" value="sell" />
+                  <input name="vin" type="hidden" value={initialDraft.vin} />
                   <div className="grid gap-1.5">
                     <Label className="text-meta" htmlFor="sell-category">
                       {copy.categoryLabel}
@@ -363,8 +306,8 @@ export default async function SellPage({
                       defaultValue={initialYear}
                       id="sell-year"
                       inputMode="numeric"
-                      max={2100}
-                      min={1886}
+                      max={vehicleYearMaximum}
+                      min={vehicleYearMinimum}
                       name="year"
                       placeholder={copy.yearPlaceholder}
                       required
@@ -381,7 +324,7 @@ export default async function SellPage({
                       defaultValue={initialMileage}
                       id="sell-mileage"
                       inputMode="numeric"
-                      max={10_000_000}
+                      max={vehicleMileageMaximum}
                       min={0}
                       name="mileage"
                       placeholder={copy.mileagePlaceholder}

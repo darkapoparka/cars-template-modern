@@ -135,7 +135,9 @@ export const ResultToolbar = ({
         )}
       >
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold text-card-title">{resultTitle}</p>
+          <p className="truncate font-semibold text-card-title">
+            {resultTitle}
+          </p>
           <p
             aria-live="polite"
             className="text-meta text-muted-foreground"

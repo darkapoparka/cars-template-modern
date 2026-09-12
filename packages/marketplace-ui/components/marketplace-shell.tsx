@@ -6,13 +6,13 @@ import {
   type ListingViewMode,
   leadSite,
   type MarketplaceSearchParams,
-  mockListings,
   type QuickFilterKey,
   type VehicleCategory,
   type VehicleListing,
   type VehicleTaxonomyMakeOption,
   withSearchParamUpdates,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { usePathname, useRouter } from "next/navigation";
 import {
   type ReactNode,
@@ -71,11 +71,13 @@ interface MarketplaceShellProps {
   };
   listings: VehicleListing[];
   locale?: string;
+  searchListings?: readonly InventorySearchListing[];
   taxonomy?: VehicleTaxonomyMakeOption[];
   totalListings: number;
 }
 
-const mobileMarketplaceHeaderClassName = "relative z-30 bg-white lg:hidden";
+const mobileMarketplaceHeaderClassName =
+  "relative z-30 bg-background lg:hidden";
 
 const getCanonicalAppliedSearchLabel = (
   query: string | undefined,
@@ -114,6 +116,7 @@ export const MarketplaceShell = ({
   filters: initialFilters,
   inventoryFacets,
   listings,
+  searchListings = listings,
   locale,
   taxonomy = fallbackVehicleTaxonomy,
   totalListings,
@@ -354,7 +357,9 @@ export const MarketplaceShell = ({
           }
           onViewModeChange={changeViewMode}
           query={query}
+          searchListings={searchListings}
           setQuery={setQuery}
+          totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}
         />
@@ -409,13 +414,7 @@ export const MarketplaceShell = ({
         />
         <MobileInventorySearch
           isBg={isBg}
-          listings={
-            leadSite.staticDemoMode
-              ? mockListings.filter(
-                  (listing) => listing.category === filters.category
-                )
-              : listings
-          }
+          listings={searchListings}
           locale={locale}
           onOpenChange={setSearchOpen}
           onSearch={(nextQuery) => {

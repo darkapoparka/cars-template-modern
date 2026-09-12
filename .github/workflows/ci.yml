@@ -1,0 +1,151 @@
+name: Modern template verification
+on:
+  push:
+    branches: [main, astra]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      run_authenticated:
+        description: Run the protected integration gate against an existing preview
+        type: boolean
+        default: false
+      commit_sha:
+        description: Exact preview commit SHA
+        type: string
+      web_url:
+        description: Immutable web preview HTTPS origin
+        type: string
+      app_url:
+        description: Immutable app preview HTTPS origin
+        type: string
+      api_url:
+        description: Immutable API preview HTTPS origin
+        type: string
+      clerk_trusted_app_origin:
+        description: Clerk trusted origin matching the immutable app preview
+        type: string
+      web_alias_url:
+        description: Optional approved web alias
+        type: string
+      app_alias_url:
+        description: Optional approved app alias
+        type: string
+      api_alias_url:
+        description: Optional approved API alias
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: modern-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SKIP_ENV_VALIDATION: 'true'
+      AUTOMARKET_PUBLIC_DATA_MODE: demo
+      DATABASE_URL: ''
+      NEXT_PUBLIC_WEB_URL: http://127.0.0.1:3001
+      NEXT_PUBLIC_APP_URL: http://127.0.0.1:3100
+      NEXT_PUBLIC_API_URL: http://127.0.0.1:3002
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @repo/database build
+      - run: pnpm check
+      - run: pnpm boundaries
+      - run: pnpm release:preflight:test
+      - run: pnpm unit
+      - run: pnpm typecheck
+      - run: pnpm audit --prod --audit-level=high
+      - run: pnpm --filter web build
+  public-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @repo/database build
+      - run: pnpm --filter e2e exec playwright install --with-deps chromium
+      - run: pnpm e2e:public
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-browser-failure-${{ github.run_id }}
+          path: apps/e2e/test-results/public-*
+          retention-days: 3
+  authenticated-preview:
+    if: github.event_name == 'workflow_dispatch' && inputs.run_authenticated
+    environment: preview-e2e
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      E2E_ENVIRONMENT: preview
+      E2E_COMMIT_SHA: ${{ inputs.commit_sha }}
+      E2E_WEB_URL: ${{ inputs.web_url }}
+      E2E_APP_URL: ${{ inputs.app_url }}
+      E2E_API_URL: ${{ inputs.api_url }}
+      E2E_WEB_ALIAS_URL: ${{ inputs.web_alias_url }}
+      E2E_APP_ALIAS_URL: ${{ inputs.app_alias_url }}
+      E2E_API_ALIAS_URL: ${{ inputs.api_alias_url }}
+      E2E_CLERK_TRUSTED_APP_ORIGIN: ${{ inputs.clerk_trusted_app_origin }}
+      E2E_CLERK_ISSUER: ${{ vars.E2E_CLERK_ISSUER }}
+      E2E_VERCEL_TOKEN: ${{ secrets.E2E_VERCEL_TOKEN }}
+      E2E_VERCEL_TEAM_ID: ${{ vars.E2E_VERCEL_TEAM_ID }}
+      CLERK_PUBLISHABLE_KEY: ${{ secrets.E2E_CLERK_PUBLISHABLE_KEY }}
+      CLERK_SECRET_KEY: ${{ secrets.E2E_CLERK_SECRET_KEY }}
+      E2E_WEB_VERCEL_PROJECT_ID: ${{ vars.E2E_WEB_VERCEL_PROJECT_ID }}
+      E2E_APP_VERCEL_PROJECT_ID: ${{ vars.E2E_APP_VERCEL_PROJECT_ID }}
+      E2E_API_VERCEL_PROJECT_ID: ${{ vars.E2E_API_VERCEL_PROJECT_ID }}
+      E2E_WEB_VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.E2E_WEB_VERCEL_AUTOMATION_BYPASS_SECRET }}
+      E2E_APP_VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.E2E_APP_VERCEL_AUTOMATION_BYPASS_SECRET }}
+      E2E_API_VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.E2E_API_VERCEL_AUTOMATION_BYPASS_SECRET }}
+      E2E_WEB_VERCEL_PROTECTION_EXCEPTION_ORIGIN: ${{ vars.E2E_WEB_VERCEL_PROTECTION_EXCEPTION_ORIGIN }}
+      E2E_APP_VERCEL_PROTECTION_EXCEPTION_ORIGIN: ${{ vars.E2E_APP_VERCEL_PROTECTION_EXCEPTION_ORIGIN }}
+      E2E_API_VERCEL_PROTECTION_EXCEPTION_ORIGIN: ${{ vars.E2E_API_VERCEL_PROTECTION_EXCEPTION_ORIGIN }}
+      E2E_ADMIN_EMAIL: ${{ vars.E2E_ADMIN_EMAIL }}
+      E2E_ADMIN_USER_ID: ${{ vars.E2E_ADMIN_USER_ID }}
+      E2E_BUYER_EMAIL: ${{ vars.E2E_BUYER_EMAIL }}
+      E2E_BUYER_USER_ID: ${{ vars.E2E_BUYER_USER_ID }}
+      E2E_DEALER_EMAIL: ${{ vars.E2E_DEALER_EMAIL }}
+      E2E_DEALER_USER_ID: ${{ vars.E2E_DEALER_USER_ID }}
+      E2E_OPERATOR_EMAIL: ${{ vars.E2E_OPERATOR_EMAIL }}
+      E2E_OPERATOR_USER_ID: ${{ vars.E2E_OPERATOR_USER_ID }}
+      E2E_SELLER_EMAIL: ${{ vars.E2E_SELLER_EMAIL }}
+      E2E_SELLER_USER_ID: ${{ vars.E2E_SELLER_USER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commit_sha }}
+      - run: test "$(git rev-parse HEAD)" = "$E2E_COMMIT_SHA"
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @repo/database build
+      - run: pnpm --filter e2e exec playwright install --with-deps chromium
+      - run: pnpm --filter e2e e2e:release
+      - if: always()
+        id: redact_authenticated_preview
+        run: node scripts/redact-authenticated-preview-artifacts.mjs apps/e2e/test-results/authenticated-preview apps/e2e/playwright-report/authenticated-preview
+      - if: failure() && steps.redact_authenticated_preview.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: authenticated-preview-text-failure-${{ github.run_id }}
+          path: |
+            apps/e2e/test-results/authenticated-preview
+            apps/e2e/playwright-report/authenticated-preview
+          retention-days: 3

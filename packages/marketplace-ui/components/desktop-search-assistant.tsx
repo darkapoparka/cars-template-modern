@@ -2,7 +2,9 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import { formatMoney } from "@repo/marketplace/format";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { leadSite } from "@repo/marketplace/lead-site";
 import {
   CarFront,
   ChevronRight,
@@ -40,6 +42,7 @@ interface DesktopSearchAssistantProps {
   compact?: boolean;
   isBg: boolean;
   label: string;
+  listings?: readonly InventorySearchListing[];
   locale?: string;
   onOpenChange?: (open: boolean) => void;
   onQueryChange: (query: string) => void;
@@ -73,7 +76,7 @@ const ListingSuggestionContent = ({
 }: {
   isBg: boolean;
   item: SearchSuggestionItem;
-  listing: VehicleListing;
+  listing: InventorySearchListing;
 }) => {
   const listingImage = listing.images[0];
 
@@ -192,11 +195,10 @@ const SearchSuggestionOption = ({
     dataSlot = "desktop-search-location-suggestion";
   }
 
-  const selectedClassName = selected
-    ? locationPanel
-      ? "bg-control-hover text-foreground"
-      : "bg-control text-foreground"
-    : undefined;
+  const selectedSurface = locationPanel
+    ? "bg-control-hover text-foreground"
+    : "bg-control text-foreground";
+  const selectedClassName = selected ? selectedSurface : undefined;
 
   return (
     <Button
@@ -274,6 +276,7 @@ export const DesktopSearchAssistant = ({
   ariaLabel,
   assistantSlot,
   compact = true,
+  listings,
   isBg,
   label,
   locale,
@@ -286,6 +289,8 @@ export const DesktopSearchAssistant = ({
   scope,
 }: DesktopSearchAssistantProps) => {
   const router = useRouter();
+  const [ready, setReady] = useState(false);
+  useEffect(() => setReady(true), []);
   const containerRef = useRef<HTMLDivElement>(null);
   const listboxId = useId();
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -298,13 +303,14 @@ export const DesktopSearchAssistant = ({
   const groups = useMemo(
     () =>
       getDesktopSearchSuggestionGroups({
+        listings,
         isBg,
         locale,
         query: trimmedQuery,
         recentSearches,
         scope,
       }),
-    [isBg, locale, recentSearches, scope, trimmedQuery]
+    [isBg, listings, locale, recentSearches, scope, trimmedQuery]
   );
 
   const items = groups.flatMap((group) => group.items);
@@ -394,6 +400,7 @@ export const DesktopSearchAssistant = ({
             aria-label={ariaLabel}
             autoComplete="off"
             className="min-w-0 flex-1 bg-transparent text-compact-control outline-none placeholder:text-muted-foreground"
+            disabled={!ready}
             name="q"
             onChange={(event) => {
               onQueryChange(event.target.value);

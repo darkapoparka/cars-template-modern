@@ -5,11 +5,23 @@ export interface PublicPageErrors {
   readonly pageErrors: string[];
 }
 
-export const collectPublicPageErrors = (page: Page): PublicPageErrors => {
+export const collectPublicPageErrors = (
+  page: Page,
+  expectedNotFoundUrls: ReadonlySet<string> = new Set()
+): PublicPageErrors => {
   const errors: PublicPageErrors = { consoleErrors: [], pageErrors: [] };
 
   page.on("console", (message) => {
     if (message.type() === "error") {
+      // A deliberate document 404 is not a broken asset or runtime exception.
+      // Callers must register its exact URL and separately assert HTTP 404.
+      if (
+        expectedNotFoundUrls.has(message.location().url) &&
+        message.text() ===
+          "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ) {
+        return;
+      }
       errors.consoleErrors.push(message.text());
     }
   });

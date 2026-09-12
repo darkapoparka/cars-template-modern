@@ -6,7 +6,7 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { ScanLine } from "lucide-react";
-import type { ReactNode } from "react";
+import type { MouseEventHandler, ReactNode } from "react";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
 import { MobileServiceHelpButton } from "./mobile-service-help";
@@ -17,13 +17,15 @@ export const MobileSellVehicleHero = ({
   onOpenDetails,
   onOpenInfo,
   onOpenVin,
+  ready,
   vin,
 }: {
   inventoryShelf: ReactNode;
   locale: "bg" | "en";
-  onOpenDetails: () => void;
-  onOpenInfo: () => void;
-  onOpenVin: () => void;
+  onOpenDetails: MouseEventHandler<HTMLButtonElement>;
+  onOpenInfo: MouseEventHandler<HTMLButtonElement>;
+  onOpenVin: MouseEventHandler<HTMLButtonElement>;
+  ready: boolean;
   vin: string;
 }) => {
   const content = mobileSellVehicleCopy[locale];
@@ -33,6 +35,7 @@ export const MobileSellVehicleHero = ({
       <MobileDealerServiceHero
         helpAction={
           <MobileServiceHelpButton
+            disabled={!ready}
             onClick={onOpenInfo}
             title={content.howTitle}
           />
@@ -49,6 +52,7 @@ export const MobileSellVehicleHero = ({
             }
             className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
             data-slot="mobile-sell-vin-entry"
+            disabled={!ready}
             onClick={onOpenVin}
             type="button"
           >
@@ -74,7 +78,8 @@ export const MobileSellVehicleHero = ({
           aria-haspopup="dialog"
           className={getMobileQuickPillClassName(true, "mx-auto flex w-fit")}
           data-slot="mobile-sell-manual-entry"
-          onClick={() => onOpenDetails()}
+          disabled={!ready}
+          onClick={onOpenDetails}
           type="button"
         >
           <span>

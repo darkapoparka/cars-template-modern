@@ -2,6 +2,10 @@ import { leadSite } from "@repo/marketplace";
 import { createLocalizedMetadata as createSeoLocalizedMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { getCurrentPublicDataMode } from "./public-data-policy";
+import {
+  getPublicLocales,
+  normalizePublicLocale,
+} from "./public-locale-policy";
 
 type PublicLocalizedMetadataInput = Parameters<
   typeof createSeoLocalizedMetadata
@@ -52,6 +56,10 @@ export const createPublicLocalizedMetadata = (
   const image = properties.image ?? defaultImage;
   const metadata = createSeoLocalizedMetadata({
     ...properties,
+    alternateLocales: (
+      properties.alternateLocales ?? getPublicLocales()
+    ).filter((locale) => getPublicLocales().includes(locale)),
+    locale: normalizePublicLocale(properties.locale),
     image,
     siteName: leadSite.name,
   });

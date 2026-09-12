@@ -1,10 +1,15 @@
-import { Button } from "@repo/design-system/components/ui/button";
 import { JsonLd } from "@repo/seo/json-ld";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { getPublicBlogPost, publicBlogPosts } from "@/lib/public-blog-posts";
+import {
+  parseContentSearch,
+  serializeContentSearch,
+} from "@/lib/public-content";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { createSectionBreadcrumbStructuredData } from "@/lib/public-structured-data";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
@@ -13,78 +18,145 @@ import { PublicMarketplaceFrame } from "../../components/public-marketplace-fram
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export const generateStaticParams = () =>
-  vehicleGuides.map(({ slug }) => ({ slug }));
+export const generateStaticParams = () => [
+  ...vehicleGuides.map(({ slug }) => ({ slug })),
+  ...publicBlogPosts.map(({ slug }) => ({ slug })),
+];
 
 export const generateMetadata = async ({
   params,
 }: PageProps): Promise<Metadata> => {
   const { locale, slug } = await params;
+  const normalizedLocale = normalizeSeoLocale(locale);
+  const language = normalizedLocale === "bg" ? "bg" : "en";
   const guide = getVehicleGuide(slug);
-  const language = locale === "bg" ? "bg" : "en";
+  const post = getPublicBlogPost(slug);
+  const title = post?.title[language] ?? guide?.title[language];
+  const description = post?.excerpt[language] ?? guide?.description[language];
+  if (!(title && description)) {
+    return {};
+  }
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
-    description:
-      guide?.description[language] ?? "Day & Night vehicle buying guide.",
-    locale,
+    description,
+    locale: normalizedLocale,
     path: `/guides/${slug}`,
-    title: guide?.title[language] ?? "Vehicle guide",
+    title,
   });
 };
 
-export default async function GuidePage({ params }: PageProps) {
+export default async function GuideOrArticlePage({
+  params,
+  searchParams,
+}: PageProps) {
   const { locale, slug } = await params;
-  const guide = getVehicleGuide(slug);
-  if (!guide) {
-    notFound();
-  }
   const normalizedLocale = normalizeSeoLocale(locale);
   const language = normalizedLocale === "bg" ? "bg" : "en";
+  const guide = getVehicleGuide(slug);
+  const post = getPublicBlogPost(slug);
+  const entry = post ?? guide;
+  if (!entry) {
+    notFound();
+  }
+
+  const title = post?.title[language] ?? guide?.title[language] ?? "";
+  const description =
+    post?.excerpt[language] ?? guide?.description[language] ?? "";
+  const sections = post?.sections ?? guide?.sections ?? [];
+  const guideEyebrow =
+    language === "bg" ? "Практично ръководство" : "Practical guide";
+  const eyebrow = post
+    ? `${post.category[language]} · ${post.readTime[language]}`
+    : guideEyebrow;
+  const image = entry.image;
+  const backQuery = serializeContentSearch(
+    parseContentSearch(await searchParams)
+  );
+
   return (
     <>
       <JsonLd
         code={createSectionBreadcrumbStructuredData({
           baseUrl: getPublicWebBaseUrl(),
-          currentName: guide.title[language],
+          currentName: title,
           currentPath: `/guides/${slug}`,
           locale: normalizedLocale,
-          sectionName: language === "bg" ? "Съвети" : "Guides",
+          sectionName:
+            language === "bg" ? "Съвети и статии" : "Guides and articles",
           sectionPath: "/guides",
         })}
       />
-      <PublicMarketplaceFrame locale={locale}>
-        <main className="mx-auto max-w-3xl px-4 py-8 lg:py-12">
-          <Button
-            asChild
-            className="min-h-11 rounded-lg lg:min-h-0"
-            size="sm"
-            variant="secondary"
-          >
-            <Link href={getLocalizedPath(normalizedLocale, "/guides")}>
+      <PublicMarketplaceFrame
+        locale={normalizedLocale}
+        showMobileFooter={false}
+      >
+        <main className="min-h-[100dvh] bg-background px-4 py-5 lg:px-6 lg:py-10">
+          <article className="mx-auto max-w-3xl">
+            <Link
+              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-2 font-semibold text-[13px] text-zinc-800 focus-visible:outline-2 focus-visible:outline-zinc-950"
+              href={`${getLocalizedPath(normalizedLocale, "/guides")}${backQuery}`}
+            >
               <ArrowLeft aria-hidden="true" className="size-4" />
-              {language === "bg" ? "Всички съвети" : "All guides"}
+              {language === "bg" ? "Всички материали" : "All content"}
             </Link>
-          </Button>
-          <h1 className="mt-4 font-semibold text-page-title tracking-tight sm:text-page-title-lg">
-            {guide.title[language]}
-          </h1>
-          <p className="mt-3 text-muted-foreground leading-7">
-            {guide.description[language]}
-          </p>
-          <div className="mt-8 space-y-8">
-            {guide.sections.map((section) => (
-              <section key={section.heading.en}>
-                <h2 className="font-semibold text-dialog-title">
-                  {section.heading[language]}
-                </h2>
-                <p className="mt-3 text-foreground/80 leading-7">
-                  {section.body[language]}
-                </p>
-              </section>
-            ))}
-          </div>
+
+            <header className="pt-5 pb-4">
+              <p className="font-semibold text-[11px] text-muted-foreground uppercase tracking-[0.12em]">
+                {eyebrow}
+              </p>
+              <h1 className="mt-2 text-balance font-semibold text-[30px] text-zinc-950 leading-[1.04] tracking-[-0.035em] sm:text-4xl">
+                {title}
+              </h1>
+              <p className="mt-3 max-w-2xl text-[16px] text-zinc-600 leading-6">
+                {description}
+              </p>
+            </header>
+
+            <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-zinc-200">
+              <Image
+                alt=""
+                className="object-cover"
+                fill
+                priority
+                sizes="(max-width: 768px) calc(100vw - 32px), 768px"
+                src={image}
+              />
+            </div>
+
+            <div className="mt-6 space-y-3">
+              {sections.map((section, index) => (
+                <section
+                  className="rounded-2xl bg-white px-5 py-5 sm:px-6 sm:py-6"
+                  key={section.heading.en}
+                >
+                  <p className="font-semibold text-[11px] text-muted-foreground tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                  <h2 className="mt-2 font-semibold text-[20px] text-zinc-950 leading-6 tracking-[-0.02em]">
+                    {section.heading[language]}
+                  </h2>
+                  <p className="mt-2 text-[15px] text-zinc-600 leading-6">
+                    {section.body[language]}
+                  </p>
+                </section>
+              ))}
+            </div>
+
+            <Link
+              className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-zinc-950 px-5 py-4 font-semibold text-[15px] text-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2"
+              href={getLocalizedPath(normalizedLocale, "/cars")}
+            >
+              <span>
+                {language === "bg"
+                  ? "Разгледайте автомобилите"
+                  : "Browse vehicles"}
+              </span>
+              <ArrowRight aria-hidden="true" className="size-5 shrink-0" />
+            </Link>
+          </article>
         </main>
       </PublicMarketplaceFrame>
     </>

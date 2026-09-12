@@ -46,12 +46,17 @@ export const SellerListingStartForm = ({
   const [identityMethod, setIdentityMethod] = useState<
     "manual" | "registration" | "vin"
   >("manual");
-  const identifierHelp =
-    identityMethod === "vin"
-      ? "Въведете точно 17 знака без I, O и Q."
-      : identityMethod === "registration"
-        ? "Въведете регистрационния номер; основните данни остават задължителни."
-        : "Оставете празно при ръчно въвеждане.";
+  const identifierPolicy = {
+    vin: { help: "Въведете точно 17 знака без I, O и Q.", minimumLength: 17 },
+    registration: {
+      help: "Въведете регистрационния номер; основните данни остават задължителни.",
+      minimumLength: 2,
+    },
+    manual: {
+      help: "Оставете празно при ръчно въвеждане.",
+      minimumLength: undefined,
+    },
+  }[identityMethod];
 
   return (
     <div className="mx-auto grid w-full max-w-5xl gap-4">
@@ -94,13 +99,7 @@ export const SellerListingStartForm = ({
                 className="h-11 rounded-lg"
                 id="identifier"
                 maxLength={identityMethod === "vin" ? 17 : 20}
-                minLength={
-                  identityMethod === "vin"
-                    ? 17
-                    : identityMethod === "registration"
-                      ? 2
-                      : undefined
-                }
+                minLength={identifierPolicy.minimumLength}
                 name="identifier"
                 pattern={
                   identityMethod === "vin"
@@ -112,7 +111,7 @@ export const SellerListingStartForm = ({
                 spellCheck={false}
               />
               <p className="text-muted-foreground text-xs" id="identifier-help">
-                {identifierHelp}
+                {identifierPolicy.help}
               </p>
             </div>
             <div className="grid gap-2">

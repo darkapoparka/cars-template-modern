@@ -7,15 +7,15 @@ import {
 } from "@repo/marketplace";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
 import {
-  getListingContactAction,
-  getPrimaryListingPrice,
-  type ListingOrganizationRole,
-} from "../lib/listing-truth";
-import {
   cleanListingDetailBaseUrl,
   getListingDetailCopy,
   getListingReportHref,
 } from "../lib/listing-detail-policy";
+import {
+  getListingContactAction,
+  getPrimaryListingPrice,
+  type ListingOrganizationRole,
+} from "../lib/listing-truth";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { getVehicleCardBadgeLabels } from "../lib/vehicle-card-policy";
 import { ListingDetailContent } from "./listing-detail-content";

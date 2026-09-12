@@ -1,33 +1,42 @@
 "use client";
 
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerHeader,
-  DrawerTitle,
-} from "@repo/design-system/components/ui/drawer";
 import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-mobile-header-icon";
-import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { mobileHeaderIconActionClassName } from "@repo/marketplace-ui/lib/mobile-header-icon-action";
 import { Info } from "lucide-react";
-import { type Ref, useRef, useState } from "react";
+import {
+  type ComponentProps,
+  type MouseEventHandler,
+  type Ref,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import { MobileServiceHelpDrawer } from "./mobile-service-help-drawer";
 
 export function MobileServiceHelpButton({
+  disabled = false,
   title,
   onClick,
   ref,
 }: {
   title: string;
-  onClick: () => void;
+  disabled?: boolean;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   ref?: Ref<HTMLButtonElement>;
 }) {
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    setReady(true);
+  }, []);
+
   return (
     <button
       aria-haspopup="dialog"
       aria-label={title}
       className={mobileHeaderIconActionClassName}
       data-slot="mobile-service-help"
+      disabled={disabled || !ready}
       onClick={onClick}
       ref={ref}
       title={title}
@@ -38,15 +47,12 @@ export function MobileServiceHelpButton({
   );
 }
 
-export function MobileServiceHelp({
-  title,
-  faqs,
-  locale,
-}: {
-  title: string;
-  faqs: readonly { question: string; answer: string }[];
-  locale: "bg" | "en";
-}) {
+export function MobileServiceHelp(
+  props: Omit<
+    ComponentProps<typeof MobileServiceHelpDrawer>,
+    "open" | "onOpenChange" | "onRestoreFocus"
+  >
+) {
   const [open, setOpen] = useState(false);
   const triggerRef = useRef<HTMLButtonElement>(null);
   return (
@@ -54,50 +60,16 @@ export function MobileServiceHelp({
       <MobileServiceHelpButton
         onClick={() => setOpen(true)}
         ref={triggerRef}
-        title={title}
+        title={props.title}
       />
-      <Drawer onOpenChange={setOpen} open={open}>
-        <DrawerContent
-          className="mx-auto max-w-lg overflow-hidden border-0 bg-white data-[vaul-drawer-direction=bottom]:max-h-[85dvh] data-[vaul-drawer-direction=bottom]:rounded-t-2xl"
-          onCloseAutoFocus={(event) => {
-            event.preventDefault();
-            triggerRef.current?.focus({ preventScroll: true });
-          }}
-        >
-          <DrawerHeader className="shrink-0 px-4 pt-3 pb-4 text-left">
-            <div className="flex items-center justify-between gap-3">
-              <DrawerTitle className="text-[20px] leading-6">
-                {title}
-              </DrawerTitle>
-              <button
-                aria-label={
-                  locale === "bg" ? "Затвори информацията" : "Close information"
-                }
-                className="grid size-11 shrink-0 place-items-center rounded-full bg-zinc-100 text-zinc-950"
-                onClick={() => setOpen(false)}
-                type="button"
-              >
-                <DealerUiIcon className="size-5" name="close" />
-              </button>
-            </div>
-            <DrawerDescription className="sr-only">{title}</DrawerDescription>
-          </DrawerHeader>
-          <div className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
-            <dl>
-              {faqs.map((item) => (
-                <div className="mb-5 last:mb-0" key={item.question}>
-                  <dt className="font-semibold text-[15px] text-zinc-950">
-                    {item.question}
-                  </dt>
-                  <dd className="mt-1.5 text-[14px] text-zinc-600 leading-6">
-                    {item.answer}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        </DrawerContent>
-      </Drawer>
+      <MobileServiceHelpDrawer
+        {...props}
+        onOpenChange={setOpen}
+        onRestoreFocus={() =>
+          triggerRef.current?.focus({ preventScroll: true })
+        }
+        open={open}
+      />
     </>
   );
 }

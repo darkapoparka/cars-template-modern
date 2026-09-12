@@ -252,7 +252,15 @@ test("workspace runtime dependencies match the deliberate package graph", async 
   const allowedDependencies = new Map([
     ["@repo/ai", ["@repo/marketplace-domain"]],
     ["@repo/database", ["@repo/marketplace-domain"]],
-    ["@repo/marketplace-ui", ["@repo/design-system", "@repo/marketplace"]],
+    [
+      "@repo/marketplace-ui",
+      [
+        "@repo/design-system",
+        "@repo/internationalization",
+        "@repo/marketplace",
+      ],
+    ],
+    ["@repo/seo", ["@repo/internationalization"]],
     ["@repo/marketplace", ["@repo/marketplace-domain"]],
     ["@repo/storage", ["@repo/marketplace-domain"]],
   ]);

@@ -20,6 +20,11 @@ import {
   getPublicSearchRobots,
 } from "@/lib/public-metadata";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
+import {
+  parseSellVehicleDraft,
+  sellCategoryLabels,
+  serializeSellVehicleDraft,
+} from "@/lib/sell-vehicle-draft";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 
@@ -32,21 +37,18 @@ const pageCopy = {
   bg: {
     heroImageAlt: "Нощен автомобилен шоурум",
     title: "Премиум автомобили. Внос. Лизинг.",
-    description:
-      "Вижте автомобилите в наличност или говорете директно с Day & Night за следващия си автомобил.",
+    description: `Вижте автомобилите в наличност или говорете директно с ${leadSite.shortName} за следващия си автомобил.`,
     inventoryAction: "Вижте наличностите",
     phoneAction: "Обадете се",
     contactTitle: "Говорете директно с нас.",
-    contactDescription:
-      "Един телефон за автомобил, внос или финансиране. Шоурум в Студентски град.",
-    locationLabel: "Шоурум · Студентски град",
+    contactDescription: `Един телефон за автомобил, внос или финансиране. Шоурум в ${leadSite.district.bg}.`,
+    locationLabel: `Шоурум · ${leadSite.district.bg}`,
     mapAction: "Отворете картата",
     servicesTitle: "Изберете правилната посока.",
     servicesDescription:
       "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
     sellHandoffAction: "Обадете се за оферта",
-    sellHandoffDescription:
-      "Данните за автомобила са готови. Обадете се на Day & Night, за да уточним оглед и конкретна оферта.",
+    sellHandoffDescription: `Данните за автомобила са готови. Обадете се на ${leadSite.shortName}, за да уточним оглед и конкретна оферта.`,
     sellHandoffEditAction: "Редактирайте данните",
     sellHandoffTitle: "Заявете оценка за автомобила",
     sellCategoryLabel: "Категория",
@@ -54,7 +56,7 @@ const pageCopy = {
     sellMileageLabel: "Пробег",
     sellVehicleLabel: "Автомобил",
     sellYearLabel: "Година",
-    sellLocationLabel: "Шоурум · Студентски град",
+    sellLocationLabel: `Шоурум · ${leadSite.district.bg}`,
     services: [
       {
         title: "Автомобили в наличност",
@@ -85,21 +87,18 @@ const pageCopy = {
   en: {
     heroImageAlt: "Night-time automotive showroom",
     title: "Premium vehicles. Imports. Leasing.",
-    description:
-      "Browse the vehicles in stock or speak directly with Day & Night about your next vehicle.",
+    description: `Browse the vehicles in stock or speak directly with ${leadSite.shortName} about your next vehicle.`,
     inventoryAction: "View available vehicles",
     phoneAction: "Call us",
     contactTitle: "Speak directly with us.",
-    contactDescription:
-      "One phone number for vehicles, imports, or finance. Showroom in Studentski grad.",
-    locationLabel: "Showroom · Studentski grad",
+    contactDescription: `One phone number for vehicles, imports, or finance. Showroom in ${leadSite.district.en}.`,
+    locationLabel: `Showroom · ${leadSite.district.en}`,
     mapAction: "Open the map",
     servicesTitle: "Choose the right direction.",
     servicesDescription:
       "From a vehicle in stock to an import on request, our team is one call away.",
     sellHandoffAction: "Call for an offer",
-    sellHandoffDescription:
-      "Your vehicle details are ready. Call Day & Night to arrange an inspection and a concrete offer.",
+    sellHandoffDescription: `Your vehicle details are ready. Call ${leadSite.shortName} to arrange an inspection and a concrete offer.`,
     sellHandoffEditAction: "Edit vehicle details",
     sellHandoffTitle: "Request a vehicle appraisal",
     sellCategoryLabel: "Category",
@@ -107,7 +106,7 @@ const pageCopy = {
     sellMileageLabel: "Mileage",
     sellVehicleLabel: "Vehicle",
     sellYearLabel: "Year",
-    sellLocationLabel: "Showroom · Studentski grad",
+    sellLocationLabel: `Showroom · ${leadSite.district.en}`,
     services: [
       {
         title: "Vehicles in stock",
@@ -138,27 +137,7 @@ const pageCopy = {
   },
 } as const;
 
-const sellCategoryLabels = {
-  bg: {
-    car: "Автомобил",
-    motorbike: "Мотоциклет",
-    truck: "Камион",
-    van: "Бус",
-  },
-  en: {
-    car: "Car",
-    motorbike: "Motorbike",
-    truck: "Truck",
-    van: "Van",
-  },
-} as const;
-
-const sellCategoryAssets = {
-  car: "/lead-sell-car-v1.png",
-  motorbike: "/lead-sell-motorcycle-v1.png",
-  truck: "/lead-sell-truck-v1.png",
-  van: "/lead-sell-van-v1.png",
-} as const;
+const sellCategoryAssets = leadSite.sellCategoryAssets;
 
 const getQueryValue = (
   query: Record<string, string | string[] | undefined>,
@@ -184,14 +163,14 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Day & Night Auto Group в София — автомобили в наличност, внос по заявка и собствен лизинг."
-      : "Day & Night Auto Group in Sofia — vehicles in stock, import on request, and in-house leasing.",
+      ? `${leadSite.name} в София — автомобили в наличност, внос по заявка и собствен лизинг.`
+      : `${leadSite.name} in Sofia — vehicles in stock, import on request, and in-house leasing.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
     title: isBg
-      ? "За нас и контакти | Day & Night"
-      : "About and contact | Day & Night",
+      ? `За нас и контакти | ${leadSite.shortName}`
+      : `About and contact | ${leadSite.shortName}`,
   });
 };
 
@@ -205,14 +184,7 @@ export default async function ContactPage({
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const sellContext =
     getQueryValue(query, "intent") === "sell"
-      ? {
-          category: getQueryValue(query, "category"),
-          make: getQueryValue(query, "make"),
-          mileage: getQueryValue(query, "mileage"),
-          model: getQueryValue(query, "model"),
-          notes: getQueryValue(query, "notes").slice(0, 500),
-          year: getQueryValue(query, "year"),
-        }
+      ? parseSellVehicleDraft(query)
       : null;
   const sellVehicleName = [sellContext?.make, sellContext?.model]
     .filter(Boolean)
@@ -221,15 +193,7 @@ export default async function ContactPage({
     sellCategoryAssets[
       sellContext?.category as keyof typeof sellCategoryAssets
     ] ?? sellCategoryAssets.car;
-  const sellEditParams = new URLSearchParams();
-  if (sellContext) {
-    for (const [key, value] of Object.entries(sellContext)) {
-      if (value) {
-        sellEditParams.set(key, value);
-      }
-    }
-  }
-  const sellEditHref = `${localize("/sell")}?${sellEditParams.toString()}`;
+  const sellEditHref = `${localize("/sell")}?${sellContext ? serializeSellVehicleDraft(sellContext) : ""}`;
 
   if (sellContext) {
     return (
@@ -242,12 +206,12 @@ export default async function ContactPage({
             )}
           >
             <section
-              className="relative isolate min-h-[28rem] overflow-hidden rounded-xl border border-border shadow-panel sm:min-h-[26rem]"
+              className="relative isolate overflow-hidden rounded-2xl bg-card lg:min-h-[26rem] lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
               data-slot="sell-contact-handoff"
             >
               <Image
                 alt=""
-                className="object-cover object-center"
+                className="hidden object-cover object-center lg:block"
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
@@ -255,11 +219,11 @@ export default async function ContactPage({
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-0 bg-black/10"
+                className="absolute inset-0 hidden bg-black/10 lg:block"
               />
 
-              <div className="relative z-10 flex min-h-[28rem] items-center justify-center p-3 sm:min-h-[26rem] sm:p-6">
-                <div className="w-full max-w-2xl rounded-xl border border-border/80 bg-card p-5 shadow-2xl shadow-black/20 sm:p-6 lg:p-7">
+              <div className="relative z-10 flex items-center justify-center lg:min-h-[26rem] lg:p-6">
+                <div className="w-full max-w-2xl rounded-2xl bg-card p-5 sm:p-6 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/20">
                   <h1 className="text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg">
                     {copy.sellHandoffTitle}
                   </h1>
@@ -288,18 +252,21 @@ export default async function ContactPage({
                         />
                       </span>
                       <span className="min-w-0">
-                        <span className="block truncate font-semibold text-body">
-                          {sellVehicleName || "—"}
+                        <span className="block break-words font-semibold text-body">
+                          {sellVehicleName ||
+                            (sellContext.vin
+                              ? `VIN ${sellContext.vin}`
+                              : copy.sellVehicleLabel)}
                         </span>
                         <span className="mt-1 block text-meta text-muted-foreground">
                           {getSellCategoryLabel(
                             normalizedLocale,
                             sellContext.category
-                          )}{" "}
-                          · {sellContext.year || "—"} ·{" "}
+                          )}
+                          {sellContext.year ? ` · ${sellContext.year}` : ""}
                           {sellContext.mileage
-                            ? `${sellContext.mileage} км`
-                            : "—"}
+                            ? ` · ${new Intl.NumberFormat(normalizedLocale).format(Number(sellContext.mileage))} ${normalizedLocale === "bg" ? "км" : "km"}`
+                            : ""}
                         </span>
                       </span>
                       <span className="flex items-center gap-1 pr-1 font-semibold text-meta">
@@ -314,6 +281,14 @@ export default async function ContactPage({
                     </Link>
                   </div>
 
+                  {sellContext.vin && sellVehicleName ? (
+                    <p
+                      className="mt-3 break-all text-muted-foreground text-sm"
+                      data-slot="sell-vin-summary"
+                    >
+                      VIN {sellContext.vin}
+                    </p>
+                  ) : null}
                   {sellContext.notes ? (
                     <div className="mt-5 border-border border-t pt-4">
                       <p className="text-muted-foreground text-xs">

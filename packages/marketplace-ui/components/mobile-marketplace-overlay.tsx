@@ -14,7 +14,7 @@ import type { ReactNode } from "react";
 import { DealerUiIcon } from "./dealer-ui-icon";
 
 export const mobileMarketplaceOverlayIconActionClassName =
-  "size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300";
+  "size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none transition-[background-color,transform] duration-150 hover:bg-zinc-300 active:scale-[0.96] active:bg-zinc-300";
 
 /** Shared single-field entry geometry for search, listing links, and VIN. */
 export const mobileMarketplaceOverlayFieldClassName =
@@ -25,7 +25,7 @@ export const mobileMarketplaceOverlayFieldRowClassName =
   "shrink-0 bg-white px-3 pb-3";
 
 export const mobileMarketplaceOverlayPrimaryActionClassName =
-  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]";
+  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-[var(--lead-site-accent-hover)] active:scale-[0.99]";
 
 interface MobileMarketplaceOverlayShellProps {
   readonly children: ReactNode;

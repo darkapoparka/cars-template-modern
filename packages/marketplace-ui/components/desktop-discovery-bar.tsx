@@ -6,6 +6,7 @@ import {
   leadSite,
   type MarketplaceSearchParams,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { type ReactNode, useState } from "react";
 import {
   marketplaceContentFrameClassName,
@@ -44,7 +45,9 @@ interface DesktopMarketplaceBarProps {
   onOpenModel: () => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   query: string;
+  searchListings?: readonly InventorySearchListing[];
   setQuery: (query: string) => void;
+  totalListings: number;
   variant?: "discovery" | "results";
   viewMode: ListingViewMode;
 }
@@ -68,6 +71,7 @@ const getDiscoveryBandClassName = (
 export const DesktopMarketplaceBar = ({
   appBaseUrl,
   assistantSlot,
+  searchListings,
   categoryCounts,
   filterCount,
   filters,
@@ -79,6 +83,7 @@ export const DesktopMarketplaceBar = ({
   onOpenModel,
   query,
   setQuery,
+  totalListings,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -117,7 +122,9 @@ export const DesktopMarketplaceBar = ({
           onOpenMake={onOpenMake}
           onOpenModel={onOpenModel}
           query={query}
+          searchListings={searchListings}
           setQuery={setQuery}
+          totalListings={totalListings}
         />
       </DealerDesktopHeader>
     );
@@ -169,6 +176,7 @@ export const DesktopMarketplaceBar = ({
               locale={locale}
               onApply={onApply}
               query={query}
+              searchListings={searchListings}
               serviceMode={leadServiceMode}
               setQuery={setQuery}
             />

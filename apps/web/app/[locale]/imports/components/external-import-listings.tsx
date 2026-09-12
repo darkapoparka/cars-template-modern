@@ -14,8 +14,8 @@ import {
   ShieldAlert,
   Ship,
 } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { BlankImportRequestLink } from "./blank-import-request-link";
 
 interface ExternalImportListingsProps {
@@ -42,9 +42,7 @@ const getUnavailableCopy = (
       : "There are no connected listings for this country yet.";
   }
   if (data?.status === "disabled") {
-    return isBg
-      ? "Внос по ваша заявка"
-      : "Import a vehicle of your choice";
+    return isBg ? "Внос по ваша заявка" : "Import a vehicle of your choice";
   }
   return isBg
     ? "Обявите временно не се зареждат."
@@ -161,7 +159,7 @@ const ExternalInventoryCard = ({
       </a>
 
       <div
-        className="flex min-w-0 flex-col p-3 lg:p-3.5"
+        className="flex min-w-0 flex-col px-3 py-2.5 lg:p-3.5"
         data-slot="external-inventory-content"
       >
         <h3 className="line-clamp-2 font-semibold text-base text-foreground leading-5 tracking-tight">
@@ -197,11 +195,11 @@ const ExternalInventoryCard = ({
         </p>
 
         <div
-          className="mt-auto grid grid-cols-1 gap-2 pt-2 min-[360px]:grid-cols-2"
+          className="mt-auto grid grid-cols-[auto_minmax(0,1fr)] gap-1.5 pt-1.5 lg:grid-cols-2 lg:gap-2 lg:pt-2"
           data-slot="external-inventory-action-row"
         >
           <a
-            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2 font-semibold text-xs outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/35 lg:h-9"
+            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2 font-semibold text-xs outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/35 max-lg:min-h-11 max-lg:min-w-24 max-lg:rounded-[0.625rem] max-lg:border-transparent max-lg:bg-zinc-900 max-lg:px-3 max-lg:font-[650] max-lg:text-sm max-lg:text-white max-lg:leading-[18px] max-lg:active:bg-zinc-950 max-lg:hover:bg-zinc-950 lg:h-9"
             data-slot="external-inventory-source-action"
             href={listing.source.listingUrl}
             rel="nofollow sponsored noopener noreferrer"
@@ -211,7 +209,7 @@ const ExternalInventoryCard = ({
             <ExternalLink aria-hidden="true" className="size-3.5" />
           </a>
           <Link
-            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[var(--lead-site-accent)] px-2 font-semibold text-white text-xs outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] lg:h-9"
+            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[var(--lead-site-accent)] px-2 font-semibold text-white text-xs outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] max-lg:min-h-11 max-lg:rounded-[0.625rem] max-lg:px-3 max-lg:font-[650] max-lg:text-sm max-lg:leading-[18px] max-lg:active:bg-[var(--lead-site-accent-hover)] lg:h-9"
             data-slot="external-inventory-import-action"
             href={buildImportRequestHref(
               importsPath,
@@ -269,7 +267,8 @@ export const ExternalImportListings = ({
         > => feed.status !== "ok"
       ) ?? null;
 
-    const StateIcon = unavailableFeed?.status === "disabled" ? Ship : ShieldAlert;
+    const StateIcon =
+      unavailableFeed?.status === "disabled" ? Ship : ShieldAlert;
 
     return (
       <div
@@ -277,11 +276,20 @@ export const ExternalImportListings = ({
         data-provider-state={unavailableFeed?.status ?? "unavailable"}
       >
         {unavailableFeed?.status === "disabled" ? (
-          <Image alt="" src="/images/services/import-banner-v2.png" width={1536} height={1024} sizes="(max-width: 1023px) 100vw, 640px" className="mb-4 h-44 w-[calc(100%+2.5rem)] max-w-none object-cover lg:h-64" />
-        ) : <StateIcon
-          aria-hidden="true"
-          className="mt-6 size-5 text-muted-foreground"
-        />}
+          <Image
+            alt=""
+            className="mb-4 h-44 w-[calc(100%+2.5rem)] max-w-none object-cover lg:h-64"
+            height={1024}
+            sizes="(max-width: 1023px) 100vw, 640px"
+            src="/images/services/import-banner-v2.png"
+            width={1536}
+          />
+        ) : (
+          <StateIcon
+            aria-hidden="true"
+            className="mt-6 size-5 text-muted-foreground"
+          />
+        )}
         <h2 className="mt-2 font-semibold text-sm" id={headingId}>
           {getUnavailableCopy(unavailableFeed, isBg)}
         </h2>

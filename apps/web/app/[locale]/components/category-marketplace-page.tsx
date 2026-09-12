@@ -11,6 +11,7 @@ import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
+import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
   getPublicVehicleTaxonomy,
@@ -104,6 +105,10 @@ export const CategoryMarketplacePage = async ({
           inventoryFacets={facets}
           listings={listings}
           locale={normalizedLocale}
+          searchListings={getPublicInventorySearchListings(
+            filters.category,
+            listings
+          )}
           taxonomy={taxonomy}
           totalListings={totalListings}
         />

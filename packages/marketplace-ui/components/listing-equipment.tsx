@@ -39,20 +39,17 @@ export const ListingEquipment = ({
 }: ListingEquipmentProps) => {
   const features = listing.features ?? [];
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+  const heading = isBg ? "Екстри" : "Extras";
 
   return (
     <section
-      aria-labelledby="listing-equipment-heading"
+      aria-label={heading}
       className="mb-5 scroll-mt-24 overflow-hidden rounded-xl border border-zinc-200 bg-white lg:border-0 lg:bg-control lg:px-5 lg:py-5"
       data-slot="listing-equipment"
-      id="listing-equipment"
     >
       <div className="px-4 py-3.5 lg:px-0 lg:py-0">
-        <h2
-          className="font-semibold text-[17px] leading-6 lg:text-lg"
-          id="listing-equipment-heading"
-        >
-          {isBg ? "Екстри" : "Extras"}
+        <h2 className="font-semibold text-[17px] leading-6 lg:text-lg">
+          {heading}
         </h2>
       </div>
 

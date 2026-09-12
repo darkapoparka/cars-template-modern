@@ -866,7 +866,7 @@ export const evaluateMeteredEntitlementQuota = ({
   };
 };
 
-export type EntitlementUsageInput = {
+export interface EntitlementUsageInput {
   readonly actorAccountId?: string;
   readonly delta: number;
   readonly featureKey: string;
@@ -876,7 +876,7 @@ export type EntitlementUsageInput = {
   readonly sourceEntityId?: string;
   readonly sourceEntityType?: string;
   readonly subject: EntitlementSubject;
-};
+}
 
 export interface EntitlementUsagePort {
   getEntitlement(

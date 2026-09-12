@@ -9,6 +9,7 @@ import {
   MarketplaceLocaleSwitchLink,
   MarketplaceMasthead,
   type MarketplaceMode,
+  MobileDealerChrome,
 } from "@repo/marketplace-ui";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { Globe2, Heart, MapPin, Phone, Plus } from "lucide-react";
@@ -34,6 +35,7 @@ interface PublicMarketplaceFrameProps {
     label: string;
     target: string;
   }[];
+  showMobileBottomNav?: boolean;
   showMobileDealerHeader?: boolean;
   showMobileFooter?: boolean;
 }
@@ -67,6 +69,7 @@ export const PublicMarketplaceFrame = ({
   mobileDealerHeaderTone = "dark",
   mobileDealerIntro,
   mobileDealerQuickActions,
+  showMobileBottomNav = true,
   showMobileDealerHeader = true,
   showMobileFooter = true,
 }: PublicMarketplaceFrameProps) => {
@@ -93,7 +96,7 @@ export const PublicMarketplaceFrame = ({
   return (
     <div
       className={
-        leadSite.staticDemoMode
+        leadSite.staticDemoMode && showMobileBottomNav
           ? "flex min-h-screen flex-col break-words bg-background pb-[calc(4rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0"
           : "flex min-h-screen flex-col break-words bg-background text-foreground"
       }
@@ -122,19 +125,15 @@ export const PublicMarketplaceFrame = ({
                 : "bg-black text-white lg:hidden"
             }
           >
-            <div
-              className={
-                mobileDealerHeaderTone === "clean"
-                  ? "px-3 pt-1 pb-2 sm:px-4"
-                  : "px-3 pt-1 sm:px-4"
+            <MobileDealerChrome
+              brandRow={
+                <DealerMobileBrandBar
+                  isBg={isBg}
+                  locale={normalizedLocale}
+                  tone={mobileDealerHeaderTone}
+                />
               }
-            >
-              <DealerMobileBrandBar
-                isBg={isBg}
-                locale={normalizedLocale}
-                tone={mobileDealerHeaderTone}
-              />
-            </div>
+            />
             {mobileDealerIntro ? (
               <div
                 className={
@@ -320,7 +319,7 @@ export const PublicMarketplaceFrame = ({
       <div className={showMobileFooter ? undefined : "max-lg:hidden"}>
         <Footer locale={normalizedLocale} />
       </div>
-      {leadSite.staticDemoMode ? (
+      {leadSite.staticDemoMode && showMobileBottomNav ? (
         <DealerBottomNav activeMode={activeMode} locale={normalizedLocale} />
       ) : null}
     </div>

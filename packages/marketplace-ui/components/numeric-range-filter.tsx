@@ -19,6 +19,76 @@ const clamp = (value: number, minimum: number, maximum: number) =>
 const rangesMatch = (left: NumericRangeValue, right: NumericRangeValue) =>
   left[0] === right[0] && left[1] === right[1];
 
+interface NumericRangeFieldProps {
+  ariaLabel: string;
+  compact: boolean;
+  fieldId: string;
+  formattedValue: string;
+  label: string;
+  maximum: number;
+  minimum: number;
+  onCommit: (value: string) => void;
+  onInput: (value: string) => void;
+  step: number;
+  value: string;
+}
+
+const NumericRangeField = ({
+  ariaLabel,
+  compact,
+  fieldId,
+  formattedValue,
+  label,
+  maximum,
+  minimum,
+  onCommit,
+  onInput,
+  step,
+  value,
+}: NumericRangeFieldProps) => (
+  <label
+    className={cn(
+      "group relative font-medium text-meta text-zinc-600",
+      compact ? "block" : "space-y-1.5"
+    )}
+    htmlFor={fieldId}
+  >
+    <span
+      className={cn(
+        compact &&
+          "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
+      )}
+    >
+      {label}
+    </span>
+    <Input
+      aria-label={ariaLabel}
+      className={cn(
+        "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-[var(--lead-site-accent-ring)] group-focus-within:text-zinc-950 md:text-base",
+        compact && "h-14 pt-5 pb-1"
+      )}
+      id={fieldId}
+      inputMode="numeric"
+      max={maximum}
+      min={minimum}
+      onBlur={(event) => onCommit(event.target.value)}
+      onChange={(event) => onInput(event.target.value)}
+      step={step}
+      type="number"
+      value={value}
+    />
+    <span
+      aria-hidden="true"
+      className={cn(
+        "pointer-events-none absolute right-3 bottom-0 left-3 flex h-12 items-center text-base text-zinc-950 tabular-nums group-focus-within:hidden",
+        compact && "h-14 items-end pb-1.5"
+      )}
+    >
+      {formattedValue}
+    </span>
+  </label>
+);
+
 export const NumericRangeFilter = ({
   className,
   compact = false,
@@ -101,21 +171,23 @@ export const NumericRangeFilter = ({
       <div
         className={cn(
           "flex items-baseline gap-4",
-          compact ? "justify-center" : "justify-between"
+          compact || !label ? "justify-center" : "justify-between"
         )}
       >
-        <span
-          className={cn(
-            "font-semibold text-meta text-zinc-600",
-            compact && "sr-only"
-          )}
-        >
-          {label}
-        </span>
+        {label ? (
+          <span
+            className={cn(
+              "font-semibold text-meta text-zinc-600",
+              compact && "sr-only"
+            )}
+          >
+            {label}
+          </span>
+        ) : null}
         <output
           className={cn(
             "font-semibold text-zinc-950 tabular-nums",
-            compact ? "text-center text-xl" : "text-right text-base"
+            compact || !label ? "text-center text-xl" : "text-right text-base"
           )}
           data-slot="numeric-range-summary"
         >
@@ -147,71 +219,33 @@ export const NumericRangeFilter = ({
         )}
       >
         {maximumOnly ? null : (
-          <label
-            className={cn(
-              "font-medium text-meta text-zinc-600",
-              compact ? "relative block" : "space-y-1.5"
-            )}
-            htmlFor={`${inputId}-minimum`}
-          >
-            <span
-              className={cn(
-                compact &&
-                  "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
-              )}
-            >
-              {minimumLabel}
-            </span>
-            <Input
-              aria-label={thumbLabels[0]}
-              className={cn(
-                "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-zinc-950 tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:ring-[var(--lead-site-accent-ring)] md:text-base",
-                compact && "h-14 pt-5 pb-1"
-              )}
-              id={`${inputId}-minimum`}
-              inputMode="numeric"
-              max={maximum}
-              min={rangeMinimum}
-              onBlur={(event) => updateMinimum(event.target.value)}
-              onChange={(event) => setMinimumInput(event.target.value)}
-              step={step}
-              type="number"
-              value={minimumInput}
-            />
-          </label>
-        )}
-        <label
-          className={cn(
-            "font-medium text-meta text-zinc-600",
-            compact ? "relative block" : "space-y-1.5"
-          )}
-          htmlFor={`${inputId}-maximum`}
-        >
-          <span
-            className={cn(
-              compact &&
-                "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
-            )}
-          >
-            {maximumLabel}
-          </span>
-          <Input
-            aria-label={thumbLabels[1]}
-            className={cn(
-              "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-zinc-950 tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:ring-[var(--lead-site-accent-ring)] md:text-base",
-              compact && "h-14 pt-5 pb-1"
-            )}
-            id={`${inputId}-maximum`}
-            inputMode="numeric"
-            max={rangeMaximum}
-            min={minimum}
-            onBlur={(event) => updateMaximum(event.target.value)}
-            onChange={(event) => setMaximumInput(event.target.value)}
+          <NumericRangeField
+            ariaLabel={thumbLabels[0]}
+            compact={compact}
+            fieldId={`${inputId}-minimum`}
+            formattedValue={formatValue(minimum)}
+            label={minimumLabel}
+            maximum={maximum}
+            minimum={rangeMinimum}
+            onCommit={updateMinimum}
+            onInput={setMinimumInput}
             step={step}
-            type="number"
-            value={maximumInput}
+            value={minimumInput}
           />
-        </label>
+        )}
+        <NumericRangeField
+          ariaLabel={thumbLabels[1]}
+          compact={compact}
+          fieldId={`${inputId}-maximum`}
+          formattedValue={formatValue(maximum)}
+          label={maximumLabel}
+          maximum={rangeMaximum}
+          minimum={minimum}
+          onCommit={updateMaximum}
+          onInput={setMaximumInput}
+          step={step}
+          value={maximumInput}
+        />
       </div>
 
       {presets.length > 0 ? (

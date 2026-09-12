@@ -10,9 +10,11 @@ import {
   getCanonicalUrl,
   getLanguageAlternates,
   getLocalizedPath,
-  SEO_LOCALES,
+  type SEO_LOCALES,
 } from "@repo/seo/metadata";
 import type { MetadataRoute } from "next";
+import { publicBlogPosts } from "@/lib/public-blog-posts";
+import { getPublicLocales } from "@/lib/public-locale-policy";
 import {
   getPublicSitemapData,
   PublicMarketplaceUnavailableError,
@@ -32,7 +34,6 @@ const staticPaths = [
   "/lease",
   "/sell",
   "/guides",
-  "/blog",
   "/contact",
   "/legal/privacy",
   "/legal/terms",
@@ -48,7 +49,7 @@ const toEntries = (
     path: string;
   }[]
 ): MetadataRoute.Sitemap =>
-  paths.flatMap(({ lastModified, locales = SEO_LOCALES, path }) =>
+  paths.flatMap(({ lastModified, locales = getPublicLocales(), path }) =>
     locales.map((locale) => ({
       alternates: {
         languages: getLanguageAlternates(path, {
@@ -78,7 +79,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   );
   const paths = [
     ...staticPaths.map((path) => ({ path })),
-    ...vehicleGuides.map(({ slug }) => ({ path: `/guides/${slug}` })),
+    ...[...vehicleGuides, ...publicBlogPosts].map(({ slug }) => ({
+      path: `/guides/${slug}`,
+    })),
     ...marketplaceData.listings.map(({ slug, updatedAt }) => ({
       lastModified: updatedAt,
       path: getListingPath({ slug }),

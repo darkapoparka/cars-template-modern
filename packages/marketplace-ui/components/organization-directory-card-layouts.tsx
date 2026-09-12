@@ -435,7 +435,10 @@ const DesktopOrganizationListCard = ({
   signals,
   services,
   tradeLanes,
-}: Omit<OrganizationDirectoryLayoutProps, "badges" | "previewImages" | "priority"> & {
+}: Omit<
+  OrganizationDirectoryLayoutProps,
+  "badges" | "previewImages" | "priority"
+> & {
   signals: readonly OrganizationDirectorySignal[];
 }) => (
   <div className="hidden min-h-32 grid-cols-[4rem_minmax(14rem,1.35fr)_minmax(12rem,0.9fr)_minmax(15rem,1fr)_auto] items-center gap-4 p-4 lg:grid">
@@ -472,16 +475,10 @@ const DesktopOrganizationListCard = ({
 
     <div className="min-w-0 space-y-2">
       {tradeLanes[0] ? (
-        <OrganizationScopeBadge
-          toLabel={labels.to}
-          tradeLane={tradeLanes[0]}
-        />
+        <OrganizationScopeBadge toLabel={labels.to} tradeLane={tradeLanes[0]} />
       ) : null}
       {signals.length ? (
-        <OrganizationSignalList
-          label={labels.credentials}
-          signals={signals}
-        />
+        <OrganizationSignalList label={labels.credentials} signals={signals} />
       ) : null}
     </div>
 

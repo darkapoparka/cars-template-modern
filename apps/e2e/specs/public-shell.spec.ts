@@ -31,9 +31,7 @@ test("mobile import separates field clear from overlay close", async ({
   await expect(input).toHaveValue("");
   await expect(overlay).toBeVisible();
 
-  await overlay
-    .getByRole("button", { name: "Затворете търсенето" })
-    .click();
+  await overlay.getByRole("button", { name: "Затворете търсенето" }).click();
   await expect(overlay).toBeHidden();
   await expect(trigger).toBeFocused();
 });

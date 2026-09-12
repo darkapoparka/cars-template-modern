@@ -10,6 +10,7 @@ const mocks = vi.hoisted(() => {
 
   return {
     getPublicSitemapData: vi.fn(),
+    publicLocales: ["en", "bg"] as ("en" | "bg")[],
     PublicMarketplaceUnavailableError,
   };
 });
@@ -17,6 +18,10 @@ const mocks = vi.hoisted(() => {
 vi.mock("@/lib/public-marketplace-data", () => ({
   getPublicSitemapData: mocks.getPublicSitemapData,
   PublicMarketplaceUnavailableError: mocks.PublicMarketplaceUnavailableError,
+}));
+
+vi.mock("@/lib/public-locale-policy", () => ({
+  getPublicLocales: () => mocks.publicLocales,
 }));
 
 vi.mock("@/lib/public-url", () => ({
@@ -27,10 +32,15 @@ vi.mock("@/lib/vehicle-guides", () => ({
   vehicleGuides: [{ slug: "buying-guide" }],
 }));
 
+vi.mock("@/lib/public-blog-posts", () => ({
+  publicBlogPosts: [{ slug: "example-article" }],
+}));
+
 import sitemap, { dynamic } from "./sitemap";
 
 describe("public sitemap", () => {
   beforeEach(() => {
+    mocks.publicLocales = ["en", "bg"];
     mocks.getPublicSitemapData.mockResolvedValue({
       listings: [
         {
@@ -52,35 +62,50 @@ describe("public sitemap", () => {
 
     expect(urls).toEqual(
       expect.arrayContaining([
-        "https://day-night.example/blog",
-        "https://day-night.example/bg/blog",
-        "https://day-night.example/bg/contact",
+        "https://day-night.example/guides",
+        "https://day-night.example/en/guides",
+        "https://day-night.example/en/contact",
         "https://day-night.example/legal/privacy",
-        "https://day-night.example/bg/legal/privacy",
+        "https://day-night.example/en/legal/privacy",
         "https://day-night.example/legal/terms",
-        "https://day-night.example/bg/legal/terms",
+        "https://day-night.example/en/legal/terms",
         "https://day-night.example/listing/vehicle-one",
         "https://day-night.example/cars/bmw/x5",
+        "https://day-night.example/guides/example-article",
+        "https://day-night.example/en/guides/example-article",
       ])
     );
     expect(
       entries.filter(({ url }) => url.endsWith("/legal/privacy"))
     ).toHaveLength(2);
+    expect(urls).not.toContain("https://day-night.example/blog");
+    expect(urls).not.toContain("https://day-night.example/en/blog");
     expect(urls).not.toContain("https://day-night.example/pricing");
     expect(urls).not.toContain("https://day-night.example/registry");
     expect(urls).not.toContain("https://day-night.example/dealers");
     expect(urls).not.toContain(
-      "https://day-night.example/bg/dealers/trusted-dealer"
+      "https://day-night.example/en/dealers/trusted-dealer"
     );
     expect(
       entries.find(
-        ({ url }) => url === "https://day-night.example/bg/legal/privacy"
+        ({ url }) => url === "https://day-night.example/en/legal/privacy"
       )?.alternates?.languages
     ).toEqual({
-      en: "https://day-night.example/legal/privacy",
-      "bg-BG": "https://day-night.example/bg/legal/privacy",
+      en: "https://day-night.example/en/legal/privacy",
+      "bg-BG": "https://day-night.example/legal/privacy",
       "x-default": "https://day-night.example/legal/privacy",
     });
+  });
+
+  it("omits disabled languages in Bulgarian-only showroom mode", async () => {
+    mocks.publicLocales = ["bg"];
+    const entries = await sitemap();
+    expect(entries.length).toBeGreaterThan(0);
+    expect(entries.every(({ url }) => !url.includes("/en/"))).toBe(true);
+    for (const entry of entries) {
+      expect(entry.alternates?.languages).not.toHaveProperty("en");
+      expect(entry.alternates?.languages).toHaveProperty("bg-BG");
+    }
   });
 
   it("preserves source dates and omits invented timestamps", async () => {
@@ -90,7 +115,7 @@ describe("public sitemap", () => {
     expect(
       byUrl.get("https://day-night.example/listing/vehicle-one")?.lastModified
     ).toEqual(new Date("2026-07-11T12:00:00.000Z"));
-    expect(byUrl.get("https://day-night.example/blog")).not.toHaveProperty(
+    expect(byUrl.get("https://day-night.example/guides")).not.toHaveProperty(
       "lastModified"
     );
     expect(
@@ -106,7 +131,7 @@ describe("public sitemap", () => {
     const urls = (await sitemap()).map(({ url }) => url);
 
     expect(urls).toContain("https://day-night.example/cars");
-    expect(urls).toContain("https://day-night.example/bg/cars");
+    expect(urls).toContain("https://day-night.example/en/cars");
     expect(urls).not.toContain("https://day-night.example/listing/vehicle-one");
     expect(urls).not.toContain(
       "https://day-night.example/dealers/trusted-dealer"
