@@ -196,7 +196,7 @@ test("landscape Sell help returns focus through the details handoff", async ({
   await trigger.tap();
   await page
     .getByRole("dialog")
-    .getByRole("button", { name: "Затворете", exact: true })
+    .getByRole("button", { name: "Затвори информацията", exact: true })
     .tap();
   await expect(page.getByRole("dialog")).toBeHidden();
   await expect(trigger).toBeFocused();

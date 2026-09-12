@@ -127,6 +127,22 @@ const pageCopy = {
     desktopTitle: "Реални обяви за внос",
     faqDescription: "Най-важното за заявката и доставката до България.",
     faqTitle: "Често задавани въпроси",
+    helpSteps: [
+      {
+        title: "Изберете автомобил",
+        description: "Изпратете линк към обява или посочете марка и модел.",
+      },
+      {
+        title: "Добавете изискванията",
+        description:
+          "Посочете държава, година, пробег и бюджет, когато са известни.",
+      },
+      {
+        title: "Уточнете офертата",
+        description:
+          "Обсъдете по телефона цената, срока и документите за конкретния автомобил.",
+      },
+    ],
     heroAlt: "Автомобил за международен внос",
     mobileTitle: "Внос на автомобил",
     routesLabel: "Бързи маршрути за внос",
@@ -145,6 +161,21 @@ const pageCopy = {
     desktopTitle: "Real vehicles available for import",
     faqDescription: "The essentials about requests and delivery to Bulgaria.",
     faqTitle: "Frequently asked questions",
+    helpSteps: [
+      {
+        title: "Choose a vehicle",
+        description: "Send a listing link or share the make and model.",
+      },
+      {
+        title: "Add your requirements",
+        description: "Include the origin, year, mileage and budget when known.",
+      },
+      {
+        title: "Discuss the offer",
+        description:
+          "Discuss price, timing and documents for the specific vehicle by phone.",
+      },
+    ],
     heroAlt: "Vehicle prepared for international import",
     mobileTitle: "Import a vehicle",
     routesLabel: "Quick import routes",
@@ -248,8 +279,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
         <MobileDealerServiceHero
           helpAction={
             <MobileServiceHelp
+              description={text.faqDescription}
               faqs={importFaqs[normalizedLocale]}
               locale={normalizedLocale}
+              steps={text.helpSteps}
               title={
                 normalizedLocale === "bg"
                   ? "Как работи вносът"

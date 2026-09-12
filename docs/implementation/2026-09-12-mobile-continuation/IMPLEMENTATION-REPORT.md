@@ -52,3 +52,16 @@ Completed local implementation commits:
 The final preview request to `/cars` returned HTTP 200. The original preview remains bound to `127.0.0.1:3001`, PID 42588; it was not replaced or restarted. Branch `astra` retains checkpoint `7bad6bb` as an ancestor.
 Only two production source files changed. No desktop redesign, dependency upgrade, live provider submission, database migration, push or deployment was performed.
 The separate historical public/SEO and production-outage suites, release contracts and production dependency audit were not rerun in this continuation. No new production build, performance certification or physical-device acceptance is claimed.
+
+## Unit 3: one presentation for Sell, Import and Leasing help
+
+The separate help drawer implementations have been replaced by `MobileServiceHelpDrawer`. All three now share the centered heading, visible description, circular close action, rounded surface, height/width limits, numbered step cards, typography, padding and keyboard-focusable scroll body. The presentation follows the existing Sell pattern rather than introducing a new page design.
+Import and Leasing use the same FAQ rendering below the steps. Their original answers remain intact. Import's three step summaries are derived from its existing request/FAQ copy. Sell retains its vehicle-details action and the existing close-then-open handoff callbacks. All three use the same localized close label and focus behavior.
+No dependency, shared desktop stylesheet, provider, or database configuration changed.
+
+The browser regression now compares actual computed styles across all three help drawers at 320, 390, 430 and 844x390. It checks bounded geometry, step structure, descriptions, focus return, opening readiness and landscape keyboard scrolling; at 390px it also scans each open drawer for serious/critical automated accessibility violations. Sell's existing details handoff is included.
+Visually reviewed all three at 390px, Sell at 320px, and Import in landscape. Screenshots are retained under `help-unified-results/`; initial captures are `help-before-*.png`.
+Web and E2E typechecks, repository lint/format and package boundaries passed (`help-unified-*-typecheck.log`, `help-unified-check.log`, `help-unified-boundaries.log`).
+
+Final targeted browser result: **22 passed** (11 Chromium, 11 WebKit), no failures, retries or skips; `help-unified-browser.log`. The four presentation cases in each engine visit all three services. Command from `apps/e2e`: `node node_modules/@playwright/test/cli.js test --config=playwright.modern.config.ts --grep="service.help|help.waits|help.supports|landscape.Sell.help" --output=../../docs/implementation/2026-09-12-mobile-continuation/help-unified-results`.
+These are focused results for the shared help presentation, not a rerun of the earlier full 94-case suite. Physical-device and real-delivery acceptance remain separate.
