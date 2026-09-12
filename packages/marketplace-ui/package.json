@@ -10,7 +10,17 @@
     "./components/listing-price-intelligence": "./components/listing-price-intelligence.tsx",
     "./components/listing-trust-panel": "./components/listing-trust-panel.tsx",
     "./components/mobile-marketplace-overlay": "./components/mobile-marketplace-overlay.tsx",
-    "./components/vehicle-card": "./components/vehicle-card.tsx"
+    "./components/vehicle-card": "./components/vehicle-card.tsx",
+    "./components/dealer-mobile-header-icon": "./components/dealer-mobile-header-icon.tsx",
+    "./components/dealer-social-links": "./components/dealer-social-links.tsx",
+    "./components/dealer-ui-icon": "./components/dealer-ui-icon.tsx",
+    "./components/dealer-vehicle-facts": "./components/dealer-vehicle-facts.tsx",
+    "./components/mobile-marketplace-drawer": "./components/mobile-marketplace-drawer.ts",
+    "./components/mobile-pill-rail": "./components/mobile-pill-rail.tsx",
+    "./components/vehicle-category-artwork": "./components/vehicle-category-artwork.tsx",
+    "./lib/mobile-header-icon-action": "./lib/mobile-header-icon-action.ts",
+    "./lib/mobile-vehicle-card-layout": "./lib/mobile-vehicle-card-layout.ts",
+    "./lib/vehicle-card-policy": "./lib/vehicle-card-policy.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
@@ -18,10 +28,11 @@
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
+    "@repo/internationalization": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/marketplace": "workspace:*",
     "lucide-react": "^0.577.0",
-    "next": "16.2.11",
+    "next": "16.3.3",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },

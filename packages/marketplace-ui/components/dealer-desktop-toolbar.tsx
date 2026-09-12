@@ -38,6 +38,7 @@ export const DealerDesktopToolbar = ({
   onOpenModel: () => void;
   query: string;
   setQuery: (query: string) => void;
+  totalListings: number;
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -52,7 +53,10 @@ export const DealerDesktopToolbar = ({
   return (
     <div className="dealer-desktop-toolbar hidden lg:block">
       <div className="dealer-desktop-search-band">
-        <div className="dealer-desktop-query-row">
+        <div
+          className="dealer-desktop-query-row"
+          style={{ maxWidth: "none", margin: 0 }}
+        >
           <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
             <DesktopCategoryPickerTrigger
               categoryIcon={

@@ -15,7 +15,6 @@ import {
   mobileMarketplaceDrawerIconActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-drawer";
 import { ChevronRight, X } from "lucide-react";
-import { useRef } from "react";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
 
 export const MobileSellHowItWorksDrawer = ({
@@ -24,15 +23,16 @@ export const MobileSellHowItWorksDrawer = ({
   onStart,
   open,
   onAfterClose,
+  onRestoreFocus,
 }: {
   locale: "bg" | "en";
   onOpenChange: (open: boolean) => void;
   onStart: () => void;
   open: boolean;
   onAfterClose: () => void;
+  onRestoreFocus: () => void;
 }) => {
   const content = mobileSellVehicleCopy[locale];
-  const triggerRef = useRef<HTMLElement | null>(null);
 
   return (
     <Drawer autoFocus={false} onOpenChange={onOpenChange} open={open}>
@@ -41,14 +41,8 @@ export const MobileSellHowItWorksDrawer = ({
         data-slot="mobile-sell-how-it-works-drawer"
         onCloseAutoFocus={(event) => {
           event.preventDefault();
-          triggerRef.current?.focus({ preventScroll: true });
+          onRestoreFocus();
           onAfterClose();
-        }}
-        onOpenAutoFocus={() => {
-          triggerRef.current =
-            document.activeElement instanceof HTMLElement
-              ? document.activeElement
-              : null;
         }}
       >
         <DrawerHeader className={mobileMarketplaceDrawerHeaderClassName}>

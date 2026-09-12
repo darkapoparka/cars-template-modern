@@ -13,6 +13,7 @@ import {
   Truck,
   X,
 } from "lucide-react";
+import type { MouseEvent } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getMobileQuickPillClassName } from "../lib/mobile-quick-pill";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
@@ -22,6 +23,16 @@ import {
   mobileDealerContentClassName,
 } from "./mobile-dealer-chrome";
 import { MobilePillRail } from "./mobile-pill-rail";
+
+// Safari does not focus pointer-activated buttons. Establish the actual
+// trigger before the overlay coordinator captures focus for dismissal.
+const openFromButton = (
+  event: MouseEvent<HTMLButtonElement>,
+  open: () => void
+) => {
+  event.currentTarget.focus({ preventScroll: true });
+  open();
+};
 
 const categoryIcons = {
   car: CarFront,
@@ -149,7 +160,7 @@ const MobileSearchButton = ({
         : "h-[52px] w-full rounded-full px-4"
     )}
     data-slot="mobile-discovery-search"
-    onClick={onOpenSearch}
+    onClick={(event) => openFromButton(event, onOpenSearch)}
     type="button"
   >
     <Search
@@ -213,7 +224,7 @@ const MobileCompactDiscoverySurface = ({
         aria-label={categoryLabel}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-category"
-        onClick={onOpenCategory}
+        onClick={(event) => openFromButton(event, onOpenCategory)}
         title={categoryLabels[category][isBg ? "bg" : "en"]}
         type="button"
       >
@@ -237,7 +248,7 @@ const MobileCompactDiscoverySurface = ({
         }`}
         className={mobileHeaderIconActionClassName}
         data-slot="mobile-discovery-filters"
-        onClick={onOpenFilters}
+        onClick={(event) => openFromButton(event, onOpenFilters)}
         title={getConditionsValue(filterCount, isBg)}
         type="button"
       >
@@ -268,9 +279,9 @@ export const MobileDealerQuickFilters = ({
           aria-haspopup={item.clearLabel ? undefined : "dialog"}
           aria-label={item.clearLabel}
           aria-pressed={item.active}
-          className={getMobileQuickPillClassName(item.active)}
+          className={cn("snap-start", getMobileQuickPillClassName(item.active))}
           key={item.id}
-          onClick={item.onClick}
+          onClick={(event) => openFromButton(event, item.onClick)}
           type="button"
         >
           <span className="max-w-36 truncate">{item.label}</span>
@@ -310,7 +321,7 @@ export const MobileCompactSearchHeader = ({
   }
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] sm:px-4 lg:hidden">
+    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 motion-reduce:animate-none sm:px-4 lg:hidden">
       <div className="mx-auto w-full max-w-lg">
         <MobileCompactDiscoverySurface
           category={category}
@@ -355,7 +366,7 @@ export const MobileDealerDiscoveryHeader = ({
               aria-label={categoryLabel}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-category"
-              onClick={onOpenCategory}
+              onClick={(event) => openFromButton(event, onOpenCategory)}
               title={categoryLabels[category][isBg ? "bg" : "en"]}
               type="button"
             >
@@ -371,7 +382,7 @@ export const MobileDealerDiscoveryHeader = ({
               }`}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-discovery-filters"
-              onClick={onOpenFilters}
+              onClick={(event) => openFromButton(event, onOpenFilters)}
               title={getConditionsValue(filterCount, isBg)}
               type="button"
             >

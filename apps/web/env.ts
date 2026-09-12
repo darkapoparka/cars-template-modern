@@ -24,9 +24,12 @@ const getStaticDemoDeploymentOrigin = (): string | undefined => {
 
 if (leadSite.staticDemoMode) {
   const deploymentOrigin = getStaticDemoDeploymentOrigin();
-  process.env.NEXT_PUBLIC_APP_URL ??= deploymentOrigin ?? "http://localhost:3000";
-  process.env.NEXT_PUBLIC_WEB_URL ??= deploymentOrigin ?? "http://localhost:3001";
-  process.env.NEXT_PUBLIC_API_URL ??= deploymentOrigin ?? "http://localhost:3002";
+  process.env.NEXT_PUBLIC_APP_URL ??=
+    deploymentOrigin ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_WEB_URL ??=
+    deploymentOrigin ?? "http://localhost:3001";
+  process.env.NEXT_PUBLIC_API_URL ??=
+    deploymentOrigin ?? "http://localhost:3002";
 }
 
 export const env = createEnv({

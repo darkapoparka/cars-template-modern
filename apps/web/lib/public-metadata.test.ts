@@ -32,6 +32,24 @@ describe("public metadata contracts", () => {
     ]);
   });
 
+  it("advertises only languages served by the static showroom", () => {
+    const metadata = createPublicLocalizedMetadata({
+      baseUrl: "https://day-night.example",
+      locale: "en",
+      alternateLocales: ["bg", "en"],
+      path: "/guides",
+      title: "Guides",
+      description: "Guides",
+    });
+    expect(metadata.alternates?.canonical).toBe(
+      "https://day-night.example/guides"
+    );
+    expect(metadata.alternates?.languages).toEqual({
+      "bg-BG": "https://day-night.example/guides",
+      "x-default": "https://day-night.example/guides",
+    });
+  });
+
   it("uses a truthful route image for both social metadata families", () => {
     const metadata = createPublicLocalizedMetadata({
       baseUrl: "https://day-night.example",

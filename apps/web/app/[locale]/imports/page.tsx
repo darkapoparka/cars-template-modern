@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
+import { leadSite } from "@repo/marketplace";
 import {
   getMobileQuickPillClassName,
   marketplaceDiscoveryFrameClassName,
@@ -90,8 +91,7 @@ const importFaqs = {
       question: "Какво означава доставка до България?",
     },
     {
-      answer:
-        "Не е нужен акаунт. Оставете телефон и екипът на Day & Night ще се свърже с вас, за да уточни следващата стъпка.",
+      answer: `Не е нужен акаунт. Оставете телефон и екипът на ${leadSite.shortName} ще се свърже с вас, за да уточни следващата стъпка.`,
       question: "Трябва ли да се регистрирам?",
     },
   ],
@@ -112,8 +112,7 @@ const importFaqs = {
       question: "What does delivery to Bulgaria mean?",
     },
     {
-      answer:
-        "No account is required. Leave a phone number and the Day & Night team will contact you about the next step.",
+      answer: `No account is required. Leave a phone number and the ${leadSite.shortName} team will contact you about the next step.`,
       question: "Do I need to register?",
     },
   ],
@@ -186,13 +185,13 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? "Изпратете линк или данни за автомобил от чужбина. Day & Night ще уточни заявката за внос и доставка до България."
-      : "Send a listing link or vehicle details from abroad. Day & Night will discuss the import request and delivery to Bulgaria.",
+      ? `Изпратете линк или данни за автомобил от чужбина. ${leadSite.shortName} ще уточни заявката за внос и доставка до България.`
+      : `Send a listing link or vehicle details from abroad. ${leadSite.shortName} will discuss the import request and delivery to Bulgaria.`,
     locale,
     path,
     title: isBg
-      ? "Внос на автомобил по заявка | Day & Night"
-      : "Vehicle import request | Day & Night",
+      ? `Внос на автомобил по заявка | ${leadSite.shortName}`
+      : `Vehicle import request | ${leadSite.shortName}`,
   });
 };
 

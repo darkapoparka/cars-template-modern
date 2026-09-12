@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 
-/** Preserve the page inset without sharply slicing partially visible pills. */
+/** Preserve the page inset and fade overflowing pills so horizontal scrolling reads intentionally. */
 export function MobilePillRail({
   children,
   className,
@@ -52,12 +52,13 @@ export function MobilePillRail({
 
   return (
     <div
-      className="min-w-0 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="min-w-0 snap-x snap-proximity overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       data-slot={dataSlot}
       onScroll={updateEdges}
       ref={railRef}
       style={{
-        maskImage: `linear-gradient(to right, ${edges.left ? "transparent, black 12px" : "black 0px"}, ${edges.right ? "black calc(100% - 12px), transparent" : "black 100%"})`,
+        maskImage: `linear-gradient(to right, ${edges.left ? "transparent, black 28px" : "black 0px"}, ${edges.right ? "black calc(100% - 28px), transparent" : "black 100%"})`,
+        scrollPaddingInline: "12px",
       }}
     >
       <div className={cn("flex w-max min-w-full", className)} ref={contentRef}>

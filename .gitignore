@@ -300,3 +300,20 @@ packages/database/generated
 
 .vercel
 .env*.local
+
+# Local one-off QA captures and scratch files; keep application assets tracked
+/.audit-*.png
+/apps/e2e/.modern-mobile-*.mjs
+/apps/e2e/desktop-*.png
+/apps/e2e/verify-desktop-*.png
+/apps/web/app/*/desktop-header.css.tmp
+
+# Keep dated audit/implementation reports in Git; retain raw evidence locally
+/docs/audits/2026-09-12-mobile/*
+!/docs/audits/2026-09-12-mobile/*.md
+/docs/implementation/2026-09-12-mobile-completion/*
+!/docs/implementation/2026-09-12-mobile-completion/*.md
+/docs/implementation/2026-09-12-mobile-final-verification/*
+!/docs/implementation/2026-09-12-mobile-final-verification/*.md
+/docs/implementation/2026-09-12-mobile/*
+!/docs/implementation/2026-09-12-mobile/*.md

@@ -1,8 +1,14 @@
-export const SEO_LOCALES = ["en", "bg"] as const;
+import {
+  defaultLocale,
+  locales,
+  normalizeLocale,
+} from "@repo/internationalization/config";
+
+export const SEO_LOCALES = locales;
 
 export type SeoLocale = (typeof SEO_LOCALES)[number];
 
-export const DEFAULT_SEO_LOCALE: SeoLocale = "en";
+export const DEFAULT_SEO_LOCALE: SeoLocale = defaultLocale;
 
 export const SEO_LANGUAGE_TAGS: Record<SeoLocale, string> = {
   bg: "bg-BG",
@@ -27,8 +33,6 @@ interface LanguageAlternatesOptions extends CanonicalUrlOptions {
   readonly locales?: readonly SeoLocale[];
 }
 
-const LOCALE_SEPARATOR = /[-_]/;
-
 const ensureLeadingSlash = (path: string): string => {
   const normalizedPath = path.trim();
 
@@ -49,14 +53,8 @@ const parseHttpUrl = (value: string | URL): URL => {
   return url;
 };
 
-export const normalizeSeoLocale = (locale: string): SeoLocale => {
-  const normalizedLocale = locale
-    .trim()
-    .toLowerCase()
-    .split(LOCALE_SEPARATOR)[0];
-
-  return normalizedLocale === "bg" ? "bg" : DEFAULT_SEO_LOCALE;
-};
+export const normalizeSeoLocale = (locale: string): SeoLocale =>
+  normalizeLocale(locale);
 
 export const getLocalizedPath = (
   locale: SeoLocale,
@@ -108,7 +106,13 @@ export const getLanguageAlternates = (
   return {
     ...languages,
     "x-default": getCanonicalUrl(
-      getLocalizedPath(defaultLocale, path, { defaultLocale }),
+      getLocalizedPath(
+        locales.includes(defaultLocale)
+          ? defaultLocale
+          : (locales[0] ?? defaultLocale),
+        path,
+        { defaultLocale }
+      ),
       { baseUrl }
     ),
   };

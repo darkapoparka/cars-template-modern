@@ -133,15 +133,15 @@ export const getDesktopQuickFilterLabels = (
     maximum: filters.mileageMax,
   });
 
+  const fuelLabels = isBg ? marketplaceFuelLabelsBg : filterLabels.fuel;
+  const transmissionLabels = isBg
+    ? marketplaceTransmissionLabelsBg
+    : filterLabels.transmission;
   const fuel = filters.fuel
-    ? isBg
-      ? marketplaceFuelLabelsBg[filters.fuel]
-      : filterLabels.fuel[filters.fuel]
+    ? fuelLabels[filters.fuel]
     : localizeMarketplace(isBg, "Гориво", "Fuel");
   const transmission = filters.transmission
-    ? isBg
-      ? marketplaceTransmissionLabelsBg[filters.transmission]
-      : filterLabels.transmission[filters.transmission]
+    ? transmissionLabels[filters.transmission]
     : localizeMarketplace(isBg, "Скорости", "Gearbox");
   const year = formatDesktopNumericFilterLabel({
     fallback: localizeMarketplace(isBg, "Година", "Year"),

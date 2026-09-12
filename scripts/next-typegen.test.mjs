@@ -25,11 +25,19 @@ const runFixture = (source, environment = {}) => {
   const fixture = resolve(fixtureDirectory, "next-fixture.mjs");
   writeFileSync(fixture, source, "utf8");
 
+  const fixtureEnvironment = { ...process.env };
+  for (const name of [
+    "NEXT_PUBLIC_WEB_URL",
+    "NEXT_PUBLIC_APP_URL",
+    "NEXT_PUBLIC_API_URL",
+  ]) {
+    delete fixtureEnvironment[name];
+  }
   const result = spawnSync(process.execPath, [wrapper], {
     cwd: repositoryRoot,
     encoding: "utf8",
     env: {
-      ...process.env,
+      ...fixtureEnvironment,
       AUTOMARKET_NEXT_TYPEGEN_TEST_CLI: fixture,
       NODE_ENV: "test",
       VERCEL_ENV: "development",

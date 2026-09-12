@@ -63,7 +63,7 @@ describe("public structured data contracts", () => {
     }[];
 
     expect(items[1]).toMatchObject({
-      item: `${baseUrl}/bg/cars`,
+      item: `${baseUrl}/cars`,
       name: "Автомобили",
       position: 2,
     });

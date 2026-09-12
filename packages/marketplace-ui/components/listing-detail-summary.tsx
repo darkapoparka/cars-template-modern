@@ -17,9 +17,6 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
-import { getLocalizedPublicPath } from "../lib/public-path";
-import { getVehicleCardSpecFacts } from "../lib/vehicle-card-policy";
-import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 import { ListingActions } from "./listing-actions";
 import { ListingBackLink } from "./listing-back-link";
 
@@ -148,7 +145,7 @@ export const MobileListingSummary = ({
   const showSellerIdentity = !leadSite.staticDemoMode;
 
   return (
-    <section className="pt-5 pb-3 lg:hidden" data-slot="listing-mobile-summary">
+    <section className="pt-5 pb-1 lg:hidden" data-slot="listing-mobile-summary">
       <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
         <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
           {formatMoney(primaryPrice, locale)}
@@ -170,27 +167,6 @@ export const MobileListingSummary = ({
       <h1 className="mt-3 text-pretty break-words font-semibold text-section-title">
         {listing.title}
       </h1>
-      <div className="mt-3">
-        <DealerVehicleFacts
-          facts={getVehicleCardSpecFacts(listing, locale)}
-          label={
-            locale?.startsWith("bg")
-              ? "Основни характеристики"
-              : "Key specifications"
-          }
-        />
-      </div>
-      {listing.category === "car" ? (
-        <Link
-          className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-xl bg-zinc-100 px-4 font-medium text-[14px] text-zinc-900 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
-          href={`${getLocalizedPublicPath(locale, "/lease")}?vehicle=${encodeURIComponent(listing.id)}`}
-        >
-          {locale?.startsWith("bg")
-            ? "Запитване за лизинг"
-            : "Financing enquiry"}
-          <ArrowUpRight aria-hidden="true" className="size-4" />
-        </Link>
-      ) : null}
       {showPhysicalLocation ? (
         <p className="mt-2 text-meta text-muted-foreground">
           {formatVehicleLocation(physicalLocation, locale)}

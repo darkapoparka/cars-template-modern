@@ -1,11 +1,11 @@
 import { formatPriceType, type VehicleListing } from "@repo/marketplace";
 import {
   formatVehicleLocation,
-  getDeliveryTruth,
+  type getDeliveryTruth,
   getFreshnessLabel,
   getListingSellerRole,
   getListingSellerRoleLabel,
-  getPhysicalVehicleLocation,
+  type getPhysicalVehicleLocation,
   getSourceLabel,
   type ListingOrganizationRole,
 } from "./listing-truth";
@@ -111,10 +111,15 @@ export const isBulgarianVehicleCardLocale = (locale?: string) =>
 export const getVehicleCardCopy = (locale?: string) =>
   cardCopy[isBulgarianVehicleCardLocale(locale) ? "bg" : "en"];
 
-export const getVehicleCardViewListingLabel = (title: string, locale?: string) =>
-  isBulgarianVehicleCardLocale(locale) ? `Виж ${title}` : `View ${title}`;
+export const getVehicleCardViewListingLabel = (
+  title: string,
+  locale?: string
+) => (isBulgarianVehicleCardLocale(locale) ? `Виж ${title}` : `View ${title}`);
 
-export const getVehicleCardSaveListingLabel = (title: string, locale?: string) =>
+export const getVehicleCardSaveListingLabel = (
+  title: string,
+  locale?: string
+) =>
   isBulgarianVehicleCardLocale(locale)
     ? `Отвори профила, за да запазиш ${title}`
     : `Open your account to save ${title}`;
@@ -123,7 +128,9 @@ export const getLocalizedVehicleCardLocationPart = (
   value: string,
   locale?: string
 ) =>
-  isBulgarianVehicleCardLocale(locale) ? (locationLabelsBg[value] ?? value) : value;
+  isBulgarianVehicleCardLocale(locale)
+    ? (locationLabelsBg[value] ?? value)
+    : value;
 
 export const formatLocalizedVehicleCardLocation = (
   location: ReturnType<typeof getPhysicalVehicleLocation>,
@@ -165,7 +172,10 @@ export const getLocalizedVehicleCardDeliveryLabel = (
   }
 
   const destination = deliveryTruth.destinationLabel
-    ? getLocalizedVehicleCardLocationPart(deliveryTruth.destinationLabel, locale)
+    ? getLocalizedVehicleCardLocationPart(
+        deliveryTruth.destinationLabel,
+        locale
+      )
     : undefined;
   const subject = destination ? `Доставка до ${destination}` : "Доставка";
   const statusLabels: Record<typeof deliveryTruth.status, string> = {

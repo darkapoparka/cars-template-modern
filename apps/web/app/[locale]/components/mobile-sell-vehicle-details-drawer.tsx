@@ -3,19 +3,29 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
+import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { leadSite } from "@repo/marketplace";
 import {
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayHeader,
+  MobileMarketplaceOverlayIconAction,
   MobileMarketplaceOverlayShell,
   mobileMarketplaceOverlayFieldClassName,
   mobileMarketplaceOverlayInputClassName,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
-import { type MobileFormDraft, readMobileFormDraft } from "./mobile-form-draft";
+import {
+  parseSellVehicleDraft,
+  readSellVehicleDraft,
+  type SellVehicleDraft,
+  vehicleMileageMaximum,
+  vehicleYearMaximum,
+  vehicleYearMinimum,
+} from "../../../lib/sell-vehicle-draft";
+import { readMobileFormDraft } from "./mobile-form-draft";
 import { MobileSellCategoryField } from "./mobile-sell-category-field";
 import {
   isCompleteVehicleVin,
@@ -27,6 +37,7 @@ import { MobileVehicleTaxonomyFields } from "./mobile-vehicle-taxonomy-fields";
 
 export const MobileSellVehicleDetailsDrawer = ({
   focusVin = false,
+  initialDraft,
   onRestoreFocus,
   contactHref,
   locale,
@@ -36,6 +47,7 @@ export const MobileSellVehicleDetailsDrawer = ({
   vin,
 }: {
   focusVin?: boolean;
+  initialDraft: SellVehicleDraft;
   onRestoreFocus?: () => void;
   contactHref: string;
   locale: "bg" | "en";
@@ -46,7 +58,8 @@ export const MobileSellVehicleDetailsDrawer = ({
 }) => {
   const content = mobileSellVehicleCopy[locale];
   const hasCompleteVin = isCompleteVehicleVin(vin);
-  const [draft, setDraft] = useState<MobileFormDraft>({});
+  const [draft, setDraft] = useState(initialDraft);
+  const [resetKey, setResetKey] = useState(0);
   const vinRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -73,7 +86,7 @@ export const MobileSellVehicleDetailsDrawer = ({
       }}
       onOpenChange={(nextOpen) => {
         if (!nextOpen && formRef.current) {
-          setDraft(readMobileFormDraft(formRef.current));
+          setDraft(readSellVehicleDraft(readMobileFormDraft(formRef.current)));
         }
         onOpenChange(nextOpen);
       }}
@@ -81,6 +94,30 @@ export const MobileSellVehicleDetailsDrawer = ({
     >
       <MobileMarketplaceOverlayHeader
         description={content.formDescription}
+        leftAction={
+          <MobileMarketplaceOverlayIconAction
+            ariaLabel={
+              locale === "bg" ? "Изчисти данните" : "Clear vehicle details"
+            }
+            onClick={() => {
+              const emptyDraft = parseSellVehicleDraft();
+              setDraft(emptyDraft);
+              onVinChange("");
+              const url = new URL(window.location.href);
+              for (const field of Object.keys(emptyDraft)) {
+                url.searchParams.delete(field);
+              }
+              window.history.replaceState(
+                window.history.state,
+                "",
+                `${url.pathname}${url.search}${url.hash}`
+              );
+              setResetKey((value) => value + 1);
+            }}
+          >
+            <RotateCcw aria-hidden="true" className="size-[18px]" />
+          </MobileMarketplaceOverlayIconAction>
+        }
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={content.close} />
         }
@@ -91,6 +128,7 @@ export const MobileSellVehicleDetailsDrawer = ({
         action={contactHref}
         className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         data-slot="mobile-sell-details-form"
+        key={resetKey}
         method="get"
         ref={formRef}
       >
@@ -113,9 +151,15 @@ export const MobileSellVehicleDetailsDrawer = ({
               onChange={(event) =>
                 onVinChange(normalizeVehicleVin(event.target.value))
               }
+              pattern="[A-HJ-NPR-Z0-9]{17}"
               placeholder="WBA..."
               ref={vinRef}
               spellCheck={false}
+              title={
+                locale === "bg"
+                  ? "VIN трябва да съдържа 17 знака."
+                  : "A VIN must contain 17 characters."
+              }
               value={vin}
             />
           </div>
@@ -155,8 +199,8 @@ export const MobileSellVehicleDetailsDrawer = ({
               defaultValue={draft.year}
               id="mobile-sell-year"
               inputMode="numeric"
-              max={2100}
-              min={1886}
+              max={vehicleYearMaximum}
+              min={vehicleYearMinimum}
               name="year"
               placeholder="2022"
               required={!hasCompleteVin}
@@ -175,7 +219,7 @@ export const MobileSellVehicleDetailsDrawer = ({
               defaultValue={draft.mileage}
               id="mobile-sell-mileage"
               inputMode="numeric"
-              max={10_000_000}
+              max={vehicleMileageMaximum}
               min={0}
               name="mileage"
               placeholder="62 000"
@@ -185,6 +229,21 @@ export const MobileSellVehicleDetailsDrawer = ({
           </div>
         </div>
 
+        <div className="mt-3 grid gap-1.5">
+          <Label
+            className="font-medium text-[13px]"
+            htmlFor="mobile-sell-notes"
+          >
+            {locale === "bg" ? "Бележки (по желание)" : "Notes (optional)"}
+          </Label>
+          <Textarea
+            className="min-h-20 rounded-xl border-transparent bg-zinc-100 text-base shadow-none"
+            defaultValue={draft.notes}
+            id="mobile-sell-notes"
+            maxLength={500}
+            name="notes"
+          />
+        </div>
         <div className="mt-6">
           <Button
             className={`${mobileMarketplaceOverlayPrimaryActionClassName} gap-2 font-semibold text-[14px]`}

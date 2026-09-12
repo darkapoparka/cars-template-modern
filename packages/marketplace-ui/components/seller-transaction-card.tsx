@@ -12,13 +12,13 @@ import {
   getListingContactAction,
   getPrimaryListingPrice,
 } from "../lib/listing-truth";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import {
   getSellerPanelContactLabel,
   getSellerPanelCopy,
   getSellerPanelTransactionLabel,
   isMonthlySellerPanelTransaction,
 } from "../lib/seller-contact-policy";
-import { getLocalizedPublicPath } from "../lib/public-path";
 
 export const SellerTransactionCard = ({
   contactHref,

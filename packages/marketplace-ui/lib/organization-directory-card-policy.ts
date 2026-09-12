@@ -5,16 +5,17 @@ import type {
   OrganizationDirectorySignalKind,
 } from "./organization-directory-card-types";
 
-export const defaultOrganizationDirectoryCardLabels: OrganizationDirectoryCardLabels = {
-  additionalBrands: "additional brands",
-  brands: "Brands",
-  credentials: "Organization credentials",
-  emptyInventory: "None available",
-  emptyListingPreview: "No listing",
-  inventoryPreview: "Representative inventory",
-  profile: "Profile",
-  to: "to",
-};
+export const defaultOrganizationDirectoryCardLabels: OrganizationDirectoryCardLabels =
+  {
+    additionalBrands: "additional brands",
+    brands: "Brands",
+    credentials: "Organization credentials",
+    emptyInventory: "None available",
+    emptyListingPreview: "No listing",
+    inventoryPreview: "Representative inventory",
+    profile: "Profile",
+    to: "to",
+  };
 
 const whitespacePattern = /\s+/;
 

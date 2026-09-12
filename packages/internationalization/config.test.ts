@@ -15,13 +15,13 @@ describe("locale configuration", () => {
     expect(isLocale("de")).toBe(false);
     expect(normalizeLocale("bg-BG")).toBe("bg");
     expect(normalizeLocale("BG_bg")).toBe("bg");
-    expect(normalizeLocale("de-DE")).toBe("en");
+    expect(normalizeLocale("de-DE")).toBe(defaultLocale);
   });
 
   it("falls back safely for empty and unsupported locales", () => {
     expect(normalizeLocale(undefined)).toBe(defaultLocale);
     expect(normalizeLocale("not-a-locale")).toBe(defaultLocale);
-    expect(getIntlLocale("not-a-locale")).toBe("en-GB");
+    expect(getIntlLocale("not-a-locale")).toBe(getIntlLocale(defaultLocale));
   });
 });
 

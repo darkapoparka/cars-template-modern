@@ -104,7 +104,9 @@ export const LeaseDesktopControls = ({
         <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-5">
           <div>
             <p className="text-muted-foreground text-xs">{copy.priceLabel}</p>
-            <p className="font-semibold text-sm">{selectedVehicle.priceLabel}</p>
+            <p className="font-semibold text-sm">
+              {selectedVehicle.priceLabel}
+            </p>
           </div>
           {selectedVehicle.monthlyLabel ? (
             <div>

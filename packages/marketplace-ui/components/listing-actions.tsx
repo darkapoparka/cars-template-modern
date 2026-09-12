@@ -36,7 +36,9 @@ export const ListingActions = ({
   );
 
   const handleShare = async () => {
-    if (sharePending) return;
+    if (sharePending) {
+      return;
+    }
 
     setSharePending(true);
     setShareStatus(copy.shareStatus.pending);

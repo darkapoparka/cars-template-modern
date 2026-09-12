@@ -7,7 +7,7 @@ import {
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   type MobileFormDraft,
   readMobileFormDraft,
@@ -30,6 +30,9 @@ export function BlankImportRequestLink({
   isBg: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => setReady(true), []);
   const [draft, setDraft] = useState<MobileFormDraft>({});
   const formRef = useRef<HTMLFormElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -39,8 +42,10 @@ export function BlankImportRequestLink({
   return (
     <>
       <button
+        aria-expanded={open}
         aria-haspopup="dialog"
         className={`${actionClassName} inline-flex lg:hidden ${fullWidth ? "!h-12 !justify-between !rounded-xl !text-[15px] w-full" : ""}`}
+        disabled={!ready}
         onClick={() => setOpen(true)}
         ref={triggerRef}
         type="button"

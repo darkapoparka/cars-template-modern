@@ -1,6 +1,6 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
-import { getCollectionPath } from "@repo/marketplace";
+import { getCollectionPath, leadSite } from "@repo/marketplace";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, CarFront } from "lucide-react";
@@ -43,8 +43,7 @@ const collectionCopy = {
     listingHeading: "Актуални обяви",
     resultsLabel: "резултата",
     title: "Китайски електромобили и хибриди",
-    truth:
-      "Day & Night не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.",
+    truth: `${leadSite.shortName} не твърди официално партньорство с показаните марки. Всяка оферта се потвърждава индивидуално.`,
   },
   en: {
     badge: "Editorial collection",
@@ -61,8 +60,7 @@ const collectionCopy = {
     listingHeading: "Current listings",
     resultsLabel: "results",
     title: "Chinese EVs and hybrids",
-    truth:
-      "Day & Night does not claim an official partnership with the displayed brands. Every offer is confirmed individually.",
+    truth: `${leadSite.shortName} does not claim an official partnership with the displayed brands. Every offer is confirmed individually.`,
   },
 } as const;
 

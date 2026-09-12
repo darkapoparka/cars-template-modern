@@ -11,10 +11,7 @@ describe("listing gallery policy", () => {
       { alt: "first", url: "/a.jpg" },
       { alt: "second", url: "/a.jpg" },
     ]);
-    expect(keyed.map((item) => item.key)).toEqual([
-      "/a.jpg::0",
-      "/a.jpg::1",
-    ]);
+    expect(keyed.map((item) => item.key)).toEqual(["/a.jpg::0", "/a.jpg::1"]);
   });
 
   it("wraps navigation safely", () => {

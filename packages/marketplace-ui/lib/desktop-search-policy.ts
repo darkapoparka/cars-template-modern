@@ -280,9 +280,7 @@ const toSuggestionItem = (
   isBg: boolean,
   locale?: string
 ): SearchSuggestionItem => {
-  let description = isBg
-    ? suggestion.descriptionBg
-    : suggestion.descriptionEn;
+  let description = isBg ? suggestion.descriptionBg : suggestion.descriptionEn;
   if (suggestion.listing) {
     description = `${suggestion.listing.spec.year} · ${formatMileage(
       suggestion.listing.spec.mileageValue,

@@ -16,8 +16,8 @@ export const mockListings: VehicleListing[] = [
     monthlyEstimate: { amount: 1360, currency: "BGN" },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "Бял BMW X5 SUV",
+        url: "https://images.unsplash.com/photo-1635990215241-4d2805d729bb?w=1200&q=82&auto=format&fit=crop",
+        alt: "Черен BMW X5 SUV",
       },
     ],
     badges: ["used", "promoted"],
@@ -64,8 +64,8 @@ export const mockListings: VehicleListing[] = [
     monthlyEstimate: { amount: 1870, currency: "BGN" },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes SUV GLS",
+        url: "https://images.unsplash.com/photo-1669023161435-b3b8ad71f8f7?w=1200&q=82&auto=format&fit=crop",
+        alt: "Mercedes-Benz GLS 4MATIC AMG SUV",
       },
     ],
     badges: ["used", "promoted"],
@@ -279,8 +279,8 @@ export const mockListings: VehicleListing[] = [
     monthlyEstimate: { amount: 1900, currency: "BGN" },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE SUV",
+        url: "https://images.unsplash.com/photo-1751941710410-f8167da82750?w=1200&q=82&auto=format&fit=crop",
+        alt: "Черен Mercedes-Benz GLE SUV",
       },
     ],
     badges: ["used"],
@@ -322,8 +322,8 @@ export const mockListings: VehicleListing[] = [
     monthlyEstimate: { amount: 2140, currency: "BGN" },
     images: [
       {
-        url: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&q=80",
-        alt: "Mercedes-Benz GLE 53 AMG SUV",
+        url: "https://images.unsplash.com/photo-1563721938524-4da1bede2935?w=1200&q=82&auto=format&fit=crop",
+        alt: "Бял Mercedes-Benz GLE AMG SUV",
       },
     ],
     badges: ["used", "lease"],
@@ -578,8 +578,8 @@ export const mockListings: VehicleListing[] = [
     priceType: "fixed",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1696294586764-6baffd088b71?w=1200&q=80",
-        alt: "BMW X5 SUV в градска среда",
+        url: "https://images.unsplash.com/photo-1635990338914-6ee781fc6d5b?w=1200&q=82&auto=format&fit=crop",
+        alt: "Черен BMW X5 SUV в градска среда",
       },
     ],
     badges: ["used"],

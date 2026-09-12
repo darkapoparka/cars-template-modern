@@ -4,6 +4,8 @@ import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { SellerListingStartForm } from "../app/(authenticated)/sell/components/seller-listing-start-form";
 
+const saveAndAddPhotosPattern = /Запази и добави снимки/;
+
 afterEach(cleanup);
 
 describe("seller listing start form", () => {
@@ -32,7 +34,7 @@ describe("seller listing start form", () => {
     expect(screen.getByLabelText("Модел")).toBeTruthy();
     expect(screen.getByLabelText("Година")).toBeTruthy();
     expect(
-      screen.getByRole("button", { name: /Запази и добави снимки/ })
+      screen.getByRole("button", { name: saveAndAddPhotosPattern })
     ).toBeTruthy();
     expect(screen.queryByLabelText("Цена")).toBeNull();
     expect(screen.queryByLabelText("Пробег")).toBeNull();

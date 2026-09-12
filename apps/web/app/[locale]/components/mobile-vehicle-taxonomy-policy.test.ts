@@ -10,13 +10,13 @@ describe("mobile vehicle taxonomy policy", () => {
     expect(getRequiredVehicleTaxonomyField("", "")).toBe("make");
     expect(getRequiredVehicleTaxonomyField("BMW", "")).toBe("model");
     expect(getRequiredVehicleTaxonomyField("BMW", "X5")).toBeNull();
+    expect(getRequiredVehicleTaxonomyField("  ", "X5")).toBe("make");
+    expect(getRequiredVehicleTaxonomyField("BMW", "  ")).toBe("model");
   });
 
   it("exposes known models and permits meaningful custom values", () => {
     expect(getVehicleTaxonomyModels("BMW").length).toBeGreaterThan(0);
-    expect(canUseCustomVehicleTaxonomyValue("Custom", ["X5", "X6"])).toBe(
-      true
-    );
+    expect(canUseCustomVehicleTaxonomyValue("Custom", ["X5", "X6"])).toBe(true);
     expect(canUseCustomVehicleTaxonomyValue("x5", ["X5", "X6"])).toBe(false);
   });
 });

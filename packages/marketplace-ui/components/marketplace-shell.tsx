@@ -75,7 +75,8 @@ interface MarketplaceShellProps {
   totalListings: number;
 }
 
-const mobileMarketplaceHeaderClassName = "relative z-30 bg-white lg:hidden";
+const mobileMarketplaceHeaderClassName =
+  "relative z-30 bg-background lg:hidden";
 
 const getCanonicalAppliedSearchLabel = (
   query: string | undefined,
@@ -355,6 +356,7 @@ export const MarketplaceShell = ({
           onViewModeChange={changeViewMode}
           query={query}
           setQuery={setQuery}
+          totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}
         />

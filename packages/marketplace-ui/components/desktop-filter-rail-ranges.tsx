@@ -45,11 +45,7 @@ export const DesktopFilterRailRanges = ({
         label: `${localizeMarketplace(isBg, "От", "From")} ${value}`,
         value: [value, marketplaceYearRange[1]],
       }))}
-      quickSelectLabel={localizeMarketplace(
-        isBg,
-        "Бърз избор",
-        "Quick select"
-      )}
+      quickSelectLabel={localizeMarketplace(isBg, "Бърз избор", "Quick select")}
       range={marketplaceYearRange}
       selectedMaximum={filters.yearMax}
       selectedMinimum={filters.yearMin}
@@ -90,11 +86,7 @@ export const DesktopFilterRailRanges = ({
         )} ${numberFormatter.format(value)} ${isBg ? "км" : "km"}`,
         value: [marketplaceMileageRange[0], value],
       }))}
-      quickSelectLabel={localizeMarketplace(
-        isBg,
-        "Бърз избор",
-        "Quick select"
-      )}
+      quickSelectLabel={localizeMarketplace(isBg, "Бърз избор", "Quick select")}
       range={marketplaceMileageRange}
       selectedMaximum={filters.mileageMax}
       step={5000}

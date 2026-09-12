@@ -192,11 +192,10 @@ const SearchSuggestionOption = ({
     dataSlot = "desktop-search-location-suggestion";
   }
 
-  const selectedClassName = selected
-    ? locationPanel
-      ? "bg-control-hover text-foreground"
-      : "bg-control text-foreground"
-    : undefined;
+  const selectedSurface = locationPanel
+    ? "bg-control-hover text-foreground"
+    : "bg-control text-foreground";
+  const selectedClassName = selected ? selectedSurface : undefined;
 
   return (
     <Button

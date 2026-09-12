@@ -26,8 +26,9 @@ export default defineConfig({
   fullyParallel: false,
   outputDir: path.join(
     repositoryRoot,
-    ".codex-artifacts",
-    "public-e2e",
+    "apps",
+    "e2e",
+    "test-results",
     `public-${publicMode}-${publicRunId}`
   ),
   preserveOutput: "failures-only",
@@ -41,6 +42,7 @@ export default defineConfig({
     },
     {
       name: "public-desktop-chromium",
+      testIgnore: "**/modern-mobile*.spec.ts",
       use: {
         ...devices["Desktop Chrome"],
         viewport: { height: 1100, width: 1440 },
@@ -53,14 +55,9 @@ export default defineConfig({
   testMatch: unavailableMode
     ? "**/public-unavailable.spec.ts"
     : [
-        "**/accessibility.spec.ts",
-        "**/day-night-client-identity.spec.ts",
-        "**/listing-detail-final.spec.ts",
-        "**/organization-directory.spec.ts",
-        "**/organization-profile.spec.ts",
-        "**/public-consent-i18n.spec.ts",
-        "**/public-marketplace.spec.ts",
-        "**/public-shell.spec.ts",
+        // Standalone showroom assertions; platform specs remain in playwright.config.ts.
+        "**/modern-mobile*.spec.ts",
+        "**/modern-public.spec.ts",
         "**/seo.spec.ts",
       ],
   timeout: 45_000,

@@ -155,25 +155,20 @@ export const ListingSpecs = ({
   if (variant === "details") {
     heading = isBg ? "Характеристики" : "Specifications";
   }
-  const headingId =
-    variant === "details" ? "specifications-heading" : "information-heading";
-  const gridClassName =
-    variant === "details"
-      ? "grid-cols-2 sm:grid-cols-4"
-      : variant === "combined"
-        ? "grid-cols-2"
-        : "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6";
-  const sectionId =
-    variant === "details" ? "listing-specifications" : "listing-information";
+  let gridClassName = "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6";
+  if (variant === "details") {
+    gridClassName = "grid-cols-2 sm:grid-cols-4";
+  } else if (variant === "combined") {
+    gridClassName = "grid-cols-2";
+  }
   const sectionSlot =
     variant === "details" ? "listing-specifications" : "listing-information";
 
   return (
     <section
-      aria-labelledby={headingId}
+      aria-label={heading}
       className="scroll-mt-24"
       data-slot={sectionSlot}
-      id={sectionId}
     >
       <h2
         className={
@@ -181,7 +176,6 @@ export const ListingSpecs = ({
             ? "sr-only"
             : "mb-3 font-semibold text-[18px] leading-6 lg:text-lg"
         }
-        id={headingId}
       >
         {heading}
       </h2>
@@ -204,7 +198,7 @@ export const ListingSpecs = ({
               data-slot="listing-specification"
               key={item.label}
             >
-              <dt className="flex items-center gap-2 font-medium text-[12px] text-zinc-500 lg:text-foreground/80 lg:text-meta lg:text-compact-control">
+              <dt className="flex items-center gap-2 font-medium text-[12px] text-zinc-600 lg:text-compact-control lg:text-foreground/80 lg:text-meta">
                 <Icon
                   aria-hidden="true"
                   className="size-[18px] shrink-0 lg:size-[22px]"

@@ -54,11 +54,13 @@ export const MobileImportSourceSearch = ({
 }: MobileImportSourceSearchProps) => {
   const copy = overlayCopy[locale];
   const [open, setOpen] = useState(false);
+  const [ready, setReady] = useState(false);
   const [sourceUrl, setSourceUrl] = useState(defaultSourceUrl);
   const inputRef = useRef<HTMLInputElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    setReady(true);
     setSourceUrl(defaultSourceUrl);
   }, [defaultSourceUrl]);
 
@@ -66,9 +68,11 @@ export const MobileImportSourceSearch = ({
     <>
       <search className="block">
         <button
+          aria-expanded={open}
           aria-haspopup="dialog"
           aria-label={copy.open}
           className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
+          disabled={!ready}
           onClick={() => setOpen(true)}
           ref={triggerRef}
           type="button"

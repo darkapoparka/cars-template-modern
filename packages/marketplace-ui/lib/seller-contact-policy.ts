@@ -1,6 +1,9 @@
 import type { VehicleListing } from "@repo/marketplace";
 
-export const formatSellerPanelPublishedDate = (value: string, locale?: string) =>
+export const formatSellerPanelPublishedDate = (
+  value: string,
+  locale?: string
+) =>
   new Intl.DateTimeFormat(locale?.startsWith("bg") ? "bg-BG" : "en", {
     day: "numeric",
     month: "short",

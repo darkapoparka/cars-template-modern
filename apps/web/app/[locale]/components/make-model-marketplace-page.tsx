@@ -10,6 +10,7 @@ import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { notFound, redirect } from "next/navigation";
 import {
   getPublicMakeModelTaxonomy,
+  getPublicVehicleTaxonomy,
   normalizePublicShowroomFilters,
 } from "@/lib/public-marketplace-data";
 import { CategoryMarketplacePage } from "./category-marketplace-page";
@@ -45,9 +46,17 @@ export const resolveMakeModelRoute = async (
     return { make, path: getMakePath(make) };
   }
 
-  const models = taxonomy
-    .filter((pair) => pair.make === make)
-    .map((pair) => pair.model);
+  const vehicleTaxonomy = await getPublicVehicleTaxonomy("car");
+  const canonicalModels =
+    vehicleTaxonomy.find((item) => item.name === make)?.models ?? [];
+  const models = [
+    ...new Set([
+      ...taxonomy
+        .filter((pair) => pair.make === make)
+        .map((pair) => pair.model),
+      ...canonicalModels.map((item) => item.name),
+    ]),
+  ];
   const model = deslugMakeModel(modelSlug.toLowerCase(), models);
 
   return model ? { make, model, path: getModelPath(make, model) } : null;

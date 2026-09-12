@@ -2,6 +2,17 @@ import { existsSync, mkdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { expect, type Page, test } from "@playwright/test";
 
+const budgetChipPattern = /Премахни: До 35000 BGN/;
+const automaticChipPattern = /Премахни: Автоматик/;
+const radiusNotAppliedPattern = /радиус не е приложен/;
+const liveResultsLabelPattern = /Покажи реалните обяви/;
+const budgetQueryPattern = /priceMax=35000/;
+const yearQueryPattern = /yearMin=2021/;
+const locationQueryPattern = /location=Sofia/;
+const inventoryCopyPattern = /обяв|vehicle/i;
+const savePhotosPattern = /Запази и добави снимки/;
+const photoStagePattern = /\/sell\/listings\/[^/]+\/edit\?.*stage=photos/;
+
 const repositoryRoot = resolve(import.meta.dirname, "../../..");
 const artifactDirectory = resolve(
   repositoryRoot,
@@ -56,16 +67,16 @@ test("assisted search parses intent before opening canonical live results", asyn
   await input.press("Enter");
 
   await expect(
-    assistant.getByRole("button", { name: /Премахни: До 35000 BGN/ })
+    assistant.getByRole("button", { name: budgetChipPattern })
   ).toBeVisible();
   await expect(
-    assistant.getByRole("button", { name: /Премахни: Автоматик/ })
+    assistant.getByRole("button", { name: automaticChipPattern })
   ).toBeVisible();
-  await expect(assistant.getByText(/радиус не е приложен/)).toBeVisible();
+  await expect(assistant.getByText(radiusNotAppliedPattern)).toBeVisible();
   const liveResultsLink = assistant.getByRole("link", {
-    name: /Покажи реалните обяви/,
+    name: liveResultsLabelPattern,
   });
-  await expect(liveResultsLink).toHaveAttribute("href", /priceMax=35000/);
+  await expect(liveResultsLink).toHaveAttribute("href", budgetQueryPattern);
 
   await page.screenshot({
     fullPage: true,
@@ -76,10 +87,10 @@ test("assisted search parses intent before opening canonical live results", asyn
   });
 
   await liveResultsLink.click();
-  await expect(page).toHaveURL(/priceMax=35000/);
-  await expect(page).toHaveURL(/yearMin=2021/);
-  await expect(page).toHaveURL(/location=Sofia/);
-  await expect(page.locator("main")).toContainText(/обяв|vehicle/i);
+  await expect(page).toHaveURL(budgetQueryPattern);
+  await expect(page).toHaveURL(yearQueryPattern);
+  await expect(page).toHaveURL(locationQueryPattern);
+  await expect(page.locator("main")).toContainText(inventoryCopyPattern);
 
   const hasHorizontalOverflow = await page.evaluate(
     () => document.documentElement.scrollWidth > window.innerWidth + 1
@@ -101,6 +112,7 @@ test.describe("authenticated sell funnel", () => {
     storageState: sellerStorageState,
   });
 
+  // biome-ignore lint/suspicious/noSkippedTests: This legacy authenticated mutation test requires an explicitly supplied private test account; the public template gate never provides one.
   test.skip(
     !sellerStateAvailable,
     "Set E2E_SELLER_STORAGE_STATE to exercise draft creation and recovery."
@@ -132,10 +144,8 @@ test.describe("authenticated sell funnel", () => {
         `before-${testInfo.project.name}-sell-basics.png`
       ),
     });
-    await page.getByRole("button", { name: /Запази и добави снимки/ }).click();
-    await expect(page).toHaveURL(
-      /\/sell\/listings\/[^/]+\/edit\?.*stage=photos/
-    );
+    await page.getByRole("button", { name: savePhotosPattern }).click();
+    await expect(page).toHaveURL(photoStagePattern);
     await expect(
       page.getByRole("heading", { name: "Добавете снимките рано" })
     ).toBeVisible();

@@ -1,5 +1,6 @@
 import { withCMS } from "@repo/cms/next-config";
 import { withToolbar } from "@repo/feature-flags/lib/toolbar";
+import { leadSite } from "@repo/marketplace/lead-site";
 import { config } from "@repo/next-config";
 import { withLogging, withSentry } from "@repo/observability/next-config";
 import type { NextConfig } from "next";
@@ -8,7 +9,9 @@ import { env } from "@/env";
 const publicE2E =
   process.env.AUTOMARKET_PUBLIC_E2E === "true" ||
   process.env.NEXT_PUBLIC_AUTOMARKET_PUBLIC_E2E === "true";
-const toolbarEnabled = !publicE2E && process.env.NODE_ENV !== "production";
+const toolbarEnabled =
+  !(leadSite.staticDemoMode || publicE2E) &&
+  process.env.NODE_ENV !== "production";
 
 let nextConfig: NextConfig = toolbarEnabled
   ? withToolbar(withLogging(config))

@@ -17,7 +17,7 @@ import {
   type VehicleTaxonomyMakeOption,
   withCategory,
 } from "@repo/marketplace";
-import { ChevronLeft, Eraser, X } from "lucide-react";
+import { ChevronLeft, RotateCcw, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
 import {
@@ -165,7 +165,7 @@ export const MarketplaceFullFilterOverlay = ({
                 variant="ghost"
               >
                 {view === "main" ? (
-                  <Eraser aria-hidden="true" className="size-[18px]" />
+                  <RotateCcw aria-hidden="true" className="size-[18px]" />
                 ) : (
                   <ChevronLeft aria-hidden="true" className="size-5" />
                 )}
@@ -227,7 +227,7 @@ export const MarketplaceFullFilterOverlay = ({
             ariaLabel={copy.actions.reset}
             onClick={resetDraft}
           >
-            <Eraser aria-hidden="true" className="size-[18px]" />
+            <RotateCcw aria-hidden="true" className="size-[18px]" />
           </MobileMarketplaceOverlayIconAction>
         )
       }

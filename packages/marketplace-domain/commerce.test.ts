@@ -13,6 +13,8 @@ import {
   selectSponsoredPromotions,
 } from "./commerce";
 
+const deleteCopyPattern = /delete/i;
+
 const now = new Date("2026-07-26T12:00:00.000Z");
 const dealerSubject = { id: "dealer_1", kind: "dealer_org" } as const;
 
@@ -169,7 +171,9 @@ describe("entitlement resolution and active listing quota", () => {
       overage: 4,
     });
     expect(getQuotaRecoveryCopy(decision.code, "bg")).toContain("пауза");
-    expect(getQuotaRecoveryCopy(decision.code, "en")).not.toMatch(/delete/i);
+    expect(getQuotaRecoveryCopy(decision.code, "en")).not.toMatch(
+      deleteCopyPattern
+    );
   });
 
   test("keeps AI and included-promotion usage bounded", () => {

@@ -124,47 +124,6 @@ html {
   [data-slot="drawer-content"] [data-slot="command-list"] {
     padding-top: 0.125rem;
   }
-
-  /*
-   * Full-screen mobile filter overlays keep the header available, but the
-   * primary action now follows the content. This avoids a permanent CTA bar
-   * consuming usable viewport space and keeps short sheets feeling lighter.
-   */
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    ) {
-    display: block;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    scroll-padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"] {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-header"]
-    + div {
-    min-height: auto;
-    overflow: visible;
-  }
-
-  [data-slot="dialog-content"][class*="h-[100dvh]"]:has(
-      > [data-slot="dialog-footer"]
-    )
-    > [data-slot="dialog-footer"] {
-    padding-top: 0.75rem;
-    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
-    margin-top: 0;
-  }
 }
 
 .shiki {

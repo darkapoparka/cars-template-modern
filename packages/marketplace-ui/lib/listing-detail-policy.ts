@@ -1,6 +1,4 @@
-import {
-  type VehicleListing,
-} from "@repo/marketplace";
+import type { VehicleListing } from "@repo/marketplace";
 
 const trailingSlashPattern = /\/$/;
 

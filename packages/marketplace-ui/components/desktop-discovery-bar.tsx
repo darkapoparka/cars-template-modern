@@ -45,6 +45,7 @@ interface DesktopMarketplaceBarProps {
   onViewModeChange: (viewMode: ListingViewMode) => void;
   query: string;
   setQuery: (query: string) => void;
+  totalListings: number;
   variant?: "discovery" | "results";
   viewMode: ListingViewMode;
 }
@@ -79,6 +80,7 @@ export const DesktopMarketplaceBar = ({
   onOpenModel,
   query,
   setQuery,
+  totalListings,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -118,6 +120,7 @@ export const DesktopMarketplaceBar = ({
           onOpenModel={onOpenModel}
           query={query}
           setQuery={setQuery}
+          totalListings={totalListings}
         />
       </DealerDesktopHeader>
     );

@@ -1,4 +1,5 @@
 export * from "./components/dealer-mobile-brand-bar";
+export * from "./components/dealer-mobile-header-icon";
 export * from "./components/desktop-discovery-bar";
 export * from "./components/desktop-marketplace-controls";
 export * from "./components/desktop-search-assistant";
@@ -23,6 +24,7 @@ export {
 export * from "./components/mobile-dealer-discovery-header";
 export * from "./components/mobile-inventory-search";
 export * from "./components/mobile-marketplace-overlay";
+export * from "./components/mobile-pill-rail";
 export * from "./components/organization-directory-card";
 export * from "./components/organization-directory-rail";
 export * from "./components/related-listing-card";
@@ -32,4 +34,5 @@ export * from "./lib/account-save-flow";
 export * from "./lib/listing-truth";
 export * from "./lib/marketplace-filter-summary";
 export * from "./lib/marketplace-layout";
+export * from "./lib/mobile-header-icon-action";
 export * from "./lib/mobile-quick-pill";

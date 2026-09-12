@@ -11,15 +11,17 @@ import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-m
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { mobileHeaderIconActionClassName } from "@repo/marketplace-ui/lib/mobile-header-icon-action";
 import { Info } from "lucide-react";
-import { type Ref, useRef, useState } from "react";
+import { type MouseEventHandler, type Ref, useRef, useState } from "react";
 
 export function MobileServiceHelpButton({
+  disabled = false,
   title,
   onClick,
   ref,
 }: {
   title: string;
-  onClick: () => void;
+  disabled?: boolean;
+  onClick: MouseEventHandler<HTMLButtonElement>;
   ref?: Ref<HTMLButtonElement>;
 }) {
   return (
@@ -28,6 +30,7 @@ export function MobileServiceHelpButton({
       aria-label={title}
       className={mobileHeaderIconActionClassName}
       data-slot="mobile-service-help"
+      disabled={disabled}
       onClick={onClick}
       ref={ref}
       title={title}
