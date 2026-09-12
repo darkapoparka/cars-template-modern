@@ -4,6 +4,7 @@ export default defineConfig({
   testDir: "./specs",
   testMatch: [
     "modern-mobile.spec.ts",
+    "modern-mobile-architecture.spec.ts",
     "modern-mobile-completion.spec.ts",
     "modern-mobile-service-help.spec.ts",
   ],
