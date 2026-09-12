@@ -73,9 +73,11 @@ export const ListingDetailContent = ({
             <p className="whitespace-pre-line text-[16px] text-zinc-900 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose">
               {listing.description}
             </p>
-            <p className="mt-4 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
-              {copy.sellerDescription}
-            </p>
+            {leadSite.staticDemoMode ? null : (
+              <p className="mt-4 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
+                {copy.sellerDescription}
+              </p>
+            )}
           </section>
         }
         specifications={

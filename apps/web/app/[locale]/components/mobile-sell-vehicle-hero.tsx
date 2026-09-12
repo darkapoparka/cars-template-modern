@@ -1,13 +1,11 @@
 "use client";
 
-import { leadSite } from "@repo/marketplace";
 import {
   getMobileQuickPillClassName,
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { ScanLine } from "lucide-react";
-import Link from "next/link";
 import type { MouseEventHandler, ReactNode } from "react";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
@@ -76,22 +74,6 @@ export const MobileSellVehicleHero = ({
         data-slot="mobile-dealer-content"
       >
         <h1 className="sr-only">{content.title}</h1>
-        <p className="mb-2 text-center text-[14px] text-zinc-600 leading-5">
-          {locale === "bg"
-            ? "Оценката започва с разговор."
-            : "Start your appraisal with a call."}{" "}
-          <Link
-            className="inline-flex min-h-11 items-center px-1 font-semibold text-zinc-950 underline underline-offset-4"
-            href={leadSite.phoneHref}
-          >
-            {locale === "bg" ? "Обадете се" : "Call us"}
-          </Link>
-          <span className="block">
-            {locale === "bg"
-              ? "По желание подгответе данните по-долу."
-              : "You can prepare the vehicle details below."}
-          </span>
-        </p>
         <button
           aria-haspopup="dialog"
           className={getMobileQuickPillClassName(true, "mx-auto flex w-fit")}

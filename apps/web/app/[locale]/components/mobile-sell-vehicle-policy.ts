@@ -34,8 +34,7 @@ export const mobileSellVehicleCopy = {
     close: "Затворете",
     description: "Въведете VIN или добавете данни",
     directCall: "Предпочитате разговор?",
-    formDescription:
-      "Подгответе VIN или марка, модел, година и пробег за разговор с нас. Данните не се изпращат онлайн.",
+    formDescription: "Добавете VIN или марка, модел, година и пробег.",
     formTitle: "Данни за автомобила",
     howDescription: "Три ясни стъпки от данните до конкретна оферта.",
     howEyebrow: "Продажба на автомобил",
@@ -85,8 +84,7 @@ export const mobileSellVehicleCopy = {
     close: "Close",
     description: "Enter a VIN or add vehicle details",
     directCall: "Prefer to speak directly?",
-    formDescription:
-      "Prepare a VIN or the make, model, year and mileage for your call. These details are not sent online.",
+    formDescription: "Add a VIN or the make, model, year and mileage.",
     formTitle: "Vehicle details",
     howDescription:
       "Three clear steps from vehicle details to a concrete offer.",

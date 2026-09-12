@@ -14,14 +14,17 @@ export function LeaseInformationDrawer({
     locale === "bg"
       ? [
           ["Изберете автомобил", "Разгледайте наличните модели."],
-          ["Задайте срок и вноска", "Посочете предпочитанията си в заявката."],
+          [
+            "Задайте срок и вноска",
+            "Това са предпочитания за заявката. Показаната месечна сума е ориентировъчна и не се преизчислява.",
+          ],
           ["Обсъдете офертата", "Ще уточним възможностите и условията."],
         ]
       : [
           ["Choose a car", "Browse the available models."],
           [
             "Set your term and deposit",
-            "Share your preferences in the request.",
+            "These are request preferences. The displayed monthly estimate does not recalculate.",
           ],
           [
             "Discuss your offer",
