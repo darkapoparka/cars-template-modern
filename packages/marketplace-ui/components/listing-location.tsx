@@ -13,12 +13,12 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
   return (
     <section
       aria-labelledby="listing-location-heading"
-      className="mx-4 my-5 overflow-hidden rounded-2xl bg-zinc-100 py-5 lg:mx-0 lg:my-0 lg:rounded-xl lg:border lg:border-border lg:bg-card lg:py-0"
+      className="mx-4 my-5 overflow-hidden rounded-2xl bg-zinc-100 px-4 py-5 lg:mx-0 lg:my-0 lg:rounded-xl lg:border lg:border-border lg:bg-card lg:p-0"
       data-slot="listing-location"
       id="listing-location"
     >
-      <div>
-        <div className="flex min-w-0 items-start justify-between gap-4 px-4 lg:p-5">
+      <div className="overflow-hidden rounded-lg border border-border bg-white lg:rounded-none lg:border-0 lg:bg-transparent">
+        <div className="flex min-w-0 flex-wrap items-start justify-between gap-3 p-3 lg:flex-nowrap lg:p-5">
           <div className="min-w-0">
             <h2 className="font-semibold text-lg" id="listing-location-heading">
               {leadSite.city}
@@ -48,7 +48,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
           </Button>
         </div>
 
-        <div className="mx-4 mt-4 h-52 overflow-hidden rounded-xl bg-control lg:mx-0 lg:mt-0 lg:h-48 lg:rounded-none lg:border-border lg:border-t">
+        <div className="h-52 overflow-hidden border-border border-t bg-control lg:h-48">
           <iframe
             className="block h-full w-full border-0"
             loading="lazy"

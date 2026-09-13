@@ -175,21 +175,20 @@ export const ListingDetailContent = ({
           aria-labelledby="similar-heading"
           className="my-5 rounded-2xl bg-zinc-100 px-4 py-5 lg:my-0 lg:rounded-none lg:bg-transparent lg:px-0 lg:py-8"
         >
-          <div className="mb-4 flex items-center justify-between gap-3">
+          <div className="mb-4 flex items-center justify-between gap-2">
             <h2
-              className="font-semibold text-[19px] tracking-tight"
+              className="whitespace-nowrap font-semibold text-[18px] tracking-tight min-[360px]:text-[19px]"
               id="similar-heading"
             >
               {copy.similarVehicles}
             </h2>
             <Button
               asChild
-              className="h-11 gap-1 rounded-lg px-2 font-semibold text-[14px] text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950 lg:h-9"
+              className="size-11 shrink-0 rounded-lg p-0 text-zinc-600 shadow-none hover:bg-white hover:text-zinc-950 lg:size-9"
               variant="ghost"
             >
-              <Link href={backHref}>
-                {copy.viewAll}
-                <ArrowRight aria-hidden="true" className="size-4" />
+              <Link aria-label={copy.viewAll} href={backHref}>
+                <ArrowRight aria-hidden="true" className="size-5" />
               </Link>
             </Button>
           </div>
