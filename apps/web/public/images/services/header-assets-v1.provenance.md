@@ -1,0 +1,23 @@
+# Header assets v1
+
+Generated with the built-in image generation tool on 2026-09-13. Transparent PNG originals, consumed through Next Image at header scale. No dealer-specific marks.
+
+## header-car-v1.png
+
+Use case: stylized-concept. Create ONE polished miniature 3D product asset for a premium automotive website header button, visible at only 30px. Single object centered precisely, perfectly upright, straight-on orthographic front view, no rotation or tilted perspective. Brushed silver and bright neutral metallic highlights with charcoal recesses, simple bold silhouette readable at tiny size, realistic materials like automotive navigation artwork, restrained studio lighting. Truly transparent background with alpha, no backdrop, no text except the explicitly requested symbol, no tile, no surrounding circle, no floor, no extra objects. Square canvas, object fills approximately 86 percent of canvas, fully contained. Subject: modern silver SUV directly facing the viewer symmetrically, headlights and black grille clearly visible, both mirrors and front tires, windshield. No logo, no license plate text. Not a three-quarter view.
+
+## header-info-v1.png
+
+Use case: stylized-concept. Create ONE polished miniature 3D product asset for a premium automotive website header button, visible at only 30px. Single object centered precisely, perfectly upright, straight-on orthographic front view, no rotation or tilted perspective. Brushed silver and bright neutral metallic highlights with charcoal recesses, simple bold silhouette readable at tiny size, realistic materials like automotive navigation artwork, restrained studio lighting. Truly transparent background with alpha, no backdrop, no text except the explicitly requested symbol, no tile, no surrounding circle, no floor, no extra objects. Square canvas, object fills approximately 86 percent of canvas, fully contained. Subject: a chunky upright silver question mark with separate circular dot, charcoal inset front face and silver bevel. This is a help button. Exactly the ? symbol.
+
+## header-phone-v2.png
+
+Use case: stylized-concept. One premium silver 3D TELEPHONE HANDSET asset for a 32px website call button. Genuinely transparent alpha background. Strong instantly recognizable silhouette: classic broad HORIZONTAL arched telephone receiver, with large downward-facing earpiece at LEFT and large downward-facing mouthpiece at RIGHT, connected by a curved handle across the TOP. Like the receiver resting on a classic telephone, but ONLY the receiver. Perfectly level, symmetric front view, no diagonal angle, no rotation. Width roughly twice height. Brushed silver metal and charcoal inner speaker faces, generous bold simple forms legible at tiny size. Centered on a square transparent canvas, spans 92 percent of its width. No base, no phone dial, no cable, no badge, no text, no background, no floor.
+
+## header-filters-v1.png
+
+Use case: stylized-concept. Create ONE polished miniature 3D product asset for a premium automotive website header button, visible at only 30px. Single object centered precisely, perfectly upright, straight-on orthographic front view, no rotation or tilted perspective. Brushed silver and bright neutral metallic highlights with charcoal recesses, simple bold silhouette readable at tiny size, realistic materials like automotive navigation artwork, restrained studio lighting. Truly transparent background with alpha, no backdrop, no text except the explicitly requested symbol, no tile, no surrounding circle, no floor, no extra objects. Square canvas, object fills approximately 86 percent of canvas, fully contained. Subject: three upright parallel silver slider rails, each with one chunky round silver knob at alternating heights. Frontal symmetry, a clear settings/filter control.
+
+## header-location-v1.png
+
+Use case: stylized-concept. Create ONE polished miniature 3D product asset for a premium automotive website header button, visible at only 30px. Single object centered precisely, perfectly upright, straight-on orthographic front view, no rotation or tilted perspective. Brushed silver and bright neutral metallic highlights with charcoal recesses, simple bold silhouette readable at tiny size, realistic materials like automotive navigation artwork, restrained studio lighting. Truly transparent background with alpha, no backdrop, no text except the explicitly requested symbol, no tile, no surrounding circle, no floor, no extra objects. Square canvas, object fills approximately 86 percent of canvas, fully contained. Subject: one upright silver map location pin, circular dark central hole and rounded teardrop pointed base, straight-on, symmetrical.
