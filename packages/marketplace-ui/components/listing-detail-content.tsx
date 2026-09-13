@@ -1,7 +1,6 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import {
   buildMarketplaceSearchHref,
-  formatMoney,
   getListingPath,
   leadSite,
   type Money,
@@ -11,6 +10,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
+import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { ListingDetailsTabs } from "./listing-details-tabs";
 import { ListingEquipment } from "./listing-equipment";
@@ -48,15 +48,7 @@ export const ListingDetailContent = ({
   const isBg = locale?.startsWith("bg") ?? false;
   const monthlyEstimate = listing.monthlyEstimate;
   const financingFallback = isBg ? "Лизинг и финансиране" : "Finance options";
-  // Fixed BGN/EUR conversion; preserve amounts already denominated in euros.
-  const financingAmount = monthlyEstimate
-    ? formatMoney(
-        monthlyEstimate.currency === "BGN"
-          ? { amount: monthlyEstimate.amount / 1.955_83, currency: "EUR" }
-          : monthlyEstimate,
-        locale
-      )
-    : undefined;
+  const financingAmount = formatListingMonthlyEstimate(monthlyEstimate, locale);
 
   return (
     <>
@@ -76,7 +68,7 @@ export const ListingDetailContent = ({
             <h2 className="hidden font-semibold text-card-title lg:block">
               {copy.description}
             </h2>
-            <p className="whitespace-pre-line text-[16px] text-zinc-900 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose">
+            <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">
               {listing.description}
             </p>
             {leadSite.staticDemoMode ? null : (

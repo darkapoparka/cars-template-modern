@@ -3,6 +3,7 @@ import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
+import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import {
   formatTruthDateTime,
   formatVehicleLocation,
@@ -143,17 +144,22 @@ export const MobileListingSummary = ({
     sellerOrganizationRole
   );
   const showSellerIdentity = !leadSite.staticDemoMode;
+  const monthlyAmount = formatListingMonthlyEstimate(
+    listing.monthlyEstimate,
+    locale
+  );
 
   return (
-    <section className="pt-5 pb-1 lg:hidden" data-slot="listing-mobile-summary">
-      <div className="border-zinc-200 border-b pb-4">
-        <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
+    <section className="pt-4 pb-1 lg:hidden" data-slot="listing-mobile-summary">
+      <div className="border-zinc-200 border-b pb-3">
+        <div className="flex min-w-0 items-baseline justify-between gap-2">
           <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
             {formatMoney(primaryPrice, locale)}
           </p>
-          {listing.monthlyEstimate ? (
-            <p className="text-meta text-muted-foreground tabular-nums min-[360px]:shrink-0">
-              ~{formatMoney(listing.monthlyEstimate, locale)}/{copy.month}
+          {monthlyAmount ? (
+            <p className="shrink-0 whitespace-nowrap text-right text-meta text-zinc-600 tabular-nums">
+              ~{monthlyAmount}
+              {locale?.startsWith("bg") ? "/мес." : "/mo"}
             </p>
           ) : null}
         </div>
@@ -166,7 +172,7 @@ export const MobileListingSummary = ({
         ) : null}
       </div>
 
-      <h1 className="mt-4 text-pretty break-words font-normal text-[20px] text-zinc-900 leading-7">
+      <h1 className="mt-3 text-pretty break-words font-medium text-[length:var(--text-section-title)] text-zinc-950 leading-[var(--text-section-title--line-height)]">
         {listing.title}
       </h1>
       {showPhysicalLocation ? (
