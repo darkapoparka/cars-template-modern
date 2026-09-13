@@ -43,7 +43,7 @@ export const leadSite: LeadSiteConfig = {
     truck: "/lead-sell-truck-v1.png",
     van: "/lead-sell-van-v1.png",
   },
-  financingArtworkPath: "/images/services/leasing-keys-red-v1.webp",
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
   contactUrl: "tel:+359877733110",
   country: "България",
   countryCode: "BG",

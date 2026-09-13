@@ -88,32 +88,47 @@ export const ListingDetailContent = ({
       {listing.category === "car" ? (
         <div className="pb-5 lg:hidden">
           <Link
-            className="group flex min-h-[76px] w-full items-center gap-3 rounded-xl border border-zinc-200 bg-zinc-100 px-4 py-3.5 transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-200/80 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+            className="group relative flex min-h-[156px] w-full overflow-hidden rounded-xl bg-[var(--lead-site-accent)] p-4 text-white focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+            data-slot="listing-financing-card"
             href={`${getLocalizedPublicPath(locale, "/lease")}?vehicle=${encodeURIComponent(listing.id)}`}
           >
-            <span className="relative block h-20 w-24 shrink-0 overflow-hidden rounded-lg">
-              <Image
-                alt=""
-                className="object-cover object-right"
-                fill
-                sizes="96px"
-                src={leadSite.financingArtworkPath}
-              />
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block font-semibold text-[15px] text-zinc-950 leading-5">
+            <Image
+              alt=""
+              className="object-cover object-center"
+              fill
+              sizes="(max-width: 1023px) calc(100vw - 32px), 0px"
+              src={leadSite.financingArtworkPath}
+            />
+            <span className="relative z-10 flex w-[48%] flex-col items-start gap-3">
+              <span className="relative block aspect-[1780/512] w-28">
+                <Image
+                  alt=""
+                  className="h-full w-full object-contain [clip-path:inset(0_68%_0_0)]"
+                  height={512}
+                  sizes="112px"
+                  src={leadSite.logoPath}
+                  width={1780}
+                />
+                <Image
+                  alt=""
+                  className="pointer-events-none absolute inset-0 h-full w-full object-contain brightness-0 invert [clip-path:inset(0_0_0_32%)]"
+                  height={512}
+                  sizes="112px"
+                  src={leadSite.logoPath}
+                  width={1780}
+                />
+              </span>
+              <span className="block text-pretty font-semibold text-[15px] leading-5">
                 {financingLabel}
               </span>
-              <span className="mt-0.5 block text-[12.5px] text-zinc-600 leading-4">
-                {isBg
-                  ? "Виж условията и изпрати запитване"
-                  : "View options and send an enquiry"}
+              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-[12px] leading-4">
+                {isBg ? "Виж условията" : "View options"}
+                <ArrowUpRight
+                  aria-hidden="true"
+                  className="size-4 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
               </span>
             </span>
-            <ArrowUpRight
-              aria-hidden="true"
-              className="size-[18px] shrink-0 text-[var(--lead-site-accent)] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
           </Link>
         </div>
       ) : null}

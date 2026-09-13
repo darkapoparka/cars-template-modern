@@ -1,0 +1,9 @@
+# Red leasing card artwork
+
+Generated with the built-in image generation tool on 2026-09-13. The tool does not expose a model-version selector, so no specific 2.5 version is claimed.
+
+Decorative fictional automotive studio artwork, not a photograph of the listed vehicle. The actual dealer logo, current vehicle-specific financing amount and CTA are rendered by the application rather than baked into the bitmap. Original artwork is retained as a sibling asset.
+
+## Final prompt
+
+Use case: ads-marketing. Create a finished photographic background asset for a compact Day & Night Auto Group vehicle-leasing promotion inside a mobile car-detail page. Wide horizontal composition, approximately 2.4:1, ideally 1536 by 640. Dominant rich dealership red (#c40101), with black and subtle silver highlights. Premium, believable automotive studio photography, not a generic finance illustration. The RIGHT 43 percent contains a handsome anonymous black luxury SUV in a close front three-quarter view, facing slightly toward the left, realistic headlights, wheels, glass and restrained softbox reflections. It rests on the same red studio floor, with a controlled natural contact shadow. Crop the rear subtly at the right edge if needed, but keep the front and main wheel readable. The LEFT 57 percent must remain quiet uninterrupted deep red negative space for the actual dealer logo and editable white leasing copy that will be placed in code. Keep the top-left and lower-left clear. The vehicle must not extend into the left text area. A polished, confident dealership campaign, tactile automotive photography, crisp at small mobile size. No baked-in text, no invented logos, no lettering on the car or license plate, no rates, no financing promises, no percent symbols, no credit cards, no floating coins, no keys, no badges, no people, no neon, no smoke, no decorative streaks, no borders, no rounded corners, no UI mockup. Deliver the full-bleed image only.
