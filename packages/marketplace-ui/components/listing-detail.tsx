@@ -89,9 +89,9 @@ export const ListingDetail = ({
   return (
     <main
       className={cn(
-        "min-h-[100dvh] bg-background text-foreground lg:pb-10",
+        "min-h-[100dvh] bg-card text-foreground lg:bg-background lg:pb-10",
         hasFixedContactBar
-          ? "pb-[calc(6rem+env(safe-area-inset-bottom))]"
+          ? "pb-[calc(4.5rem+env(safe-area-inset-bottom))]"
           : "pb-[calc(1rem+env(safe-area-inset-bottom))]"
       )}
       data-slot="listing-detail"
@@ -167,7 +167,7 @@ export const ListingDetail = ({
               />
             </div>
             {leadSite.staticDemoMode ? (
-              <div className="bg-card px-4 py-5 lg:hidden">
+              <div className="px-4 lg:hidden">
                 <ListingLocation locale={locale} />
               </div>
             ) : null}

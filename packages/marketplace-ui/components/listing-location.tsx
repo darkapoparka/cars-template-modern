@@ -18,22 +18,22 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
       id="listing-location"
     >
       <iframe
-        className="absolute inset-0 h-full w-full border-0"
-        loading="lazy"
+        className="block h-full w-full border-0"
+        loading="eager"
         referrerPolicy="no-referrer-when-downgrade"
         src={mapEmbedUrl}
         title={isBg ? "Карта на шоурума" : "Showroom map"}
       />
-      <div className="pointer-events-none absolute inset-x-0 top-0 bg-gradient-to-b from-white/85 via-white/60 to-transparent px-4 pt-4 pb-12">
+      <div className="pointer-events-none absolute inset-x-0 top-0 p-4">
         <div className="flex min-w-0 items-start justify-between gap-3">
-          <div className="min-w-0">
+          <div className="min-w-0 [text-shadow:0_1px_2px_white,0_0_8px_white]">
             <h2 className="font-semibold text-lg" id="listing-location-heading">
               {leadSite.city}
             </h2>
             <p className="mt-1 font-medium text-sm">
               {leadSite.district[isBg ? "bg" : "en"]}
             </p>
-            <p className="mt-0.5 text-sm text-zinc-600">
+            <p className="mt-0.5 text-sm text-zinc-950">
               {leadSite.address}, {leadSite.country}
             </p>
           </div>

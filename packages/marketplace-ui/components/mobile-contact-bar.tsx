@@ -55,7 +55,7 @@ export const MobileContactBar = ({
   }
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 bg-gradient-to-t from-white via-white/95 to-transparent px-3 pt-5 pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:hidden">
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 bg-card px-3 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:hidden">
       <div className="pointer-events-auto mx-auto flex max-w-lg gap-2">
         <Button
           asChild
