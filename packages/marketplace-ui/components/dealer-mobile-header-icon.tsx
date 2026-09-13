@@ -78,7 +78,7 @@ export function DealerMobileHeaderIcon({
       />
       {kind === "category" ? (
         <ChevronDown
-          className="absolute right-0 bottom-0 size-2.5"
+          className="absolute -bottom-1 left-1/2 size-2.5 -translate-x-1/2"
           strokeWidth={2}
         />
       ) : null}
