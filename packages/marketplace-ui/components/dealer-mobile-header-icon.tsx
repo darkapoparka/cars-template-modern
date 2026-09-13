@@ -22,7 +22,7 @@ const artworkPaths = {
 // Balance the visible silhouettes, including each image's transparent margins.
 // The surrounding 44px hit target and 36px artwork frame stay identical.
 const artworkSize = {
-  car: "size-[34px]",
+  car: "size-[30px]",
   bike: "size-9",
   truck: "size-9",
   van: "size-9",
