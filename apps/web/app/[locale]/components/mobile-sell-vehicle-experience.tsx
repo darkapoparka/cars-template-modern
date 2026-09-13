@@ -50,13 +50,13 @@ export const MobileSellVehicleExperience = ({
       <MobileSellVehicleHero
         inventoryShelf={
           <section className="px-4 pb-6" data-slot="sell-next-steps">
-            <h2 className="mb-3 font-semibold text-[19px] tracking-tight">
+            <h2 className="sr-only">
               {locale === "bg" ? "Какво следва" : "What happens next"}
             </h2>
-            <ol className="grid gap-2">
+            <ol className="grid gap-5 rounded-2xl bg-white p-4">
               {mobileSellVehicleCopy[locale].howSteps.map(
                 ({ title, description }, index) => (
-                  <li className="rounded-2xl bg-white p-3" key={title}>
+                  <li key={title}>
                     <p className="font-semibold text-[15px] text-zinc-950 leading-5">
                       <span className="mr-2 text-[13px] text-muted-foreground tabular-nums">
                         {String(index + 1).padStart(2, "0")}

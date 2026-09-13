@@ -4,6 +4,8 @@ This file records the incumbent visual and interaction system that has been prov
 
 ## Mobile control density — September 13, 2026
 
+Sell's three next steps share one white rounded container with 16px padding and 20px row gaps, without dividers. Keep the heading accessible but visually hidden, numbers beside the step titles, and regular-weight descriptions below. Do not restore separate cards or the visible heading above them.
+
 Menu Call and Location actions share 48px minimum height, 20px icons, 16px/24px medium labels (`text-body`), 8px horizontal padding and a 6px icon gap. Keep both labels on one line at 320px; preserve their existing equal-width black surfaces and destinations.
 
 For mobile PDPs with a direct telephone action, use a 52px circular call button with a 24px icon, fixed 16px from the right and 16px above the bottom safe area. Keep its accessible call label and telephone destination. Do not render a full-width bottom background behind it. Preserve document bottom clearance so final content can scroll above the action. Non-telephone enquiry actions retain their labelled treatment.
