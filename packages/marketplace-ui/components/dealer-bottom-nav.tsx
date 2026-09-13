@@ -102,7 +102,7 @@ export const DealerBottomNav = ({
     <>
       <nav
         aria-label={navigationLabel}
-        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/70 border-t bg-white lg:hidden"
+        className="fixed inset-x-0 bottom-0 z-40 border-zinc-200/50 border-t bg-white/80 backdrop-blur-lg lg:hidden"
         data-slot="dealer-bottom-nav"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >

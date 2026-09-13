@@ -4,6 +4,8 @@ This file records the incumbent visual and interaction system that has been prov
 
 ## Mobile control density — September 13, 2026
 
+The dealer bottom navbar uses the owner's requested frosted-white treatment: 80% white background, 16px backdrop blur and a faint zinc top border. This is a scoped exception to the older no-glass guidance; keep the existing dock dimensions, labels and artwork, and retain a solid-white Menu drawer.
+
 Mobile PDP tabs are ordered `Детайли | Описание` (`Details | Description`), with Details selected on initial load. Description contains the seller's prose; Details contains specifications and equipment. Preserve desktop tab order and defaults.
 
 The mobile Import request banner keeps its existing artwork in a 152px-tall image area, with an 18px/24px semibold heading, 14px/20px regular description and 15px/20px medium request action. Use 20px bottom padding and an 8px image margin; preserve the desktop banner dimensions.
