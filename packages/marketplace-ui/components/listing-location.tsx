@@ -18,11 +18,14 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
       id="listing-location"
     >
       <iframe
+        allowFullScreen
         className="block h-full w-full border-0"
-        loading="eager"
-        referrerPolicy="no-referrer-when-downgrade"
+        height={320}
+        loading="lazy"
+        referrerPolicy="strict-origin-when-cross-origin"
         src={mapEmbedUrl}
         title={isBg ? "Карта на шоурума" : "Showroom map"}
+        width="100%"
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 p-4">
         <div className="flex min-w-0 items-start justify-between gap-3">
