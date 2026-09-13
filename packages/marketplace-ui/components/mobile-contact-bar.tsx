@@ -67,7 +67,7 @@ export const MobileContactBar = ({
           asChild
           className={
             directPhone
-              ? "size-14 shrink-0 rounded-full bg-zinc-950 p-0 text-white shadow-[0_4px_12px_rgba(0,0,0,0.18)] hover:bg-black active:scale-95 [&_svg]:size-6"
+              ? "size-13 shrink-0 rounded-full bg-zinc-950 p-0 text-white shadow-[0_4px_12px_rgba(0,0,0,0.18)] hover:bg-black active:scale-95 [&_svg]:size-6"
               : "h-12 flex-1 gap-2 rounded-xl bg-zinc-950 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.14)] transition-[background-color,transform,box-shadow] hover:bg-black active:scale-[0.99] active:bg-black"
           }
         >
