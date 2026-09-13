@@ -6,7 +6,6 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { leadSite } from "@repo/marketplace";
 import {
-  MobileMarketplaceOverlayBackAction,
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
@@ -64,13 +63,6 @@ export const MobileSellVehicleDetailsDrawer = ({
   const vinRef = useRef<HTMLInputElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const resetRef = useRef<HTMLButtonElement>(null);
-  const close = () => {
-    if (formRef.current) {
-      setDraft(readSellVehicleDraft(readMobileFormDraft(formRef.current)));
-    }
-    setConfirmReset(false);
-    onOpenChange(false);
-  };
 
   return (
     <MobileMarketplaceOverlayShell
@@ -104,12 +96,6 @@ export const MobileSellVehicleDetailsDrawer = ({
     >
       <MobileMarketplaceOverlayHeader
         description={content.formDescription}
-        leftAction={
-          <MobileMarketplaceOverlayBackAction
-            ariaLabel={content.backToSell}
-            onClick={close}
-          />
-        }
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={content.close} />
         }
