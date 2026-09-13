@@ -273,13 +273,13 @@ export const ExternalImportListings = ({
 
     return (
       <div
-        className="flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-6 text-center lg:min-h-44"
+        className="flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-5 text-center lg:min-h-44 lg:pb-6"
         data-provider-state={unavailableFeed?.status ?? "unavailable"}
       >
         {unavailableFeed?.status === "disabled" ? (
           <Image
             alt=""
-            className="mb-4 h-44 w-[calc(100%+2.5rem)] max-w-none object-cover lg:h-64"
+            className="mb-2 h-38 w-[calc(100%+2.5rem)] max-w-none object-cover lg:mb-4 lg:h-64"
             height={1024}
             sizes="(max-width: 1023px) 100vw, 640px"
             src="/images/services/import-banner-v2.png"
@@ -291,7 +291,10 @@ export const ExternalImportListings = ({
             className="mt-6 size-5 text-muted-foreground"
           />
         )}
-        <h2 className="mt-2 font-semibold text-sm" id={headingId}>
+        <h2
+          className="mt-2 font-semibold text-lg leading-6 lg:text-sm"
+          id={headingId}
+        >
           {getUnavailableCopy(unavailableFeed, isBg)}
         </h2>
         <p className="mt-2 max-w-sm text-sm text-zinc-600 leading-5">

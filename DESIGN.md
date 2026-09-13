@@ -4,6 +4,8 @@ This file records the incumbent visual and interaction system that has been prov
 
 ## Mobile control density — September 13, 2026
 
+The mobile Import request banner keeps its existing artwork in a 152px-tall image area, with an 18px/24px semibold heading, 14px/20px regular description and 15px/20px medium request action. Use 20px bottom padding and an 8px image margin; preserve the desktop banner dimensions.
+
 Sell's three next steps share one white rounded container with 16px padding and 20px row gaps, without dividers. Keep the heading accessible but visually hidden, numbers beside the step titles, and regular-weight descriptions below. Do not restore separate cards or the visible heading above them.
 
 Menu Call and Location actions share 48px minimum height, 20px icons, 16px/24px medium labels (`text-body`), 8px horizontal padding and a 6px icon gap. Keep both labels on one line at 320px; preserve their existing equal-width black surfaces and destinations.
