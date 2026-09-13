@@ -202,12 +202,12 @@ export const DealerBottomNav = ({
             >
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
-                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.phoneHref}
                 onClick={() => setMenuOpen(false)}
               >
                 <DealerUiIcon className="size-5 shrink-0" name="phone" />
-                <span className="whitespace-nowrap font-semibold text-[14px] tabular-nums leading-5">
+                <span className="whitespace-nowrap font-medium text-body tabular-nums">
                   {isBg ? "Обади се" : "Call us"}
                 </span>
               </a>
@@ -217,14 +217,14 @@ export const DealerBottomNav = ({
                     ? `Отворете картата: ${leadSite.address}`
                     : "Open showroom map"
                 }
-                className="flex min-h-12 min-w-0 items-center justify-center gap-2 rounded-xl bg-zinc-950 px-2.5 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
+                className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
                 href={leadSite.mapsUrl}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
                 target="_blank"
               >
                 <DealerUiIcon className="size-5 shrink-0" name="location" />
-                <span className="min-w-0 text-center font-semibold text-[14px] leading-5">
+                <span className="min-w-0 whitespace-nowrap text-center font-medium text-body">
                   {isBg ? "Посети ни" : "Visit us"}
                 </span>
               </a>

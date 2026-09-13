@@ -4,6 +4,8 @@ This file records the incumbent visual and interaction system that has been prov
 
 ## Mobile control density — September 13, 2026
 
+Menu Call and Location actions share 48px minimum height, 20px icons, 16px/24px medium labels (`text-body`), 8px horizontal padding and a 6px icon gap. Keep both labels on one line at 320px; preserve their existing equal-width black surfaces and destinations.
+
 For mobile PDPs with a direct telephone action, use a 52px circular call button with a 24px icon, fixed 16px from the right and 16px above the bottom safe area. Keep its accessible call label and telephone destination. Do not render a full-width bottom background behind it. Preserve document bottom clearance so final content can scroll above the action. Non-telephone enquiry actions retain their labelled treatment.
 
 PDP mobile segments are 44px overall: 40px buttons inside 2px padding, with transparent pseudo-elements extending each button's touch area to the full 44px height. Labels use the existing 16px/24px `text-body` token with medium weight on both states; the selected surface indicates selection. Combined mobile specification values use the existing 15px/20px `text-compact-control` token with regular weight. Preserve the vehicle title at 20px/28px regular and the stronger price hierarchy.
