@@ -167,7 +167,7 @@ export const ListingDetail = ({
               />
             </div>
             {leadSite.staticDemoMode ? (
-              <div className="lg:hidden">
+              <div className="bg-card px-4 py-5 lg:hidden">
                 <ListingLocation locale={locale} />
               </div>
             ) : null}
