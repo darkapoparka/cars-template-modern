@@ -56,21 +56,16 @@ export const MobileSellVehicleExperience = ({
             <ol className="grid gap-2">
               {mobileSellVehicleCopy[locale].howSteps.map(
                 ({ title, description }, index) => (
-                  <li
-                    className="flex items-start gap-3 rounded-2xl bg-white p-4"
-                    key={title}
-                  >
-                    <span className="w-5 shrink-0 whitespace-nowrap pt-0.5 font-semibold text-[12px] text-muted-foreground tabular-nums">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <div className="min-w-0">
-                      <p className="font-semibold text-[15px] text-zinc-950 leading-5">
-                        {title}
-                      </p>
-                      <p className="mt-1 text-[13px] text-zinc-600 leading-5">
-                        {description}
-                      </p>
-                    </div>
+                  <li className="rounded-2xl bg-white p-3" key={title}>
+                    <p className="font-semibold text-[15px] text-zinc-950 leading-5">
+                      <span className="mr-2 text-[13px] text-muted-foreground tabular-nums">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      {title}
+                    </p>
+                    <p className="mt-1 text-[13px] text-zinc-600 leading-5">
+                      {description}
+                    </p>
                   </li>
                 )
               )}

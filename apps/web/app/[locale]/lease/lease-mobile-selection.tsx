@@ -242,11 +242,6 @@ export const LeaseMobileSelection = ({
           </>
         ) : (
           <div className="mt-3 grid gap-2" data-slot="lease-vehicle-inventory">
-            <p className="pb-1 text-[13px] text-zinc-600 leading-5">
-              {locale === "bg"
-                ? "Изберете автомобил за оферта"
-                : "Select a vehicle for an offer"}
-            </p>
             {filtered.length ? (
               filtered.map((vehicle) => (
                 <LeaseSelectedVehicle
