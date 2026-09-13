@@ -112,10 +112,6 @@ export const MobileSellVehicleDetailsDrawer = ({
         ref={formRef}
       >
         <input name="intent" type="hidden" value="sell" />
-        <p className="mb-4 text-[14px] text-zinc-600 leading-5">
-          {content.formDescription}
-        </p>
-
         <div className="grid gap-1.5">
           <Label className="font-medium text-[13px]" htmlFor="mobile-sell-vin">
             {content.vinOptional}
