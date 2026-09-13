@@ -138,7 +138,7 @@ export const ListingDetailsTabs = ({
       <div className="mb-4 lg:hidden" data-slot="listing-details-tabs-mobile">
         <div
           aria-label={copy.ariaLabel}
-          className="mt-3 inline-grid grid-cols-2 rounded-xl bg-zinc-100 p-0.5"
+          className="mt-4 grid w-full grid-cols-2 rounded-xl bg-zinc-100 p-0.5"
           role="tablist"
         >
           {mobileTabs.map((tab) => {
@@ -148,7 +148,7 @@ export const ListingDetailsTabs = ({
               <button
                 aria-controls={`listing-mobile-panel-${tab.id}`}
                 aria-selected={isActive}
-                className={`relative inline-flex h-11 min-w-[100px] items-center justify-center rounded-[10px] px-4 text-[14px] leading-none transition-colors duration-150 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                className={`relative inline-flex h-11 min-w-0 items-center justify-center rounded-[10px] px-4 text-[14px] leading-none transition-colors duration-150 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
                   isActive
                     ? "bg-white font-semibold text-zinc-950 shadow-sm"
                     : "font-medium text-zinc-600 hover:text-zinc-950 active:bg-zinc-200"

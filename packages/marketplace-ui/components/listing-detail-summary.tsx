@@ -146,25 +146,27 @@ export const MobileListingSummary = ({
 
   return (
     <section className="pt-5 pb-1 lg:hidden" data-slot="listing-mobile-summary">
-      <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
-        <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
-          {formatMoney(primaryPrice, locale)}
-        </p>
-        {listing.monthlyEstimate ? (
-          <p className="text-meta text-muted-foreground tabular-nums min-[360px]:shrink-0">
-            ~{formatMoney(listing.monthlyEstimate, locale)}/{copy.month}
+      <div className="border-zinc-200 border-b pb-4">
+        <div className="flex min-w-0 flex-col items-start gap-1 min-[360px]:flex-row min-[360px]:items-end min-[360px]:justify-between min-[360px]:gap-4">
+          <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
+            {formatMoney(primaryPrice, locale)}
+          </p>
+          {listing.monthlyEstimate ? (
+            <p className="text-meta text-muted-foreground tabular-nums min-[360px]:shrink-0">
+              ~{formatMoney(listing.monthlyEstimate, locale)}/{copy.month}
+            </p>
+          ) : null}
+        </div>
+        {approximatePrice ? (
+          <p className="mt-1 text-meta text-muted-foreground">
+            ≈ {formatMoney(approximatePrice, locale)} ·{" "}
+            {copy.approximateConversion}
+            {conversionTime ? ` ${copy.conversionAt} ${conversionTime}` : ""}
           </p>
         ) : null}
       </div>
-      {approximatePrice ? (
-        <p className="mt-1 text-meta text-muted-foreground">
-          ≈ {formatMoney(approximatePrice, locale)} ·{" "}
-          {copy.approximateConversion}
-          {conversionTime ? ` ${copy.conversionAt} ${conversionTime}` : ""}
-        </p>
-      ) : null}
 
-      <h1 className="mt-3 text-pretty break-words font-semibold text-section-title">
+      <h1 className="mt-4 text-pretty break-words font-normal text-[20px] text-zinc-900 leading-7">
         {listing.title}
       </h1>
       {showPhysicalLocation ? (
