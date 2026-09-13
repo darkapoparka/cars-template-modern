@@ -46,11 +46,17 @@ export const ListingDetailContent = ({
 }) => {
   const copy = getListingDetailCopy(locale);
   const isBg = locale?.startsWith("bg") ?? false;
-  let financingLabel = isBg ? "Лизинг и финансиране" : "Finance options";
-
-  if (listing.monthlyEstimate) {
-    financingLabel = `${isBg ? "Лизинг от" : "Finance from"} ~${formatMoney(listing.monthlyEstimate, locale)}/${copy.month}`;
-  }
+  const monthlyEstimate = listing.monthlyEstimate;
+  const financingFallback = isBg ? "Лизинг и финансиране" : "Finance options";
+  // Fixed BGN/EUR conversion; preserve amounts already denominated in euros.
+  const financingAmount = monthlyEstimate
+    ? formatMoney(
+        monthlyEstimate.currency === "BGN"
+          ? { amount: monthlyEstimate.amount / 1.955_83, currency: "EUR" }
+          : monthlyEstimate,
+        locale
+      )
+    : undefined;
 
   return (
     <>
@@ -118,8 +124,22 @@ export const ListingDetailContent = ({
                   width={1780}
                 />
               </span>
-              <span className="block text-pretty font-semibold text-[15px] leading-5">
-                {financingLabel}
+              <span className="block font-semibold text-[20px] leading-6 tracking-tight">
+                {financingAmount ? (
+                  <>
+                    <span className="block">
+                      {isBg ? "Лизинг от" : "Finance from"}
+                    </span>
+                    <span className="block whitespace-nowrap">
+                      ~{financingAmount}
+                      <span className="font-medium text-[14px]">
+                        /{copy.month}
+                      </span>
+                    </span>
+                  </>
+                ) : (
+                  financingFallback
+                )}
               </span>
               <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-[12px] leading-4">
                 {isBg ? "Виж условията" : "View options"}
