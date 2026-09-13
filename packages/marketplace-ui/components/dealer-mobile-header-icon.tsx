@@ -16,7 +16,7 @@ const artworkPaths = {
   filters: "/images/services/header-filters-v1.png",
   info: "/images/services/header-info-v1.png",
   location: "/images/services/header-location-v1.png",
-  phone: "/images/services/header-phone-v3.png",
+  phone: "/images/services/header-phone-v4.png",
 };
 
 // Balance the visible silhouettes, including each image's transparent margins.
@@ -29,7 +29,7 @@ const artworkSize = {
   filters: "size-7",
   info: "size-[30px]",
   location: "size-[30px]",
-  phone: "size-8",
+  phone: "size-[30px]",
   guides: "size-[30px]",
 };
 
