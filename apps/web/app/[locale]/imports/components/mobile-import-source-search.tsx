@@ -71,7 +71,7 @@ export const MobileImportSourceSearch = ({
           aria-expanded={open}
           aria-haspopup="dialog"
           aria-label={copy.open}
-          className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
+          className="flex h-12 w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] active:bg-zinc-200"
           disabled={!ready}
           onClick={() => setOpen(true)}
           ref={triggerRef}
@@ -82,7 +82,7 @@ export const MobileImportSourceSearch = ({
             name="search"
           />
           <span
-            className={`min-w-0 flex-1 truncate text-[15px] ${
+            className={`min-w-0 flex-1 truncate font-medium text-body ${
               sourceUrl ? "text-zinc-950" : "text-zinc-500"
             }`}
           >

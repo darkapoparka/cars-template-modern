@@ -2,6 +2,12 @@
 
 This file records the incumbent visual and interaction system that has been proven in the rendered Day & Night client demo. It is a preservation contract for future polish, not permission to redesign the product.
 
+## Mobile control density — September 13, 2026
+
+This geometry supersedes the older 52px header-control and 44px visible-pill guidance below. Home/Cars, Import, Sell, Lease and Guides use a 48px primary header control with 16px/24px medium text (`text-body`). `MobileDealerChrome` and loading shells reserve the same 48px slot. The condensed scrolling search remains 44px with 15px/20px medium text (`text-compact-control`), aligned with the unchanged 44px header icon buttons. Actual overlay entry fields retain their existing 52px height.
+
+Shared quick pills use 15px/20px medium text and a 40px visible fill within a 44px touch target. Transparent 2px top and bottom borders with padding-box background clipping keep the touch area inside horizontal rails; do not shrink the clickable button to 40px or extend overlapping hit areas outside the rail. Selected pills retain their existing black fill and semibold text. At zero safe-area inset the primary control runs from y=64 to y=112, and the rounded content begins at y=124.
+
 ## Mobile refinement — September 6, 2026
 
 The owner's phone review supersedes the older masthead guidance below. All mobile masthead actions share one softly filled circular style from `mobile-header-icon-action.ts`: 44px borderless circular targets with a 10% current-color fill, 15% hover, 20% pressed and a faint inset highlight on every route and 24px Hugeicons Stroke Rounded SVGs from `dealer-mobile-header-icon.tsx`, using their original 1.5px strokes, matching fill feedback and focus outlines. Use white on black/red headers and dark foreground on yellow/pale headers for contrast. This includes Home/Cars category and filters, the scrolling header, service info/call, Contact location/call, secondary pages, and loading shells. Keep the 144px logo. Cars uses Car01, filters use FilterHorizontal, help uses MessageQuestion, phone uses Call02, and location uses Location01 from Hugeicons 4.3.0. The used icon definitions are vendored unchanged with their MIT license; mobile service cards, main-menu actions, and overlay controls use the same family. Mobile pill rails retain a 16px inset and a 12px fade only on edges with hidden content. Active filters retain the red count badge. Dialog close/back controls retain their existing surfaces.

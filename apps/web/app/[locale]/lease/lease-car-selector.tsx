@@ -46,7 +46,7 @@ export function LeaseCarSelector({
     <>
       <button
         aria-haspopup="dialog"
-        className="flex h-[52px] w-full items-center justify-between gap-3 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+        className="flex h-12 w-full items-center justify-between gap-3 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
         data-slot="lease-mobile-vehicle-trigger"
         id="finance-vehicle"
         onClick={() => {
@@ -63,7 +63,7 @@ export function LeaseCarSelector({
             className="h-5 w-7"
             sizes="28px"
           />
-          <span className="font-normal text-[16px] text-zinc-600 leading-5">
+          <span className="font-medium text-body text-zinc-600">
             {selectedVehicle ? copy.changeVehicle : copy.vehicleLabel}
           </span>
         </span>

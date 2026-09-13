@@ -125,7 +125,7 @@ export const MobileContentHub = ({
               />
             }
           >
-            <div className="flex h-[52px] items-center gap-2.5 rounded-full bg-white px-4 text-zinc-950 ring-1 ring-white/20 ring-inset focus-within:outline-2 focus-within:outline-white">
+            <div className="flex h-12 items-center gap-2.5 rounded-full bg-white px-4 text-zinc-950 ring-1 ring-white/20 ring-inset focus-within:outline-2 focus-within:outline-white">
               <Search
                 aria-hidden="true"
                 className="size-[18px] shrink-0 text-muted-foreground"
@@ -137,7 +137,7 @@ export const MobileContentHub = ({
                 aria-label={
                   isBg ? "Търси съвети и статии" : "Search guides and articles"
                 }
-                className="min-w-0 flex-1 bg-transparent text-[16px] outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                className="min-w-0 flex-1 bg-transparent font-medium text-body outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                 disabled={!ready}
                 id="content-search"
                 onChange={(event) =>

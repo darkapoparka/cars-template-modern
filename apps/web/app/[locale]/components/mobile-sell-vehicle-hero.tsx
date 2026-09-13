@@ -50,7 +50,7 @@ export const MobileSellVehicleHero = ({
             aria-label={
               locale === "bg" ? "Въведете VIN номер" : "Enter VIN number"
             }
-            className="flex h-[52px] w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
+            className="flex h-12 w-full items-center gap-2 rounded-full bg-white px-4 text-left text-zinc-950 focus-visible:outline-2 focus-visible:outline-zinc-900 focus-visible:outline-offset-2 active:bg-zinc-100"
             data-slot="mobile-sell-vin-entry"
             disabled={!ready}
             onClick={onOpenVin}
@@ -61,7 +61,7 @@ export const MobileSellVehicleHero = ({
               className="size-[18px] shrink-0 text-zinc-500"
             />
             <span
-              className={`min-w-0 flex-1 truncate text-[16px] ${vin ? "text-zinc-950" : "text-zinc-500"}`}
+              className={`min-w-0 flex-1 truncate font-medium text-body ${vin ? "text-zinc-950" : "text-zinc-500"}`}
             >
               {vin || content.vin}
             </span>

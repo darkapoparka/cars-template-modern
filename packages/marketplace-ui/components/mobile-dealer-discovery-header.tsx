@@ -172,7 +172,7 @@ const MobileSearchButton = ({
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
       isCompact
         ? "h-11 flex-1 rounded-full px-3"
-        : "h-[52px] w-full rounded-full px-4"
+        : "h-12 w-full rounded-full px-4"
     )}
     data-slot="mobile-discovery-search"
     onClick={(event) => openFromButton(event, onOpenSearch)}
@@ -185,11 +185,11 @@ const MobileSearchButton = ({
     />
     <span
       className={cn(
-        "min-w-0 flex-1 truncate tabular-nums leading-5",
-        isCompact ? "text-[15px]" : "text-[16px]",
-        hasMakeModelSelection
-          ? "font-medium text-zinc-950"
-          : "font-normal text-zinc-600"
+        "min-w-0 flex-1 truncate font-medium tabular-nums",
+        isCompact
+          ? "text-[length:var(--text-compact-control)] leading-[var(--text-compact-control--line-height)]"
+          : "text-[length:var(--text-body)] leading-[var(--text-body--line-height)]",
+        hasMakeModelSelection ? "text-zinc-950" : "text-zinc-600"
       )}
     >
       {hasMakeModelSelection ? makeModelValue : searchLabel}

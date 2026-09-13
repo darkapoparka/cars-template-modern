@@ -44,7 +44,7 @@ const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
         locale="bg"
         tone={mobileTone}
       >
-        <div className="h-[52px] rounded-full bg-white" />
+        <div className="h-12 rounded-full bg-white" />
       </MobileDealerServiceHero>
     ) : (
       <div className="bg-zinc-950">
@@ -57,7 +57,7 @@ const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
             </div>
           }
         >
-          <div className="h-[52px] rounded-full bg-white" />
+          <div className="h-12 rounded-full bg-white" />
         </MobileDealerChrome>
       </div>
     )}
@@ -68,7 +68,7 @@ const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
       <div className="flex gap-2 overflow-hidden">
         {loadingFilters.slice(0, 5).map((filter) => (
           <div
-            className="h-11 w-24 shrink-0 rounded-full bg-zinc-200"
+            className="h-11 w-24 shrink-0 rounded-full border-transparent border-y-2 bg-zinc-200 bg-clip-padding"
             key={filter}
           />
         ))}
