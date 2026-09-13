@@ -10,6 +10,7 @@ import {
 } from "@repo/design-system/components/ui/drawer";
 import {
   DealerMobileBrandBar,
+  DealerMobileHeaderIcon,
   getMobileQuickPillClassName,
   MobileDealerChrome,
   MobilePillRail,
@@ -98,7 +99,7 @@ export const MobileContentHub = ({
                     className={mobileHeaderIconActionClassName}
                     href={localize("/guides")}
                   >
-                    <BookOpenText aria-hidden="true" className="size-5" />
+                    <DealerMobileHeaderIcon icon={BookOpenText} kind="guides" />
                   </Link>
                 }
                 locale={locale}
@@ -115,7 +116,10 @@ export const MobileContentHub = ({
                     ref={filterTrigger}
                     type="button"
                   >
-                    <SlidersHorizontal aria-hidden="true" className="size-5" />
+                    <DealerMobileHeaderIcon
+                      icon={SlidersHorizontal}
+                      kind="filters"
+                    />
                   </button>
                 }
               />
