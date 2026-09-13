@@ -27,6 +27,7 @@ const getTabCopy = (locale?: string) => {
       ? "Раздели с информация за обявата"
       : "Listing information sections",
     details: isBg ? "Детайли" : "Details",
+    description: isBg ? "Описание" : "Description",
     equipment: isBg ? "Екстри" : "Extras",
     information: isBg ? "Информация" : "Information",
     overview: isBg ? "Обзор" : "Overview",
@@ -44,8 +45,8 @@ export const ListingDetailsTabs = ({
 }: ListingDetailsTabsProps) => {
   const copy = getTabCopy(locale);
   const mobileTabs: readonly { id: MobileListingTabId; label: string }[] = [
-    { id: "overview", label: copy.overview },
     { id: "details", label: copy.details },
+    { id: "overview", label: copy.description },
   ];
   const desktopTabs: readonly { id: DesktopListingTabId; label: string }[] = [
     { id: "overview", label: copy.overview },
@@ -69,7 +70,7 @@ export const ListingDetailsTabs = ({
     specifications,
   };
   const [mobileActiveTab, setMobileActiveTab] =
-    useState<MobileListingTabId>("overview");
+    useState<MobileListingTabId>("details");
   const [desktopActiveTab, setDesktopActiveTab] =
     useState<DesktopListingTabId>("overview");
   const mobileTabRefs = useRef<

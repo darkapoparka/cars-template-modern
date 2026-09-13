@@ -57,7 +57,12 @@ for (const size of sizes) {
     await page.setViewportSize(size);
     await page.goto(listing);
     await expect(
-      page.getByRole("tab", { name: "Обзор", exact: true })
+      page.getByRole("tab", { name: "Детайли", exact: true })
+    ).toHaveAttribute("aria-selected", "true");
+    await expectNoOverflow(page);
+    await page.getByRole("tab", { name: "Описание", exact: true }).click();
+    await expect(
+      page.getByRole("tabpanel", { name: "Описание", exact: true })
     ).toBeVisible();
     await expectNoOverflow(page);
     await page.getByRole("tab", { name: "Детайли", exact: true }).click();
