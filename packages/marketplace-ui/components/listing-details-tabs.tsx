@@ -148,10 +148,10 @@ export const ListingDetailsTabs = ({
               <button
                 aria-controls={`listing-mobile-panel-${tab.id}`}
                 aria-selected={isActive}
-                className={`relative inline-flex h-11 min-w-0 items-center justify-center rounded-[10px] px-4 text-[14px] leading-none transition-colors duration-150 focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                className={`relative inline-flex h-10 min-w-0 items-center justify-center rounded-[10px] px-4 font-medium text-body transition-colors duration-150 after:absolute after:inset-x-0 after:-inset-y-0.5 after:content-[''] focus-visible:z-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
                   isActive
-                    ? "bg-white font-semibold text-zinc-950 shadow-sm"
-                    : "font-medium text-zinc-600 hover:text-zinc-950 active:bg-zinc-200"
+                    ? "bg-white text-zinc-950 shadow-sm"
+                    : "text-zinc-600 hover:text-zinc-950 active:bg-zinc-200"
                 }`}
                 id={`listing-mobile-tab-${tab.id}`}
                 key={tab.id}

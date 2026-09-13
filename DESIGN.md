@@ -4,6 +4,8 @@ This file records the incumbent visual and interaction system that has been prov
 
 ## Mobile control density — September 13, 2026
 
+PDP mobile segments are 44px overall: 40px buttons inside 2px padding, with transparent pseudo-elements extending each button's touch area to the full 44px height. Labels use the existing 16px/24px `text-body` token with medium weight on both states; the selected surface indicates selection. Combined mobile specification values use the existing 15px/20px `text-compact-control` token with regular weight. Preserve the vehicle title at 20px/28px regular and the stronger price hierarchy.
+
 This geometry supersedes the older 52px header-control and 44px visible-pill guidance below. Home/Cars, Import, Sell, Lease and Guides use a 48px primary header control with 16px/24px medium text (`text-body`). `MobileDealerChrome` and loading shells reserve the same 48px slot. The condensed scrolling search remains 44px with 15px/20px medium text (`text-compact-control`), aligned with the unchanged 44px header icon buttons. Actual overlay entry fields retain their existing 52px height.
 
 Shared quick pills use 15px/20px medium text and a 40px visible fill within a 44px touch target. Transparent 2px top and bottom borders with padding-box background clipping keep the touch area inside horizontal rails; do not shrink the clickable button to 40px or extend overlapping hit areas outside the rail. Selected pills retain their existing black fill and semibold text. At zero safe-area inset the primary control runs from y=64 to y=112, and the rounded content begins at y=124.

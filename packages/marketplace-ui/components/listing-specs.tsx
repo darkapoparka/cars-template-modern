@@ -209,7 +209,7 @@ export const ListingSpecs = ({
               <dd
                 className={
                   mobileCombined
-                    ? "mt-1.5 break-words font-semibold text-[15px] text-zinc-950 tabular-nums leading-5"
+                    ? "mt-1.5 break-words font-normal text-compact-control text-zinc-950 tabular-nums"
                     : "mt-1.5 break-words font-semibold text-[15px] text-zinc-950 tabular-nums leading-5 lg:mt-3 lg:text-dialog-title lg:tracking-tight"
                 }
               >
