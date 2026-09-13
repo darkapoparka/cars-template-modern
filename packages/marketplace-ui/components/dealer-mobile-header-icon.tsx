@@ -29,7 +29,7 @@ const artworkSize = {
   filters: "size-7",
   info: "size-[30px]",
   location: "size-[30px]",
-  phone: "size-8 -rotate-90",
+  phone: "size-8 -rotate-45",
   guides: "size-[30px]",
 };
 
