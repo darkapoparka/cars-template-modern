@@ -70,7 +70,7 @@ const OrganizationIdentityHeader = ({
         url={organization.logoUrl ?? organization.defaultAvatar?.src}
       />
       <div className="min-w-0 flex-1">
-        <h3 className="line-clamp-2 font-semibold text-card-title">
+        <h3 className="line-clamp-2 font-semibold text-card-title lg:text-card-title-lg">
           <Link
             className="rounded-sm text-foreground hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             href={organization.profileAction.href}
@@ -287,7 +287,7 @@ const MobileOrganizationProfileCard = ({
       <DesktopOrganizationProfileImage organization={organization} />
       <div className="min-w-0 flex-1">
         <div className="flex min-w-0 items-center gap-1.5">
-          <h3 className="min-w-0 flex-1 break-words font-semibold text-card-title">
+          <h3 className="min-w-0 flex-1 break-words font-semibold text-card-title lg:text-card-title-lg">
             <Link
               className="rounded-sm text-foreground after:absolute after:inset-0 hover:underline hover:underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               href={organization.profileAction.href}
@@ -353,7 +353,7 @@ const DesktopOrganizationProfileCard = ({
     <div className="grid min-w-0 grid-cols-[4rem_minmax(0,1fr)] items-center gap-3">
       <DesktopOrganizationProfileImage organization={organization} />
       <div className="min-w-0 flex-1">
-        <h3 className="min-w-0 font-semibold text-card-title">
+        <h3 className="min-w-0 font-semibold text-card-title lg:text-card-title-lg">
           <Tooltip>
             <TooltipTrigger asChild>
               <Link

@@ -153,7 +153,7 @@ export const MobileListingSummary = ({
     <section className="pt-4 pb-1 lg:hidden" data-slot="listing-mobile-summary">
       <div className="border-zinc-200 border-b pb-3">
         <div className="flex min-w-0 items-baseline justify-between gap-2">
-          <p className="min-w-0 break-words font-semibold text-price-lg tabular-nums tracking-tight">
+          <p className="min-w-0 break-words font-semibold text-price tabular-nums tracking-heading lg:text-price-lg">
             {formatMoney(primaryPrice, locale)}
           </p>
           {monthlyAmount ? (

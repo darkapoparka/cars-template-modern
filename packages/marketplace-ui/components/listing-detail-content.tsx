@@ -65,7 +65,7 @@ export const ListingDetailContent = ({
             className="py-1 lg:rounded-xl lg:bg-control lg:px-5 lg:py-6"
             data-slot="listing-description"
           >
-            <h2 className="hidden font-semibold text-card-title lg:block">
+            <h2 className="hidden font-semibold text-card-title-lg lg:block">
               {copy.description}
             </h2>
             <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">

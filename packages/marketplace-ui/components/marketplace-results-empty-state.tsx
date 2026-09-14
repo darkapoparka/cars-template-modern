@@ -50,7 +50,9 @@ export const MarketplaceResultsEmptyState = ({
       <span className="mb-4 grid size-12 place-items-center rounded-full border border-zinc-200/70 bg-white shadow-sm">
         <Search aria-hidden="true" className="size-5 text-zinc-500" />
       </span>
-      <h2 className="font-semibold text-card-title">{title}</h2>
+      <h2 className="font-semibold text-card-title lg:text-card-title-lg">
+        {title}
+      </h2>
       <p className="mt-1.5 max-w-sm text-meta text-muted-foreground leading-5">
         {description}
       </p>

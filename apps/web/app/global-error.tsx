@@ -1,8 +1,8 @@
 "use client";
 
-import { publicFonts } from "@repo/design-system/lib/public-fonts";
 import { usePathname } from "next/navigation";
 import { PublicErrorState } from "@/components/public-error-state";
+import { fonts } from "@/lib/fonts";
 import { getPublicGlobalErrorCopy } from "@/lib/public-global-error";
 
 interface GlobalErrorProps {
@@ -14,7 +14,7 @@ const GlobalError = ({ error, reset }: GlobalErrorProps) => {
   const copy = getPublicGlobalErrorCopy(usePathname());
 
   return (
-    <html className={publicFonts} lang={copy.lang}>
+    <html className={fonts} lang={copy.lang}>
       <body>
         <PublicErrorState error={error} reset={reset} />
       </body>

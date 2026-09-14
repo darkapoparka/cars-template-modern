@@ -135,7 +135,7 @@ export const ResultToolbar = ({
         )}
       >
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold text-card-title">
+          <p className="truncate font-semibold text-card-title-lg">
             {resultTitle}
           </p>
           <p

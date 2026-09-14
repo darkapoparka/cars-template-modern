@@ -35,4 +35,4 @@ The refactor is complete only when:
 - `pnpm check`, `pnpm boundaries`, `pnpm unit`, `pnpm typecheck`, and production build pass;
 - public E2E and the 320/360/390/430/768/1024/1440 viewport matrix show no accepted-UI regression.
 
-See `AUDIT.md`, `PLAN.md`, `TARGET_ARCHITECTURE.md`, and `QA_AND_MIGRATION.md` for the detailed contract.
+See `AUDIT.md`, `PLAN.md`, `TARGET_ARCHITECTURE.md`, `QA_AND_MIGRATION.md`, and `TYPOGRAPHY-TASKS.md` for the detailed contracts.

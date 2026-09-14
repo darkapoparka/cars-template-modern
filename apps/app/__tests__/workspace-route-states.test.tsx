@@ -9,7 +9,7 @@ const mocks = vi.hoisted(() => ({
 vi.mock("@sentry/nextjs", () => ({
   captureException: mocks.captureException,
 }));
-vi.mock("@repo/design-system/lib/fonts", () => ({
+vi.mock("@/lib/fonts", () => ({
   fonts: "font-test",
 }));
 

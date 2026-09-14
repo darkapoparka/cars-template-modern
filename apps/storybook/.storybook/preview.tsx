@@ -36,7 +36,7 @@ const preview: Preview = {
       defaultTheme: "light",
     }),
     (Story) => (
-      <div className="bg-background">
+      <div className="bg-background font-sans">
         <ThemeProvider>
           <TooltipProvider>
             <Story />

@@ -523,7 +523,7 @@ const ComparisonVehicleCardContent = ({
       {presentation === "discovery" ? (
         <div data-slot="vehicle-card-title-row">
           <h2
-            className="line-clamp-2 min-w-0 font-medium text-card-title text-foreground lg:min-h-10"
+            className="line-clamp-2 min-w-0 font-medium text-card-title text-foreground lg:min-h-10 lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
@@ -546,7 +546,7 @@ const ComparisonVehicleCardContent = ({
             />
           </div>
           <h2
-            className="line-clamp-2 font-medium text-card-title text-foreground"
+            className="line-clamp-2 font-medium text-card-title text-foreground lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
@@ -598,7 +598,7 @@ const ListVehicleCardContent = ({
       href={listingHref}
     >
       <h2
-        className="line-clamp-2 font-medium text-card-title text-foreground"
+        className="line-clamp-2 font-medium text-card-title text-foreground lg:text-card-title-lg"
         data-slot="vehicle-card-title"
       >
         {getVehicleCardTitle(listing, variant)}

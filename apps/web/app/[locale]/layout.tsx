@@ -12,9 +12,9 @@ import { isLocale, locales, normalizeLocale } from "@repo/internationalization";
 import { leadSite } from "@repo/marketplace";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { CSSProperties, ReactNode } from "react";
+import { fonts } from "@/lib/fonts";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileFinancingInterceptor } from "./components/mobile-financing-interceptor";
@@ -24,12 +24,6 @@ interface RootLayoutProperties {
   readonly children: ReactNode;
   readonly params: Promise<{ locale: string }>;
 }
-
-const publicSans = Inter({
-  display: "swap",
-  subsets: ["cyrillic", "latin"],
-  variable: "--font-public-sans",
-});
 
 export const metadata: Metadata = {
   applicationName: leadSite.name,
@@ -50,11 +44,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
 
   return (
     <html
-      className={cn(
-        publicSans.className,
-        publicSans.variable,
-        "touch-manipulation scroll-smooth subpixel-antialiased"
-      )}
+      className={cn(fonts, "scroll-smooth")}
       data-scroll-behavior="smooth"
       lang={normalizedLocale}
       style={

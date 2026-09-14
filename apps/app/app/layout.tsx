@@ -4,11 +4,11 @@ import { AnalyticsProvider } from "@repo/analytics/provider";
 import { AuthProvider } from "@repo/auth/provider";
 import { Toaster } from "@repo/design-system/components/ui/sonner";
 import { TooltipProvider } from "@repo/design-system/components/ui/tooltip";
-import { fonts } from "@repo/design-system/lib/fonts";
 import { ThemeProvider } from "@repo/design-system/providers/theme";
 import { Toolbar } from "@repo/feature-flags/components/toolbar";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { fonts } from "@/lib/fonts";
 import { appIndexingMetadata } from "./indexing-policy";
 
 interface RootLayoutProperties {

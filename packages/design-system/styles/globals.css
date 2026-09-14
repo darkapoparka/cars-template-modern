@@ -67,6 +67,9 @@
   --sidebar-border: var(--border);
   --sidebar-ring: var(--focus);
 
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 }
 
@@ -126,9 +129,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono:
-    "Geist Mono", "Geist Mono Fallback", ui-monospace, SFMono-Regular, monospace;
+    var(--font-geist-mono), "Geist Mono", ui-monospace, SFMono-Regular,
+    monospace;
+  --tracking-heading: -0.02em;
+  --tracking-label: 0.08em;
   --text-micro: 0.75rem;
   --text-micro--line-height: 1rem;
   --text-meta: 0.875rem;
@@ -138,29 +144,31 @@
   --text-body: 1rem;
   --text-body--line-height: 1.5rem;
   --text-prose: 1rem;
-  --text-prose--line-height: 1.75rem;
+  --text-prose--line-height: 1.625rem;
   --text-dialog-title: 1.25rem;
   --text-dialog-title--line-height: 1.75rem;
   --text-dialog-description: 0.9375rem;
   --text-dialog-description--line-height: 1.375rem;
-  --text-card-title: 1.125rem;
-  --text-card-title--line-height: 1.5rem;
-  --text-price: 1.375rem;
-  --text-price--line-height: 1.75rem;
-  --text-price-lg: 1.5rem;
+  --text-card-title: 1rem;
+  --text-card-title--line-height: 1.3125rem;
+  --text-card-title-lg: 1.125rem;
+  --text-card-title-lg--line-height: 1.5rem;
+  --text-price: 1.25rem;
+  --text-price--line-height: 1.5rem;
+  --text-price-lg: 1.375rem;
   --text-price-lg--line-height: 1.75rem;
-  --text-section-title: 1.5rem;
-  --text-section-title--line-height: 2rem;
-  --text-section-title-lg: 1.875rem;
-  --text-section-title-lg--line-height: 2.25rem;
-  --text-page-title: 1.875rem;
-  --text-page-title--line-height: 2.25rem;
+  --text-section-title: 1.375rem;
+  --text-section-title--line-height: 1.75rem;
+  --text-section-title-lg: 1.5rem;
+  --text-section-title-lg--line-height: 2rem;
+  --text-page-title: 1.75rem;
+  --text-page-title--line-height: 2.125rem;
   --text-page-title-lg: 2.25rem;
-  --text-page-title-lg--line-height: 2.5rem;
-  --text-display: 2.25rem;
-  --text-display--line-height: 2.5rem;
-  --text-display-lg: 3.75rem;
-  --text-display-lg--line-height: 3.75rem;
+  --text-page-title-lg--line-height: 2.625rem;
+  --text-display: 2rem;
+  --text-display--line-height: 2.25rem;
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 3.25rem;
   --color-canvas: var(--canvas);
   --color-panel: var(--panel);
   --color-control: var(--control);
@@ -261,6 +269,8 @@
   }
   html {
     scrollbar-gutter: stable;
+    font-kerning: normal;
+    font-synthesis: none;
     text-rendering: optimizelegibility;
   }
   html body[data-scroll-locked] {

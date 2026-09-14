@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { fonts } from "@/lib/fonts";
 
 interface RootLayoutProperties {
   readonly children: ReactNode;
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: RootLayoutProperties) => (
-  <html lang="en">
+  <html className={fonts} lang="en">
     <body>{children}</body>
   </html>
 );

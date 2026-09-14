@@ -2,10 +2,10 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { Card } from "@repo/design-system/components/ui/card";
-import { fonts } from "@repo/design-system/lib/fonts";
 import { captureException } from "@sentry/nextjs";
 import { AlertTriangleIcon, HouseIcon, RotateCcwIcon } from "lucide-react";
 import { useEffect } from "react";
+import { fonts } from "@/lib/fonts";
 
 interface GlobalErrorProperties {
   readonly error: Error & { digest?: string };
