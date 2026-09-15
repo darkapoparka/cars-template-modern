@@ -72,7 +72,7 @@ export const ListingDetailContent = ({
               {listing.description}
             </p>
             {leadSite.staticDemoMode ? null : (
-              <p className="mt-4 max-w-2xl text-[13px] text-zinc-500 leading-5 lg:text-meta lg:text-muted-foreground">
+              <p className="mt-4 max-w-2xl text-meta text-zinc-500 lg:text-muted-foreground">
                 {copy.sellerDescription}
               </p>
             )}
@@ -116,7 +116,7 @@ export const ListingDetailContent = ({
                   width={1780}
                 />
               </span>
-              <span className="block font-semibold text-[20px] leading-6 tracking-tight">
+              <span className="block font-semibold text-dialog-title tracking-heading">
                 {financingAmount ? (
                   <>
                     <span className="block">
@@ -124,7 +124,7 @@ export const ListingDetailContent = ({
                     </span>
                     <span className="block whitespace-nowrap">
                       ~{financingAmount}
-                      <span className="font-medium text-[14px]">
+                      <span className="font-medium text-meta">
                         /{copy.month}
                       </span>
                     </span>
@@ -133,7 +133,7 @@ export const ListingDetailContent = ({
                   financingFallback
                 )}
               </span>
-              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-[12px] leading-4">
+              <span className="mt-auto inline-flex items-center gap-1.5 font-medium text-meta">
                 {isBg ? "Виж условията" : "View options"}
                 <ArrowUpRight
                   aria-hidden="true"
@@ -169,7 +169,7 @@ export const ListingDetailContent = ({
         >
           <div className="mb-4 flex items-center justify-between gap-2">
             <h2
-              className="whitespace-nowrap font-semibold text-[18px] tracking-tight min-[360px]:text-[19px]"
+              className="whitespace-nowrap font-semibold text-section-title tracking-heading"
               id="similar-heading"
             >
               {copy.similarVehicles}

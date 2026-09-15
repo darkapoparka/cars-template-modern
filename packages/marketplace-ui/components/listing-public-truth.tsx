@@ -129,14 +129,14 @@ const TruthRow = ({
   value,
 }: TruthRowProps) => (
   <div className="grid gap-1 py-2 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-4">
-    <dt className="flex items-center gap-2 text-muted-foreground text-xs">
+    <dt className="flex items-center gap-2 text-meta text-muted-foreground">
       <Icon aria-hidden={true} className="size-4 shrink-0" />
       {label}
     </dt>
     <dd>
-      <p className="font-medium text-sm">{value}</p>
+      <p className="font-medium text-compact-control">{value}</p>
       {detail && !compact ? (
-        <p className="mt-1 text-muted-foreground text-xs leading-5">{detail}</p>
+        <p className="mt-1 text-meta text-muted-foreground">{detail}</p>
       ) : null}
     </dd>
   </div>
@@ -170,13 +170,16 @@ export const ListingPublicTruth = ({
     >
       {compact ? null : (
         <>
-          <p className="font-medium text-muted-foreground text-xs uppercase tracking-wide">
+          <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
             {copy.publicTruth}
           </p>
-          <h2 className="mt-1 font-semibold text-lg" id="public-truth-heading">
+          <h2
+            className="mt-1 font-semibold text-card-title-lg tracking-heading"
+            id="public-truth-heading"
+          >
             {copy.heading}
           </h2>
-          <p className="mt-2 max-w-2xl text-muted-foreground text-sm leading-6">
+          <p className="mt-2 max-w-2xl text-body text-muted-foreground">
             {copy.intro}
           </p>
         </>
@@ -277,7 +280,7 @@ export const ListingPublicTruth = ({
       </dl>
 
       {isVerifiedImporter(listing) ? (
-        <p className="mt-4 flex items-start gap-2 text-sm">
+        <p className="mt-4 flex items-start gap-2 text-body">
           <ShieldCheck aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
           <span>
             <strong className="font-semibold">{copy.verifiedImporter}</strong>

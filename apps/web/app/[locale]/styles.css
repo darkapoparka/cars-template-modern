@@ -58,7 +58,8 @@
   [data-slot="drawer-content"] [data-slot="command-input"] {
     height: 100%;
     padding-block: 0;
-    font-size: 16px;
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
     color: #09090b;
     border-radius: 0;
   }

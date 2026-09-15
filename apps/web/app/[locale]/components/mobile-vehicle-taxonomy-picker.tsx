@@ -116,17 +116,17 @@ export const MobileVehicleTaxonomyPicker = ({
         <CommandInput
           aria-label={searchPlaceholder}
           autoFocus={keyboardNavigation}
-          className="h-[52px] py-0 text-[16px] text-zinc-950 placeholder:text-zinc-500"
+          className="h-[52px] py-0 text-body text-zinc-950 placeholder:text-zinc-500"
           onValueChange={onQueryChange}
           placeholder={searchPlaceholder}
           value={query}
         />
         <CommandList className="no-scrollbar max-h-none flex-1 overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <CommandEmpty className="px-4 py-10 text-[15px] text-zinc-500">
+          <CommandEmpty className="px-4 py-10 text-compact-control text-zinc-500">
             {text.noMatch}
           </CommandEmpty>
           <CommandGroup
-            className="p-0 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-[12px] [&_[cmdk-group-heading]]:text-zinc-500 [&_[cmdk-group-items]]:grid [&_[cmdk-group-items]]:gap-2"
+            className="p-0 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-2 [&_[cmdk-group-heading]]:text-micro [&_[cmdk-group-heading]]:text-zinc-500 [&_[cmdk-group-items]]:grid [&_[cmdk-group-items]]:gap-2"
             heading={groupHeading}
           >
             {canUseCustomValue ? (

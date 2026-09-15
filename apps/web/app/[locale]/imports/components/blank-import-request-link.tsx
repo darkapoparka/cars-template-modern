@@ -46,7 +46,7 @@ export function BlankImportRequestLink({
       <button
         aria-expanded={open}
         aria-haspopup="dialog"
-        className={`${actionClassName} inline-flex lg:hidden ${fullWidth ? "!h-12 !justify-between !rounded-xl !text-[15px] w-full" : ""}`}
+        className={`${actionClassName} inline-flex lg:hidden ${fullWidth ? "!h-12 !justify-between !rounded-xl !text-compact-control w-full" : ""}`}
         disabled={!ready}
         onClick={() => setOpen(true)}
         ref={triggerRef}

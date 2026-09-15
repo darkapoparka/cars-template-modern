@@ -137,7 +137,7 @@ const LeaseQuickFilterRail = ({
         })}
         {hasFilters ? (
           <button
-            className="min-h-11 shrink-0 rounded-full px-3 font-medium text-[14px] text-zinc-600 focus-visible:outline-2 focus-visible:outline-ring"
+            className="min-h-11 shrink-0 rounded-full px-3 font-medium text-meta text-zinc-600 focus-visible:outline-2 focus-visible:outline-ring"
             onClick={() => setFilters(parseMarketplaceSearchParams())}
             type="button"
           >
@@ -227,7 +227,7 @@ export const LeaseMobileSelection = ({
             </div>
             <Button
               asChild
-              className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-[650] text-[15px] text-white leading-5 tracking-[-0.005em] shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+              className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
               data-slot="lease-finance-action"
             >
               <Link href={financeRequestHref}>
@@ -263,7 +263,7 @@ export const LeaseMobileSelection = ({
                 />
               ))
             ) : (
-              <output className="rounded-xl bg-white px-4 py-8 text-center text-[15px] text-zinc-600">
+              <output className="rounded-xl bg-white px-4 py-8 text-center text-body text-zinc-600">
                 {locale === "bg"
                   ? "Няма автомобили с тези критерии. Променете филтрите или търсенето."
                   : "No cars match these criteria. Adjust your filters or search."}

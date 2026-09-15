@@ -60,7 +60,7 @@ export function MobileServiceHelpDrawer({
         <DrawerHeader className={mobileMarketplaceDrawerHeaderClassName}>
           <div className="grid min-h-12 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2">
             <span aria-hidden="true" />
-            <DrawerTitle className="text-center font-semibold text-[18px] text-zinc-950 leading-6">
+            <DrawerTitle className="text-center font-semibold text-card-title-lg text-zinc-950 tracking-heading">
               {title}
             </DrawerTitle>
             <DrawerClose asChild>
@@ -78,7 +78,7 @@ export function MobileServiceHelpDrawer({
               </Button>
             </DrawerClose>
           </div>
-          <DrawerDescription className="mx-auto max-w-sm px-2 text-center text-[14px] text-zinc-600 leading-5">
+          <DrawerDescription className="mx-auto max-w-sm px-2 text-center text-meta text-zinc-600">
             {description}
           </DrawerDescription>
         </DrawerHeader>
@@ -97,15 +97,15 @@ export function MobileServiceHelpDrawer({
               >
                 <span
                   aria-hidden="true"
-                  className="grid size-9 place-items-center rounded-full bg-[var(--lead-site-accent)] font-semibold text-[14px] text-white tabular-nums"
+                  className="grid size-9 place-items-center rounded-full bg-[var(--lead-site-accent)] font-semibold text-micro text-white tabular-nums"
                 >
                   {index + 1}
                 </span>
                 <div className="min-w-0 pt-0.5">
-                  <h3 className="font-semibold text-[15px] text-zinc-950 leading-5">
+                  <h3 className="font-semibold text-compact-control text-zinc-950">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-[14px] text-zinc-600 leading-5">
+                  <p className="mt-1 text-meta text-zinc-600">
                     {step.description}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export function MobileServiceHelpDrawer({
           </ol>
           {faqs?.length ? (
             <div className="mt-5" data-slot="mobile-service-help-faqs">
-              <h3 className="mb-2 font-semibold text-[15px] text-zinc-950 leading-5">
+              <h3 className="mb-2 font-semibold text-compact-control text-zinc-950">
                 {locale === "bg"
                   ? "Често задавани въпроси"
                   : "Frequently asked questions"}
@@ -125,10 +125,10 @@ export function MobileServiceHelpDrawer({
                     className="rounded-2xl bg-zinc-100 p-3.5"
                     key={item.question}
                   >
-                    <dt className="font-semibold text-[15px] text-zinc-950 leading-5">
+                    <dt className="font-semibold text-compact-control text-zinc-950">
                       {item.question}
                     </dt>
-                    <dd className="mt-1 text-[14px] text-zinc-600 leading-5">
+                    <dd className="mt-1 text-meta text-zinc-600">
                       {item.answer}
                     </dd>
                   </div>

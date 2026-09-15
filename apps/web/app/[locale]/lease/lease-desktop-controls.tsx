@@ -41,7 +41,7 @@ export const LeaseDesktopControls = ({
   return (
     <div className="hidden lg:block" data-slot="lease-desktop-controls">
       <div className="grid grid-cols-2 gap-3 text-left lg:grid-cols-[minmax(15rem,1.7fr)_minmax(11rem,1fr)_minmax(10rem,0.9fr)]">
-        <div className="col-span-2 grid gap-1.5 text-xs lg:col-span-1">
+        <div className="col-span-2 grid gap-1.5 text-meta lg:col-span-1">
           <span>{copy.vehicleLabel}</span>
           <select
             aria-label={copy.vehicleLabel}
@@ -58,7 +58,7 @@ export const LeaseDesktopControls = ({
           </select>
         </div>
 
-        <label className="grid gap-1.5 text-xs" htmlFor="finance-deposit">
+        <label className="grid gap-1.5 text-meta" htmlFor="finance-deposit">
           <span>{copy.depositLabel}</span>
           <select
             className={leaseSelectClassName}
@@ -74,7 +74,7 @@ export const LeaseDesktopControls = ({
           </select>
         </label>
 
-        <label className="grid gap-1.5 text-xs" htmlFor="finance-term">
+        <label className="grid gap-1.5 text-meta" htmlFor="finance-term">
           <span>{copy.termLabel}</span>
           <select
             className={leaseSelectClassName}
@@ -93,27 +93,29 @@ export const LeaseDesktopControls = ({
 
       <div className="mt-3 flex flex-col gap-3 rounded-lg bg-secondary p-3.5 text-left sm:flex-row sm:items-center">
         <div className="min-w-0 flex-1">
-          <p className="text-muted-foreground text-xs">{copy.selectionLabel}</p>
-          <p className="truncate font-semibold text-sm">
+          <p className="text-meta text-muted-foreground">
+            {copy.selectionLabel}
+          </p>
+          <p className="truncate font-semibold text-card-title tracking-heading">
             {selectedVehicle.title}
           </p>
-          <p className="mt-1 text-muted-foreground text-xs">
+          <p className="mt-1 text-meta text-muted-foreground">
             {selectedDeposit?.label} · {selectedTerm?.label}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-5">
           <div>
-            <p className="text-muted-foreground text-xs">{copy.priceLabel}</p>
-            <p className="font-semibold text-sm">
+            <p className="text-meta text-muted-foreground">{copy.priceLabel}</p>
+            <p className="font-semibold text-price tracking-heading">
               {selectedVehicle.priceLabel}
             </p>
           </div>
           {selectedVehicle.monthlyLabel ? (
             <div>
-              <p className="text-muted-foreground text-xs">
+              <p className="text-meta text-muted-foreground">
                 {copy.estimateLabel}
               </p>
-              <p className="font-semibold text-[var(--lead-site-accent)] text-sm">
+              <p className="font-semibold text-[var(--lead-site-accent)] text-price tracking-heading">
                 {selectedVehicle.monthlyLabel}
               </p>
             </div>
@@ -124,7 +126,7 @@ export const LeaseDesktopControls = ({
       <div className="mt-4 flex flex-col items-stretch justify-center gap-2 sm:flex-row sm:items-center">
         <Button
           asChild
-          className="h-11 gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+          className="h-11 gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
         >
           <a href={phoneHref}>
             <Phone aria-hidden="true" className="size-4" />
@@ -133,7 +135,7 @@ export const LeaseDesktopControls = ({
         </Button>
         <Button
           asChild
-          className="h-11 gap-2 rounded-lg px-5"
+          className="h-11 gap-2 rounded-lg px-5 text-compact-control"
           variant="secondary"
         >
           <Link href={selectedVehicle.detailHref}>
@@ -143,7 +145,7 @@ export const LeaseDesktopControls = ({
         </Button>
       </div>
 
-      <p className="mt-3 text-center text-muted-foreground text-xs">
+      <p className="mt-3 text-center text-meta text-muted-foreground">
         {copy.note} {phoneDisplay}
       </p>
     </div>

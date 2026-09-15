@@ -118,13 +118,13 @@ export default async function ChineseCollectionPage({
             <div className="grid lg:grid-cols-[minmax(0,1fr)_20rem]">
               <div className="p-5 sm:p-7">
                 <Badge variant="secondary">{copy.badge}</Badge>
-                <h1 className="mt-3 font-semibold text-page-title tracking-tight sm:text-page-title-lg">
+                <h1 className="mt-3 font-semibold text-page-title tracking-heading lg:text-page-title-lg">
                   {copy.title}
                 </h1>
-                <p className="mt-3 max-w-3xl text-muted-foreground text-sm leading-6">
+                <p className="mt-3 max-w-3xl text-body text-muted-foreground">
                   {copy.description}
                 </p>
-                <p className="mt-3 text-muted-foreground text-xs">
+                <p className="mt-3 text-meta text-muted-foreground">
                   {copy.truth}
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default async function ChineseCollectionPage({
                   src="/images/directory/china-ev-importer-profile.webp"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-black/60 px-5 py-3 text-white backdrop-blur-[2px]">
-                  <p className="font-medium text-sm">{copy.heroCaption}</p>
+                  <p className="font-medium text-meta">{copy.heroCaption}</p>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default async function ChineseCollectionPage({
               <h2 className="font-semibold text-dialog-title">
                 {copy.listingHeading}
               </h2>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-meta text-muted-foreground">
                 {data.totalListings} {copy.resultsLabel}
               </p>
             </div>
@@ -157,10 +157,10 @@ export default async function ChineseCollectionPage({
                 <span className="mx-auto grid size-10 place-items-center rounded-full bg-secondary text-muted-foreground">
                   <CarFront aria-hidden="true" className="size-5" />
                 </span>
-                <h3 className="mt-3 font-semibold text-base">
+                <h3 className="mt-3 font-semibold text-card-title tracking-heading">
                   {copy.emptyTitle}
                 </h3>
-                <p className="mx-auto mt-1 max-w-lg text-muted-foreground text-sm leading-6">
+                <p className="mx-auto mt-1 max-w-lg text-body text-muted-foreground">
                   {copy.emptyDescription}
                 </p>
                 <Button asChild className="mt-4" size="sm">

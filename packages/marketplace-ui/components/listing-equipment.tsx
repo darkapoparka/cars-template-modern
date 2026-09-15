@@ -48,7 +48,7 @@ export const ListingEquipment = ({
       data-slot="listing-equipment"
     >
       <div className="px-4 py-3.5 lg:px-0 lg:py-0">
-        <h2 className="font-semibold text-[17px] leading-6 lg:text-lg">
+        <h2 className="font-semibold text-card-title tracking-heading lg:text-card-title-lg">
           {heading}
         </h2>
       </div>
@@ -60,7 +60,7 @@ export const ListingEquipment = ({
 
             return (
               <li
-                className="flex min-h-11 min-w-0 items-center gap-2.5 px-4 py-2.5 text-[15px] leading-5 lg:min-h-0 lg:px-0 lg:py-1.5 lg:text-sm"
+                className="flex min-h-11 min-w-0 items-center gap-2.5 px-4 py-2.5 text-compact-control lg:min-h-0 lg:px-0 lg:py-1.5"
                 key={`${feature.bg}-${feature.en}`}
               >
                 <Icon
@@ -76,7 +76,7 @@ export const ListingEquipment = ({
           })}
         </ul>
       ) : (
-        <p className="border-zinc-100 border-t px-4 py-3 text-[14px] text-zinc-600 lg:mt-4 lg:border-0 lg:px-0 lg:py-0 lg:text-muted-foreground lg:text-sm">
+        <p className="border-zinc-100 border-t px-4 py-3 text-meta text-zinc-600 lg:mt-4 lg:border-0 lg:px-0 lg:py-0 lg:text-muted-foreground">
           {isBg
             ? "Няма посочени екстри за тази обява."
             : "No extras were supplied for this listing."}

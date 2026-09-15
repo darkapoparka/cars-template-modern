@@ -40,7 +40,7 @@ export function MobileSellCategoryField({
     locale === "bg" ? "Изберете тип автомобил" : "Choose vehicle type";
   return (
     <div className="grid gap-1.5">
-      <Label className="font-medium text-[13px]" htmlFor="mobile-sell-category">
+      <Label className="font-medium text-meta" htmlFor="mobile-sell-category">
         {label}
       </Label>
       <input name="category" type="hidden" value={value} />

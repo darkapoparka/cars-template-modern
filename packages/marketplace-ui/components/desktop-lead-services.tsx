@@ -180,7 +180,7 @@ const DesktopSellSurface = ({
     method="get"
   >
     <label className="m-1.5 grid min-w-0 content-center rounded-xl bg-control px-4 py-1.5">
-      <span className="font-semibold text-micro">
+      <span className="font-semibold text-meta">
         {localizeMarketplace(isBg, "Марка", "Make")}
       </span>
       <select
@@ -200,7 +200,7 @@ const DesktopSellSurface = ({
       </select>
     </label>
     <label className="grid min-w-0 content-center border-border/70 border-l px-6 py-1.5">
-      <span className="font-semibold text-micro">
+      <span className="font-semibold text-meta">
         {localizeMarketplace(isBg, "Модел", "Model")}
       </span>
       <input
@@ -274,7 +274,7 @@ const DesktopImportSurface = ({
             variant="ghost"
           >
             <span className="min-w-0">
-              <span className="block font-semibold text-xs">
+              <span className="block font-semibold text-meta">
                 {localizeMarketplace(isBg, "Произход", "Origin")}
               </span>
               <span className="mt-1 flex min-w-0 items-center gap-2 font-semibold text-base">
@@ -297,7 +297,7 @@ const DesktopImportSurface = ({
           </Button>
         </PopoverTrigger>
         <PopoverContent align="start" className="w-[22rem] p-2" sideOffset={8}>
-          <p className="px-2 pt-1 pb-2 font-semibold text-muted-foreground text-xs">
+          <p className="px-2 pt-1 pb-2 font-semibold text-meta text-muted-foreground">
             {localizeMarketplace(
               isBg,
               "Изберете държава на произход",
@@ -354,7 +354,7 @@ const DesktopImportSurface = ({
             variant="ghost"
           >
             <span className="min-w-0">
-              <span className="block font-semibold text-xs">
+              <span className="block font-semibold text-meta">
                 {localizeMarketplace(isBg, "Доставка до", "Deliver to")}
               </span>
               <span className="mt-1 flex min-w-0 items-center gap-2 font-semibold text-base">

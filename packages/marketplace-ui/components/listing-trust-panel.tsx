@@ -67,10 +67,13 @@ export const ListingTrustPanel = ({ evidence }: ListingTrustPanelProps) => (
   <section aria-labelledby="trust-heading">
     <div className="flex items-start justify-between gap-4">
       <div>
-        <p className="font-medium text-muted-foreground text-xs uppercase tracking-wide">
+        <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
           Evidence, not badges
         </p>
-        <h2 className="mt-1 font-semibold text-lg" id="trust-heading">
+        <h2
+          className="mt-1 font-semibold text-card-title-lg tracking-heading"
+          id="trust-heading"
+        >
           Vehicle history and trust
         </h2>
       </div>
@@ -79,7 +82,7 @@ export const ListingTrustPanel = ({ evidence }: ListingTrustPanelProps) => (
         className="size-5 text-muted-foreground"
       />
     </div>
-    <p className="mt-2 max-w-2xl text-muted-foreground text-sm leading-6">
+    <p className="mt-2 max-w-2xl text-body text-muted-foreground">
       {leadSite.name} only presents a checked claim when its source, review
       date, and policy are available. Seller statements are labelled separately.
     </p>
@@ -100,16 +103,16 @@ export const ListingTrustPanel = ({ evidence }: ListingTrustPanelProps) => (
             )}
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
-                <p className="font-medium text-sm">{item.label}</p>
+                <p className="font-medium text-compact-control">{item.label}</p>
                 <Badge className="rounded-md" variant="outline">
                   {getEvidenceStateLabel(item)}
                 </Badge>
               </div>
-              <p className="mt-1 text-muted-foreground text-xs leading-5">
+              <p className="mt-1 text-meta text-muted-foreground">
                 {item.state === "unavailable" ? item.reason : item.summary}
               </p>
               {item.state === "verified" && (
-                <p className="mt-2 text-muted-foreground text-xs">
+                <p className="mt-2 text-meta text-muted-foreground">
                   {item.sourceLabel} · reviewed{" "}
                   {formatReviewDate(item.reviewedAt)}
                   {" · "}

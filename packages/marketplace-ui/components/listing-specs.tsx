@@ -174,7 +174,7 @@ export const ListingSpecs = ({
         className={
           variant === "combined"
             ? "sr-only"
-            : "mb-3 font-semibold text-[18px] leading-6 lg:text-lg"
+            : "mb-3 font-semibold text-card-title tracking-heading lg:text-card-title-lg"
         }
       >
         {heading}
@@ -198,7 +198,7 @@ export const ListingSpecs = ({
               data-slot="listing-specification"
               key={item.label}
             >
-              <dt className="flex items-center gap-2 font-medium text-[12px] text-zinc-600 lg:text-compact-control lg:text-foreground/80 lg:text-meta">
+              <dt className="flex items-center gap-2 font-medium text-meta text-zinc-600 lg:text-foreground/80">
                 <Icon
                   aria-hidden="true"
                   className="size-[18px] shrink-0 lg:size-[22px]"
@@ -210,7 +210,7 @@ export const ListingSpecs = ({
                 className={
                   mobileCombined
                     ? "mt-1.5 break-words font-normal text-compact-control text-zinc-950 tabular-nums"
-                    : "mt-1.5 break-words font-semibold text-[15px] text-zinc-950 tabular-nums leading-5 lg:mt-3 lg:text-dialog-title lg:tracking-tight"
+                    : "mt-1.5 break-words font-semibold text-compact-control text-zinc-950 tabular-nums lg:mt-3 lg:text-dialog-title lg:tracking-heading"
                 }
               >
                 {item.value}

@@ -56,7 +56,7 @@ const NumericRangeField = ({
     <span
       className={cn(
         compact &&
-          "pointer-events-none absolute top-2 left-4 z-10 text-xs text-zinc-500 leading-none"
+          "pointer-events-none absolute top-2 left-4 z-10 text-meta text-zinc-500"
       )}
     >
       {label}

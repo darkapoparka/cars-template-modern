@@ -77,7 +77,7 @@ export const MarketplaceResults = ({
         <p
           aria-live="polite"
           className={cn(
-            "mb-2 text-muted-foreground text-xs tabular-nums lg:hidden",
+            "mb-2 text-micro text-muted-foreground tabular-nums lg:hidden",
             activeFilterCount === 0 && "sr-only"
           )}
         >

@@ -162,7 +162,7 @@ export const MobileVehicleTaxonomyFields = ({
   if (variant === "sell" && selectedVehicle && make && model) {
     desktopFields = (
       <div className="col-span-2 hidden gap-1.5 lg:col-span-1 lg:grid">
-        <span className="text-xs">{selectedVehicle.selectedLabel}</span>
+        <span className="text-meta">{selectedVehicle.selectedLabel}</span>
         <Link
           aria-label={selectedVehicle.changeLabel}
           className="group grid h-11 w-full grid-cols-[3.25rem_minmax(0,1fr)_auto] items-center gap-2 overflow-hidden rounded-lg border border-border/60 bg-card p-1.5 text-left outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/40 sm:gap-2"
@@ -178,10 +178,10 @@ export const MobileVehicleTaxonomyFields = ({
               src={selectedVehicle.asset}
             />
           </span>
-          <span className="min-w-0 truncate font-semibold text-sm sm:text-base">
+          <span className="min-w-0 truncate font-semibold text-compact-control sm:text-body">
             {make} {model}
           </span>
-          <span className="flex items-center gap-1 pr-1 font-semibold text-xs">
+          <span className="flex items-center gap-1 pr-1 font-semibold text-meta">
             <ArrowRight
               aria-hidden="true"
               className="size-4 transition-transform group-hover:translate-x-0.5"
@@ -241,7 +241,7 @@ export const MobileVehicleTaxonomyFields = ({
     desktopFields = (
       <>
         <div className="hidden gap-1.5 lg:grid">
-          <Label className="text-xs" htmlFor={`${idPrefix}-make`}>
+          <Label className="text-meta" htmlFor={`${idPrefix}-make`}>
             {makeLabel}
           </Label>
           <Input
@@ -257,7 +257,7 @@ export const MobileVehicleTaxonomyFields = ({
           />
         </div>
         <div className="hidden gap-1.5 lg:grid">
-          <Label className="text-xs" htmlFor={`${idPrefix}-model`}>
+          <Label className="text-meta" htmlFor={`${idPrefix}-model`}>
             {modelLabel}
           </Label>
           <Input

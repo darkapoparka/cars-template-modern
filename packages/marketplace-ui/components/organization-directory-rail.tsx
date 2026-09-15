@@ -69,7 +69,7 @@ const railSignalAppearance = {
 } as const;
 
 const RailLogo = ({ item }: { item: OrganizationDirectoryRailItem }) => (
-  <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-control font-semibold text-foreground text-xs">
+  <div className="relative grid size-11 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-control font-semibold text-foreground text-micro">
     {item.logoUrl ? (
       <Image
         alt={item.logoAlt ?? item.name}
@@ -104,7 +104,7 @@ const DirectoryRailItem = ({
           <div className="flex min-w-0 items-start justify-between gap-2">
             <div className="min-w-0">
               <p className="truncate font-semibold text-sm">{item.name}</p>
-              <p className="mt-0.5 truncate text-muted-foreground text-xs">
+              <p className="mt-0.5 truncate text-meta text-muted-foreground">
                 {item.typeLabel}
               </p>
             </div>
@@ -191,7 +191,7 @@ export const OrganizationDirectoryRail = ({
               {corridors.map((corridor) => (
                 <li key={corridor.id}>
                   <Link
-                    className="flex h-9 items-center gap-2 rounded-full bg-control px-3.5 font-medium text-foreground/80 text-xs transition-colors hover:bg-control-hover hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    className="flex h-9 items-center gap-2 rounded-full bg-control px-3.5 font-medium text-compact-control text-foreground/80 transition-colors hover:bg-control-hover hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     href={corridor.href}
                   >
                     {corridor.label}

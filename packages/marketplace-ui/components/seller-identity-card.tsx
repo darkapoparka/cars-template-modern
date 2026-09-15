@@ -71,8 +71,10 @@ export const LeadSiteListingIdentityCard = ({
         target="_blank"
       >
         <span className="min-w-0 flex-1">
-          <span className="block font-semibold text-sm">{leadSite.city}</span>
-          <span className="mt-0.5 block text-muted-foreground text-xs leading-4">
+          <span className="block font-semibold text-compact-control">
+            {leadSite.city}
+          </span>
+          <span className="mt-0.5 block text-meta text-muted-foreground">
             {leadSite.address}, {leadSite.country}
           </span>
         </span>
@@ -148,7 +150,7 @@ export const SellerIdentityCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-seller-card"
     >
-      <p className="font-medium text-foreground/70 text-sm">{copy.seller}</p>
+      <p className="font-medium text-foreground/70 text-meta">{copy.seller}</p>
       <div className="mt-2 flex items-center gap-3">
         {listing.seller.logoUrl ? (
           <Image
@@ -160,7 +162,7 @@ export const SellerIdentityCard = ({
             width={44}
           />
         ) : null}
-        <h2 className="min-w-0 font-semibold text-lg">
+        <h2 className="min-w-0 font-semibold text-card-title-lg tracking-heading">
           {sellerProfileHref ? (
             <Link
               aria-label={`${copy.viewSellerProfile}: ${sellerDisplayName}`}
@@ -177,7 +179,7 @@ export const SellerIdentityCard = ({
       </div>
       <div className="mt-2 flex flex-wrap items-center gap-2">
         <p
-          className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-control-hover px-2.5 font-semibold text-sm"
+          className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-control-hover px-2.5 font-semibold text-foreground text-meta"
           data-slot="seller-type"
         >
           <SellerRoleIcon aria-hidden="true" className="size-4" />
@@ -185,7 +187,7 @@ export const SellerIdentityCard = ({
         </p>
         {verificationLabel ? (
           <p
-            className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-success-surface px-2.5 font-semibold text-sm text-success-foreground"
+            className="flex h-8 w-fit items-center gap-1.5 rounded-md bg-success-surface px-2.5 font-semibold text-meta text-success-foreground"
             data-slot="seller-verification"
           >
             <ShieldCheck aria-hidden="true" className="size-4" />
@@ -193,7 +195,7 @@ export const SellerIdentityCard = ({
           </p>
         ) : null}
       </div>
-      <p className="mt-3 flex items-center gap-1.5 text-muted-foreground text-sm">
+      <p className="mt-3 flex items-center gap-1.5 text-meta text-muted-foreground">
         <MapPin aria-hidden="true" className="size-4 shrink-0" />
         {copy.basedIn}{" "}
         {getLocalizedMarketplaceCityName(listing.seller.city, locale)}

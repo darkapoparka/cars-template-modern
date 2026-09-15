@@ -144,7 +144,9 @@ const StandardSuggestionContent = ({
         <Icon aria-hidden="true" className="size-4" />
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block truncate font-medium text-sm">{item.label}</span>
+        <span className="block truncate font-medium text-meta">
+          {item.label}
+        </span>
         <span className="mt-0.5 block truncate text-meta text-muted-foreground">
           {item.description}
         </span>
@@ -388,7 +390,7 @@ export const DesktopSearchAssistant = ({
         )}
         data-slot="desktop-search-query"
       >
-        <span className="font-semibold text-xs leading-none">{label}</span>
+        <span className="font-semibold text-micro">{label}</span>
         <span className="mt-1 flex min-w-0 items-center">
           <input
             aria-activedescendant={
@@ -474,7 +476,7 @@ export const DesktopSearchAssistant = ({
         >
           {groups.map((group) => (
             <div className="not-last:mb-2" key={group.heading}>
-              <p className="px-3 py-1.5 font-medium text-muted-foreground text-xs">
+              <p className="px-3 py-1.5 font-medium text-micro text-muted-foreground">
                 {group.heading}
               </p>
               <div

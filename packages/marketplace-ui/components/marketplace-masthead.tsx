@@ -245,7 +245,7 @@ const DealerDirectoryAction = ({
             >
               <Icon aria-hidden="true" className="size-4" strokeWidth={2} />
             </span>
-            <span className="font-semibold text-sm">{label}</span>
+            <span className="font-semibold text-compact-control">{label}</span>
           </Link>
         </Button>
       </TooltipTrigger>
@@ -333,10 +333,10 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
         >
           <div className="flex flex-col gap-3">
             <div>
-              <p className="text-white/60 text-xs">
+              <p className="text-micro text-white/60">
                 {isBg ? "Телефон" : "Phone"}
               </p>
-              <p className="mt-1 font-semibold text-lg tabular-nums">
+              <p className="mt-1 font-semibold text-card-title-lg tabular-nums">
                 {leadSite.phoneDisplay}
               </p>
             </div>
@@ -346,7 +346,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
                   ? `Обадете се на ${leadSite.phoneDisplay}`
                   : `Call ${leadSite.phoneDisplay}`
               }
-              className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-sm text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
+              className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-compact-control text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
               data-slot="lead-phone-tooltip-action"
               href={leadSite.phoneHref}
             >
@@ -393,18 +393,18 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
         >
           <div className="flex flex-col gap-3">
             <div>
-              <p className="font-semibold text-sm">
+              <p className="font-semibold text-meta">
                 {leadSite.city}
                 <span aria-hidden="true" className="px-1 text-white/40">
                   ·
                 </span>
                 {isBg ? "Студентски град" : "Studentski grad"}
               </p>
-              <p className="mt-1 text-white/60 text-xs">{leadSite.address}</p>
+              <p className="mt-1 text-meta text-white/60">{leadSite.address}</p>
             </div>
             <a
               aria-label={isBg ? "Отвори в Google Maps" : "Open in Google Maps"}
-              className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-sm text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
+              className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-compact-control text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
               data-slot="lead-location-tooltip-action"
               href={leadSite.mapsUrl}
               rel="noreferrer"
@@ -636,7 +636,7 @@ export const MarketplaceMasthead = ({
               }
             />
             {leadSite.staticDemoMode ? null : (
-              <span className="font-semibold text-xl tracking-tight">
+              <span className="font-semibold text-card-title-lg tracking-heading">
                 {leadSite.shortName}
               </span>
             )}

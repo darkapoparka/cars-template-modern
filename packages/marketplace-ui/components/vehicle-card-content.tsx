@@ -84,7 +84,7 @@ export const VehicleCardMediaBadges = ({
     >
       {labels.map((label) => (
         <Badge
-          className="h-5 rounded-md border-0 bg-white/95 px-1.5 font-medium text-[11px] text-foreground lg:h-6 lg:px-2 lg:text-xs"
+          className="h-6 rounded-md border-0 bg-white/95 px-2 font-medium text-foreground text-micro"
           key={label}
           variant="secondary"
         >
@@ -122,7 +122,7 @@ const VehiclePriceSummary = ({
   return (
     <div className="min-w-0">
       <p
-        className="whitespace-nowrap font-bold text-[17px] text-foreground tabular-nums leading-[19px] tracking-tight lg:text-lg lg:leading-5 min-[360px]:text-lg min-[360px]:leading-5"
+        className="whitespace-nowrap font-semibold text-foreground text-price tabular-nums tracking-heading lg:text-price-lg"
         data-slot="vehicle-card-price"
       >
         {formatVehicleCardMoney(pricePolicy.primaryPrice, variant, locale)}
@@ -134,14 +134,14 @@ const VehiclePriceSummary = ({
       </p>
       {secondaryPriceLabel ? (
         <p
-          className="text-[12px] text-muted-foreground leading-4"
+          className="text-meta text-muted-foreground"
           title={secondaryPriceLabel}
         >
           {secondaryPriceLabel}
         </p>
       ) : null}
       {pricePolicy.approximatePrice && variant !== "comparison" ? (
-        <p className="text-[12px] text-muted-foreground leading-4">
+        <p className="text-meta text-muted-foreground">
           ≈{" "}
           {formatVehicleCardMoney(
             pricePolicy.approximatePrice,
@@ -230,7 +230,7 @@ const VehicleSellerFooter = ({
       >
         <Badge
           aria-label={sellerBadgeLabel}
-          className="h-7 min-w-0 max-w-full shrink gap-2 rounded-md border-border/70 bg-control px-2.5 font-semibold text-foreground text-xs"
+          className="h-7 min-w-0 max-w-full shrink gap-2 rounded-md border-border/70 bg-control px-2.5 font-semibold text-foreground text-micro"
           title={sellerBadgeLabel}
           variant="outline"
         >
@@ -477,7 +477,7 @@ const MobileDealerVehicleCardContent = ({
   >
     <div className="min-w-0 space-y-0.5">
       <h2
-        className="line-clamp-2 font-medium text-[15px] text-foreground leading-[18px] tracking-tight min-[360px]:text-base min-[360px]:leading-5"
+        className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading"
         data-slot="vehicle-card-title"
       >
         {getVehicleCardTitle(listing, "comparison")}
@@ -523,7 +523,7 @@ const ComparisonVehicleCardContent = ({
       {presentation === "discovery" ? (
         <div data-slot="vehicle-card-title-row">
           <h2
-            className="line-clamp-2 min-w-0 font-medium text-card-title text-foreground lg:min-h-10 lg:text-card-title-lg"
+            className="line-clamp-2 min-w-0 font-semibold text-card-title text-foreground tracking-heading lg:min-h-10 lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
@@ -546,7 +546,7 @@ const ComparisonVehicleCardContent = ({
             />
           </div>
           <h2
-            className="line-clamp-2 font-medium text-card-title text-foreground lg:text-card-title-lg"
+            className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
             data-slot="vehicle-card-title"
             title={vehicleTitle}
           >
@@ -598,7 +598,7 @@ const ListVehicleCardContent = ({
       href={listingHref}
     >
       <h2
-        className="line-clamp-2 font-medium text-card-title text-foreground lg:text-card-title-lg"
+        className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading lg:text-card-title-lg"
         data-slot="vehicle-card-title"
       >
         {getVehicleCardTitle(listing, variant)}

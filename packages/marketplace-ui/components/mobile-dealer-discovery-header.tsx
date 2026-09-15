@@ -186,9 +186,7 @@ const MobileSearchButton = ({
     <span
       className={cn(
         "min-w-0 flex-1 truncate font-medium tabular-nums",
-        isCompact
-          ? "text-[length:var(--text-compact-control)] leading-[var(--text-compact-control--line-height)]"
-          : "text-[length:var(--text-body)] leading-[var(--text-body--line-height)]",
+        isCompact ? "text-compact-control" : "text-body",
         hasMakeModelSelection ? "text-zinc-950" : "text-zinc-600"
       )}
     >
@@ -269,7 +267,7 @@ const MobileCompactDiscoverySurface = ({
       >
         <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
         {filterCount > 0 ? (
-          <span className="absolute -top-1 -right-1 grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-[10px] text-white ring-2 ring-zinc-950">
+          <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white ring-2 ring-zinc-950">
             {filterCount}
           </span>
         ) : null}
@@ -403,7 +401,7 @@ export const MobileDealerDiscoveryHeader = ({
             >
               <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
               {filterCount > 0 ? (
-                <span className="absolute -top-1 -right-1 grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-[10px] text-white ring-2 ring-zinc-950">
+                <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white ring-2 ring-zinc-950">
                   {filterCount}
                 </span>
               ) : null}

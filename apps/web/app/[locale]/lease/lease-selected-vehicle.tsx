@@ -63,7 +63,7 @@ export function LeaseSelectedVehicle({
       <div className={mobileVehicleCardContentClassName}>
         <div className="min-w-0 space-y-0.5">
           <h2
-            className="line-clamp-2 font-medium text-[16px] text-zinc-950 leading-5 tracking-tight"
+            className="line-clamp-2 font-semibold text-card-title text-zinc-950 tracking-heading"
             data-slot="lease-selected-vehicle-title"
             title={vehicle.title}
           >
@@ -71,14 +71,14 @@ export function LeaseSelectedVehicle({
           </h2>
           <div className="min-w-0">
             <p
-              className="font-bold text-[18px] text-zinc-950 tabular-nums leading-5 tracking-tight"
+              className="font-semibold text-price text-zinc-950 tabular-nums tracking-heading"
               data-slot="lease-selected-vehicle-price"
             >
               {vehicle.priceLabel}
             </p>
             {vehicle.monthlyLabel ? (
               <p
-                className="text-[12px] text-muted-foreground leading-4"
+                className="text-meta text-muted-foreground"
                 title={
                   locale === "bg"
                     ? "Ориентировъчна месечна вноска"

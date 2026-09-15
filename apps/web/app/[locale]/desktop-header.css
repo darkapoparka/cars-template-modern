@@ -41,7 +41,7 @@
     min-width: 88px;
     height: 36px;
     padding-inline: 16px;
-    font-size: 14px;
+    font-size: var(--text-compact-control);
     font-weight: 500;
     color: #c7c7cc;
     border: 1px solid transparent;
@@ -71,7 +71,7 @@
     align-items: center;
     min-height: 44px;
     padding-inline: 8px;
-    font-size: 14px;
+    font-size: var(--text-compact-control);
     font-weight: 500;
   }
   .dealer-desktop-contact .dealer-desktop-showroom {
@@ -132,11 +132,11 @@
   }
   .dealer-desktop-inventory-title {
     margin: 0;
-    font-size: clamp(25px, 1.6vw, 29px);
-    font-weight: 700;
-    line-height: 1.05;
+    font-size: var(--text-page-title-lg);
+    font-weight: 600;
+    line-height: var(--text-page-title-lg--line-height);
     color: #fff;
-    letter-spacing: -0.035em;
+    letter-spacing: var(--tracking-heading);
     white-space: nowrap;
   }
   .dealer-desktop-inventory-count {
@@ -145,8 +145,9 @@
     align-items: center;
     min-height: 28px;
     padding: 0 10px;
-    font-size: 12px;
-    font-weight: 650;
+    font-size: var(--text-micro);
+    font-weight: 600;
+    line-height: var(--text-micro--line-height);
     color: #f4f4f5;
     white-space: nowrap;
     background: rgb(255 255 255 / 8%);
@@ -188,8 +189,9 @@
     [data-slot="desktop-search-category"]
     > span
     > span:first-child {
-    font-size: 11px;
+    font-size: var(--text-meta);
     font-weight: 500;
+    line-height: var(--text-meta--line-height);
     color: #a1a1aa;
   }
   .dealer-desktop-query-row
@@ -197,8 +199,9 @@
     > span
     > span:last-child {
     margin-top: 3px;
-    font-size: 15px;
-    font-weight: 650;
+    font-size: var(--text-compact-control);
+    font-weight: 600;
+    line-height: var(--text-compact-control--line-height);
     color: #fff;
   }
   .dealer-desktop-query-row [data-slot="desktop-search-category"]:hover {
@@ -234,7 +237,8 @@
     box-shadow: none;
   }
   .dealer-desktop-search [data-slot="desktop-search-query"] input {
-    font-size: 16px;
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
     color: #18181b;
   }
   .dealer-desktop-search [data-slot="desktop-search-query"] input::placeholder {
@@ -257,7 +261,8 @@
     top: 15px;
     right: 18px;
     padding: 2px 6px;
-    font-size: 11px;
+    font-size: var(--text-micro);
+    line-height: var(--text-micro--line-height);
     color: #71717a;
     pointer-events: none;
     background: #fafafa;
@@ -317,8 +322,9 @@
     max-width: 184px;
     height: 40px;
     padding-inline: 14px;
-    font-size: 13px;
+    font-size: var(--text-compact-control);
     font-weight: 600;
+    line-height: var(--text-compact-control--line-height);
     color: #f4f4f5;
     background: rgb(255 255 255 / 7%);
     border: 1px solid rgb(255 255 255 / 14%);
@@ -357,7 +363,8 @@
   .dealer-desktop-filters [data-slot="desktop-primary-control"] {
     height: 40px;
     padding-inline: 16px;
-    font-size: 13px;
+    font-size: var(--text-compact-control);
+    line-height: var(--text-compact-control--line-height);
     color: #fff !important;
     background: #d20a0a !important;
     border-color: #d20a0a !important;
@@ -392,31 +399,32 @@
     padding: 14px 14px 13px;
   }
   [data-slot="marketplace-listing-grid"] [data-slot="vehicle-card-title"] {
-    font-size: 17px;
-    font-weight: 650;
-    line-height: 1.22;
-    letter-spacing: -0.018em;
+    font-size: var(--text-card-title-lg);
+    font-weight: 600;
+    line-height: var(--text-card-title-lg--line-height);
+    letter-spacing: var(--tracking-heading);
   }
   [data-slot="marketplace-listing-grid"] [data-slot="vehicle-card-price"] {
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: var(--text-price-lg);
+    font-weight: 600;
+    line-height: var(--text-price-lg--line-height);
   }
   [data-slot="marketplace-listing-grid"] [data-slot="vehicle-card-spec-pills"] {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 5px;
     padding-top: 4px;
-    font-size: 11px;
-    line-height: 14px;
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
     color: #52525b;
     border-top: 0;
   }
   [data-slot="marketplace-listing-grid"]
     [data-slot="vehicle-card-spec-pills"]
     > li {
-    min-height: 24px;
+    min-height: 28px;
     padding: 4px 8px;
-    font-weight: 550;
+    font-weight: 500;
     background: #f3f4f6;
     border: 1px solid #e2e4e8;
     border-radius: 7px;

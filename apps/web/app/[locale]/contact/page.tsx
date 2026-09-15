@@ -291,7 +291,7 @@ export default async function ContactPage({
                   ) : null}
                   {sellContext.notes ? (
                     <div className="mt-5 border-border border-t pt-4">
-                      <p className="text-muted-foreground text-xs">
+                      <p className="text-meta text-muted-foreground">
                         {copy.sellDetailsLabel}
                       </p>
                       <p className="mt-1 max-h-24 overflow-auto whitespace-pre-wrap break-words text-sm leading-6">

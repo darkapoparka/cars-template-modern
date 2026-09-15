@@ -152,7 +152,7 @@ const MakeModelSearchField = ({
           "focus-visible:border-[var(--lead-site-accent)] focus-visible:ring-[var(--lead-site-accent)]/35",
           isDesktop
             ? "h-10 rounded-lg bg-secondary pl-9"
-            : "h-12 rounded-xl border-0 bg-zinc-100 pl-10 text-[16px] shadow-none"
+            : "h-12 rounded-xl border-0 bg-zinc-100 pl-10 text-body shadow-none"
         )}
         onChange={(event) => onSearch(event.target.value)}
         placeholder={

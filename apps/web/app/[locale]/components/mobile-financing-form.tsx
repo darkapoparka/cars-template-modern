@@ -41,7 +41,7 @@ const SubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
 
   return (
     <Button
-      className="h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-[15px] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+      className="h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
       disabled={pending}
       type="submit"
     >
@@ -87,7 +87,7 @@ export const FinancingRequestForm = ({
   if (!submissionAvailable) {
     return (
       <div className="overflow-y-auto px-4 pb-6">
-        <p className="mb-4 font-semibold text-[16px]">{request.vehicle}</p>
+        <p className="mb-4 font-semibold text-card-title">{request.vehicle}</p>
         <PublicContactUnavailable locale={locale} />
       </div>
     );
@@ -102,10 +102,10 @@ export const FinancingRequestForm = ({
         <span className="grid size-12 place-items-center rounded-full bg-zinc-950 text-white">
           <CheckCircle2 aria-hidden="true" className="size-6" />
         </span>
-        <h3 className="mt-4 font-semibold text-[20px] leading-6">
+        <h3 className="mt-4 font-semibold text-dialog-title tracking-heading">
           {copy.success}
         </h3>
-        <p className="mt-2 max-w-xs text-[15px] text-zinc-600 leading-6">
+        <p className="mt-2 max-w-xs text-body text-zinc-600">
           {copy.successBody}
         </p>
         <Button
@@ -137,13 +137,13 @@ export const FinancingRequestForm = ({
       <input name="deposit" type="hidden" value={deposit} />
 
       <div className="rounded-2xl bg-zinc-100 p-3.5">
-        <p className="font-medium text-[12px] text-zinc-600">{copy.vehicle}</p>
+        <p className="font-medium text-meta text-zinc-600">{copy.vehicle}</p>
         <div className="mt-2 flex items-center gap-3">
           <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-white text-zinc-700">
             <CarFront aria-hidden="true" className="size-5" />
           </span>
           <div className="min-w-0 flex-1">
-            <p className="line-clamp-2 break-words font-semibold text-[16px] text-zinc-950 leading-5">
+            <p className="line-clamp-2 break-words font-semibold text-card-title text-zinc-950 tracking-heading">
               {request.vehicle}
             </p>
           </div>
@@ -151,7 +151,7 @@ export const FinancingRequestForm = ({
       </div>
 
       <fieldset className="mt-5" data-slot="financing-term-options">
-        <legend className="font-medium text-[13px] text-zinc-800">
+        <legend className="font-medium text-meta text-zinc-800">
           {locale === "bg" ? "Предпочитан срок" : "Preferred term"}
         </legend>
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto overscroll-x-contain">
@@ -172,7 +172,7 @@ export const FinancingRequestForm = ({
       </fieldset>
 
       <fieldset className="mt-5" data-slot="financing-deposit-options">
-        <legend className="font-medium text-[13px] text-zinc-800">
+        <legend className="font-medium text-meta text-zinc-800">
           {copy.deposit}
         </legend>
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto overscroll-x-contain">
@@ -200,16 +200,16 @@ export const FinancingRequestForm = ({
           copy={copy}
           draft={draft}
           idPrefix="finance"
-          inputClassName="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-[16px] shadow-none focus-visible:ring-zinc-900/25"
-          labelClassName="font-medium text-[13px]"
+          inputClassName="h-12 rounded-xl border-0 bg-zinc-100 px-3.5 text-body shadow-none focus-visible:ring-zinc-900/25"
+          labelClassName="font-medium text-meta"
         />
 
         <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="finance-note">
+          <Label className="font-medium text-meta" htmlFor="finance-note">
             {copy.note}
           </Label>
           <textarea
-            className="min-h-24 resize-none rounded-xl border-0 bg-zinc-100 px-3.5 py-3 text-[16px] leading-6 outline-none placeholder:text-zinc-500 focus:ring-[3px] focus:ring-zinc-900/20"
+            className="min-h-24 resize-none rounded-xl border-0 bg-zinc-100 px-3.5 py-3 text-body outline-none placeholder:text-zinc-500 focus:ring-[3px] focus:ring-zinc-900/20"
             id="finance-note"
             maxLength={500}
             name="note"
@@ -222,7 +222,7 @@ export const FinancingRequestForm = ({
 
       {state.status === "error" ? (
         <p
-          className="mt-4 rounded-xl bg-red-50 px-3.5 py-3 text-[13px] text-red-800 leading-5"
+          className="mt-4 rounded-xl bg-red-50 px-3.5 py-3 text-meta text-red-800"
           role="alert"
         >
           {state.message}
@@ -232,7 +232,7 @@ export const FinancingRequestForm = ({
       <div className="mt-6">
         <SubmitButton locale={locale} />
         <a
-          className="mt-2 flex h-11 items-center justify-center gap-2 rounded-xl font-semibold text-[14px] text-zinc-700 transition-colors active:bg-zinc-100"
+          className="mt-2 flex h-11 items-center justify-center gap-2 rounded-xl font-semibold text-compact-control text-zinc-700 transition-colors active:bg-zinc-100"
           href={leadSite.phoneHref}
         >
           <Phone aria-hidden="true" className="size-4" />

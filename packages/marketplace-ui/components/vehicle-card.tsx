@@ -117,7 +117,7 @@ export const VehicleCard = ({
         <VehicleCardMediaBadges listing={listing} locale={locale} />
 
         {listing.images.length > 1 ? (
-          <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10 flex h-5 items-center gap-1 rounded-md bg-black/65 px-1.5 text-[11px] text-white lg:right-2 lg:bottom-2 lg:h-6 lg:px-2">
+          <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2">
             <Images aria-hidden="true" className="size-3" />
             <span aria-hidden="true">{listing.images.length}</span>
             <span className="sr-only">

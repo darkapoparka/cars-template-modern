@@ -277,10 +277,7 @@ const ContactSellerForm = ({
         required
       />
     </div>
-    <p
-      className="text-muted-foreground text-xs leading-5"
-      id="contact-privacy-context"
-    >
+    <p className="text-meta text-muted-foreground" id="contact-privacy-context">
       {copy.privacyBefore}
       <Link
         className="font-medium text-foreground underline underline-offset-2"
@@ -380,7 +377,7 @@ const ContactListingPage = async ({
                 <MessageSquareText aria-hidden="true" className="size-5" />
               </span>
               <div className="min-w-0">
-                <h1 className="font-semibold text-section-title tracking-tight">
+                <h1 className="font-semibold text-section-title tracking-heading">
                   {copy.title}
                 </h1>
                 <p className="mt-1 truncate text-muted-foreground text-sm">

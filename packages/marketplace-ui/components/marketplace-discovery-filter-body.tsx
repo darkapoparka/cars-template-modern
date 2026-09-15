@@ -71,9 +71,11 @@ const DiscoveryFilterMenuRow = ({
     onClick={onClick}
     type="button"
   >
-    <span className="font-medium text-[15px] text-zinc-950">{label}</span>
+    <span className="font-medium text-compact-control text-zinc-950">
+      {label}
+    </span>
     {value ? (
-      <span className="max-w-full justify-self-end truncate text-[14px] text-zinc-600">
+      <span className="max-w-full justify-self-end truncate text-meta text-zinc-600">
         {value}
       </span>
     ) : (
@@ -144,7 +146,7 @@ const DiscoveryFilterMainView = ({
         />
         <span className="sr-only">{copy.search.ariaLabel}</span>
         <input
-          className="h-full min-w-0 flex-1 bg-transparent text-[16px] outline-none placeholder:text-zinc-600"
+          className="h-full min-w-0 flex-1 bg-transparent text-body outline-none placeholder:text-zinc-600"
           onChange={(event) =>
             setDraft({ ...draft, q: event.target.value || undefined })
           }
@@ -277,7 +279,7 @@ const DiscoveryMakeView = ({
         </Button>
       ))}
       {options.length === 0 ? (
-        <output className="col-span-2 py-3 text-[14px] text-zinc-600">
+        <output className="col-span-2 py-3 text-meta text-zinc-600">
           {isBg
             ? "Няма намерена марка. Променете търсенето."
             : "No make found. Try another search."}
@@ -353,7 +355,7 @@ const DiscoveryModelView = ({
         </Button>
       ))}
       {options.length === 0 ? (
-        <output className="col-span-2 py-3 text-[14px] text-zinc-600">
+        <output className="col-span-2 py-3 text-meta text-zinc-600">
           {isBg
             ? "Няма намерен модел. Променете търсенето."
             : "No model found. Try another search."}
@@ -376,7 +378,7 @@ const TaxonomySearch = ({
     <Search aria-hidden="true" className="size-[18px] shrink-0 text-zinc-500" />
     <span className="sr-only">{label}</span>
     <input
-      className="min-w-0 flex-1 bg-transparent text-[16px] outline-none"
+      className="min-w-0 flex-1 bg-transparent text-body outline-none"
       onChange={(event) => onChange(event.target.value)}
       placeholder={label}
       type="search"

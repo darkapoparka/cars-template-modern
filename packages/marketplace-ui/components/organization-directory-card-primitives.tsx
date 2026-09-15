@@ -162,7 +162,7 @@ export const OrganizationSignalList = ({
           >
             <Badge
               className={cn(
-                "h-6 max-w-full rounded-md px-1.5 font-medium text-xs lg:border-0",
+                "h-6 max-w-full rounded-md px-1.5 font-medium text-micro lg:border-0",
                 className
               )}
               variant="outline"
@@ -223,7 +223,7 @@ export const OrganizationTypeBadge = ({
   return (
     <Badge
       className={cn(
-        "min-w-0 max-w-full shrink-0 gap-1 overflow-hidden rounded-md border-0 px-1.5 text-xs",
+        "min-w-0 max-w-full shrink-0 gap-1 overflow-hidden rounded-md border-0 px-1.5 text-micro",
         compact ? "h-6 font-medium" : "h-7 font-semibold",
         badgeClassName
       )}
@@ -269,7 +269,7 @@ const CompactInventoryContent = ({
       <span className="font-semibold text-foreground text-lg tabular-nums">
         {inventory.total}
       </span>
-      <span className="text-muted-foreground text-xs">
+      <span className="text-meta text-muted-foreground">
         {inventory.totalLabel}
       </span>
     </p>
@@ -277,10 +277,10 @@ const CompactInventoryContent = ({
       <dl className="ml-auto flex min-w-0 items-center justify-end gap-3 overflow-hidden">
         {inventory.statuses.slice(0, 3).map((status) => (
           <div className="flex min-w-0 items-baseline gap-1" key={status.id}>
-            <dd className="font-semibold text-foreground text-xs tabular-nums">
+            <dd className="font-semibold text-foreground text-meta tabular-nums">
               {status.count}
             </dd>
-            <dt className="truncate text-micro text-muted-foreground">
+            <dt className="truncate text-meta text-muted-foreground">
               {status.label}
             </dt>
           </div>
@@ -330,7 +330,7 @@ export const OrganizationScopeBadge = ({
 
   return (
     <Badge
-      className="hidden h-7 w-fit max-w-full rounded-md border-0 bg-control-hover px-2 font-semibold text-foreground text-xs lg:inline-flex"
+      className="hidden h-7 w-fit max-w-full rounded-md border-0 bg-control-hover px-2 font-semibold text-foreground text-micro lg:inline-flex"
       variant="outline"
     >
       {tradeLane ? (
@@ -361,7 +361,7 @@ export const OrganizationInventory = ({
         <span className="font-semibold text-foreground text-xl tabular-nums">
           {inventory.total}
         </span>
-        <span className="text-muted-foreground text-xs">
+        <span className="text-meta text-muted-foreground">
           {inventory.totalLabel}
         </span>
       </p>
@@ -376,10 +376,10 @@ export const OrganizationInventory = ({
       <dl className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 border-border/70 border-t pt-2 lg:grid-cols-2 lg:border-t-0 lg:pt-0 xl:grid-cols-4 min-[390px]:grid-cols-4">
         {inventory.statuses.slice(0, 4).map((status) => (
           <div className="flex min-w-0 items-baseline gap-1" key={status.id}>
-            <dt className="order-2 truncate text-micro text-muted-foreground">
+            <dt className="order-2 truncate text-meta text-muted-foreground">
               {status.label}
             </dt>
-            <dd className="order-1 font-semibold text-foreground text-xs tabular-nums">
+            <dd className="order-1 font-semibold text-foreground text-meta tabular-nums">
               {status.count}
             </dd>
           </div>
@@ -685,13 +685,13 @@ export const DesktopOrganizationInventoryLine = ({
           <span className="font-semibold text-foreground text-lg tabular-nums leading-none">
             {inventory.total}
           </span>
-          <span className="text-foreground/70 text-xs">
+          <span className="text-foreground/70 text-meta">
             {inventory.totalLabel}
           </span>
         </p>
         {inventory.statuses?.slice(0, 1).map((status) => (
           <p
-            className="mt-1 truncate font-medium text-muted-foreground text-xs"
+            className="mt-1 truncate font-medium text-meta text-muted-foreground"
             key={status.id}
           >
             {status.count} {status.label}
@@ -723,7 +723,7 @@ export const DesktopOrganizationInventoryAction = ({
     return (
       <div
         aria-disabled="true"
-        className="flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg bg-control/55 px-3 text-muted-foreground text-sm"
+        className="flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg bg-control/55 px-3 text-compact-control text-muted-foreground"
         data-slot="organization-inventory"
       >
         <CarFront aria-hidden="true" className="size-4 shrink-0" />
@@ -735,12 +735,12 @@ export const DesktopOrganizationInventoryAction = ({
   return (
     <Link
       aria-label={`${organization.inventoryAction.label}: ${organization.name} (${inventory.total} ${inventory.totalLabel})`}
-      className="relative z-10 flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg bg-control/75 px-2.5 font-semibold text-sm transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      className="relative z-10 flex h-10 min-w-0 flex-1 items-center justify-center gap-1.5 rounded-lg bg-control/75 px-2.5 font-semibold text-compact-control transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       href={organization.inventoryAction.href}
       prefetch={false}
     >
       <span className="truncate">{organization.inventoryAction.label}</span>
-      <span className="shrink-0 rounded-md bg-card px-1.5 py-0.5 text-xs tabular-nums ring-1 ring-border/60">
+      <span className="shrink-0 rounded-md bg-card px-1.5 py-0.5 text-micro tabular-nums ring-1 ring-border/60">
         {inventory.total}
       </span>
       <ArrowRight aria-hidden="true" className="size-4 shrink-0" />

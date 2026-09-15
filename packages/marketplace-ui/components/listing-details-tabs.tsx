@@ -201,7 +201,7 @@ export const ListingDetailsTabs = ({
               <button
                 aria-controls={`listing-desktop-panel-${tab.id}`}
                 aria-selected={isActive}
-                className={`inline-flex h-9 shrink-0 items-center rounded-full border px-4 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                className={`inline-flex h-9 shrink-0 items-center rounded-full border px-4 text-compact-control transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
                   isActive
                     ? "border-border bg-control font-semibold text-foreground shadow-sm"
                     : "border-border bg-background font-medium text-muted-foreground hover:bg-control/70 hover:text-foreground"

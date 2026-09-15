@@ -119,7 +119,7 @@ export const ListingGallery = ({
                   unoptimized={unoptimized}
                 />
               )}
-              <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-xs shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
+              <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-micro shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
                 <Expand aria-hidden="true" className="size-4" />
                 <span className="hidden lg:inline">{copy.viewFullScreen}</span>
                 <span className="lg:hidden">{imageCount}</span>

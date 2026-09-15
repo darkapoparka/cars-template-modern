@@ -114,7 +114,7 @@ export const MobileFinancingInterceptor = ({
       {request ? (
         <Suspense
           fallback={
-            <output className="block px-4 py-6 text-[15px] text-zinc-600">
+            <output className="block px-4 py-6 text-compact-control text-zinc-600">
               {locale === "bg" ? "Зареждане на формата…" : "Loading the form…"}
             </output>
           }

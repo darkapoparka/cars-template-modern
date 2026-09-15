@@ -66,7 +66,7 @@ export const ImportOriginField = ({
   return (
     <div className="grid gap-1.5" data-slot="import-origin-field">
       <div className="grid gap-1.5 lg:hidden">
-        <Label className="text-xs" htmlFor="import-origin-trigger">
+        <Label className="text-meta" htmlFor="import-origin-trigger">
           {label}
         </Label>
         <button
@@ -95,7 +95,7 @@ export const ImportOriginField = ({
       </div>
 
       <div className="hidden gap-1.5 lg:grid">
-        <Label className="text-xs" htmlFor="import-origin">
+        <Label className="text-meta" htmlFor="import-origin">
           {label}
         </Label>
         <select
@@ -133,7 +133,7 @@ export const ImportOriginField = ({
                 }
                 onClick={() => setOpen(false)}
               />
-              <DrawerTitle className="text-center text-[17px] leading-6">
+              <DrawerTitle className="text-center text-card-title">
                 {drawerTitle}
               </DrawerTitle>
               <Button
@@ -159,7 +159,7 @@ export const ImportOriginField = ({
                 <button
                   aria-pressed={origin === option.code}
                   className={cn(
-                    "flex min-h-12 w-full items-center rounded-xl px-4 text-left text-base outline-none transition-colors hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 active:bg-muted",
+                    "flex min-h-12 w-full items-center rounded-xl px-4 text-left text-compact-control outline-none transition-colors hover:bg-secondary focus-visible:ring-[3px] focus-visible:ring-ring/50 active:bg-muted",
                     origin === option.code && "bg-zinc-100"
                   )}
                   key={option.code}

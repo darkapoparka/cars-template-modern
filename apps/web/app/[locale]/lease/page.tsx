@@ -199,7 +199,7 @@ export default async function LeasePage({
                 className="w-full max-w-5xl overflow-hidden bg-card p-0 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/25"
                 data-slot="lease-finance-card"
               >
-                <div className="mx-auto hidden w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1.5 font-medium text-xs lg:flex">
+                <div className="mx-auto hidden w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1.5 font-medium text-micro lg:flex">
                   <BadgeCheck aria-hidden="true" className="size-4" />
                   {copy.badge}
                 </div>

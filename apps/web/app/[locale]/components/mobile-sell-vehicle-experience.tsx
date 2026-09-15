@@ -57,13 +57,13 @@ export const MobileSellVehicleExperience = ({
               {mobileSellVehicleCopy[locale].howSteps.map(
                 ({ title, description }, index) => (
                   <li key={title}>
-                    <p className="font-semibold text-[15px] text-zinc-950 leading-5">
-                      <span className="mr-2 text-[13px] text-muted-foreground tabular-nums">
+                    <p className="font-semibold text-compact-control text-zinc-950">
+                      <span className="mr-2 text-micro text-muted-foreground tabular-nums">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                       {title}
                     </p>
-                    <p className="mt-1 text-[13px] text-zinc-600 leading-5">
+                    <p className="mt-1 text-meta text-zinc-600">
                       {description}
                     </p>
                   </li>

@@ -1,6 +1,6 @@
 # Typography and UI consistency execution plan
 
-**Status:** Phase 1 complete; Phase 2 queued
+**Status:** Phase 2 complete; Phase 3 queued
 **Owner:** Modern template
 **Source audit:** `darkapoparka/cars`, `audits/2026-09-14/navara-modern-typography/FULL-AUDIT.md`
 
@@ -66,12 +66,12 @@ The contract change deliberately does not remove component-local 10–13px value
 
 ## Phase 2 — shared product primitives
 
-- [ ] Migrate vehicle-card titles, prices, facts, badges, and image counters to semantic roles.
-- [ ] Migrate inventory masthead, search, filter, sort, and result-summary typography.
-- [ ] Migrate guide/content cards and editorial summaries.
-- [ ] Migrate bottom navigation, social actions, and shared service controls.
-- [ ] Migrate listing facts, related cards, and seller information.
-- [ ] Remove duplicated numeric typography from shared view-policy modules.
+- [x] Migrate vehicle-card titles, prices, facts, badges, and image counters to semantic roles.
+- [x] Migrate inventory masthead, search, filter, sort, and result-summary typography.
+- [x] Migrate guide/content cards and editorial summaries.
+- [x] Migrate bottom navigation, social actions, and shared service controls.
+- [x] Migrate listing facts, related cards, and seller information.
+- [x] Remove duplicated numeric typography from shared view-policy modules.
 
 ### Phase 2 acceptance
 
@@ -79,6 +79,22 @@ The contract change deliberately does not remove component-local 10–13px value
 - Normal body, descriptions, form labels, and vehicle facts render at 14px or above.
 - No public product text renders at 10–11px.
 - Twelve-pixel text is incidental rather than instructional or descriptive.
+
+### Phase 2 validation — 2026-09-15
+
+- `pnpm typecheck`: pass, 28/28 tasks.
+- `pnpm --filter web build`: pass, 50 generated routes/pages.
+- `pnpm boundaries`: pass, 1,015 files across 30 packages.
+- Public web tests: pass, 33 files / 155 tests.
+- Marketplace UI tests: pass, 19 files / 77 tests.
+- `git diff --check`: pass.
+- Source policy scan: no `text-xs`, no public 10–11px utilities, no 550/650 weights, and no raw 12–13px product typography. The remaining 13px declaration is the technical Shiki code viewer.
+- Browser review: Cars, listing, leasing, selling, imports, guides, guide article, and contact rendered at 390×844 and 1440×900 with Inter and no positive document overflow.
+- Interactive mobile review: the full filter sheet, Sell vehicle-details form, Import source-link sheet, listing tabs, quick-filter row, service cards, and bottom navigation retained usable hierarchy and control sizing.
+- Computed-style evidence: no visible text below 12px; vehicle facts render at 14px; mobile vehicle titles at 16/600; mobile prices at 20/600; desktop vehicle titles at 18/600; desktop prices at 22/600.
+- Full `pnpm check`: Phase 2 files are clean. The repository remains blocked by the previously tracked Phase 0 formatting/lint debt in `public-contact-fields.tsx`, `financing-contact-payload.test.ts`, and `public-support-submission.ts`, plus a local `.impeccable/live/server.json` runtime artifact.
+
+Residual 12px text is now limited to badges, image counts, keyboard hints, timestamps, article category/read-time labels, step numbers, copyright, and similar incidental content. Route-level heading hierarchy and the remaining route-specific arbitrary title values stay assigned to Phase 4.
 
 ## Phase 3 — remove patch layers
 

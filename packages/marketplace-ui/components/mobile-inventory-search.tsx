@@ -139,7 +139,7 @@ export const MobileInventorySearch = ({
             aria-label={copy.search.ariaLabel}
             autoComplete="off"
             autoFocus={false}
-            className="h-full min-w-0 flex-1 bg-transparent px-2 text-[16px] text-zinc-950 outline-none placeholder:text-zinc-600"
+            className="h-full min-w-0 flex-1 bg-transparent px-2 text-body text-zinc-950 outline-none placeholder:text-zinc-600"
             enterKeyHint="search"
             inputMode="search"
             name="q"
@@ -176,7 +176,7 @@ export const MobileInventorySearch = ({
         data-slot="mobile-inventory-search-scroll-body"
       >
         {groups.length === 0 ? (
-          <p className="px-3 py-8 text-center text-[15px] text-zinc-500">
+          <p className="px-3 py-8 text-center text-compact-control text-zinc-500">
             {isBg ? "Няма съвпадения в наличността." : "No matching vehicles."}
           </p>
         ) : (
@@ -194,7 +194,7 @@ export const MobileInventorySearch = ({
                   {group.items.map((item) => (
                     <li className="shrink-0" key={item.id}>
                       <Button
-                        className="h-11 rounded-full bg-zinc-100 px-3.5 font-medium text-[14px] text-zinc-950 shadow-none hover:bg-zinc-200"
+                        className="h-11 rounded-full bg-zinc-100 px-3.5 font-medium text-compact-control text-zinc-950 shadow-none hover:bg-zinc-200"
                         onClick={() => commitItem(item)}
                         type="button"
                         variant="secondary"
@@ -269,14 +269,14 @@ const SearchResultButton = ({
             </span>
           )}
           <span className="min-w-0">
-            <span className="block truncate font-semibold text-[15px] text-zinc-950">
+            <span className="block truncate font-semibold text-card-title text-zinc-950 tracking-heading">
               {item.label}
             </span>
             <span className="mt-1 flex min-w-0 items-center gap-2">
-              <span className="min-w-0 flex-1 truncate text-[13px] text-zinc-600">
+              <span className="min-w-0 flex-1 truncate text-meta text-zinc-600">
                 {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
               </span>
-              <span className="shrink-0 whitespace-nowrap font-semibold text-[14px] text-zinc-950 tabular-nums">
+              <span className="shrink-0 whitespace-nowrap font-semibold text-meta text-zinc-950 tabular-nums">
                 {formatMoney(listing.price, isBg ? "bg" : "en")}
               </span>
             </span>
@@ -287,7 +287,7 @@ const SearchResultButton = ({
           <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-zinc-100 text-zinc-600">
             <Search aria-hidden="true" className="size-4" />
           </span>
-          <span className="min-w-0 flex-1 truncate text-[15px] text-zinc-950">
+          <span className="min-w-0 flex-1 truncate text-compact-control text-zinc-950">
             {item.label}
           </span>
         </>

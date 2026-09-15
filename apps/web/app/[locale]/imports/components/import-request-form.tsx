@@ -114,11 +114,11 @@ const ImportRequestSuccess = ({
         <h2 className="mt-5 font-semibold text-section-title tracking-tight">
           {text.successTitle}
         </h2>
-        <p className="mt-2 max-w-md text-muted-foreground text-sm leading-6">
+        <p className="mt-2 max-w-md text-body text-muted-foreground">
           {message} {text.successDescription}
         </p>
         <a
-          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 font-semibold text-sm text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
+          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 font-semibold text-compact-control text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
           href={leadSite.phoneHref}
         >
           <Phone aria-hidden="true" className="size-4" />
@@ -197,7 +197,7 @@ export const ImportRequestForm = ({
           {text.formTitle}
         </h2>
         {submissionAvailable ? (
-          <CardDescription className="max-w-2xl text-sm leading-6 sm:text-base lg:mx-auto lg:text-center">
+          <CardDescription className="max-w-2xl text-body lg:mx-auto lg:text-center">
             {hasSource ? text.attachedDescription : text.formDescription}
           </CardDescription>
         ) : (
@@ -252,7 +252,7 @@ export const ImportRequestForm = ({
 
           {submissionAvailable ? (
             <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-xl text-muted-foreground text-xs leading-5">
+              <p className="max-w-xl text-meta text-muted-foreground">
                 {text.privacyPrefix}{" "}
                 <Link
                   className="font-medium text-foreground underline-offset-4 hover:underline"
@@ -291,13 +291,13 @@ const ImportAttachedLink = ({
       {hasSource && !editingSource ? (
         <div className="flex min-w-0 items-center gap-2 rounded-xl bg-zinc-100 px-3">
           <div className="min-w-0 flex-1 py-2">
-            <p className="text-[12px] text-zinc-600">{text.attachedLink}</p>
-            <p className="truncate text-[14px] text-zinc-950" title={sourceUrl}>
+            <p className="text-micro text-zinc-600">{text.attachedLink}</p>
+            <p className="truncate text-meta text-zinc-950" title={sourceUrl}>
               {sourceUrl}
             </p>
           </div>
           <button
-            className="min-h-11 shrink-0 rounded-lg px-2 font-semibold text-[14px] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
+            className="min-h-11 shrink-0 rounded-lg px-2 font-semibold text-compact-control underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
             disabled={!ready}
             onClick={() => {
               setEditingSource(true);
@@ -312,7 +312,7 @@ const ImportAttachedLink = ({
         </div>
       ) : null}
       <div className={hasSource && !editingSource ? "hidden" : "grid gap-1.5"}>
-        <Label className="text-[13px]" htmlFor={sourceId}>
+        <Label className="text-meta" htmlFor={sourceId}>
           {text.sourceUrl}
         </Label>
         <Input
@@ -359,7 +359,7 @@ const ImportVehicleSection = ({
         <button
           aria-controls={detailsId}
           aria-expanded={detailsOpen}
-          className="flex min-h-11 w-full items-center justify-between rounded-lg text-left font-medium text-[14px] focus-visible:outline-2 focus-visible:outline-ring lg:hidden"
+          className="flex min-h-11 w-full items-center justify-between rounded-lg text-left font-medium text-compact-control focus-visible:outline-2 focus-visible:outline-ring lg:hidden"
           disabled={!ready}
           onClick={() => setDetailsOpen((value) => !value)}
           type="button"
@@ -371,7 +371,7 @@ const ImportVehicleSection = ({
           />
         </button>
       ) : (
-        <p className="mb-3 text-[13px] text-zinc-600 leading-5">
+        <p className="mb-3 text-meta text-zinc-600">
           {text.vehicleRequirement}
         </p>
       )}

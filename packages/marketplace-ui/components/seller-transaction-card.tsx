@@ -57,19 +57,19 @@ export const SellerTransactionCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-transaction-card"
     >
-      <p className="font-medium text-foreground/70 text-sm">
+      <p className="font-medium text-foreground/70 text-meta">
         {transactionLabel}
       </p>
-      <p className="mt-1 font-semibold text-2xl tracking-tight">
+      <p className="mt-1 font-semibold text-price-lg tracking-heading">
         {formatMoney(primaryPrice, locale)}
         {isMonthlyTransaction ? `/${copy.month}` : ""}
       </p>
       {approximatePrice ? (
-        <p className="mt-1 text-muted-foreground text-sm">
+        <p className="mt-1 text-meta text-muted-foreground">
           ≈ {formatMoney(approximatePrice, locale)}
         </p>
       ) : (
-        <p className="mt-1 text-muted-foreground text-sm">
+        <p className="mt-1 text-meta text-muted-foreground">
           {formatPriceType(listing.priceType, locale)}
           {!isMonthlyTransaction && listing.monthlyEstimate
             ? ` · ~${formatMoney(listing.monthlyEstimate, locale)}/${copy.month}`
@@ -95,10 +95,10 @@ export const SellerTransactionCard = ({
               className="mt-0.5 size-4 shrink-0 text-muted-foreground"
             />
             <span>
-              <span className="block font-medium text-foreground text-sm">
+              <span className="block font-medium text-foreground text-meta">
                 {copy.contact}
               </span>
-              <span className="mt-0.5 block text-micro text-muted-foreground">
+              <span className="mt-0.5 block text-meta text-muted-foreground">
                 {copy.contactUnavailableHint}
               </span>
             </span>

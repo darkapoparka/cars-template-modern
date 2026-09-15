@@ -60,7 +60,7 @@ const ModelPickerOptionButton = ({
       {inventoryCount !== undefined ? (
         <span
           className={cn(
-            "font-medium text-xs tabular-nums",
+            "font-medium text-micro tabular-nums",
             isSelected ? "text-background/70" : "text-muted-foreground"
           )}
         >
@@ -131,7 +131,7 @@ export const ModelPickerSections = ({
     {popular.length > 0 ? (
       <section aria-labelledby="popular-models-heading">
         <p
-          className="mb-2 px-1 font-semibold text-muted-foreground text-xs uppercase tracking-wide"
+          className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
           id="popular-models-heading"
         >
           {popularModelsLabel}
@@ -155,7 +155,7 @@ export const ModelPickerSections = ({
       >
         {popular.length > 0 ? (
           <p
-            className="mb-2 px-1 font-semibold text-muted-foreground text-xs uppercase tracking-wide"
+            className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
             id="additional-models-heading"
           >
             {additionalModelsLabel}

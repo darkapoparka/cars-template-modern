@@ -27,7 +27,7 @@ export const MobileSellHowItWorksDrawer = ({
       description={content.howDescription}
       footer={
         <Button
-          className="h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-[15px] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+          className="h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
           onClick={onStart}
           type="button"
         >

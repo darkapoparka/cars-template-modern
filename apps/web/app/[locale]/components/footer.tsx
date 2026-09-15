@@ -246,7 +246,7 @@ export const Footer = ({ locale }: FooterProps) => {
           </nav>
         </div>
 
-        <div className="flex flex-col gap-3 border-background/12 border-t py-4 text-background/65 text-micro sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 border-background/12 border-t py-4 text-background/65 text-meta sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {currentYear} {leadSite.name}
           </p>

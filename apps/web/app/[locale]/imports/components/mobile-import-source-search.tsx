@@ -175,12 +175,12 @@ export const MobileImportSourceSearch = ({
             className="no-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             data-slot="mobile-import-source-search-body"
           >
-            <p className="rounded-xl bg-zinc-50 px-3.5 py-3 text-[14px] text-zinc-600 leading-5">
+            <p className="rounded-xl bg-zinc-50 px-3.5 py-3 text-meta text-zinc-600">
               {copy.hint}
             </p>
 
             <Button
-              className="mt-6 h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-[15px] text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+              className="mt-6 h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
               disabled={!sourceUrl.trim()}
               type="submit"
             >

@@ -58,28 +58,28 @@ export const RelatedListingCard = ({
           )}
         </div>
         <div className="p-3">
-          <p className="font-semibold text-lg">
+          <p className="font-semibold text-price tracking-heading">
             {formatMoney(primaryPrice, locale)}
           </p>
           {approximatePrice ? (
-            <p className="text-muted-foreground text-xs">
+            <p className="text-meta text-muted-foreground">
               ≈ {formatMoney(approximatePrice, locale)}
             </p>
           ) : null}
-          <h3 className="mt-1 line-clamp-2 font-medium text-sm">
+          <h3 className="mt-1 line-clamp-2 font-semibold text-card-title tracking-heading">
             {listing.title}
           </h3>
-          <p className="mt-2 text-muted-foreground text-xs">
+          <p className="mt-2 text-meta text-muted-foreground">
             {formatMileage(listing.spec.mileageValue, locale)} ·{" "}
             {formatFuelType(listing.spec.fuelType, locale)}
           </p>
-          <p className="mt-2 flex items-center gap-1.5 text-muted-foreground text-xs">
+          <p className="mt-2 flex items-center gap-1.5 text-meta text-muted-foreground">
             <MapPin aria-hidden="true" className="size-3.5" />
             {isBg ? "Автомобил в" : "Vehicle in"}{" "}
             {formatVehicleLocation(physicalLocation, locale)}
           </p>
           {deliveryTruth ? (
-            <p className="mt-1.5 flex items-center gap-1.5 text-muted-foreground text-xs">
+            <p className="mt-1.5 flex items-center gap-1.5 text-meta text-muted-foreground">
               <Truck aria-hidden="true" className="size-3.5" />
               {deliveryTruth.label}
             </p>

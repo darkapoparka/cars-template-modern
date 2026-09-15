@@ -54,7 +54,7 @@ export const ImportVehicleFields = ({
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-year">
+          <Label className="text-meta" htmlFor="import-year">
             {text.year}
           </Label>
           <Input
@@ -71,7 +71,7 @@ export const ImportVehicleFields = ({
         </div>
 
         <div className="grid gap-1.5">
-          <Label className="text-xs" htmlFor="import-mileage">
+          <Label className="text-meta" htmlFor="import-mileage">
             {text.mileage}
           </Label>
           <Input
@@ -88,7 +88,7 @@ export const ImportVehicleFields = ({
         </div>
 
         <div className="col-span-2 grid gap-1.5 sm:col-span-1">
-          <Label className="text-xs" htmlFor="import-budget">
+          <Label className="text-meta" htmlFor="import-budget">
             {text.budget}
           </Label>
           <Input
@@ -103,7 +103,7 @@ export const ImportVehicleFields = ({
       </div>
 
       <div className="grid gap-1.5">
-        <Label className="text-xs" htmlFor="import-message">
+        <Label className="text-meta" htmlFor="import-message">
           {text.message}
         </Label>
         <Textarea
@@ -140,7 +140,7 @@ export const ImportContactFields = ({
           draft={draft}
           idPrefix="import"
           inputClassName={importRequestInputClassName}
-          labelClassName="text-xs"
+          labelClassName="text-meta"
         />
       </div>
     </fieldset>

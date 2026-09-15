@@ -41,7 +41,7 @@ const MobileNarrowFilterTrigger = ({
       aria-label={`${label}${
         activeFilterCount > 0 ? ` (${activeFilterCount})` : ""
       }`}
-      className="hidden h-9 gap-1.5 rounded-lg border border-border bg-card px-2.5 font-medium text-foreground text-xs shadow-none max-[359px]:inline-flex"
+      className="hidden h-9 gap-1.5 rounded-lg border border-border bg-card px-2.5 font-medium text-compact-control text-foreground shadow-none max-[359px]:inline-flex"
       data-slot="mobile-narrow-filter-trigger"
       onClick={onOpenFilters}
       type="button"
@@ -50,7 +50,7 @@ const MobileNarrowFilterTrigger = ({
       <SlidersHorizontal aria-hidden="true" className="size-4" />
       <span>{label}</span>
       {activeFilterCount > 0 ? (
-        <span className="grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-[10px] text-white">
+        <span className="grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white">
           {activeFilterCount}
         </span>
       ) : null}
@@ -91,7 +91,7 @@ export const ResultToolbar = ({
     activeFilterCount > 0 && onClearFilters ? (
       <Button
         aria-label={clearFiltersLabel}
-        className="h-8 gap-1.5 rounded-lg px-2.5 text-xs max-[359px]:hidden"
+        className="h-8 gap-1.5 rounded-lg px-2.5 text-meta max-[359px]:hidden"
         onClick={onClearFilters}
         type="button"
         variant="ghost"
@@ -114,7 +114,7 @@ export const ResultToolbar = ({
         }
       >
         <div className="flex min-w-0 items-baseline gap-3">
-          <p className="font-semibold text-foreground text-page-title tracking-tight">
+          <p className="font-semibold text-foreground text-page-title tracking-heading lg:text-page-title-lg">
             {resultTitle}
           </p>
           <p
@@ -135,7 +135,7 @@ export const ResultToolbar = ({
         )}
       >
         <div className="min-w-0 flex-1">
-          <p className="truncate font-semibold text-card-title-lg">
+          <p className="truncate font-semibold text-card-title tracking-heading">
             {resultTitle}
           </p>
           <p

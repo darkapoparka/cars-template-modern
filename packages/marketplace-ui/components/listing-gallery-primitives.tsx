@@ -32,7 +32,7 @@ export const GalleryImageFallback = ({
           <p className="mt-3 font-semibold text-sm">{copy.imageUnavailable}</p>
           <p
             className={cn(
-              "mt-1 text-xs",
+              "mt-1 text-micro",
               dark ? "text-zinc-400" : "text-muted-foreground"
             )}
           >

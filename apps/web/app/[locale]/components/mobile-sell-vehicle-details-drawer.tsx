@@ -113,7 +113,7 @@ export const MobileSellVehicleDetailsDrawer = ({
       >
         <input name="intent" type="hidden" value="sell" />
         <div className="grid gap-1.5">
-          <Label className="font-medium text-[13px]" htmlFor="mobile-sell-vin">
+          <Label className="font-medium text-meta" htmlFor="mobile-sell-vin">
             {content.vinOptional}
           </Label>
           <div className={mobileMarketplaceOverlayFieldClassName}>
@@ -163,10 +163,7 @@ export const MobileSellVehicleDetailsDrawer = ({
 
         <div className="mt-3 grid grid-cols-2 gap-3">
           <div className="grid gap-1.5">
-            <Label
-              className="font-medium text-[13px]"
-              htmlFor="mobile-sell-year"
-            >
+            <Label className="font-medium text-meta" htmlFor="mobile-sell-year">
               {content.year}
             </Label>
             <Input
@@ -184,7 +181,7 @@ export const MobileSellVehicleDetailsDrawer = ({
           </div>
           <div className="grid gap-1.5">
             <Label
-              className="font-medium text-[13px]"
+              className="font-medium text-meta"
               htmlFor="mobile-sell-mileage"
             >
               {content.mileage}
@@ -205,10 +202,7 @@ export const MobileSellVehicleDetailsDrawer = ({
         </div>
 
         <div className="mt-3 grid gap-1.5">
-          <Label
-            className="font-medium text-[13px]"
-            htmlFor="mobile-sell-notes"
-          >
+          <Label className="font-medium text-meta" htmlFor="mobile-sell-notes">
             {locale === "bg" ? "Бележки (по желание)" : "Notes (optional)"}
           </Label>
           <Textarea
@@ -221,13 +215,13 @@ export const MobileSellVehicleDetailsDrawer = ({
         </div>
         <div className="mt-6">
           <Button
-            className={`${mobileMarketplaceOverlayPrimaryActionClassName} gap-2 font-semibold text-[14px]`}
+            className={`${mobileMarketplaceOverlayPrimaryActionClassName} gap-2 font-semibold text-compact-control`}
             type="submit"
           >
             {content.submit}
             <ArrowRight aria-hidden="true" className="size-4" />
           </Button>
-          <p className="mt-2 text-center text-[13px] text-muted-foreground leading-5">
+          <p className="mt-2 text-center text-meta text-muted-foreground">
             {content.directCall}{" "}
             <Link
               className="inline-flex min-h-11 items-center px-2 font-semibold text-foreground underline-offset-4 hover:underline"
@@ -239,11 +233,11 @@ export const MobileSellVehicleDetailsDrawer = ({
           <div className="mt-2 text-center">
             {confirmReset ? (
               <fieldset aria-label={content.clearTitle}>
-                <p className="text-[13px] text-zinc-600">
+                <p className="text-meta text-zinc-600">
                   {content.clearConfirm}
                 </p>
                 <button
-                  className="min-h-11 rounded-lg px-4 font-semibold text-[14px] text-red-700 focus-visible:outline-2 focus-visible:outline-ring"
+                  className="min-h-11 rounded-lg px-4 font-semibold text-compact-control text-red-700 focus-visible:outline-2 focus-visible:outline-ring"
                   onClick={() => {
                     const emptyDraft = parseSellVehicleDraft();
                     setDraft(emptyDraft);
@@ -266,7 +260,7 @@ export const MobileSellVehicleDetailsDrawer = ({
                   {content.clearAction}
                 </button>
                 <button
-                  className="min-h-11 rounded-lg px-4 font-medium text-[14px] focus-visible:outline-2 focus-visible:outline-ring"
+                  className="min-h-11 rounded-lg px-4 font-medium text-compact-control focus-visible:outline-2 focus-visible:outline-ring"
                   onClick={() => {
                     setConfirmReset(false);
                     requestAnimationFrame(() => resetRef.current?.focus());
@@ -278,7 +272,7 @@ export const MobileSellVehicleDetailsDrawer = ({
               </fieldset>
             ) : (
               <button
-                className="min-h-11 rounded-lg px-4 text-[13px] text-zinc-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
+                className="min-h-11 rounded-lg px-4 text-meta text-zinc-600 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-ring"
                 onClick={() => setConfirmReset(true)}
                 ref={resetRef}
                 type="button"

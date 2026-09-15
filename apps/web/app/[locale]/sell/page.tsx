@@ -351,7 +351,7 @@ export default async function SellPage({
                       <Label className="text-meta" htmlFor="sell-notes">
                         {copy.detailsLabel}
                       </Label>
-                      <span className="text-muted-foreground text-xs">
+                      <span className="text-meta text-muted-foreground">
                         {copy.detailsHint}
                       </span>
                     </div>

@@ -20,12 +20,12 @@ export const mobileMarketplaceOverlayIconActionClassName =
 export const mobileMarketplaceOverlayFieldClassName =
   "flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3 focus-within:ring-2 focus-within:ring-zinc-300";
 export const mobileMarketplaceOverlayInputClassName =
-  "h-full min-w-0 flex-1 bg-transparent px-2 text-[16px] text-zinc-950 outline-none placeholder:text-zinc-600";
+  "h-full min-w-0 flex-1 bg-transparent px-2 text-body text-zinc-950 outline-none placeholder:text-zinc-600";
 export const mobileMarketplaceOverlayFieldRowClassName =
   "shrink-0 bg-white px-3 pb-3";
 
 export const mobileMarketplaceOverlayPrimaryActionClassName =
-  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-[var(--lead-site-accent-hover)] active:scale-[0.99]";
+  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-compact-control text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-[var(--lead-site-accent-hover)] active:scale-[0.99]";
 
 interface MobileMarketplaceOverlayShellProps {
   readonly children: ReactNode;
@@ -86,7 +86,7 @@ export const MobileMarketplaceOverlayHeader = ({
   >
     <div className="grid min-h-16 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2">
       <div className="flex justify-start">{leftAction}</div>
-      <DialogTitle className="truncate text-center text-[17px] leading-6">
+      <DialogTitle className="truncate text-center text-card-title">
         {title}
       </DialogTitle>
       <div className="flex justify-end">{rightAction}</div>

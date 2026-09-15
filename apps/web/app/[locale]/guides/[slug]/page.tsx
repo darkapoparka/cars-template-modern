@@ -96,7 +96,7 @@ export default async function GuideOrArticlePage({
         <main className="min-h-[100dvh] bg-background px-4 py-5 lg:px-6 lg:py-10">
           <article className="mx-auto max-w-3xl">
             <Link
-              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-2 font-semibold text-[13px] text-zinc-800 focus-visible:outline-2 focus-visible:outline-zinc-950"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-2 font-semibold text-compact-control text-zinc-800 focus-visible:outline-2 focus-visible:outline-zinc-950"
               href={`${getLocalizedPath(normalizedLocale, "/guides")}${backQuery}`}
             >
               <ArrowLeft aria-hidden="true" className="size-4" />
@@ -104,13 +104,13 @@ export default async function GuideOrArticlePage({
             </Link>
 
             <header className="pt-5 pb-4">
-              <p className="font-semibold text-[11px] text-muted-foreground uppercase tracking-[0.12em]">
+              <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
                 {eyebrow}
               </p>
-              <h1 className="mt-2 text-balance font-semibold text-[30px] text-zinc-950 leading-[1.04] tracking-[-0.035em] sm:text-4xl">
+              <h1 className="mt-2 text-balance font-semibold text-page-title text-zinc-950 tracking-heading lg:text-page-title-lg">
                 {title}
               </h1>
-              <p className="mt-3 max-w-2xl text-[16px] text-zinc-600 leading-6">
+              <p className="mt-3 max-w-2xl text-body text-zinc-600">
                 {description}
               </p>
             </header>
@@ -132,13 +132,13 @@ export default async function GuideOrArticlePage({
                   className="rounded-2xl bg-white px-5 py-5 sm:px-6 sm:py-6"
                   key={section.heading.en}
                 >
-                  <p className="font-semibold text-[11px] text-muted-foreground tabular-nums">
+                  <p className="font-semibold text-micro text-muted-foreground tabular-nums">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-2 font-semibold text-[20px] text-zinc-950 leading-6 tracking-[-0.02em]">
+                  <h2 className="mt-2 font-semibold text-section-title text-zinc-950 tracking-heading">
                     {section.heading[language]}
                   </h2>
-                  <p className="mt-2 text-[15px] text-zinc-600 leading-6">
+                  <p className="mt-2 text-body text-zinc-600">
                     {section.body[language]}
                   </p>
                 </section>
@@ -146,7 +146,7 @@ export default async function GuideOrArticlePage({
             </div>
 
             <Link
-              className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-zinc-950 px-5 py-4 font-semibold text-[15px] text-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2"
+              className="mt-4 flex items-center justify-between gap-4 rounded-2xl bg-zinc-950 px-5 py-4 font-semibold text-compact-control text-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2"
               href={getLocalizedPath(normalizedLocale, "/cars")}
             >
               <span>

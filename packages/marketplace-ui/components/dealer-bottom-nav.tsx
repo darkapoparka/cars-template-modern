@@ -31,7 +31,7 @@ import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-[12px] leading-4 transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
+    "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
       ? "font-semibold text-[var(--lead-site-accent)]"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
@@ -238,7 +238,7 @@ export const DealerBottomNav = ({
               {secondaryMenuItems.map((item) => {
                 return (
                   <Link
-                    className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-[15px] text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+                    className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
                     href={item.href}
                     key={item.href}
                     onClick={() => setMenuOpen(false)}
@@ -257,9 +257,7 @@ export const DealerBottomNav = ({
               })}
             </nav>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
-            <p className="mt-4 text-[13px] text-zinc-600 leading-5">
-              {leadSite.address}
-            </p>
+            <p className="mt-4 text-meta text-zinc-600">{leadSite.address}</p>
           </div>
         </DrawerContent>
       </Drawer>
@@ -340,7 +338,7 @@ export const BottomMarketplaceNav = ({
             <Link
               aria-current={item.active ? "page" : undefined}
               className={cn(
-                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-[11px] leading-[14px] transition-colors",
+                "flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 px-1 font-medium text-meta transition-colors",
                 item.active
                   ? "text-foreground"
                   : "text-muted-foreground hover:text-foreground"

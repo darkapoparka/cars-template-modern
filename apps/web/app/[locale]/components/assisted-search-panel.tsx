@@ -153,7 +153,9 @@ export const AssistedSearchPanel = ({
           <SearchIcon aria-hidden="true" className="size-4" />
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block font-medium text-sm">{copy.heading}</span>
+          <span className="block font-medium text-compact-control">
+            {copy.heading}
+          </span>
           <span className="mt-0.5 block truncate text-meta text-muted-foreground">
             {copy.supporting}
           </span>
@@ -177,8 +179,10 @@ export const AssistedSearchPanel = ({
           <SearchIcon aria-hidden="true" className="size-4" />
         </span>
         <div className="min-w-0 flex-1">
-          <h2 className="font-semibold text-sm">{copy.heading}</h2>
-          <p className="mt-0.5 text-muted-foreground text-xs">
+          <h2 className="font-semibold text-card-title tracking-heading">
+            {copy.heading}
+          </h2>
+          <p className="mt-0.5 text-meta text-muted-foreground">
             {copy.supporting}
           </p>
         </div>
@@ -269,7 +273,7 @@ export const AssistedSearchPanel = ({
               {result.chips.map((chip) => (
                 <Button
                   aria-label={`${copy.remove}: ${chip.label}`}
-                  className="h-8 gap-1.5 rounded-full px-3 text-xs"
+                  className="h-8 gap-1.5 rounded-full px-3 text-compact-control"
                   key={chip.id}
                   onClick={() => removeChip(chip.id)}
                   type="button"
@@ -282,7 +286,7 @@ export const AssistedSearchPanel = ({
             </div>
           ) : null}
           {result.ambiguities.length > 0 ? (
-            <ul className="grid gap-1 rounded-lg bg-card p-3 text-muted-foreground text-xs">
+            <ul className="grid gap-1 rounded-lg bg-card p-3 text-meta text-muted-foreground">
               {result.ambiguities.map((ambiguity) => (
                 <li key={ambiguity}>{ambiguity}</li>
               ))}

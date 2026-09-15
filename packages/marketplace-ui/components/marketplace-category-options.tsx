@@ -47,10 +47,10 @@ export const MarketplaceCategoryOptions = ({
               />
             </span>
             <span className="min-w-0">
-              <span className="block font-semibold text-[15px] leading-5">
+              <span className="block font-semibold text-compact-control">
                 {copy.categories[category.id].label}
               </span>
-              <span className="mt-0.5 line-clamp-2 block text-[13px] text-zinc-500 leading-4">
+              <span className="mt-0.5 line-clamp-2 block text-meta text-zinc-500">
                 {copy.categories[category.id].description}
               </span>
             </span>
