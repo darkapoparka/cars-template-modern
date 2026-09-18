@@ -206,30 +206,39 @@ export const MobileContentHub = ({
             {visibleItems.map((item, index) => (
               <Link
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
+                data-slot="content-card"
                 href={`${localize(`/guides/${item.slug}`)}${serializeContentSearch({ query, filter })}`}
                 key={`${item.type}-${item.slug}`}
                 prefetch={false}
               >
-                <div className="relative w-[35%] min-w-[112px] shrink-0 overflow-hidden bg-zinc-200">
+                <div
+                  className="relative w-24 min-w-24 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[35%] min-[360px]:min-w-28"
+                  data-slot="content-card-media"
+                >
                   <Image
                     alt=""
                     className="object-cover"
                     fill
                     loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 768px) 140px, 260px"
+                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, 260px"
                     src={item.image}
                   />
                 </div>
-                <div className="flex min-w-0 flex-1 flex-col px-3 py-2.5">
-                  <div className="flex items-center gap-1.5 font-semibold text-micro text-muted-foreground uppercase tracking-label">
-                    <span className="truncate">{item.category}</span>
-                    <span aria-hidden="true">·</span>
-                    <span className="shrink-0">{item.meta}</span>
+                <div className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3">
+                  <div
+                    className="grid grid-cols-1 items-center gap-0 font-semibold text-micro text-muted-foreground uppercase tracking-label min-[360px]:flex min-[360px]:flex-wrap min-[360px]:gap-x-1.5"
+                    data-slot="content-card-meta"
+                  >
+                    <span className="whitespace-nowrap">{item.category}</span>
+                    <span className="whitespace-nowrap">{item.meta}</span>
                   </div>
                   <h2 className="mt-1 line-clamp-3 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
                     {item.title}
                   </h2>
-                  <p className="mt-1 line-clamp-1 text-meta text-zinc-600 lg:line-clamp-2">
+                  <p
+                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2 min-[360px]:line-clamp-1"
+                    data-slot="content-card-description"
+                  >
                     {item.description}
                   </p>
                   <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control">

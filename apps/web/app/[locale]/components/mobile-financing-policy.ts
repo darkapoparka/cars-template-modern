@@ -1,3 +1,5 @@
+import { leadSite } from "@repo/marketplace";
+
 export interface FinancingRequest {
   deposit?: string;
   term: string;
@@ -22,8 +24,7 @@ export const financingRequestCopy = {
     send: "Изпратете заявка",
     sending: "Изпращане…",
     success: "Заявката е изпратена",
-    successBody:
-      "Екипът на Day & Night ще се свърже с вас за конкретните условия.",
+    successBody: `Екипът на ${leadSite.shortName} ще се свърже с вас за конкретните условия.`,
     term: "Срок",
     title: "Заявка за финансиране",
     vehicle: "Избран автомобил",
@@ -45,7 +46,7 @@ export const financingRequestCopy = {
     send: "Send request",
     sending: "Sending…",
     success: "Request sent",
-    successBody: "The Day & Night team will contact you to confirm the terms.",
+    successBody: `The ${leadSite.shortName} team will contact you to confirm the terms.`,
     term: "Term",
     title: "Financing request",
     vehicle: "Selected vehicle",

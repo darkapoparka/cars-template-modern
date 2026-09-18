@@ -294,6 +294,7 @@ packages/database/generated
 **/.next*/
 
 # Local browser and visual QA evidence
+.impeccable/
 /artifacts/
 **/artifacts/
 /tmp/

@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import type { EmailDeliveryReceipt } from "@repo/email/delivery";
 import { isoCountryCodeSchema } from "@repo/marketplace";
 import { z } from "zod";
+import { publicContactLimits } from "./public-contact-contract";
 import {
   fingerprintPublicValue,
   inspectPublicFormData,
@@ -11,8 +12,6 @@ import {
   PublicSupportRateLimitUnavailableError,
   TooManyPublicSupportRequestsError,
 } from "./public-support-rate-limit";
-
-import { publicContactLimits } from "./public-contact-contract";
 
 const validListingSlugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const maxPublicSupportFormBytes = 16 * 1024;
@@ -75,9 +74,18 @@ const publicSupportRequestSchema = z
     message: z.string().trim().max(3000),
     mileage: optionalInteger(0, 10_000_000),
     model: z.string().trim().max(120).optional(),
-    name: z.string().trim().min(publicContactLimits.name.min).max(publicContactLimits.name.max),
+    name: z
+      .string()
+      .trim()
+      .min(publicContactLimits.name.min)
+      .max(publicContactLimits.name.max),
     origin: z.enum(["CN", "DE", "US", "JP", "KR"]).optional(),
-    phone: z.string().trim().min(publicContactLimits.phone.min).max(publicContactLimits.phone.max).optional(),
+    phone: z
+      .string()
+      .trim()
+      .min(publicContactLimits.phone.min)
+      .max(publicContactLimits.phone.max)
+      .optional(),
     sourceUrl: z.preprocess(emptyToUndefined, z.url().max(500).optional()),
     topic: z.enum(["dealer", "importer", "buyer", "other"]),
     website: z.string().trim().max(120),

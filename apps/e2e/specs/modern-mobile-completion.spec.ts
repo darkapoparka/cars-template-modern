@@ -1,3 +1,4 @@
+import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test("make and model search narrow choices without losing filter selection", async ({
@@ -71,22 +72,20 @@ test("linked import edits preserve preparation details and change required label
   await expect(year).toBeFocused();
 });
 
-test("Sell back keeps the draft and returns focus without clearing", async ({
+test("Sell dismissal keeps the draft and returns focus without clearing", async ({
   page,
 }) => {
   await page.goto("/sell");
   const trigger = page.locator('[data-slot="mobile-sell-manual-entry"]');
   await trigger.tap();
   const dialog = page.getByRole("dialog");
-  await dialog.locator('textarea[name="notes"]').fill("Keep on back");
-  await dialog
-    .getByRole("button", { name: "Назад към продажбата", exact: true })
-    .tap();
+  await dialog.locator('textarea[name="notes"]').fill("Keep on dismissal");
+  await dialog.getByRole("button", { name: "Затворете", exact: true }).tap();
   await expect(dialog).toBeHidden();
   await expect(trigger).toBeFocused();
   await trigger.tap();
   await expect(dialog.locator('textarea[name="notes"]')).toHaveValue(
-    "Keep on back"
+    "Keep on dismissal"
   );
 });
 
@@ -393,6 +392,117 @@ for (const route of ["/sell", "/guides?topic=import&q=qa-no-article"]) {
     }
   });
 }
+
+test("Sell overlay resolves semantic type and primary-action contrast", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/sell");
+  await page.locator('[data-slot="mobile-sell-manual-entry"]').tap();
+  const dialog = page.getByRole("dialog");
+  await expect(dialog).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+
+  const title = dialog.getByRole("heading", {
+    name: "Данни за автомобила",
+    exact: true,
+  });
+  const titleMetrics = await title.evaluate((element) => ({
+    fontSize: getComputedStyle(element).fontSize,
+    clientWidth: element.clientWidth,
+    scrollWidth: element.scrollWidth,
+  }));
+  expect(titleMetrics.fontSize).toBe("16px");
+  expect(titleMetrics.scrollWidth).toBeLessThanOrEqual(
+    titleMetrics.clientWidth
+  );
+
+  const results = await new AxeBuilder({ page })
+    .include('[data-slot="mobile-sell-details-drawer"]')
+    .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
+    .analyze();
+  expect(
+    results.violations.filter(
+      ({ impact }) => impact === "serious" || impact === "critical"
+    )
+  ).toEqual([]);
+});
+
+test("320px guide cards keep metadata and primary content readable", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/guides");
+  await page.evaluate(() => document.fonts.ready);
+
+  const card = page.locator('[data-slot="content-card"]').first();
+  const media = card.locator('[data-slot="content-card-media"]');
+  const mediaBounds = await media.boundingBox();
+  expect(mediaBounds?.width).toBeLessThanOrEqual(97);
+
+  const metadata = card.locator('[data-slot="content-card-meta"] > span');
+  const metrics = await metadata.evaluateAll((elements) =>
+    elements.map((element) => ({
+      text: element.textContent,
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+    }))
+  );
+  expect(metrics).toHaveLength(2);
+  for (const metric of metrics) {
+    expect(
+      metric.scrollWidth,
+      metric.text ?? "content metadata"
+    ).toBeLessThanOrEqual(metric.clientWidth);
+  }
+  await expect(
+    card.locator('[data-slot="content-card-description"]')
+  ).toBeHidden();
+  await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
+});
+
+test("320px inventory keeps semantic type and complete vehicle facts", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 320, height: 700 });
+  await page.goto("/cars");
+  await page.evaluate(() => document.fonts.ready);
+
+  const navLabels = page.locator(
+    '[data-slot="dealer-bottom-nav"] span.whitespace-nowrap'
+  );
+  await expect(navLabels).toHaveCount(5);
+  const navFontSizes = await navLabels.evaluateAll((elements) =>
+    elements.map((element) => getComputedStyle(element).fontSize)
+  );
+  expect([...new Set(navFontSizes)]).toEqual(["14px"]);
+
+  const quickPill = page
+    .locator('[data-slot="mobile-discovery-quick-rail"] button')
+    .first();
+  expect(
+    await quickPill.evaluate((element) => getComputedStyle(element).fontSize)
+  ).toBe("15px");
+
+  const facts = page
+    .locator('[data-slot="vehicle-card-spec-pills"]:visible')
+    .first()
+    .locator("li > span");
+  const metrics = await facts.evaluateAll((elements) =>
+    elements.map((element) => ({
+      text: element.textContent,
+      clientWidth: element.clientWidth,
+      scrollWidth: element.scrollWidth,
+    }))
+  );
+  expect(metrics).toHaveLength(4);
+  for (const metric of metrics) {
+    expect(
+      metric.scrollWidth,
+      metric.text ?? "vehicle fact"
+    ).toBeLessThanOrEqual(metric.clientWidth);
+  }
+});
 
 for (const viewport of [
   { width: 320, height: 700 },

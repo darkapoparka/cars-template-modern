@@ -1,6 +1,8 @@
+import { leadSite } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   buildFinancingContactMessage,
+  financingRequestCopy,
   getFinancingDepositLabel,
   parseFinancingRequestHref,
 } from "./mobile-financing-policy";
@@ -34,6 +36,11 @@ describe("mobile financing policy", () => {
     ).toContain(
       "Selected vehicle: BMW X5\nTerm: 36 months\nInitial payment: 10%"
     );
+  });
+
+  it("uses the configured dealer name in success copy", () => {
+    expect(financingRequestCopy.bg.successBody).toContain(leadSite.shortName);
+    expect(financingRequestCopy.en.successBody).toContain(leadSite.shortName);
   });
 
   it("keeps an undecided term as a preference rather than a month count", () => {

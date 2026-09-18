@@ -66,6 +66,7 @@
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "test": "vitest run",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
@@ -96,6 +97,7 @@
     "@types/react": "^19.2.14",
     "postcss": "^8.5.8",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   }
 }
