@@ -46,32 +46,69 @@ const bodyTypeProfiles: Record<DiscoveryBodyType, string> = {
   wagon: "M17 49 29 44 45 25 112 24 132 41 151 47 161 55 156 62 23 62 14 57Z",
 };
 
-const BodyTypeSilhouette = ({ bodyType }: { bodyType: DiscoveryBodyType }) => (
-  <svg
-    aria-hidden="true"
-    className="dealer-desktop-body-type-art"
-    viewBox="0 0 176 76"
-  >
-    <path d={bodyTypeProfiles[bodyType]} fill="currentColor" />
-    <path
-      d={
-        bodyType === "convertible"
-          ? "M49 38 76 38 88 44 48 44Z"
-          : "M49 31 96 29 119 43 43 43Z"
-      }
-      fill="rgb(255 255 255 / 72%)"
-    />
-    <path
-      d="M96 29v14M44 44h108"
-      stroke="rgb(17 24 39 / 24%)"
-      strokeWidth="2"
-    />
-    <circle cx="48" cy="60" fill="#18181b" r="10" />
-    <circle cx="48" cy="60" fill="#d4d4d8" r="4" />
-    <circle cx="132" cy="60" fill="#18181b" r="10" />
-    <circle cx="132" cy="60" fill="#d4d4d8" r="4" />
-  </svg>
-);
+const BodyTypeSilhouette = ({ bodyType }: { bodyType: DiscoveryBodyType }) => {
+  const metalGradientId = `body-metal-${bodyType}`;
+  const glassGradientId = `body-glass-${bodyType}`;
+
+  return (
+    <svg
+      aria-hidden="true"
+      className="dealer-desktop-body-type-art"
+      viewBox="0 0 176 76"
+    >
+      <defs>
+        <linearGradient id={metalGradientId} x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stopColor="#f8fafc" />
+          <stop offset="0.45" stopColor="#9ca3ad" />
+          <stop offset="0.72" stopColor="#edf0f3" />
+          <stop offset="1" stopColor="#717984" />
+        </linearGradient>
+        <linearGradient id={glassGradientId} x1="0" x2="1">
+          <stop offset="0" stopColor="#2d333b" />
+          <stop offset="1" stopColor="#68717c" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="89" cy="65" fill="rgb(15 23 42 / 14%)" rx="70" ry="4" />
+      <path
+        d={bodyTypeProfiles[bodyType]}
+        fill={`url(#${metalGradientId})`}
+        stroke="#525a64"
+        strokeLinejoin="round"
+        strokeWidth="1.25"
+      />
+      <path
+        d={
+          bodyType === "convertible"
+            ? "M49 38 76 38 88 44 48 44Z"
+            : "M49 31 96 29 119 43 43 43Z"
+        }
+        fill={`url(#${glassGradientId})`}
+        stroke="rgb(255 255 255 / 48%)"
+        strokeLinejoin="round"
+        strokeWidth="0.85"
+      />
+      <path
+        d="M96 29v14M44 44h108M22 51h132"
+        fill="none"
+        stroke="rgb(17 24 39 / 23%)"
+        strokeWidth="1.15"
+      />
+      <path
+        d="M23 48c12-2 21-2 29-1M135 46c9 1 16 3 22 6"
+        fill="none"
+        stroke="rgb(255 255 255 / 68%)"
+        strokeLinecap="round"
+        strokeWidth="1.5"
+      />
+      <circle cx="48" cy="60" fill="#20242a" r="10" />
+      <circle cx="48" cy="60" fill="#aeb4bc" r="5.5" />
+      <circle cx="48" cy="60" fill="#343a42" r="2.4" />
+      <circle cx="132" cy="60" fill="#20242a" r="10" />
+      <circle cx="132" cy="60" fill="#aeb4bc" r="5.5" />
+      <circle cx="132" cy="60" fill="#343a42" r="2.4" />
+    </svg>
+  );
+};
 
 export const DealerDesktopDiscoveryHero = ({
   locale,
@@ -227,11 +264,11 @@ export const DealerDesktopDiscoveryContent = ({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const popularMakes = getPopularMakes(listings);
   const usedListingIds = new Set<string>();
-  const featured = takeUniqueListings(
-    listings.filter((listing) => listing.promoted),
-    usedListingIds,
-    5
-  );
+  const featuredPool = [
+    ...listings.filter((listing) => listing.promoted),
+    ...listings.filter((listing) => !listing.promoted),
+  ];
+  const featured = takeUniqueListings(featuredPool, usedListingIds, 4);
   const newest = takeUniqueListings(
     [...listings].sort(
       (first, second) =>
@@ -239,9 +276,9 @@ export const DealerDesktopDiscoveryContent = ({
         new Date(first.publishedAt).getTime()
     ),
     usedListingIds,
-    5
+    4
   );
-  const availableNow = takeUniqueListings(listings, usedListingIds, 5);
+  const availableNow = takeUniqueListings(listings, usedListingIds, 4);
 
   return (
     <div
