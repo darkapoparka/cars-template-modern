@@ -28,6 +28,7 @@ export const MarketplaceResults = ({
   currentPath,
   desktopSearchVariant,
   filters,
+  hideDesktop = false,
   isBg,
   listings,
   locale,
@@ -42,6 +43,7 @@ export const MarketplaceResults = ({
   currentPath: string;
   desktopSearchVariant: "discovery" | "results";
   filters: MarketplaceSearchParams;
+  hideDesktop?: boolean;
   isBg: boolean;
   listings: VehicleListing[];
   locale?: string;
@@ -71,7 +73,10 @@ export const MarketplaceResults = ({
 
   return (
     <section
-      className={getMarketplaceResultsSectionClassName(desktopSearchVariant)}
+      className={cn(
+        getMarketplaceResultsSectionClassName(desktopSearchVariant),
+        hideDesktop && "lg:hidden"
+      )}
     >
       <div className="min-w-0">
         <p

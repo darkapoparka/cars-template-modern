@@ -12,6 +12,7 @@ import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
 } from "../lib/marketplace-layout";
+import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
 import type { DesktopCategoryInventoryCount } from "./desktop-discovery-search";
@@ -47,6 +48,7 @@ interface DesktopMarketplaceBarProps {
   query: string;
   searchListings?: readonly InventorySearchListing[];
   setQuery: (query: string) => void;
+  showDealerDesktopLanding?: boolean;
   totalListings: number;
   variant?: "discovery" | "results";
   viewMode: ListingViewMode;
@@ -72,6 +74,7 @@ export const DesktopMarketplaceBar = ({
   appBaseUrl,
   assistantSlot,
   searchListings,
+  showDealerDesktopLanding = false,
   categoryCounts,
   filterCount,
   filters,
@@ -108,24 +111,30 @@ export const DesktopMarketplaceBar = ({
   });
 
   if (leadSite.staticDemoMode) {
+    const dealerToolbarProps = {
+      assistantSlot,
+      categoryCounts,
+      filterCount,
+      filters,
+      locale,
+      onApply,
+      onClearFilters,
+      onOpenFilters,
+      onOpenMake,
+      onOpenModel,
+      query,
+      searchListings,
+      setQuery,
+      totalListings,
+    };
+
     return (
       <DealerDesktopHeader activeMode="buy" locale={locale}>
-        <DealerDesktopToolbar
-          assistantSlot={assistantSlot}
-          categoryCounts={categoryCounts}
-          filterCount={filterCount}
-          filters={filters}
-          locale={locale}
-          onApply={onApply}
-          onClearFilters={onClearFilters}
-          onOpenFilters={onOpenFilters}
-          onOpenMake={onOpenMake}
-          onOpenModel={onOpenModel}
-          query={query}
-          searchListings={searchListings}
-          setQuery={setQuery}
-          totalListings={totalListings}
-        />
+        {showDealerDesktopLanding ? (
+          <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
+        ) : (
+          <DealerDesktopToolbar {...dealerToolbarProps} />
+        )}
       </DealerDesktopHeader>
     );
   }

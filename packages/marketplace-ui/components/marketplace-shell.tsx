@@ -38,6 +38,7 @@ import {
 } from "../lib/marketplace-filter-policy";
 import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options";
 import { BottomMarketplaceNav } from "./dealer-bottom-nav";
+import { DealerDesktopDiscoveryContent } from "./dealer-desktop-discovery";
 import { DesktopMarketplaceBar } from "./desktop-discovery-bar";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
 import { MarketplaceCategoryPicker } from "./marketplace-category-picker";
@@ -163,6 +164,13 @@ export const MarketplaceShell = ({
     ? ""
     : cleanMarketplaceBaseUrl(appBaseUrl);
   const activeFilterChips = getActiveFilterChips(filters, locale);
+  const showDealerDesktopLanding =
+    leadSite.staticDemoMode &&
+    desktopSearchVariant === "discovery" &&
+    filters.category === "car" &&
+    filters.sort === "recommended" &&
+    filters.page === 1 &&
+    activeFilterChips.length === 0;
   const structuredFilterCount = activeFilterChips.filter(
     (chip) => chip.id !== "q"
   ).length;
@@ -359,10 +367,19 @@ export const MarketplaceShell = ({
           query={query}
           searchListings={searchListings}
           setQuery={setQuery}
+          showDealerDesktopLanding={showDealerDesktopLanding}
           totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}
         />
+
+        {showDealerDesktopLanding ? (
+          <DealerDesktopDiscoveryContent
+            currentPath={currentPath}
+            listings={listings}
+            locale={locale}
+          />
+        ) : null}
 
         <MarketplaceResults
           activeFilterCount={activeFilterChips.length}
@@ -370,6 +387,7 @@ export const MarketplaceShell = ({
           currentPath={currentPath}
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
+          hideDesktop={showDealerDesktopLanding}
           isBg={isBg}
           listings={listings}
           locale={locale}

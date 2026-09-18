@@ -27,6 +27,7 @@ export const DealerDesktopToolbar = ({
   onOpenModel,
   query,
   setQuery,
+  variant = "default",
 }: {
   assistantSlot?: ReactNode;
   searchListings?: readonly InventorySearchListing[];
@@ -42,6 +43,7 @@ export const DealerDesktopToolbar = ({
   query: string;
   setQuery: (query: string) => void;
   totalListings: number;
+  variant?: "default" | "hero";
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -54,7 +56,11 @@ export const DealerDesktopToolbar = ({
   }[filters.category];
 
   return (
-    <div className="dealer-desktop-toolbar hidden lg:block">
+    <div
+      className={`dealer-desktop-toolbar hidden lg:block ${
+        variant === "hero" ? "dealer-desktop-toolbar--hero" : ""
+      }`}
+    >
       <div className="dealer-desktop-search-band">
         <div
           className="dealer-desktop-query-row"

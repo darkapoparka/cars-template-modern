@@ -1,6 +1,7 @@
 import "./styles.css";
 import "./mobile-final-polish.css";
 import "./desktop-header.css";
+import "./desktop-marketplace-home.css";
 import { analyticsConsentBootstrapScript } from "@repo/analytics";
 import { AnalyticsProvider } from "@repo/analytics/provider";
 import { Toaster } from "@repo/design-system/components/ui/sonner";
