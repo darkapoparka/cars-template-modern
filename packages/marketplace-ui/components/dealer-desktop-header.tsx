@@ -18,6 +18,7 @@ export const DealerDesktopHeader = ({
   children,
   homeHref,
   locale,
+  layout = "default",
   site = publicSite,
 }: {
   activeMode?: MarketplaceMode | null;
@@ -25,6 +26,7 @@ export const DealerDesktopHeader = ({
   homeHref?: string;
   locale?: string;
   site?: PublicSiteConfig;
+  layout?: "default" | "showroom";
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const destinations = [
@@ -39,6 +41,7 @@ export const DealerDesktopHeader = ({
       <header
         className={cn(styles.header, "dealer-desktop-header hidden lg:block")}
         data-has-search={Boolean(children)}
+        data-layout={layout}
         data-slot="dealer-desktop-header"
       >
         <div className={cn(styles.nav, "dealer-desktop-nav")}>

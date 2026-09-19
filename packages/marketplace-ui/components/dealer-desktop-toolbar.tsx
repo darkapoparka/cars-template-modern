@@ -1,19 +1,12 @@
 "use client";
 
-import { Button } from "@repo/design-system/components/ui/button";
 import { Dialog } from "@repo/design-system/components/ui/dialog";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import {
-  ArrowRight,
-  Bike,
-  BusFront,
-  CarFront,
-  Search,
-  Truck,
-} from "lucide-react";
+import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import styles from "./dealer-desktop-toolbar.module.css";
+import { DealerHeroSearch } from "./dealer-hero-search";
 import {
   type DesktopCategoryInventoryCount,
   DesktopCategoryPickerContent,
@@ -25,7 +18,25 @@ import {
   rememberMarketplaceSearchQuery,
 } from "./desktop-search-assistant";
 
-export const DealerDesktopToolbar = ({
+export interface DealerDesktopToolbarProps {
+  assistantSlot?: ReactNode;
+  categoryCounts?: DesktopCategoryInventoryCount[];
+  filterCount: number;
+  filters: MarketplaceSearchParams;
+  locale?: string;
+  onApply: (filters: Partial<MarketplaceSearchParams>) => void;
+  onClearFilters: () => void;
+  onOpenFilters: () => void;
+  onOpenMake: () => void;
+  onOpenModel: () => void;
+  query: string;
+  searchListings?: readonly InventorySearchListing[];
+  setQuery: (query: string) => void;
+  totalListings: number;
+  variant?: "default" | "hero";
+}
+
+const DealerDesktopResultsToolbar = ({
   assistantSlot,
   searchListings,
   categoryCounts,
@@ -39,25 +50,7 @@ export const DealerDesktopToolbar = ({
   onOpenModel,
   query,
   setQuery,
-  totalListings,
-  variant = "default",
-}: {
-  assistantSlot?: ReactNode;
-  searchListings?: readonly InventorySearchListing[];
-  categoryCounts?: DesktopCategoryInventoryCount[];
-  filterCount: number;
-  filters: MarketplaceSearchParams;
-  locale?: string;
-  onApply: (filters: Partial<MarketplaceSearchParams>) => void;
-  onClearFilters: () => void;
-  onOpenFilters: () => void;
-  onOpenMake: () => void;
-  onOpenModel: () => void;
-  query: string;
-  setQuery: (query: string) => void;
-  totalListings: number;
-  variant?: "default" | "hero";
-}) => {
+}: DealerDesktopToolbarProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const [categoryOpen, setCategoryOpen] = useState(false);
   const CategoryIcon = {
@@ -68,7 +61,6 @@ export const DealerDesktopToolbar = ({
     van: BusFront,
   }[filters.category];
 
-  const isHero = variant === "hero";
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
   const submitSearch = (value: string) => {
     const q = value.trim();
@@ -81,17 +73,12 @@ export const DealerDesktopToolbar = ({
     }
   };
 
-  const searchLabel = isBg ? "Търси автомобили" : "Search cars";
-  const browseLabel = isBg
-    ? `Виж всички ${numberFormatter.format(totalListings)} автомобила`
-    : `View all ${numberFormatter.format(totalListings)} cars`;
-
   return (
     <form
       aria-label={isBg ? "Търсене на автомобили" : "Vehicle search"}
       className={styles.toolbar}
       data-slot="dealer-desktop-toolbar"
-      data-variant={variant}
+      data-variant="default"
       onSubmit={(event) => {
         event.preventDefault();
         submitSearch(query);
@@ -101,7 +88,7 @@ export const DealerDesktopToolbar = ({
         <div className={styles.queryRow}>
           <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
             <DesktopCategoryPickerTrigger
-              appearance={isHero ? "hero" : "toolbar"}
+              appearance="toolbar"
               categoryIcon={
                 <CategoryIcon
                   aria-hidden="true"
@@ -122,16 +109,14 @@ export const DealerDesktopToolbar = ({
               onClose={() => setCategoryOpen(false)}
             />
           </Dialog>
-          <div className={isHero ? styles.heroQuery : styles.search}>
-            {!isHero && (
-              <Search
-                aria-hidden="true"
-                className={styles.searchIcon}
-                size={19}
-              />
-            )}
+          <div className={styles.search}>
+            <Search
+              aria-hidden="true"
+              className={styles.searchIcon}
+              size={19}
+            />
             <DesktopSearchAssistant
-              appearance={isHero ? "hero" : "toolbar"}
+              appearance="toolbar"
               ariaLabel={isBg ? "Търсене на автомобили" : "Search vehicles"}
               assistantSlot={assistantSlot}
               compact
@@ -149,11 +134,9 @@ export const DealerDesktopToolbar = ({
               query={query}
               scope="vehicles"
             />
-            {!isHero && (
-              <span aria-hidden="true" className={styles.searchHint}>
-                Enter ↵
-              </span>
-            )}
+            <span aria-hidden="true" className={styles.searchHint}>
+              Enter ↵
+            </span>
           </div>
         </div>
       </div>
@@ -163,7 +146,7 @@ export const DealerDesktopToolbar = ({
           filterCount={filterCount}
           filters={filters}
           isBg={isBg}
-          layout={isHero ? "hero" : "toolbar"}
+          layout="toolbar"
           numberFormatter={numberFormatter}
           onApply={onApply}
           onClearFilters={onClearFilters}
@@ -173,16 +156,13 @@ export const DealerDesktopToolbar = ({
           showAdditionalFilters
         />
       </div>
-      {isHero && (
-        <Button
-          className={styles.submit}
-          data-slot="desktop-hero-submit"
-          type="submit"
-        >
-          {query.trim() ? searchLabel : browseLabel}
-          <ArrowRight aria-hidden="true" className="size-4" />
-        </Button>
-      )}
     </form>
   );
 };
+
+export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) =>
+  props.variant === "hero" ? (
+    <DealerHeroSearch {...props} />
+  ) : (
+    <DealerDesktopResultsToolbar {...props} />
+  );

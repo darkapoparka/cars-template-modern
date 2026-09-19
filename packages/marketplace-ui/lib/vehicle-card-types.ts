@@ -19,7 +19,7 @@ export interface VehicleCardProps {
   href?: string;
   listing: VehicleListing;
   locale?: string;
-  presentation?: "default" | "discovery";
+  presentation?: "default" | "discovery" | "showroom";
   priceInsight?: VehicleCardPriceInsight;
   priority?: boolean;
   saveHref?: string;

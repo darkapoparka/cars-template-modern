@@ -129,7 +129,11 @@ export const DesktopMarketplaceBar = ({
     };
 
     return (
-      <DealerDesktopHeader activeMode="buy" locale={locale}>
+      <DealerDesktopHeader
+        activeMode="buy"
+        layout={showDealerDesktopLanding ? "showroom" : "default"}
+        locale={locale}
+      >
         {showDealerDesktopLanding ? (
           <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (

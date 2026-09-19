@@ -36,6 +36,7 @@ export const publicServicesSchema = z.object({
 export type PublicService = keyof z.infer<typeof publicServicesSchema>;
 
 export const publicArtworkSchema = z.object({
+  heroScene: publicAssetPathSchema.optional(),
   heroLeft: publicAssetPathSchema,
   heroRight: publicAssetPathSchema,
   contactHero: publicAssetPathSchema,

@@ -6,6 +6,7 @@ import {
 } from "../fixtures/modern-visual-health";
 
 const searchResultUrl = /(?:q|make)=BMW/;
+const showroomSceneSource = /lead-car-showroom-scene-v1/;
 
 test.beforeEach(async ({ page }) => {
   await page.route("**/*", (route) =>
@@ -42,6 +43,11 @@ for (const width of [1024, 1280, 1440, 1920]) {
         '[data-slot="dealer-desktop-discovery-content"] article:visible'
       )
     ).not.toHaveCount(0);
+    await expect(
+      page.locator(
+        '[data-slot="dealer-desktop-discovery-content"] [data-slot="carousel-next"]'
+      )
+    ).toBeEnabled();
     await expect(page).toHaveScreenshot(`desktop-cars-${width}.png`);
     const box = hero.locator('[data-slot="dealer-desktop-toolbar"]');
     const heroBounds = await hero.boundingBox();
@@ -58,8 +64,19 @@ for (const width of [1024, 1280, 1440, 1920]) {
           (heroBounds.x + heroBounds.width / 2)
       )
     ).toBeLessThan(2);
-    expect(boxBounds.width).toBeLessThanOrEqual(640);
-    expect(heroBounds.height).toBeLessThan(480);
+    expect(boxBounds.width).toBeGreaterThanOrEqual(700);
+    expect(boxBounds.width).toBeLessThanOrEqual(832);
+    expect(heroBounds.height).toBeLessThan(540);
+    const scene = hero.locator('[data-slot="desktop-hero-scene"]');
+    await expect(scene).toBeVisible();
+    await expect(scene).toHaveAttribute("src", showroomSceneSource);
+    await expect(hero.locator('[data-slot="desktop-hero-make"]')).toBeVisible();
+    await expect(
+      hero.locator('[data-slot="desktop-hero-model"]')
+    ).toBeVisible();
+    await expect(
+      hero.locator('[data-slot="desktop-hero-price"]')
+    ).toBeVisible();
     const inventory = page.locator(
       '[data-slot="dealer-desktop-discovery-content"]'
     );
@@ -69,7 +86,7 @@ for (const width of [1024, 1280, 1440, 1920]) {
         exact: true,
       })
     ).toHaveCount(1);
-    await expect(inventory.getByRole("navigation")).toHaveCount(0);
+    await expect(inventory.locator('[data-slot="carousel"]')).toBeVisible();
     const search = hero.getByRole("combobox");
     await expect(search).toBeVisible();
     await search.fill("BMW");
@@ -262,5 +279,41 @@ test("centered buy box supports button search and its compact price control", as
   expect(first?.x).toBe(second?.x);
   await page.locator('[data-slot="desktop-hero-submit"]').click();
   await expect(page).toHaveURL(searchResultUrl);
+  await expectNoHorizontalOverflow(page);
+});
+
+test("showroom carousel browses the same stock without losing keyboard access", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1536, height: 1024 });
+  await page.goto("/cars", { waitUntil: "domcontentloaded" });
+  await settleModernPage(page);
+  const inventory = page.locator(
+    '[data-slot="dealer-desktop-discovery-content"]'
+  );
+  const firstCard = inventory.locator('[data-slot="vehicle-card"]').first();
+  const before = await firstCard.boundingBox();
+  const next = inventory.getByRole("button", {
+    name: "Следващи автомобили",
+    exact: true,
+  });
+  const previous = inventory.getByRole("button", {
+    name: "Предишни автомобили",
+    exact: true,
+  });
+  await expect(previous).toBeDisabled();
+  await next.click();
+  await expect(previous).toBeEnabled();
+  await settleModernPage(page);
+  await expect
+    .poll(async () => (await firstCard.boundingBox())?.x ?? 0)
+    .toBeLessThan((before?.x ?? 0) - 200);
+  await previous.click();
+  await expect(previous).toBeDisabled();
+  await expect
+    .poll(async () =>
+      Math.abs(((await firstCard.boundingBox())?.x ?? 0) - (before?.x ?? 0))
+    )
+    .toBeLessThan(2);
   await expectNoHorizontalOverflow(page);
 });

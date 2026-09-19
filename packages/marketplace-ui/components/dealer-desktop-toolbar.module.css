@@ -14,37 +14,12 @@
     border: 1px solid var(--border);
     border-radius: 0 0 var(--radius-shell) var(--radius-shell);
   }
-  .toolbar[data-variant="hero"] {
-    width: 100%;
-    padding: 1.25rem;
-    margin: 0;
-    border-radius: var(--radius-vehicle);
-    box-shadow: var(--elevation-panel);
-  }
-  .submit {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 2.75rem;
-    margin-top: 1rem;
-    font-size: var(--text-compact-control);
-    font-weight: var(--font-weight-semibold);
-    color: var(--selected-foreground);
-    background: var(--selected);
-    border-radius: var(--radius-lg);
-  }
-  .submit:hover {
-    background: var(--foreground);
-  }
   .queryRow {
     display: flex;
     gap: 0.75rem;
     align-items: stretch;
   }
-  .search,
-  .heroQuery {
+  .search {
     flex: 1;
     min-width: 0;
   }
@@ -78,10 +53,5 @@
     padding-top: 1rem;
     margin-top: 1rem;
     border-top: 1px solid var(--border);
-  }
-  .toolbar[data-variant="hero"] .filters {
-    padding-top: 0;
-    margin-top: 1rem;
-    border-top: 0;
   }
 }

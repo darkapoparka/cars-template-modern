@@ -1,0 +1,25 @@
+{
+  "purpose": "Decorative desktop hero cutouts; not actual inventory photography.",
+  "sourceGenerationId": "5fdf0fe5-53ff-4758-84ab-ec7e9eae86bd",
+  "sourceConversationFile": "a_sleek_modern_car_dealership_website_homepage_sc.png",
+  "sourceSha256": "7fae70b5a5713ec1c05ffb38a9918631db036200ebaaabbdad6b9cd64ef8c100",
+  "processing": "Vehicle regions extracted from generated artwork. Transparent contour masks; silver cutout mirrored inward. No artificial upscaling and no inventory-photo replacements.",
+  "assets": [
+    {
+      "file": "apps/web/public/lead-car-graphite-v3.webp",
+      "width": 320,
+      "height": 180,
+      "bytes": 8258,
+      "sha256": "6809defe5b59f642e6192ee58fd02b81b4960b2270d0a8886215040f6f58ce21",
+      "sourceCrop": [112, 720, 400, 880]
+    },
+    {
+      "file": "apps/web/public/lead-car-silver-v3.webp",
+      "width": 320,
+      "height": 180,
+      "bytes": 7064,
+      "sha256": "8546e7734cb95d62c09644b8ce2f0b191633fabed5d642ae14ae90ae8bbaeb73",
+      "sourceCrop": [456, 730, 738, 877]
+    }
+  ]
+}

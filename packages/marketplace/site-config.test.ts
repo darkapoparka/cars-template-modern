@@ -143,3 +143,18 @@ describe("public dealership configuration", () => {
     ).not.toHaveProperty("DATABASE_URL");
   });
 });
+
+it("uses the master scene without hiding explicit dealer cutouts", () => {
+  expect(dealer().artwork.heroScene).toBe("/lead-car-showroom-scene-v1.webp");
+  expect(
+    dealer({ artwork: { heroLeft: "/custom-car.webp" } }).artwork.heroScene
+  ).toBeUndefined();
+  expect(
+    dealer({ artwork: { heroScene: "/custom-scene.webp" } }).artwork.heroScene
+  ).toBe("/custom-scene.webp");
+});
+it("rejects unsafe scene URLs", () => {
+  expect(() =>
+    dealer({ artwork: { heroScene: "https://example.invalid/scene.webp" } })
+  ).toThrow();
+});

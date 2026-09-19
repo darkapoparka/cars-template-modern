@@ -1,0 +1,12 @@
+{
+  "source": "a_high_end_modern_automotive_website_homepage_ui.png",
+  "generationId": "62a8fade-89ee-443f-8022-6b7ec1e740a5",
+  "selection": "Variant 1: Find Your Next Drive",
+  "destination": "apps/web/public/lead-car-showroom-scene-v1.webp",
+  "sha256": "7346f8c9882b2869b21d0853b1d226a75b5394f30e0fa4b7eb06a65a1c0acdd0",
+  "width": 1280,
+  "height": 382,
+  "bytes": 13468,
+  "method": "Extracted the reference hero photograph, removed generated UI/copy using masked photographic fill, resized and WebP encoded. Actual interface is live React, not a screenshot.",
+  "usage": "Decorative desktop-only imagery, not actual inventory or dealership premises."
+}

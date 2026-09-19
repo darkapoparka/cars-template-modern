@@ -74,6 +74,12 @@ export const createPublicSiteConfig = (
       ...defaultSiteArtwork,
       financePromotion: config.financingArtworkPath,
       ...config.artwork,
+      // Explicit cutouts from older dealer copies must not be hidden by the master scene.
+      heroScene:
+        config.artwork?.heroScene ??
+        (config.artwork?.heroLeft || config.artwork?.heroRight
+          ? undefined
+          : defaultSiteArtwork.heroScene),
       bodyTypes: {
         ...defaultSiteArtwork.bodyTypes,
         ...config.artwork?.bodyTypes,

@@ -105,3 +105,51 @@
     display: none;
   }
 }
+
+/* The selected showroom composition is desktop-only; other route headers retain their layout. */
+@media (min-width: 1024px) {
+  .header[data-layout="showroom"] {
+    width: 100%;
+    padding-inline: 4%;
+    margin: 0;
+    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
+    border: 0;
+    border-bottom: 1px solid var(--inverse-border);
+    border-radius: 0;
+  }
+  .header[data-layout="showroom"] .nav {
+    grid-template-columns: 14rem minmax(0, 1fr) auto;
+    gap: 1rem;
+    min-height: 3.875rem;
+  }
+  .header[data-layout="showroom"] .brand {
+    width: 11rem;
+    height: 2.5rem;
+  }
+  .header[data-layout="showroom"] .segments {
+    gap: 1rem;
+    justify-content: flex-start;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .header[data-layout="showroom"] .segments a {
+    padding-inline: 0.625rem;
+    font-size: var(--text-micro);
+    color: var(--inverse-foreground);
+    background: transparent;
+  }
+  .header[data-layout="showroom"] .segments a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .header[data-layout="showroom"] .showroom {
+    min-height: 2.5rem;
+    padding-inline: 1rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border-color: var(--border);
+    border-radius: var(--radius-sm);
+  }
+}

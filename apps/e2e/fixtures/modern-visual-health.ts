@@ -10,7 +10,19 @@ export const settleModernPage = async (page: Page) => {
   });
   await page.waitForFunction(() =>
     [...document.images]
-      .filter((image) => image.getClientRects().length > 0)
+      .filter((image) => {
+        if (image.getClientRects().length === 0) {
+          return false;
+        }
+        const viewport = image.closest('[data-slot="carousel-content"]');
+        if (!viewport) {
+          return true;
+        }
+        // Off-canvas slides are not rendered in a screenshot. Verify them after navigation.
+        const clip = viewport.getBoundingClientRect();
+        const bounds = image.getBoundingClientRect();
+        return bounds.right > clip.left && bounds.left < clip.right;
+      })
       .every((image) => image.complete && image.naturalWidth > 0)
   );
   await expect(page.locator("body")).not.toContainText("Application error");
