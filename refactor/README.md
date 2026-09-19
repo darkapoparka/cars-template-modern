@@ -1,6 +1,6 @@
 # Modern template — refactor program
 
-**Audit date:** 19 September 2026. **Status:** audit and implementation plan; not an implemented refactor or a release approval.
+**Audit date:** 19 September 2026. **Status:** implementation delivered and locally qualified; formal release gates remain separate. Start with [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md), [the evidence ledger](evidence/IMPLEMENTATION.md) and [current configuration](../docs/SITE-CONFIGURATION.md). The findings below describe the original audited baseline, not the current implementation.
 
 **Repository:** `darkapoparka/cars-template-modern`
 **Checkout:** `J:\template-repos\cars-template-modern`
@@ -37,13 +37,13 @@ There is useful code to retain: domain/UI/server separation, extracted filtering
 | [AGENTS.md](AGENTS.md) | Rules for agents maintaining or executing this program |
 | [evidence/BASELINE.md](evidence/BASELINE.md) | Actual audit scope, command results, limitations and evidence locations |
 
-Start implementation with **RF-01 through RF-05**, then migrate one complete desktop surface. Do not open a branch-wide file-move or token-replacement sweep.
+Implementation has already been executed. Do not restart RF-01 through RF-05 or recreate the refactor. Use the current task/status ledger to resolve the remaining release gates.
 
 ## Scope and authority
 
 This program replaces the old `docs/refactor/` program as the planning entry point for this request. The older files remain historical evidence of previous work, not proof of current approval or current test status. Their references to `gpt-web`, a different baseline, and an approved desktop are not the operating contract for this program.
 
-Root `AGENTS.md`, `TEMPLATE.md`, `docs/QA.md`, and `docs/CARS-INTEGRATION.md` still govern repository identity, lead-copy ownership, and operational safety. The request authorizes this audit/documentation pass, not production data changes, provider provisioning, migration execution, external messages, or deployment. Future implementation must be explicitly requested.
+Root `AGENTS.md`, `TEMPLATE.md`, `docs/QA.md`, and `docs/CARS-INTEGRATION.md` still govern repository identity, lead-copy ownership, and operational safety. The subsequent user request authorized source implementation. It did not authorize production data changes, provider provisioning, migration execution, external messages, dealer deployment or Cars promotion.
 
 ## Completion means
 

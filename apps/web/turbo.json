@@ -5,6 +5,7 @@
     "analyze": {
       "env": [
         "ARCJET_KEY",
+        "AUTOMARKET_DEALER_ORG_ID",
         "AUTOMARKET_PUBLIC_DATA_MODE",
         "AUTOMARKET_PUBLIC_E2E",
         "BASEHUB_TOKEN",
@@ -32,6 +33,7 @@
     "build": {
       "env": [
         "ARCJET_KEY",
+        "AUTOMARKET_DEALER_ORG_ID",
         "AUTOMARKET_PUBLIC_DATA_MODE",
         "AUTOMARKET_PUBLIC_E2E",
         "BASEHUB_TOKEN",
@@ -59,6 +61,7 @@
     "dev": {
       "env": [
         "ARCJET_KEY",
+        "AUTOMARKET_DEALER_ORG_ID",
         "AUTOMARKET_PUBLIC_DATA_MODE",
         "AUTOMARKET_PUBLIC_E2E",
         "BASEHUB_TOKEN",
@@ -85,6 +88,7 @@
     "test": {
       "env": [
         "ARCJET_KEY",
+        "AUTOMARKET_DEALER_ORG_ID",
         "AUTOMARKET_PUBLIC_DATA_MODE",
         "AUTOMARKET_PUBLIC_E2E",
         "BASEHUB_TOKEN",
@@ -112,6 +116,7 @@
     "typecheck": {
       "env": [
         "ARCJET_KEY",
+        "AUTOMARKET_DEALER_ORG_ID",
         "AUTOMARKET_PUBLIC_DATA_MODE",
         "AUTOMARKET_PUBLIC_E2E",
         "BASEHUB_TOKEN",

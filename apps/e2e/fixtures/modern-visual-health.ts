@@ -23,6 +23,3 @@ export const expectNoHorizontalOverflow = async (page: Page) => {
   }));
   expect(size.content).toBeLessThanOrEqual(size.viewport);
 };
-
-export const publicSnapshotStyle =
-  "nextjs-portal { display: none !important; }";

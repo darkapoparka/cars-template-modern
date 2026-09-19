@@ -1,6 +1,6 @@
 # Execution backlog
 
-Status at documentation delivery: **all RF application tasks pending**. Audit evidence is recorded separately. A checked test is not an implemented task. Use states `pending`, `in progress`, `blocked`, `verified`; only mark verified with linked source/test/rendered evidence. Relative size S/M/L describes scope, not elapsed time.
+The source implementation is delivered; the table below retains the original acceptance contract. Current qualification is recorded after it and in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md). “Verified” describes the named evidence, never an unperformed live/owner/mounted check. Relative size S/M/L describes scope, not elapsed time.
 
 | ID | Task / primary owners | Depends on | Size | Acceptance and required evidence |
 | --- | --- | --- | --- | --- |
@@ -45,3 +45,35 @@ Next dependency-ready task:
 ```
 
 RF-13 and read-only RF-14 investigation can be reviewed alongside foundations, but no competing writer/build touches the same checkout. RF-18–RF-20 may form a later dealer-workspace release rather than blocking the public template release; RF-23 must explicitly name excluded scope. No task should be marked done solely because files moved or line counts fell.
+
+## Current execution state — 19 September 2026
+
+Implementation checkpoint: `edbcffa91c975b859da74186e62aab7ffd6b7075`, followed by the qualification/configuration follow-up. See [evidence](evidence/IMPLEMENTATION.md) for commands, artifacts and limitations.
+
+| Task | Source | Qualification / remaining gate |
+| --- | --- | --- |
+| RF-01 | Delivered | Verified checkout, ownership, recovery and scoped commits. |
+| RF-02 | Delivered | Verified four unchanged mobile image baselines; 63 Chromium and 25 WebKit behavior tests. |
+| RF-03 | Delivered | Verified four desktop captures, named production configuration and geometry/interaction assertions; owner acceptance remains RF-08. |
+| RF-04 | Delivered | Verified typed config, invalid input, legacy compatibility and independent fictional identity tests. |
+| RF-05 | Delivered | Verified runtime-mode policy tests and provider-free demo UI; actual live deployment remains RF-18–20. |
+| RF-06 | Delivered | Verified shared token ownership and preserved mobile captures. |
+| RF-07 | Delivered | Verified contrast, grayscale edge cases, two brand projections and portal/focus behavior. Full branded client builds remain RF-21. |
+| RF-08 | Delivered | Technical checks verified; **blocked on owner visual acceptance** for formal completion. |
+| RF-09 | Delivered | Verified shared discovery policies, responsive taxonomy, filter/search/back/reset behavior. |
+| RF-10 | Delivered | Verified shared card owner and existing price/fact/variant tests; no duplicate desktop landing implementation. |
+| RF-11 | Delivered | Verified server-created content slot, directive boundaries and production payload measurements. |
+| RF-12 | Delivered | Verified representative detail/service/content/contact/legal/recovery families in responsive tests, not every possible data-dependent URL. |
+| RF-13 | Delivered | Verified manifest/type alignment, boundaries, targeted tests and current production dependency audit. |
+| RF-14 | Delivered | Verified focused backend/tooling extractions and release characterization tests; live transaction proof is not inferred. |
+| RF-15 | Delivered | Verified explicit retire/retain/unknown ledger and public export contracts. Unknown downstream consumers were retained, not guessed dead. |
+| RF-16 | Delivered | Verified archived originals, derivative records, redirects and image-complete route captures. Cars mounts remain RF-21. |
+| RF-17 | Delivered | Verified initial production measurements and conservative regression ceilings; no field-performance or historical speedup certification. |
+| RF-18 | Delivered | Isolated permission/tenant tests verified; **blocked on authorized disposable identity/SQL integration qualification**. |
+| RF-19 | Delivered | Inbox, details, >50-item pagination, assignments, status transitions, redaction and audit implemented; live qualification follows RF-18. |
+| RF-20 | Delivered | Persistence/readiness/idempotency contracts tested; **blocked on real disposable end-to-end receipt/failure qualification**. |
+| RF-21 | Fixture contract delivered | **Blocked**: two complete Cars-mounted copies and packaging/release coordination have not been performed. |
+| RF-22 | Delivered | Local visual/behavior/security/payload gates verified and CI wired. Hosted CI execution is not claimed before publication. |
+| RF-23 | Handoff delivered | **Blocked**: owner acceptance, live/mounted qualification and explicit promotion/publication decision. No deployment occurred. |
+
+Do not convert the blocked qualification gates into a new unbounded source rewrite. The next session should consume the existing implementation and resolve the specific approved gate.

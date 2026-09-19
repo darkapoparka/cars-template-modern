@@ -57,6 +57,21 @@ describe("public dealership configuration", () => {
       slug: "atlas-demo",
       accent: "#164e63",
       services: { imports: false },
+      tagline: "Fictional dealer A",
+      address: "1 Test Street",
+      city: "Test City A",
+      country: "Test country A",
+      countryCode: "BG",
+      phoneDisplay: "+359 200 000 001",
+      phoneHref: "tel:+359200000001",
+      contactUrl: "tel:+359200000001",
+      email: "team@atlas.example",
+      logoPath: "/fixtures/atlas/logo.webp",
+      logoInversePath: "/fixtures/atlas/logo-inverse.webp",
+      iconPath: "/fixtures/atlas/icon.webp",
+      mapsUrl: "https://maps.example/atlas",
+      mapsEmbedUrl: "https://maps.example/embed/atlas",
+      socialLinks: {},
     });
     const north = dealer({
       name: "North Demo Vehicle Company",
@@ -68,8 +83,33 @@ describe("public dealership configuration", () => {
       publicDefaultLocale: "en",
       currency: "EUR",
       services: { lease: false },
+      tagline: "Fictional dealer B",
+      address: "2 Test Street",
+      city: "Test City B",
+      country: "Test country B",
+      countryCode: "GB",
+      phoneDisplay: "+44 200 000 002",
+      phoneHref: "tel:+44200000002",
+      contactUrl: "tel:+44200000002",
+      email: "team@north.example",
+      logoPath: "/fixtures/north/logo.webp",
+      logoInversePath: "/fixtures/north/logo-inverse.webp",
+      iconPath: "/fixtures/north/icon.webp",
+      mapsUrl: "https://maps.example/north",
+      mapsEmbedUrl: "https://maps.example/embed/north",
+      socialLinks: {},
     });
     expect(atlas.identity.name).not.toBe(north.identity.name);
+    for (const site of [atlas, north]) {
+      const identity = JSON.stringify({
+        identity: site.identity,
+        contact: site.contact,
+      });
+      expect(identity).not.toContain(leadSite.name);
+      expect(identity).not.toContain(leadSite.phoneHref);
+      expect(identity).not.toContain(leadSite.address);
+      expect(site.contact.socialLinks).toEqual({});
+    }
     expect(atlas.services.lease).toBe(true);
     expect(north.market.defaultLocale).toBe("en");
     expect(isPublicSitePathEnabled("/bg/imports/china", atlas)).toBe(false);

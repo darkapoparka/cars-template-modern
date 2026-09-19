@@ -115,3 +115,19 @@ test("new public entry points resolve to owned implementation files", () => {
     }
   }
 });
+
+test("trusted dealer binding is retained and hashed by strict-mode web tasks", () => {
+  const config = JSON.parse(read("apps/web/turbo.json"));
+  for (const name of ["build", "dev", "test", "typecheck", "analyze"]) {
+    assert.ok(
+      config.tasks[name].env.includes("AUTOMARKET_DEALER_ORG_ID"),
+      name
+    );
+  }
+  assert.ok(read("apps/web/.env.example").includes("AUTOMARKET_DEALER_ORG_ID"));
+  assert.ok(
+    read("apps/e2e/run-public-gate.mjs").includes(
+      'AUTOMARKET_DEALER_ORG_ID: ""'
+    )
+  );
+});

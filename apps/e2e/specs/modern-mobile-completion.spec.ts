@@ -4,7 +4,8 @@ import { expect, test } from "@playwright/test";
 test("make and model search narrow choices without losing filter selection", async ({
   page,
 }) => {
-  await page.goto("/cars");
+  const response = await page.goto("/cars");
+  expect(response?.status()).toBe(200);
   await page
     .getByRole("button", { name: "Отвори филтрите", exact: true })
     .tap();

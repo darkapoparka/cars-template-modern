@@ -29,4 +29,4 @@ Current cross-repository ownership, approved releases, dealer-copy workflow and 
 
 ## Current refactor program
 
-The 19 September 2026 source audit and phased desktop/codebase improvement plan live in [refactor/README.md](refactor/README.md). Start there for shared refactor work; application implementation and visual approval remain pending.
+The source refactor has been implemented. Start with [implementation status](refactor/IMPLEMENTATION_STATUS.md), [verification evidence](refactor/evidence/IMPLEMENTATION.md) and [site/admin configuration](docs/SITE-CONFIGURATION.md). The original plan remains in [refactor/README.md](refactor/README.md). Owner visual acceptance, live integration and Cars-mounted release qualification remain separate; do not restart completed source work.

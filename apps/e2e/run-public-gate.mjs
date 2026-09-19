@@ -138,6 +138,7 @@ const delay = (duration) =>
 const getPublicEnvironment = (mode, port) => ({
   ...process.env,
   ARCJET_KEY: "",
+  AUTOMARKET_DEALER_ORG_ID: "",
   AUTOMARKET_PUBLIC_E2E: "true",
   AUTOMARKET_PUBLIC_DATA_MODE: mode === "unavailable" ? "unavailable" : "demo",
   BASEHUB_TOKEN: "",
