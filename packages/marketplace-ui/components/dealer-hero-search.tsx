@@ -13,6 +13,7 @@ import {
   ArrowRight,
   CarFront,
   ChevronDown,
+  Grid2X2,
   HandCoins,
   Ship,
   SlidersHorizontal,
@@ -20,7 +21,10 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { getDesktopPriceQuickFilterLabel } from "../lib/desktop-filter-policy";
+import {
+  getDesktopPriceQuickFilterLabel,
+  getLocalizedDesktopCategoryLabel,
+} from "../lib/desktop-filter-policy";
 import {
   getMarketplaceCurrencyLabel,
   marketplacePricePresets,
@@ -110,7 +114,9 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
                 variant="outline"
               >
                 <CarFront aria-hidden="true" size={17} />
-                <span>{text("Автомобили", "All types")}</span>
+                <span>
+                  {getLocalizedDesktopCategoryLabel(filters.category, isBg)}
+                </span>
                 <ChevronDown aria-hidden="true" size={15} />
               </Button>
             </DialogTrigger>
@@ -130,6 +136,7 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
             type="button"
             variant="outline"
           >
+            <Grid2X2 aria-hidden="true" size={16} />
             <span>{filters.make || text("Марка", "Make")}</span>
             <ChevronDown aria-hidden="true" size={15} />
           </Button>
@@ -141,6 +148,7 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
             type="button"
             variant="outline"
           >
+            <CarFront aria-hidden="true" size={16} />
             <span>{filters.model || text("Модел", "Model")}</span>
             <ChevronDown aria-hidden="true" size={15} />
           </Button>

@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 3.25rem 1.5rem 1.75rem;
+    padding: 3rem 1.5rem 1.75rem;
     color: var(--inverse-foreground);
     background: var(--inverse);
     isolation: isolate;
@@ -50,11 +50,19 @@
   }
   .heroCopy h1 {
     margin: 0;
-    font-size: clamp(2.75rem, 4.2vw, 4rem);
+    font-size: clamp(2.75rem, 4vw, 3.875rem);
     font-weight: var(--font-weight-bold);
     line-height: 1.0625;
+    color: var(--inverse-foreground);
+    -webkit-text-fill-color: transparent;
     letter-spacing: -0.035em;
     text-wrap: balance;
+    background: linear-gradient(
+      180deg,
+      var(--inverse-foreground) 35%,
+      var(--inverse-muted)
+    );
+    background-clip: text;
   }
   .heroCopy p {
     margin: 0.5rem 0 0;
@@ -65,9 +73,9 @@
   .heroSearch {
     position: relative;
     z-index: 3;
-    width: clamp(44rem, 50vw, 52rem);
+    width: clamp(46rem, 54vw, 55rem);
     max-width: 100%;
-    margin-top: 1.875rem;
+    margin-top: 2rem;
   }
   .serviceLinks {
     display: flex;
@@ -87,14 +95,15 @@
   .serviceLinks strong,
   .serviceLinks small {
     display: block;
-    font-size: var(--text-micro);
-    line-height: 1.125rem;
+    font-size: var(--text-meta);
+    line-height: 1.25rem;
   }
   .serviceLinks strong {
     font-weight: var(--font-weight-medium);
   }
   .serviceLinks small {
-    margin-top: 0.125rem;
+    margin-top: 0.25rem;
+    font-size: var(--text-micro);
     color: var(--muted-foreground);
   }
   .serviceLinks[data-placement="hero"] {
@@ -102,14 +111,14 @@
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(100%, 47rem);
+    width: min(100%, 49rem);
     margin-top: 1.875rem;
   }
   .serviceLinks[data-placement="hero"] small {
     color: var(--inverse-muted);
   }
   .serviceLinks[data-placement="inventory"] {
-    padding: 2.125rem clamp(1rem, 5vw, 6rem);
+    padding: 2.5rem clamp(1rem, 5vw, 6rem);
     color: var(--muted-foreground);
   }
   .serviceLinks[data-placement="inventory"] strong {
@@ -143,12 +152,6 @@
     line-height: 2rem;
     letter-spacing: var(--tracking-heading);
   }
-  .sectionHeading p {
-    margin: 0.25rem 0 0;
-    font-size: var(--text-meta);
-    line-height: 1.25rem;
-    color: var(--muted-foreground);
-  }
   .sectionActions {
     display: flex;
     gap: 0.625rem;
@@ -159,9 +162,9 @@
     gap: 0.75rem;
     align-items: center;
     justify-content: center;
-    min-height: 2.25rem;
+    min-height: 2.5rem;
     padding-inline: 1rem;
-    font-size: var(--text-micro);
+    font-size: var(--text-meta);
     color: var(--foreground);
     background: var(--panel);
     border: 1px solid var(--border);
@@ -176,11 +179,11 @@
   }
   .sectionActions .arrow {
     position: static;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background: transparent;
     border-color: var(--border);
-    transform: none;
+    translate: none;
   }
   .vehicleSlide {
     display: flex;

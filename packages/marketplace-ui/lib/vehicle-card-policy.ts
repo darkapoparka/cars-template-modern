@@ -1,4 +1,5 @@
 import {
+  formatBodyType,
   formatFuelType,
   formatListingBadge,
   formatMileage,
@@ -72,6 +73,35 @@ export const getVehicleCardTitle = (
   return listing.title.startsWith(yearPrefix)
     ? listing.title.slice(yearPrefix.length)
     : listing.title;
+};
+
+/** Split the actual listing title into a scannable model and variant; never invent stock details. */
+export const getShowroomVehicleHeading = (
+  listing: VehicleListing,
+  locale?: string
+) => {
+  const model = [listing.spec.make.trim(), listing.spec.model.trim()]
+    .filter(Boolean)
+    .join(" ");
+  const original = getVehicleCardTitle(listing, "comparison").trim();
+  const sameModel = original.toLocaleLowerCase() === model.toLocaleLowerCase();
+  let detail = sameModel ? "" : original;
+  for (const prefix of [model, listing.spec.make.trim()]) {
+    if (
+      !sameModel &&
+      prefix &&
+      original.toLocaleLowerCase().startsWith(`${prefix.toLocaleLowerCase()} `)
+    ) {
+      detail = original.slice(prefix.length).trim();
+      break;
+    }
+  }
+  return {
+    title: `${listing.spec.year} ${model || original}`,
+    subtitle: [detail, formatBodyType(listing.spec.bodyType, locale)]
+      .filter(Boolean)
+      .join(" · "),
+  };
 };
 
 const compactTransmissionLabels = {

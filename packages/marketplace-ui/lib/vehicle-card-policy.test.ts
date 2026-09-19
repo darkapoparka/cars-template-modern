@@ -2,6 +2,7 @@ import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
+  getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
   getVehicleCardSpecFacts,
@@ -124,5 +125,42 @@ describe("vehicle card policy", () => {
       monthlyEstimate: undefined,
       showNegotiable: true,
     });
+  });
+});
+
+describe("showroom title hierarchy", () => {
+  it("separates the model from the original derivative and preserves mobile titles", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    const heading = getShowroomVehicleHeading(listing, "bg");
+    expect(heading.title).toBe("2020 BMW X5");
+    expect(heading.subtitle).toContain("M50d");
+    expect(getVehicleCardTitle(listing, "comparison")).toBe("BMW X5 M50d");
+  });
+  it("retains a custom listing title", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "Special edition with winter package",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).toContain(
+      listing.title
+    );
+  });
+  it("does not confuse a model with a prefix of a different model", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "BMW X50 Limited",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).toContain(
+      "X50 Limited"
+    );
+  });
+  it("does not repeat a model-only title in the subtitle", () => {
+    const listing = {
+      ...getListing("bmw-x5-m50d-sofia-2020"),
+      title: "2020 BMW X5",
+    };
+    expect(getShowroomVehicleHeading(listing, "en").subtitle).not.toContain(
+      "BMW X5"
+    );
   });
 });

@@ -1,0 +1,11 @@
+{
+  "source": "scene-proof.jpg",
+  "parentGenerationId": "62a8fade-89ee-443f-8022-6b7ec1e740a5",
+  "destination": "apps/web/public/lead-car-showroom-scene-v2.webp",
+  "width": 1536,
+  "height": 459,
+  "bytes": 39794,
+  "sha256": "d293862a151049c66c04ad70b3d36e32fa6932ab078dd0f2a9714a9b30bfd6b8",
+  "method": "Re-encoded the existing native-size extracted scene rather than enlarging the low-detail served v1 derivative. AVIF quality 45 transfer, WebP quality 92 output. No new artwork or inventory generated.",
+  "usage": "Decorative desktop scene, not actual premises or advertised stock."
+}

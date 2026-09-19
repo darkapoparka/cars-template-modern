@@ -120,11 +120,13 @@
   .header[data-layout="showroom"] .nav {
     grid-template-columns: 14rem minmax(0, 1fr) auto;
     gap: 1rem;
+    max-width: var(--layout-wide-max);
     min-height: 3.875rem;
+    margin-inline: auto;
   }
   .header[data-layout="showroom"] .brand {
-    width: 11rem;
-    height: 2.5rem;
+    width: 12rem;
+    height: 2.75rem;
   }
   .header[data-layout="showroom"] .segments {
     gap: 1rem;
@@ -136,7 +138,7 @@
   }
   .header[data-layout="showroom"] .segments a {
     padding-inline: 0.625rem;
-    font-size: var(--text-micro);
+    font-size: var(--text-meta);
     color: var(--inverse-foreground);
     background: transparent;
   }

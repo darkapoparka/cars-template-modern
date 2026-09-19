@@ -35,6 +35,7 @@ import {
 import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
+  getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
   getVehicleCardSpecFacts,
@@ -590,7 +591,7 @@ const ShowroomVehicleCardContent = ({
   listingHref: string;
   locale?: string;
 }) => {
-  const title = getVehicleCardTitle(listing, "comparison");
+  const heading = getShowroomVehicleHeading(listing, locale);
   const facts = getVehicleCardSpecFacts(listing, locale).filter(
     (fact) => fact.id !== "year"
   );
@@ -600,9 +601,10 @@ const ShowroomVehicleCardContent = ({
       data-slot="vehicle-card-content"
       href={listingHref}
     >
-      <h3 data-slot="vehicle-card-title" title={title}>
-        {listing.spec.year} {title}
-      </h3>
+      <div data-slot="showroom-vehicle-heading">
+        <h3 data-slot="vehicle-card-title">{heading.title}</h3>
+        <p data-slot="showroom-vehicle-subtitle">{heading.subtitle}</p>
+      </div>
       <ul
         aria-label={getVehicleCardCopy(locale).specs}
         data-slot="showroom-vehicle-facts"
@@ -610,7 +612,7 @@ const ShowroomVehicleCardContent = ({
         {facts.map((fact) => {
           const Icon = showroomFactIcons[fact.id];
           return (
-            <li key={fact.id} title={fact.value}>
+            <li data-fact={fact.id} key={fact.id}>
               <Icon aria-hidden="true" size={13} strokeWidth={1.6} />
               <span>{fact.value}</span>
             </li>

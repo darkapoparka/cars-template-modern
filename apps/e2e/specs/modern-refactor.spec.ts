@@ -6,7 +6,7 @@ import {
 } from "../fixtures/modern-visual-health";
 
 const searchResultUrl = /(?:q|make)=BMW/;
-const showroomSceneSource = /lead-car-showroom-scene-v1/;
+const showroomSceneSource = /lead-car-showroom-scene-v2/;
 
 test.beforeEach(async ({ page }) => {
   await page.route("**/*", (route) =>
@@ -65,7 +65,7 @@ for (const width of [1024, 1280, 1440, 1920]) {
       )
     ).toBeLessThan(2);
     expect(boxBounds.width).toBeGreaterThanOrEqual(700);
-    expect(boxBounds.width).toBeLessThanOrEqual(832);
+    expect(boxBounds.width).toBeLessThanOrEqual(880);
     expect(heroBounds.height).toBeLessThan(540);
     const scene = hero.locator('[data-slot="desktop-hero-scene"]');
     await expect(scene).toBeVisible();
@@ -87,6 +87,63 @@ for (const width of [1024, 1280, 1440, 1920]) {
       })
     ).toHaveCount(1);
     await expect(inventory.locator('[data-slot="carousel"]')).toBeVisible();
+    const viewAll = await inventory
+      .getByRole("link", { name: "Виж всички", exact: true })
+      .boundingBox();
+    const nextArrow = await inventory
+      .getByRole("button", { name: "Следващи автомобили", exact: true })
+      .boundingBox();
+    expect(viewAll).not.toBeNull();
+    expect(nextArrow).not.toBeNull();
+    if (viewAll && nextArrow) {
+      expect(
+        Math.abs(
+          viewAll.y + viewAll.height / 2 - nextArrow.y - nextArrow.height / 2
+        )
+      ).toBeLessThan(2);
+    }
+    const cardReadability = await inventory
+      .locator("article")
+      .evaluateAll((cards) =>
+        cards.map((card) => {
+          const title = card.querySelector(
+            '[data-slot="vehicle-card-title"]:is(h3)'
+          );
+          const facts = [
+            ...card.querySelectorAll('[data-slot="showroom-vehicle-facts"] li'),
+          ];
+          const bounds = card.getBoundingClientRect();
+          return {
+            titleSize: title
+              ? Number.parseFloat(getComputedStyle(title).fontSize)
+              : 0,
+            completeFacts:
+              facts.length === 3 &&
+              facts.every((fact) => {
+                const value = fact.querySelector("span");
+                if (!value) {
+                  return false;
+                }
+                const rect = value.getBoundingClientRect();
+                return (
+                  Number.parseFloat(getComputedStyle(value).fontSize) >= 12 &&
+                  getComputedStyle(value).textOverflow !== "ellipsis" &&
+                  rect.left >= bounds.left &&
+                  rect.right <= bounds.right
+                );
+              }),
+          };
+        })
+      );
+    expect(
+      cardReadability.every(
+        (card) => card.titleSize >= 16 && card.completeFacts
+      )
+    ).toBe(true);
+    const inputFont = await hero
+      .getByRole("combobox")
+      .evaluate((input) => Number.parseFloat(getComputedStyle(input).fontSize));
+    expect(inputFont).toBeGreaterThanOrEqual(14);
     const search = hero.getByRole("combobox");
     await expect(search).toBeVisible();
     await search.fill("BMW");

@@ -145,7 +145,7 @@ describe("public dealership configuration", () => {
 });
 
 it("uses the master scene without hiding explicit dealer cutouts", () => {
-  expect(dealer().artwork.heroScene).toBe("/lead-car-showroom-scene-v1.webp");
+  expect(dealer().artwork.heroScene).toBe("/lead-car-showroom-scene-v2.webp");
   expect(
     dealer({ artwork: { heroLeft: "/custom-car.webp" } }).artwork.heroScene
   ).toBeUndefined();

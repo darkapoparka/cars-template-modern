@@ -56,8 +56,8 @@ export const DealerDesktopDiscoveryHero = ({
         <h1>{isBg ? "Намерете своя автомобил." : "Find Your Next Drive"}</h1>
         <p>
           {isBg
-            ? `${count} автомобила в наличност. Намерете своя.`
-            : `${count} vehicles in stock. Find the one for you.`}
+            ? `Разгледайте и сравнете ${count} автомобила.`
+            : `Explore and compare ${count} available vehicles.`}
         </p>
       </div>
       <div className={styles.heroSearch}>
@@ -68,11 +68,7 @@ export const DealerDesktopDiscoveryHero = ({
           variant="hero"
         />
       </div>
-      <DealerDesktopServiceLinks
-        locale={locale}
-        placement="hero"
-        totalListings={totalListings}
-      />
+      <DealerDesktopServiceLinks locale={locale} placement="hero" />
     </section>
   );
 };

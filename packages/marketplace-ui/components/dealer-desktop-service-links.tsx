@@ -10,11 +10,9 @@ import styles from "./dealer-desktop-discovery.module.css";
 /** Capability links, not invented certification, pricing or review claims. */
 export function DealerDesktopServiceLinks({
   locale,
-  totalListings,
   placement,
 }: {
   locale?: string;
-  totalListings?: number;
   placement: "hero" | "inventory";
 }) {
   const isBg = locale?.startsWith("bg") ?? false;
@@ -26,10 +24,7 @@ export function DealerDesktopServiceLinks({
             path: "/cars?sort=newest",
             icon: CarFront,
             title: text("Налични автомобили", "Available vehicles"),
-            detail: text(
-              `${String(totalListings ?? 0)} автомобила в наличност`,
-              `${String(totalListings ?? 0)} vehicles in stock`
-            ),
+            detail: text("Цени и характеристики", "Prices and specifications"),
           },
           {
             path: "/lease",

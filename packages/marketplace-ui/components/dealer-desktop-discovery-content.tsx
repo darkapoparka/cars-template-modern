@@ -43,11 +43,6 @@ export const DealerDesktopDiscoveryContent = ({
             <h2 id="desktop-inventory-heading">
               {isBg ? "Налични автомобили" : "Available Vehicles"}
             </h2>
-            <p>
-              {isBg
-                ? "Разгледайте автомобили, цени и характеристики."
-                : "Browse our latest inventory of available vehicles."}
-            </p>
           </div>
           <div className={styles.sectionActions}>
             <Link
