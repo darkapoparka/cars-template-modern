@@ -1,143 +1,35 @@
-import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
-import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
-import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import {
-  ArrowUpRight,
-  CarFront,
-  ChevronRight,
-  Landmark,
-  MapPin,
-  Phone,
-  Ship,
-  Tag,
-} from "lucide-react";
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
+import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
+import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import {
   createPublicLocalizedMetadata,
   getPublicSearchRobots,
 } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
-import {
-  parseSellVehicleDraft,
-  sellCategoryLabels,
-  serializeSellVehicleDraft,
-} from "@/lib/sell-vehicle-draft";
+import { parseSellVehicleDraft } from "@/lib/sell-vehicle-draft";
 import { MobileAboutContact } from "../components/mobile-about-contact";
+import {
+  buildFinancingContactMessage,
+  parseFinancingRequestHref,
+} from "../components/mobile-financing-policy";
+import { PublicEnquiryForm } from "../components/public-enquiry-form";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
+import { pageCopy } from "./copy";
+import { SellContactHandoff } from "./sell-contact-handoff";
 
 interface ContactPageProps {
   params: Promise<{ locale: string }>;
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
-
-const pageCopy = {
-  bg: {
-    heroImageAlt: "Нощен автомобилен шоурум",
-    title: "Премиум автомобили. Внос. Лизинг.",
-    description: `Вижте автомобилите в наличност или говорете директно с ${leadSite.shortName} за следващия си автомобил.`,
-    inventoryAction: "Вижте наличностите",
-    phoneAction: "Обадете се",
-    contactTitle: "Говорете директно с нас.",
-    contactDescription: `Един телефон за автомобил, внос или финансиране. Шоурум в ${leadSite.district.bg}.`,
-    locationLabel: `Шоурум · ${leadSite.district.bg}`,
-    mapAction: "Отворете картата",
-    servicesTitle: "Изберете правилната посока.",
-    servicesDescription:
-      "От наличен автомобил до внос по заявка — екипът ни е на една връзка разстояние.",
-    sellHandoffAction: "Обадете се за оферта",
-    sellHandoffDescription: `Данните за автомобила са готови. Обадете се на ${leadSite.shortName}, за да уточним оглед и конкретна оферта.`,
-    sellHandoffEditAction: "Редактирайте данните",
-    sellHandoffTitle: "Заявете оценка за автомобила",
-    sellCategoryLabel: "Категория",
-    sellDetailsLabel: "Екстри и бележки",
-    sellMileageLabel: "Пробег",
-    sellVehicleLabel: "Автомобил",
-    sellYearLabel: "Година",
-    sellLocationLabel: `Шоурум · ${leadSite.district.bg}`,
-    services: [
-      {
-        title: "Автомобили в наличност",
-        description: "Разгледайте предложенията и планирайте оглед.",
-        href: "/cars",
-        icon: CarFront,
-      },
-      {
-        title: "Внос по заявка",
-        description: "Кажете какво търсите и започнете разговор.",
-        href: "/imports",
-        icon: Ship,
-      },
-      {
-        title: "Собствен лизинг",
-        description: "Обсъдете вариант според автомобила и бюджета ви.",
-        href: "/lease",
-        icon: Landmark,
-      },
-      {
-        title: "Продайте автомобила си",
-        description: "Изпратете данни за автомобила и заявете оценка.",
-        href: "/sell",
-        icon: Tag,
-      },
-    ],
-  },
-  en: {
-    heroImageAlt: "Night-time automotive showroom",
-    title: "Premium vehicles. Imports. Leasing.",
-    description: `Browse the vehicles in stock or speak directly with ${leadSite.shortName} about your next vehicle.`,
-    inventoryAction: "View available vehicles",
-    phoneAction: "Call us",
-    contactTitle: "Speak directly with us.",
-    contactDescription: `One phone number for vehicles, imports, or finance. Showroom in ${leadSite.district.en}.`,
-    locationLabel: `Showroom · ${leadSite.district.en}`,
-    mapAction: "Open the map",
-    servicesTitle: "Choose the right direction.",
-    servicesDescription:
-      "From a vehicle in stock to an import on request, our team is one call away.",
-    sellHandoffAction: "Call for an offer",
-    sellHandoffDescription: `Your vehicle details are ready. Call ${leadSite.shortName} to arrange an inspection and a concrete offer.`,
-    sellHandoffEditAction: "Edit vehicle details",
-    sellHandoffTitle: "Request a vehicle appraisal",
-    sellCategoryLabel: "Category",
-    sellDetailsLabel: "Extras and notes",
-    sellMileageLabel: "Mileage",
-    sellVehicleLabel: "Vehicle",
-    sellYearLabel: "Year",
-    sellLocationLabel: `Showroom · ${leadSite.district.en}`,
-    services: [
-      {
-        title: "Vehicles in stock",
-        description: "Browse the offers and plan an inspection.",
-        href: "/cars",
-        icon: CarFront,
-      },
-      {
-        title: "Import on request",
-        description:
-          "Tell us what you are looking for and start a conversation.",
-        href: "/imports",
-        icon: Ship,
-      },
-      {
-        title: "In-house leasing",
-        description: "Discuss an option for the vehicle and your budget.",
-        href: "/lease",
-        icon: Landmark,
-      },
-      {
-        title: "Sell your car",
-        description: "Share your vehicle details and request an appraisal.",
-        href: "/sell",
-        icon: Tag,
-      },
-    ],
-  },
-} as const;
-
-const sellCategoryAssets = leadSite.sellCategoryAssets;
 
 const getQueryValue = (
   query: Record<string, string | string[] | undefined>,
@@ -147,11 +39,6 @@ const getQueryValue = (
   const firstValue = Array.isArray(value) ? value[0] : value;
   return typeof firstValue === "string" ? firstValue.trim() : "";
 };
-
-const getSellCategoryLabel = (locale: "bg" | "en", category: string) =>
-  sellCategoryLabels[locale][
-    category as keyof (typeof sellCategoryLabels)["bg"]
-  ] ?? category;
 
 export const generateMetadata = async ({
   params,
@@ -164,7 +51,7 @@ export const generateMetadata = async ({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
       ? `${leadSite.name} в София — автомобили в наличност, внос по заявка и собствен лизинг.`
-      : `${leadSite.name} in Sofia — vehicles in stock, import on request, and in-house leasing.`,
+      : `${leadSite.name} in ${leadSite.city} — vehicles in stock, import on request, and in-house leasing.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
@@ -181,149 +68,43 @@ export default async function ContactPage({
   const [{ locale }, query] = await Promise.all([params, searchParams]);
   const normalizedLocale = normalizeSeoLocale(locale);
   const copy = pageCopy[normalizedLocale];
+  const services = copy.services.filter((service) =>
+    isPublicSitePathEnabled(service.href, publicSite)
+  );
+  const submissionAvailable = isPublicContactSubmissionAvailable();
+  const financeQuery = new URLSearchParams();
+  for (const key of ["intent", "vehicle", "term", "deposit"]) {
+    const value = getQueryValue(query, key);
+    if (value) {
+      financeQuery.set(key, value);
+    }
+  }
+  const financeContext = parseFinancingRequestHref(`/contact?${financeQuery}`);
+  if (financeContext) {
+    requirePublicSitePath("/lease");
+  }
+  const initialMessage = financeContext
+    ? buildFinancingContactMessage({
+        deposit: financeContext.deposit ?? "flexible",
+        locale: normalizedLocale,
+        note: "",
+        request: financeContext,
+      })
+    : "";
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const sellContext =
     getQueryValue(query, "intent") === "sell"
       ? parseSellVehicleDraft(query)
       : null;
-  const sellVehicleName = [sellContext?.make, sellContext?.model]
-    .filter(Boolean)
-    .join(" ");
-  const selectedVehicleAsset =
-    sellCategoryAssets[
-      sellContext?.category as keyof typeof sellCategoryAssets
-    ] ?? sellCategoryAssets.car;
-  const sellEditHref = `${localize("/sell")}?${sellContext ? serializeSellVehicleDraft(sellContext) : ""}`;
 
   if (sellContext) {
+    requirePublicSitePath("/sell");
     return (
-      <PublicMarketplaceFrame activeMode="sell" locale={normalizedLocale}>
-        <main className="lg:min-h-[38rem]">
-          <div
-            className={cn(
-              marketplaceDiscoveryFrameClassName,
-              "py-5 sm:py-7 lg:py-9"
-            )}
-          >
-            <section
-              className="relative isolate overflow-hidden rounded-2xl bg-card lg:min-h-[26rem] lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
-              data-slot="sell-contact-handoff"
-            >
-              <Image
-                alt=""
-                className="hidden object-cover object-center lg:block"
-                fill
-                priority
-                sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/images/sell/day-night-sell-centered-hero-v2.webp"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0 hidden bg-black/10 lg:block"
-              />
-
-              <div className="relative z-10 flex items-center justify-center lg:min-h-[26rem] lg:p-6">
-                <div className="w-full max-w-2xl rounded-2xl bg-card p-5 sm:p-6 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/20">
-                  <h1 className="text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg">
-                    {copy.sellHandoffTitle}
-                  </h1>
-                  <p className="mx-auto mt-2 max-w-lg text-center text-body text-muted-foreground">
-                    {copy.sellHandoffDescription}
-                  </p>
-
-                  <div className="mt-6 grid gap-1.5">
-                    <span className="text-meta text-muted-foreground">
-                      {copy.sellVehicleLabel}
-                    </span>
-                    <Link
-                      aria-label={copy.sellHandoffEditAction}
-                      className="group grid min-h-20 w-full grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-3 overflow-hidden rounded-lg border border-border/60 bg-card p-2 text-left outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/40 sm:grid-cols-[5.25rem_minmax(0,1fr)_auto] sm:gap-3"
-                      data-slot="sell-selected-vehicle"
-                      href={sellEditHref}
-                    >
-                      <span className="relative h-14 overflow-hidden rounded-md sm:h-16">
-                        <Image
-                          alt=""
-                          aria-hidden="true"
-                          className="object-contain"
-                          fill
-                          sizes="80px"
-                          src={selectedVehicleAsset}
-                        />
-                      </span>
-                      <span className="min-w-0">
-                        <span className="block break-words font-semibold text-body">
-                          {sellVehicleName ||
-                            (sellContext.vin
-                              ? `VIN ${sellContext.vin}`
-                              : copy.sellVehicleLabel)}
-                        </span>
-                        <span className="mt-1 block text-meta text-muted-foreground">
-                          {getSellCategoryLabel(
-                            normalizedLocale,
-                            sellContext.category
-                          )}
-                          {sellContext.year ? ` · ${sellContext.year}` : ""}
-                          {sellContext.mileage
-                            ? ` · ${new Intl.NumberFormat(normalizedLocale).format(Number(sellContext.mileage))} ${normalizedLocale === "bg" ? "км" : "km"}`
-                            : ""}
-                        </span>
-                      </span>
-                      <span className="flex items-center gap-1 pr-1 font-semibold text-meta">
-                        <span className="hidden sm:inline">
-                          {copy.sellHandoffEditAction}
-                        </span>
-                        <ChevronRight
-                          aria-hidden="true"
-                          className="size-4 transition-transform group-hover:translate-x-0.5"
-                        />
-                      </span>
-                    </Link>
-                  </div>
-
-                  {sellContext.vin && sellVehicleName ? (
-                    <p
-                      className="mt-3 break-all text-muted-foreground text-sm"
-                      data-slot="sell-vin-summary"
-                    >
-                      VIN {sellContext.vin}
-                    </p>
-                  ) : null}
-                  {sellContext.notes ? (
-                    <div className="mt-5 border-border border-t pt-4">
-                      <p className="text-meta text-muted-foreground">
-                        {copy.sellDetailsLabel}
-                      </p>
-                      <p className="mt-1 max-h-24 overflow-auto whitespace-pre-wrap break-words text-sm leading-6">
-                        {sellContext.notes}
-                      </p>
-                    </div>
-                  ) : null}
-
-                  <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                    <a
-                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 font-semibold text-sm text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
-                      href={leadSite.phoneHref}
-                    >
-                      <Phone aria-hidden="true" className="size-4" />
-                      {copy.sellHandoffAction}
-                    </a>
-                  </div>
-
-                  <a
-                    className="mx-auto mt-5 block w-fit text-center text-muted-foreground text-sm underline-offset-4 hover:text-foreground hover:underline"
-                    href={leadSite.mapsUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {copy.sellLocationLabel} · {leadSite.address}
-                  </a>
-                </div>
-              </div>
-            </section>
-          </div>
-        </main>
-      </PublicMarketplaceFrame>
+      <SellContactHandoff
+        draft={sellContext}
+        locale={normalizedLocale}
+        submissionAvailable={submissionAvailable}
+      />
     );
   }
 
@@ -332,20 +113,17 @@ export default async function ContactPage({
       locale={normalizedLocale}
       showMobileDealerHeader={false}
     >
-      <main className="bg-background text-zinc-950 lg:bg-[#0b0c0e] lg:text-white">
-        <MobileAboutContact
-          locale={normalizedLocale}
-          services={copy.services}
-        />
+      <main className="bg-background text-zinc-950 lg:bg-inverse lg:text-inverse-foreground">
+        <MobileAboutContact locale={normalizedLocale} services={services} />
         <section className="relative isolate hidden overflow-hidden border-white/10 border-b lg:block">
-          <div className="absolute inset-0 -z-20 bg-[#08090a]">
+          <div className="absolute inset-0 -z-20 bg-inverse">
             <Image
               alt={copy.heroImageAlt}
               className="object-cover object-center opacity-95"
               fill
               priority
               sizes="100vw"
-              src="/day-night-contact-hero-v1.png"
+              src={publicSite.artwork.contactHero}
             />
           </div>
           <div
@@ -442,7 +220,7 @@ export default async function ContactPage({
             </div>
 
             <div className="mt-9 grid border-white/15 border-y md:grid-cols-4">
-              {copy.services.map((service, index) => {
+              {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
                   <Link
@@ -478,6 +256,15 @@ export default async function ContactPage({
             </div>
           </div>
         </section>
+        {submissionAvailable && (
+          <div className="mx-auto max-w-2xl px-4 py-8" id="contact-form">
+            <PublicEnquiryForm
+              initialMessage={initialMessage}
+              intent={financeContext ? "finance" : "general"}
+              locale={normalizedLocale}
+            />
+          </div>
+        )}
       </main>
     </PublicMarketplaceFrame>
   );

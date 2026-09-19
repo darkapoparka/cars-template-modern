@@ -105,10 +105,7 @@ export function MobileSellCategoryField({
               />
               <span className="flex-1">{option.label}</span>
               {value === option.value ? (
-                <DealerUiIcon
-                  className="size-5 text-[var(--lead-site-accent)]"
-                  name="check"
-                />
+                <DealerUiIcon className="size-5 text-brand-text" name="check" />
               ) : null}
             </button>
           ))}

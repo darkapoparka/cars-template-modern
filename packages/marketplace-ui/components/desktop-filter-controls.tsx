@@ -68,7 +68,7 @@ const ActiveQuickFilterClearButton = ({
   return (
     <Button
       aria-label={removeLabel}
-      className="h-11 w-10 shrink-0 rounded-r-full rounded-l-none border-0 border-white/30 border-l bg-[var(--lead-site-accent)] px-0 text-white shadow-none transition-colors duration-150 hover:bg-[var(--lead-site-accent-hover)] focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
+      className="h-11 w-10 shrink-0 rounded-r-full rounded-l-none border-0 border-white/30 border-l bg-brand px-0 text-brand-foreground shadow-none transition-colors duration-150 hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
       data-slot="desktop-quick-filter-clear"
       onClick={onClear}
       title={removeLabel}
@@ -266,7 +266,7 @@ export const DesktopQuickFilterDialog = ({
               desktopQuickFilterOptionClassName,
               "col-span-2",
               !draftSelected &&
-                "border-transparent bg-[var(--lead-site-accent)] font-semibold text-white hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-white"
+                "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white"
             )}
             onClick={() => setDraftSelected(undefined)}
             type="button"
@@ -283,7 +283,7 @@ export const DesktopQuickFilterDialog = ({
               className={cn(
                 desktopQuickFilterOptionClassName,
                 draftSelected === option.value &&
-                  "border-transparent bg-[var(--lead-site-accent)] font-semibold text-white hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-white"
+                  "border-transparent bg-brand font-semibold text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white"
               )}
               key={option.value}
               onClick={() => setDraftSelected(option.value)}
@@ -299,7 +299,7 @@ export const DesktopQuickFilterDialog = ({
         </div>
         <DialogFooter className="bg-zinc-50 px-5 py-4 sm:justify-end">
           <Button
-            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-compact-control text-white hover:bg-[var(--lead-site-accent-hover)]"
+            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
             onClick={applySelection}
             type="button"
           >
@@ -494,7 +494,7 @@ export const DesktopQuickRangeDialog = ({
             {localizeMarketplace(isBg, "Изчисти", "Clear")}
           </Button>
           <Button
-            className="h-11 rounded-xl bg-[var(--lead-site-accent)] px-6 font-semibold text-compact-control text-white hover:bg-[var(--lead-site-accent-hover)]"
+            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
             onClick={applyRange}
             type="button"
           >

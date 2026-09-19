@@ -1,10 +1,10 @@
 import {
   formatFuelType,
   formatTransmission,
-  leadSite,
   type MarketplaceSearchParams,
   type QuickFilterKey,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   getLocalizedMarketplaceCityName,
   getLocalizedMarketplaceCountryName,
@@ -209,7 +209,5 @@ export const getMarketplaceCurrentPath = ({
   getCanonicalPublicPath(
     locale,
     basePath ??
-      (leadSite.staticDemoMode
-        ? getLocalizedPublicPath(locale, "/cars")
-        : pathname)
+      (isDealershipSite ? getLocalizedPublicPath(locale, "/cars") : pathname)
   );

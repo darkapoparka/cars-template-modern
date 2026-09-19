@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { parseContentSearch } from "@/lib/public-content";
 import { getPublicContentCards } from "@/lib/public-content-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileContentHub } from "../components/mobile-content-hub";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
@@ -30,6 +31,7 @@ export const generateMetadata = async ({
 };
 
 export default async function GuidesPage({ params, searchParams }: PageProps) {
+  requirePublicSitePath("/guides");
   const { locale } = await params;
   const normalizedLocale = normalizeSeoLocale(locale);
 

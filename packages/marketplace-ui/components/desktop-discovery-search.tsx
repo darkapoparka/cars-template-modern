@@ -14,12 +14,12 @@ import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
   getCategoryPath,
-  leadSite,
   type MarketplaceSearchParams,
   type VehicleCategory,
   withCategory,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
@@ -43,12 +43,14 @@ export interface DesktopCategoryInventoryCount {
 }
 
 export const DesktopCategoryPickerTrigger = ({
+  appearance = "standard",
   categoryIcon,
   compact,
   filters,
   isBg,
   open,
 }: {
+  appearance?: "standard" | "toolbar";
   categoryIcon?: ReactNode;
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -68,8 +70,10 @@ export const DesktopCategoryPickerTrigger = ({
         compact
           ? "rounded-lg border border-border/90 bg-card hover:bg-control active:bg-control-hover"
           : "m-1.5 rounded-[14px] bg-control hover:bg-border/75 active:bg-border",
+        appearance === "toolbar" &&
+          "h-[var(--control-height-search)] w-52 shrink-0 rounded-xl bg-control",
         open &&
-          "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-active)] active:bg-[var(--lead-site-accent-active)]"
+          "bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-active)] active:bg-[var(--lead-site-accent-active)] active:text-[var(--brand-active-foreground)]"
       )}
       data-slot="desktop-search-category"
       type="button"
@@ -175,14 +179,14 @@ export const DesktopCategoryPickerContent = ({
             className={cn(
               "group flex min-h-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-zinc-100 p-3 text-center text-foreground transition-[border-color,background-color,box-shadow,color] hover:border-zinc-300 hover:bg-zinc-200 focus-visible:border-zinc-400 focus-visible:bg-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/55",
               active &&
-                "border-transparent bg-[var(--lead-site-accent)] text-white hover:border-transparent hover:bg-[var(--lead-site-accent-active)] hover:text-white focus-visible:border-transparent focus-visible:bg-[var(--lead-site-accent)] focus-visible:text-white focus-visible:ring-[var(--lead-site-accent-ring)]"
+                "border-transparent bg-brand text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-active)] hover:text-white focus-visible:border-transparent focus-visible:bg-brand focus-visible:text-white focus-visible:ring-[var(--lead-site-accent-ring)]"
             )}
             data-slot="lead-category-option"
             href={buildMarketplaceSearchHref(
               withCategory(filters, category.id),
               getLocalizedPublicPath(
                 locale,
-                leadSite.staticDemoMode ? "/" : getCategoryPath(category.id)
+                isDealershipSite ? "/" : getCategoryPath(category.id)
               )
             )}
             key={category.id}
@@ -324,7 +328,7 @@ export const DesktopDiscoverySearch = ({
           <Button
             aria-label={localizeMarketplace(isBg, "Търси", "Search")}
             className={cn(
-              "bg-[var(--lead-site-accent)] font-semibold text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]",
+              "bg-brand font-semibold text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]",
               compact ? "size-[46px] rounded-lg" : "size-12 rounded-full"
             )}
             data-search-menu-action

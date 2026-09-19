@@ -2,9 +2,9 @@ import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
   getCategoryPath,
-  leadSite,
   type VehicleListing,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
 import {
   cleanListingDetailBaseUrl,
@@ -166,7 +166,7 @@ export const ListingDetail = ({
                 sellerProfileHref={sellerProfileHref}
               />
             </div>
-            {leadSite.staticDemoMode ? (
+            {isDealershipSite ? (
               <div className="px-4 lg:hidden">
                 <ListingLocation locale={locale} />
               </div>

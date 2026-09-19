@@ -180,7 +180,7 @@ export const MobileImportSourceSearch = ({
             </p>
 
             <Button
-              className="mt-6 h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+              className="mt-6 h-12 w-full justify-between rounded-xl bg-brand px-4 font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
               disabled={!sourceUrl.trim()}
               type="submit"
             >

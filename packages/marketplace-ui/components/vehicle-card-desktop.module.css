@@ -1,0 +1,63 @@
+/* Desktop card presentation belongs to the card, not the dealership header. */
+@media (min-width: 1024px) {
+  .card[data-presentation="discovery"] {
+    height: 100%;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--elevation-panel);
+    transition:
+      border-color var(--duration-interaction),
+      box-shadow var(--duration-interaction);
+  }
+  .card[data-presentation="discovery"]:hover {
+    border-color: var(--muted-foreground);
+    box-shadow: var(--elevation-card-hover);
+  }
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-media"] {
+    aspect-ratio: 16 / 10;
+  }
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-content"] {
+    flex: 1;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-title"] {
+    min-height: 2.625rem;
+    font-size: var(--text-card-title);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-card-title--line-height);
+    letter-spacing: var(--tracking-heading);
+  }
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-price"] {
+    font-size: var(--text-price-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-price-lg--line-height);
+  }
+  .card[data-presentation="discovery"] [data-slot="vehicle-card-spec-pills"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.375rem;
+    padding-top: 0.25rem;
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    color: var(--muted-foreground);
+    border-top: 0;
+  }
+  .card[data-presentation="discovery"]
+    [data-slot="vehicle-card-spec-pills"]
+    li {
+    min-height: 1.75rem;
+    padding: 0.25rem 0.5rem;
+    font-weight: var(--font-weight-medium);
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

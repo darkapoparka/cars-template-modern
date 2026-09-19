@@ -1,3 +1,2 @@
-@import "tailwindcss";
 @import "@repo/design-system/styles/globals.css";
 @source "../../../packages/marketplace-ui/**/*.{ts,tsx}";

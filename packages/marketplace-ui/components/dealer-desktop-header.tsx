@@ -1,11 +1,15 @@
-"use client";
-
-import { leadSite } from "@repo/marketplace";
+import { cn } from "@repo/design-system/lib/utils";
+import {
+  isPublicSitePathEnabled,
+  type PublicSiteConfig,
+  publicSite,
+} from "@repo/marketplace/site-config";
 import { MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import styles from "./dealer-desktop-header.module.css";
 import type { MarketplaceMode } from "./marketplace-masthead";
 
 /** Desktop-only dealership navigation, shared by inventory and service routes. */
@@ -14,11 +18,13 @@ export const DealerDesktopHeader = ({
   children,
   homeHref,
   locale,
+  site = publicSite,
 }: {
   activeMode?: MarketplaceMode | null;
   children?: ReactNode;
   homeHref?: string;
   locale?: string;
+  site?: PublicSiteConfig;
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const destinations = [
@@ -31,14 +37,14 @@ export const DealerDesktopHeader = ({
   return (
     <>
       <header
-        className="dealer-desktop-header hidden lg:block"
+        className={cn(styles.header, "dealer-desktop-header hidden lg:block")}
         data-has-search={Boolean(children)}
         data-slot="dealer-desktop-header"
       >
-        <div className="dealer-desktop-nav">
+        <div className={cn(styles.nav, "dealer-desktop-nav")}>
           <Link
             aria-label={isBg ? "Начало" : "Home"}
-            className="dealer-desktop-brand relative"
+            className={cn(styles.brand, "dealer-desktop-brand relative")}
             href={homeHref ?? getLocalizedPublicPath(locale, "/")}
           >
             <Image
@@ -47,49 +53,53 @@ export const DealerDesktopHeader = ({
               fill
               priority
               sizes="220px"
-              src={leadSite.logoPath}
+              src={site.identity.inverseLogo}
             />
           </Link>
           <nav
             aria-label={
               isBg ? "Основни действия" : "Primary dealership navigation"
             }
-            className="dealer-desktop-segments"
+            className={cn(styles.segments, "dealer-desktop-segments")}
           >
-            {destinations.map((destination) => (
-              <Link
-                aria-current={
-                  activeMode === destination.id ? "page" : undefined
-                }
-                data-marketplace-mode={destination.id}
-                data-slot="marketplace-mode-action"
-                href={getLocalizedPublicPath(locale, destination.path)}
-                key={destination.id}
-              >
-                {destination.label}
-              </Link>
-            ))}
+            {destinations
+              .filter((destination) =>
+                isPublicSitePathEnabled(destination.path, site)
+              )
+              .map((destination) => (
+                <Link
+                  aria-current={
+                    activeMode === destination.id ? "page" : undefined
+                  }
+                  data-marketplace-mode={destination.id}
+                  data-slot="marketplace-mode-action"
+                  href={getLocalizedPublicPath(locale, destination.path)}
+                  key={destination.id}
+                >
+                  {destination.label}
+                </Link>
+              ))}
           </nav>
-          <div className="dealer-desktop-contact">
+          <div className={cn(styles.contact, "dealer-desktop-contact")}>
             <a
               aria-label={
                 isBg
-                  ? `Обадете се на ${leadSite.phoneDisplay}`
-                  : `Call ${leadSite.phoneDisplay}`
+                  ? `Обадете се на ${site.contact.phoneDisplay}`
+                  : `Call ${site.contact.phoneDisplay}`
               }
-              href={leadSite.phoneHref}
+              href={site.contact.phoneHref}
             >
               <Phone aria-hidden="true" size={18} strokeWidth={1.8} />
-              <span>{leadSite.phoneDisplay}</span>
+              <span>{site.contact.phoneDisplay}</span>
             </a>
             <a
               aria-label={
                 isBg
-                  ? `Шоурум: ${leadSite.address}`
-                  : `Showroom: ${leadSite.address}`
+                  ? `Шоурум: ${site.contact.address}`
+                  : `Showroom: ${site.contact.address}`
               }
-              className="dealer-desktop-showroom"
-              href={leadSite.mapsUrl}
+              className={cn(styles.showroom, "dealer-desktop-showroom")}
+              href={site.contact.mapsUrl}
               rel="noreferrer"
               target="_blank"
             >

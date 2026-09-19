@@ -97,7 +97,7 @@ export function MobileServiceHelpDrawer({
               >
                 <span
                   aria-hidden="true"
-                  className="grid size-9 place-items-center rounded-full bg-[var(--lead-site-accent)] font-semibold text-micro text-white tabular-nums"
+                  className="grid size-9 place-items-center rounded-full bg-brand font-semibold text-brand-foreground text-micro tabular-nums"
                 >
                   {index + 1}
                 </span>

@@ -22,6 +22,7 @@ const publicSupportFields = new Set([
   "deliverTo",
   "email",
   "listing",
+  "intent",
   "locale",
   "make",
   "message",
@@ -70,6 +71,7 @@ const publicSupportRequestSchema = z
       .regex(validListingSlugPattern)
       .optional(),
     locale: z.enum(["bg", "en"]),
+    intent: z.enum(["general", "finance", "trade_in"]).optional(),
     make: z.string().trim().max(80).optional(),
     message: z.string().trim().max(3000),
     mileage: optionalInteger(0, 10_000_000),
@@ -92,6 +94,13 @@ const publicSupportRequestSchema = z
     year: optionalInteger(1886, 2100),
   })
   .superRefine((request, context) => {
+    if (!(request.phone || request.email)) {
+      context.addIssue({
+        code: "custom",
+        path: ["phone"],
+        message: "Provide a phone number or email address",
+      });
+    }
     if (request.context === "listing-delivery" && !request.listing) {
       context.addIssue({
         code: "custom",
@@ -136,12 +145,14 @@ export type PublicSupportSubmissionStatus =
   | "failed"
   | "invalid"
   | "rate-limited"
+  | "received"
   | "sent"
   | "suppressed"
   | "unavailable";
 
 export interface PublicSupportSubmissionResult {
   readonly correlationId: string;
+  readonly inquiryId?: string;
   readonly receipt?: EmailDeliveryReceipt;
   readonly status: PublicSupportSubmissionStatus;
 }
@@ -152,6 +163,12 @@ interface PublicSupportSubmissionDependencies {
     request: PublicSupportRequest,
     context: { readonly correlationId: string; readonly idempotencyKey: string }
   ) => Promise<EmailDeliveryReceipt>;
+  readonly isRequestAllowed?: (request: PublicSupportRequest) => boolean;
+  readonly notify?: boolean;
+  readonly persist?: (
+    request: PublicSupportRequest,
+    context: { readonly idempotencyKey: string; readonly correlationId: string }
+  ) => Promise<{ id: string }>;
   readonly rateLimit: (input: {
     readonly ipKey: string;
     readonly senderKey: string;
@@ -180,6 +197,7 @@ const getDeliveryIdempotencyKey = (request: PublicSupportRequest) => {
         deliverTo: request.deliverTo,
         email: request.email,
         listing: request.listing,
+        intent: request.intent,
         locale: request.locale,
         make: request.make,
         message: request.message,
@@ -196,6 +214,81 @@ const getDeliveryIdempotencyKey = (request: PublicSupportRequest) => {
     .digest("hex");
 
   return `support:${hash}`;
+};
+
+const deliverAcceptedSupportRequest = async (
+  request: PublicSupportRequest,
+  requestContext: PublicRequestContext,
+  dependencies: PublicSupportSubmissionDependencies
+): Promise<PublicSupportSubmissionResult> => {
+  const baseResult = { correlationId: requestContext.correlationId };
+  const deliveryContext = {
+    correlationId: requestContext.correlationId,
+    idempotencyKey: getDeliveryIdempotencyKey(request),
+  };
+  let inquiryId: string | undefined;
+  if (dependencies.persist) {
+    try {
+      const inquiry = await dependencies.persist(request, deliveryContext);
+      inquiryId = inquiry.id;
+      dependencies.report("public_support_received", {
+        correlationId: requestContext.correlationId,
+        receiptId: inquiryId,
+      });
+    } catch {
+      dependencies.report("public_support_failed", {
+        correlationId: requestContext.correlationId,
+        stage: "persistence",
+      });
+      return { ...baseResult, status: "unavailable" };
+    }
+    if (!dependencies.notify) {
+      return { ...baseResult, inquiryId, status: "received" };
+    }
+  }
+
+  try {
+    const receipt = await dependencies.deliver(request, {
+      correlationId: requestContext.correlationId,
+      idempotencyKey: getDeliveryIdempotencyKey(request),
+    });
+    dependencies.report("public_support_sent", {
+      attempts: receipt.attempts,
+      correlationId: requestContext.correlationId,
+      deliveryState: receipt.state,
+      provider: receipt.provider,
+      providerReceiptId: receipt.providerMessageId,
+    });
+    return {
+      ...baseResult,
+      receipt,
+      inquiryId,
+      status: inquiryId ? "received" : "sent",
+    };
+  } catch (error) {
+    const safeError =
+      error && typeof error === "object"
+        ? (error as {
+            attempts?: number;
+            code?: string;
+            name?: string;
+            retryable?: boolean;
+          })
+        : {};
+    dependencies.report("public_support_failed", {
+      attempts: safeError.attempts,
+      correlationId: requestContext.correlationId,
+      errorCode: safeError.code ?? "provider_unknown",
+      errorName: safeError.name ?? "UnknownError",
+      retryable: safeError.retryable,
+    });
+    // Inbox acceptance is durable even if the optional email notification fails.
+    return {
+      ...baseResult,
+      inquiryId,
+      status: inquiryId ? "received" : "failed",
+    };
+  }
 };
 
 export const submitPublicSupportRequest = async (
@@ -226,6 +319,7 @@ export const submitPublicSupportRequest = async (
     deliverTo: getOptionalText(formData, "deliverTo"),
     email: getOptionalText(formData, "email"),
     listing: getOptionalText(formData, "listing"),
+    intent: getOptionalText(formData, "intent"),
     locale: getText(formData, "locale"),
     make: getOptionalText(formData, "make"),
     message: getText(formData, "message"),
@@ -257,7 +351,10 @@ export const submitPublicSupportRequest = async (
     return { ...baseResult, status: "suppressed" };
   }
 
-  if (!dependencies.available) {
+  if (
+    !dependencies.available ||
+    dependencies.isRequestAllowed?.(request) === false
+  ) {
     return { ...baseResult, status: "unavailable" };
   }
 
@@ -291,36 +388,9 @@ export const submitPublicSupportRequest = async (
     return { ...baseResult, status: "unavailable" };
   }
 
-  try {
-    const receipt = await dependencies.deliver(request, {
-      correlationId: requestContext.correlationId,
-      idempotencyKey: getDeliveryIdempotencyKey(request),
-    });
-    dependencies.report("public_support_sent", {
-      attempts: receipt.attempts,
-      correlationId: requestContext.correlationId,
-      deliveryState: receipt.state,
-      provider: receipt.provider,
-      providerReceiptId: receipt.providerMessageId,
-    });
-    return { ...baseResult, receipt, status: "sent" };
-  } catch (error) {
-    const safeError =
-      error && typeof error === "object"
-        ? (error as {
-            attempts?: number;
-            code?: string;
-            name?: string;
-            retryable?: boolean;
-          })
-        : {};
-    dependencies.report("public_support_failed", {
-      attempts: safeError.attempts,
-      correlationId: requestContext.correlationId,
-      errorCode: safeError.code ?? "provider_unknown",
-      errorName: safeError.name ?? "UnknownError",
-      retryable: safeError.retryable,
-    });
-    return { ...baseResult, status: "failed" };
-  }
+  return await deliverAcceptedSupportRequest(
+    request,
+    requestContext,
+    dependencies
+  );
 };

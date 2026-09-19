@@ -11,6 +11,7 @@ import {
   serializeContentSearch,
 } from "@/lib/public-content";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { createSectionBreadcrumbStructuredData } from "@/lib/public-structured-data";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { getVehicleGuide, vehicleGuides } from "@/lib/vehicle-guides";
@@ -52,6 +53,7 @@ export default async function GuideOrArticlePage({
   params,
   searchParams,
 }: PageProps) {
+  requirePublicSitePath("/guides");
   const { locale, slug } = await params;
   const normalizedLocale = normalizeSeoLocale(locale);
   const language = normalizedLocale === "bg" ? "bg" : "en";

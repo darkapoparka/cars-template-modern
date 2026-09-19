@@ -6,6 +6,7 @@ import {
   type MarketplaceSearchParams,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   getMarketplaceFilterSummary,
   getMobileQuickPillClassName,
@@ -185,7 +186,7 @@ export const LeaseMobileSelection = ({
       <MobileDealerServiceHero
         helpAction={<LeaseInformationDrawer faqs={faqs} locale={locale} />}
         imageClassName="object-center"
-        imageSrc="/images/lease/day-night-mobile-studio-v2.webp"
+        imageSrc={publicSite.artwork.financeHero}
         locale={locale}
         tone="leasing"
       >
@@ -227,7 +228,7 @@ export const LeaseMobileSelection = ({
             </div>
             <Button
               asChild
-              className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-[var(--lead-site-accent)] px-4 font-semibold text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] active:bg-[var(--lead-site-accent-hover)]"
+              className="mt-3 h-12 min-h-12 w-full justify-between rounded-xl bg-brand px-4 font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
               data-slot="lease-finance-action"
             >
               <Link href={financeRequestHref}>

@@ -210,7 +210,7 @@ const ExternalInventoryCard = ({
             <ExternalLink aria-hidden="true" className="size-3.5" />
           </a>
           <Link
-            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-[var(--lead-site-accent)] px-2 font-semibold text-compact-control text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] max-lg:min-h-11 max-lg:rounded-[0.625rem] max-lg:px-3 max-lg:font-semibold max-lg:text-compact-control max-lg:active:bg-[var(--lead-site-accent-hover)] lg:h-9"
+            className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md bg-brand px-2 font-semibold text-brand-foreground text-compact-control outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] max-lg:min-h-11 max-lg:rounded-[0.625rem] max-lg:px-3 max-lg:font-semibold max-lg:text-compact-control max-lg:active:bg-[var(--lead-site-accent-hover)] lg:h-9"
             data-slot="external-inventory-import-action"
             href={buildImportRequestHref(
               importsPath,

@@ -4,7 +4,6 @@ import {
   buildMarketplaceSearchHref,
   fallbackVehicleTaxonomy,
   type ListingViewMode,
-  leadSite,
   type MarketplaceSearchParams,
   type QuickFilterKey,
   type VehicleCategory,
@@ -13,6 +12,7 @@ import {
   withSearchParamUpdates,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { usePathname, useRouter } from "next/navigation";
 import {
   type ReactNode,
@@ -38,7 +38,6 @@ import {
 } from "../lib/marketplace-filter-policy";
 import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options";
 import { BottomMarketplaceNav } from "./dealer-bottom-nav";
-import { DealerDesktopDiscoveryContent } from "./dealer-desktop-discovery";
 import { DesktopMarketplaceBar } from "./desktop-discovery-bar";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
 import { MarketplaceCategoryPicker } from "./marketplace-category-picker";
@@ -60,6 +59,7 @@ interface MarketplaceShellProps {
   assistantSlot?: ReactNode;
   basePath?: string;
   defaultViewMode?: ListingViewMode;
+  desktopDiscoverySlot?: ReactNode;
   desktopSearchVariant?: "discovery" | "results";
   filters: MarketplaceSearchParams;
   inventoryFacets?: {
@@ -113,6 +113,7 @@ export const MarketplaceShell = ({
   appBaseUrl,
   basePath,
   desktopSearchVariant = "discovery",
+  desktopDiscoverySlot,
   defaultViewMode = "list",
   filters: initialFilters,
   inventoryFacets,
@@ -160,12 +161,11 @@ export const MarketplaceShell = ({
     });
   };
 
-  const appUrl = leadSite.staticDemoMode
-    ? ""
-    : cleanMarketplaceBaseUrl(appBaseUrl);
+  const appUrl = isDealershipSite ? "" : cleanMarketplaceBaseUrl(appBaseUrl);
   const activeFilterChips = getActiveFilterChips(filters, locale);
   const showDealerDesktopLanding =
-    leadSite.staticDemoMode &&
+    Boolean(desktopDiscoverySlot) &&
+    isDealershipSite &&
     desktopSearchVariant === "discovery" &&
     filters.category === "car" &&
     filters.sort === "recommended" &&
@@ -373,13 +373,7 @@ export const MarketplaceShell = ({
           viewMode={viewMode}
         />
 
-        {showDealerDesktopLanding ? (
-          <DealerDesktopDiscoveryContent
-            currentPath={currentPath}
-            listings={listings}
-            locale={locale}
-          />
-        ) : null}
+        {showDealerDesktopLanding ? desktopDiscoverySlot : null}
 
         <MarketplaceResults
           activeFilterCount={activeFilterChips.length}

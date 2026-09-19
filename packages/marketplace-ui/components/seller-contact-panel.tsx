@@ -1,4 +1,5 @@
-import { leadSite, type VehicleListing } from "@repo/marketplace";
+import type { VehicleListing } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import type { ListingOrganizationRole } from "../lib/listing-truth";
 import {
   LeadSiteListingIdentityCard,
@@ -29,7 +30,7 @@ export const SellerContactPanel = ({
       listing={listing}
       locale={locale}
     />
-    {leadSite.staticDemoMode ? (
+    {isDealershipSite ? (
       <LeadSiteListingIdentityCard listing={listing} locale={locale} />
     ) : (
       <SellerIdentityCard

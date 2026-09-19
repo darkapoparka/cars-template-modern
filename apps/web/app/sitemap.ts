@@ -7,6 +7,10 @@ import {
   getModelPath,
 } from "@repo/marketplace";
 import {
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
+import {
   getCanonicalUrl,
   getLanguageAlternates,
   getLocalizedPath,
@@ -49,20 +53,22 @@ const toEntries = (
     path: string;
   }[]
 ): MetadataRoute.Sitemap =>
-  paths.flatMap(({ lastModified, locales = getPublicLocales(), path }) =>
-    locales.map((locale) => ({
-      alternates: {
-        languages: getLanguageAlternates(path, {
+  paths
+    .filter(({ path }) => isPublicSitePathEnabled(path, publicSite))
+    .flatMap(({ lastModified, locales = getPublicLocales(), path }) =>
+      locales.map((locale) => ({
+        alternates: {
+          languages: getLanguageAlternates(path, {
+            baseUrl: getPublicWebBaseUrl(),
+            locales,
+          }),
+        },
+        ...(lastModified ? { lastModified } : {}),
+        url: getCanonicalUrl(getLocalizedPath(locale, path), {
           baseUrl: getPublicWebBaseUrl(),
-          locales,
         }),
-      },
-      ...(lastModified ? { lastModified } : {}),
-      url: getCanonicalUrl(getLocalizedPath(locale, path), {
-        baseUrl: getPublicWebBaseUrl(),
-      }),
-    }))
-  );
+      }))
+    );
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const marketplaceData = await getPublicSitemapData().catch(

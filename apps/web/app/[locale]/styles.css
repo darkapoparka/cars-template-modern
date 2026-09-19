@@ -1,6 +1,16 @@
 @import "@repo/design-system/styles/globals.css";
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
 
+:root[data-site-kind="dealership"] {
+  --canvas: oklch(0.945 0.006 264);
+}
+
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] {
+    --canvas: oklch(0.99 0 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -1,28 +1,36 @@
-import { describe, expect, it } from 'vitest';
-import { cn } from './utils';
+import { describe, expect, it } from "vitest";
+import { cn } from "./utils";
 
-const expectClasses = (actual: string, expected: readonly string[]) => {
-  const classes = new Set(actual.split(' '));
-  for (const className of expected) {
-    expect(classes.has(className)).toBe(true);
-  }
-};
-
-describe('cn semantic typography', () => {
-  it('keeps custom font sizes alongside text colors', () => {
-    expectClasses(cn('text-meta text-zinc-600'), [
-      'text-meta',
-      'text-zinc-600',
-    ]);
-    expectClasses(cn('text-white text-compact-control'), [
-      'text-white',
-      'text-compact-control',
-    ]);
+describe("cn semantic typography", () => {
+  it.each([
+    {
+      input: "text-meta text-zinc-600",
+      expected: ["text-meta", "text-zinc-600"],
+    },
+    {
+      input: "text-white text-compact-control",
+      expected: ["text-white", "text-compact-control"],
+    },
+  ])("keeps custom font sizes alongside colors: $input", ({
+    input,
+    expected,
+  }) => {
+    const classes = new Set(cn(input).split(" "));
+    for (const className of expected) {
+      expect(classes.has(className)).toBe(true);
+    }
   });
-
-  it('resolves standard and semantic font-size conflicts by order', () => {
-    expect(cn('text-sm text-compact-control')).toBe('text-compact-control');
-    expect(cn('text-lg text-card-title')).toBe('text-card-title');
-    expect(cn('text-card-title text-lg')).toBe('text-lg');
+  it.each([
+    {
+      classes: ["text-sm", "text-compact-control"],
+      expected: "text-compact-control",
+    },
+    { classes: ["text-lg", "text-card-title"], expected: "text-card-title" },
+    { classes: ["text-card-title", "text-lg"], expected: "text-lg" },
+  ])("resolves ordered font-size conflicts: $expected", ({
+    classes,
+    expected,
+  }) => {
+    expect(cn(classes.join(" "))).toBe(expected);
   });
 });

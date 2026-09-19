@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@repo/design-system/lib/utils";
 import {
   buildMarketplaceSearchHref,
@@ -10,117 +8,23 @@ import {
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import type { ComponentProps } from "react";
 import {
   desktopDiscoveryBodyTypes,
   getDesktopBrandArtwork,
 } from "../lib/desktop-discovery-data";
+import {
+  getDesktopDiscoveryCollections,
+  getPopularMakes,
+} from "../lib/desktop-discovery-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
-import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
-import { DesktopLandingVehicleCard } from "./desktop-landing-vehicle-card";
+import { VehicleCard } from "./vehicle-card";
 
-type DiscoveryHeroProps = ComponentProps<typeof DealerDesktopToolbar>;
-
-export const DealerDesktopDiscoveryHero = ({
-  locale,
-  totalListings,
-  ...toolbarProps
-}: DiscoveryHeroProps) => {
-  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
-  const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
-  return (
-    <section className={styles.hero} data-slot="dealer-desktop-home-hero">
-      <div aria-hidden="true" className={styles.heroArchitecture} />
-      <div className={styles.heroCopy}>
-        <p className={styles.heroEyebrow}>
-          {isBg
-            ? `${numberFormatter.format(totalListings)} налични автомобила`
-            : `${numberFormatter.format(totalListings)} vehicles available`}
-        </p>
-        <h1>
-          {isBg
-            ? "Открийте автомобила, който ви пасва."
-            : "Find the car that fits your life."}
-        </h1>
-        <p className={styles.heroDescription}>
-          {isBg
-            ? "Подбрани предложения, ясни условия и всички важни детайли на едно място."
-            : "Curated inventory, transparent terms, and every important detail in one place."}
-        </p>
-      </div>
-
-      <div aria-hidden="true" className={styles.heroVehicles}>
-        <div className={cn(styles.heroVehicle, styles.heroVehicleLeft)}>
-          <Image
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 52vw, 0px"
-            src="/lead-car-left-v2.webp"
-          />
-        </div>
-        <div className={cn(styles.heroVehicle, styles.heroVehicleRight)}>
-          <Image
-            alt=""
-            fill
-            priority
-            sizes="(min-width: 1024px) 52vw, 0px"
-            src="/lead-car-right-v2.webp"
-          />
-        </div>
-      </div>
-
-      <div className={styles.heroSearch}>
-        <DealerDesktopToolbar
-          {...toolbarProps}
-          locale={locale}
-          totalListings={totalListings}
-          variant="hero"
-        />
-      </div>
-    </section>
-  );
-};
-
-const getPopularMakes = (listings: readonly VehicleListing[]) => {
-  const counts = new Map<string, number>();
-  for (const listing of listings) {
-    counts.set(listing.spec.make, (counts.get(listing.spec.make) ?? 0) + 1);
-  }
-
-  return [...counts.entries()]
-    .sort(
-      ([firstMake, firstCount], [secondMake, secondCount]) =>
-        secondCount - firstCount || firstMake.localeCompare(secondMake)
-    )
-    .slice(0, 4)
-    .map(([make, count]) => ({ count, make }));
-};
 const getVehicleCountLabel = (count: number, isBg: boolean) => {
   if (isBg) {
     return count === 1 ? "автомобил" : "автомобила";
   }
   return count === 1 ? "vehicle" : "vehicles";
-};
-
-const takeUniqueListings = (
-  source: readonly VehicleListing[],
-  usedListingIds: Set<string>,
-  limit: number
-) => {
-  const selected: VehicleListing[] = [];
-  for (const listing of source) {
-    if (usedListingIds.has(listing.id)) {
-      continue;
-    }
-    selected.push(listing);
-    usedListingIds.add(listing.id);
-    if (selected.length === limit) {
-      break;
-    }
-  }
-  return selected;
 };
 
 const DesktopSectionHeader = ({
@@ -140,7 +44,9 @@ const DesktopSectionHeader = ({
     <div>
       {eyebrow ? <p className={styles.sectionEyebrow}>{eyebrow}</p> : null}
       <h2>{title}</h2>
-      {description ? <p>{description}</p> : null}
+      {description ? (
+        <p className={styles.sectionDescription}>{description}</p>
+      ) : null}
     </div>
     <Link className={styles.sectionAction} href={actionHref}>
       {actionLabel}
@@ -176,13 +82,17 @@ const DesktopVehicleRow = ({
         title={title}
       />
       <div className={styles.vehicleGrid}>
-        {listings.map((listing, index) => (
-          <DesktopLandingVehicleCard
+        {listings.map((listing) => (
+          <VehicleCard
+            density="compact"
+            desktopLayout="grid"
             href={getLocalizedPublicPath(locale, getListingPath(listing))}
             key={listing.id}
             listing={listing}
             locale={locale}
-            priority={index < 4}
+            presentation="discovery"
+            priority={false}
+            viewMode="grid"
           />
         ))}
       </div>
@@ -206,7 +116,10 @@ const DiscoveryPanel = ({
   return (
     <section className={styles.discoveryPanel}>
       <DesktopSectionHeader
-        actionHref={currentPath}
+        actionHref={buildMarketplaceSearchHref(
+          { category: "car", sort: "newest" },
+          currentPath
+        )}
         actionLabel={isBg ? "Всички автомобили" : "All vehicles"}
         eyebrow={isBg ? "Разгледайте наличностите" : "Explore inventory"}
         title={isBg ? "Изберете по тип купе" : "Browse by body style"}
@@ -237,7 +150,7 @@ const DiscoveryPanel = ({
                       : undefined
                   )}
                   fill
-                  loading="eager"
+                  loading="lazy"
                   sizes="180px"
                   src={option.artwork}
                 />
@@ -256,8 +169,8 @@ const DiscoveryPanel = ({
             <p>{isBg ? "Популярни марки" : "Popular makes"}</p>
             <span>
               {isBg
-                ? "Бърз достъп до най-търсените наличности"
-                : "Quick access to the most requested inventory"}
+                ? "Марки в показаните предложения"
+                : "Makes in the displayed selection"}
             </span>
           </div>
           <nav
@@ -315,22 +228,11 @@ export const DealerDesktopDiscoveryContent = ({
   locale?: string;
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
-  const usedListingIds = new Set<string>();
-  const featuredPool = [
-    ...listings.filter((listing) => listing.promoted),
-    ...listings.filter((listing) => !listing.promoted),
-  ];
-  const featured = takeUniqueListings(featuredPool, usedListingIds, 4);
-  const newest = takeUniqueListings(
-    [...listings].sort(
-      (first, second) =>
-        new Date(second.publishedAt).getTime() -
-        new Date(first.publishedAt).getTime()
-    ),
-    usedListingIds,
-    4
-  );
-  const availableNow = takeUniqueListings(listings, usedListingIds, 4);
+  const {
+    featured,
+    newest,
+    available: availableNow,
+  } = getDesktopDiscoveryCollections(listings);
 
   return (
     <div
@@ -347,10 +249,13 @@ export const DealerDesktopDiscoveryContent = ({
       <DesktopVehicleRow
         description={
           isBg
-            ? "Подбрани предложения с най-силна комбинация от състояние, оборудване и цена."
-            : "A curated selection with a strong balance of condition, equipment, and value."
+            ? "Разгледайте избрани предложения от нашите наличности."
+            : "Explore selected vehicles from our inventory."
         }
-        href={currentPath}
+        href={buildMarketplaceSearchHref(
+          { category: "car", sort: "newest" },
+          currentPath
+        )}
         isBg={isBg}
         listings={featured}
         locale={locale}
@@ -377,7 +282,10 @@ export const DealerDesktopDiscoveryContent = ({
             ? "Още налични предложения за сравнение и избор."
             : "More available vehicles ready to compare."
         }
-        href={currentPath}
+        href={buildMarketplaceSearchHref(
+          { category: "car", sort: "newest" },
+          currentPath
+        )}
         isBg={isBg}
         listings={availableNow}
         locale={locale}

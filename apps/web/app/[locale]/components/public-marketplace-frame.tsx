@@ -3,6 +3,11 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
 import {
+  isDealershipSite,
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
+import {
   DealerBottomNav,
   DealerMobileBrandBar,
   LeadSiteMark,
@@ -76,27 +81,27 @@ export const PublicMarketplaceFrame = ({
   const normalizedLocale = normalizeSeoLocale(locale);
   const isBg = normalizedLocale === "bg";
   const localizeLabel = (bg: string, en: string) => (isBg ? bg : en);
-  const appBaseUrl = leadSite.staticDemoMode ? "" : getPublicAppBaseUrl();
+  const appBaseUrl = isDealershipSite ? "" : getPublicAppBaseUrl();
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
-  const navItems = leadSite.staticDemoMode
-    ? dealerNavItems
-    : marketplaceNavItems;
-  const savedActionLabel = leadSite.staticDemoMode
+  const navItems = (
+    isDealershipSite ? dealerNavItems : marketplaceNavItems
+  ).filter((item) => isPublicSitePathEnabled(item.path, publicSite));
+  const savedActionLabel = isDealershipSite
     ? ""
     : localizeLabel("Запазени", "Saved");
-  const primaryActionAriaLabel = leadSite.staticDemoMode
+  const primaryActionAriaLabel = isDealershipSite
     ? localizeLabel(
         `Обадете се на ${leadSite.phoneDisplay}`,
         `Call ${leadSite.phoneDisplay}`
       )
     : localizeLabel("Публикувай обява", "Sell a vehicle");
-  const primaryActionLabel = leadSite.staticDemoMode
+  const primaryActionLabel = isDealershipSite
     ? localizeLabel("Обади се", "Call")
     : localizeLabel("Публикувай", "Sell");
   return (
     <div
       className={
-        leadSite.staticDemoMode && showMobileBottomNav
+        isDealershipSite && showMobileBottomNav
           ? "flex min-h-screen flex-col break-words bg-background pb-[calc(4rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0"
           : "flex min-h-screen flex-col break-words bg-background text-foreground"
       }
@@ -116,7 +121,7 @@ export const PublicMarketplaceFrame = ({
         variant={mastheadVariant}
       />
 
-      {leadSite.staticDemoMode && showMobileDealerHeader ? (
+      {isDealershipSite && showMobileDealerHeader ? (
         <>
           <header
             className={
@@ -173,7 +178,7 @@ export const PublicMarketplaceFrame = ({
 
       <header
         className={
-          leadSite.staticDemoMode
+          isDealershipSite
             ? "hidden"
             : "sticky top-0 z-40 border-border border-b bg-card/95 backdrop-blur-xl lg:hidden"
         }
@@ -197,7 +202,7 @@ export const PublicMarketplaceFrame = ({
           </Link>
 
           <div className="ml-auto flex max-w-full flex-wrap items-center justify-end gap-1.5">
-            {leadSite.staticDemoMode ? null : (
+            {isDealershipSite ? null : (
               <Button
                 asChild
                 className="hidden h-10 rounded-lg md:inline-flex focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
@@ -210,7 +215,7 @@ export const PublicMarketplaceFrame = ({
                 </Link>
               </Button>
             )}
-            {leadSite.staticDemoMode ? (
+            {isDealershipSite ? (
               <Button
                 asChild
                 className="h-10 w-10 rounded-lg border border-border bg-control text-foreground shadow-none hover:bg-control-hover min-[340px]:w-24 min-[340px]:justify-start focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
@@ -233,7 +238,7 @@ export const PublicMarketplaceFrame = ({
                 </a>
               </Button>
             ) : null}
-            {leadSite.staticDemoMode ? null : (
+            {isDealershipSite ? null : (
               <Button
                 asChild
                 className="h-10 min-w-10 rounded-lg focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
@@ -252,7 +257,7 @@ export const PublicMarketplaceFrame = ({
             <Button
               asChild
               className={`h-10 min-w-10 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)] ${
-                leadSite.staticDemoMode
+                isDealershipSite
                   ? "w-10 min-[340px]:w-24 min-[340px]:justify-start"
                   : ""
               }`}
@@ -260,20 +265,16 @@ export const PublicMarketplaceFrame = ({
             >
               <Link
                 aria-label={primaryActionAriaLabel}
-                href={
-                  leadSite.staticDemoMode
-                    ? leadSite.phoneHref
-                    : localize("/sell")
-                }
+                href={isDealershipSite ? leadSite.phoneHref : localize("/sell")}
               >
-                {leadSite.staticDemoMode ? (
+                {isDealershipSite ? (
                   <Phone aria-hidden="true" className="h-4 w-4" />
                 ) : (
                   <Plus aria-hidden="true" className="h-4 w-4" />
                 )}
                 <span
                   className={
-                    leadSite.staticDemoMode
+                    isDealershipSite
                       ? "hidden min-[340px]:inline"
                       : "hidden min-[300px]:inline"
                   }
@@ -319,7 +320,7 @@ export const PublicMarketplaceFrame = ({
       <div className={showMobileFooter ? undefined : "max-lg:hidden"}>
         <Footer locale={normalizedLocale} />
       </div>
-      {leadSite.staticDemoMode && showMobileBottomNav ? (
+      {isDealershipSite && showMobileBottomNav ? (
         <DealerBottomNav activeMode={activeMode} locale={normalizedLocale} />
       ) : null}
     </div>

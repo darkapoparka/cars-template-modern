@@ -2,6 +2,7 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   LeadSiteMark,
   marketplaceContentFrameClassName,
@@ -32,7 +33,7 @@ const NotFound = () => {
       </a>
       <header
         className={
-          leadSite.staticDemoMode
+          isDealershipSite
             ? "hidden border-border border-b bg-card lg:block"
             : "border-border border-b bg-card"
         }
@@ -68,7 +69,7 @@ const NotFound = () => {
         tabIndex={-1}
       >
         <section className="w-full max-w-lg rounded-xl border border-border bg-card p-6 text-center sm:p-8">
-          <p className="font-semibold text-[var(--lead-site-accent)] text-sm dark:text-[var(--lead-site-accent-bright)]">
+          <p className="font-semibold text-brand-text text-sm dark:text-[var(--lead-site-accent-bright)]">
             404
           </p>
           <h1 className="mt-2 font-semibold text-section-title tracking-tight">

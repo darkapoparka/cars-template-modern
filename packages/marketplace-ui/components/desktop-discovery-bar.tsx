@@ -1,18 +1,18 @@
 "use client";
 
 import { cn } from "@repo/design-system/lib/utils";
-import {
-  type ListingViewMode,
-  leadSite,
-  type MarketplaceSearchParams,
+import type {
+  ListingViewMode,
+  MarketplaceSearchParams,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { type ReactNode, useState } from "react";
 import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
 } from "../lib/marketplace-layout";
-import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery";
+import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery-hero";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
 import type { DesktopCategoryInventoryCount } from "./desktop-discovery-search";
@@ -64,7 +64,7 @@ const getDiscoveryBandClassName = (
   isResults: boolean,
   transparentForLeadSite = false
 ) => {
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return transparentForLeadSite ? "bg-transparent" : "bg-black";
   }
   return isResults ? "bg-card" : "bg-control/70";
@@ -97,11 +97,11 @@ export const DesktopMarketplaceBar = ({
     : marketplaceDiscoveryFrameClassName;
   const headerBandClassName = getDiscoveryBandClassName(isResults, true);
   const quickFilterBandClassName =
-    leadSite.staticDemoMode && !isResults
+    isDealershipSite && !isResults
       ? "bg-background"
       : getDiscoveryBandClassName(isResults, true);
   const stickyHeaderClassName = getDiscoveryBandClassName(isResults);
-  const interactiveLeadSwitcher = leadSite.staticDemoMode && !isResults;
+  const interactiveLeadSwitcher = isDealershipSite && !isResults;
   const [leadServiceMode, setLeadServiceMode] =
     useState<MarketplaceMode>("buy");
   const mastheadMode = getLeadMastheadMode({
@@ -110,7 +110,7 @@ export const DesktopMarketplaceBar = ({
     serviceMode: leadServiceMode,
   });
 
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     const dealerToolbarProps = {
       assistantSlot,
       categoryCounts,
@@ -160,14 +160,10 @@ export const DesktopMarketplaceBar = ({
           className={cn("relative", headerBandClassName)}
           data-slot="desktop-marketplace-header-band"
           style={
-            leadSite.staticDemoMode
-              ? leadSiteDiscoveryControlsBannerStyle
-              : undefined
+            isDealershipSite ? leadSiteDiscoveryControlsBannerStyle : undefined
           }
         >
-          {leadSite.staticDemoMode && !isResults ? (
-            <LeadSiteSearchCutouts />
-          ) : null}
+          {isDealershipSite && !isResults ? <LeadSiteSearchCutouts /> : null}
           <div
             className={cn(
               "relative z-10",
@@ -212,7 +208,7 @@ export const DesktopMarketplaceBar = ({
             <div className={frameClassName}>
               <DesktopQuickFilters
                 compact
-                elevated={!(isResults || leadSite.staticDemoMode)}
+                elevated={!(isResults || isDealershipSite)}
                 filterCount={filterCount}
                 filters={filters}
                 isBg={isBg}

@@ -2,11 +2,11 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
-import {
-  type ListingViewMode,
-  leadSite,
-  type MarketplaceSearchParams,
+import type {
+  ListingViewMode,
+  MarketplaceSearchParams,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { Globe2, LayoutGrid, List, SlidersHorizontal, X } from "lucide-react";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import {
@@ -50,7 +50,7 @@ const MobileNarrowFilterTrigger = ({
       <SlidersHorizontal aria-hidden="true" className="size-4" />
       <span>{label}</span>
       {activeFilterCount > 0 ? (
-        <span className="grid min-h-4 min-w-4 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white">
+        <span className="grid min-h-4 min-w-4 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro">
           {activeFilterCount}
         </span>
       ) : null}
@@ -129,7 +129,7 @@ export const ResultToolbar = ({
       </div>
       <div
         className={cn(
-          leadSite.staticDemoMode
+          isDealershipSite
             ? "hidden"
             : "mb-2 flex min-h-11 items-center justify-between gap-2 py-1 lg:hidden"
         )}

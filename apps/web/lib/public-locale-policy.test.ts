@@ -1,3 +1,5 @@
+import { leadSite } from "@repo/marketplace/lead-site";
+import { createPublicSiteConfig } from "@repo/marketplace/site-config";
 import { describe, expect, it } from "vitest";
 import {
   getPublicLocales,
@@ -5,17 +7,25 @@ import {
 } from "./public-locale-policy";
 
 describe("public locale policy", () => {
-  it("exposes only the canonical language in static showroom mode", () => {
-    expect(getPublicLocales(true)).toEqual(["bg"]);
-    expect(normalizePublicLocale("en", getPublicLocales(true))).toBe("bg");
-    expect(normalizePublicLocale("bg-BG", getPublicLocales(true))).toBe("bg");
+  it.each([
+    true,
+    false,
+  ])("keeps configured languages with staticDemoMode=%s", (staticDemoMode) => {
+    const site = createPublicSiteConfig({
+      ...leadSite,
+      staticDemoMode,
+      publicLocales: ["bg"],
+    });
+    expect(getPublicLocales(site)).toEqual(["bg"]);
+    expect(normalizePublicLocale("en", getPublicLocales(site))).toBe("bg");
   });
-
-  it("retains English support for multilingual deployments", () => {
-    expect(getPublicLocales(false)).toEqual(["en", "bg"]);
-    expect(normalizePublicLocale("en-GB", getPublicLocales(false))).toBe("en");
-    expect(normalizePublicLocale("unsupported", getPublicLocales(false))).toBe(
-      "bg"
-    );
+  it("supports an explicit multilingual dealership", () => {
+    const site = createPublicSiteConfig({
+      ...leadSite,
+      publicLocales: ["en", "bg"],
+      publicDefaultLocale: "en",
+    });
+    expect(getPublicLocales(site)).toEqual(["en", "bg"]);
+    expect(normalizePublicLocale("en-GB", getPublicLocales(site))).toBe("en");
   });
 });

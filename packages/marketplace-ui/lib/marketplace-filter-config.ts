@@ -7,6 +7,7 @@ import {
   type VehicleCategory,
   vehicleCategories,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 
 export const marketplaceCategorySelectorOptions = vehicleCategories.filter(
   (category) => category.id !== "lease"
@@ -118,9 +119,7 @@ export const marketplaceSortLabelsBg: Record<
   year_desc: "Най-нова година",
 };
 
-export const marketplaceCurrency = leadSite.staticDemoMode
-  ? leadSite.currency
-  : "BGN";
+export const marketplaceCurrency = isDealershipSite ? leadSite.currency : "BGN";
 
 export const marketplaceSearchCurrency: MarketplaceSearchParams["currency"] =
   leadSite.currency === "BGN" || leadSite.currency === "EUR"

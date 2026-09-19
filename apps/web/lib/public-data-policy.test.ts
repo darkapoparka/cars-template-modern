@@ -2,6 +2,24 @@ import { describe, expect, it } from "vitest";
 import { getPublicDataMode } from "./public-data-policy";
 
 describe("public marketplace data policy", () => {
+  it("does not let a legacy demo flag override an explicit live or unavailable mode", () => {
+    expect(
+      getPublicDataMode({ staticDemoMode: true, requestedMode: "database" })
+    ).toBe("unavailable");
+    expect(
+      getPublicDataMode({
+        staticDemoMode: true,
+        requestedMode: "database",
+        databaseUrl: "postgres://configured",
+      })
+    ).toBe("database");
+    expect(
+      getPublicDataMode({ staticDemoMode: true, requestedMode: "unavailable" })
+    ).toBe("unavailable");
+    expect(
+      getPublicDataMode({ staticDemoMode: true, requestedMode: "databse" })
+    ).toBe("unavailable");
+  });
   it("never enables demo inventory in production without a static showroom opt-in", () => {
     expect(getPublicDataMode({ nodeEnv: "production" })).toBe("unavailable");
     expect(

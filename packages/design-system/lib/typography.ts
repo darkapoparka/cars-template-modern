@@ -7,10 +7,8 @@ export const typographyVariants = cva("", {
       cardTitle:
         "font-semibold text-card-title tracking-heading lg:text-card-title-lg",
       compactControl: "font-medium text-compact-control",
-      display:
-        "font-semibold text-display tracking-heading lg:text-display-lg",
-      eyebrow:
-        "font-semibold text-micro uppercase tracking-label",
+      display: "font-semibold text-display tracking-heading lg:text-display-lg",
+      eyebrow: "font-semibold text-micro uppercase tracking-label",
       meta: "font-normal text-meta",
       micro: "font-medium text-micro",
       pageTitle:
@@ -38,10 +36,6 @@ export const typographyVariants = cva("", {
   },
 });
 
-export type TypographyVariantProps = VariantProps<
-  typeof typographyVariants
->;
+export type TypographyVariantProps = VariantProps<typeof typographyVariants>;
 
-export type TypographyRole = NonNullable<
-  TypographyVariantProps["role"]
->;
+export type TypographyRole = NonNullable<TypographyVariantProps["role"]>;

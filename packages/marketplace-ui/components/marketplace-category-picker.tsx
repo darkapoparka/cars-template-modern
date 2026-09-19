@@ -3,10 +3,10 @@
 import {
   buildMarketplaceSearchHref,
   getCategoryPath,
-  leadSite,
   type MarketplaceSearchParams,
   withCategory,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useRouter } from "next/navigation";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
@@ -47,7 +47,7 @@ export const MarketplaceCategoryPicker = ({
             withCategory(filters, category),
             getLocalizedPublicPath(
               locale,
-              leadSite.staticDemoMode ? "/" : getCategoryPath(category)
+              isDealershipSite ? "/" : getCategoryPath(category)
             )
           );
           onOpenChange(false);

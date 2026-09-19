@@ -70,7 +70,7 @@ export const LeaseVehicleSelector = ({
         <p className="text-muted-foreground text-sm">{copy.empty}</p>
         <Button
           asChild
-          className="mt-3 h-11 gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+          className="mt-3 h-11 gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
         >
           <a href={phoneHref}>
             <Phone aria-hidden="true" className="size-4" />

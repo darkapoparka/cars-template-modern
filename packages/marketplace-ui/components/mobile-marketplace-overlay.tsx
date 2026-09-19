@@ -25,7 +25,7 @@ export const mobileMarketplaceOverlayFieldRowClassName =
   "shrink-0 bg-white px-3 pb-3";
 
 export const mobileMarketplaceOverlayPrimaryActionClassName =
-  "h-12 w-full rounded-xl bg-[var(--lead-site-accent)] font-semibold text-compact-control text-white shadow-none transition-[background-color,transform] duration-150 hover:bg-[var(--lead-site-accent-hover)] active:scale-[0.99]";
+  "h-12 w-full rounded-xl bg-brand font-semibold text-compact-control text-brand-foreground shadow-none transition-[background-color,transform] duration-150 hover:bg-[var(--lead-site-accent-hover)] active:scale-[0.99] hover:text-[var(--brand-hover-foreground)]";
 
 interface MobileMarketplaceOverlayShellProps {
   readonly children: ReactNode;

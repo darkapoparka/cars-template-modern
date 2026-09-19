@@ -115,7 +115,7 @@ export const LeaseDesktopControls = ({
               <p className="text-meta text-muted-foreground">
                 {copy.estimateLabel}
               </p>
-              <p className="font-semibold text-[var(--lead-site-accent)] text-price tracking-heading">
+              <p className="font-semibold text-brand-text text-price tracking-heading">
                 {selectedVehicle.monthlyLabel}
               </p>
             </div>
@@ -126,7 +126,7 @@ export const LeaseDesktopControls = ({
       <div className="mt-4 flex flex-col items-stretch justify-center gap-2 sm:flex-row sm:items-center">
         <Button
           asChild
-          className="h-11 gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-compact-control text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+          className="h-11 gap-2 rounded-lg bg-brand px-5 text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
         >
           <a href={phoneHref}>
             <Phone aria-hidden="true" className="size-4" />

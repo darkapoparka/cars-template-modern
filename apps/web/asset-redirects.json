@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/day-night-contact-hero-v1.png",
+    "destination": "/day-night-contact-hero-v1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/sell/day-night-mobile-studio-v1.png",
+    "destination": "/images/sell/day-night-mobile-studio-v1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/lead-import-hero-v1.png",
+    "destination": "/lead-import-hero-v1.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/services/leasing-red-suv-v2.png",
+    "destination": "/images/services/leasing-red-suv-v2.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/services/navigation-assets-v1.png",
+    "destination": "/images/services/navigation-assets-v1-600w.webp",
+    "permanent": true
+  },
+  {
+    "source": "/images/services/navigation-assets-v2.png",
+    "destination": "/images/services/navigation-assets-v2-600w.webp",
+    "permanent": true
+  }
+]

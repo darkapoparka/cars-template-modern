@@ -267,7 +267,7 @@ const MobileCompactDiscoverySurface = ({
       >
         <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
         {filterCount > 0 ? (
-          <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white ring-2 ring-zinc-950">
+          <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
             {filterCount}
           </span>
         ) : null}
@@ -401,7 +401,7 @@ export const MobileDealerDiscoveryHeader = ({
             >
               <DealerMobileHeaderIcon icon={SlidersHorizontal} kind="filters" />
               {filterCount > 0 ? (
-                <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-[var(--lead-site-accent)] px-1 font-semibold text-micro text-white ring-2 ring-zinc-950">
+                <span className="absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-brand px-1 font-semibold text-brand-foreground text-micro ring-2 ring-zinc-950">
                   {filterCount}
                 </span>
               ) : null}

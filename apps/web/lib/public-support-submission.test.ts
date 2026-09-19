@@ -47,6 +47,83 @@ const createDependencies = () => ({
 });
 
 describe("public support submission", () => {
+  it("does not bypass disabled services through direct action submissions", async () => {
+    const dependencies = {
+      ...createDependencies(),
+      isRequestAllowed: vi.fn().mockReturnValue(false),
+      persist: vi.fn(),
+    };
+    await expect(
+      submitPublicSupportRequest(
+        createFormData({ intent: "finance" }),
+        requestContext,
+        dependencies
+      )
+    ).resolves.toMatchObject({ status: "unavailable" });
+    expect(dependencies.isRequestAllowed).toHaveBeenCalledWith(
+      expect.objectContaining({ intent: "finance" })
+    );
+    expect(dependencies.persist).not.toHaveBeenCalled();
+    expect(dependencies.deliver).not.toHaveBeenCalled();
+  });
+  it("requires a contact method for ordinary enquiries", async () => {
+    const dependencies = createDependencies();
+    await expect(
+      submitPublicSupportRequest(
+        createFormData({ email: "" }),
+        requestContext,
+        dependencies
+      )
+    ).resolves.toMatchObject({ status: "invalid" });
+    expect(dependencies.deliver).not.toHaveBeenCalled();
+  });
+  it("retains an explicit financing intent without inferring it from delivery wording", async () => {
+    const form = createFormData();
+    form.set("intent", "finance");
+    const dependencies = {
+      ...createDependencies(),
+      persist: vi.fn().mockResolvedValue({ id: "inquiry-finance" }),
+      notify: false,
+    };
+    await submitPublicSupportRequest(form, requestContext, dependencies);
+    expect(dependencies.persist).toHaveBeenCalledWith(
+      expect.objectContaining({ intent: "finance" }),
+      expect.anything()
+    );
+  });
+  it("accepts only after durable persistence without requiring optional email", async () => {
+    const dependencies = {
+      ...createDependencies(),
+      persist: vi.fn().mockResolvedValue({ id: "inquiry-a" }),
+      notify: false,
+    };
+    await expect(
+      submitPublicSupportRequest(createFormData(), requestContext, dependencies)
+    ).resolves.toMatchObject({ status: "received", inquiryId: "inquiry-a" });
+    expect(dependencies.deliver).not.toHaveBeenCalled();
+  });
+  it("does not lose an accepted enquiry when notification fails", async () => {
+    const dependencies = {
+      ...createDependencies(),
+      persist: vi.fn().mockResolvedValue({ id: "inquiry-a" }),
+      notify: true,
+    };
+    dependencies.deliver.mockRejectedValue(new Error("provider offline"));
+    await expect(
+      submitPublicSupportRequest(createFormData(), requestContext, dependencies)
+    ).resolves.toMatchObject({ status: "received", inquiryId: "inquiry-a" });
+  });
+  it("does not notify or claim receipt after a failed database transaction", async () => {
+    const dependencies = {
+      ...createDependencies(),
+      persist: vi.fn().mockRejectedValue(new Error("database offline")),
+      notify: true,
+    };
+    await expect(
+      submitPublicSupportRequest(createFormData(), requestContext, dependencies)
+    ).resolves.toMatchObject({ status: "unavailable" });
+    expect(dependencies.deliver).not.toHaveBeenCalled();
+  });
   it("returns success only after the provider accepts the request", async () => {
     const dependencies = createDependencies();
     const result = await submitPublicSupportRequest(

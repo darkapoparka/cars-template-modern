@@ -6,6 +6,7 @@ import {
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   getMobileQuickPillClassName,
   marketplaceDiscoveryFrameClassName,
@@ -20,6 +21,7 @@ import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicExternalInventory } from "@/lib/public-external-inventory";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { MobileDealerServiceHero } from "../components/mobile-dealer-service-hero";
 import { MobileServiceHelp } from "../components/mobile-service-help";
@@ -228,6 +230,7 @@ export const generateMetadata = async ({
 };
 
 export default async function ImportsPage({ params, searchParams }: PageProps) {
+  requirePublicSitePath("/imports");
   const [{ locale }, query] = await Promise.all([params, searchParams]);
   const normalizedLocale = normalizeSeoLocale(locale);
   const text = pageCopy[normalizedLocale];
@@ -367,7 +370,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                   />
                 </label>
                 <button
-                  className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-semibold text-sm text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
+                  className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-brand px-4 font-semibold text-brand-foreground text-sm outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
                   type="submit"
                 >
                   {text.submitText}
@@ -407,7 +410,7 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                 fill
                 priority
                 sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-                src="/lead-import-hero-v1.png"
+                src={publicSite.artwork.importHero}
               />
               <div
                 aria-hidden="true"

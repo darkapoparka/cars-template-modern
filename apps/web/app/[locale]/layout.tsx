@@ -1,6 +1,8 @@
+import { createBrandTheme } from "@repo/design-system/lib/brand-theme";
+import { publicSite } from "@repo/marketplace/site-config";
+import { isStaticPublicPreview } from "@/lib/public-data-policy";
 import "./styles.css";
 import "./mobile-final-polish.css";
-import "./desktop-header.css";
 import { analyticsConsentBootstrapScript } from "@repo/analytics";
 import { AnalyticsProvider } from "@repo/analytics/provider";
 import { Toaster } from "@repo/design-system/components/ui/sonner";
@@ -13,7 +15,7 @@ import { leadSite } from "@repo/marketplace";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { fonts } from "@/lib/fonts";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
@@ -46,27 +48,13 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
     <html
       className={cn(fonts, "scroll-smooth")}
       data-scroll-behavior="smooth"
+      data-site-kind={publicSite.kind}
       lang={normalizedLocale}
-      style={
-        {
-          "--canvas": "oklch(0.945 0.006 264)",
-          "--lead-site-accent": leadSite.accent,
-          "--lead-site-accent-active":
-            "color-mix(in srgb, var(--lead-site-accent) 68%, black)",
-          "--lead-site-accent-bright":
-            "color-mix(in srgb, var(--lead-site-accent) 82%, white)",
-          "--lead-site-accent-hover":
-            "color-mix(in srgb, var(--lead-site-accent) 82%, black)",
-          "--lead-site-accent-ring":
-            "color-mix(in srgb, var(--lead-site-accent) 55%, transparent)",
-          "--lead-site-accent-soft":
-            "color-mix(in srgb, var(--lead-site-accent) 9%, white)",
-        } as CSSProperties
-      }
+      style={createBrandTheme(publicSite.theme.accent)}
       suppressHydrationWarning
     >
       <head>
-        {leadSite.staticDemoMode ? null : (
+        {isStaticPublicPreview() ? null : (
           <script id="analytics-consent-bootstrap">
             {analyticsConsentBootstrapScript}
           </script>
@@ -74,8 +62,8 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       </head>
       <body>
         <MobileVisibleViewport />
-        <ThemeProvider>
-          {leadSite.staticDemoMode ? (
+        <ThemeProvider enableSystem={false} forcedTheme="light">
+          {isStaticPublicPreview() ? (
             <TooltipProvider>{children}</TooltipProvider>
           ) : (
             <AnalyticsProvider
@@ -92,7 +80,7 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
           />
           <Toaster />
         </ThemeProvider>
-        {leadSite.staticDemoMode ||
+        {isStaticPublicPreview() ||
         process.env.NODE_ENV === "production" ||
         process.env.NEXT_PUBLIC_AUTOMARKET_PUBLIC_E2E === "true" ? null : (
           <Toolbar />

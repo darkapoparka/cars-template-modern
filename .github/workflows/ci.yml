@@ -60,6 +60,7 @@ jobs:
       - run: pnpm --filter @repo/database build
       - run: pnpm check
       - run: pnpm boundaries
+      - run: pnpm refactor:contracts
       - run: pnpm release:preflight:test
       - run: pnpm unit
       - run: pnpm typecheck
@@ -85,6 +86,52 @@ jobs:
           name: public-browser-failure-${{ github.run_id }}
           path: apps/e2e/test-results/public-*
           retention-days: 3
+  responsive-template:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      SKIP_ENV_VALIDATION: 'true'
+      AUTOMARKET_PUBLIC_DATA_MODE: demo
+      AUTOMARKET_PUBLIC_E2E: 'true'
+      NEXT_PUBLIC_AUTOMARKET_PUBLIC_E2E: 'true'
+      E2E_PUBLIC_RUN_ID: responsive-ci
+      E2E_PUBLIC_MODE: demo
+      E2E_BASE_URL: http://127.0.0.1:3002
+      NEXT_PUBLIC_WEB_URL: http://127.0.0.1:3002
+      NEXT_PUBLIC_APP_URL: http://127.0.0.1:6467
+      NEXT_PUBLIC_API_URL: http://127.0.0.1:6466
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @repo/database build
+      - run: pnpm --filter e2e exec playwright install chromium
+      - run: pnpm --filter web build
+      - name: Start isolated production preview
+        shell: pwsh
+        run: |
+          Start-Process cmd -ArgumentList '/c pnpm --filter web exec next start -H 127.0.0.1 -p 3002 > responsive-server.log 2>&1' -WindowStyle Hidden
+          for ($attempt = 0; $attempt -lt 60; $attempt++) {
+            try {
+              $response = Invoke-WebRequest -Uri "$env:E2E_BASE_URL/cars" -TimeoutSec 5
+              if ($response.StatusCode -eq 200) { break }
+            } catch { Start-Sleep -Seconds 2 }
+          }
+          if (-not $response -or $response.StatusCode -ne 200) { throw 'Responsive preview did not become ready' }
+      - name: Desktop behavior and mobile visual preservation
+        run: pnpm --filter e2e e2e:refactor
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: responsive-template-evidence-${{ github.run_id }}
+          path: |
+            apps/e2e/test-results/refactor
+            responsive-server.log
+          retention-days: 7
   authenticated-preview:
     if: github.event_name == 'workflow_dispatch' && inputs.run_authenticated
     environment: preview-e2e

@@ -1,5 +1,6 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
@@ -143,7 +144,7 @@ export const MobileListingSummary = ({
     listing,
     sellerOrganizationRole
   );
-  const showSellerIdentity = !leadSite.staticDemoMode;
+  const showSellerIdentity = !isDealershipSite;
   const monthlyAmount = formatListingMonthlyEstimate(
     listing.monthlyEstimate,
     locale

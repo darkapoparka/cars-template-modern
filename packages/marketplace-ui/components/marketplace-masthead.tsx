@@ -15,6 +15,7 @@ import {
 } from "@repo/design-system/components/ui/tooltip";
 import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   ArrowUpRight,
   Banknote,
@@ -115,7 +116,7 @@ export const LeadSiteMark = ({
   className?: string;
   sizes?: string;
 }) => {
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return (
       <span
         className={cn(
@@ -203,16 +204,16 @@ const DealerDirectoryAction = ({
     tone === "secondary"
       ? "bg-zinc-200 text-zinc-950 hover:bg-zinc-100 hover:text-zinc-950"
       : "bg-white text-zinc-950 hover:bg-zinc-100 hover:text-zinc-950";
-  const actionClassName = leadSite.staticDemoMode
+  const actionClassName = isDealershipSite
     ? staticActionClassName
     : "mr-2 bg-card text-foreground hover:bg-card/80";
   const staticIconClassName =
     tone === "secondary"
       ? "bg-zinc-300 text-zinc-700"
-      : "bg-zinc-200 text-[var(--lead-site-accent)]";
-  const iconClassName = leadSite.staticDemoMode
+      : "bg-zinc-200 text-brand-text";
+  const iconClassName = isDealershipSite
     ? staticIconClassName
-    : "bg-[var(--lead-site-accent)] text-white";
+    : "bg-brand text-brand-foreground";
 
   return (
     <Tooltip>
@@ -222,9 +223,9 @@ const DealerDirectoryAction = ({
           className={cn(
             "h-11 rounded-xl py-1 pr-4 pl-1.5 shadow-none transition-colors",
             actionClassName,
-            leadSite.staticDemoMode && "w-36 justify-start",
+            isDealershipSite && "w-36 justify-start",
             active &&
-              !leadSite.staticDemoMode &&
+              !isDealershipSite &&
               "bg-card text-foreground hover:bg-card/80 hover:text-foreground"
           )}
           variant="ghost"
@@ -251,7 +252,7 @@ const DealerDirectoryAction = ({
       </TooltipTrigger>
       <TooltipContent
         className={cn(
-          leadSite.staticDemoMode &&
+          isDealershipSite &&
             "[&_svg]:!bg-white [&_svg]:!fill-white border border-zinc-200 bg-white text-zinc-950 shadow-lg"
         )}
         side="bottom"
@@ -268,7 +269,7 @@ const DealerNavigationAction = ({
   icon,
   ...action
 }: DealerDirectoryActionProps & { discovery: boolean }) =>
-  discovery || leadSite.staticDemoMode ? (
+  discovery || isDealershipSite ? (
     <DealerDirectoryAction icon={icon} {...action} />
   ) : (
     <UtilityAction
@@ -490,7 +491,7 @@ export const MarketplaceMasthead = ({
   onModeChange,
   variant = "compact",
 }: MarketplaceMastheadProps) => {
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return (
       <DealerDesktopHeader
         activeMode={activeMode}
@@ -503,9 +504,9 @@ export const MarketplaceMasthead = ({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const localizeLabel = (bg: string, en: string) => (isBg ? bg : en);
   const isDiscovery = variant === "discovery";
-  const isStaticDiscovery = leadSite.staticDemoMode && isDiscovery;
+  const isStaticDiscovery = isDealershipSite && isDiscovery;
   const interactiveModeSwitcher = Boolean(
-    leadSite.staticDemoMode && isDiscovery && onModeChange
+    isDealershipSite && isDiscovery && onModeChange
   );
   const resolvedContentFrameClassName = getMastheadContentFrameClassName(
     contentFrameClassName,
@@ -513,7 +514,7 @@ export const MarketplaceMasthead = ({
   );
   const resolvedHomeHref = homeHref ?? getLocalizedPublicPath(locale, "/");
   const localeSwitchLabel = isBg ? "English" : "Български";
-  const showLocaleSwitch = !leadSite.staticDemoMode;
+  const showLocaleSwitch = !isDealershipSite;
   const contactAction = {
     href: leadSite.phoneHref,
     icon: Phone,
@@ -531,7 +532,7 @@ export const MarketplaceMasthead = ({
   }[] = [
     {
       id: "buy",
-      label: leadSite.staticDemoMode
+      label: isDealershipSite
         ? localizeLabel("Купи", "Buy")
         : localizeLabel("Купи", "Buy"),
       href: getLocalizedPublicPath(locale, "/cars"),
@@ -539,19 +540,19 @@ export const MarketplaceMasthead = ({
     },
     {
       id: "sell",
-      label: leadSite.staticDemoMode
+      label: isDealershipSite
         ? localizeLabel("Продай", "Sell")
         : localizeLabel("Продай", "Sell"),
       href: getLocalizedPublicPath(locale, "/sell"),
-      icon: leadSite.staticDemoMode ? Banknote : Tag,
+      icon: isDealershipSite ? Banknote : Tag,
     },
     {
       id: "lease",
-      label: leadSite.staticDemoMode
+      label: isDealershipSite
         ? localizeLabel("Финансиране", "Financing")
         : localizeLabel("Лизинг", "Lease"),
       href: getLocalizedPublicPath(locale, "/lease"),
-      icon: leadSite.staticDemoMode ? Landmark : CircleDollarSign,
+      icon: isDealershipSite ? Landmark : CircleDollarSign,
     },
     {
       id: "imports",
@@ -560,11 +561,11 @@ export const MarketplaceMasthead = ({
       icon: Ship,
     },
   ];
-  const visibleModes = leadSite.staticDemoMode
+  const visibleModes = isDealershipSite
     ? modes.filter((mode) => mode.id !== "lease")
     : modes;
 
-  const utilityActions: UtilityActionProps[] = leadSite.staticDemoMode
+  const utilityActions: UtilityActionProps[] = isDealershipSite
     ? []
     : [
         {
@@ -581,7 +582,7 @@ export const MarketplaceMasthead = ({
   let primaryNavigationLabel = "Primary marketplace modes";
   if (isBg) {
     primaryNavigationLabel = "Основни действия";
-  } else if (leadSite.staticDemoMode) {
+  } else if (isDealershipSite) {
     primaryNavigationLabel = "Primary dealership navigation";
   }
   let mastheadHeightClassName = "h-20";
@@ -597,10 +598,10 @@ export const MarketplaceMasthead = ({
         "z-50 hidden lg:block",
         isDiscovery ? "relative" : "sticky top-0",
         className,
-        leadSite.staticDemoMode ? "bg-black text-white" : "bg-control/70"
+        isDealershipSite ? "bg-black text-white" : "bg-control/70"
       )}
       data-slot="marketplace-masthead"
-      style={leadSite.staticDemoMode ? leadSiteMastheadBannerStyle : undefined}
+      style={isDealershipSite ? leadSiteMastheadBannerStyle : undefined}
     >
       <div
         className={cn(
@@ -614,7 +615,7 @@ export const MarketplaceMasthead = ({
           className={cn(
             "flex w-fit shrink-0 items-center gap-2.5 rounded-lg bg-transparent shadow-none transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
             isStaticDiscovery ? "h-[76px] px-2" : "h-[52px] px-3.5",
-            !leadSite.staticDemoMode && "hover:bg-card/80"
+            !isDealershipSite && "hover:bg-card/80"
           )}
           data-slot="marketplace-home-link"
           href={resolvedHomeHref}
@@ -635,7 +636,7 @@ export const MarketplaceMasthead = ({
                   : undefined
               }
             />
-            {leadSite.staticDemoMode ? null : (
+            {isDealershipSite ? null : (
               <span className="font-semibold text-card-title-lg tracking-heading">
                 {leadSite.shortName}
               </span>
@@ -652,7 +653,7 @@ export const MarketplaceMasthead = ({
               : "gap-2",
             isDiscovery && !isStaticDiscovery && "gap-1",
             isDiscovery &&
-              !leadSite.staticDemoMode &&
+              !isDealershipSite &&
               "rounded-xl bg-zinc-100/95 p-0.5"
           )}
         >
@@ -660,10 +661,10 @@ export const MarketplaceMasthead = ({
             const Icon = mode.icon;
             const active = activeMode === mode.id;
             let activeModeClassName = "";
-            if (active && leadSite.staticDemoMode && isStaticDiscovery) {
+            if (active && isDealershipSite && isStaticDiscovery) {
               activeModeClassName =
                 "!bg-white/[0.11] text-white hover:!bg-white/[0.14] hover:!text-white xl:border-white/[0.14] xl:shadow-sm";
-            } else if (active && leadSite.staticDemoMode) {
+            } else if (active && isDealershipSite) {
               activeModeClassName =
                 "bg-white/[0.1] text-white hover:text-white";
             } else if (active) {
@@ -672,7 +673,7 @@ export const MarketplaceMasthead = ({
             }
             const modeClassName = cn(
               "relative border border-transparent bg-transparent no-underline shadow-none transition-[background-color,border-color,color,box-shadow] duration-150 hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-offset-2 focus-visible:ring-offset-black",
-              leadSite.staticDemoMode
+              isDealershipSite
                 ? "hover:!bg-white/[0.06] hover:!text-white text-white/65"
                 : "text-foreground/65 hover:bg-card/80 hover:text-foreground",
               isStaticDiscovery &&
@@ -759,7 +760,7 @@ export const MarketplaceMasthead = ({
               {contextActions}
             </div>
           ) : null}
-          {leadSite.staticDemoMode ? (
+          {isDealershipSite ? (
             <LeadContactGroup isBg={isBg} />
           ) : (
             <DealerNavigationAction

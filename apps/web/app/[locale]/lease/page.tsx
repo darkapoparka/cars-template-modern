@@ -22,6 +22,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getPublicMarketplaceListings } from "@/lib/public-marketplace-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { LeaseVehicleSelector } from "./lease-vehicle-selector";
@@ -113,6 +114,7 @@ export default async function LeasePage({
   params,
   searchParams,
 }: LeasePageProps) {
+  requirePublicSitePath("/lease");
   const [{ locale }, query] = await Promise.all([params, searchParams]);
   const initialVehicleId =
     typeof query.vehicle === "string" ? query.vehicle : "";
@@ -203,7 +205,14 @@ export default async function LeasePage({
                   <BadgeCheck aria-hidden="true" className="size-4" />
                   {copy.badge}
                 </div>
-                <h1 className="sr-only mx-auto mt-4 max-w-3xl text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg lg:not-sr-only">
+                <h1
+                  className={cn(
+                    "mx-auto mt-4 max-w-3xl text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg",
+                    vehicles.length > 0
+                      ? "hidden lg:block"
+                      : "sr-only lg:not-sr-only"
+                  )}
+                >
                   {copy.title}
                 </h1>
                 <p className="mx-auto mt-2 hidden max-w-2xl text-center text-body text-muted-foreground lg:block">

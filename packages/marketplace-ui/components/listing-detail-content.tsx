@@ -6,6 +6,7 @@ import {
   type Money,
   type VehicleListing,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -71,7 +72,7 @@ export const ListingDetailContent = ({
             <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">
               {listing.description}
             </p>
-            {leadSite.staticDemoMode ? null : (
+            {isDealershipSite ? null : (
               <p className="mt-4 max-w-2xl text-meta text-zinc-500 lg:text-muted-foreground">
                 {copy.sellerDescription}
               </p>
@@ -86,7 +87,7 @@ export const ListingDetailContent = ({
       {listing.category === "car" ? (
         <div className="pb-5 lg:hidden">
           <Link
-            className="group relative flex min-h-[156px] w-full overflow-hidden rounded-xl bg-[var(--lead-site-accent)] p-4 text-white focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+            className="group relative flex min-h-[156px] w-full overflow-hidden rounded-xl bg-brand p-4 text-brand-foreground focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
             data-slot="listing-financing-card"
             href={`${getLocalizedPublicPath(locale, "/lease")}?vehicle=${encodeURIComponent(listing.id)}`}
           >

@@ -1,3 +1,18 @@
+import {
+  databaseIdentity,
+  hasPrefix,
+  isConfigured,
+  isEmail,
+  isPresent,
+  isRemoteHttpsOrigin,
+  isRemoteHttpsProviderUrl,
+  isRemoteHttpsUrl,
+  isRemotePostgresUrl,
+  parseEnvText,
+} from "./lib/release-environment.mjs";
+
+export { parseEnvText } from "./lib/release-environment.mjs";
+
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -13,13 +28,7 @@ import {
 
 const appNames = ["web", "app", "api"];
 const targets = new Set(["contracts", "preview", "production"]);
-const placeholderPattern =
-  /(placeholder|replace[-_ ]?me|change[-_ ]?me|your[-_ ]|dummy|invalid|example\.(com|org|net)|^x+$|^todo$)/i;
-const envLinePattern = /^(?:export\s+)?([A-Z][A-Z0-9_]*)\s*=\s*(.*)$/;
-const emailPattern =
-  /^(?!\.)(?!.*\.\.)([A-Za-z0-9_'+\-.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9-]*\.)+[A-Za-z]{2,}$/u;
 const bearerSecretPattern = /^[A-Za-z0-9_-]{32,}$/u;
-const lineBreakPattern = /\r?\n/;
 const nodeCommandPattern = /^node\s+(.+)$/;
 const routeGetExportPattern =
   /export\s+(?:const\s+GET\b|(?:async\s+)?function\s+GET\b)/;
@@ -56,21 +65,6 @@ const exactVersionPattern = /^\d+\.\d+\.\d+$/;
 const resendFromSchemaBlockPattern =
   /RESEND_FROM:\s*([\s\S]*?)^\s*RESEND_TOKEN:/mu;
 const schemaMethodPattern = /^\.([A-Za-z][A-Za-z0-9_]*)\s*\(/u;
-const localHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
-const ipv4LoopbackPattern = /^127(?:\.\d{1,3}){3}$/u;
-const ipv4LiteralPattern = /^(?:\d{1,3}\.){3}\d{1,3}$/u;
-const bracketedIpLiteralPattern = /^\[[0-9a-f:.]+\]$/iu;
-const ipv4MappedLoopbackPattern = /^\[::ffff:7f[0-9a-f]{2}:/iu;
-const reservedDeploymentHostSuffixes = [
-  "example",
-  "example.com",
-  "example.net",
-  "example.org",
-  "invalid",
-  "local",
-  "localhost",
-  "test",
-];
 const packageKeysImportPattern =
   /from\s+"@repo\/([^"/]+)\/((?:[^"/]+\/)*[^"/]*keys)"/gu;
 const processEnvironmentNamePattern = /process\.env\.([A-Z][A-Z0-9_]*)/gu;
@@ -354,91 +348,6 @@ const check = (id, status, message, details = {}) => ({
   ...details,
 });
 
-export const parseEnvText = (source) => {
-  const environment = {};
-
-  for (const sourceLine of source.split(lineBreakPattern)) {
-    const line = sourceLine.trim();
-    if (!(line && !line.startsWith("#"))) {
-      continue;
-    }
-
-    const match = envLinePattern.exec(line);
-    if (!match) {
-      continue;
-    }
-
-    const [, name, rawValue = ""] = match;
-    if (Object.hasOwn(environment, name)) {
-      throw new Error(`duplicate environment variable: ${name}`);
-    }
-    const value = rawValue.trim();
-    const hasMatchingQuotes =
-      value.length >= 2 &&
-      ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'")));
-    environment[name] = hasMatchingQuotes ? value.slice(1, -1) : value;
-  }
-
-  return environment;
-};
-
-const isConfigured = (value, minimumLength = 1) => {
-  if (typeof value !== "string") {
-    return false;
-  }
-  const trimmed = value.trim();
-  return (
-    value === trimmed &&
-    trimmed.length >= minimumLength &&
-    !placeholderPattern.test(trimmed)
-  );
-};
-const isPresent = (value) =>
-  typeof value === "string" && value.trim().length > 0;
-
-const isReservedDeploymentHost = (hostname) => {
-  const normalized = hostname.toLowerCase();
-  return (
-    normalized.endsWith(".") ||
-    normalized === "0.0.0.0" ||
-    normalized === "[::]" ||
-    ipv4LiteralPattern.test(normalized) ||
-    bracketedIpLiteralPattern.test(normalized) ||
-    ipv4LoopbackPattern.test(normalized) ||
-    ipv4MappedLoopbackPattern.test(normalized) ||
-    reservedDeploymentHostSuffixes.some(
-      (suffix) => normalized === suffix || normalized.endsWith(`.${suffix}`)
-    )
-  );
-};
-
-const parseUrl = (value) => {
-  if (!isConfigured(value)) {
-    return undefined;
-  }
-
-  try {
-    return new URL(value);
-  } catch {
-    return undefined;
-  }
-};
-
-const isRemoteHttpsOrigin = (value) => {
-  const url = parseUrl(value);
-  return Boolean(
-    url &&
-      url.protocol === "https:" &&
-      !localHosts.has(url.hostname) &&
-      !isReservedDeploymentHost(url.hostname) &&
-      value.trim() === url.origin &&
-      url.pathname === "/" &&
-      !url.search &&
-      !url.hash
-  );
-};
-
 const addOptionalGroup = (
   checks,
   scope,
@@ -477,66 +386,6 @@ const addOptionalGroup = (
     })
   );
 };
-
-const isRemotePostgresUrl = (value) => {
-  const url = parseUrl(value);
-  let databaseName;
-  try {
-    databaseName = url ? decodeURIComponent(url.pathname) : undefined;
-  } catch {
-    return false;
-  }
-  return Boolean(
-    url &&
-      ["postgres:", "postgresql:"].includes(url.protocol) &&
-      !localHosts.has(url.hostname) &&
-      !isReservedDeploymentHost(url.hostname) &&
-      url.username &&
-      url.password &&
-      databaseName &&
-      databaseName.length > 1 &&
-      !url.hash
-  );
-};
-
-const databaseIdentity = (value) => {
-  if (!isRemotePostgresUrl(value)) {
-    return undefined;
-  }
-
-  const url = new URL(value);
-  try {
-    const databaseName = decodeURIComponent(url.pathname);
-    return `${url.hostname.toLowerCase()}:${url.port || "5432"}${databaseName}`;
-  } catch {
-    return undefined;
-  }
-};
-
-const isEmail = (value) => {
-  if (!(isConfigured(value) && emailPattern.test(value))) {
-    return false;
-  }
-  const hostname = value.slice(value.lastIndexOf("@") + 1);
-  return !isReservedDeploymentHost(hostname);
-};
-const isRemoteHttpsUrl = (value) => {
-  const url = parseUrl(value);
-  return Boolean(
-    url &&
-      url.protocol === "https:" &&
-      !localHosts.has(url.hostname) &&
-      !isReservedDeploymentHost(url.hostname)
-  );
-};
-const isRemoteHttpsProviderUrl = (value) => {
-  const url = parseUrl(value);
-  return Boolean(
-    isRemoteHttpsUrl(value) && url && !(url.username || url.password)
-  );
-};
-const hasPrefix = (value, prefix) =>
-  isConfigured(value) && value.startsWith(prefix);
 
 const addOptionalValue = (checks, scope, environment, name, predicate) => {
   const configured = isPresent(environment[name]);

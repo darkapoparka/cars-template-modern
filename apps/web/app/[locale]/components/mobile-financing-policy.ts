@@ -126,5 +126,10 @@ export const parseFinancingRequestHref = (
     deposit && ["flexible", "10", "20", "30"].includes(deposit)
       ? { deposit }
       : {};
-  return vehicle && term ? { term, vehicle, ...preference } : null;
+  return vehicle &&
+    vehicle.length <= 200 &&
+    term &&
+    financingTermOptions.some((value) => value === term)
+    ? { term, vehicle, ...preference }
+    : null;
 };

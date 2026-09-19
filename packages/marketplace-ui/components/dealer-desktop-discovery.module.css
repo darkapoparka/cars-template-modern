@@ -2,503 +2,254 @@
 .discoveryContent {
   display: none;
 }
-
 @media (min-width: 1024px) {
   .hero {
     position: relative;
-    display: block;
-    height: 590px;
-    margin: 0 24px 112px;
-    overflow: visible;
-    color: #fff;
-    background:
-      radial-gradient(circle at 50% 68%, rgb(255 255 255 / 9%), transparent 34%),
-      linear-gradient(135deg, #080a0d 0%, #11151a 46%, #080a0d 100%);
-    border: 1px solid rgb(255 255 255 / 8%);
+    display: grid;
+    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
+    padding: 1.5rem clamp(1.5rem, 4vw, 4rem) 2rem;
+    margin-inline: auto;
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    border: 1px solid var(--inverse-border);
     border-top: 0;
-    border-radius: 0 0 28px 28px;
-    box-shadow: 0 28px 70px rgb(15 23 42 / 18%);
+    border-radius: 0 0 var(--radius-shell) var(--radius-shell);
     isolation: isolate;
   }
-
-  .hero::before {
-    position: absolute;
-    inset: auto 0 0;
-    z-index: -1;
-    height: 42%;
-    content: "";
-    background:
-      linear-gradient(
-        180deg,
-        transparent,
-        rgb(255 255 255 / 4%) 58%,
-        rgb(255 255 255 / 7%)
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent 0,
-        transparent 124px,
-        rgb(255 255 255 / 4%) 125px,
-        transparent 126px
-      );
-    border-radius: 0 0 28px 28px;
-    transform: perspective(680px) rotateX(60deg);
-    transform-origin: bottom;
-  }
-
-  .heroArchitecture {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    overflow: hidden;
-    border-radius: inherit;
-  }
-
-  .heroArchitecture::before,
-  .heroArchitecture::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 24%;
-    content: "";
-    background:
-      linear-gradient(
-        90deg,
-        transparent,
-        rgb(255 255 255 / 7%) 50%,
-        transparent 51%
-      ),
-      linear-gradient(180deg, rgb(255 255 255 / 4%), transparent 44%);
-    border-right: 1px solid rgb(255 255 255 / 6%);
-    border-left: 1px solid rgb(255 255 255 / 3%);
-    opacity: 0.78;
-  }
-
-  .heroArchitecture::before {
-    left: 4%;
-    transform: skewX(-8deg);
-  }
-
-  .heroArchitecture::after {
-    right: 4%;
-    transform: skewX(8deg);
-  }
-
   .heroCopy {
     position: relative;
-    z-index: 4;
-    width: min(920px, calc(100% - 80px));
-    padding-top: 34px;
-    margin: 0 auto;
+    z-index: 1;
+    width: min(100%, 52rem);
+    margin-inline: auto;
     text-align: center;
   }
-
   .heroEyebrow {
-    margin: 0 0 12px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    line-height: 1;
-    color: rgb(255 255 255 / 56%);
+    margin-bottom: 0.75rem;
+    font-size: var(--text-micro);
+    font-weight: var(--font-weight-semibold);
+    color: var(--inverse-muted);
     text-transform: uppercase;
-    letter-spacing: 0.17em;
+    letter-spacing: var(--tracking-label);
   }
   .heroCopy h1 {
-    max-width: 860px;
-    margin: 0 auto;
-    font-size: clamp(3rem, 4.2vw, 4.4rem);
-    font-weight: 650;
-    line-height: 0.98;
-    color: #fff;
-    letter-spacing: -0.055em;
+    margin: 0;
+    font-size: var(--text-hero);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-hero--line-height);
+    letter-spacing: var(--tracking-heading);
     text-wrap: balance;
   }
-
   .heroDescription {
-    max-width: 690px;
-    margin: 16px auto 0;
-    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
-    line-height: 1.5;
-    color: rgb(255 255 255 / 68%);
+    max-width: 42rem;
+    margin: 1rem auto 0;
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    color: var(--inverse-muted);
   }
-
   .heroVehicles {
-    position: absolute;
-    inset: auto 0 68px;
-    z-index: 2;
-    height: 330px;
+    position: relative;
+    height: clamp(12rem, 20vw, 19rem);
+    margin-block: 1rem 0.5rem;
     pointer-events: none;
   }
-
   .heroVehicle {
     position: absolute;
     bottom: 0;
     width: 54%;
     height: 100%;
-    filter: drop-shadow(0 28px 24px rgb(0 0 0 / 42%));
+    filter: drop-shadow(var(--elevation-artwork));
   }
-
   .heroVehicle img {
     object-fit: contain;
     object-position: center bottom;
   }
   .heroVehicleLeft {
-    left: 2%;
-    transform: translateX(1%);
+    left: 0;
   }
-
   .heroVehicleRight {
-    right: 2%;
-    transform: translateX(-1%);
+    right: 0;
   }
-
   .heroSearch {
-    position: absolute;
-    right: clamp(32px, 5vw, 88px);
-    bottom: -68px;
-    left: clamp(32px, 5vw, 88px);
-    z-index: 8;
+    position: relative;
+    z-index: 3;
+    min-width: 0;
   }
-
-  .hero :global(.dealer-desktop-toolbar--hero) {
-    width: 100%;
-    padding: 16px 18px 17px;
-    margin: 0;
-    overflow: visible;
-    color: #18181b;
-    background: rgb(255 255 255 / 97%);
-    border: 1px solid rgb(15 23 42 / 9%);
-    border-radius: 22px;
-    box-shadow: 0 24px 60px rgb(15 23 42 / 22%);
-    backdrop-filter: blur(18px);
-  }
-
-  .hero :global(.dealer-desktop-toolbar--hero .dealer-desktop-filters) {
-    padding-top: 12px;
-    margin-top: 12px;
-    border-top-color: #e5e7eb;
-  }
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-search-category"]
-    ) {
-    color: #18181b;
-    background: #f4f5f7;
-    border-color: #e2e4e8;
-  }
-
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-search-category"]
-      > span
-      > span:first-child
-    ) {
-    color: #71717a;
-  }
-
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-search-category"]
-      > span
-      > span:last-child
-    ) {
-    color: #18181b;
-  }
-
-  .hero
-    :global(.dealer-desktop-toolbar--hero [data-slot="desktop-search-query"]) {
-    background: #fff;
-    border-color: #d9dce1;
-    box-shadow: 0 1px 2px rgb(15 23 42 / 4%);
-  }
-
-  .hero
-    :global(.dealer-desktop-toolbar--hero [data-slot="desktop-quick-filter"]),
-  .hero
-    :global(.dealer-desktop-toolbar--hero [data-slot="desktop-sort-trigger"]) {
-    color: #3f3f46;
-    background: #f4f5f7;
-    border-color: #e2e4e8;
-  }
-
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-quick-filter"]:hover
-    ),
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-sort-trigger"]:hover
-    ) {
-    color: #18181b;
-    background: #ebecef;
-    border-color: #d5d7dc;
-  }
-
-  .hero
-    :global(
-      .dealer-desktop-toolbar--hero
-      [data-slot="desktop-primary-control"]
-    ) {
-    color: #fff !important;
-    background: #111216 !important;
-    border-color: #111216 !important;
-    box-shadow: 0 8px 18px rgb(15 23 42 / 16%);
-  }
-
   .discoveryContent {
     display: block;
-    width: 100%;
-    padding: 0 24px 88px;
-  }
-
-  .discoveryPanel,
-  .vehicleSection {
-    width: min(100%, 1392px);
+    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
+    padding-block: var(--layout-section-gap) 4rem;
     margin-inline: auto;
   }
   .discoveryPanel {
-    padding: 34px;
-    background: #fff;
-    border: 1px solid rgb(15 23 42 / 7%);
-    border-radius: 24px;
-    box-shadow: 0 16px 44px rgb(15 23 42 / 6%);
+    padding: 0;
   }
-
   .sectionHeading {
     display: flex;
-    gap: 24px;
+    gap: 1.5rem;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 22px;
+    margin-bottom: 1.25rem;
   }
-
   .sectionHeading h2 {
     margin: 0;
-    font-size: clamp(1.8rem, 2.2vw, 2.45rem);
-    font-weight: 650;
-    line-height: 1.04;
-    color: #111216;
-    letter-spacing: -0.045em;
+    font-size: var(--text-section-title-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-section-title-lg--line-height);
+    color: var(--foreground);
+    letter-spacing: var(--tracking-heading);
   }
-
-  .sectionHeading > div > p:not(.sectionEyebrow) {
-    max-width: 640px;
-    margin: 8px 0 0;
-    font-size: 0.94rem;
-    line-height: 1.45;
-    color: #71717a;
+  .sectionDescription {
+    max-width: 42rem;
+    margin: 0.5rem 0 0;
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
+    color: var(--muted-foreground);
   }
-
   .sectionEyebrow {
-    margin: 0 0 7px;
-    font-size: 0.7rem;
-    font-weight: 750;
-    line-height: 1;
-    color: #71717a;
+    margin-bottom: 0.375rem;
+    font-size: var(--text-micro);
+    font-weight: var(--font-weight-semibold);
+    color: var(--muted-foreground);
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: var(--tracking-label);
   }
-
   .sectionAction {
     display: inline-flex;
-    flex: 0 0 auto;
-    gap: 8px;
+    flex-shrink: 0;
+    gap: 0.5rem;
     align-items: center;
-    min-height: 44px;
-    padding: 0 16px;
-    font-size: 0.84rem;
-    font-weight: 650;
-    color: #27272a;
-    text-decoration: none;
-    background: #fff;
-    border: 1px solid #dedfe3;
-    border-radius: 999px;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding-inline: 1rem;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
     transition:
-      color 150ms ease,
-      background-color 150ms ease,
-      border-color 150ms ease,
-      transform 150ms ease;
+      background-color var(--duration-interaction),
+      border-color var(--duration-interaction);
   }
-
   .sectionAction:hover {
-    color: #fff;
-    background: #18181b;
-    border-color: #18181b;
-    transform: translateY(-1px);
+    background: var(--control);
+    border-color: var(--muted-foreground);
   }
-
   .sectionAction:focus-visible,
   .bodyTypeCard:focus-visible,
-  .brandCard:focus-visible,
-  .vehicleCardLink:focus-visible {
-    outline: 3px solid var(--lead-site-accent-ring);
+  .brandCard:focus-visible {
+    outline: 2px solid var(--ring);
     outline-offset: 3px;
   }
   .bodyTypeGrid {
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 12px;
+    gap: 0.75rem;
   }
-
   .bodyTypeCard {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-width: 0;
-    min-height: 154px;
-    padding: 14px 14px 13px;
-    color: #18181b;
-    text-decoration: none;
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 18px;
+    padding: 1rem;
+    color: var(--foreground);
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
     transition:
-      background-color 160ms ease,
-      border-color 160ms ease,
-      box-shadow 160ms ease,
-      transform 160ms ease;
+      background-color var(--duration-interaction),
+      border-color var(--duration-interaction);
   }
-
   .bodyTypeCard:hover {
-    background: #fff;
-    border-color: #cfd2d7;
-    box-shadow: 0 14px 30px rgb(15 23 42 / 9%);
-    transform: translateY(-3px);
+    background: var(--panel);
+    border-color: var(--muted-foreground);
   }
-
   .bodyTypeArtwork {
     position: relative;
     display: block;
     width: 100%;
-    height: 88px;
+    aspect-ratio: 1.7;
   }
-
   .bodyTypeImage {
     object-fit: contain;
     object-position: center;
-    filter: drop-shadow(0 10px 8px rgb(15 23 42 / 13%));
-    transform: scale(1.16);
+    transform: scale(1.1);
   }
-
   .compactArtwork {
-    transform: scale(1.01);
+    transform: none;
   }
-
   .bodyTypeMeta {
     display: block;
+    margin-top: 0.5rem;
     text-align: center;
   }
-
-  .bodyTypeMeta strong,
-  .bodyTypeMeta small {
-    display: block;
-  }
-
   .bodyTypeMeta strong {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.88rem;
-    font-weight: 680;
-    line-height: 1.2;
-    white-space: nowrap;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-meta--line-height);
   }
-
-  .bodyTypeMeta small {
-    margin-top: 4px;
-    font-size: 0.72rem;
-    line-height: 1.2;
-    color: #71717a;
-  }
-
   .brandSection {
     display: grid;
-    grid-template-columns: minmax(190px, 0.72fr) minmax(0, 3fr);
-    gap: 28px;
+    grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 3fr);
+    gap: 1.5rem;
     align-items: center;
-    padding-top: 28px;
-    margin-top: 28px;
-    border-top: 1px solid #e5e7eb;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
   }
-
   .brandHeading p {
-    margin: 0;
-    font-size: 0.78rem;
-    font-weight: 750;
-    color: #27272a;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
+    color: var(--foreground);
   }
-
   .brandHeading span {
     display: block;
-    max-width: 240px;
-    margin-top: 6px;
-    font-size: 0.78rem;
-    line-height: 1.45;
-    color: #71717a;
+    max-width: 16rem;
+    margin-top: 0.375rem;
+    font-size: var(--text-micro);
+    line-height: var(--text-micro--line-height);
+    color: var(--muted-foreground);
   }
-
   .brandGrid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+    gap: 0.75rem;
   }
-
   .brandCard {
     display: grid;
-    grid-template-columns: 52px minmax(0, 1fr) auto;
-    gap: 12px;
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+    gap: 0.75rem;
     align-items: center;
     min-width: 0;
-    min-height: 76px;
-    padding: 10px 12px;
-    color: #18181b;
-    text-decoration: none;
-    background: #f7f7f8;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    transition:
-      background-color 150ms ease,
-      border-color 150ms ease,
-      transform 150ms ease;
+    min-height: 4.5rem;
+    padding: 0.75rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    transition: background-color var(--duration-interaction);
   }
-
   .brandCard:hover {
-    background: #fff;
-    border-color: #cfd2d7;
-    transform: translateY(-2px);
+    background: var(--control);
   }
-
   .brandArtwork {
     display: grid;
     place-items: center;
-    width: 52px;
-    height: 48px;
-    color: #52525b;
-    background: #fff;
-    border: 1px solid #e4e4e7;
-    border-radius: 13px;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--muted-foreground);
   }
-
   .brandArtwork img {
-    width: 38px;
-    height: 34px;
+    width: 2.5rem;
+    height: 2.25rem;
     object-fit: contain;
   }
-
   .brandArtwork > span {
-    font-size: 0.8rem;
-    font-weight: 760;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
   }
-
   .brandMeta {
     min-width: 0;
   }
-
   .brandMeta strong,
   .brandMeta small {
     display: block;
@@ -506,126 +257,54 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
   .brandMeta strong {
-    font-size: 0.84rem;
-    font-weight: 680;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
   }
-
   .brandMeta small {
-    margin-top: 3px;
-    font-size: 0.7rem;
-    color: #71717a;
+    margin-top: 0.25rem;
+    font-size: var(--text-micro);
+    color: var(--muted-foreground);
   }
-
   .brandCard > svg {
-    color: #a1a1aa;
-    transition: transform 150ms ease;
+    color: var(--muted-foreground);
   }
-
-  .brandCard:hover > svg {
-    transform: translateX(2px);
-  }
-
   .vehicleSection {
-    margin-top: 58px;
+    margin-top: var(--layout-section-gap);
   }
-
-  .vehicleSection .sectionHeading {
-    padding-inline: 4px;
-    margin-bottom: 18px;
-  }
-
   .vehicleGrid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
     align-items: stretch;
   }
-
-  @media (prefers-reduced-motion: reduce) {
-    .bodyTypeCard,
-    .brandCard,
-    .sectionAction {
-      transition: none;
-    }
-  }
 }
-
 @media (min-width: 1024px) and (max-width: 1279px) {
-  .hero {
-    height: 540px;
-  }
-
-  .heroCopy {
-    padding-top: 30px;
-  }
-
-  .heroCopy h1 {
-    font-size: clamp(2.7rem, 5vw, 3.6rem);
-  }
-
-  .heroVehicles {
-    bottom: 18px;
-    height: 238px;
-  }
-
-  .discoveryPanel {
-    padding: 28px;
-  }
-
   .bodyTypeGrid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
   .brandSection {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 1rem;
   }
   .brandHeading span {
     max-width: none;
   }
-
+}
+@media (min-width: 1280px) {
   .vehicleGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .vehicleGrid > :nth-child(n + 4) {
-    display: none;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
-
-@media (min-width: 1280px) and (max-width: 1535px) {
-  .heroCopy {
-    padding-top: 30px;
-  }
-
-  .heroVehicles {
-    bottom: 8px;
-    height: 246px;
+@media (min-width: 1440px) {
+  .vehicleGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
-
-@media (min-width: 1536px) {
-  .hero {
-    height: 620px;
-  }
-
-  .heroCopy {
-    padding-top: 42px;
-  }
-
-  .heroVehicles {
-    bottom: 22px;
-    height: 300px;
-  }
-
-  .heroSearch {
-    right: 7vw;
-    left: 7vw;
-  }
-
-  .discoveryPanel {
-    padding: 38px;
+@media (prefers-reduced-motion: reduce) {
+  .sectionAction,
+  .bodyTypeCard,
+  .brandCard {
+    transition: none;
   }
 }

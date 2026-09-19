@@ -173,7 +173,7 @@ export const ImportOriginField = ({
                   {origin === option.code ? (
                     <Check
                       aria-hidden="true"
-                      className="size-5 text-[var(--lead-site-accent)]"
+                      className="size-5 text-brand-text"
                     />
                   ) : null}
                 </button>

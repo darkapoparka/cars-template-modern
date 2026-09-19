@@ -5,6 +5,7 @@ import type { MarketplaceSearchParams } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
 import { type ReactNode, useState } from "react";
+import styles from "./dealer-desktop-toolbar.module.css";
 import {
   type DesktopCategoryInventoryCount,
   DesktopCategoryPickerContent,
@@ -57,17 +58,15 @@ export const DealerDesktopToolbar = ({
 
   return (
     <div
-      className={`dealer-desktop-toolbar hidden lg:block ${
-        variant === "hero" ? "dealer-desktop-toolbar--hero" : ""
-      }`}
+      className={styles.toolbar}
+      data-slot="dealer-desktop-toolbar"
+      data-variant={variant}
     >
       <div className="dealer-desktop-search-band">
-        <div
-          className="dealer-desktop-query-row"
-          style={{ maxWidth: "none", margin: 0 }}
-        >
+        <div className={styles.queryRow}>
           <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
             <DesktopCategoryPickerTrigger
+              appearance="toolbar"
               categoryIcon={
                 <CategoryIcon
                   aria-hidden="true"
@@ -88,13 +87,14 @@ export const DealerDesktopToolbar = ({
               onClose={() => setCategoryOpen(false)}
             />
           </Dialog>
-          <div className="dealer-desktop-search">
+          <div className={styles.search}>
             <Search
               aria-hidden="true"
-              className="dealer-desktop-search-icon"
+              className={styles.searchIcon}
               size={19}
             />
             <DesktopSearchAssistant
+              appearance="toolbar"
               ariaLabel={isBg ? "Търсене на автомобили" : "Search vehicles"}
               assistantSlot={assistantSlot}
               compact
@@ -112,18 +112,19 @@ export const DealerDesktopToolbar = ({
               query={query}
               scope="vehicles"
             />
-            <span aria-hidden="true" className="dealer-desktop-search-hint">
+            <span aria-hidden="true" className={styles.searchHint}>
               Enter ↵
             </span>
           </div>
         </div>
       </div>
-      <div className="dealer-desktop-filters">
+      <div className={styles.filters}>
         <DesktopQuickFilters
           compact
           filterCount={filterCount}
           filters={filters}
           isBg={isBg}
+          layout="toolbar"
           numberFormatter={new Intl.NumberFormat(isBg ? "bg-BG" : "en-US")}
           onApply={onApply}
           onClearFilters={onClearFilters}

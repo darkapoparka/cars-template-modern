@@ -1,4 +1,5 @@
 "use client";
+import { publicSite } from "@repo/marketplace/site-config";
 
 import {
   getMobileQuickPillClassName,
@@ -40,7 +41,7 @@ export const MobileSellVehicleHero = ({
             title={content.howTitle}
           />
         }
-        imageSrc="/images/sell/day-night-mobile-studio-v1.png"
+        imageSrc={publicSite.artwork.sellHero}
         locale={locale}
         tone="sell"
       >

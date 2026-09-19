@@ -4,7 +4,7 @@ import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import { formatMoney } from "@repo/marketplace/format";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { leadSite } from "@repo/marketplace/lead-site";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   CarFront,
   ChevronRight,
@@ -37,6 +37,7 @@ export type { DesktopSearchScope } from "../lib/desktop-search-policy";
 export { rememberMarketplaceSearchQuery } from "../lib/desktop-search-policy";
 
 interface DesktopSearchAssistantProps {
+  appearance?: "standard" | "toolbar";
   ariaLabel: string;
   assistantSlot?: ReactNode;
   compact?: boolean;
@@ -185,7 +186,7 @@ const SearchSuggestionOption = ({
   spansWidePanel: boolean;
 }) => {
   const listing = item.listing;
-  const locationPanel = leadSite.staticDemoMode && item.kind === "location";
+  const locationPanel = isDealershipSite && item.kind === "location";
   let surfaceClassName = "rounded-xl px-3 py-2.5";
   let dataSlot = "desktop-search-suggestion";
   if (listing) {
@@ -278,6 +279,7 @@ export const DesktopSearchAssistant = ({
   ariaLabel,
   assistantSlot,
   compact = true,
+  appearance = "standard",
   listings,
   isBg,
   label,
@@ -386,12 +388,26 @@ export const DesktopSearchAssistant = ({
           "flex h-full min-w-0 flex-col justify-center transition-colors",
           compact
             ? "rounded-lg border border-border/90 bg-card px-4 focus-within:border-foreground/25 focus-within:ring-2 focus-within:ring-ring/25 focus-within:ring-inset"
-            : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50"
+            : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50",
+          appearance === "toolbar" &&
+            "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring"
         )}
         data-slot="desktop-search-query"
       >
-        <span className="font-semibold text-micro">{label}</span>
-        <span className="mt-1 flex min-w-0 items-center">
+        <span
+          className={cn(
+            "font-semibold text-micro",
+            appearance === "toolbar" && "sr-only"
+          )}
+        >
+          {label}
+        </span>
+        <span
+          className={cn(
+            "mt-1 flex min-w-0 items-center",
+            appearance === "toolbar" && "mt-0"
+          )}
+        >
           <input
             aria-activedescendant={
               open && activeItem ? `${listboxId}-${activeItem.id}` : undefined
@@ -467,7 +483,9 @@ export const DesktopSearchAssistant = ({
             "absolute z-[70] max-h-[min(36rem,calc(100vh-13rem))] overflow-y-auto bg-white p-3",
             compact
               ? "top-[calc(100%+0.625rem)] -right-16 -left-52 rounded-2xl border border-zinc-200 shadow-none"
-              : "top-[calc(100%-1px)] -right-16 -left-56 -mx-px rounded-b-2xl border-zinc-200 border-x border-b shadow-[0_28px_56px_rgba(7,12,18,0.18)]"
+              : "top-[calc(100%-1px)] -right-16 -left-56 -mx-px rounded-b-2xl border-zinc-200 border-x border-b shadow-[0_28px_56px_rgba(7,12,18,0.18)]",
+            appearance === "toolbar" &&
+              "right-0 left-0 mx-0 border-border bg-panel shadow-overlay"
           )}
           data-search-scope={scope}
           data-slot="desktop-search-assistant"

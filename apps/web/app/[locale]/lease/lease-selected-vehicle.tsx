@@ -106,7 +106,7 @@ export function LeaseSelectedVehicle({
           type="button"
         >
           {selected ? (
-            <span className="absolute top-1.5 left-1.5 grid size-8 place-items-center rounded-full bg-white text-[var(--lead-site-accent)]">
+            <span className="absolute top-1.5 left-1.5 grid size-8 place-items-center rounded-full bg-white text-brand-text">
               <DealerUiIcon className="size-5" name="check" />
             </span>
           ) : null}

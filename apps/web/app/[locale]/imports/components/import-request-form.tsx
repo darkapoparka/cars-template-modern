@@ -16,6 +16,7 @@ import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   AlertCircle,
   CheckCircle2,
@@ -68,7 +69,7 @@ const submitImportRequest = (
 ) => {
   formData.set("locale", locale);
   formData.set("context", "import-request");
-  formData.set("deliverTo", "BG");
+  formData.set("deliverTo", publicSite.market.countryCode);
   formData.set("topic", "importer");
   return submitContactRequest(previousState, formData);
 };
@@ -79,7 +80,7 @@ const ImportRequestSubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
 
   return (
     <Button
-      className="h-11 w-full gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-white sm:w-auto"
+      className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white sm:w-auto"
       disabled={pending}
       type="submit"
     >
@@ -108,7 +109,7 @@ const ImportRequestSuccess = ({
       data-slot="import-request-success"
     >
       <CardContent className="flex min-h-[25rem] flex-col items-center justify-center p-6 text-center sm:p-10">
-        <span className="grid size-14 place-items-center rounded-full bg-[var(--lead-site-accent-soft)] text-[var(--lead-site-accent)]">
+        <span className="grid size-14 place-items-center rounded-full bg-[var(--lead-site-accent-soft)] text-brand-text">
           <CheckCircle2 aria-hidden="true" className="size-7" />
         </span>
         <h2 className="mt-5 font-semibold text-section-title tracking-tight">
@@ -118,7 +119,7 @@ const ImportRequestSuccess = ({
           {message} {text.successDescription}
         </p>
         <a
-          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 font-semibold text-compact-control text-white transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
+          className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 font-semibold text-brand-foreground text-compact-control transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
           href={leadSite.phoneHref}
         >
           <Phone aria-hidden="true" className="size-4" />

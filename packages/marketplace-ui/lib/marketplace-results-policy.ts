@@ -1,5 +1,6 @@
 import { cn } from "@repo/design-system/lib/utils";
-import { type ListingViewMode, leadSite } from "@repo/marketplace";
+import type { ListingViewMode } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
@@ -14,7 +15,7 @@ export const getMarketplaceResultsSectionClassName = (
       : marketplaceContentFrameClassName,
     "px-4 pt-0 pb-3",
     variant !== "discovery" && "lg:pt-2",
-    variant === "discovery" && (leadSite.staticDemoMode ? "lg:pt-0" : "lg:pt-8")
+    variant === "discovery" && (isDealershipSite ? "lg:pt-0" : "lg:pt-8")
   );
 
 export const shouldHideDesktopResultSummary = (

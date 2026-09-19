@@ -16,6 +16,11 @@ import {
   leadSite,
   type MarketplaceSearchParams,
 } from "@repo/marketplace";
+import {
+  isDealershipSite,
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
 import { CircleDollarSign, Heart, Plus, Store, User } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
@@ -33,7 +38,7 @@ const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
     "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
-      ? "font-semibold text-[var(--lead-site-accent)]"
+      ? "font-semibold text-brand-text"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
   );
 
@@ -79,6 +84,9 @@ export const DealerBottomNav = ({
       label: isBg ? "Лизинг" : "Lease",
     },
   ];
+  const visibleItems = items.filter((item) =>
+    isPublicSitePathEnabled(item.href, publicSite)
+  );
   const menuLabel = isBg ? "Меню" : "Menu";
   const secondaryMenuItems = [
     {
@@ -106,8 +114,13 @@ export const DealerBottomNav = ({
         data-slot="dealer-bottom-nav"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
-        <div className="mx-auto grid min-h-[60px] max-w-lg grid-cols-5 px-1.5">
-          {items.map((item) => {
+        <div
+          className="mx-auto grid min-h-[60px] max-w-lg px-1.5"
+          style={{
+            gridTemplateColumns: `repeat(${visibleItems.length + 1}, minmax(0, 1fr))`,
+          }}
+        >
+          {visibleItems.map((item) => {
             const visuallyActive = item.active && !menuOpen;
 
             return (
@@ -235,26 +248,30 @@ export const DealerBottomNav = ({
               className="mt-4 grid gap-2"
               data-slot="dealer-mobile-menu-secondary-nav"
             >
-              {secondaryMenuItems.map((item) => {
-                return (
-                  <Link
-                    className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-                    href={item.href}
-                    key={item.href}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <DealerUiIcon
-                      className="size-5 shrink-0 text-zinc-600"
-                      name={item.icon}
-                    />
-                    <span className="min-w-0 flex-1 py-3">{item.label}</span>
-                    <DealerUiIcon
-                      className="size-4 shrink-0 text-zinc-400"
-                      name="chevronRight"
-                    />
-                  </Link>
-                );
-              })}
+              {secondaryMenuItems
+                .filter((item) =>
+                  isPublicSitePathEnabled(item.href, publicSite)
+                )
+                .map((item) => {
+                  return (
+                    <Link
+                      className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
+                      href={item.href}
+                      key={item.href}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      <DealerUiIcon
+                        className="size-5 shrink-0 text-zinc-600"
+                        name={item.icon}
+                      />
+                      <span className="min-w-0 flex-1 py-3">{item.label}</span>
+                      <DealerUiIcon
+                        className="size-4 shrink-0 text-zinc-400"
+                        name="chevronRight"
+                      />
+                    </Link>
+                  );
+                })}
             </nav>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
             <p className="mt-4 text-meta text-zinc-600">{leadSite.address}</p>
@@ -276,7 +293,7 @@ export const BottomMarketplaceNav = ({
 }) => {
   const copy = getMarketplaceControlCopy(locale);
 
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return (
       <DealerBottomNav
         activeMode={filters.category === "lease" ? "lease" : "buy"}

@@ -3,6 +3,7 @@ import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 
 interface PageProps {
@@ -31,6 +32,7 @@ export const generateMetadata = async ({
 };
 
 export default async function ChinaImportPage({ params }: PageProps) {
+  requirePublicSitePath("/imports/china");
   const { locale } = await params;
   const normalizedLocale = normalizeSeoLocale(locale);
 

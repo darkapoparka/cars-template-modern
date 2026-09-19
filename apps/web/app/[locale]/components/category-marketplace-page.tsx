@@ -2,11 +2,12 @@ import {
   buildMarketplaceSearchHref,
   createMarketplaceSearchParams,
   getVehicleCategory,
-  leadSite,
   parseMarketplaceSearchParams,
   type VehicleCategory,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
+import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { redirect, unstable_rethrow } from "next/navigation";
@@ -19,6 +20,7 @@ import {
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
 import { getMarketplacePageRedirect } from "@/lib/public-marketplace-pagination";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { AssistedSearchPanel } from "./assisted-search-panel";
 import { Footer } from "./footer";
 import { InventoryUnavailable } from "./inventory-states";
@@ -43,6 +45,7 @@ export const CategoryMarketplacePage = async ({
 }: CategoryMarketplacePageProps) => {
   const normalizedLocale = normalizeSeoLocale(locale);
   const categoryPath = routePath ?? getVehicleCategory(category).path;
+  requirePublicSitePath(categoryPath);
   const basePath = getLocalizedPath(normalizedLocale, categoryPath);
   const parsed = normalizePublicShowroomFilters(
     parseMarketplaceSearchParams(searchParams)
@@ -62,12 +65,12 @@ export const CategoryMarketplacePage = async ({
   const hasRouteSearchCriteria =
     createMarketplaceSearchParams({ ...parsed, category: "car" }).size > 0;
   const supportsDiscoveryPresentation =
-    leadSite.staticDemoMode ||
+    isDealershipSite ||
     ((category === "car" || category === "lease") &&
       make === undefined &&
       model === undefined);
   const desktopSearchVariant =
-    leadSite.staticDemoMode ||
+    isDealershipSite ||
     (supportsDiscoveryPresentation && !hasRouteSearchCriteria)
       ? "discovery"
       : "results";
@@ -100,6 +103,18 @@ export const CategoryMarketplacePage = async ({
           }
           basePath={basePath}
           defaultViewMode={supportsDiscoveryPresentation ? "grid" : undefined}
+          desktopDiscoverySlot={
+            isDealershipSite &&
+            filters.category === "car" &&
+            filters.sort === "recommended" &&
+            filters.page === 1 ? (
+              <DealerDesktopDiscoveryContent
+                currentPath={basePath}
+                listings={listings}
+                locale={locale}
+              />
+            ) : undefined
+          }
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
           inventoryFacets={facets}

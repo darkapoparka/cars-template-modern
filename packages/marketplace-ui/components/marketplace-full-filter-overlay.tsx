@@ -193,7 +193,7 @@ export const MarketplaceFullFilterOverlay = ({
           {filterBody}
           <DialogFooter className="mt-auto block bg-card p-4">
             <Button
-              className="h-12 w-full rounded-xl bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-hover)]"
+              className="h-12 w-full rounded-xl bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
               onClick={applyAndClose}
             >
               {copy.actions.showResults}

@@ -77,7 +77,7 @@ export const vehicleGuides: readonly VehicleGuide[] = [
   {
     slug: "dealer-listing-transparency",
     categoryId: "listings",
-    image: "/day-night-contact-hero-v1.png",
+    image: "/day-night-contact-hero-v1.webp",
     title: {
       bg: "Как да оцените дилърска обява",
       en: "How to assess a dealer listing",

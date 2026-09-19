@@ -1,4 +1,5 @@
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { createLocalizedMetadata as createSeoLocalizedMetadata } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { getCurrentPublicDataMode } from "./public-data-policy";
@@ -50,7 +51,7 @@ export const getPublicInventoryRobots = (
 export const createPublicLocalizedMetadata = (
   properties: PublicLocalizedMetadataInput
 ): Metadata => {
-  const defaultImage = leadSite.staticDemoMode
+  const defaultImage = isDealershipSite
     ? leadSite.heroPath
     : PUBLIC_SOCIAL_IMAGE_PATH;
   const image = properties.image ?? defaultImage;

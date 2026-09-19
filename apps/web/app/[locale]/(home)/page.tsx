@@ -4,7 +4,9 @@ import {
   leadSite,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
+import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
@@ -23,6 +25,7 @@ import {
   createPublicLocalizedMetadata,
   getPublicInventoryRobots,
 } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { Footer } from "../components/footer";
 import { InventoryUnavailable } from "../components/inventory-states";
@@ -80,7 +83,7 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     activeMode = filters.category === "lease" ? "lease" : "buy";
     const hasSearchCriteria = createMarketplaceSearchParams(filters).size > 0;
     const desktopSearchVariant =
-      !leadSite.staticDemoMode && hasSearchCriteria ? "results" : "discovery";
+      !isDealershipSite && hasSearchCriteria ? "results" : "discovery";
     const [{ facets, listings, totalListings }, taxonomy] = await Promise.all([
       getPublicMarketplaceListings(filters),
       getPublicVehicleTaxonomy(filters.category),
@@ -98,10 +101,20 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     return (
       <>
         <MarketplaceShell
-          appBaseUrl={
-            leadSite.staticDemoMode ? undefined : getPublicAppBaseUrl()
-          }
+          appBaseUrl={isDealershipSite ? undefined : getPublicAppBaseUrl()}
           defaultViewMode="grid"
+          desktopDiscoverySlot={
+            isDealershipSite &&
+            filters.category === "car" &&
+            filters.sort === "recommended" &&
+            filters.page === 1 ? (
+              <DealerDesktopDiscoveryContent
+                currentPath={getLocalizedPath(normalizeSeoLocale(locale), "/")}
+                listings={listings}
+                locale={locale}
+              />
+            ) : undefined
+          }
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
           inventoryFacets={facets}
@@ -134,6 +147,7 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
 };
 
 const Home = ({ params, searchParams }: HomeProps) => {
+  requirePublicSitePath("/");
   return (
     <Suspense fallback={<PublicRouteLoading />}>
       <MarketplaceResults params={params} searchParams={searchParams} />

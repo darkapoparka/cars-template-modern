@@ -1,0 +1,82 @@
+[
+  {
+    "source": "apps/web/public/day-night-contact-hero-v1.png",
+    "destination": "apps/web/public/day-night-contact-hero-v1.webp",
+    "originalBytes": 2047605,
+    "optimizedBytes": 1318862,
+    "width": 1536,
+    "height": 1024,
+    "sourceSha256": "26b6abe939e77552e9bdc28ebca64a0a5aefd23130775258fba29cadc8fe535c",
+    "optimizedSha256": "3ee0a6fab26d580b5ac2f18cb2c9d6a4c5aa16ae2459a5e17c2fe4ef8ac80360",
+    "lossless": true,
+    "archive": "provenance/assets/originals/day-night-contact-hero-v1.png"
+  },
+  {
+    "source": "apps/web/public/images/sell/day-night-mobile-studio-v1.png",
+    "destination": "apps/web/public/images/sell/day-night-mobile-studio-v1.webp",
+    "originalBytes": 1755761,
+    "optimizedBytes": 1261610,
+    "width": 864,
+    "height": 1821,
+    "sourceSha256": "a5e436175d36cabafbd39035089f8caef9c22a9ab86881ee383edeaa97640b20",
+    "optimizedSha256": "59981675d5e74383db1e002f33883eea5c6fb78b18cea4222d4dd826f76a80d7",
+    "lossless": true,
+    "archive": "provenance/assets/originals/images/sell/day-night-mobile-studio-v1.png"
+  },
+  {
+    "source": "apps/web/public/lead-import-hero-v1.png",
+    "destination": "apps/web/public/lead-import-hero-v1.webp",
+    "originalBytes": 1896650,
+    "optimizedBytes": 1350518,
+    "width": 1916,
+    "height": 821,
+    "sourceSha256": "2a851f0e0b03a60db31d1b94b19c4224b0a38f5634112c962eb514dce46a12a9",
+    "optimizedSha256": "24efc3ff7c59b2a7d2f087ac8b92dd0f36cca646a648b589993726803dfc00c6",
+    "lossless": true,
+    "archive": "provenance/assets/originals/lead-import-hero-v1.png"
+  },
+  {
+    "source": "apps/web/public/images/services/leasing-red-suv-v2.png",
+    "destination": "apps/web/public/images/services/leasing-red-suv-v2.webp",
+    "originalBytes": 1548723,
+    "optimizedBytes": 1144468,
+    "width": 1942,
+    "height": 809,
+    "sourceSha256": "7eb97e34793ccc2023a135205fe1fad40d2bd0b4c05705648b682457bd1ba728",
+    "optimizedSha256": "7cfacf64b13b07ff47e389906f7ac63ae22235c9f2e2ccd0920e2bd45cebf2f3",
+    "lossless": true,
+    "archive": "provenance/assets/originals/images/services/leasing-red-suv-v2.png"
+  },
+  {
+    "source": "apps/web/public/images/services/navigation-assets-v1.png",
+    "destination": "apps/web/public/images/services/navigation-assets-v1-600w.webp",
+    "archive": "provenance/assets/originals/images/services/navigation-assets-v1.png",
+    "originalBytes": 864716,
+    "optimizedBytes": 53692,
+    "width": 600,
+    "height": 200,
+    "sourceWidth": 2172,
+    "sourceHeight": 724,
+    "sourceSha256": "4e1b710361576aaa5b547d1003fb1784d63b7848b8088e7ea1d81564fc869a2a",
+    "optimizedSha256": "087fcbeeb16a40561a9b6bc1aec60a13be1a181ed2facd9601f473095133ee1e",
+    "lossless": true,
+    "resized": true,
+    "purpose": "Five 40px navigation icons at up to 3x DPR; unchanged CSS crop and aspect ratio."
+  },
+  {
+    "source": "apps/web/public/images/services/navigation-assets-v2.png",
+    "destination": "apps/web/public/images/services/navigation-assets-v2-600w.webp",
+    "archive": "provenance/assets/originals/images/services/navigation-assets-v2.png",
+    "originalBytes": 1022260,
+    "optimizedBytes": 72878,
+    "width": 600,
+    "height": 200,
+    "sourceWidth": 2172,
+    "sourceHeight": 724,
+    "sourceSha256": "f5e6393f2aaf76e1e32165dc5f94bb49278296b04d39f4b0b0dac1399fa8e576",
+    "optimizedSha256": "ed104d36dd1153f2a335aee398b950d6ea4d5afdb3c8b5c05af11c279d8a17cb",
+    "lossless": true,
+    "resized": true,
+    "purpose": "Five 40px navigation icons at up to 3x DPR; unchanged CSS crop and aspect ratio."
+  }
+]

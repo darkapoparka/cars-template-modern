@@ -23,6 +23,7 @@ import {
   VehicleCardContent,
   VehicleCardMediaBadges,
 } from "./vehicle-card-content";
+import styles from "./vehicle-card-desktop.module.css";
 
 export type {
   VehicleCardPriceInsight,
@@ -62,6 +63,7 @@ export const VehicleCard = ({
   return (
     <article
       className={cn(
+        styles.card,
         "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
         "lg:transition-[border-color,box-shadow] lg:hover:border-foreground/25 lg:hover:shadow-sm",
         !isDesktopComparison &&
@@ -71,6 +73,7 @@ export const VehicleCard = ({
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
       )}
       data-presentation={presentation}
+      data-slot="vehicle-card"
       onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
       <div

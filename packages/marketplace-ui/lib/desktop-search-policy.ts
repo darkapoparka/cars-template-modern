@@ -5,6 +5,7 @@ import {
   leadSite,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { getLocalizedPublicPath } from "./public-path";
 
 export type DesktopSearchScope = "organizations" | "vehicles";
@@ -214,7 +215,7 @@ const getPopularHeading = (isBg: boolean, scope: DesktopSearchScope) => {
   if (scope === "organizations") {
     return isBg ? "Дилъри и места" : "Dealers and places";
   }
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return isBg ? "Автомобили в наличност" : "Available vehicles";
   }
   return isBg ? "Популярни търсения" : "Popular searches";
@@ -237,7 +238,7 @@ const getIdleSuggestionGroups = (
     })
   );
 
-  if (leadSite.staticDemoMode && scope === "vehicles") {
+  if (isDealershipSite && scope === "vehicles") {
     const groups: SearchSuggestionGroup[] = [];
     if (recentItems.length) {
       groups.push({

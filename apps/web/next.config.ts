@@ -1,16 +1,17 @@
 import { withCMS } from "@repo/cms/next-config";
 import { withToolbar } from "@repo/feature-flags/lib/toolbar";
-import { leadSite } from "@repo/marketplace/lead-site";
 import { config } from "@repo/next-config";
 import { withLogging, withSentry } from "@repo/observability/next-config";
 import type { NextConfig } from "next";
 import { env } from "@/env";
+import assetRedirects from "./asset-redirects.json";
+import { isStaticPublicPreview } from "./public-runtime";
 
 const publicE2E =
   process.env.AUTOMARKET_PUBLIC_E2E === "true" ||
   process.env.NEXT_PUBLIC_AUTOMARKET_PUBLIC_E2E === "true";
 const toolbarEnabled =
-  !(leadSite.staticDemoMode || publicE2E) &&
+  !(isStaticPublicPreview() || publicE2E) &&
   process.env.NODE_ENV !== "production";
 
 let nextConfig: NextConfig = toolbarEnabled
@@ -53,17 +54,18 @@ nextConfig.images.remotePatterns = [
   },
 ];
 
-if (process.env.NODE_ENV === "production") {
-  const redirects: NextConfig["redirects"] = async () => [
-    {
-      source: "/legal",
-      destination: "/legal/privacy",
-      statusCode: 301,
-    },
-  ];
-
-  nextConfig.redirects = redirects;
-}
+nextConfig.redirects = async () => [
+  ...assetRedirects,
+  ...(process.env.NODE_ENV === "production"
+    ? [
+        {
+          source: "/legal",
+          destination: "/legal/privacy",
+          statusCode: 301 as const,
+        },
+      ]
+    : []),
+];
 
 if (env.VERCEL) {
   nextConfig = withSentry(nextConfig);

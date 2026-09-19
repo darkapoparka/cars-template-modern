@@ -168,7 +168,7 @@ export const MobileVehicleTaxonomyPicker = ({
                   <span className="min-w-0 flex-1 truncate">{option}</span>
                   {selected ? (
                     <DealerUiIcon
-                      className="size-5 text-[var(--lead-site-accent)]"
+                      className="size-5 text-brand-text"
                       name="check"
                     />
                   ) : null}

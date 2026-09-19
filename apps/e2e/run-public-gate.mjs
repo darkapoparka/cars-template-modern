@@ -139,6 +139,7 @@ const getPublicEnvironment = (mode, port) => ({
   ...process.env,
   ARCJET_KEY: "",
   AUTOMARKET_PUBLIC_E2E: "true",
+  AUTOMARKET_PUBLIC_DATA_MODE: mode === "unavailable" ? "unavailable" : "demo",
   BASEHUB_TOKEN: "",
   BETTERSTACK_API_KEY: "",
   BETTERSTACK_URL: "",

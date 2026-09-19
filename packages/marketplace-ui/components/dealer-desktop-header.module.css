@@ -1,0 +1,107 @@
+.header {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header {
+    position: relative;
+    z-index: 40;
+    display: block;
+    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
+    padding-inline: var(--layout-gutter);
+    margin: var(--layout-gutter) auto var(--layout-gutter);
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    border: 1px solid var(--inverse-border);
+    border-radius: var(--radius-shell);
+  }
+  .header[data-has-search="true"] {
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-radius: var(--radius-shell) var(--radius-shell) 0 0;
+  }
+  .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+    min-height: 5rem;
+  }
+  .brand {
+    position: relative;
+    display: block;
+    width: min(100%, 12rem);
+    height: 3rem;
+    border-radius: var(--radius-sm);
+  }
+  .segments {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    background: var(--inverse-control);
+    border: 1px solid var(--inverse-border);
+    border-radius: var(--radius-xl);
+  }
+  .segments a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.25rem;
+    padding-inline: 1rem;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
+    color: var(--inverse-muted);
+    border-radius: var(--radius-lg);
+    transition:
+      background-color var(--duration-interaction),
+      color var(--duration-interaction);
+  }
+  .segments a:hover {
+    color: var(--inverse-foreground);
+    background: var(--inverse-border);
+  }
+  .segments a[aria-current="page"] {
+    color: var(--foreground);
+    background: var(--panel);
+  }
+  .contact {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .contact a {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    min-height: 2.5rem;
+    padding-inline: 0.5rem;
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
+    white-space: nowrap;
+    border-radius: var(--radius-lg);
+  }
+  .showroom {
+    border: 1px solid var(--inverse-border);
+  }
+  .contact a:hover {
+    background: var(--inverse-control);
+  }
+  .header a:focus-visible {
+    outline: 2px solid var(--inverse-foreground);
+    outline-offset: 3px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .nav {
+    gap: 0.75rem;
+  }
+  .segments a {
+    padding-inline: 0.75rem;
+  }
+  .contact {
+    gap: 0.25rem;
+  }
+  .showroom span {
+    display: none;
+  }
+}

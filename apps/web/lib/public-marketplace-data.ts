@@ -1,3 +1,4 @@
+import { requirePublicInventoryScope } from "./public-site-binding";
 import "server-only";
 
 import { database, type Prisma } from "@repo/database";
@@ -166,7 +167,10 @@ export const getPublicMarketplaceListings = async (
   }
 
   try {
-    return await searchMarketplaceListings(showroomFilters);
+    return await searchMarketplaceListings(
+      showroomFilters,
+      requirePublicInventoryScope()
+    );
   } catch (error) {
     log.error("Public marketplace database query failed.", error);
     throw new PublicMarketplaceUnavailableError();
@@ -292,7 +296,10 @@ export const getPublicMarketplaceListing = async (
   }
 
   try {
-    return await getMarketplaceListingBySlug(slug, options);
+    return await getMarketplaceListingBySlug(slug, {
+      ...options,
+      ...requirePublicInventoryScope(),
+    });
   } catch (error) {
     log.error("Public listing database query failed.", error);
     throw new PublicMarketplaceUnavailableError();
@@ -353,6 +360,7 @@ export const getPublicMakeModelTaxonomy = cache(
         orderBy: [{ make: "asc" }, { model: "asc" }],
         select: { make: true, model: true },
         where: {
+          ...requirePublicInventoryScope(),
           AND: [
             getCurrentPublicMarketplaceListingWhere(
               now,
@@ -395,6 +403,7 @@ export const getChineseEvHybridCollection = async (page: number) => {
     const now = new Date();
     const trustedSupplierOrgIds = await getCurrentTrustedSupplierOrgIds(now);
     const where = {
+      ...requirePublicInventoryScope(),
       AND: [
         getCurrentPublicMarketplaceListingWhere(
           now,
@@ -423,7 +432,10 @@ export const getChineseEvHybridCollection = async (page: number) => {
     ]);
 
     return {
-      listings: await getListingsBySlugs(rows.map((row) => row.slug)),
+      listings: await getListingsBySlugs(
+        rows.map((row) => row.slug),
+        requirePublicInventoryScope()
+      ),
       totalListings,
     };
   } catch (error) {
@@ -454,11 +466,16 @@ export const getPublicSitemapData = async (): Promise<PublicSitemapData> => {
   try {
     const now = new Date();
     const trustedSupplierOrgIds = await getCurrentTrustedSupplierOrgIds(now);
-    const currentListingWhere = getCurrentPublicMarketplaceListingWhere(
-      now,
-      undefined,
-      trustedSupplierOrgIds
-    );
+    const currentListingWhere = {
+      AND: [
+        getCurrentPublicMarketplaceListingWhere(
+          now,
+          undefined,
+          trustedSupplierOrgIds
+        ),
+        requirePublicInventoryScope(),
+      ],
+    };
     const [listings, taxonomy] = await Promise.all([
       database.marketplaceListing.findMany({
         orderBy: { publishedAt: "desc" },

@@ -30,7 +30,9 @@
     "./organizations": "./organizations.ts",
     "./trusted-admin": "./trusted-admin.ts",
     "./trusted-directory-admin": "./trusted-directory-admin.ts",
-    "./vehicle-taxonomy": "./vehicle-taxonomy.ts"
+    "./vehicle-taxonomy": "./vehicle-taxonomy.ts",
+    "./dealer-leads": "./dealer-leads.ts",
+    "./dealer-inquiries": "./dealer-inquiries.ts"
   },
   "scripts": {
     "analyze": "prisma generate --no-hints --schema=./prisma/schema.prisma",
@@ -58,7 +60,7 @@
   "devDependencies": {
     "@prisma/adapter-pg": "7.4.2",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "25.3.5",
+    "@types/node": "22.20.2",
     "@types/pg": "^8.20.0",
     "@types/ws": "^8.18.1",
     "bufferutil": "^4.1.0",

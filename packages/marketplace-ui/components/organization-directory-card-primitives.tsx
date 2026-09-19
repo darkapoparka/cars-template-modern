@@ -78,7 +78,7 @@ const organizationTypeAppearance = {
   importer: {
     Icon: Ship,
     badgeClassName: "bg-control-hover text-foreground",
-    iconClassName: "text-[var(--lead-site-accent)]",
+    iconClassName: "text-brand-text",
   },
   manufacturer: {
     Icon: Factory,

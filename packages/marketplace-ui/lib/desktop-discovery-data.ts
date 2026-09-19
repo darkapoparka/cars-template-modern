@@ -1,4 +1,5 @@
 import type { BodyType } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 
 export type DesktopDiscoveryBodyType = Extract<
   BodyType,
@@ -14,43 +15,36 @@ export interface DesktopDiscoveryBodyTypeOption {
 export const desktopDiscoveryBodyTypes: readonly DesktopDiscoveryBodyTypeOption[] =
   [
     {
-      artwork: "/marketplace/discovery/body-suv.webp",
+      artwork: publicSite.artwork.bodyTypes.suv,
       bodyType: "suv",
     },
     {
-      artwork: "/marketplace/discovery/body-sedan.webp",
+      artwork: publicSite.artwork.bodyTypes.sedan,
       bodyType: "sedan",
     },
     {
-      artwork: "/marketplace/discovery/body-hatchback.webp",
+      artwork: publicSite.artwork.bodyTypes.hatchback,
       bodyType: "hatchback",
     },
     {
-      artwork: "/marketplace/discovery/body-coupe.webp",
+      artwork: publicSite.artwork.bodyTypes.coupe,
       bodyType: "coupe",
     },
     {
-      artwork: "/marketplace/discovery/body-convertible.webp",
+      artwork: publicSite.artwork.bodyTypes.convertible,
       bodyType: "convertible",
       imageClassName: "compactArtwork",
     },
     {
-      artwork: "/marketplace/discovery/body-wagon.webp",
+      artwork: publicSite.artwork.bodyTypes.wagon,
       bodyType: "wagon",
     },
     {
-      artwork: "/marketplace/discovery/body-van.webp",
+      artwork: publicSite.artwork.bodyTypes.van,
       bodyType: "van",
       imageClassName: "compactArtwork",
     },
   ];
 
-const desktopBrandArtwork: Readonly<Record<string, string>> = {
-  Audi: "/marketplace/discovery/brand-audi.svg",
-  BMW: "/marketplace/discovery/brand-bmw.png",
-  "Land Rover": "/marketplace/discovery/brand-land-rover.png",
-  "Mercedes-Benz": "/marketplace/discovery/brand-mercedes.webp",
-};
-
 export const getDesktopBrandArtwork = (make: string) =>
-  desktopBrandArtwork[make];
+  publicSite.artwork.brands[make];

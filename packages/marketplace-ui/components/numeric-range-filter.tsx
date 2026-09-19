@@ -268,7 +268,7 @@ export const NumericRangeFilter = ({
                 className={cn(
                   "min-h-11 shrink-0 rounded-full border border-transparent bg-zinc-100 px-4 font-semibold text-meta text-zinc-800 shadow-none hover:bg-zinc-200 hover:text-zinc-950 focus-visible:border-transparent focus-visible:ring-[var(--lead-site-accent-ring)] lg:rounded-xl lg:px-3",
                   rangesMatch(value, preset.value) &&
-                    "bg-[var(--lead-site-accent)] text-white hover:bg-[var(--lead-site-accent-hover)] hover:text-white"
+                    "bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] hover:text-white"
                 )}
                 key={`${preset.value[0]}-${preset.value[1]}`}
                 onClick={() => onValueChange(preset.value)}

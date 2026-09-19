@@ -16,7 +16,7 @@ import { ImportRequestForm } from "./import-request-form";
 import { importRequestCopy } from "./import-request-policy";
 
 const actionClassName =
-  "mt-4 h-11 items-center justify-center gap-2 rounded-lg bg-[var(--lead-site-accent)] px-4 font-medium text-compact-control text-white outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] lg:font-semibold lg:text-sm";
+  "mt-4 h-11 items-center justify-center gap-2 rounded-lg bg-brand px-4 font-medium text-compact-control text-brand-foreground outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] focus-visible:ring-[3px] focus-visible:ring-[var(--lead-site-accent-ring)] lg:font-semibold lg:text-sm hover:text-[var(--brand-hover-foreground)]";
 
 export function BlankImportRequestLink({
   fullWidth = false,

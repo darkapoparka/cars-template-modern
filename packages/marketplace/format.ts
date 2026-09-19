@@ -1,4 +1,5 @@
 import { leadSite } from "./lead-site";
+import { isDealershipSite } from "./site-config";
 import type {
   BodyType,
   FuelType,
@@ -121,7 +122,7 @@ const isBulgarianLocale = (locale?: string) =>
   locale?.toLowerCase().startsWith("bg") ?? false;
 
 const normalizeFormattingLocale = (locale?: string) => {
-  if (leadSite.staticDemoMode) {
+  if (isDealershipSite) {
     return leadSite.locale;
   }
 

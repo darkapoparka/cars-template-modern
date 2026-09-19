@@ -15,6 +15,27 @@ const otherLocale = (locale: string) =>
   locales.find((value) => value !== locale);
 
 describe("internationalization middleware", () => {
+  it("keeps a loopback rewrite on the incoming local authority", () => {
+    const response = internationalizationMiddleware(
+      new NextRequest("http://127.0.0.1:3002/cars?sort=newest", {
+        headers: { host: "127.0.0.1:3002", "accept-language": defaultLocale },
+      })
+    );
+    expect(response.headers.get("x-middleware-rewrite")).toBe(
+      "http://127.0.0.1:3002/bg/cars?sort=newest"
+    );
+  });
+  it("never treats an untrusted host header as a rewrite destination", () => {
+    const response = internationalizationMiddleware(
+      request("/cars", {
+        host: "attacker.example",
+        "accept-language": defaultLocale,
+      })
+    );
+    expect(response.headers.get("x-middleware-rewrite")).toBe(
+      `${origin}/${defaultLocale}/cars`
+    );
+  });
   it.each(
     locales
   )("explicit /%s beats the cookie and negotiated language", (locale) => {

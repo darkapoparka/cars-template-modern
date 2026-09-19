@@ -1,6 +1,5 @@
+import { getCurrentPublicDataMode } from "./public-data-policy";
 import "server-only";
-
-import { leadSite } from "@repo/marketplace";
 
 import {
   type ExternalInventoryDiscoveryResponse,
@@ -35,7 +34,7 @@ export const getPublicExternalInventory = async (
   originCountryCode: string
 ): Promise<ExternalInventoryDiscoveryResponse> => {
   const normalizedOrigin = originCountryCode.trim().toUpperCase();
-  if (leadSite.staticDemoMode) {
+  if (getCurrentPublicDataMode() !== "database") {
     return {
       listings: [],
       originCountryCode: normalizedOrigin,

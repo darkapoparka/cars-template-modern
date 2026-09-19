@@ -72,6 +72,21 @@ export const internationalizationMiddleware = (request: NextRequest) => {
   nextRequest.cookies.set(LOCALE_COOKIE_NAME, resolvedLocale);
 
   const response = I18nMiddleware(nextRequest);
+  // NextURL normalizes loopback IPs to localhost. Keep a local rewrite on the
+  // original loopback authority instead of proxying the request back to itself.
+  const rewrite = response.headers.get("x-middleware-rewrite");
+  const loopbackHost = request.headers.get("host");
+  if (
+    rewrite &&
+    request.nextUrl.hostname === "localhost" &&
+    loopbackHost === `127.0.0.1:${request.nextUrl.port}`
+  ) {
+    const target = new URL(rewrite);
+    if (target.origin === request.nextUrl.origin) {
+      target.hostname = "127.0.0.1";
+      response.headers.set("x-middleware-rewrite", target.toString());
+    }
+  }
   const isDefaultLocaleRewrite =
     !explicitLocale &&
     resolvedLocale === defaultLocale &&

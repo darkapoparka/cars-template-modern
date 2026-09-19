@@ -518,6 +518,7 @@ const ComparisonVehicleCardContent = ({
         "flex min-w-0 flex-col gap-2.5 p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:gap-3 lg:p-3.5",
         isDesktopComparison && "lg:gap-2 lg:p-3"
       )}
+      data-slot="vehicle-card-content"
       href={listingHref}
     >
       {presentation === "discovery" ? (

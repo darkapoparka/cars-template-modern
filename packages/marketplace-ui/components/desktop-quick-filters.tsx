@@ -58,6 +58,7 @@ export { getDesktopQuickFilterClassName } from "./desktop-filter-controls";
 
 export const DesktopQuickFilters = ({
   compact,
+  layout = "rail",
   elevated = false,
   showAdditionalFilters = false,
   filterCount,
@@ -71,6 +72,7 @@ export const DesktopQuickFilters = ({
   onOpenModel,
 }: {
   compact: boolean;
+  layout?: "rail" | "toolbar";
   elevated?: boolean;
   showAdditionalFilters?: boolean;
   filterCount: number;
@@ -101,15 +103,26 @@ export const DesktopQuickFilters = ({
 
   return (
     <div
-      className={cn(compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5")}
+      className={cn(
+        compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5",
+        layout === "toolbar" && "p-0"
+      )}
     >
       <fieldset className="w-full min-w-0">
         <legend className="sr-only">
           {localizeMarketplace(isBg, "Филтри за автомобили", "Vehicle filters")}
         </legend>
-        <div className="mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2">
+        <div
+          className={cn(
+            "mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2",
+            layout === "toolbar" && "justify-start"
+          )}
+        >
           <div
-            className="min-w-0 flex-[0_1_auto] overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className={cn(
+              "min-w-0 flex-[0_1_auto] overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
+              layout === "toolbar" && "flex-1"
+            )}
             data-slot="desktop-quick-filter-scroll"
           >
             <div

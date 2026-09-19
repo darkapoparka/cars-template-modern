@@ -1,0 +1,62 @@
+.toolbar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .toolbar {
+    position: relative;
+    z-index: 42;
+    display: block;
+    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
+    padding: var(--layout-gutter);
+    margin: 0 auto var(--layout-section-gap);
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0 0 var(--radius-shell) var(--radius-shell);
+  }
+  .toolbar[data-variant="hero"] {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--elevation-panel);
+  }
+  .queryRow {
+    display: flex;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  .search {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+  }
+  .searchIcon {
+    position: absolute;
+    top: calc(var(--control-height-search) / 2);
+    left: 1rem;
+    z-index: 1;
+    color: var(--muted-foreground);
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  .searchHint {
+    position: absolute;
+    top: calc(var(--control-height-search) / 2);
+    right: 1rem;
+    padding: 0.125rem 0.375rem;
+    font-size: var(--text-micro);
+    line-height: var(--text-micro--line-height);
+    color: var(--muted-foreground);
+    pointer-events: none;
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transform: translateY(-50%);
+  }
+  .filters {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+}

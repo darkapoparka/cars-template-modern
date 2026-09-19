@@ -1,9 +1,16 @@
+import type {
+  PublicSiteArtwork,
+  PublicSiteConfig,
+} from "@repo/marketplace-domain/site-config";
+
 export type LeadSiteCurrency = "AED" | "BGN" | "EUR" | "USD";
 
 export interface LeadSiteConfig {
   readonly accent: string;
   readonly address: string;
+  readonly artwork?: Partial<PublicSiteArtwork>;
   readonly city: string;
+  readonly colorMode?: "light";
   readonly contactUrl: string;
   readonly country: string;
   readonly countryCode: string;
@@ -12,16 +19,27 @@ export interface LeadSiteConfig {
   readonly email: string;
   readonly financingArtworkPath: string;
   readonly heroPath: string;
+  readonly iconPath?: string;
+  readonly inventoryCategories?: readonly (
+    | "car"
+    | "truck"
+    | "van"
+    | "motorbike"
+  )[];
   readonly locale: string;
+  readonly logoInversePath?: string;
   readonly logoPath: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
+  readonly publicDefaultLocale?: "bg" | "en";
+  readonly publicLocales?: readonly ("bg" | "en")[];
   readonly sellCategoryAssets: Readonly<
     Record<"car" | "motorbike" | "truck" | "van", string>
   >;
+  readonly services?: Partial<PublicSiteConfig["services"]>;
   readonly shortName: string;
   readonly slug: string;
   readonly socialLinks?: Partial<
@@ -29,10 +47,12 @@ export interface LeadSiteConfig {
   >;
   readonly staticDemoMode: boolean;
   readonly tagline: string;
+  readonly websiteKind?: PublicSiteConfig["kind"];
 }
 
 // LEAD_SITE_CONFIG_START
 export const leadSite: LeadSiteConfig = {
+  websiteKind: "dealership",
   accent: "#c40101",
   address: "ул. „Атанас Манчев“ 18, Студентски град",
   city: "София",
@@ -43,7 +63,7 @@ export const leadSite: LeadSiteConfig = {
     truck: "/lead-sell-truck-v1.png",
     van: "/lead-sell-van-v1.png",
   },
-  financingArtworkPath: "/images/services/leasing-red-suv-v2.png",
+  financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
   contactUrl: "tel:+359877733110",
   country: "България",
   countryCode: "BG",

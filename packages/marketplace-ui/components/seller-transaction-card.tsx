@@ -2,9 +2,9 @@ import { Button } from "@repo/design-system/components/ui/button";
 import {
   formatMoney,
   formatPriceType,
-  leadSite,
   type VehicleListing,
 } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { CircleDollarSign, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import {
@@ -104,7 +104,7 @@ export const SellerTransactionCard = ({
             </span>
           </output>
         )}
-        {leadSite.staticDemoMode ? (
+        {isDealershipSite ? (
           <Button
             asChild
             className="h-11 w-full gap-2 rounded-lg"

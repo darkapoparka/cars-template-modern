@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
+import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import {
   parseSellVehicleDraft,
@@ -162,6 +163,7 @@ export default async function SellPage({
   params,
   searchParams,
 }: SellPageProps) {
+  requirePublicSitePath("/sell");
   const [{ locale }, query] = await Promise.all([
     params,
     searchParams ?? Promise.resolve({}),
@@ -335,7 +337,7 @@ export default async function SellPage({
 
                   <div className="col-span-2 flex items-end justify-end lg:col-span-1">
                     <Button
-                      className="h-11 w-full gap-2 rounded-lg bg-[var(--lead-site-accent)] px-5 text-white shadow-none hover:bg-[var(--lead-site-accent-hover)]"
+                      className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
                       type="submit"
                     >
                       {copy.primaryAction}
