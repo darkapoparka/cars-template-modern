@@ -25,3 +25,7 @@ Commit only reviewed task-owned changes when authorized. Template polish does no
 The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
 
 An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
+
+## Refactor work
+
+For work explicitly executing the 19 September 2026 refactor program, read [refactor/README.md](refactor/README.md), [refactor/AGENTS.md](refactor/AGENTS.md), and the relevant task. Preserve mobile; desktop redesign requires explicit rendered acceptance. Older docs/refactor ledgers are historical and do not establish current desktop approval. This plan does not authorize provider changes, live enquiries or deployment.

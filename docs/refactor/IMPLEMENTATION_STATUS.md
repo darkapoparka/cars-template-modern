@@ -1,3 +1,5 @@
+> Historical program/status. The current 19 September 2026 audit and refactor plan is [../../refactor/README.md](../../refactor/README.md). The record below retains its original baseline and approval assumptions; it is not current implementation or visual sign-off.
+
 # Day & Night Modern — refactor implementation status
 
 This document records the implementation state of the codebase-wide maintainability refactor authorized for `gpt-web`.

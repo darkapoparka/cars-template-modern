@@ -1,3 +1,5 @@
+> Historical program/status. The current 19 September 2026 audit and refactor plan is [../../refactor/README.md](../../refactor/README.md). The record below retains its original baseline and approval assumptions; it is not current implementation or visual sign-off.
+
 # Day & Night Modern — Refactor Program
 
 This directory is the implementation contract for the post-polish codebase refactor. The approved mobile and desktop experience is the regression baseline; the goal is to make the implementation easier to reason about without redesigning the product.
