@@ -1,9 +1,17 @@
 "use client";
 
+import { Button } from "@repo/design-system/components/ui/button";
 import { Dialog } from "@repo/design-system/components/ui/dialog";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
+import {
+  ArrowRight,
+  Bike,
+  BusFront,
+  CarFront,
+  Search,
+  Truck,
+} from "lucide-react";
 import { type ReactNode, useState } from "react";
 import styles from "./dealer-desktop-toolbar.module.css";
 import {
@@ -12,7 +20,10 @@ import {
   DesktopCategoryPickerTrigger,
 } from "./desktop-discovery-search";
 import { DesktopQuickFilters } from "./desktop-quick-filters";
-import { DesktopSearchAssistant } from "./desktop-search-assistant";
+import {
+  DesktopSearchAssistant,
+  rememberMarketplaceSearchQuery,
+} from "./desktop-search-assistant";
 
 export const DealerDesktopToolbar = ({
   assistantSlot,
@@ -28,6 +39,7 @@ export const DealerDesktopToolbar = ({
   onOpenModel,
   query,
   setQuery,
+  totalListings,
   variant = "default",
 }: {
   assistantSlot?: ReactNode;
@@ -56,17 +68,40 @@ export const DealerDesktopToolbar = ({
     van: BusFront,
   }[filters.category];
 
+  const isHero = variant === "hero";
+  const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
+  const submitSearch = (value: string) => {
+    const q = value.trim();
+    if (q) {
+      rememberMarketplaceSearchQuery(q, "vehicles");
+      onApply({ q });
+    } else {
+      // An empty hero search opens the complete inventory, rather than reloading the landing.
+      onApply({ q: undefined, sort: "newest" });
+    }
+  };
+
+  const searchLabel = isBg ? "Търси автомобили" : "Search cars";
+  const browseLabel = isBg
+    ? `Виж всички ${numberFormatter.format(totalListings)} автомобила`
+    : `View all ${numberFormatter.format(totalListings)} cars`;
+
   return (
-    <div
+    <form
+      aria-label={isBg ? "Търсене на автомобили" : "Vehicle search"}
       className={styles.toolbar}
       data-slot="dealer-desktop-toolbar"
       data-variant={variant}
+      onSubmit={(event) => {
+        event.preventDefault();
+        submitSearch(query);
+      }}
     >
       <div className="dealer-desktop-search-band">
         <div className={styles.queryRow}>
           <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
             <DesktopCategoryPickerTrigger
-              appearance="toolbar"
+              appearance={isHero ? "hero" : "toolbar"}
               categoryIcon={
                 <CategoryIcon
                   aria-hidden="true"
@@ -87,14 +122,16 @@ export const DealerDesktopToolbar = ({
               onClose={() => setCategoryOpen(false)}
             />
           </Dialog>
-          <div className={styles.search}>
-            <Search
-              aria-hidden="true"
-              className={styles.searchIcon}
-              size={19}
-            />
+          <div className={isHero ? styles.heroQuery : styles.search}>
+            {!isHero && (
+              <Search
+                aria-hidden="true"
+                className={styles.searchIcon}
+                size={19}
+              />
+            )}
             <DesktopSearchAssistant
-              appearance="toolbar"
+              appearance={isHero ? "hero" : "toolbar"}
               ariaLabel={isBg ? "Търсене на автомобили" : "Search vehicles"}
               assistantSlot={assistantSlot}
               compact
@@ -103,18 +140,20 @@ export const DealerDesktopToolbar = ({
               listings={searchListings}
               locale={locale}
               onQueryChange={setQuery}
-              onSearch={(q) => onApply({ q })}
+              onSearch={submitSearch}
               placeholder={
                 isBg
-                  ? "Търсете по марка, модел или ключова дума…"
-                  : "Search by make, model or keyword…"
+                  ? "Марка, модел или ключова дума"
+                  : "Make, model or keyword"
               }
               query={query}
               scope="vehicles"
             />
-            <span aria-hidden="true" className={styles.searchHint}>
-              Enter ↵
-            </span>
+            {!isHero && (
+              <span aria-hidden="true" className={styles.searchHint}>
+                Enter ↵
+              </span>
+            )}
           </div>
         </div>
       </div>
@@ -124,8 +163,8 @@ export const DealerDesktopToolbar = ({
           filterCount={filterCount}
           filters={filters}
           isBg={isBg}
-          layout="toolbar"
-          numberFormatter={new Intl.NumberFormat(isBg ? "bg-BG" : "en-US")}
+          layout={isHero ? "hero" : "toolbar"}
+          numberFormatter={numberFormatter}
           onApply={onApply}
           onClearFilters={onClearFilters}
           onOpenFilters={onOpenFilters}
@@ -134,6 +173,16 @@ export const DealerDesktopToolbar = ({
           showAdditionalFilters
         />
       </div>
-    </div>
+      {isHero && (
+        <Button
+          className={styles.submit}
+          data-slot="desktop-hero-submit"
+          type="submit"
+        >
+          {query.trim() ? searchLabel : browseLabel}
+          <ArrowRight aria-hidden="true" className="size-4" />
+        </Button>
+      )}
+    </form>
   );
 };

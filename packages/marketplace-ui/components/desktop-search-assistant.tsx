@@ -37,7 +37,7 @@ export type { DesktopSearchScope } from "../lib/desktop-search-policy";
 export { rememberMarketplaceSearchQuery } from "../lib/desktop-search-policy";
 
 interface DesktopSearchAssistantProps {
-  appearance?: "standard" | "toolbar";
+  appearance?: "standard" | "toolbar" | "hero";
   ariaLabel: string;
   assistantSlot?: ReactNode;
   compact?: boolean;
@@ -275,6 +275,71 @@ const DesktopSearchFocusCanvas = ({
   );
 };
 
+const getSearchAppearanceClasses = (
+  appearance: NonNullable<DesktopSearchAssistantProps["appearance"]>
+) => ({
+  container: appearance === "hero" ? "static" : "",
+  label: appearance === "standard" ? "" : "sr-only",
+  value: appearance === "standard" ? "" : "mt-0",
+});
+
+const SearchSuggestionGroup = ({
+  group,
+  items,
+  activeIndex,
+  isBg,
+  listboxId,
+  narrow,
+  onCommit,
+  onSelectIndex,
+}: {
+  group: { heading: string; items: readonly SearchSuggestionItem[] };
+  items: readonly SearchSuggestionItem[];
+  activeIndex: number;
+  isBg: boolean;
+  listboxId: string;
+  narrow: boolean;
+  onCommit: (value: string, href?: string) => void;
+  onSelectIndex: (index: number) => void;
+}) => {
+  const twoColumns =
+    !narrow &&
+    group.items.length > 1 &&
+    !group.items.some((item) => item.listing);
+  return (
+    <div className="not-last:mb-2">
+      <p className="px-3 py-1.5 font-medium text-micro text-muted-foreground">
+        {group.heading}
+      </p>
+      <div
+        className={cn("grid gap-0.5", twoColumns && "min-[70rem]:grid-cols-2")}
+      >
+        {group.items.map((item, groupItemIndex) => {
+          const itemIndex = items.findIndex(
+            (candidate) => candidate.id === item.id
+          );
+          const spansWidePanel =
+            twoColumns &&
+            group.items.length % 2 === 1 &&
+            groupItemIndex === group.items.length - 1;
+          return (
+            <SearchSuggestionOption
+              id={`${listboxId}-${item.id}`}
+              isBg={isBg}
+              item={item}
+              key={item.id}
+              onCommit={onCommit}
+              onMouseEnter={() => onSelectIndex(itemIndex)}
+              selected={itemIndex === activeIndex}
+              spansWidePanel={spansWidePanel}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 export const DesktopSearchAssistant = ({
   ariaLabel,
   assistantSlot,
@@ -292,6 +357,7 @@ export const DesktopSearchAssistant = ({
   query,
   scope,
 }: DesktopSearchAssistantProps) => {
+  const appearanceClasses = getSearchAppearanceClasses(appearance);
   const router = useRouter();
   const [ready, setReady] = useState(false);
   useEffect(() => setReady(true), []);
@@ -370,7 +436,11 @@ export const DesktopSearchAssistant = ({
 
   return (
     <div
-      className={cn("relative min-w-0", !compact && "p-1.5")}
+      className={cn(
+        "relative min-w-0",
+        !compact && "p-1.5",
+        appearanceClasses.container
+      )}
       ref={containerRef}
     >
       <DesktopSearchFocusCanvas
@@ -389,23 +459,27 @@ export const DesktopSearchAssistant = ({
           compact
             ? "rounded-lg border border-border/90 bg-card px-4 focus-within:border-foreground/25 focus-within:ring-2 focus-within:ring-ring/25 focus-within:ring-inset"
             : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50",
-          appearance === "toolbar" &&
-            "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring"
+          appearance !== "standard" &&
+            "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring",
+          appearance === "hero" && "relative pr-4"
         )}
         data-slot="desktop-search-query"
       >
+        {appearance === "hero" && (
+          <Search
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 left-4 size-[19px] -translate-y-1/2 text-muted-foreground"
+          />
+        )}
         <span
-          className={cn(
-            "font-semibold text-micro",
-            appearance === "toolbar" && "sr-only"
-          )}
+          className={cn("font-semibold text-micro", appearanceClasses.label)}
         >
           {label}
         </span>
         <span
           className={cn(
             "mt-1 flex min-w-0 items-center",
-            appearance === "toolbar" && "mt-0"
+            appearanceClasses.value
           )}
         >
           <input
@@ -484,8 +558,10 @@ export const DesktopSearchAssistant = ({
             compact
               ? "top-[calc(100%+0.625rem)] -right-16 -left-52 rounded-2xl border border-zinc-200 shadow-none"
               : "top-[calc(100%-1px)] -right-16 -left-56 -mx-px rounded-b-2xl border-zinc-200 border-x border-b shadow-[0_28px_56px_rgba(7,12,18,0.18)]",
-            appearance === "toolbar" &&
-              "right-0 left-0 mx-0 border-border bg-panel shadow-overlay"
+            appearance !== "standard" &&
+              "right-0 left-0 mx-0 border-border bg-panel shadow-overlay",
+            appearance === "hero" &&
+              "top-[calc(100%+0.5rem)] max-h-[min(24rem,calc(100dvh-32rem))]"
           )}
           data-search-scope={scope}
           data-slot="desktop-search-assistant"
@@ -493,42 +569,17 @@ export const DesktopSearchAssistant = ({
           role="listbox"
         >
           {groups.map((group) => (
-            <div className="not-last:mb-2" key={group.heading}>
-              <p className="px-3 py-1.5 font-medium text-micro text-muted-foreground">
-                {group.heading}
-              </p>
-              <div
-                className={cn(
-                  "grid gap-0.5",
-                  group.items.length > 1 &&
-                    !group.items.some((item) => item.listing) &&
-                    "min-[70rem]:grid-cols-2"
-                )}
-              >
-                {group.items.map((item, groupItemIndex) => {
-                  const itemIndex = items.findIndex(
-                    (candidate) => candidate.id === item.id
-                  );
-                  const selected = itemIndex === activeIndex;
-                  const spansWidePanel =
-                    group.items.length > 1 &&
-                    group.items.length % 2 === 1 &&
-                    groupItemIndex === group.items.length - 1;
-                  return (
-                    <SearchSuggestionOption
-                      id={`${listboxId}-${item.id}`}
-                      isBg={isBg}
-                      item={item}
-                      key={item.id}
-                      onCommit={commitSearch}
-                      onMouseEnter={() => setActiveIndex(itemIndex)}
-                      selected={selected}
-                      spansWidePanel={spansWidePanel}
-                    />
-                  );
-                })}
-              </div>
-            </div>
+            <SearchSuggestionGroup
+              activeIndex={activeIndex}
+              group={group}
+              isBg={isBg}
+              items={items}
+              key={group.heading}
+              listboxId={listboxId}
+              narrow={appearance === "hero"}
+              onCommit={commitSearch}
+              onSelectIndex={setActiveIndex}
+            />
           ))}
           {assistantSlot ? (
             <div className="mt-1 pt-1">{assistantSlot}</div>

@@ -43,6 +43,33 @@ for (const width of [1024, 1280, 1440, 1920]) {
       )
     ).not.toHaveCount(0);
     await expect(page).toHaveScreenshot(`desktop-cars-${width}.png`);
+    const box = hero.locator('[data-slot="dealer-desktop-toolbar"]');
+    const heroBounds = await hero.boundingBox();
+    const boxBounds = await box.boundingBox();
+    expect(heroBounds).not.toBeNull();
+    expect(boxBounds).not.toBeNull();
+    if (!(heroBounds && boxBounds)) {
+      throw new Error("Hero geometry unavailable");
+    }
+    expect(
+      Math.abs(
+        boxBounds.x +
+          boxBounds.width / 2 -
+          (heroBounds.x + heroBounds.width / 2)
+      )
+    ).toBeLessThan(2);
+    expect(boxBounds.width).toBeLessThanOrEqual(640);
+    expect(heroBounds.height).toBeLessThan(480);
+    const inventory = page.locator(
+      '[data-slot="dealer-desktop-discovery-content"]'
+    );
+    await expect(
+      inventory.getByRole("heading", {
+        name: "Налични автомобили",
+        exact: true,
+      })
+    ).toHaveCount(1);
+    await expect(inventory.getByRole("navigation")).toHaveCount(0);
     const search = hero.getByRole("combobox");
     await expect(search).toBeVisible();
     await search.fill("BMW");
@@ -186,3 +213,54 @@ for (const width of [390, 1440]) {
     }
   });
 }
+
+test("centered buy box opens full inventory without a query", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/cars", { waitUntil: "domcontentloaded" });
+  await settleModernPage(page);
+  await page.locator('[data-slot="desktop-hero-submit"]').click();
+  await expect
+    .poll(() => new URL(page.url()).searchParams.get("sort"))
+    .toBe("newest");
+  await expect(
+    page.locator('[data-slot="dealer-desktop-home-hero"]')
+  ).toBeHidden();
+  await expect(
+    page.locator('[data-slot="marketplace-listing-grid"]')
+  ).toBeVisible();
+});
+
+test("centered buy box supports button search and its compact price control", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await page.goto("/cars", { waitUntil: "domcontentloaded" });
+  await settleModernPage(page);
+  const hero = page.locator('[data-slot="dealer-desktop-home-hero"]');
+  await hero.getByRole("button", { name: "Цена", exact: true }).click();
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(
+    hero.getByRole("button", { name: "Цена", exact: true })
+  ).toBeFocused();
+  await hero.getByRole("combobox").fill("BMW");
+  const suggestions = page.getByRole("listbox");
+  await expect(suggestions).toBeVisible();
+  const suggestionSizes = await suggestions.evaluate((element) => ({
+    width: element.clientWidth,
+    content: element.scrollWidth,
+  }));
+  expect(suggestionSizes.content).toBeLessThanOrEqual(suggestionSizes.width);
+  const listingOptions = suggestions.locator(
+    '[data-slot="desktop-search-listing-suggestion"]'
+  );
+  await expect(listingOptions.first()).toBeVisible();
+  const first = await listingOptions.nth(0).boundingBox();
+  const second = await listingOptions.nth(1).boundingBox();
+  expect(first?.x).toBe(second?.x);
+  await page.locator('[data-slot="desktop-hero-submit"]').click();
+  await expect(page).toHaveURL(searchResultUrl);
+  await expectNoHorizontalOverflow(page);
+});

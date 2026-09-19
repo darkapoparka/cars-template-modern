@@ -17,53 +17,44 @@ export const DealerDesktopDiscoveryHero = ({
   return (
     <section className={styles.hero} data-slot="dealer-desktop-home-hero">
       <div className={styles.heroCopy}>
-        <p className={styles.heroEyebrow}>
+        <h1>{isBg ? "Вашият следващ автомобил." : "Your next car."}</h1>
+        <p className={styles.heroAvailability}>
           {isBg
-            ? `${numberFormatter.format(totalListings)} налични автомобила`
-            : `${numberFormatter.format(totalListings)} vehicles available`}
-        </p>
-        <h1>
-          {isBg
-            ? "Открийте автомобила, който ви пасва."
-            : "Find the car that fits your life."}
-        </h1>
-        <p className={styles.heroDescription}>
-          {isBg
-            ? "Подбрани предложения, ясни условия и всички важни детайли на едно място."
-            : "Curated inventory, transparent terms, and every important detail in one place."}
+            ? `${numberFormatter.format(totalListings)} автомобила в наличност`
+            : `${numberFormatter.format(totalListings)} vehicles in stock`}
         </p>
       </div>
-
-      <div aria-hidden="true" className={styles.heroVehicles}>
-        <div className={cn(styles.heroVehicle, styles.heroVehicleLeft)}>
-          <Image
-            alt=""
-            fetchPriority="high"
-            fill
-            loading="lazy"
-            sizes="(min-width: 1024px) 52vw, 0px"
-            src={publicSite.artwork.heroLeft}
+      <div className={styles.heroStage}>
+        <div aria-hidden="true" className={styles.heroVehicles}>
+          <div className={cn(styles.heroVehicle, styles.heroVehicleLeft)}>
+            <Image
+              alt=""
+              fetchPriority="high"
+              fill
+              loading="lazy"
+              sizes="(min-width: 1600px) 480px, (min-width: 1024px) 32vw, 0px"
+              src={publicSite.artwork.heroLeft}
+            />
+          </div>
+          <div className={cn(styles.heroVehicle, styles.heroVehicleRight)}>
+            <Image
+              alt=""
+              fetchPriority="high"
+              fill
+              loading="lazy"
+              sizes="(min-width: 1600px) 480px, (min-width: 1024px) 32vw, 0px"
+              src={publicSite.artwork.heroRight}
+            />
+          </div>
+        </div>
+        <div className={styles.heroSearch}>
+          <DealerDesktopToolbar
+            {...toolbarProps}
+            locale={locale}
+            totalListings={totalListings}
+            variant="hero"
           />
         </div>
-        <div className={cn(styles.heroVehicle, styles.heroVehicleRight)}>
-          <Image
-            alt=""
-            fetchPriority="high"
-            fill
-            loading="lazy"
-            sizes="(min-width: 1024px) 52vw, 0px"
-            src={publicSite.artwork.heroRight}
-          />
-        </div>
-      </div>
-
-      <div className={styles.heroSearch}>
-        <DealerDesktopToolbar
-          {...toolbarProps}
-          locale={locale}
-          totalListings={totalListings}
-          variant="hero"
-        />
       </div>
     </section>
   );

@@ -50,7 +50,7 @@ export const DesktopCategoryPickerTrigger = ({
   isBg,
   open,
 }: {
-  appearance?: "standard" | "toolbar";
+  appearance?: "standard" | "toolbar" | "hero";
   categoryIcon?: ReactNode;
   compact: boolean;
   filters: MarketplaceSearchParams;
@@ -70,8 +70,9 @@ export const DesktopCategoryPickerTrigger = ({
         compact
           ? "rounded-lg border border-border/90 bg-card hover:bg-control active:bg-control-hover"
           : "m-1.5 rounded-[14px] bg-control hover:bg-border/75 active:bg-border",
-        appearance === "toolbar" &&
+        appearance !== "standard" &&
           "h-[var(--control-height-search)] w-52 shrink-0 rounded-xl bg-control",
+        appearance === "hero" && "w-44",
         open &&
           "bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-active)] active:bg-[var(--lead-site-accent-active)] active:text-[var(--brand-active-foreground)]"
       )}

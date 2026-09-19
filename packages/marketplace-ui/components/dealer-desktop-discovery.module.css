@@ -5,9 +5,10 @@
 @media (min-width: 1024px) {
   .hero {
     position: relative;
+    z-index: 20;
     display: grid;
     width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
-    padding: 1.5rem clamp(1.5rem, 4vw, 4rem) 2rem;
+    padding: 1.5rem 0 2.5rem;
     margin-inline: auto;
     color: var(--inverse-foreground);
     background: var(--inverse);
@@ -19,276 +20,108 @@
   .heroCopy {
     position: relative;
     z-index: 1;
-    width: min(100%, 52rem);
-    margin-inline: auto;
+    padding-inline: var(--layout-gutter);
     text-align: center;
-  }
-  .heroEyebrow {
-    margin-bottom: 0.75rem;
-    font-size: var(--text-micro);
-    font-weight: var(--font-weight-semibold);
-    color: var(--inverse-muted);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
   }
   .heroCopy h1 {
     margin: 0;
-    font-size: var(--text-hero);
+    font-size: var(--text-display-lg);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--text-hero--line-height);
+    line-height: var(--text-display-lg--line-height);
     letter-spacing: var(--tracking-heading);
     text-wrap: balance;
   }
-  .heroDescription {
-    max-width: 42rem;
-    margin: 1rem auto 0;
-    font-size: var(--text-body);
-    line-height: var(--text-body--line-height);
+  .heroAvailability {
+    margin: 0.75rem 0 0;
+    font-size: var(--text-meta);
+    line-height: var(--text-meta--line-height);
     color: var(--inverse-muted);
   }
-  .heroVehicles {
+  .heroStage {
     position: relative;
-    height: clamp(12rem, 20vw, 19rem);
-    margin-block: 1rem 0.5rem;
+    display: grid;
+    place-items: center;
+    min-height: 16rem;
+    margin-top: 1.5rem;
+  }
+  .heroVehicles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
     pointer-events: none;
   }
   .heroVehicle {
     position: absolute;
-    bottom: 0;
-    width: 54%;
+    top: 50%;
+    width: clamp(20rem, 32vw, 30rem);
     height: 100%;
     filter: drop-shadow(var(--elevation-artwork));
+    transform: translateY(-50%);
   }
   .heroVehicle img {
     object-fit: contain;
-    object-position: center bottom;
   }
   .heroVehicleLeft {
-    left: 0;
+    left: -2rem;
   }
   .heroVehicleRight {
-    right: 0;
+    right: -2rem;
   }
   .heroSearch {
     position: relative;
     z-index: 3;
-    min-width: 0;
+    width: min(40rem, 60%);
+    min-width: 32rem;
   }
   .discoveryContent {
     display: block;
     width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
-    padding-block: var(--layout-section-gap) 4rem;
+    padding-block: 2.5rem 4rem;
     margin-inline: auto;
   }
-  .discoveryPanel {
-    padding: 0;
-  }
   .sectionHeading {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 1.25rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
   }
   .sectionHeading h2 {
+    grid-column: 2;
     margin: 0;
     font-size: var(--text-section-title-lg);
     font-weight: var(--font-weight-semibold);
     line-height: var(--text-section-title-lg--line-height);
     color: var(--foreground);
+    text-align: center;
     letter-spacing: var(--tracking-heading);
-  }
-  .sectionDescription {
-    max-width: 42rem;
-    margin: 0.5rem 0 0;
-    font-size: var(--text-meta);
-    line-height: var(--text-meta--line-height);
-    color: var(--muted-foreground);
-  }
-  .sectionEyebrow {
-    margin-bottom: 0.375rem;
-    font-size: var(--text-micro);
-    font-weight: var(--font-weight-semibold);
-    color: var(--muted-foreground);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
   }
   .sectionAction {
     display: inline-flex;
-    flex-shrink: 0;
+    grid-column: 3;
     gap: 0.5rem;
     align-items: center;
-    justify-content: center;
+    justify-self: end;
     min-height: 2.5rem;
-    padding-inline: 1rem;
+    padding-inline: 0.75rem;
     font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
     color: var(--foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-pill);
-    transition:
-      background-color var(--duration-interaction),
-      border-color var(--duration-interaction);
+    border-radius: var(--radius-md);
+    transition: background-color var(--duration-interaction);
   }
   .sectionAction:hover {
     background: var(--control);
-    border-color: var(--muted-foreground);
   }
-  .sectionAction:focus-visible,
-  .bodyTypeCard:focus-visible,
-  .brandCard:focus-visible {
+  .sectionAction:focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 3px;
-  }
-  .bodyTypeGrid {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 0.75rem;
-  }
-  .bodyTypeCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 0;
-    padding: 1rem;
-    color: var(--foreground);
-    background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-vehicle);
-    transition:
-      background-color var(--duration-interaction),
-      border-color var(--duration-interaction);
-  }
-  .bodyTypeCard:hover {
-    background: var(--panel);
-    border-color: var(--muted-foreground);
-  }
-  .bodyTypeArtwork {
-    position: relative;
-    display: block;
-    width: 100%;
-    aspect-ratio: 1.7;
-  }
-  .bodyTypeImage {
-    object-fit: contain;
-    object-position: center;
-    transform: scale(1.1);
-  }
-  .compactArtwork {
-    transform: none;
-  }
-  .bodyTypeMeta {
-    display: block;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
-  .bodyTypeMeta strong {
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--text-meta--line-height);
-  }
-  .brandSection {
-    display: grid;
-    grid-template-columns: minmax(10rem, 0.7fr) minmax(0, 3fr);
-    gap: 1.5rem;
-    align-items: center;
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-  }
-  .brandHeading p {
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-semibold);
-    color: var(--foreground);
-  }
-  .brandHeading span {
-    display: block;
-    max-width: 16rem;
-    margin-top: 0.375rem;
-    font-size: var(--text-micro);
-    line-height: var(--text-micro--line-height);
-    color: var(--muted-foreground);
-  }
-  .brandGrid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.75rem;
-  }
-  .brandCard {
-    display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
-    gap: 0.75rem;
-    align-items: center;
-    min-width: 0;
-    min-height: 4.5rem;
-    padding: 0.75rem;
-    color: var(--foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-vehicle);
-    transition: background-color var(--duration-interaction);
-  }
-  .brandCard:hover {
-    background: var(--control);
-  }
-  .brandArtwork {
-    display: grid;
-    place-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    color: var(--muted-foreground);
-  }
-  .brandArtwork img {
-    width: 2.5rem;
-    height: 2.25rem;
-    object-fit: contain;
-  }
-  .brandArtwork > span {
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-semibold);
-  }
-  .brandMeta {
-    min-width: 0;
-  }
-  .brandMeta strong,
-  .brandMeta small {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .brandMeta strong {
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-semibold);
-  }
-  .brandMeta small {
-    margin-top: 0.25rem;
-    font-size: var(--text-micro);
-    color: var(--muted-foreground);
-  }
-  .brandCard > svg {
-    color: var(--muted-foreground);
-  }
-  .vehicleSection {
-    margin-top: var(--layout-section-gap);
   }
   .vehicleGrid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
     align-items: stretch;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .bodyTypeGrid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-  .brandSection {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .brandHeading span {
-    max-width: none;
   }
 }
 @media (min-width: 1280px) {
@@ -302,9 +135,7 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sectionAction,
-  .bodyTypeCard,
-  .brandCard {
+  .sectionAction {
     transition: none;
   }
 }
