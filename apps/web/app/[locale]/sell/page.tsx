@@ -10,12 +10,9 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { cn } from "@repo/design-system/lib/utils";
 import { leadSite, vehicleCategories } from "@repo/marketplace";
-import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
@@ -29,6 +26,7 @@ import {
 } from "@/lib/sell-vehicle-draft";
 import { MobileSellVehicleExperience } from "../components/mobile-sell-vehicle-experience";
 import { MobileVehicleTaxonomyFields } from "../components/mobile-vehicle-taxonomy-fields";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 
 interface SellPageProps {
@@ -189,6 +187,7 @@ export default async function SellPage({
   return (
     <PublicMarketplaceFrame
       activeMode="sell"
+      desktopIntro={{ title: copy.title, description: copy.description }}
       locale={normalizedLocale}
       showMobileDealerHeader={false}
       showMobileFooter={false}
@@ -200,202 +199,144 @@ export default async function SellPage({
           key={serializeSellVehicleDraft(initialDraft)}
           locale={normalizedLocale}
         />
-        <div
-          className={cn(
-            marketplaceDiscoveryFrameClassName,
-            "hidden py-5 sm:py-7 lg:block lg:py-9"
-          )}
-        >
-          <section
-            className="relative isolate min-h-[34rem] overflow-hidden rounded-xl border border-border shadow-panel lg:min-h-[32rem]"
-            data-slot="sell-hero"
-          >
-            <Image
-              alt={
-                normalizedLocale === "bg"
-                  ? "Автомобили пред модерен шоурум"
-                  : "Vehicles outside a modern showroom"
-              }
-              className="object-cover object-center"
-              fill
-              priority
-              sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
-            />
-            <div aria-hidden="true" className="absolute inset-0 bg-black/15" />
-
-            <div
-              className="relative z-10 flex min-h-[40rem] items-start justify-center px-3 pt-6 pb-3 lg:min-h-[32rem] lg:items-center lg:p-8"
-              data-slot="sell-hero-content"
-            >
-              <div
-                className="w-full max-w-6xl rounded-xl bg-card p-4 shadow-2xl shadow-black/20 sm:p-6 lg:border lg:border-border/80 lg:p-7"
-                data-slot="sell-form-panel"
+        <div className={cn("hidden lg:block", desktopStyles.content)}>
+          <section className={desktopStyles.panel} data-slot="sell-hero">
+            <div data-slot="sell-form-panel">
+              <h2>{copy.formLabel}</h2>
+              <form
+                action={localize("/contact")}
+                aria-label={copy.formLabel}
+                className={cn(
+                  "grid grid-cols-2 gap-4 lg:grid-cols-3",
+                  hasSelectedVehicle
+                    ? "xl:grid-cols-[minmax(9rem,1fr)_minmax(15rem,1.7fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
+                    : "xl:grid-cols-[minmax(9rem,1fr)_minmax(9rem,1fr)_minmax(11rem,1.25fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
+                )}
+                data-slot="sell-vehicle-start-form"
+                method="get"
               >
-                <h1 className="text-balance text-center font-semibold text-[1.875rem] leading-[1.08] tracking-[-0.03em] lg:text-page-title-lg">
-                  {copy.title}
-                </h1>
-                <p className="mx-auto mt-3 max-w-[17rem] text-center text-muted-foreground text-sm leading-6 lg:max-w-2xl lg:text-body">
-                  <span className="lg:hidden">
-                    {normalizedLocale === "bg"
-                      ? "Започнете с основните данни. Ще се свържем с вас за оглед и оферта."
-                      : "Start with the essentials. We will contact you to arrange an inspection and offer."}
-                  </span>
-                  <span className="hidden lg:inline">{copy.description}</span>
-                </p>
-
-                <form
-                  action={localize("/contact")}
-                  aria-label={copy.formLabel}
-                  className={cn(
-                    "mt-5 grid grid-cols-2 gap-3",
-                    hasSelectedVehicle
-                      ? "lg:grid-cols-[minmax(9rem,1fr)_minmax(15rem,1.7fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
-                      : "lg:grid-cols-[minmax(9rem,1fr)_minmax(9rem,1fr)_minmax(11rem,1.25fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
-                  )}
-                  data-slot="sell-vehicle-start-form"
-                  method="get"
-                >
-                  <input name="intent" type="hidden" value="sell" />
-                  <input name="vin" type="hidden" value={initialDraft.vin} />
-                  <div className="grid gap-1.5">
-                    <Label className="text-meta" htmlFor="sell-category">
-                      {copy.categoryLabel}
-                    </Label>
-                    <select
-                      className={selectClassName}
-                      defaultValue={initialCategory}
-                      id="sell-category"
-                      name="category"
-                      required
-                    >
-                      {sellableCategories.map((category) => (
-                        <option key={category.id} value={category.id}>
-                          {categoryLabels[normalizedLocale][category.id]}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <MobileVehicleTaxonomyFields
-                    initialMake={initialMake}
-                    initialModel={initialModel}
-                    locale={normalizedLocale}
-                    makeLabel={copy.makeLabel}
-                    makePlaceholder={copy.makeLabel}
-                    modelLabel={copy.modelLabel}
-                    modelPlaceholder={copy.modelPlaceholder}
+                <input name="intent" type="hidden" value="sell" />
+                <input name="vin" type="hidden" value={initialDraft.vin} />
+                <div className="grid gap-1.5">
+                  <Label className="text-meta" htmlFor="sell-category">
+                    {copy.categoryLabel}
+                  </Label>
+                  <select
+                    className={selectClassName}
+                    defaultValue={initialCategory}
+                    id="sell-category"
+                    name="category"
                     required
-                    selectedVehicle={
-                      hasSelectedVehicle
-                        ? {
-                            asset: selectedVehicleAsset,
-                            changeHref: localize("/sell"),
-                            changeLabel: copy.changeVehicle,
-                            selectedLabel: copy.selectedVehicleLabel,
-                          }
-                        : undefined
-                    }
-                    variant="sell"
-                  />
-
-                  <div className="grid gap-1.5">
-                    <Label className="text-meta" htmlFor="sell-year">
-                      {copy.yearLabel}
-                    </Label>
-                    <Input
-                      className={inputClassName}
-                      defaultValue={initialYear}
-                      id="sell-year"
-                      inputMode="numeric"
-                      max={vehicleYearMaximum}
-                      min={vehicleYearMinimum}
-                      name="year"
-                      placeholder={copy.yearPlaceholder}
-                      required
-                      type="number"
-                    />
-                  </div>
-
-                  <div className="grid gap-1.5">
-                    <Label className="text-meta" htmlFor="sell-mileage">
-                      {copy.mileageLabel}
-                    </Label>
-                    <Input
-                      className={inputClassName}
-                      defaultValue={initialMileage}
-                      id="sell-mileage"
-                      inputMode="numeric"
-                      max={vehicleMileageMaximum}
-                      min={0}
-                      name="mileage"
-                      placeholder={copy.mileagePlaceholder}
-                      required
-                      type="number"
-                    />
-                  </div>
-
-                  <div className="col-span-2 flex items-end justify-end lg:col-span-1">
-                    <Button
-                      className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
-                      type="submit"
-                    >
-                      {copy.primaryAction}
-                      <ArrowRight aria-hidden="true" className="size-4" />
-                    </Button>
-                  </div>
-
-                  <div
-                    className="col-span-2 hidden rounded-lg border border-border/60 bg-secondary/80 p-2.5 lg:col-span-full lg:block"
-                    data-slot="sell-optional-details"
                   >
-                    <div className="flex items-center justify-between gap-3 px-1">
-                      <Label className="text-meta" htmlFor="sell-notes">
-                        {copy.detailsLabel}
-                      </Label>
-                      <span className="text-meta text-muted-foreground">
-                        {copy.detailsHint}
-                      </span>
-                    </div>
-                    <Textarea
-                      className="mt-2 h-20 min-h-20 resize-none rounded-md border-transparent bg-card shadow-none"
-                      defaultValue={initialNotes}
-                      id="sell-notes"
-                      maxLength={500}
-                      name="notes"
-                      placeholder={copy.detailsPlaceholder}
-                    />
-                  </div>
-                </form>
-
-                <div className="mt-5 flex flex-col items-start justify-center gap-2 border-border border-t pt-4 text-sm sm:flex-row sm:items-center sm:gap-7 lg:mt-5">
-                  <p className="text-muted-foreground">
-                    {normalizedLocale === "bg"
-                      ? "Търсите автомобил за бартер?"
-                      : "Looking for a trade-in vehicle?"}{" "}
-                    <Link
-                      className="font-medium text-foreground underline-offset-4 hover:underline"
-                      href={localize("/cars")}
-                    >
-                      {normalizedLocale === "bg"
-                        ? "Вижте наличностите"
-                        : "Browse inventory"}
-                    </Link>
-                  </p>
-                  <p className="text-muted-foreground">
-                    {copy.contactPrompt}{" "}
-                    <a
-                      className="font-medium text-foreground underline-offset-4 hover:underline"
-                      href={leadSite.phoneHref}
-                    >
-                      {leadSite.phoneDisplay}
-                    </a>
-                  </p>
+                    {sellableCategories.map((category) => (
+                      <option key={category.id} value={category.id}>
+                        {categoryLabels[normalizedLocale][category.id]}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-              </div>
+
+                <MobileVehicleTaxonomyFields
+                  initialMake={initialMake}
+                  initialModel={initialModel}
+                  locale={normalizedLocale}
+                  makeLabel={copy.makeLabel}
+                  makePlaceholder={copy.makeLabel}
+                  modelLabel={copy.modelLabel}
+                  modelPlaceholder={copy.modelPlaceholder}
+                  required
+                  selectedVehicle={
+                    hasSelectedVehicle
+                      ? {
+                          asset: selectedVehicleAsset,
+                          changeHref: localize("/sell"),
+                          changeLabel: copy.changeVehicle,
+                          selectedLabel: copy.selectedVehicleLabel,
+                        }
+                      : undefined
+                  }
+                  variant="sell"
+                />
+
+                <div className="grid gap-1.5">
+                  <Label className="text-meta" htmlFor="sell-year">
+                    {copy.yearLabel}
+                  </Label>
+                  <Input
+                    className={inputClassName}
+                    defaultValue={initialYear}
+                    id="sell-year"
+                    inputMode="numeric"
+                    max={vehicleYearMaximum}
+                    min={vehicleYearMinimum}
+                    name="year"
+                    placeholder={copy.yearPlaceholder}
+                    required
+                    type="number"
+                  />
+                </div>
+
+                <div className="grid gap-1.5">
+                  <Label className="text-meta" htmlFor="sell-mileage">
+                    {copy.mileageLabel}
+                  </Label>
+                  <Input
+                    className={inputClassName}
+                    defaultValue={initialMileage}
+                    id="sell-mileage"
+                    inputMode="numeric"
+                    max={vehicleMileageMaximum}
+                    min={0}
+                    name="mileage"
+                    placeholder={copy.mileagePlaceholder}
+                    required
+                    type="number"
+                  />
+                </div>
+
+                <div className="col-span-2 flex items-end justify-end lg:col-span-1">
+                  <Button
+                    className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+                    type="submit"
+                  >
+                    {copy.primaryAction}
+                    <ArrowRight aria-hidden="true" className="size-4" />
+                  </Button>
+                </div>
+
+                <div
+                  className="col-span-2 hidden rounded-lg border border-border/60 bg-secondary/80 p-2.5 lg:col-span-full lg:block"
+                  data-slot="sell-optional-details"
+                >
+                  <div className="flex items-center justify-between gap-3 px-1">
+                    <Label className="text-meta" htmlFor="sell-notes">
+                      {copy.detailsLabel}
+                    </Label>
+                    <span className="text-meta text-muted-foreground">
+                      {copy.detailsHint}
+                    </span>
+                  </div>
+                  <Textarea
+                    className="mt-2 h-20 min-h-20 resize-none rounded-md border-transparent bg-card shadow-none"
+                    defaultValue={initialNotes}
+                    id="sell-notes"
+                    maxLength={500}
+                    name="notes"
+                    placeholder={copy.detailsPlaceholder}
+                  />
+                </div>
+              </form>
+              <p className="mt-5 border-border border-t pt-4 text-center text-meta text-muted-foreground">
+                {copy.contactPrompt}{" "}
+                <a
+                  className="font-medium text-foreground underline underline-offset-4"
+                  href={leadSite.phoneHref}
+                >
+                  {leadSite.phoneDisplay}
+                </a>
+              </p>
             </div>
           </section>
-
           <section
             className="mx-auto mt-8 w-full max-w-4xl sm:mt-10"
             data-slot="sell-faq"

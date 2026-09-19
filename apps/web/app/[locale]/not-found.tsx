@@ -23,7 +23,10 @@ const NotFound = () => {
     : `Page not found | ${leadSite.name}`;
 
   return (
-    <PublicRecoveryFrame locale={isBg ? "bg" : "en"}>
+    <PublicRecoveryFrame
+      desktopTitle={isBg ? "Страницата не е намерена" : "Page not found"}
+      locale={isBg ? "bg" : "en"}
+    >
       <title>{pageTitle}</title>
       <a
         className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -33,9 +36,7 @@ const NotFound = () => {
       </a>
       <header
         className={
-          isDealershipSite
-            ? "hidden border-border border-b bg-card lg:block"
-            : "border-border border-b bg-card"
+          isDealershipSite ? "hidden" : "border-border border-b bg-card"
         }
       >
         <div
@@ -72,7 +73,13 @@ const NotFound = () => {
           <p className="font-semibold text-brand-text text-sm dark:text-[var(--lead-site-accent-bright)]">
             404
           </p>
-          <h1 className="mt-2 font-semibold text-section-title tracking-tight">
+          <h1
+            className={
+              isDealershipSite
+                ? "mt-2 font-semibold text-section-title tracking-tight lg:hidden"
+                : "mt-2 font-semibold text-section-title tracking-tight"
+            }
+          >
             {isBg ? "Страницата не е намерена" : "Page not found"}
           </h1>
           <p className="mt-2 text-muted-foreground text-sm leading-6">

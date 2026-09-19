@@ -22,6 +22,8 @@ Enabled locales are currently the implemented `bg` and `en` dictionaries. A new 
 
 Artwork paths must be validated local absolute paths. Configure a real inverse logo when needed rather than recoloring a customer's bitmap through CSS. `site-artwork.ts` contains reusable fallback artwork, not verified customer identity. All generated originals and the six optimized derivative records are preserved under `provenance/assets/`.
 
+The optional `artwork.heroScene` is a pre-optimized decorative desktop asset shared by landing and service heroes. Supply a suitably sized WebP (the master uses 2172 × 724 pixels, about 149 KB); it is served directly to preserve its prepared quality. Keep uncompressed originals in provenance, not the served tree. Custom left/right cutouts still disable the default scene through the existing configuration projection. Compact editorial/legal heroes deliberately omit decorative photography.
+
 ## Live dealership binding
 
 The following server variables are documented in `apps/web/.env.example`:

@@ -525,7 +525,7 @@ export const DesktopQuickFilters = ({
                 getDesktopQuickFilterClassName(false, elevated),
                 layout === "hero"
                   ? "border-border bg-panel text-muted-foreground shadow-none hover:bg-control hover:text-foreground"
-                  : "!border-black !bg-black !text-white hover:!bg-zinc-800 hover:!text-white active:!bg-zinc-700 relative w-auto shrink-0 gap-2 px-4 has-[>svg]:px-4"
+                  : "relative w-auto shrink-0 gap-2 border-primary bg-primary px-4 text-primary-foreground hover:border-primary/90 hover:bg-primary/90 hover:text-primary-foreground has-[>svg]:px-4"
               )}
               data-slot="desktop-primary-control"
               onClick={onOpenFilters}
@@ -536,7 +536,7 @@ export const DesktopQuickFilters = ({
               <SlidersHorizontal aria-hidden="true" className="size-[18px]" />
               <span>{localizeMarketplace(isBg, "Филтри", "Filters")}</span>
               {filterCount > 0 ? (
-                <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-white px-1.5 font-semibold text-black text-micro ring-2 ring-black">
+                <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-panel px-1.5 font-semibold text-foreground text-micro ring-2 ring-primary">
                   {filterCount}
                 </span>
               ) : null}

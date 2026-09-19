@@ -6,7 +6,7 @@ import {
 } from "../fixtures/modern-visual-health";
 
 const searchResultUrl = /(?:q|make)=BMW/;
-const showroomSceneSource = /lead-car-showroom-scene-v2/;
+const showroomSceneSource = /lead-car-showroom-scene-v3/;
 
 test.beforeEach(async ({ page }) => {
   await page.route("**/*", (route) =>
@@ -372,5 +372,138 @@ test("showroom carousel browses the same stock without losing keyboard access", 
       Math.abs(((await firstCard.boundingBox())?.x ?? 0) - (before?.x ?? 0))
     )
     .toBeLessThan(2);
+  await expectNoHorizontalOverflow(page);
+});
+
+for (const width of [1024, 1440]) {
+  test(`contextual desktop headers and page titles at ${width}`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 1000 });
+    for (const route of [
+      "/sell",
+      "/lease",
+      "/imports",
+      "/contact",
+      "/guides",
+      "/guides/premium-used-car-checklist",
+      "/legal/privacy",
+      "/collections/chinese-ev-hybrids",
+    ]) {
+      const response = await page.goto(route, {
+        waitUntil: "domcontentloaded",
+      });
+      expect(response?.status(), route).toBe(200);
+      await settleModernPage(page);
+      await expect(
+        page.locator('[data-slot="dealer-desktop-header"]')
+      ).toBeVisible();
+      await expect(
+        page.locator('[data-slot="dealer-desktop-context-hero"]')
+      ).toBeVisible();
+      await expect(page.locator("h1:visible")).toHaveCount(1);
+      await expectNoHorizontalOverflow(page);
+      const banner = await page
+        .locator('[data-slot="dealer-desktop-context-hero"]')
+        .boundingBox();
+      expect(banner?.height).toBeLessThan(350);
+    }
+  });
+}
+
+test("desktop editorial search filters, clears and restores the visible input", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/guides", { waitUntil: "domcontentloaded" });
+  const search = page.getByRole("searchbox", {
+    name: "Търси съвети и статии",
+    exact: true,
+  });
+  await expect(search).toBeEnabled();
+  const cards = page.locator('[data-slot="content-card"]');
+  const total = await cards.count();
+  expect(total).toBeGreaterThan(0);
+  await search.fill("no-matching-article-qa");
+  await expect(cards).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Покажи всички материали", exact: true })
+    .click();
+  await expect(cards).toHaveCount(total);
+  await expect(search).toBeFocused();
+  await expect(search).toHaveValue("");
+});
+
+test("desktop service controls are not covered by the contextual hero", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  for (const [route, selector] of [
+    ["/sell", "#sell-year"],
+    ["/lease", '[data-slot="lease-finance-card"] select'],
+    ["/imports", 'input[name="sourceUrl"]'],
+  ]) {
+    await page.goto(route, { waitUntil: "domcontentloaded" });
+    await settleModernPage(page);
+    const field = page.locator(selector).filter({ visible: true }).first();
+    await expect(field).toBeVisible();
+    expect(
+      await field.evaluate((element) => {
+        const rect = element.getBoundingClientRect();
+        const target = document.elementFromPoint(
+          rect.left + rect.width / 2,
+          rect.top + rect.height / 2
+        );
+        return target === element || element.contains(target);
+      }),
+      route
+    ).toBe(true);
+  }
+});
+
+test("desktop hero serves the full-resolution pre-optimized source", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  const response = await page.goto("/cars", { waitUntil: "domcontentloaded" });
+  expect(response?.status()).toBe(200);
+  await settleModernPage(page);
+  const scene = page.locator('[data-slot="desktop-hero-scene"]');
+  const image = await scene.evaluate((element) => {
+    const img = element as HTMLImageElement;
+    return {
+      src: img.currentSrc,
+      width: img.naturalWidth,
+      complete: img.complete,
+    };
+  });
+  const request = new URL(image.src);
+  expect(request.pathname).toBe("/lead-car-showroom-scene-v3.webp");
+  expect(image.width).toBe(2172);
+  expect(image.complete).toBe(true);
+});
+
+test("selected desktop filters and clear actions share one control surface", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto("/cars?make=BMW", { waitUntil: "domcontentloaded" });
+  await settleModernPage(page);
+  const toolbar = page.locator('[data-slot="dealer-desktop-toolbar"]');
+  const selected = toolbar.getByRole("button", { name: "BMW", exact: true });
+  const clear = toolbar.getByRole("button", {
+    name: "Премахни BMW",
+    exact: true,
+  });
+  const surface = async (element: import("@playwright/test").Locator) =>
+    element.evaluate((node) => ({
+      height: node.getBoundingClientRect().height,
+      background: getComputedStyle(node).backgroundColor,
+    }));
+  expect(await surface(clear)).toEqual(await surface(selected));
+  await clear.click();
+  await expect
+    .poll(() => new URL(page.url()).searchParams.has("make"))
+    .toBe(false);
   await expectNoHorizontalOverflow(page);
 });

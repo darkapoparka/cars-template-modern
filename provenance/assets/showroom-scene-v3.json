@@ -1,0 +1,17 @@
+{
+  "generationId": "8e9a108f-093c-4280-93f0-9af02c3e7b29",
+  "source": "provenance/assets/originals/showroom-scene-v3.png",
+  "sourceSha256": "1ac177dc54b4fc5f2d27a4542a48a6b4ecc6aca6f541a1b0da80a68588e06f56",
+  "sourceBytes": 1726362,
+  "width": 2172,
+  "height": 724,
+  "destination": "apps/web/public/lead-car-showroom-scene-v3.webp",
+  "destinationSha256": "c35697d17331a699cb605f4e59b8b42933885e530bcdc651569393e5a41344b8",
+  "destinationBytes": 149282,
+  "encoding": {
+    "format": "WebP",
+    "quality": 92,
+    "resized": false
+  },
+  "usage": "Decorative generated desktop background, not a photograph of actual inventory or dealership premises. No text or UI is baked into the scene."
+}

@@ -6,62 +6,56 @@
     position: relative;
     z-index: 40;
     display: block;
-    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
-    padding-inline: var(--layout-gutter);
-    margin: var(--layout-gutter) auto var(--layout-gutter);
+    width: 100%;
+    margin: 0;
     color: var(--inverse-foreground);
-    background: var(--inverse);
-    border: 1px solid var(--inverse-border);
-    border-radius: var(--radius-shell);
-  }
-  .header[data-has-search="true"] {
-    margin-bottom: 0;
-    border-bottom: 0;
-    border-radius: var(--radius-shell) var(--radius-shell) 0 0;
+    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
+    border-bottom: 1px solid var(--inverse-border);
   }
   .nav {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: 14rem minmax(0, 1fr) auto;
+    gap: 1rem;
     align-items: center;
-    min-height: 5rem;
+    width: min(92%, var(--layout-wide-max));
+    min-height: 4rem;
+    margin-inline: auto;
   }
   .brand {
     position: relative;
     display: block;
-    width: min(100%, 12rem);
-    height: 3rem;
+    width: 12rem;
+    height: 2.75rem;
     border-radius: var(--radius-sm);
   }
   .segments {
     display: flex;
-    gap: 0.25rem;
-    padding: 0.25rem;
-    background: var(--inverse-control);
-    border: 1px solid var(--inverse-border);
-    border-radius: var(--radius-xl);
+    gap: 0.5rem;
+    align-items: center;
   }
   .segments a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.25rem;
-    padding-inline: 1rem;
+    min-height: 2.5rem;
+    padding-inline: 0.875rem;
     font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
     color: var(--inverse-muted);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     transition:
-      background-color var(--duration-interaction),
-      color var(--duration-interaction);
+      color var(--duration-interaction),
+      background-color var(--duration-interaction);
   }
   .segments a:hover {
     color: var(--inverse-foreground);
-    background: var(--inverse-border);
+    background: var(--inverse-control);
   }
   .segments a[aria-current="page"] {
-    color: var(--foreground);
-    background: var(--panel);
+    color: var(--inverse-foreground);
+    text-decoration: underline;
+    text-decoration-color: var(--inverse-muted);
+    text-underline-offset: 0.5rem;
   }
   .contact {
     display: flex;
@@ -73,85 +67,43 @@
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
+    justify-content: center;
     min-height: 2.5rem;
     padding-inline: 0.5rem;
     font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
     white-space: nowrap;
-    border-radius: var(--radius-lg);
-  }
-  .showroom {
-    border: 1px solid var(--inverse-border);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--duration-interaction);
   }
   .contact a:hover {
     background: var(--inverse-control);
+  }
+  .contact .showroom {
+    padding-inline: 1rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+  .contact .showroom:hover {
+    background: var(--control);
   }
   .header a:focus-visible {
     outline: 2px solid var(--inverse-foreground);
     outline-offset: 3px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   .nav {
-    gap: 0.75rem;
+    grid-template-columns: 12rem minmax(0, 1fr) auto;
+  }
+  .segments {
+    gap: 0.25rem;
   }
   .segments a {
-    padding-inline: 0.75rem;
-  }
-  .contact {
-    gap: 0.25rem;
+    padding-inline: 0.5rem;
   }
   .showroom span {
     display: none;
-  }
-}
-
-/* The selected showroom composition is desktop-only; other route headers retain their layout. */
-@media (min-width: 1024px) {
-  .header[data-layout="showroom"] {
-    width: 100%;
-    padding-inline: 4%;
-    margin: 0;
-    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
-    border: 0;
-    border-bottom: 1px solid var(--inverse-border);
-    border-radius: 0;
-  }
-  .header[data-layout="showroom"] .nav {
-    grid-template-columns: 14rem minmax(0, 1fr) auto;
-    gap: 1rem;
-    max-width: var(--layout-wide-max);
-    min-height: 3.875rem;
-    margin-inline: auto;
-  }
-  .header[data-layout="showroom"] .brand {
-    width: 12rem;
-    height: 2.75rem;
-  }
-  .header[data-layout="showroom"] .segments {
-    gap: 1rem;
-    justify-content: flex-start;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-  }
-  .header[data-layout="showroom"] .segments a {
-    padding-inline: 0.625rem;
-    font-size: var(--text-meta);
-    color: var(--inverse-foreground);
-    background: transparent;
-  }
-  .header[data-layout="showroom"] .segments a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-  .header[data-layout="showroom"] .showroom {
-    min-height: 2.5rem;
-    padding-inline: 1rem;
-    color: var(--foreground);
-    background: var(--panel);
-    border-color: var(--border);
-    border-radius: var(--radius-sm);
   }
 }

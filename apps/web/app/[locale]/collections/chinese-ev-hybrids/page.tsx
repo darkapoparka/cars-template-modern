@@ -1,6 +1,7 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { Button } from "@repo/design-system/components/ui/button";
 import { getCollectionPath, leadSite } from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, CarFront } from "lucide-react";
@@ -112,9 +113,28 @@ export default async function ChineseCollectionPage({
     }
 
     return (
-      <PublicMarketplaceFrame activeMode="buy" locale={locale}>
+      <PublicMarketplaceFrame
+        activeMode="buy"
+        desktopIntro={
+          isDealershipSite
+            ? {
+                title: copy.title,
+                description: copy.description,
+                eyebrow: copy.badge,
+                variant: "compact",
+              }
+            : undefined
+        }
+        locale={locale}
+      >
         <main className="mx-auto max-w-[90rem] px-3 py-6 sm:px-4 lg:px-6 lg:py-8">
-          <section className="overflow-hidden rounded-xl border border-border bg-card">
+          <section
+            className={
+              isDealershipSite
+                ? "overflow-hidden rounded-xl border border-border bg-card lg:hidden"
+                : "overflow-hidden rounded-xl border border-border bg-card"
+            }
+          >
             <div className="grid lg:grid-cols-[minmax(0,1fr)_20rem]">
               <div className="p-5 sm:p-7">
                 <Badge variant="secondary">{copy.badge}</Badge>
@@ -144,6 +164,11 @@ export default async function ChineseCollectionPage({
           </section>
 
           <section className="mt-6">
+            {isDealershipSite && (
+              <p className="mb-6 hidden rounded-xl border border-border bg-card p-5 text-meta text-muted-foreground lg:block">
+                {copy.truth}
+              </p>
+            )}
             <div className="mb-4">
               <h2 className="font-semibold text-dialog-title">
                 {copy.listingHeading}
@@ -190,7 +215,20 @@ export default async function ChineseCollectionPage({
     unstable_rethrow(error);
     log.error("Chinese EV and hybrid collection is unavailable.", { error });
     return (
-      <PublicMarketplaceFrame activeMode="buy" locale={locale}>
+      <PublicMarketplaceFrame
+        activeMode="buy"
+        desktopIntro={
+          isDealershipSite
+            ? {
+                title: copy.title,
+                description: copy.description,
+                eyebrow: copy.badge,
+                variant: "compact",
+              }
+            : undefined
+        }
+        locale={locale}
+      >
         <InventoryUnavailable locale={locale} />
       </PublicMarketplaceFrame>
     );

@@ -92,6 +92,7 @@ export default async function GuideOrArticlePage({
         })}
       />
       <PublicMarketplaceFrame
+        desktopIntro={{ title, description, eyebrow, variant: "compact" }}
         locale={normalizedLocale}
         showMobileFooter={false}
       >
@@ -105,7 +106,7 @@ export default async function GuideOrArticlePage({
               {language === "bg" ? "Всички материали" : "All content"}
             </Link>
 
-            <header className="pt-5 pb-4">
+            <header className="pt-5 pb-4 lg:hidden">
               <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
                 {eyebrow}
               </p>
@@ -131,7 +132,7 @@ export default async function GuideOrArticlePage({
             <div className="mt-6 space-y-3">
               {sections.map((section, index) => (
                 <section
-                  className="rounded-2xl bg-white px-5 py-5 sm:px-6 sm:py-6"
+                  className="rounded-2xl bg-white px-5 py-5 sm:px-6 sm:py-6 lg:border lg:border-border lg:shadow-panel"
                   key={section.heading.en}
                 >
                   <p className="font-semibold text-micro text-muted-foreground tabular-nums">

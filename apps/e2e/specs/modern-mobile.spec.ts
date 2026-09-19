@@ -1,5 +1,6 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, type Page, test } from "@playwright/test";
+import { settleModernPage } from "../fixtures/modern-visual-health";
 
 const mapEmbedPattern = /google\.com\/maps/;
 const contactHandoffPattern = /\/contact\?/;
@@ -28,8 +29,8 @@ const expectNoOverflow = async (page: Page) => {
 };
 const expectAccessible = async (page: Page) => {
   await expect(page.locator("main").first()).toBeVisible();
-  await page.waitForLoadState("networkidle");
-  await page.evaluate(() => document.fonts.ready);
+  // Assess the rendered page, not unrelated maps or speculative network requests.
+  await settleModernPage(page);
   const results = await new AxeBuilder({ page })
     .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
     .analyze();

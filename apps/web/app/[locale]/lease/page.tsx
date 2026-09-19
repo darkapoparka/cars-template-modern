@@ -17,13 +17,12 @@ import {
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { BadgeCheck } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getPublicMarketplaceListings } from "@/lib/public-marketplace-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { LeaseVehicleSelector } from "./lease-vehicle-selector";
 
@@ -163,6 +162,7 @@ export default async function LeasePage({
   return (
     <PublicMarketplaceFrame
       activeMode="lease"
+      desktopIntro={{ title: copy.title, description: copy.description }}
       locale={normalizedLocale}
       mobileDealerHeaderTone="clean"
       showMobileDealerHeader={vehicles.length === 0}
@@ -172,53 +172,26 @@ export default async function LeasePage({
         <div
           className={cn(
             marketplaceDiscoveryFrameClassName,
-            "py-0 max-lg:px-0 lg:py-9"
+            "py-0 max-lg:px-0",
+            desktopStyles.content
           )}
           data-slot="lease-content-frame"
         >
-          <section
-            className="relative isolate lg:min-h-[32rem] lg:overflow-hidden lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
-            data-slot="lease-hero"
-          >
-            <Image
-              alt=""
-              className="hidden object-cover object-[62%_center] lg:block lg:object-center"
-              fill
-              priority
-              sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/lease/day-night-financing-hero-v1.webp"
-            />
+          <section className="relative isolate" data-slot="lease-hero">
             <div
-              aria-hidden="true"
-              className="absolute inset-0 hidden bg-black/25 lg:block"
-            />
-
-            <div
-              className="relative z-10 flex items-center justify-center lg:min-h-[32rem] lg:p-8"
+              className="relative flex items-center justify-center"
               data-slot="lease-hero-content"
             >
               <div
-                className="w-full max-w-5xl overflow-hidden bg-card p-0 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/25"
+                className={cn(
+                  "w-full max-w-5xl overflow-hidden bg-card p-0",
+                  desktopStyles.panel
+                )}
                 data-slot="lease-finance-card"
               >
-                <div className="mx-auto hidden w-fit items-center gap-2 rounded-full bg-secondary px-3 py-1.5 font-medium text-micro lg:flex">
-                  <BadgeCheck aria-hidden="true" className="size-4" />
-                  {copy.badge}
-                </div>
-                <h1
-                  className={cn(
-                    "mx-auto mt-4 max-w-3xl text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg",
-                    vehicles.length > 0
-                      ? "hidden lg:block"
-                      : "sr-only lg:not-sr-only"
-                  )}
-                >
-                  {copy.title}
-                </h1>
-                <p className="mx-auto mt-2 hidden max-w-2xl text-center text-body text-muted-foreground lg:block">
-                  {copy.description}
-                </p>
-
+                {vehicles.length === 0 && (
+                  <h1 className="sr-only lg:hidden">{copy.title}</h1>
+                )}
                 <LeaseVehicleSelector
                   contactHref={localize("/contact")}
                   faqs={copy.faqs}

@@ -1,0 +1,116 @@
+.hero {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .hero {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 1.5rem 4rem;
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    isolation: isolate;
+  }
+  .scene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .scene > img {
+    object-fit: cover;
+    object-position: center 58%;
+  }
+  .hero[data-variant="page"],
+  .hero[data-variant="compact"] {
+    z-index: 0;
+  }
+  .hero[data-variant="page"] .scene {
+    opacity: 0.3;
+  }
+  .hero[data-variant="page"] .scene::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      var(--inverse),
+      transparent 30%,
+      transparent 70%,
+      var(--inverse)
+    );
+  }
+  .fallbackLeft,
+  .fallbackRight {
+    position: absolute;
+    bottom: 1rem;
+    width: 25%;
+    height: 15rem;
+  }
+  .fallbackLeft {
+    left: 0;
+  }
+  .fallbackRight {
+    right: 0;
+  }
+  .fallbackLeft img,
+  .fallbackRight img {
+    object-fit: contain;
+  }
+  .copy {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 64rem);
+    text-align: center;
+  }
+  .copy h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.13;
+    letter-spacing: var(--tracking-heading);
+    text-wrap: balance;
+  }
+  .description {
+    max-width: 43rem;
+    margin: 0.875rem auto 0;
+    font-size: var(--text-body);
+    line-height: 1.6;
+    color: var(--inverse-muted);
+    text-wrap: pretty;
+  }
+  .eyebrow {
+    margin: 0 0 0.75rem;
+    font-size: var(--text-micro);
+    font-weight: var(--font-weight-medium);
+    color: var(--inverse-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-label);
+  }
+  .hero[data-variant="landing"] {
+    padding: 3rem 1.5rem 2rem;
+  }
+  .hero[data-variant="landing"] .copy h1 {
+    font-size: clamp(2.75rem, 4.1vw, 4rem);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.08;
+  }
+  .hero[data-variant="landing"] .description {
+    font-size: 1.125rem;
+    color: var(--inverse-foreground);
+  }
+  .hero[data-variant="compact"] {
+    padding-block: 2.25rem 2.75rem;
+    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
+  }
+  .hero[data-variant="compact"] .copy {
+    max-width: 58rem;
+  }
+  .hero[data-variant="compact"] .copy h1 {
+    font-size: clamp(1.875rem, 2.5vw, 2.5rem);
+  }
+}

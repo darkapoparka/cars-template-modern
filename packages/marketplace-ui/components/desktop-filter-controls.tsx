@@ -13,7 +13,7 @@ import {
 } from "@repo/design-system/components/ui/dialog";
 import { cn } from "@repo/design-system/lib/utils";
 import { Check, ChevronDown, X } from "lucide-react";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
 import {
   NumericRangeFilter,
@@ -39,13 +39,13 @@ export const getDesktopQuickFilterClassName = (
   let surfaceClassName = "bg-control text-foreground hover:bg-control-hover";
   if (active) {
     surfaceClassName =
-      "border-zinc-950 bg-zinc-950 text-white hover:border-zinc-800 hover:bg-zinc-800";
+      "border-primary bg-primary text-primary-foreground hover:border-primary/90 hover:bg-primary/90";
   } else if (elevated) {
-    surfaceClassName = "bg-white text-zinc-800";
+    surfaceClassName = "bg-panel text-foreground hover:bg-control";
   }
 
   return cn(
-    "h-10 rounded-full border border-zinc-300 bg-white px-4 font-semibold text-compact-control text-zinc-800 shadow-sm transition-[background-color,border-color,box-shadow,color] duration-150 hover:border-zinc-400 hover:bg-zinc-50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+    "h-10 rounded-full border border-border px-4 font-medium text-compact-control shadow-none transition-colors duration-150 hover:border-muted-foreground/50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
     surfaceClassName
   );
 };
@@ -68,7 +68,7 @@ const ActiveQuickFilterClearButton = ({
   return (
     <Button
       aria-label={removeLabel}
-      className="h-11 w-10 shrink-0 rounded-r-full rounded-l-none border-0 border-white/30 border-l bg-brand px-0 text-brand-foreground shadow-none transition-colors duration-150 hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
+      className="h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-150 hover:bg-primary/90 hover:text-primary-foreground focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
       data-slot="desktop-quick-filter-clear"
       onClick={onClear}
       title={removeLabel}
@@ -344,6 +344,7 @@ export const DesktopQuickRangeDialog = ({
   step,
   thumbLabels,
   title,
+  triggerIcon,
 }: {
   active: boolean;
   className?: string;
@@ -367,6 +368,7 @@ export const DesktopQuickRangeDialog = ({
   step: number;
   thumbLabels: readonly [string, string];
   title: string;
+  triggerIcon?: ReactNode;
 }) => {
   const [open, setOpen] = useState(false);
   const [draftRange, setDraftRange] = useState<NumericRangeValue>(() =>
@@ -409,6 +411,7 @@ export const DesktopQuickRangeDialog = ({
         type="button"
         variant={active ? "default" : "secondary"}
       >
+        {triggerIcon}
         <span className="min-w-0 truncate">{label}</span>
         <ChevronDown
           aria-hidden="true"

@@ -18,7 +18,7 @@ export const DealerDesktopHeader = ({
   children,
   homeHref,
   locale,
-  layout = "default",
+  layout = "showroom",
   site = publicSite,
 }: {
   activeMode?: MarketplaceMode | null;

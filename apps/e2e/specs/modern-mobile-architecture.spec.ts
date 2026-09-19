@@ -70,7 +70,7 @@ for (const width of [390, 1440]) {
         .tap();
     } else {
       await page
-        .getByLabel("Търсене на автомобили", { exact: true })
+        .getByRole("combobox", { name: "Търсене на автомобили", exact: true })
         .fill("M4");
       await page.getByText("BMW M4 Competition", { exact: true }).click();
     }

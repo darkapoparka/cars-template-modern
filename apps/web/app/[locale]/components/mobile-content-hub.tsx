@@ -8,6 +8,7 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
+import { cn } from "@repo/design-system/lib/utils";
 import {
   DealerMobileBrandBar,
   DealerMobileHeaderIcon,
@@ -26,7 +27,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 import {
   type ContentFilter,
   type ContentSearch,
@@ -36,11 +37,53 @@ import {
   parseContentSearch,
   serializeContentSearch,
 } from "../../../lib/public-content";
+import desktopStyles from "./public-desktop-layout.module.css";
 
 interface MobileContentHubProps {
   initialSearch: ContentSearch;
   items: readonly PublicContentCard[];
   locale: "bg" | "en";
+}
+
+function DesktopContentSearch({
+  isBg,
+  ready,
+  query,
+  inputRef,
+  onQueryChange,
+  onClear,
+}: {
+  isBg: boolean;
+  ready: boolean;
+  query: string;
+  inputRef: RefObject<HTMLInputElement | null>;
+  onQueryChange: (value: string) => void;
+  onClear: () => void;
+}) {
+  const label = isBg ? "Търси съвети и статии" : "Search guides and articles";
+  return (
+    <search aria-label={label} className={desktopStyles.editorialSearch}>
+      <Search aria-hidden="true" size={20} />
+      <input
+        aria-label={label}
+        disabled={!ready}
+        onChange={(event) => onQueryChange(event.target.value)}
+        placeholder={label}
+        ref={inputRef}
+        type="search"
+        value={query}
+      />
+      {query && (
+        <button
+          aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
+          onClick={onClear}
+          type="button"
+        >
+          <X aria-hidden="true" size={18} />
+        </button>
+      )}
+    </search>
+  );
 }
 
 export const MobileContentHub = ({
@@ -54,6 +97,13 @@ export const MobileContentHub = ({
   const [filterOpen, setFilterOpen] = useState(false);
   const filterTrigger = useRef<HTMLButtonElement>(null);
   const searchInput = useRef<HTMLInputElement>(null);
+  const desktopSearchInput = useRef<HTMLInputElement>(null);
+  const focusSearch = () => {
+    const target = window.matchMedia("(min-width: 1024px)").matches
+      ? desktopSearchInput
+      : searchInput;
+    target.current?.focus({ preventScroll: true });
+  };
   const isBg = locale === "bg";
   const localize = (path: string) => getLocalizedPath(locale, path);
   const visibleItems = filterPublicContent(items, { query, filter }, locale);
@@ -84,7 +134,12 @@ export const MobileContentHub = ({
   };
 
   return (
-    <main className="min-h-[100dvh] bg-background pb-4 text-zinc-950">
+    <main
+      className={cn(
+        "min-h-[100dvh] bg-background pb-4 text-zinc-950",
+        desktopStyles.editorial
+      )}
+    >
       <section className="bg-zinc-950 text-white lg:hidden">
         <div className="mx-auto w-full max-w-lg">
           <MobileDealerChrome
@@ -157,7 +212,7 @@ export const MobileContentHub = ({
                   disabled={!ready}
                   onClick={() => {
                     updateSearch({ query: "", filter });
-                    searchInput.current?.focus({ preventScroll: true });
+                    focusSearch();
                   }}
                   type="button"
                 >
@@ -169,7 +224,24 @@ export const MobileContentHub = ({
         </div>
       </section>
 
-      <div className="mx-auto w-full max-w-lg lg:max-w-[90rem]">
+      <DesktopContentSearch
+        inputRef={desktopSearchInput}
+        isBg={isBg}
+        onClear={() => {
+          updateSearch({ query: "", filter });
+          focusSearch();
+        }}
+        onQueryChange={(value) => updateSearch({ query: value, filter })}
+        query={query}
+        ready={ready}
+      />
+
+      <div
+        className={cn(
+          "mx-auto w-full max-w-lg lg:max-w-[90rem]",
+          desktopStyles.editorialBody
+        )}
+      >
         <div className="relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8">
           <div className="px-4 lg:px-6">
             <MobilePillRail className="gap-2">
@@ -190,7 +262,7 @@ export const MobileContentHub = ({
 
           <div className="px-4 pt-3 pb-2 lg:px-6">
             <div className="flex items-center justify-between gap-3">
-              <h1 className="font-semibold text-section-title tracking-heading lg:text-section-title-lg">
+              <h1 className="font-semibold text-section-title tracking-heading lg:hidden">
                 {isBg ? "Съвети и статии" : "Guides and articles"}
               </h1>
               <output
@@ -202,7 +274,7 @@ export const MobileContentHub = ({
             </div>
           </div>
 
-          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-3 lg:px-6">
+          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-5 lg:px-6 xl:grid-cols-3">
             {visibleItems.map((item, index) => (
               <Link
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
@@ -220,11 +292,14 @@ export const MobileContentHub = ({
                     className="object-cover"
                     fill
                     loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, 260px"
+                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, (max-width: 1023px) 260px, (min-width: 1280px) 30vw, 44vw"
                     src={item.image}
                   />
                 </div>
-                <div className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3">
+                <div
+                  className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3"
+                  data-slot="content-card-body"
+                >
                   <div
                     className="grid grid-cols-1 items-center gap-0 font-semibold text-micro text-muted-foreground uppercase tracking-label min-[360px]:flex min-[360px]:flex-wrap min-[360px]:gap-x-1.5"
                     data-slot="content-card-meta"
@@ -266,7 +341,7 @@ export const MobileContentHub = ({
                 disabled={!ready}
                 onClick={() => {
                   updateSearch({ query: "", filter: "all" });
-                  searchInput.current?.focus({ preventScroll: true });
+                  focusSearch();
                 }}
                 type="button"
               >

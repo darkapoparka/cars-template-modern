@@ -1,75 +1,7 @@
-.hero,
 .discoveryContent {
   display: none;
 }
 @media (min-width: 1024px) {
-  .hero {
-    position: relative;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 3rem 1.5rem 1.75rem;
-    color: var(--inverse-foreground);
-    background: var(--inverse);
-    isolation: isolate;
-  }
-  .scene {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
-  }
-  .scene > img {
-    object-fit: cover;
-    object-position: center bottom;
-  }
-  .fallbackLeft,
-  .fallbackRight {
-    position: absolute;
-    bottom: 2rem;
-    width: 25%;
-    height: 16rem;
-  }
-  .fallbackLeft {
-    left: 0;
-  }
-  .fallbackRight {
-    right: 0;
-  }
-  .fallbackLeft img,
-  .fallbackRight img {
-    object-fit: contain;
-  }
-  .heroCopy {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-  }
-  .heroCopy h1 {
-    margin: 0;
-    font-size: clamp(2.75rem, 4vw, 3.875rem);
-    font-weight: var(--font-weight-bold);
-    line-height: 1.0625;
-    color: var(--inverse-foreground);
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.035em;
-    text-wrap: balance;
-    background: linear-gradient(
-      180deg,
-      var(--inverse-foreground) 35%,
-      var(--inverse-muted)
-    );
-    background-clip: text;
-  }
-  .heroCopy p {
-    margin: 0.5rem 0 0;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    color: var(--inverse-foreground);
-  }
   .heroSearch {
     position: relative;
     z-index: 3;

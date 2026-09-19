@@ -10,6 +10,7 @@ import {
   sellCategoryLabels,
   serializeSellVehicleDraft,
 } from "@/lib/sell-vehicle-draft";
+import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicEnquiryForm } from "../components/public-enquiry-form";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { pageCopy } from "./copy";
@@ -38,37 +39,38 @@ export function SellContactHandoff({
     sellCategoryAssets.car;
   const sellEditHref = `${localize("/sell")}?${serializeSellVehicleDraft(draft)}`;
   return (
-    <PublicMarketplaceFrame activeMode="sell" locale={locale}>
+    <PublicMarketplaceFrame
+      activeMode="sell"
+      desktopIntro={{
+        title: copy.sellHandoffTitle,
+        description: copy.sellHandoffDescription,
+      }}
+      locale={locale}
+    >
       <main className="lg:min-h-[38rem]">
         <div
           className={cn(
             marketplaceDiscoveryFrameClassName,
-            "py-5 sm:py-7 lg:py-9"
+            "py-5 sm:py-7",
+            desktopStyles.content
           )}
         >
           <section
-            className="relative isolate overflow-hidden rounded-2xl bg-card lg:min-h-[26rem] lg:rounded-xl lg:border lg:border-border lg:shadow-panel"
+            className="relative isolate overflow-hidden rounded-2xl bg-card lg:overflow-visible lg:bg-transparent"
             data-slot="sell-contact-handoff"
           >
-            <Image
-              alt=""
-              className="hidden object-cover object-center lg:block"
-              fill
-              priority
-              sizes="(min-width: 1792px) calc(100vw - 96px), (min-width: 1440px) 1360px, calc(100vw - 48px)"
-              src="/images/sell/day-night-sell-centered-hero-v2.webp"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 hidden bg-black/10 lg:block"
-            />
-
-            <div className="relative z-10 flex items-center justify-center lg:min-h-[26rem] lg:p-6">
-              <div className="w-full max-w-2xl rounded-2xl bg-card p-5 sm:p-6 lg:rounded-xl lg:border lg:border-border/80 lg:p-7 lg:shadow-2xl lg:shadow-black/20">
-                <h1 className="text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg">
+            <div className="relative flex items-center justify-center">
+              <div
+                className={cn(
+                  "w-full max-w-2xl rounded-2xl bg-card p-5 sm:p-6",
+                  desktopStyles.panel,
+                  desktopStyles.narrowPanel
+                )}
+              >
+                <h1 className="text-balance text-center font-semibold text-page-title tracking-tight sm:text-page-title-lg lg:hidden">
                   {copy.sellHandoffTitle}
                 </h1>
-                <p className="mx-auto mt-2 max-w-lg text-center text-body text-muted-foreground">
+                <p className="mx-auto mt-2 max-w-lg text-center text-body text-muted-foreground lg:hidden">
                   {copy.sellHandoffDescription}
                 </p>
 

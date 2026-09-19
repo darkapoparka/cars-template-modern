@@ -16,6 +16,10 @@ import {
   type MarketplaceMode,
   MobileDealerChrome,
 } from "@repo/marketplace-ui";
+import {
+  DealerDesktopHero,
+  type DealerDesktopHeroProps,
+} from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { Globe2, Heart, MapPin, Phone, Plus } from "lucide-react";
 import Link from "next/link";
@@ -28,6 +32,7 @@ interface PublicMarketplaceFrameProps {
   activeMode?: MarketplaceMode | null;
   children: ReactNode;
   dealerActive?: boolean;
+  desktopIntro?: Omit<DealerDesktopHeroProps, "children">;
   locale: string;
   mastheadVariant?: "compact" | "discovery";
   mobileDealerAction?: ReactNode;
@@ -68,6 +73,7 @@ export const PublicMarketplaceFrame = ({
   activeMode = null,
   children,
   dealerActive = false,
+  desktopIntro,
   locale,
   mastheadVariant = "discovery",
   mobileDealerAction,
@@ -314,6 +320,7 @@ export const PublicMarketplaceFrame = ({
         id="main-content"
         tabIndex={-1}
       >
+        {desktopIntro ? <DealerDesktopHero {...desktopIntro} /> : null}
         {children}
       </div>
 

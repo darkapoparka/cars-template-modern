@@ -149,8 +149,12 @@
     place-items: center;
     width: 2.125rem;
     height: 2.125rem;
+    background: var(--control);
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
+    transition:
+      background-color var(--duration-interaction),
+      color var(--duration-interaction);
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media-badges"] {
     top: 0.75rem;
@@ -170,5 +174,24 @@
   .card[data-presentation="showroom"] a:focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: -2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card[data-presentation="showroom"]:hover {
+    border-color: var(--muted-foreground);
+    box-shadow: var(--elevation-card-hover);
+  }
+  .card[data-presentation="showroom"]:hover
+    [data-slot="showroom-vehicle-open"] {
+    color: var(--selected-foreground);
+    background: var(--selected);
+  }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+  .card[data-presentation="showroom"],
+  .card[data-presentation="showroom"] [data-slot="showroom-vehicle-open"] {
+    transition: none;
   }
 }

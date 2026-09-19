@@ -77,12 +77,41 @@ const MobileLoadingHeader = ({ mobileTone }: { mobileTone?: "leasing" }) => (
   </div>
 );
 
+/** Keep the dealership masthead stable while route data resolves. */
+const DealerLoadingHeader = ({
+  variant,
+}: {
+  variant: "discovery" | "results";
+}) => (
+  <div className="hidden lg:block" data-slot="dealer-desktop-loading">
+    <DealerDesktopHeader
+      activeMode={null}
+      locale={publicSite.market.defaultLocale}
+    />
+    <div
+      aria-hidden="true"
+      className={desktopStyles.loadingHero}
+      data-variant={variant}
+    >
+      <div className={desktopStyles.loadingTitle} />
+      <div className={desktopStyles.loadingSearch}>
+        {loadingFilters.slice(0, 4).map((filter) => (
+          <div key={filter} />
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
 const DesktopLoadingHeader = ({
   variant,
 }: {
   variant: "discovery" | "results";
 }) => {
   const isResults = variant === "results";
+  if (isDealershipSite) {
+    return <DealerLoadingHeader variant={variant} />;
+  }
 
   return (
     <div className="hidden lg:block">
@@ -219,28 +248,34 @@ export const PublicRouteLoading = ({
   </div>
 );
 
-const ListingDetailLoadingHeader = () => (
-  <header className="hidden bg-card lg:block">
-    <div className="mx-auto grid h-24 max-w-[96rem] grid-cols-[1fr_auto_1fr] items-center gap-5 px-6 xl:px-10">
-      <div className="flex items-center gap-2.5">
-        <LeadSiteMark />
-        <span className="font-semibold text-xl tracking-tight">
-          {leadSite.name}
-        </span>
+const ListingDetailLoadingHeader = () =>
+  isDealershipSite ? (
+    <DealerDesktopHeader
+      activeMode={null}
+      locale={publicSite.market.defaultLocale}
+    />
+  ) : (
+    <header className="hidden bg-card lg:block">
+      <div className="mx-auto grid h-24 max-w-[96rem] grid-cols-[1fr_auto_1fr] items-center gap-5 px-6 xl:px-10">
+        <div className="flex items-center gap-2.5">
+          <LeadSiteMark />
+          <span className="font-semibold text-xl tracking-tight">
+            {leadSite.name}
+          </span>
+        </div>
+        <div className="flex animate-pulse items-center gap-4 motion-reduce:animate-none">
+          {loadingCards.slice(0, 3).map((item) => (
+            <div className="h-20 w-28 rounded-lg bg-secondary" key={item} />
+          ))}
+        </div>
+        <div className="ml-auto flex animate-pulse items-center gap-2 motion-reduce:animate-none">
+          <div className="h-10 w-28 rounded-xl bg-secondary" />
+          <div className="size-10 rounded-full bg-secondary" />
+          <div className="size-10 rounded-full bg-secondary" />
+        </div>
       </div>
-      <div className="flex animate-pulse items-center gap-4 motion-reduce:animate-none">
-        {loadingCards.slice(0, 3).map((item) => (
-          <div className="h-20 w-28 rounded-lg bg-secondary" key={item} />
-        ))}
-      </div>
-      <div className="ml-auto flex animate-pulse items-center gap-2 motion-reduce:animate-none">
-        <div className="h-10 w-28 rounded-xl bg-secondary" />
-        <div className="size-10 rounded-full bg-secondary" />
-        <div className="size-10 rounded-full bg-secondary" />
-      </div>
-    </div>
-  </header>
-);
+    </header>
+  );
 
 export const ListingDetailLoading = () => (
   <div
@@ -326,10 +361,13 @@ export const ListingDetailLoading = () => (
 );
 
 import { leadSite } from "@repo/marketplace";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import {
   DealerMobileBrandBar,
   LeadSiteMark,
   MobileDealerChrome,
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
+import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
+import desktopStyles from "./public-desktop-layout.module.css";

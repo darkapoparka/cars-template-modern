@@ -1,4 +1,5 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
+import { cn } from "@repo/design-system/lib/utils";
 import {
   type ExternalInventoryDiscoveryListing,
   type ExternalInventoryDiscoveryResponse,
@@ -18,6 +19,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { BlankImportRequestLink } from "./blank-import-request-link";
+import styles from "./external-import-listings.module.css";
 
 interface ExternalImportListingsProps {
   data: readonly ExternalInventoryDiscoveryResponse[];
@@ -273,7 +275,10 @@ export const ExternalImportListings = ({
 
     return (
       <div
-        className="flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-5 text-center lg:min-h-44 lg:pb-6"
+        className={cn(
+          "flex min-h-36 flex-col items-center justify-center overflow-hidden rounded-xl bg-card px-5 pb-5 text-center lg:min-h-44 lg:pb-6",
+          styles.emptyState
+        )}
         data-provider-state={unavailableFeed?.status ?? "unavailable"}
       >
         {unavailableFeed?.status === "disabled" ? (

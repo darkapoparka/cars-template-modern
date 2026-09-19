@@ -1,0 +1,239 @@
+@media (min-width: 1024px) {
+  .content {
+    width: min(92%, var(--layout-wide-max));
+    padding-block: 2rem 4rem;
+    margin-inline: auto;
+  }
+  .panel {
+    position: relative;
+    z-index: 21;
+    width: 100%;
+    max-width: 72rem;
+    padding: 2rem;
+    margin: -3.5rem auto 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--elevation-panel);
+  }
+  .panel h2 {
+    margin: 0 0 1.25rem;
+    font-size: var(--text-dialog-title);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-dialog-title--line-height);
+  }
+  .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+  }
+  .panel
+    :is([data-slot="input"], select, [data-slot="textarea"]):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  .contactGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .contactCard {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    min-height: 7.5rem;
+    padding: 1.5rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    transition:
+      border-color var(--duration-interaction),
+      box-shadow var(--duration-interaction);
+  }
+  .contactCard > svg {
+    flex-shrink: 0;
+    color: var(--muted-foreground);
+  }
+  .contactCard small,
+  .contactCard strong {
+    display: block;
+  }
+  .contactCard small {
+    margin-bottom: 0.375rem;
+    font-size: var(--text-meta);
+    color: var(--muted-foreground);
+  }
+  .contactCard strong {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-semibold);
+  }
+  .contactCard:hover {
+    border-color: var(--muted-foreground);
+    box-shadow: var(--elevation-panel);
+  }
+  .contactCard:focus-visible,
+  .serviceCard:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+  .serviceGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .serviceCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    transition:
+      border-color var(--duration-interaction),
+      box-shadow var(--duration-interaction);
+  }
+  .serviceCard:hover {
+    border-color: var(--muted-foreground);
+    box-shadow: var(--elevation-panel);
+  }
+  .serviceCard strong {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    font-size: var(--text-body);
+  }
+  .serviceCard p {
+    margin-top: 0.5rem;
+    font-size: var(--text-meta);
+    line-height: 1.6;
+    color: var(--muted-foreground);
+  }
+  .sectionTitle {
+    font-size: var(--text-section-title-lg);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-section-title-lg--line-height);
+  }
+}
+
+.editorialSearch {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .editorialBody {
+    width: min(92%, var(--layout-wide-max));
+    max-width: none;
+  }
+  .editorialSearch {
+    position: relative;
+    z-index: 21;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    width: min(80%, 44rem);
+    min-height: 3.5rem;
+    padding: 0.75rem 1rem;
+    margin: -1.75rem auto 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--elevation-panel);
+  }
+  .editorialSearch > svg {
+    flex-shrink: 0;
+    color: var(--muted-foreground);
+  }
+  .editorialSearch input {
+    width: 100%;
+    min-width: 0;
+    font-size: var(--text-body);
+    outline: none;
+    background: transparent;
+  }
+  .editorialSearch:focus-within {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+  .editorialSearch button {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-sm);
+  }
+  .editorialSearch button:hover {
+    background: var(--control);
+  }
+  .editorial [data-slot="content-card"] {
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--elevation-panel);
+    transition:
+      box-shadow var(--duration-interaction),
+      border-color var(--duration-interaction);
+  }
+  .editorial [data-slot="content-card"]:hover {
+    border-color: var(--muted-foreground);
+    box-shadow: var(--elevation-card-hover);
+  }
+  .editorial [data-slot="content-card-media"] {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+  }
+  .editorial [data-slot="content-card-body"] {
+    gap: 0.375rem;
+    padding: 1.25rem;
+  }
+  .editorial [data-slot="content-card-meta"] {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .narrowPanel {
+    max-width: 48rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .loadingHero {
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+    padding: 3rem 4% 2.5rem;
+    background: var(--inverse);
+  }
+  .loadingTitle {
+    width: min(80%, 32rem);
+    height: 3rem;
+    background: var(--inverse-control);
+    border-radius: var(--radius-sm);
+  }
+  .loadingSearch {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    width: min(100%, 55rem);
+    padding: 1.25rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+  }
+  .loadingSearch > div {
+    height: 3rem;
+    background: var(--control);
+    border-radius: var(--radius-sm);
+  }
+  .loadingHero[data-variant="results"] {
+    padding-block: 1.5rem;
+  }
+  .loadingHero[data-variant="results"] .loadingTitle {
+    display: none;
+  }
+}

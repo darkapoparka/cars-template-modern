@@ -76,6 +76,7 @@ test("desktop collection composition enters the shell through a server-created s
 test("desktop component styles use shared tokens, not a new literal palette or data-hiding cascade", () => {
   for (const file of [
     "dealer-desktop-header",
+    "dealer-desktop-hero",
     "dealer-desktop-toolbar",
     "dealer-desktop-discovery",
     "vehicle-card-desktop",

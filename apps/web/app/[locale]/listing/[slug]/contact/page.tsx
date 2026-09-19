@@ -357,7 +357,15 @@ const ContactListingPage = async ({
   )}${destinationQuery}`;
 
   return (
-    <PublicMarketplaceFrame activeMode="buy" locale={normalizedLocale}>
+    <PublicMarketplaceFrame
+      activeMode="buy"
+      desktopIntro={{
+        title: copy.title,
+        description: listing.title,
+        variant: "compact",
+      }}
+      locale={normalizedLocale}
+    >
       <main className="min-h-[calc(100vh-12rem)] bg-background px-4 py-8 lg:py-12">
         <div className="mx-auto max-w-2xl">
           <Button
@@ -372,7 +380,7 @@ const ContactListingPage = async ({
           </Button>
 
           <section className="rounded-2xl border border-border bg-card p-5 shadow-panel sm:p-8">
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 lg:hidden">
               <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-control text-foreground">
                 <MessageSquareText aria-hidden="true" className="size-5" />
               </span>

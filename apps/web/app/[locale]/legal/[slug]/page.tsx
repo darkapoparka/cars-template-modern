@@ -170,7 +170,10 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
   const { description, sections, title } = fallbackPage;
 
   return (
-    <PublicMarketplaceFrame locale={normalizedLocale}>
+    <PublicMarketplaceFrame
+      desktopIntro={{ title, description, variant: "compact" }}
+      locale={normalizedLocale}
+    >
       <main className="mx-auto min-h-[60dvh] max-w-5xl px-4 py-8 lg:px-6 lg:py-10">
         <Button
           asChild
@@ -187,7 +190,7 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
         </Button>
 
         <article className="mt-3 rounded-xl border border-border bg-card p-5 sm:p-8">
-          <header className="max-w-3xl border-border border-b pb-6">
+          <header className="max-w-3xl border-border border-b pb-6 lg:hidden">
             <span className="grid size-10 place-items-center rounded-full bg-secondary text-muted-foreground">
               <FileText aria-hidden="true" className="size-5" />
             </span>

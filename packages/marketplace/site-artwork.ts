@@ -2,7 +2,7 @@ import type { PublicSiteArtwork } from "@repo/marketplace-domain/site-config";
 
 /** Template artwork defaults. Dealer copies override roles in lead-site.ts. */
 export const defaultSiteArtwork: PublicSiteArtwork = {
-  heroScene: "/lead-car-showroom-scene-v2.webp",
+  heroScene: "/lead-car-showroom-scene-v3.webp",
   heroLeft: "/lead-car-graphite-v3.webp",
   heroRight: "/lead-car-silver-v3.webp",
   contactHero: "/day-night-contact-hero-v1.webp",

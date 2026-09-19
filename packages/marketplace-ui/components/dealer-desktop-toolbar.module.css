@@ -6,13 +6,13 @@
     position: relative;
     z-index: 42;
     display: block;
-    width: min(calc(100% - var(--layout-gutter) * 2), var(--layout-wide-max));
+    width: min(92%, var(--layout-wide-max));
     padding: var(--layout-gutter);
-    margin: 0 auto var(--layout-section-gap);
+    margin: 1.5rem auto var(--layout-section-gap);
     color: var(--foreground);
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 0 0 var(--radius-shell) var(--radius-shell);
+    border-radius: var(--radius-vehicle);
   }
   .queryRow {
     display: flex;

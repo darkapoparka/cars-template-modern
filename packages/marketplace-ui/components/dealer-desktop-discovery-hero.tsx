@@ -1,65 +1,28 @@
-import { publicSite } from "@repo/marketplace/site-config";
-import Image from "next/image";
-import type { ComponentProps } from "react";
 import styles from "./dealer-desktop-discovery.module.css";
+import { DealerDesktopHero } from "./dealer-desktop-hero";
 import { DealerDesktopServiceLinks } from "./dealer-desktop-service-links";
+import type { DealerDesktopToolbarProps } from "./dealer-desktop-toolbar";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
 
-type DiscoveryHeroProps = ComponentProps<typeof DealerDesktopToolbar>;
-
-export const DealerDesktopDiscoveryHero = ({
+export function DealerDesktopDiscoveryHero({
   locale,
   totalListings,
   ...toolbarProps
-}: DiscoveryHeroProps) => {
-  const isBg = locale?.startsWith("bg") ?? false;
+}: DealerDesktopToolbarProps) {
+  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const count = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US").format(
     totalListings
   );
   return (
-    <section className={styles.hero} data-slot="dealer-desktop-home-hero">
-      <div aria-hidden="true" className={styles.scene}>
-        {publicSite.artwork.heroScene ? (
-          <Image
-            alt=""
-            data-slot="desktop-hero-scene"
-            fetchPriority="high"
-            fill
-            loading="lazy"
-            sizes="(min-width: 1024px) 100vw, 0px"
-            src={publicSite.artwork.heroScene}
-          />
-        ) : (
-          <>
-            <div className={styles.fallbackLeft}>
-              <Image
-                alt=""
-                fill
-                loading="lazy"
-                sizes="(min-width: 1024px) 25vw, 0px"
-                src={publicSite.artwork.heroLeft}
-              />
-            </div>
-            <div className={styles.fallbackRight}>
-              <Image
-                alt=""
-                fill
-                loading="lazy"
-                sizes="(min-width: 1024px) 25vw, 0px"
-                src={publicSite.artwork.heroRight}
-              />
-            </div>
-          </>
-        )}
-      </div>
-      <div className={styles.heroCopy}>
-        <h1>{isBg ? "Намерете своя автомобил." : "Find Your Next Drive"}</h1>
-        <p>
-          {isBg
-            ? `Разгледайте и сравнете ${count} автомобила.`
-            : `Explore and compare ${count} available vehicles.`}
-        </p>
-      </div>
+    <DealerDesktopHero
+      description={
+        isBg
+          ? `Разгледайте и сравнете ${count} автомобила.`
+          : `Explore and compare ${count} vehicles.`
+      }
+      title={isBg ? "Намерете своя автомобил." : "Find Your Next Drive"}
+      variant="landing"
+    >
       <div className={styles.heroSearch}>
         <DealerDesktopToolbar
           {...toolbarProps}
@@ -69,6 +32,6 @@ export const DealerDesktopDiscoveryHero = ({
         />
       </div>
       <DealerDesktopServiceLinks locale={locale} placement="hero" />
-    </section>
+    </DealerDesktopHero>
   );
-};
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { captureException } from "@sentry/nextjs";
 import { Home, RotateCcw } from "lucide-react";
 import Link from "next/link";
@@ -27,13 +28,22 @@ export const PublicErrorState = ({ error, reset }: PublicErrorStateProps) => {
   }, [error]);
 
   return (
-    <PublicRecoveryFrame locale={params.locale === "en" ? "en" : "bg"}>
+    <PublicRecoveryFrame
+      desktopTitle={copy.title}
+      locale={params.locale === "en" ? "en" : "bg"}
+    >
       <main className="grid flex-1 place-items-center px-4 py-10">
         <section className="w-full max-w-lg rounded-xl border border-border bg-card p-6 text-center sm:p-8">
           <span className="mx-auto grid size-12 place-items-center rounded-full bg-secondary font-semibold text-muted-foreground text-xl">
             !
           </span>
-          <h1 className="mt-5 font-semibold text-2xl tracking-tight">
+          <h1
+            className={
+              isDealershipSite
+                ? "mt-5 font-semibold text-2xl tracking-tight lg:hidden"
+                : "mt-5 font-semibold text-2xl tracking-tight"
+            }
+          >
             {copy.title}
           </h1>
           <p className="mt-2 text-muted-foreground text-sm leading-6">

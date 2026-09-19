@@ -11,6 +11,7 @@ import {
 } from "@repo/marketplace/site-config";
 import {
   ArrowRight,
+  Banknote,
   CarFront,
   ChevronDown,
   Grid2X2,
@@ -45,6 +46,7 @@ import {
 export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
   const {
     filters,
+    filterCount,
     locale,
     query,
     setQuery,
@@ -200,6 +202,7 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
               text("Максимална цена", "Maximum price"),
             ]}
             title={text("Цена", "Price range")}
+            triggerIcon={<Banknote aria-hidden="true" size={17} />}
           />
         </div>
         <div className={styles.searchRow}>
@@ -233,6 +236,10 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
             variant="outline"
           >
             <SlidersHorizontal aria-hidden="true" size={17} />
+            <span>
+              {text("Филтри", "Filters")}
+              {filterCount > 0 ? ` (${filterCount})` : ""}
+            </span>
           </Button>
           <Button
             className={styles.submit}
