@@ -1,4 +1,6 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-mobile-header-icon";
 import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
@@ -29,7 +31,7 @@ export function MobileAboutContact({
           <a
             aria-label={isBg ? "Отвори местоположението" : "Open location"}
             className={mobileHeaderIconActionClassName}
-            href={leadSite.mapsUrl}
+            href={withBasePath(leadSite.mapsUrl)}
             rel="noreferrer"
             target="_blank"
           >
@@ -46,7 +48,7 @@ export function MobileAboutContact({
       </MobileDealerServiceHero>
       <div className="relative -mt-3 rounded-t-2xl bg-background px-4 pt-4 pb-6">
         <div className="grid gap-2">
-          <a className={cardClassName} href={leadSite.phoneHref}>
+          <a className={cardClassName} href={withBasePath(leadSite.phoneHref)}>
             <DealerUiIcon
               className="size-[22px] shrink-0 text-zinc-600"
               name="phone"
@@ -66,7 +68,7 @@ export function MobileAboutContact({
           </a>
           <a
             className={cardClassName}
-            href={leadSite.mapsUrl}
+            href={withBasePath(leadSite.mapsUrl)}
             rel="noreferrer"
             target="_blank"
           >
@@ -79,7 +81,7 @@ export function MobileAboutContact({
                 {isBg ? "Посетете шоурума" : "Visit the showroom"}
               </span>
               <span className="mt-1 block text-meta text-zinc-600">
-                {leadSite.address}, {leadSite.city}
+                {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
               </span>
             </span>
             <DealerUiIcon

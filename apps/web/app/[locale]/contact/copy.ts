@@ -104,3 +104,30 @@ export const pageCopy = {
     ],
   },
 } as const;
+
+/** Legacy trade-in entry has no completed draft; do not claim vehicle details are ready. */
+export const getSellContactCopy = (
+  locale: "en" | "bg",
+  hasDetails: boolean
+) => {
+  const copy = pageCopy[locale];
+  if (hasDetails) {
+    return copy;
+  }
+  return {
+    ...copy,
+    sellHandoffTitle:
+      locale === "bg"
+        ? "Продайте или заменете автомобила си"
+        : "Sell or trade in your vehicle",
+    sellHandoffDescription:
+      locale === "bg"
+        ? "Добавете VIN или марка, модел, година и пробег, за да подготвите разговор за оценка. Нищо не се изпраща автоматично."
+        : "Add a VIN or the make, model, year and mileage to prepare an appraisal conversation. Nothing is sent automatically.",
+    sellHandoffEditAction:
+      locale === "bg" ? "Добавете данни за автомобила" : "Add vehicle details",
+    sellVehicleLabel:
+      locale === "bg" ? "Добавете данни за автомобила" : "Add vehicle details",
+    sellHandoffAction: locale === "bg" ? "Обадете се" : "Call us",
+  };
+};

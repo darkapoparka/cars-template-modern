@@ -19,7 +19,6 @@ import {
   Store,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { getOrganizationInitials } from "../lib/organization-directory-card-policy";
 import type {
@@ -32,6 +31,7 @@ import type {
   OrganizationDirectorySignal,
   OrganizationDirectoryTradeLane,
 } from "../lib/organization-directory-card-types";
+import Image from "./public-image";
 
 const signalAppearance = {
   business_verified: {

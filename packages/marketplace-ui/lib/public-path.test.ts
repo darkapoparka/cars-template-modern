@@ -6,10 +6,10 @@ import {
 } from "./public-path";
 
 describe("getLocalizedPublicPath", () => {
-  it("keeps configured Bulgarian paths unprefixed", () => {
-    expect(getLocalizedPublicPath("bg", "/cars")).toBe("/cars");
+  it("keeps both languages explicit", () => {
+    expect(getLocalizedPublicPath("bg", "/cars")).toBe("/bg/cars");
     expect(getLocalizedPublicPath("bg-BG", "listing/example")).toBe(
-      "/listing/example"
+      "/bg/listing/example"
     );
   });
 
@@ -19,14 +19,14 @@ describe("getLocalizedPublicPath", () => {
   });
 
   it("normalizes paths when no locale is supplied", () => {
-    expect(getLocalizedPublicPath(undefined, "dealers")).toBe("/dealers");
+    expect(getLocalizedPublicPath(undefined, "dealers")).toBe("/bg/dealers");
   });
 });
 
 describe("getCanonicalPublicPath", () => {
-  it("removes the internal default-locale route prefix", () => {
-    expect(getCanonicalPublicPath("bg", "/bg")).toBe("/");
-    expect(getCanonicalPublicPath("bg", "/bg/cars")).toBe("/cars");
+  it("retains the explicit default-locale route prefix", () => {
+    expect(getCanonicalPublicPath("bg", "/bg")).toBe("/bg");
+    expect(getCanonicalPublicPath("bg", "/bg/cars")).toBe("/bg/cars");
   });
 
   it("keeps the public English locale prefix exactly once", () => {
@@ -43,7 +43,7 @@ describe("getLocaleSwitchTarget", () => {
     });
   });
 
-  it("uses an explicit English path so the locale cookie can be updated", () => {
+  it("uses an explicit English path without inferring persistence", () => {
     expect(getLocaleSwitchTarget("bg", "/bg/cars")).toEqual({
       locale: "en",
       path: "/en/cars",

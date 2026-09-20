@@ -1,5 +1,7 @@
 import { Button } from "@repo/design-system/components/ui/button";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite, type VehicleListing } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   ArrowUpRight,
   Boxes,
@@ -11,7 +13,6 @@ import {
   Store,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatTruthDateTime,
@@ -32,6 +33,7 @@ import {
   getSellerPanelCopy,
   getSellerPanelDisplayName,
 } from "../lib/seller-contact-policy";
+import Image from "./public-image";
 
 const sellerRoleIcons = {
   dealer: Store,
@@ -66,16 +68,16 @@ export const LeadSiteListingIdentityCard = ({
 
       <a
         className="group mt-4 flex items-center justify-between gap-4 rounded-xl bg-control px-4 py-3 transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)]"
-        href={leadSite.mapsUrl}
+        href={withBasePath(leadSite.mapsUrl)}
         rel="noreferrer"
         target="_blank"
       >
         <span className="min-w-0 flex-1">
           <span className="block font-semibold text-compact-control">
-            {leadSite.city}
+            {getLeadCopy(locale).city}
           </span>
           <span className="mt-0.5 block text-meta text-muted-foreground">
-            {leadSite.address}, {leadSite.country}
+            {getLeadCopy(locale).address}, {getLeadCopy(locale).country}
           </span>
         </span>
         <ArrowUpRight

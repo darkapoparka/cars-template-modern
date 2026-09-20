@@ -1,4 +1,6 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   isPublicSitePathEnabled,
   publicSite,
@@ -50,8 +52,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `${leadSite.name} в София — автомобили в наличност, внос по заявка и собствен лизинг.`
-      : `${leadSite.name} in ${leadSite.city} — vehicles in stock, import on request, and in-house leasing.`,
+      ? `${leadSite.name} в ${getLeadCopy(locale).city} — автомобили в наличност, внос по заявка и собствен лизинг.`
+      : `${leadSite.name} in ${getLeadCopy(locale).city} — vehicles in stock, import on request, and in-house leasing.`,
     locale,
     path: "/contact",
     robots: getPublicSearchRobots(query),
@@ -93,7 +95,8 @@ export default async function ContactPage({
     : "";
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const sellContext =
-    getQueryValue(query, "intent") === "sell"
+    getQueryValue(query, "intent") === "sell" ||
+    getQueryValue(query, "topic") === "trade-in"
       ? parseSellVehicleDraft(query)
       : null;
 
@@ -129,7 +132,7 @@ export default async function ContactPage({
               <div className={desktopStyles.contactGrid}>
                 <a
                   className={desktopStyles.contactCard}
-                  href={leadSite.phoneHref}
+                  href={withBasePath(leadSite.phoneHref)}
                 >
                   <Phone aria-hidden="true" size={28} strokeWidth={1.5} />
                   <span>
@@ -142,7 +145,7 @@ export default async function ContactPage({
                 <a
                   aria-label={copy.mapAction}
                   className={desktopStyles.contactCard}
-                  href={leadSite.mapsUrl}
+                  href={withBasePath(leadSite.mapsUrl)}
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -150,7 +153,7 @@ export default async function ContactPage({
                   <span>
                     <small>{copy.locationLabel}</small>
                     <strong>
-                      {leadSite.address}, {leadSite.city}
+                      {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
                     </strong>
                   </span>
                   <ArrowUpRight aria-hidden="true" size={18} />

@@ -9,6 +9,7 @@ import {
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   defaultVehicleCategory,
@@ -16,6 +17,7 @@ import {
   leadSite,
   type MarketplaceSearchParams,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   isDealershipSite,
   isPublicSitePathEnabled,
@@ -31,6 +33,7 @@ import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
 import { DealerUiIcon } from "./dealer-ui-icon";
+import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
 
@@ -50,6 +53,8 @@ export const DealerBottomNav = ({
   locale?: string;
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const preferences = useLocalePreferences();
+  const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const navigationLabel = isBg
@@ -169,9 +174,13 @@ export const DealerBottomNav = ({
           id="dealer-mobile-menu"
           onCloseAutoFocus={(event) => {
             event.preventDefault();
-            requestAnimationFrame(() =>
-              menuTriggerRef.current?.focus({ preventScroll: true })
-            );
+            requestAnimationFrame(() => {
+              menuTriggerRef.current?.focus({ preventScroll: true });
+              if (localeRequested.current) {
+                localeRequested.current = false;
+                preferences?.open();
+              }
+            });
           }}
         >
           <DrawerHeader className="shrink-0 px-5 pt-4 pb-4">
@@ -216,7 +225,7 @@ export const DealerBottomNav = ({
               <a
                 aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
                 className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
-                href={leadSite.phoneHref}
+                href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
                 <DealerUiIcon className="size-5 shrink-0" name="phone" />
@@ -227,11 +236,11 @@ export const DealerBottomNav = ({
               <a
                 aria-label={
                   isBg
-                    ? `Отворете картата: ${leadSite.address}`
+                    ? `Отворете картата: ${getLeadCopy(locale).address}`
                     : "Open showroom map"
                 }
                 className="flex min-h-12 min-w-0 items-center justify-center gap-1.5 rounded-xl bg-zinc-950 px-2 py-3 text-white transition-colors hover:bg-zinc-800 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-800"
-                href={leadSite.mapsUrl}
+                href={withBasePath(leadSite.mapsUrl)}
                 onClick={() => setMenuOpen(false)}
                 rel="noreferrer"
                 target="_blank"
@@ -273,8 +282,32 @@ export const DealerBottomNav = ({
                   );
                 })}
             </nav>
+            <a
+              className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
+              data-locale-trigger
+              href={withBasePath(
+                getLocalizedPublicPath(locale, "/locale-settings")
+              )}
+              onClick={(event) => {
+                if (
+                  preferences &&
+                  !event.ctrlKey &&
+                  !event.metaKey &&
+                  !event.shiftKey &&
+                  !event.altKey
+                ) {
+                  event.preventDefault();
+                  localeRequested.current = true;
+                  setMenuOpen(false);
+                }
+              }}
+            >
+              {isBg ? "Държава и език" : "Country and language"}
+            </a>
             <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
-            <p className="mt-4 text-meta text-zinc-600">{leadSite.address}</p>
+            <p className="mt-4 text-meta text-zinc-600">
+              {getLeadCopy(locale).address}
+            </p>
           </div>
         </DrawerContent>
       </Drawer>

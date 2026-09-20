@@ -1,3 +1,4 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import { createElement } from "react";
 import { hugeiconsNavigation } from "../lib/icons/hugeicons-navigation";
 
@@ -23,8 +24,8 @@ export function DealerBottomNavIcon({
         style={{
           backgroundImage:
             name === "sell" || name === "lease"
-              ? "url(/images/services/navigation-assets-v2-600w.webp)"
-              : "url(/images/services/navigation-assets-v1-600w.webp)",
+              ? `url(${withBasePath("/images/services/navigation-assets-v2-600w.webp")})`
+              : `url(${withBasePath("/images/services/navigation-assets-v1-600w.webp")})`,
           backgroundSize: "500% auto",
           backgroundPosition: `${position} 50%`,
           backgroundRepeat: "no-repeat",

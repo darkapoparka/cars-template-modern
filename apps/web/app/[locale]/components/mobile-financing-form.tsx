@@ -2,6 +2,7 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { Label } from "@repo/design-system/components/ui/label";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace/lead-site";
 import { getMobileQuickPillClassName } from "@repo/marketplace-ui";
 import {
@@ -112,7 +113,7 @@ export const FinancingRequestForm = ({
           asChild
           className="mt-5 h-11 rounded-xl bg-zinc-950 px-5 text-white shadow-none hover:bg-black"
         >
-          <a href={leadSite.phoneHref}>
+          <a href={withBasePath(leadSite.phoneHref)}>
             <Phone aria-hidden="true" className="size-4" />
             {copy.call}
           </a>
@@ -234,7 +235,7 @@ export const FinancingRequestForm = ({
         <SubmitButton locale={locale} />
         <a
           className="mt-2 flex h-11 items-center justify-center gap-2 rounded-xl font-semibold text-compact-control text-zinc-700 transition-colors active:bg-zinc-100"
-          href={leadSite.phoneHref}
+          href={withBasePath(leadSite.phoneHref)}
         >
           <Phone aria-hidden="true" className="size-4" />
           {copy.call}

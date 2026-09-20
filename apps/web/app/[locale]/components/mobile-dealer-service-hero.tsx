@@ -1,10 +1,11 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { DealerMobileBrandBar, MobileDealerChrome } from "@repo/marketplace-ui";
 import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-mobile-header-icon";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { mobileHeaderIconActionClassName } from "@repo/marketplace-ui/lib/mobile-header-icon-action";
 import { Phone } from "lucide-react";
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 const serviceWordmarkTones = {
@@ -92,7 +93,7 @@ export function MobileDealerServiceHero({
               aria-label={`${locale === "bg" ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
               className={mobileHeaderIconActionClassName}
               data-slot="mobile-service-call"
-              href={leadSite.phoneHref}
+              href={withBasePath(leadSite.phoneHref)}
             >
               <DealerMobileHeaderIcon icon={Phone} kind="phone" />
             </a>

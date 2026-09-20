@@ -42,11 +42,12 @@ describe("public metadata contracts", () => {
       description: "Guides",
     });
     expect(metadata.alternates?.canonical).toBe(
-      "https://day-night.example/guides"
+      "https://day-night.example/en/guides"
     );
     expect(metadata.alternates?.languages).toEqual({
-      "bg-BG": "https://day-night.example/guides",
-      "x-default": "https://day-night.example/guides",
+      en: "https://day-night.example/en/guides",
+      "bg-BG": "https://day-night.example/bg/guides",
+      "x-default": "https://day-night.example/bg/guides",
     });
   });
 

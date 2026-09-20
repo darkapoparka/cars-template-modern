@@ -8,7 +8,9 @@ Cars snapshots use an approved immutable commit from this repository. Main is a 
 
 Standalone entry: /cars. Use Node >=22.22.0 <23, pnpm 11.4.0, and the complete pnpm workspace. Read docs/QA.md for static-demo environment and Prisma generation; keep every workspace package. A documentation-only workflow change needs focused link/command checks, not the whole application suite.
 
-Mounted dealer entry: /variant-2/cars. Base paths, Services routing, locale/raw links, CSS/static assets, requests, redirects and the shared switcher are handled by the versioned Cars packaging layer for compatible releases. Standalone defaults stay standalone. Do not hardcode a dealer mount into this master or claim mounted QA from a standalone build. Unknown source shapes require a deliberate packaging update and tests.
+Native localization candidate: legacy /cars and /variant-2/cars entries negotiate to explicit /en/cars or /bg/cars, with the locale immediately after the configured design base. Build this Next application with NEXT_PUBLIC_BASE_PATH empty for standalone or /variant-2 for its native mounted form. The value is a build-time setting, not a visitor preference. Native Link/router destinations remain base-relative; raw anchors, public image URLs, API fetches and metadata use the explicit raw-URL helper.
+
+The legacy Cars packager that forces Modern to its default locale is incompatible with this candidate. A future Cars-owned adoption must preserve native Next routing, route the preference endpoint under this app's base, and separately verify the existing cross-design FAB/Admin destination contract. This template session did not change that packager, pins, Services mapping or dealer applications. See docs/localization/HANDOFF.md for the actual standalone/mounted acceptance status. A standalone build is not mounted or public acceptance.
 
 ## Dealer adaptation
 

@@ -77,7 +77,7 @@ export const PublicInventoryList = ({
 
       {totalPages > 1 ? (
         <nav
-          aria-label="Pagination"
+          aria-label={locale === "bg" ? "Страници" : "Pagination"}
           className="mt-6 flex items-center justify-center gap-2"
         >
           {page > 1 ? (

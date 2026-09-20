@@ -14,7 +14,6 @@ import {
   Search,
   Store,
 } from "lucide-react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   type ReactNode,
@@ -32,6 +31,7 @@ import {
   rememberMarketplaceSearchQuery,
   type SearchSuggestionItem,
 } from "../lib/desktop-search-policy";
+import Image from "./public-image";
 
 export type { DesktopSearchScope } from "../lib/desktop-search-policy";
 export { rememberMarketplaceSearchQuery } from "../lib/desktop-search-policy";
@@ -461,7 +461,7 @@ export const DesktopSearchAssistant = ({
             : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50",
           appearance !== "standard" &&
             "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring",
-          appearance === "hero" && "relative pr-4"
+          { standard: "", hero: "relative pr-4", toolbar: "pl-4" }[appearance]
         )}
         data-slot="desktop-search-query"
       >

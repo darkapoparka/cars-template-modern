@@ -14,6 +14,7 @@ import {
   leadSite,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
@@ -135,7 +136,9 @@ export default async function LeasePage({
     detailHref: localize(getListingPath(listing)),
     fuelLabel: formatFuelType(listing.spec.fuelType, normalizedLocale),
     id: listing.id,
-    imageAlt: listing.images[0]?.alt || listing.title,
+    imageAlt:
+      localizeListingCopy(listing, normalizedLocale).images[0]?.alt ||
+      listing.title,
     imageUrl: listing.images[0]?.url || "/lead-hero.jpg",
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate

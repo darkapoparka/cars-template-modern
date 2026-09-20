@@ -9,6 +9,7 @@ import {
   parseMarketplaceSearchParams,
   type VehicleListing,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ListingDetail } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
@@ -64,7 +65,7 @@ const getAdvertisedPrice = (listing: VehicleListing) =>
 const getListingDescription = (listing: VehicleListing, locale: string) =>
   `${formatMoney(getAdvertisedPrice(listing), locale)} - ${listing.spec.year} ${
     listing.spec.make
-  } ${listing.spec.model} in ${listing.location.city}.`;
+  } ${listing.spec.model} ${locale === "bg" ? "в" : "in"} ${isDealershipSite ? getLeadCopy(locale).city : listing.location.city}.`;
 
 const getAbsoluteUrl = (path: string): string =>
   getCanonicalUrl(path, { baseUrl: getPublicWebBaseUrl() });
@@ -269,6 +270,7 @@ const ListingPage = async ({ params, searchParams }: ListingPageProps) => {
     <>
       <JsonLd
         code={createVehicleStructuredData({
+          locale: normalizedLocale,
           baseUrl: getPublicWebBaseUrl(),
           listing,
           listingUrl,

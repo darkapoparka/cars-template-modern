@@ -4,6 +4,7 @@ import {
   leadSite,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
 import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
@@ -49,8 +50,8 @@ export const generateMetadata = async ({
   return createPublicLocalizedMetadata({
     baseUrl: getPublicWebBaseUrl(),
     description: isBg
-      ? `Разгледайте актуалните автомобили на ${leadSite.name} в ${leadSite.city}.`
-      : `Browse current vehicles from ${leadSite.name} in ${leadSite.city}, ${leadSite.country}.`,
+      ? `Разгледайте актуалните автомобили на ${leadSite.name} в ${getLeadCopy(locale).city}.`
+      : `Browse current vehicles from ${leadSite.name} in ${getLeadCopy(locale).city}, ${getLeadCopy(locale).country}.`,
     locale,
     path: "/",
     robots: getPublicInventoryRobots(query),

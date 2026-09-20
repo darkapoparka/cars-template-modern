@@ -4,8 +4,8 @@ import {
   formatMoney,
   type VehicleListing,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Car, MapPin, Truck } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatVehicleLocation,
@@ -15,6 +15,7 @@ import {
   getPrimaryListingPrice,
   getSourceLabel,
 } from "../lib/listing-truth";
+import Image from "./public-image";
 
 interface RelatedListingCardProps {
   readonly href: string;
@@ -24,9 +25,10 @@ interface RelatedListingCardProps {
 
 export const RelatedListingCard = ({
   href,
-  listing,
+  listing: sourceListing,
   locale,
 }: RelatedListingCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const primaryImage = listing.images[0];
   const primaryPrice = getPrimaryListingPrice(listing);

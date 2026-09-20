@@ -16,12 +16,12 @@ describe("Day & Night SEO URLs", () => {
     expect(normalizeSeoLocale("de")).toBe("bg");
   });
 
-  it("uses the configured Bulgarian default and explicit English prefix", () => {
+  it("uses explicit paths for both locales independent of default", () => {
     expect(getLocalizedPath("en", "/cars")).toBe("/en/cars");
-    expect(getLocalizedPath("bg", "/cars")).toBe("/cars");
-    expect(getLocalizedPath("bg", "/")).toBe("/");
+    expect(getLocalizedPath("bg", "/cars")).toBe("/bg/cars");
+    expect(getLocalizedPath("bg", "/")).toBe("/bg");
     expect(getLocalizedPath("en", "/cars", { defaultLocale: "en" })).toBe(
-      "/cars"
+      "/en/cars"
     );
   });
 
@@ -41,8 +41,8 @@ describe("Day & Night SEO URLs", () => {
       })
     ).toEqual({
       en: "https://day-night.example/en/cars",
-      "bg-BG": "https://day-night.example/cars",
-      "x-default": "https://day-night.example/cars",
+      "bg-BG": "https://day-night.example/bg/cars",
+      "x-default": "https://day-night.example/bg/cars",
     });
   });
 

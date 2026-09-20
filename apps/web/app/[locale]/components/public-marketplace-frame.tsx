@@ -1,7 +1,9 @@
 // biome-ignore-all lint/complexity/noExcessiveCognitiveComplexity: The shared frame intentionally preserves marketplace and static dealer variants.
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   isDealershipSite,
   isPublicSitePathEnabled,
@@ -230,16 +232,16 @@ export const PublicMarketplaceFrame = ({
               >
                 <a
                   aria-label={localizeLabel(
-                    `Отворете адреса в Google Maps: ${leadSite.address}, ${leadSite.city}`,
-                    `Open in Google Maps: ${leadSite.address}, ${leadSite.city}`
+                    `Отворете адреса в Google Maps: ${getLeadCopy(locale).address}, ${getLeadCopy(locale).city}`,
+                    `Open in Google Maps: ${getLeadCopy(locale).address}, ${getLeadCopy(locale).city}`
                   )}
-                  href={leadSite.mapsUrl}
+                  href={withBasePath(leadSite.mapsUrl)}
                   rel="noreferrer"
                   target="_blank"
                 >
                   <MapPin aria-hidden="true" className="h-4 w-4" />
                   <span className="hidden min-[340px]:inline">
-                    {leadSite.city}
+                    {getLeadCopy(locale).city}
                   </span>
                 </a>
               </Button>

@@ -5,7 +5,7 @@ describe("public global error localization", () => {
   it("keeps English routes consistently English", () => {
     expect(getPublicGlobalErrorCopy("/cars")).toMatchObject({
       home: "Go home",
-      homeHref: "/",
+      homeHref: "/en",
       lang: "en",
       retry: "Try again",
       title: "Something went wrong",

@@ -8,7 +8,6 @@ import {
 } from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
 import { formatListingMonthlyEstimate } from "../lib/listing-financing";
@@ -24,6 +23,7 @@ import {
   type ListingTrustEvidence,
   ListingTrustPanel,
 } from "./listing-trust-panel";
+import Image from "./public-image";
 import { RelatedListingCard } from "./related-listing-card";
 
 export const ListingDetailContent = ({
@@ -150,6 +150,7 @@ export const ListingDetailContent = ({
         <div className="py-5 lg:py-8">
           <ListingPriceIntelligence
             evidence={priceIntelligence}
+            locale={locale}
             monthlyEstimate={listing.monthlyEstimate}
             price={price}
             priceType={listing.priceType}
@@ -159,7 +160,7 @@ export const ListingDetailContent = ({
 
       {trustEvidence.length > 0 ? (
         <div className="py-5 lg:py-8">
-          <ListingTrustPanel evidence={trustEvidence} />
+          <ListingTrustPanel evidence={trustEvidence} locale={locale} />
         </div>
       ) : null}
 

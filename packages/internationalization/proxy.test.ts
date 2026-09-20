@@ -1,142 +1,125 @@
 import { NextRequest } from "next/server";
 import { describe, expect, it } from "vitest";
-import { defaultLocale, locales } from "./config";
-import {
-  getLocaleCookieOptions,
-  internationalizationMiddleware,
-  LOCALE_COOKIE_MAX_AGE_SECONDS,
-  LOCALE_COOKIE_NAME,
-} from "./proxy";
+import type { Locale } from "./config";
+import { createLocalePolicy, type LocaleConfiguration } from "./policy";
+import { createLocaleRequestHandler } from "./request";
 
-const origin = "https://automarket.example";
-const request = (pathname: string, headers: Record<string, string> = {}) =>
-  new NextRequest(`${origin}${pathname}`, { headers });
-const otherLocale = (locale: string) =>
-  locales.find((value) => value !== locale);
-
-describe("internationalization middleware", () => {
-  it("keeps a loopback rewrite on the incoming local authority", () => {
-    const response = internationalizationMiddleware(
-      new NextRequest("http://127.0.0.1:3002/cars?sort=newest", {
-        headers: { host: "127.0.0.1:3002", "accept-language": defaultLocale },
-      })
-    );
-    expect(response.headers.get("x-middleware-rewrite")).toBe(
-      "http://127.0.0.1:3002/bg/cars?sort=newest"
-    );
-  });
-  it("never treats an untrusted host header as a rewrite destination", () => {
-    const response = internationalizationMiddleware(
-      request("/cars", {
-        host: "attacker.example",
-        "accept-language": defaultLocale,
-      })
-    );
-    expect(response.headers.get("x-middleware-rewrite")).toBe(
-      `${origin}/${defaultLocale}/cars`
-    );
-  });
-  it.each(
-    locales
-  )("explicit /%s beats the cookie and negotiated language", (locale) => {
-    const response = internationalizationMiddleware(
-      request(`/${locale}/cars?sort=newest`, {
-        "accept-language": otherLocale(locale) ?? "",
-        cookie: `${LOCALE_COOKIE_NAME}=${otherLocale(locale)}`,
-      })
-    );
-    expect(response.status).toBe(locale === defaultLocale ? 307 : 200);
-    expect(response.headers.get("location")).toBe(
-      locale === defaultLocale ? `${origin}/cars?sort=newest` : null
-    );
-    expect(response.cookies.get(LOCALE_COOKIE_NAME)?.value).toBe(locale);
-    if (locale !== defaultLocale) {
-      expect(response.headers.get("x-next-locale")).toBe(locale);
-    }
-  });
-
-  it.each(
-    locales
-  )("the saved %s preference beats Accept-Language", (locale) => {
-    const response = internationalizationMiddleware(
-      request("/cars", {
-        "accept-language": otherLocale(locale) ?? "",
-        cookie: `${LOCALE_COOKIE_NAME}=${locale}`,
-      })
-    );
-    expect(response.status).toBe(locale === defaultLocale ? 200 : 307);
-    expect(
-      response.headers.get(
-        locale === defaultLocale ? "x-middleware-rewrite" : "location"
-      )
-    ).toBe(`${origin}/${locale}/cars`);
-  });
-  it.each(
-    locales
-  )("negotiates %s without a supported saved preference", (locale) => {
-    const response = internationalizationMiddleware(
-      request("/cars", {
-        "accept-language": locale,
-        cookie: `${LOCALE_COOKIE_NAME}=unsupported`,
-      })
-    );
-    expect(response.status).toBe(locale === defaultLocale ? 200 : 307);
-    expect(
-      response.headers.get(
-        locale === defaultLocale ? "x-middleware-rewrite" : "location"
-      )
-    ).toBe(`${origin}/${locale}/cars`);
-  });
-
-  it("marks internal default-locale rewrites and allows their second pass", () => {
-    const first = internationalizationMiddleware(
-      request("/cars?sort=newest", { "accept-language": defaultLocale })
-    );
-    expect(first.status).toBe(200);
-    expect(first.headers.get("x-middleware-rewrite")).toBe(
-      `${origin}/${defaultLocale}/cars?sort=newest`
-    );
-    expect(
-      first.headers.get(
-        "x-middleware-request-x-automarket-internal-locale-rewrite"
-      )
-    ).toBe("1");
-    const second = internationalizationMiddleware(
-      request(`/${defaultLocale}/cars?sort=newest`, {
+const configuration: LocaleConfiguration<Locale> = {
+  schemaVersion: 1,
+  dealerId: "test-dealer",
+  dealerName: "Test Dealer",
+  defaultLocale: "bg",
+  enabledLocales: ["en", "bg"],
+  dealerCountry: "BG",
+  inventoryCurrency: "EUR",
+  formatLocales: { en: "en-GB", bg: "bg-BG" },
+  preferenceMaxAge: 15_552_000,
+  promptVersion: "v1",
+  suggestedLanguages: { BG: "bg", GB: "en" },
+};
+const handler = createLocaleRequestHandler(configuration);
+const policy = createLocalePolicy(configuration);
+const origin = "https://dealer.example";
+const request = (path: string, headers: Record<string, string> = {}) =>
+  new NextRequest(origin + path, { headers });
+describe("native URL locale contract", () => {
+  it.each([
+    "en",
+    "bg",
+  ])("explicit %s beats every conflicting hint", (locale) => {
+    const other = locale === "en" ? "bg" : "en";
+    const response = handler(
+      request(`/${locale}/contact?topic=trade-in&lang=${other}`, {
+        cookie: `cars_locale=${other}`,
+        "accept-language": other,
+        "x-vercel-ip-country": other === "bg" ? "BG" : "GB",
         "x-automarket-internal-locale-rewrite": "1",
+        "x-cars-locale": other,
       })
-    );
-    expect(second.status).toBe(200);
-    expect(second.headers.get("location")).toBeNull();
-    expect(second.headers.get("x-middleware-next")).toBe("1");
-  });
-
-  it("preserves unsupported locale-like segments for the localized 404", () => {
-    const response = internationalizationMiddleware(
-      request("/fr/cars", { "accept-language": defaultLocale })
     );
     expect(response.status).toBe(200);
-    expect(response.headers.get("x-middleware-rewrite")).toBe(
-      `${origin}/${defaultLocale}/fr/cars`
-    );
+    expect(response.headers.get("content-language")).toBe(locale);
+    expect(response.headers.get("location")).toBeNull();
+    expect(response.headers.get("set-cookie")).toBeNull();
   });
-  it("does not change the saved locale during prefetch", () => {
-    const response = internationalizationMiddleware(
-      request(`/${otherLocale(defaultLocale)}/cars`, {
-        "next-router-prefetch": "1",
-        cookie: `${LOCALE_COOKIE_NAME}=${defaultLocale}`,
-      })
-    );
-    expect(response.cookies.get(LOCALE_COOKIE_NAME)).toBeUndefined();
+  it.each([
+    [
+      "/cars?lang=en&q=BMW",
+      { cookie: "cars_locale=bg", "accept-language": "bg" },
+      "/en/cars?lang=en&q=BMW",
+    ],
+    [
+      "/cars",
+      { cookie: "cars_locale=en", "accept-language": "bg" },
+      "/en/cars",
+    ],
+    ["/cars", { "accept-language": "bg;q=0.5,en-GB;q=0.9" }, "/en/cars"],
+    ["/cars", { "accept-language": "en;q=0,bg;q=0" }, "/bg/cars"],
+  ] as const)("negotiates %s without persisting inferred preferences", (path, headers, destination) => {
+    const response = handler(request(path, headers));
+    expect(response.status).toBe(307);
+    expect(response.headers.get("location")).toBe(origin + destination);
+    expect(response.headers.get("set-cookie")).toBeNull();
+    expect(response.headers.get("cache-control")).toBe("private, no-store");
+    expect(response.headers.get("vercel-cdn-cache-control")).toBe("no-store");
   });
-
-  it("uses a durable host-only secure production cookie", () => {
-    expect(getLocaleCookieOptions("production")).toEqual({
-      httpOnly: true,
-      maxAge: LOCALE_COOKIE_MAX_AGE_SECONDS,
-      path: "/",
-      sameSite: "lax",
-      secure: true,
+  it.each([
+    "/api/preferences",
+    "/api/ai/search",
+    "/_next/static/a.js",
+    "/images/car.webp",
+    "/lead-logo.png",
+  ])("preserves resource %s", (path) => {
+    expect(handler(request(path)).headers.get("location")).toBeNull();
+  });
+  it.each([
+    "ar",
+    "de",
+    "uk",
+    "tr",
+    "ro",
+    "el",
+    "fr",
+  ])("does not enable %s", (locale) =>
+    expect(handler(request(`/${locale}/cars`)).status).toBe(404));
+  it("adds native basePath exactly once", () => {
+    const req = new NextRequest(`${origin}/variant-2/cars?lang=en`, {
+      nextConfig: { basePath: "/variant-2" },
     });
+    expect(req.nextUrl.pathname).toBe("/cars");
+    expect(handler(req).headers.get("location")).toBe(
+      `${origin}/variant-2/en/cars?lang=en`
+    );
   });
+  it("cannot redirect to a hostile Host header", () =>
+    expect(
+      handler(request("/cars", { host: "evil.example" })).headers.get(
+        "location"
+      )
+    ).toBe(`${origin}/bg/cars`));
+  it("returns independent visitor state", () => {
+    const a = policy.resolveLocale({
+      url: new URL(`${origin}/en/cars`),
+      cookie: "cars_country=GB; cars_locale=bg",
+    });
+    const b = policy.resolveLocale({
+      url: new URL(`${origin}/bg/cars`),
+      cookie: "cars_country=BG; cars_locale=en",
+    });
+    expect(a).toMatchObject({ locale: "en", country: "GB" });
+    expect(b).toMatchObject({ locale: "bg", country: "BG" });
+    a.country = "US";
+    expect(b.country).toBe("BG");
+  });
+});
+
+it("overwrites a forged public return path with the real request URL", () => {
+  const response = createLocaleRequestHandler(configuration)(
+    new NextRequest("https://dealer.example/en/contact?topic=trade-in", {
+      headers: { "x-modern-public-path": "/bg/foreign" },
+    })
+  );
+  expect(
+    response.headers.get("x-middleware-request-x-modern-public-path")
+  ).toBe("/en/contact?topic=trade-in");
 });

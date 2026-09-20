@@ -1,6 +1,7 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import type { LeadSiteConfig } from "@repo/marketplace";
 import { Music2 } from "lucide-react";
-import Image from "next/image";
+import Image from "./public-image";
 
 const socialPlatforms = [
   { key: "instagram", label: "Instagram" },
@@ -74,7 +75,7 @@ export function DealerSocialLinks({
           <a
             aria-label={`${label} — ${isBg ? "отваря нов раздел" : "opens in a new tab"}`}
             className="flex min-h-16 min-w-0 flex-col items-center justify-center gap-1.5 rounded-xl bg-zinc-100 px-2 py-3 font-medium text-meta text-zinc-950 hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
-            href={links?.[key]}
+            href={withBasePath(links?.[key])}
             key={key}
             rel="noopener noreferrer"
             target="_blank"

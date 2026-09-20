@@ -7,10 +7,10 @@ import {
 } from "@repo/design-system/components/ui/dialog";
 import type { VehicleListingImage } from "@repo/marketplace";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
-import Image from "next/image";
 import type { KeyboardEvent } from "react";
 import type { ListingGalleryCopy } from "../lib/listing-gallery-policy";
 import { GalleryImageFallback } from "./listing-gallery-primitives";
+import Image from "./public-image";
 
 export const ListingGalleryLightbox = ({
   copy,

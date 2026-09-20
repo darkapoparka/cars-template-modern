@@ -1,5 +1,6 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   type ExternalInventoryDiscoveryListing,
   type ExternalInventoryDiscoveryResponse,
@@ -8,6 +9,7 @@ import {
   formatMoney,
   formatTransmission,
 } from "@repo/marketplace";
+import Image from "@repo/marketplace-ui/components/public-image";
 import {
   CarFront,
   ExternalLink,
@@ -15,7 +17,6 @@ import {
   ShieldAlert,
   Ship,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { BlankImportRequestLink } from "./blank-import-request-link";
@@ -148,7 +149,7 @@ const ExternalInventoryCard = ({
         aria-label={sourceLabel}
         className="relative grid min-h-44 place-items-center overflow-hidden bg-zinc-100 text-zinc-400 outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:aspect-[16/10] lg:min-h-0 lg:w-full"
         data-slot="external-inventory-media-link"
-        href={listing.source.listingUrl}
+        href={withBasePath(listing.source.listingUrl)}
         rel="nofollow sponsored noopener noreferrer"
         target="_blank"
       >
@@ -204,7 +205,7 @@ const ExternalInventoryCard = ({
           <a
             className="inline-flex h-11 min-w-0 items-center justify-center gap-1.5 rounded-md border border-border bg-card px-2 font-semibold text-compact-control outline-none transition-colors hover:bg-control-hover focus-visible:ring-[3px] focus-visible:ring-ring/35 max-lg:min-h-11 max-lg:min-w-24 max-lg:rounded-[0.625rem] max-lg:border-transparent max-lg:bg-zinc-900 max-lg:px-3 max-lg:font-semibold max-lg:text-compact-control max-lg:text-white max-lg:active:bg-zinc-950 max-lg:hover:bg-zinc-950 lg:h-9"
             data-slot="external-inventory-source-action"
-            href={listing.source.listingUrl}
+            href={withBasePath(listing.source.listingUrl)}
             rel="nofollow sponsored noopener noreferrer"
             target="_blank"
           >

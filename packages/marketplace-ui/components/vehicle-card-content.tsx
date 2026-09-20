@@ -18,7 +18,6 @@ import {
   Truck,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   formatTruthDateTime,
@@ -60,6 +59,7 @@ import {
   vehicleCardToneClassNames,
 } from "../lib/vehicle-card-view-policy";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
+import Image from "./public-image";
 
 const sellerRoleIcons = {
   dealer: Store,

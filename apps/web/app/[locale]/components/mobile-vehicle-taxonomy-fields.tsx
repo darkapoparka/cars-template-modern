@@ -3,9 +3,9 @@
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { vehicleMakes } from "@repo/marketplace";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { mobileFormPickerTriggerClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import { ArrowRight, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   type ReactNode,

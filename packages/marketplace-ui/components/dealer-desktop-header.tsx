@@ -1,16 +1,18 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   isPublicSitePathEnabled,
   type PublicSiteConfig,
   publicSite,
 } from "@repo/marketplace/site-config";
 import { MapPin, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
+import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
 import type { MarketplaceMode } from "./marketplace-masthead";
+import Image from "./public-image";
 
 /** Desktop-only dealership navigation, shared by inventory and service routes. */
 export const DealerDesktopHeader = ({
@@ -84,13 +86,20 @@ export const DealerDesktopHeader = ({
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
+            <MarketplaceLocaleSwitchLink
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-md px-2 text-sm"
+              label={isBg ? "Държава и език" : "Country and language"}
+              locale={locale}
+            >
+              <span aria-hidden="true">{isBg ? "BG" : "EN"}</span>
+            </MarketplaceLocaleSwitchLink>
             <a
               aria-label={
                 isBg
                   ? `Обадете се на ${site.contact.phoneDisplay}`
                   : `Call ${site.contact.phoneDisplay}`
               }
-              href={site.contact.phoneHref}
+              href={withBasePath(site.contact.phoneHref)}
             >
               <Phone aria-hidden="true" size={18} strokeWidth={1.8} />
               <span>{site.contact.phoneDisplay}</span>
@@ -102,7 +111,7 @@ export const DealerDesktopHeader = ({
                   : `Showroom: ${site.contact.address}`
               }
               className={cn(styles.showroom, "dealer-desktop-showroom")}
-              href={site.contact.mapsUrl}
+              href={withBasePath(site.contact.mapsUrl)}
               rel="noreferrer"
               target="_blank"
             >

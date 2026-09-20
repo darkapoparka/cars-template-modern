@@ -1,4 +1,5 @@
 import { Badge } from "@repo/design-system/components/ui/badge";
+import { getPublicMessages } from "@repo/internationalization/public-messages";
 import { leadSite } from "@repo/marketplace";
 import { CircleHelp, FileCheck2, ShieldCheck } from "lucide-react";
 
@@ -42,87 +43,99 @@ export type ListingTrustEvidence =
 
 interface ListingTrustPanelProps {
   readonly evidence: readonly ListingTrustEvidence[];
+  readonly locale?: string;
 }
 
-const formatReviewDate = (value: string) =>
-  new Intl.DateTimeFormat("en", {
+const formatReviewDate = (value: string, locale?: string) =>
+  new Intl.DateTimeFormat(locale?.startsWith("bg") ? "bg-BG" : "en-GB", {
     day: "numeric",
     month: "short",
     year: "numeric",
   }).format(new Date(value));
 
-const getEvidenceStateLabel = (evidence: ListingTrustEvidence): string => {
+const getEvidenceStateLabel = (
+  evidence: ListingTrustEvidence,
+  locale?: string
+): string => {
+  const t = getPublicMessages(locale);
   if (evidence.state === "verified") {
-    return "Checked";
+    return t.checked;
   }
 
   if (evidence.state === "seller_declared") {
-    return "Seller statement";
+    return t.sellerStatement;
   }
 
-  return "Not available";
+  return t.notAvailable;
 };
 
-export const ListingTrustPanel = ({ evidence }: ListingTrustPanelProps) => (
-  <section aria-labelledby="trust-heading">
-    <div className="flex items-start justify-between gap-4">
-      <div>
-        <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
-          Evidence, not badges
-        </p>
-        <h2
-          className="mt-1 font-semibold text-card-title-lg tracking-heading"
-          id="trust-heading"
-        >
-          Vehicle history and trust
-        </h2>
+export const ListingTrustPanel = ({
+  evidence,
+  locale,
+}: ListingTrustPanelProps) => {
+  const t = getPublicMessages(locale);
+  return (
+    <section aria-labelledby="trust-heading">
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
+            {t.evidence}
+          </p>
+          <h2
+            className="mt-1 font-semibold text-card-title-lg tracking-heading"
+            id="trust-heading"
+          >
+            {t.history}
+          </h2>
+        </div>
+        <ShieldCheck
+          aria-hidden="true"
+          className="size-5 text-muted-foreground"
+        />
       </div>
-      <ShieldCheck
-        aria-hidden="true"
-        className="size-5 text-muted-foreground"
-      />
-    </div>
-    <p className="mt-2 max-w-2xl text-body text-muted-foreground">
-      {leadSite.name} only presents a checked claim when its source, review
-      date, and policy are available. Seller statements are labelled separately.
-    </p>
-    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-      {evidence.map((item) => (
-        <li className="rounded-lg bg-muted p-3" key={item.id}>
-          <div className="flex items-start gap-3">
-            {item.state === "verified" ? (
-              <FileCheck2
-                aria-hidden="true"
-                className="mt-0.5 size-4 shrink-0"
-              />
-            ) : (
-              <CircleHelp
-                aria-hidden="true"
-                className="mt-0.5 size-4 shrink-0 text-muted-foreground"
-              />
-            )}
-            <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-2">
-                <p className="font-medium text-compact-control">{item.label}</p>
-                <Badge className="rounded-md" variant="outline">
-                  {getEvidenceStateLabel(item)}
-                </Badge>
-              </div>
-              <p className="mt-1 text-meta text-muted-foreground">
-                {item.state === "unavailable" ? item.reason : item.summary}
-              </p>
-              {item.state === "verified" && (
-                <p className="mt-2 text-meta text-muted-foreground">
-                  {item.sourceLabel} · reviewed{" "}
-                  {formatReviewDate(item.reviewedAt)}
-                  {" · "}
-                  {item.policyLabel}
-                </p>
+      <p className="mt-2 max-w-2xl text-body text-muted-foreground">
+        {leadSite.name} {t.claims}
+      </p>
+      <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+        {evidence.map((item) => (
+          <li className="rounded-lg bg-muted p-3" key={item.id}>
+            <div className="flex items-start gap-3">
+              {item.state === "verified" ? (
+                <FileCheck2
+                  aria-hidden="true"
+                  className="mt-0.5 size-4 shrink-0"
+                />
+              ) : (
+                <CircleHelp
+                  aria-hidden="true"
+                  className="mt-0.5 size-4 shrink-0 text-muted-foreground"
+                />
               )}
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="font-medium text-compact-control">
+                    {item.label}
+                  </p>
+                  <Badge className="rounded-md" variant="outline">
+                    {getEvidenceStateLabel(item, locale)}
+                  </Badge>
+                </div>
+                <p className="mt-1 text-meta text-muted-foreground">
+                  {item.state === "unavailable" ? item.reason : item.summary}
+                </p>
+                {item.state === "verified" && (
+                  <p className="mt-2 text-meta text-muted-foreground">
+                    {item.sourceLabel} · {t.reviewed}{" "}
+                    {formatReviewDate(item.reviewedAt, locale)}
+                    {" · "}
+                    {item.policyLabel}
+                  </p>
+                )}
+              </div>
             </div>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </section>
-);
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};

@@ -1,7 +1,7 @@
 import { publicSite } from "@repo/marketplace/site-config";
-import Image from "next/image";
 import type { ReactNode } from "react";
 import styles from "./dealer-desktop-hero.module.css";
+import Image from "./public-image";
 
 export interface DealerDesktopHeroProps {
   children?: ReactNode;

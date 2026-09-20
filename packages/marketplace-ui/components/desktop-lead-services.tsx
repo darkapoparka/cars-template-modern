@@ -16,7 +16,6 @@ import {
   Info,
   LockKeyhole,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
@@ -27,6 +26,7 @@ import {
 } from "./desktop-discovery-search";
 import { getDesktopQuickFilterClassName } from "./desktop-quick-filters";
 import type { MarketplaceMode } from "./marketplace-masthead";
+import Image from "./public-image";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
 

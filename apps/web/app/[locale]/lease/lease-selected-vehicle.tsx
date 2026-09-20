@@ -2,11 +2,11 @@
 
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
+import Image from "@repo/marketplace-ui/components/public-image";
 import {
   mobileVehicleCardContentClassName,
   mobileVehicleCardMediaClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
-import Image from "next/image";
 import { useState } from "react";
 import {
   type FinancingVehicleOption,

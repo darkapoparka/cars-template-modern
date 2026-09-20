@@ -29,5 +29,13 @@
       "!apps/email/.react-email",
       "!packages/cms/basehub-types.d.ts"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["packages/internationalization/policy.ts"],
+      "formatter": {
+        "enabled": false
+      }
+    }
+  ]
 }

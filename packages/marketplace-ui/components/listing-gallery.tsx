@@ -8,7 +8,6 @@ import {
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListingImage } from "@repo/marketplace";
 import { Car, Expand } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 import {
   getKeyedListingGalleryImages,
@@ -18,6 +17,7 @@ import {
 } from "../lib/listing-gallery-policy";
 import { ListingGalleryLightbox } from "./listing-gallery-lightbox";
 import { GalleryImageFallback } from "./listing-gallery-primitives";
+import Image from "./public-image";
 
 interface ListingGalleryProps {
   readonly badges?: readonly string[];

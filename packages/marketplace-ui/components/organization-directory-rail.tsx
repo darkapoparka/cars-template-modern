@@ -9,12 +9,12 @@ import {
   PackageCheck,
   ShieldCheck,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import type {
   OrganizationDirectoryAction,
   OrganizationDirectorySignalKind,
 } from "./organization-directory-card";
+import Image from "./public-image";
 
 export interface OrganizationDirectoryRailItem {
   href: string;

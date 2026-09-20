@@ -47,7 +47,7 @@ describe("public contact request context", () => {
         slug: "bmw-x5-xdrive40d-berlin-2022",
       })
     ).toBe(
-      "/contact?context=listing-delivery&listing=bmw-x5-xdrive40d-berlin-2022&topic=importer&deliverTo=BG#contact-form"
+      "/bg/contact?context=listing-delivery&listing=bmw-x5-xdrive40d-berlin-2022&topic=importer&deliverTo=BG#contact-form"
     );
     expect(
       buildPublicListingDeliveryContactHref({

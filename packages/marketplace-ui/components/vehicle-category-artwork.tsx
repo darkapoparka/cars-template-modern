@@ -1,6 +1,6 @@
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleCategory } from "@repo/marketplace";
-import Image from "next/image";
+import Image from "./public-image";
 
 type ArtworkCategory = Exclude<VehicleCategory, "lease">;
 

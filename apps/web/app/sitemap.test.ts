@@ -62,27 +62,27 @@ describe("public sitemap", () => {
 
     expect(urls).toEqual(
       expect.arrayContaining([
-        "https://day-night.example/guides",
+        "https://day-night.example/bg/guides",
         "https://day-night.example/en/guides",
         "https://day-night.example/en/contact",
-        "https://day-night.example/legal/privacy",
+        "https://day-night.example/bg/legal/privacy",
         "https://day-night.example/en/legal/privacy",
-        "https://day-night.example/legal/terms",
+        "https://day-night.example/bg/legal/terms",
         "https://day-night.example/en/legal/terms",
-        "https://day-night.example/listing/vehicle-one",
-        "https://day-night.example/cars/bmw/x5",
-        "https://day-night.example/guides/example-article",
+        "https://day-night.example/bg/listing/vehicle-one",
+        "https://day-night.example/bg/cars/bmw/x5",
+        "https://day-night.example/bg/guides/example-article",
         "https://day-night.example/en/guides/example-article",
       ])
     );
     expect(
       entries.filter(({ url }) => url.endsWith("/legal/privacy"))
     ).toHaveLength(2);
-    expect(urls).not.toContain("https://day-night.example/blog");
+    expect(urls).not.toContain("https://day-night.example/bg/blog");
     expect(urls).not.toContain("https://day-night.example/en/blog");
-    expect(urls).not.toContain("https://day-night.example/pricing");
-    expect(urls).not.toContain("https://day-night.example/registry");
-    expect(urls).not.toContain("https://day-night.example/dealers");
+    expect(urls).not.toContain("https://day-night.example/bg/pricing");
+    expect(urls).not.toContain("https://day-night.example/bg/registry");
+    expect(urls).not.toContain("https://day-night.example/bg/dealers");
     expect(urls).not.toContain(
       "https://day-night.example/en/dealers/trusted-dealer"
     );
@@ -92,8 +92,8 @@ describe("public sitemap", () => {
       )?.alternates?.languages
     ).toEqual({
       en: "https://day-night.example/en/legal/privacy",
-      "bg-BG": "https://day-night.example/legal/privacy",
-      "x-default": "https://day-night.example/legal/privacy",
+      "bg-BG": "https://day-night.example/bg/legal/privacy",
+      "x-default": "https://day-night.example/bg/legal/privacy",
     });
   });
 
@@ -113,13 +113,14 @@ describe("public sitemap", () => {
     const byUrl = new Map(entries.map((entry) => [entry.url, entry]));
 
     expect(
-      byUrl.get("https://day-night.example/listing/vehicle-one")?.lastModified
+      byUrl.get("https://day-night.example/bg/listing/vehicle-one")
+        ?.lastModified
     ).toEqual(new Date("2026-07-11T12:00:00.000Z"));
-    expect(byUrl.get("https://day-night.example/guides")).not.toHaveProperty(
+    expect(byUrl.get("https://day-night.example/bg/guides")).not.toHaveProperty(
       "lastModified"
     );
     expect(
-      byUrl.get("https://day-night.example/cars/bmw/x5")
+      byUrl.get("https://day-night.example/bg/cars/bmw/x5")
     ).not.toHaveProperty("lastModified");
   });
 
@@ -130,13 +131,15 @@ describe("public sitemap", () => {
 
     const urls = (await sitemap()).map(({ url }) => url);
 
-    expect(urls).toContain("https://day-night.example/cars");
+    expect(urls).toContain("https://day-night.example/bg/cars");
     expect(urls).toContain("https://day-night.example/en/cars");
-    expect(urls).not.toContain("https://day-night.example/listing/vehicle-one");
     expect(urls).not.toContain(
-      "https://day-night.example/dealers/trusted-dealer"
+      "https://day-night.example/bg/listing/vehicle-one"
     );
-    expect(urls).not.toContain("https://day-night.example/cars/bmw/x5");
+    expect(urls).not.toContain(
+      "https://day-night.example/bg/dealers/trusted-dealer"
+    );
+    expect(urls).not.toContain("https://day-night.example/bg/cars/bmw/x5");
   });
 
   it("still propagates unexpected sitemap failures", async () => {

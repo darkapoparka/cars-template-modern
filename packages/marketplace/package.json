@@ -30,7 +30,9 @@
     "./types": "./types.ts",
     "./inventory-search": "./inventory-search.ts",
     "./site-config": "./site-config.ts",
-    "./lead-workflow": "./lead-workflow.ts"
+    "./lead-workflow": "./lead-workflow.ts",
+    "./lead-copy": "./lead-copy.ts",
+    "./listing-copy": "./listing-copy.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",

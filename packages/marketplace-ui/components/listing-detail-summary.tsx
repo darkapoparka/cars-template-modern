@@ -62,7 +62,10 @@ export const DesktopListingSummaryHeader = ({
             <MapPin aria-hidden="true" className="size-3.5" />
             {formatVehicleLocation(physicalLocation, locale)}
           </span>
-          <span>Ref {listing.id.toUpperCase()}</span>
+          <span>
+            {locale?.startsWith("bg") ? "Реф." : "Ref"}{" "}
+            {listing.id.toUpperCase()}
+          </span>
         </div>
       </div>
       <ListingActions

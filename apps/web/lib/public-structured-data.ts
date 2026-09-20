@@ -1,3 +1,4 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   formatBodyType,
   formatFuelType,
@@ -7,6 +8,7 @@ import {
   type VehicleCategory,
   type VehicleListing,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import type {
   BreadcrumbList,
   Offer,
@@ -41,7 +43,7 @@ export const toAbsolutePublicUrl = (
 
   try {
     const parsed = value.startsWith("/")
-      ? new URL(value, baseUrl)
+      ? new URL(withBasePath(value), baseUrl)
       : new URL(value);
     return parsed.protocol === "http:" || parsed.protocol === "https:"
       ? parsed.toString()
@@ -66,13 +68,16 @@ const getCondition = (listing: VehicleListing) =>
 
 export const createVehicleStructuredData = ({
   baseUrl,
-  listing,
+  listing: sourceListing,
+  locale,
   listingUrl,
 }: {
   baseUrl: string;
   listing: VehicleListing;
   listingUrl: string;
+  locale?: string;
 }): WithContext<Vehicle> => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const images = listing.images.flatMap((image) => {
     const url = toAbsolutePublicUrl(image.url, baseUrl);
     return url ? [url] : [];
@@ -82,14 +87,14 @@ export const createVehicleStructuredData = ({
     "@context": "https://schema.org",
     "@id": `${listingUrl}#vehicle`,
     "@type": "Vehicle",
-    bodyType: formatBodyType(listing.spec.bodyType),
+    bodyType: formatBodyType(listing.spec.bodyType, locale),
     brand: {
       "@type": "Brand",
       name: listing.spec.make,
     },
     color: listing.spec.colorExterior,
     description: listing.description,
-    fuelType: formatFuelType(listing.spec.fuelType),
+    fuelType: formatFuelType(listing.spec.fuelType, locale),
     ...(images.length > 0 ? { image: images } : {}),
     mileageFromOdometer: {
       "@type": "QuantitativeValue",
@@ -104,7 +109,7 @@ export const createVehicleStructuredData = ({
     sku: listing.id,
     url: listingUrl,
     vehicleModelDate: String(listing.spec.year),
-    vehicleTransmission: formatTransmission(listing.spec.transmission),
+    vehicleTransmission: formatTransmission(listing.spec.transmission, locale),
   };
 };
 

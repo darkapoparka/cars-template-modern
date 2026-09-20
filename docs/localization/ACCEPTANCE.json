@@ -1,0 +1,436 @@
+{
+  "recordedAt": "2026-09-20T15:06:35.410Z",
+  "status": "LOCAL_IMPLEMENTATION_CHECKPOINT_NOT_RELEASE_APPROVAL",
+  "sourceAggregateSha256": "26dc715ea387ee515822760f29e4129ad4b9407d3eb37042bc649713913c4e96",
+  "sourceFiles": 769,
+  "portablePolicyBodySha256": "e0adcfd9ca1efaf30c1410540cdbef25d2144bf9dc447971f0ce3b38cc5928c0",
+  "sourceHashes": {
+    "packages/internationalization/policy.ts": "8a272dc252ae736d685ea53097f669829346841a3279f2124b14988aa5f109a9",
+    "packages/internationalization/paths.ts": "8d60b56ab0334475c702ab79c0a9fba46b8a66a49e1bde4d292030354d7bfbfd",
+    "packages/internationalization/request.ts": "2b6b104166d2065c924c539abc43c012747a9a0b069f03479dbf345b2cf90635",
+    "packages/internationalization/request-origin.ts": "fb692d65a6f68c458f2256aac9c5dc6affee7368dbca4e6ecbd1c79b0044d6ab",
+    "packages/internationalization/preferences-messages.ts": "83e50e1b3b26f99f2e0a4f8be506c320f6e5e16e8395813e6aa1b2dc9c06bf2e",
+    "packages/internationalization/public-messages.ts": "805b551ba00fbbddea82745fcaa72e462a93416b45e3926345528708462a041f",
+    "packages/marketplace/content/inventory-copy.ts": "264518d0b1caf2abfcd39a101cc85aecbab1dc1a603ee1ff1a1bd61f467694dc",
+    "packages/marketplace/lead-site.ts": "482e137ef0d0aade7978f6ab350db73b79aa13e21b6ed563168bc02c023ff119",
+    "packages/marketplace/lead-copy.ts": "3b75927d44cea0ebd020f48917e33f451681d76cb3253f9c43fd860dc17cbb33",
+    "packages/marketplace/listing-copy.ts": "bcff77a751c13dc2de5c48d77d30cda120e51c62d853a6692effd99c6acba584",
+    "packages/marketplace-ui/components/locale-preferences.tsx": "48a3e09a3384de152ca48a8f9acc764f1659027ba9b2347e0effbe2f9349f9b3"
+  },
+  "commands": [
+    {
+      "name": "package-typechecks",
+      "pid": 43548,
+      "args": [
+        "--workspace-concurrency=1",
+        "--filter",
+        "@repo/internationalization",
+        "--filter",
+        "@repo/seo",
+        "--filter",
+        "@repo/marketplace",
+        "--filter",
+        "@repo/marketplace-ui",
+        "-r",
+        "typecheck"
+      ],
+      "env": {},
+      "started": "2026-09-20T14:19:27.124Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:20:18.132Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/package-typechecks.log",
+      "logSha256": "370e24c79464fa2a47f3e10a6d58d0ada70a524c6595451aeaeb5aac0afafe18"
+    },
+    {
+      "name": "existing-contract-guards",
+      "pid": 26104,
+      "args": [
+        "release:preflight:test"
+      ],
+      "env": {},
+      "started": "2026-09-20T14:19:27.132Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:19:44.392Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/existing-contract-guards.log",
+      "logSha256": "bafce4cea0f5467c7ae0c018a9fce611d5e07b9d3e2239cfb230cede3b4823aa"
+    },
+    {
+      "name": "boundaries",
+      "pid": 17864,
+      "args": [
+        "boundaries"
+      ],
+      "env": {},
+      "started": "2026-09-20T14:19:27.140Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:19:31.996Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/boundaries.log",
+      "logSha256": "5bf082fc43eb3f60145d1631ba5a6a6b2fc241a78e3319eaeb1dcb79ab654cb1"
+    },
+    {
+      "name": "dev-routes",
+      "pid": 52972,
+      "args": [
+        "--filter",
+        "e2e",
+        "exec",
+        "node",
+        "localization-audit.mjs"
+      ],
+      "env": {
+        "LOCALE_QA_ORIGIN": "http://127.0.0.1:3002",
+        "LOCALE_QA_RUN": "dev-routes",
+        "LOCALE_QA_LANGUAGES": "en,bg",
+        "LOCALE_QA_WIDTHS": "320,390,1440"
+      },
+      "started": "2026-09-20T14:29:05.014Z",
+      "exit": 1,
+      "ended": "2026-09-20T14:46:31.576Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/dev-routes.log",
+      "logSha256": "0e70fc3edfa8a58cdf9954213340daf9fb4c89c939e3a70d087bd40220abd74f"
+    },
+    {
+      "name": "final-web-typecheck",
+      "pid": 53528,
+      "args": [
+        "--filter",
+        "web",
+        "typecheck"
+      ],
+      "env": {},
+      "started": "2026-09-20T14:48:03.586Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:48:28.837Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/final-web-typecheck.log",
+      "logSha256": "6525cd59fe64a81c09d8893e5f7f9d4cb624870dacf01d7406280037573a7bc0"
+    },
+    {
+      "name": "dev-image-diagnostic",
+      "pid": 50116,
+      "args": [
+        "--filter",
+        "e2e",
+        "exec",
+        "node",
+        "localization-image-diagnostic.mjs"
+      ],
+      "env": {
+        "LOCALE_QA_ORIGIN": "http://127.0.0.1:3002",
+        "LOCALE_QA_RUN": "dev-image-diagnostic"
+      },
+      "started": "2026-09-20T14:52:22.665Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:52:36.308Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/dev-image-diagnostic.log",
+      "logSha256": "0621bb82284d5c32d48074e4e43ad4ffecc974264c56ec29d9b8066b218e4614"
+    },
+    {
+      "name": "dev-preferences-client-mocked-2",
+      "pid": 9476,
+      "args": [
+        "--filter",
+        "e2e",
+        "exec",
+        "node",
+        "localization-preferences-client.mjs"
+      ],
+      "env": {
+        "LOCALE_QA_ORIGIN": "http://127.0.0.1:3002",
+        "LOCALE_QA_RUN": "dev-preferences-client-mocked-2"
+      },
+      "started": "2026-09-20T14:58:31.040Z",
+      "exit": 0,
+      "ended": "2026-09-20T14:59:40.351Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/dev-preferences-client-mocked-2.log",
+      "logSha256": "e405a53c04639b3766ca76af19860022bde1a8ca90250e4db974ddc499a7dd81"
+    },
+    {
+      "name": "dev-read-only-http-extended",
+      "pid": 23448,
+      "args": [
+        "--filter",
+        "e2e",
+        "exec",
+        "node",
+        "localization-http.mjs"
+      ],
+      "env": {
+        "LOCALE_QA_ORIGIN": "http://127.0.0.1:3002",
+        "LOCALE_QA_RUN": "dev-read-only-http-extended",
+        "LOCALE_QA_DEVELOPMENT": "1",
+        "LOCALE_QA_READ_ONLY": "1"
+      },
+      "started": "2026-09-20T15:00:53.743Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:01:31.751Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/dev-read-only-http-extended.log",
+      "logSha256": "2beeae76e3d48d541534fa663f245a41369519f45f1b4c8de048f6dcd36884d3"
+    },
+    {
+      "name": "verified-unit-suites",
+      "pid": 6000,
+      "args": [
+        "--workspace-concurrency=1",
+        "--filter",
+        "@repo/internationalization",
+        "--filter",
+        "@repo/seo",
+        "--filter",
+        "@repo/marketplace",
+        "--filter",
+        "@repo/marketplace-ui",
+        "--filter",
+        "web",
+        "-r",
+        "test"
+      ],
+      "env": {},
+      "started": "2026-09-20T15:01:45.997Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:02:20.057Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/verified-unit-suites.log",
+      "logSha256": "c44c2eb43ecd5ff047fcbbad9709da62048b6fbacac8f4c3bc2e535ed44cef5d"
+    },
+    {
+      "name": "e2e-typecheck",
+      "pid": 22820,
+      "args": [
+        "--filter",
+        "e2e",
+        "typecheck"
+      ],
+      "env": {},
+      "started": "2026-09-20T15:01:46.006Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:01:58.906Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/e2e-typecheck.log",
+      "logSha256": "435e0e85813e5f32e9304a3aad0d26201d66c08037686c11b6b1d54079ed2b80"
+    },
+    {
+      "name": "standalone-build-final",
+      "pid": 23988,
+      "args": [
+        "--filter",
+        "web",
+        "build"
+      ],
+      "env": {
+        "SKIP_ENV_VALIDATION": "true",
+        "AUTOMARKET_PUBLIC_DATA_MODE": "demo",
+        "AUTOMARKET_PUBLIC_E2E": "true",
+        "NEXT_PUBLIC_AUTOMARKET_PUBLIC_E2E": "true",
+        "E2E_PUBLIC_MODE": "demo",
+        "E2E_PUBLIC_RUN_ID": "localization-final-standalone",
+        "NEXT_PUBLIC_BASE_PATH": "",
+        "NEXT_PUBLIC_WEB_URL": "http://127.0.0.1:6494",
+        "NEXT_PUBLIC_APP_URL": "http://127.0.0.1:6497",
+        "NEXT_PUBLIC_API_URL": "http://127.0.0.1:6498",
+        "ARCJET_KEY": "",
+        "DATABASE_URL": "",
+        "RESEND_TOKEN": ""
+      },
+      "started": "2026-09-20T15:02:11.859Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:03:12.628Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/standalone-build-final.log",
+      "logSha256": "571a0c54a87415ec261fb154302b942fe6060c12efe8af1f1b5c3ddc11bcf370"
+    },
+    {
+      "name": "owned-lint-qualified",
+      "pid": 15084,
+      "args": [
+        "exec",
+        "biome",
+        "check",
+        "--max-diagnostics=30",
+        "apps/e2e/localization-audit.mjs",
+        "apps/web/app/[locale]/locale-settings/page.tsx",
+        "apps/web/app/api/preferences/route.ts",
+        "apps/web/lib/locale-configuration.ts",
+        "apps/web/lib/locale-preferences.ts",
+        "packages/internationalization/focus.ts",
+        "packages/internationalization/paths.test.ts",
+        "packages/internationalization/paths.ts",
+        "packages/internationalization/preferences-messages.ts",
+        "packages/internationalization/preferences.test.ts",
+        "packages/internationalization/public-messages.ts",
+        "packages/internationalization/request.ts",
+        "packages/marketplace-ui/components/locale-preferences.tsx",
+        "packages/marketplace-ui/components/public-image.tsx",
+        "packages/marketplace/content/inventory-copy.ts",
+        "packages/marketplace/lead-copy.ts",
+        "packages/marketplace/listing-copy.test.ts",
+        "packages/marketplace/listing-copy.ts",
+        "apps/web/app/[locale]/components/assisted-search-panel.tsx",
+        "apps/web/app/[locale]/components/footer.tsx",
+        "apps/web/app/[locale]/components/inventory-states.tsx",
+        "apps/web/app/[locale]/components/mobile-about-contact.tsx",
+        "apps/web/app/[locale]/components/mobile-content-hub.tsx",
+        "apps/web/app/[locale]/components/mobile-dealer-service-hero.tsx",
+        "apps/web/app/[locale]/components/mobile-financing-form.tsx",
+        "apps/web/app/[locale]/components/mobile-financing-policy.ts",
+        "apps/web/app/[locale]/components/mobile-vehicle-taxonomy-fields.tsx",
+        "apps/web/app/[locale]/components/public-contact-unavailable.tsx",
+        "apps/web/app/[locale]/components/public-inventory-list.tsx",
+        "apps/web/app/[locale]/components/public-marketplace-frame.tsx",
+        "apps/web/app/[locale]/components/public-route-loading.tsx",
+        "apps/web/app/[locale]/components/support-route-image.tsx",
+        "apps/web/app/[locale]/contact/page.tsx",
+        "apps/web/app/[locale]/contact/sell-contact-handoff.tsx",
+        "apps/web/app/[locale]/guides/[slug]/page.tsx",
+        "apps/web/app/[locale]/imports/components/external-import-listings.tsx",
+        "apps/web/app/[locale]/imports/components/import-request-form.tsx",
+        "apps/web/app/[locale]/imports/page.tsx",
+        "apps/web/app/[locale]/layout.tsx",
+        "apps/web/app/[locale]/lease/lease-desktop-controls.tsx",
+        "apps/web/app/[locale]/lease/lease-selected-vehicle.tsx",
+        "apps/web/app/[locale]/lease/lease-vehicle-selector.tsx",
+        "apps/web/app/[locale]/listing/[slug]/page.tsx",
+        "apps/web/app/[locale]/not-found.tsx",
+        "apps/web/app/[locale]/sell/page.tsx",
+        "apps/web/app/sitemap.test.ts",
+        "apps/web/lib/public-contact-context.test.ts",
+        "apps/web/lib/public-global-error.test.ts",
+        "apps/web/lib/public-global-error.ts",
+        "apps/web/lib/public-metadata.test.ts",
+        "apps/web/lib/public-metadata.ts",
+        "apps/web/lib/public-proxy-policy.test.ts",
+        "apps/web/lib/public-proxy-policy.ts",
+        "apps/web/lib/public-route-metadata.ts",
+        "apps/web/lib/public-structured-data.test.ts",
+        "apps/web/lib/public-structured-data.ts",
+        "apps/web/next.config.ts",
+        "apps/web/proxy.ts",
+        "packages/internationalization/package.json",
+        "packages/internationalization/proxy.test.ts",
+        "packages/internationalization/proxy.ts",
+        "packages/marketplace-ui/components/dealer-bottom-nav-icon.tsx",
+        "packages/marketplace-ui/components/dealer-bottom-nav.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-hero.tsx",
+        "packages/marketplace-ui/components/dealer-mobile-brand-bar.tsx",
+        "packages/marketplace-ui/components/dealer-mobile-header-icon.tsx",
+        "packages/marketplace-ui/components/dealer-social-links.tsx",
+        "packages/marketplace-ui/components/desktop-lead-services.tsx",
+        "packages/marketplace-ui/components/desktop-search-assistant.tsx",
+        "packages/marketplace-ui/components/listing-detail-content.tsx",
+        "packages/marketplace-ui/components/listing-detail-summary.tsx",
+        "packages/marketplace-ui/components/listing-detail.tsx",
+        "packages/marketplace-ui/components/listing-gallery-lightbox.tsx",
+        "packages/marketplace-ui/components/listing-gallery.tsx",
+        "packages/marketplace-ui/components/listing-location.tsx",
+        "packages/marketplace-ui/components/listing-price-intelligence.tsx",
+        "packages/marketplace-ui/components/listing-trust-panel.tsx",
+        "packages/marketplace-ui/components/marketplace-locale-switch-link.tsx",
+        "packages/marketplace-ui/components/marketplace-masthead.tsx",
+        "packages/marketplace-ui/components/mobile-inventory-search.tsx",
+        "packages/marketplace-ui/components/organization-directory-card-primitives.tsx",
+        "packages/marketplace-ui/components/organization-directory-rail.tsx",
+        "packages/marketplace-ui/components/related-listing-card.tsx",
+        "packages/marketplace-ui/components/seller-identity-card.tsx",
+        "packages/marketplace-ui/components/vehicle-card-content.tsx",
+        "packages/marketplace-ui/components/vehicle-category-artwork.tsx",
+        "packages/marketplace-ui/lib/inventory-return.test.ts",
+        "packages/marketplace-ui/lib/inventory-return.ts",
+        "packages/marketplace-ui/lib/listing-truth.ts",
+        "packages/marketplace-ui/lib/public-path.test.ts",
+        "packages/marketplace-ui/lib/public-path.ts",
+        "packages/marketplace-ui/package.json",
+        "packages/marketplace/format.ts",
+        "packages/marketplace/lead-site.ts",
+        "packages/marketplace/package.json",
+        "packages/seo/metadata.test.ts",
+        "packages/seo/urls.test.ts",
+        "packages/seo/urls.ts",
+        "package.json",
+        "apps/e2e/specs/public-consent-i18n.spec.ts",
+        "apps/e2e/localization-harness.mjs",
+        "apps/e2e/localization-http.mjs",
+        "apps/e2e/localization-preferences-client.mjs",
+        "apps/e2e/localization-image-diagnostic.mjs",
+        "apps/web/app/[locale]/contact/copy.ts",
+        "apps/web/app/[locale]/contact/copy.test.ts",
+        "apps/web/app/[locale]/lease/page.tsx",
+        "packages/internationalization/request-origin.ts",
+        "packages/internationalization/request-origin.test.ts",
+        "packages/marketplace-ui/lib/locale-preference-request.ts",
+        "packages/marketplace-ui/lib/locale-validation.ts",
+        "scripts/localization-contract.test.mjs",
+        "scripts/localization-source-manifest.mjs",
+        "apps/web/app/[locale]/(home)/page.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-header.tsx",
+        "packages/marketplace-ui/components/vehicle-card.tsx",
+        "packages/internationalization/policy.ts"
+      ],
+      "env": {},
+      "started": "2026-09-20T15:03:40.591Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:03:42.337Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/owned-lint-qualified.log",
+      "logSha256": "7c25c04d38aaaf55f912913aca23abf3ce14e4a382cfc96be2e0e9907e0e6020"
+    },
+    {
+      "name": "release-contracts-final",
+      "pid": 57284,
+      "args": [
+        "exec",
+        "node",
+        "--test",
+        "scripts/localization-contract.test.mjs",
+        "scripts/refactor-contract.test.mjs"
+      ],
+      "env": {},
+      "started": "2026-09-20T15:05:03.428Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:05:05.290Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/release-contracts-final.log",
+      "logSha256": "7dc63d87a6c6e34d47fd8174809919ff84cc6b609d94cf9ca129348af6ad3c07"
+    }
+  ],
+  "counts": {
+    "affectedUnitTests": {
+      "passed": 470,
+      "failed": 0
+    },
+    "localeAndRefactorContracts": {
+      "passed": 14,
+      "failed": 0
+    },
+    "existingReleaseContracts": {
+      "passed": 86,
+      "failed": 0
+    },
+    "browserClientMockedPreferenceResponses": {
+      "passed": 22,
+      "failed": 0
+    },
+    "getOnlyHttpDevelopment": {
+      "passed": 28,
+      "failed": 0,
+      "skippedPostCases": 15
+    },
+    "initialRouteCrawl": {
+      "passed": 155,
+      "failed": 7,
+      "total": 162
+    },
+    "imageDiagnosticCollectionCases": 4
+  },
+  "production": {
+    "project": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+    "team": "team_RTNXBnClGWDdcYFFUW0BnqvJ",
+    "deployment": "dpl_GFusCRBBz4jX4WbFVKdaUDEuEaee",
+    "sha": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+    "newDeployment": false,
+    "newPublicVerification": false
+  },
+  "limitations": [
+    "The tested working tree includes preserved inherited desktop source; the scoped localization commit does not publish that source.",
+    "No native /variant-2 build or browser matrix was completed.",
+    "A tool call to launch new production/mounted verification was denied; no alternative tool path was used to launch it.",
+    "The direct live preference POST probe was denied. Later client tests intercept preference POSTs, and real endpoint loopback normalization is covered by unit tests but not a new live positive POST.",
+    "The first route crawl ran during corrections. Its English finance image-alt failure was fixed; six lazy-image failures were diagnosed as offscreen horizontal images incorrectly treated as visible.",
+    "The attempted viewport harness correction and negative fixture call was denied before execution; the original failing harness and raw receipts are retained.",
+    "The existing analytics/locale E2E source was updated and typechecked, but that complete analytics suite was not rerun.",
+    "No owner approval for ten inherited unpublished commits, no Cars pin update, no dealer deployment, no Admin localization, no new language enabled."
+  ]
+}

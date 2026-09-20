@@ -8,48 +8,66 @@ const analyticsRequestPattern =
   /google-analytics|googletagmanager|posthog|\/ingest(?:\/|$)|_vercel\/insights/i;
 const clientJavaScriptPattern = /\/_next\/static\/.*\.js(?:\?|$)/;
 const bgCarsQueryPattern = /\/bg\/cars\?q=BMW$/;
-const carsQueryPattern = /\/cars\?q=BMW$/;
-const guidesPathPattern = /\/guides$/;
+const carsQueryPattern = /\/en\/cars\?q=BMW$/;
+const guidesPathPattern = /\/en\/guides$/;
 const isAnalyticsCookie = ({ name }: { readonly name: string }) =>
   name.startsWith("_ga") ||
   name.startsWith("ph_") ||
   name.startsWith("__ph_opt_in_out_");
 
-test("locale preference follows explicit routes and preserves deep links", async ({
+test.beforeEach(async ({ context, baseURL }) => {
+  if (!baseURL) {
+    throw new Error("Public browser tests require a verified base URL");
+  }
+  await context.addCookies([
+    {
+      name: "cars_prompt",
+      value: "v1",
+      url: baseURL,
+      httpOnly: true,
+      sameSite: "Lax",
+    },
+  ]);
+});
+
+test("explicit language routes beat a saved preference without silently changing it", async ({
   context,
   page,
+  baseURL,
 }) => {
+  if (!baseURL) {
+    throw new Error("Missing public origin");
+  }
   const errors = collectPublicPageErrors(page);
+  await context.addCookies([
+    {
+      name: "cars_locale",
+      value: "en",
+      url: baseURL,
+      httpOnly: true,
+      sameSite: "Lax",
+    },
+  ]);
   const response = await page.goto("/bg/cars?q=BMW", {
     waitUntil: "domcontentloaded",
   });
-
   expect(response?.status()).toBe(200);
-  const bgCookie = (await context.cookies()).find(
-    ({ name }) => name === "Next-Locale"
-  );
-  expect(bgCookie).toMatchObject({
-    httpOnly: true,
-    name: "Next-Locale",
-    sameSite: "Lax",
-    secure: false,
-    value: "bg",
-  });
-
-  await page.getByRole("link", { name: "English" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "bg");
+  expect(
+    (await context.cookies()).find((cookie) => cookie.name === "cars_locale")
+      ?.value
+  ).toBe("en");
+  expect(
+    (await context.cookies()).some((cookie) => cookie.name === "Next-Locale")
+  ).toBe(false);
+  await page.goto("/en/cars?q=BMW", { waitUntil: "domcontentloaded" });
   await expect(page).toHaveURL(carsQueryPattern);
-  await expect
-    .poll(
-      async () =>
-        (await context.cookies()).find(({ name }) => name === "Next-Locale")
-          ?.value
-    )
-    .toBe("en");
-
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await page.reload({ waitUntil: "domcontentloaded" });
   await expect(page).toHaveURL(carsQueryPattern);
-  await page.getByRole("link", { name: "Български" }).click();
+  await page.goBack({ waitUntil: "domcontentloaded" });
   await expect(page).toHaveURL(bgCarsQueryPattern);
+  await expect(page.locator("html")).toHaveAttribute("lang", "bg");
   await expectHealthyPublicPage(page, errors);
 });
 
@@ -187,7 +205,7 @@ test("stored denial does not shift content during hydration", async ({
   ).toBeLessThanOrEqual(0.01);
   expect(analyticsRequests).toEqual([]);
   expect((await context.cookies()).filter(isAnalyticsCookie)).toEqual([]);
-  await page.getByRole("link", { name: "English" }).first().click();
+  await page.goto("/en/guides", { waitUntil: "domcontentloaded" });
   await expect(page).toHaveURL(guidesPathPattern);
   expect(reactScriptWarnings).toEqual([]);
   await expectHealthyPublicPage(page, errors);

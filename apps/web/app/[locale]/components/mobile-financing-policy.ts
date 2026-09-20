@@ -113,6 +113,7 @@ export const parseFinancingRequestHref = (
   }
 
   if (
+    url.origin !== new URL(baseHref).origin ||
     !url.pathname.endsWith("/contact") ||
     url.searchParams.get("intent") !== "leasing"
   ) {

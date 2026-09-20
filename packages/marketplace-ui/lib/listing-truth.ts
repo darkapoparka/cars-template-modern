@@ -4,6 +4,8 @@ import type {
   VehicleListing,
   VehicleLocation,
 } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import { leadSite } from "@repo/marketplace/lead-site";
 
 const countryNames: Record<string, string> = {
   AT: "Austria",
@@ -125,6 +127,28 @@ export const formatTruthDateTime = (
   }).format(date);
 };
 
+const locationLabelsEn: Record<string, string> = Object.fromEntries(
+  Object.entries(locationLabelsBg).map(([en, bg]) => [bg, en])
+);
+
+const localizeLocationPart = (value: string, locale?: string): string => {
+  const copy = getLeadCopy(locale);
+  if (value === leadSite.city) {
+    return copy.city;
+  }
+  if (value === leadSite.country) {
+    return copy.country;
+  }
+  if (value === leadSite.district.bg || value === leadSite.district.en) {
+    return isBulgarianLocale(locale)
+      ? leadSite.district.bg
+      : leadSite.district.en;
+  }
+  const labels = isBulgarianLocale(locale)
+    ? locationLabelsBg
+    : locationLabelsEn;
+  return labels[value] ?? value;
+};
 export const formatVehicleLocation = (
   location: VehicleLocation,
   locale?: string
@@ -133,9 +157,7 @@ export const formatVehicleLocation = (
     new Set(
       [location.city, location.region, location.country]
         .filter((value): value is string => Boolean(value))
-        .map((value) =>
-          isBulgarianLocale(locale) ? (locationLabelsBg[value] ?? value) : value
-        )
+        .map((value) => localizeLocationPart(value, locale))
     )
   ).join(", ");
 

@@ -1,5 +1,6 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   isDealershipSite,
   isPublicSitePathEnabled,
@@ -211,7 +212,7 @@ export const Footer = ({ locale }: FooterProps) => {
             </Link>
 
             <p className="mt-4 max-w-xs text-background/75 text-body">
-              {leadSite.tagline}
+              {getLeadCopy(locale).tagline}
             </p>
 
             <div className="mt-5 flex items-start gap-2 text-background/75 text-meta">
@@ -221,7 +222,8 @@ export const Footer = ({ locale }: FooterProps) => {
                 strokeWidth={1.8}
               />
               <span>
-                {leadSite.address}, {leadSite.city}, {leadSite.country}
+                {getLeadCopy(locale).address}, {getLeadCopy(locale).city},{" "}
+                {getLeadCopy(locale).country}
               </span>
             </div>
 

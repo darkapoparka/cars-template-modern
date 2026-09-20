@@ -45,9 +45,9 @@ Never expose raw errors from readiness endpoints.
 
 ## Technical cookie and storage contract
 
-- `Next-Locale` is host-only, `HttpOnly`, `SameSite=Lax`, `Path=/`, expires
-  after one year, and is `Secure` in production. Explicit locale navigation is
-  authoritative and prefetch must not change it.
+- Public browsing now uses explicit EN/BG URL paths. Navigation and prefetch do not accept or save preferences. The old automatic `Next-Locale` cookie is no longer read or written by the public adapter.
+- Only the strict same-origin preference POST writes host-only `cars_locale`, `cars_country`, and versioned `cars_prompt` cookies: `HttpOnly`, `SameSite=Lax`, `Path=/`, 180 days, and `Secure` on HTTPS. Dismissal writes only the prompt cookie. Country selection never changes dealer facts, contact destinations or inventory currency.
+- Optional `cars.prompt.<version>` localStorage mirrors explicit prompt completion only. It never determines language. With storage unavailable, the explicit URL remains authoritative. This preference choice is separate from analytics/marketing consent.
 - `automarket.analytics-consent` is versioned localStorage, not an auth cookie.
 - Marketplace view and theme storage contain UI preferences only.
 - Clerk owns authenticated session cookies. Verify their deployed attributes,

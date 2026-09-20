@@ -1,5 +1,4 @@
 import { leadSite } from "./lead-site";
-import { isDealershipSite } from "./site-config";
 import type {
   BodyType,
   FuelType,
@@ -121,13 +120,10 @@ const listingBadgeLabelsBg: Record<ListingBadge, string> = {
 const isBulgarianLocale = (locale?: string) =>
   locale?.toLowerCase().startsWith("bg") ?? false;
 
-const normalizeFormattingLocale = (locale?: string) => {
-  if (isDealershipSite) {
-    return leadSite.locale;
-  }
-
-  return locale?.toLowerCase().startsWith("bg") ? "bg-BG" : "en-BG";
-};
+const normalizeFormattingLocale = (locale?: string) =>
+  (locale ?? leadSite.locale).toLowerCase().startsWith("bg")
+    ? "bg-BG"
+    : "en-GB";
 
 export const formatMoney = (money: Money, locale?: string) =>
   new Intl.NumberFormat(normalizeFormattingLocale(locale), {

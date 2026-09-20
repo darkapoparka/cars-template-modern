@@ -1,3 +1,4 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { createLocalizedMetadata as createSeoLocalizedMetadata } from "@repo/seo/metadata";
@@ -54,7 +55,7 @@ export const createPublicLocalizedMetadata = (
   const defaultImage = isDealershipSite
     ? leadSite.heroPath
     : PUBLIC_SOCIAL_IMAGE_PATH;
-  const image = properties.image ?? defaultImage;
+  const image = withBasePath(properties.image ?? defaultImage);
   const metadata = createSeoLocalizedMetadata({
     ...properties,
     alternateLocales: (

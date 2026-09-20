@@ -12,10 +12,10 @@ import {
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight, Globe2, Search } from "lucide-react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import { getPublicExternalInventory } from "@/lib/public-external-inventory";

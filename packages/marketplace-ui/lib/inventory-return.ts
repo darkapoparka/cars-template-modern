@@ -1,3 +1,8 @@
+import {
+  localizedPath,
+  withoutBasePath,
+} from "@repo/internationalization/paths";
+
 const storageKey = "modern-inventory-return-v1";
 const localePrefix = /^\/(bg|en)(?=\/)/;
 const inventoryHref =
@@ -10,7 +15,8 @@ interface InventoryReturn {
   scrollY: number;
 }
 
-const normalizePath = (path: string) => path.replace(localePrefix, "");
+const normalizePath = (path: string) =>
+  withoutBasePath(path).replace(localePrefix, "");
 
 export function readInventoryReturn(): InventoryReturn | null {
   try {
@@ -18,7 +24,7 @@ export function readInventoryReturn(): InventoryReturn | null {
     if (
       !value ||
       typeof value.href !== "string" ||
-      !inventoryHref.test(value.href) ||
+      !inventoryHref.test(withoutBasePath(value.href)) ||
       typeof value.listingPath !== "string" ||
       !Number.isFinite(value.scrollY) ||
       value.scrollY < 0
@@ -32,7 +38,7 @@ export function readInventoryReturn(): InventoryReturn | null {
 }
 
 export function rememberInventoryReturn(listingHref: string) {
-  if (!inventoryPath.test(location.pathname)) {
+  if (!inventoryPath.test(withoutBasePath(location.pathname))) {
     return;
   }
   try {
@@ -43,7 +49,7 @@ export function rememberInventoryReturn(listingHref: string) {
     sessionStorage.setItem(
       storageKey,
       JSON.stringify({
-        href: location.pathname + location.search,
+        href: withoutBasePath(location.pathname) + location.search,
         listingPath: normalizePath(destination.pathname),
         scrollY: window.scrollY,
       })
@@ -56,6 +62,9 @@ export function rememberInventoryReturn(listingHref: string) {
 export function getInventoryReturnHref(fallback: string) {
   const saved = readInventoryReturn();
   return saved?.listingPath === normalizePath(location.pathname)
-    ? saved.href
+    ? localizedPath(
+        withoutBasePath(location.pathname).split("/")[1],
+        withoutBasePath(saved.href)
+      )
     : fallback;
 }

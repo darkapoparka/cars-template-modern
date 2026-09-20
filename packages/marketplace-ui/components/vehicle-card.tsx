@@ -3,8 +3,8 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import { getListingPath } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Heart, Images } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { rememberInventoryReturn } from "../lib/inventory-return";
@@ -19,6 +19,7 @@ import {
   getVehicleCardViewListingLabel,
   vehicleCardPlaceholder,
 } from "../lib/vehicle-card-view-policy";
+import Image from "./public-image";
 import {
   VehicleCardContent,
   VehicleCardMediaBadges,
@@ -35,7 +36,7 @@ export const VehicleCard = ({
   density = "default",
   desktopLayout = "list",
   href,
-  listing,
+  listing: sourceListing,
   locale,
   presentation = "default",
   priceInsight,
@@ -45,6 +46,7 @@ export const VehicleCard = ({
   trustSignals = [],
   viewMode = "list",
 }: VehicleCardProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const [imageFailed, setImageFailed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(!listing.images[0]?.url);
   const isGrid = viewMode === "grid";

@@ -6,7 +6,14 @@
     ".": "./index.ts",
     "./config": "./config.ts",
     "./format": "./format.ts",
-    "./proxy": "./proxy.ts"
+    "./proxy": "./proxy.ts",
+    "./policy": "./policy.ts",
+    "./paths": "./paths.ts",
+    "./preferences-messages": "./preferences-messages.ts",
+    "./focus": "./focus.ts",
+    "./request": "./request.ts",
+    "./public-messages": "./public-messages.ts",
+    "./request-origin": "./request-origin.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",

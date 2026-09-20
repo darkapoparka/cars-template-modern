@@ -22,7 +22,7 @@ it("retains filters and scroll across localized listing navigation", () => {
   rememberInventoryReturn("/bg/listing/bmw-x5");
   vi.stubGlobal("location", { pathname: "/listing/bmw-x5" });
   expect(getInventoryReturnHref("/cars")).toBe(
-    "/cars?make=BMW&priceMax=100000"
+    "/bg/cars?make=BMW&priceMax=100000"
   );
   expect(readInventoryReturn()?.scrollY).toBe(420);
   vi.stubGlobal("location", { pathname: "/listing/another-car" });
@@ -50,4 +50,17 @@ it("falls back when browser storage is unavailable", () => {
   });
   vi.stubGlobal("location", { pathname: "/listing/x" });
   expect(getInventoryReturnHref("/cars")).toBe("/cars");
+});
+
+it("retains the current explicit locale when returning across languages", () => {
+  vi.stubGlobal("sessionStorage", {
+    getItem: () =>
+      JSON.stringify({
+        href: "/bg/cars?make=BMW",
+        listingPath: "/listing/x",
+        scrollY: 10,
+      }),
+  });
+  vi.stubGlobal("location", { pathname: "/en/listing/x" });
+  expect(getInventoryReturnHref("/en/cars")).toBe("/en/cars?make=BMW");
 });

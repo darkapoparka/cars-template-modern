@@ -16,8 +16,8 @@ import { Footer } from "./components/footer";
 const NotFound = () => {
   const params = useParams<{ locale?: string }>();
   const isBg = params.locale === "bg";
-  const homeHref = isBg ? "/bg" : "/";
-  const browseHref = isBg ? "/bg/cars" : "/cars";
+  const homeHref = isBg ? "/bg" : "/en";
+  const browseHref = isBg ? "/bg/cars" : "/en/cars";
   const pageTitle = isBg
     ? `Страницата не е намерена | ${leadSite.name}`
     : `Page not found | ${leadSite.name}`;

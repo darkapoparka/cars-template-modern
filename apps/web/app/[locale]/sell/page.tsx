@@ -9,6 +9,7 @@ import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite, vehicleCategories } from "@repo/marketplace";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
@@ -330,7 +331,7 @@ export default async function SellPage({
                 {copy.contactPrompt}{" "}
                 <a
                   className="font-medium text-foreground underline underline-offset-4"
-                  href={leadSite.phoneHref}
+                  href={withBasePath(leadSite.phoneHref)}
                 >
                   {leadSite.phoneDisplay}
                 </a>

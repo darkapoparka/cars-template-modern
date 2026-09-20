@@ -17,6 +17,7 @@ import {
   MobilePillRail,
   mobileHeaderIconActionClassName,
 } from "@repo/marketplace-ui";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import {
   ArrowRight,
@@ -25,7 +26,6 @@ import {
   SlidersHorizontal,
   X,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { type RefObject, useEffect, useRef, useState } from "react";
 import {

@@ -1,5 +1,6 @@
 import { withCMS } from "@repo/cms/next-config";
 import { withToolbar } from "@repo/feature-flags/lib/toolbar";
+import { publicBasePath } from "@repo/internationalization/paths";
 import { config } from "@repo/next-config";
 import { withLogging, withSentry } from "@repo/observability/next-config";
 import type { NextConfig } from "next";
@@ -36,6 +37,8 @@ if (publicE2E) {
   // Next cache and from other concurrent browser gates.
   nextConfig.distDir = `.next-public-e2e-${publicE2ERunId}-${publicE2EMode}`;
 }
+
+nextConfig.basePath = publicBasePath;
 
 nextConfig.images = nextConfig.images ?? {};
 nextConfig.images.remotePatterns = [

@@ -1,4 +1,5 @@
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 
 interface ListingLocationProps {
   readonly locale?: string;
@@ -16,7 +17,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
       id="listing-location"
     >
       <h2 className="sr-only" id="listing-location-heading">
-        {leadSite.city}, {leadSite.address}
+        {getLeadCopy(locale).city}, {getLeadCopy(locale).address}
       </h2>
       <iframe
         allowFullScreen

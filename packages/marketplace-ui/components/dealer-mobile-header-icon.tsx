@@ -5,7 +5,7 @@ import {
   type LucideIcon,
   Truck,
 } from "lucide-react";
-import Image from "next/image";
+import Image from "./public-image";
 
 const artworkPaths = {
   car: "/images/services/header-car-v1.png",

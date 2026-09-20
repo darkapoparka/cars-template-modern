@@ -4,6 +4,7 @@ import {
   getCategoryPath,
   type VehicleListing,
 } from "@repo/marketplace";
+import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
 import {
@@ -53,7 +54,7 @@ export const ListingDetail = ({
   contactHref,
   destinationCountryCode,
   homeHref,
-  listing,
+  listing: sourceListing,
   listingUrl,
   locale,
   marketplaceHref,
@@ -63,6 +64,7 @@ export const ListingDetail = ({
   sellerProfileHref,
   trustEvidence = [],
 }: ListingDetailProps) => {
+  const listing = localizeListingCopy(sourceListing, locale);
   const copy = getListingDetailCopy(locale);
   const reportHref = getListingReportHref(
     cleanListingDetailBaseUrl(appBaseUrl),

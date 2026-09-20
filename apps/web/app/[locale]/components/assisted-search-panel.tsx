@@ -2,6 +2,7 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   type MarketplaceSearchParams,
@@ -110,7 +111,7 @@ export const AssistedSearchPanel = ({
     setError(false);
     setPending(true);
     try {
-      const response = await fetch("/api/ai/search", {
+      const response = await fetch(withBasePath("/api/ai/search"), {
         body: JSON.stringify({
           basePath,
           category,

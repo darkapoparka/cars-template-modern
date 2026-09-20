@@ -29,7 +29,12 @@
     "db:push": "cd packages/database && pnpm exec prisma format && pnpm exec prisma generate && pnpm exec prisma db push",
     "clean": "git clean -xdf node_modules",
     "refactor:contracts": "node --test scripts/refactor-contract.test.mjs",
-    "deps:outdated": "pnpm outdated --recursive"
+    "deps:outdated": "pnpm outdated --recursive",
+    "localization:contracts": "node --test scripts/localization-contract.test.mjs",
+    "localization:manifest": "node scripts/localization-source-manifest.mjs --write",
+    "localization:routes": "pnpm --filter e2e exec node localization-audit.mjs",
+    "localization:http": "pnpm --filter e2e exec node localization-http.mjs",
+    "localization:client": "pnpm --filter e2e exec node localization-preferences-client.mjs"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.6",

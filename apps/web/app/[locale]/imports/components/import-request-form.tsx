@@ -15,6 +15,7 @@ import {
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
 import {
@@ -120,7 +121,7 @@ const ImportRequestSuccess = ({
         </p>
         <a
           className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-lg bg-brand px-5 font-semibold text-brand-foreground text-compact-control transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
-          href={leadSite.phoneHref}
+          href={withBasePath(leadSite.phoneHref)}
         >
           <Phone aria-hidden="true" className="size-4" />
           {leadSite.phoneDisplay}

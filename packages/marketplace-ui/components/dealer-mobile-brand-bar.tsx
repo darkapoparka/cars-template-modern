@@ -1,12 +1,13 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { MapPin, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
+import Image from "./public-image";
 
 export const DealerMobileBrandBar = ({
   isBg,
@@ -45,7 +46,7 @@ export const DealerMobileBrandBar = ({
             <a
               aria-label={isBg ? "Отвори местоположението" : "Open location"}
               className={mobileHeaderIconActionClassName}
-              href={leadSite.mapsUrl}
+              href={withBasePath(leadSite.mapsUrl)}
               rel="noreferrer"
               target="_blank"
             >
@@ -105,7 +106,7 @@ export const DealerMobileBrandBar = ({
             <a
               aria-label={`${isBg ? "Обадете се на" : "Call"} ${leadSite.phoneDisplay}`}
               className={mobileHeaderIconActionClassName}
-              href={leadSite.phoneHref}
+              href={withBasePath(leadSite.phoneHref)}
             >
               <DealerMobileHeaderIcon icon={Phone} kind="phone" />
             </a>

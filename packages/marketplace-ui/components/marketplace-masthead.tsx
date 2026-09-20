@@ -1,5 +1,4 @@
 // biome-ignore-all lint/complexity/noExcessiveCognitiveComplexity: The shared masthead intentionally supports compact/discovery and marketplace/dealer variants.
-
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
@@ -14,7 +13,9 @@ import {
   TooltipTrigger,
 } from "@repo/design-system/components/ui/tooltip";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   ArrowUpRight,
@@ -31,7 +32,6 @@ import {
   Tag,
   UserRound,
 } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import type { ComponentType, ReactNode } from "react";
 import { useState } from "react";
@@ -42,6 +42,7 @@ import {
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
+import Image from "./public-image";
 
 export type MarketplaceMode = "buy" | "sell" | "lease" | "imports";
 
@@ -318,7 +319,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
                   : `Call ${leadSite.phoneDisplay}`
               }
               data-slot="lead-phone-action"
-              href={leadSite.phoneHref}
+              href={withBasePath(leadSite.phoneHref)}
             >
               <Phone aria-hidden="true" className="size-5" strokeWidth={1.9} />
               <span>{isBg ? "Обади се" : "Call"}</span>
@@ -349,7 +350,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
               }
               className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-compact-control text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
               data-slot="lead-phone-tooltip-action"
-              href={leadSite.phoneHref}
+              href={withBasePath(leadSite.phoneHref)}
             >
               {isBg ? "Обади се" : "Call"}
               <Phone aria-hidden="true" className="size-4" strokeWidth={2} />
@@ -376,7 +377,7 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
                   : "Open address in Google Maps"
               }
               data-slot="lead-location-action"
-              href={leadSite.mapsUrl}
+              href={withBasePath(leadSite.mapsUrl)}
               rel="noreferrer"
               target="_blank"
             >
@@ -395,19 +396,21 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
           <div className="flex flex-col gap-3">
             <div>
               <p className="font-semibold text-meta">
-                {leadSite.city}
+                {getLeadCopy(isBg ? "bg" : "en").city}
                 <span aria-hidden="true" className="px-1 text-white/40">
                   ·
                 </span>
-                {isBg ? "Студентски град" : "Studentski grad"}
+                {isBg ? leadSite.district.bg : leadSite.district.en}
               </p>
-              <p className="mt-1 text-meta text-white/60">{leadSite.address}</p>
+              <p className="mt-1 text-meta text-white/60">
+                {getLeadCopy(isBg ? "bg" : "en").address}
+              </p>
             </div>
             <a
               aria-label={isBg ? "Отвори в Google Maps" : "Open in Google Maps"}
               className="inline-flex h-11 w-full items-center justify-between gap-3 rounded-lg border border-white/20 bg-zinc-800 px-3.5 font-semibold text-compact-control text-white shadow-sm transition-[background-color,border-color,box-shadow] duration-150 hover:border-white/30 hover:bg-zinc-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-bright)] focus-visible:ring-inset active:bg-zinc-600"
               data-slot="lead-location-tooltip-action"
-              href={leadSite.mapsUrl}
+              href={withBasePath(leadSite.mapsUrl)}
               rel="noreferrer"
               target="_blank"
             >

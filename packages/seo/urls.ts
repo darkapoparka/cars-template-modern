@@ -3,6 +3,7 @@ import {
   locales,
   normalizeLocale,
 } from "@repo/internationalization/config";
+import { localizedPath, withBasePath } from "@repo/internationalization/paths";
 
 export const SEO_LOCALES = locales;
 
@@ -59,16 +60,8 @@ export const normalizeSeoLocale = (locale: string): SeoLocale =>
 export const getLocalizedPath = (
   locale: SeoLocale,
   path: string,
-  { defaultLocale = DEFAULT_SEO_LOCALE }: LocalizedPathOptions = {}
-): string => {
-  const normalizedPath = ensureLeadingSlash(path);
-
-  if (locale === defaultLocale) {
-    return normalizedPath;
-  }
-
-  return `/${locale}${normalizedPath === "/" ? "" : normalizedPath}`;
-};
+  _options: LocalizedPathOptions = {}
+): string => localizedPath(locale, path);
 
 export const getCanonicalBaseUrl = (value: string | URL): URL => {
   const url = parseHttpUrl(value);
@@ -84,7 +77,10 @@ export const getCanonicalUrl = (
   path: string,
   { baseUrl }: CanonicalUrlOptions
 ): string =>
-  new URL(ensureLeadingSlash(path), getCanonicalBaseUrl(baseUrl)).toString();
+  new URL(
+    withBasePath(ensureLeadingSlash(path)),
+    getCanonicalBaseUrl(baseUrl)
+  ).toString();
 
 export const getLanguageAlternates = (
   path: string,

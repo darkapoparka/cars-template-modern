@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "@repo/marketplace-ui/components/public-image";
 import { ImageOff } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
 
 interface SupportRouteImageProps {

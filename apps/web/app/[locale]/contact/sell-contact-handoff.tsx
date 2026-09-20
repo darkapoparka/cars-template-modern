@@ -1,11 +1,14 @@
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { marketplaceDiscoveryFrameClassName } from "@repo/marketplace-ui";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import { ChevronRight, Phone } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import {
+  hasSellVehicleDetails,
   type SellVehicleDraft,
   sellCategoryLabels,
   serializeSellVehicleDraft,
@@ -13,7 +16,7 @@ import {
 import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicEnquiryForm } from "../components/public-enquiry-form";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
-import { pageCopy } from "./copy";
+import { getSellContactCopy } from "./copy";
 
 const sellCategoryAssets = leadSite.sellCategoryAssets;
 
@@ -31,7 +34,7 @@ export function SellContactHandoff({
   draft: SellVehicleDraft;
   submissionAvailable: boolean;
 }) {
-  const copy = pageCopy[locale];
+  const copy = getSellContactCopy(locale, hasSellVehicleDetails(draft));
   const localize = (route: string) => getLocalizedPath(locale, route);
   const sellVehicleName = [draft.make, draft.model].filter(Boolean).join(" ");
   const selectedVehicleAsset =
@@ -163,7 +166,7 @@ export function SellContactHandoff({
                 <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <a
                     className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-brand px-5 font-semibold text-brand-foreground text-sm transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent)] focus-visible:outline-offset-3"
-                    href={leadSite.phoneHref}
+                    href={withBasePath(leadSite.phoneHref)}
                   >
                     <Phone aria-hidden="true" className="size-4" />
                     {copy.sellHandoffAction}
@@ -172,11 +175,11 @@ export function SellContactHandoff({
 
                 <a
                   className="mx-auto mt-5 block w-fit text-center text-muted-foreground text-sm underline-offset-4 hover:text-foreground hover:underline"
-                  href={leadSite.mapsUrl}
+                  href={withBasePath(leadSite.mapsUrl)}
                   rel="noreferrer"
                   target="_blank"
                 >
-                  {copy.sellLocationLabel} · {leadSite.address}
+                  {copy.sellLocationLabel} · {getLeadCopy(locale).address}
                 </a>
               </div>
             </div>

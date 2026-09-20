@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { withBasePath } from "@repo/internationalization/paths";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 import {
@@ -128,7 +129,7 @@ export const LeaseDesktopControls = ({
           asChild
           className="h-11 gap-2 rounded-lg bg-brand px-5 text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
         >
-          <a href={phoneHref}>
+          <a href={withBasePath(phoneHref)}>
             <Phone aria-hidden="true" className="size-4" />
             {copy.phoneAction}
           </a>

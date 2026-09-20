@@ -10,7 +10,6 @@ import {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { CarFront, Search, X } from "lucide-react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -24,6 +23,7 @@ import {
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
 } from "./mobile-marketplace-overlay";
+import Image from "./public-image";
 
 interface MobileInventorySearchProps {
   readonly isBg: boolean;
