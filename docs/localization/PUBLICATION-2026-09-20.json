@@ -1,0 +1,180 @@
+{
+  "time": "2026-09-20T15:26:32.649Z",
+  "authorization": "Owner explicitly approved committing and pushing all existing Modern refactor, localization and frontend work to main.",
+  "beforeHead": "42ac1d6861be600a81f82b5560884447e6257514",
+  "beforeOrigin": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+  "includedPriorCommits": [
+    "42ac1d6861be600a81f82b5560884447e6257514 docs(i18n): record exact local checkpoint and release gates",
+    "4a9f7d11f089fff6e2c0140ffb98dfd1ce4f245d feat(i18n): implement native EN/BG preferences and public copy",
+    "1cf8edfe26a36e25b0d95dcc963b60de51cdeb50 feat(desktop): unify contextual heroes and finish public UI polish",
+    "b8e4b788e81ac6bffe304371908f516a01cbd2d6 fix(desktop): refine variant-one hierarchy and readable vehicle cards",
+    "ecc0afcad32e2afc2d6e9b7fc022bbf514ddb700 feat(desktop): implement selected variant-one showroom layout",
+    "a3ef6406dbc2531b05c52df87adbec7b45d8676b feat(desktop): center buy box and prioritize inventory",
+    "1cbe6bb327a4653cf3c7c69ddd78a93c5e2903a3 fix(refactor): finish runtime contracts and responsive qualification",
+    "edbcffa91c975b859da74186e62aab7ffd6b7075 refactor(template): implement shared configuration, desktop system and dealer workflows",
+    "1fd198a35bfccc4a6614cf57e6ac58737c38bd27 docs(refactor): audit modern template and define phased improvement plan",
+    "baca6cad2d013810d5bd0395ffa8ffd2075b59ed feat(marketplace): rebuild desktop discovery experience",
+    "248e947ba247738c73e2e275aa77b4ad7ded8917 feat(marketplace): refine premium desktop landing",
+    "80841aa1a04a6d65ef931b2006a8b34e72fc18f7 feat(marketplace): add premium desktop inventory landing"
+  ],
+  "sourceAggregateSha256": "502fc9379d02cc224cf7d96c7a9548690f5c97b94dc7e0a6c2431ba85f16f219",
+  "tests": [
+    {
+      "name": "combined-unit",
+      "args": [
+        "--workspace-concurrency=1",
+        "--filter",
+        "@repo/internationalization",
+        "--filter",
+        "@repo/marketplace",
+        "--filter",
+        "@repo/marketplace-ui",
+        "--filter",
+        "@repo/seo",
+        "--filter",
+        "web",
+        "-r",
+        "test"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:23:37.317Z",
+      "ended": "2026-09-20T15:24:20.291Z",
+      "logSha256": "c91ea415381dfad38b3e2e718c06d94a3a484bf90a6f256f6f09fdfa38df85d3"
+    },
+    {
+      "name": "combined-contracts",
+      "args": [
+        "exec",
+        "node",
+        "--test",
+        "scripts/localization-contract.test.mjs",
+        "scripts/refactor-contract.test.mjs"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:23:37.323Z",
+      "ended": "2026-09-20T15:23:39.982Z",
+      "logSha256": "b33ee339af820456a82e4f20d24740abaa475edbec29ad71f26ffe119df41563"
+    },
+    {
+      "name": "frontend-check",
+      "args": [
+        "exec",
+        "biome",
+        "check",
+        "apps/e2e/fixtures/modern-visual-health.ts",
+        "apps/e2e/specs/modern-refactor.spec.ts",
+        "apps/web/app/[locale]/(home)/page.tsx",
+        "apps/web/app/[locale]/components/category-marketplace-page.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-discovery-hero.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-header.module.css",
+        "packages/marketplace-ui/components/dealer-desktop-header.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-toolbar.module.css",
+        "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+        "packages/marketplace-ui/components/dealer-hero-search.module.css",
+        "packages/marketplace-ui/components/dealer-hero-search.tsx",
+        "packages/marketplace-ui/components/desktop-discovery-bar.tsx",
+        "packages/marketplace-ui/components/desktop-discovery-search.tsx",
+        "packages/marketplace-ui/components/desktop-filter-controls.tsx",
+        "packages/marketplace-ui/components/desktop-quick-filters.tsx",
+        "packages/marketplace-ui/components/marketplace-full-filter-overlay.tsx",
+        "packages/marketplace-ui/components/marketplace-model-picker.tsx",
+        "packages/marketplace-ui/components/marketplace-results.tsx",
+        "packages/marketplace-ui/components/marketplace-shell.tsx",
+        "packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+        "packages/marketplace-ui/components/vehicle-card.tsx",
+        "apps/e2e/desktop-polish-review.mjs",
+        "packages/marketplace-ui/components/dealer-inventory-filters.tsx",
+        "packages/marketplace-ui/components/dealer-inventory-summary.tsx",
+        "packages/marketplace-ui/components/dealer-inventory.module.css",
+        "packages/marketplace-ui/components/desktop-filter-controls.module.css",
+        "packages/marketplace-ui/components/desktop-quick-filters.module.css"
+      ],
+      "exit": 1,
+      "started": "2026-09-20T15:23:37.330Z",
+      "ended": "2026-09-20T15:23:39.508Z",
+      "logSha256": "c97cf441c9e92a17a21284b7205723f7469d599af523aeb9d1b9c63910415c0b"
+    },
+    {
+      "name": "combined-build",
+      "args": [
+        "--filter",
+        "web",
+        "build"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:23:37.337Z",
+      "ended": "2026-09-20T15:24:49.084Z",
+      "logSha256": "304cf624b3f5106d5baab829bd287bde6a00b82412cbd5b5a9f24934c19d16e1"
+    },
+    {
+      "name": "frontend-script-format",
+      "args": [
+        "exec",
+        "biome",
+        "check",
+        "--write",
+        "--unsafe",
+        "apps/e2e/desktop-polish-review.mjs"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:24:54.038Z",
+      "ended": "2026-09-20T15:24:55.361Z",
+      "logSha256": "1a523c22e44942155325dc11c81153bae537d35a38dbafc093e5da9157853d33"
+    },
+    {
+      "name": "combined-build-final",
+      "args": [
+        "--filter",
+        "web",
+        "build"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:25:08.376Z",
+      "ended": "2026-09-20T15:26:06.427Z",
+      "logSha256": "fe93a66e8fc55d80461cf0b070b6dbb5471722a1595259464c8711bcc5222dee"
+    },
+    {
+      "name": "frontend-check-final",
+      "args": [
+        "exec",
+        "biome",
+        "check",
+        "apps/e2e/fixtures/modern-visual-health.ts",
+        "apps/e2e/specs/modern-refactor.spec.ts",
+        "apps/web/app/[locale]/(home)/page.tsx",
+        "apps/web/app/[locale]/components/category-marketplace-page.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-discovery-hero.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-header.module.css",
+        "packages/marketplace-ui/components/dealer-desktop-header.tsx",
+        "packages/marketplace-ui/components/dealer-desktop-toolbar.module.css",
+        "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+        "packages/marketplace-ui/components/dealer-hero-search.module.css",
+        "packages/marketplace-ui/components/dealer-hero-search.tsx",
+        "packages/marketplace-ui/components/desktop-discovery-bar.tsx",
+        "packages/marketplace-ui/components/desktop-discovery-search.tsx",
+        "packages/marketplace-ui/components/desktop-filter-controls.tsx",
+        "packages/marketplace-ui/components/desktop-quick-filters.tsx",
+        "packages/marketplace-ui/components/marketplace-full-filter-overlay.tsx",
+        "packages/marketplace-ui/components/marketplace-model-picker.tsx",
+        "packages/marketplace-ui/components/marketplace-results.tsx",
+        "packages/marketplace-ui/components/marketplace-shell.tsx",
+        "packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+        "packages/marketplace-ui/components/vehicle-card.tsx",
+        "apps/e2e/desktop-polish-review.mjs",
+        "packages/marketplace-ui/components/dealer-inventory-filters.tsx",
+        "packages/marketplace-ui/components/dealer-inventory-summary.tsx",
+        "packages/marketplace-ui/components/dealer-inventory.module.css",
+        "packages/marketplace-ui/components/desktop-filter-controls.module.css",
+        "packages/marketplace-ui/components/desktop-quick-filters.module.css"
+      ],
+      "exit": 0,
+      "started": "2026-09-20T15:25:08.383Z",
+      "ended": "2026-09-20T15:25:09.988Z",
+      "logSha256": "03b8b4750a4e01c725cfe23f7c18200b5f4d2ea7c0b9e1c354dcb8c580e2ef42"
+    }
+  ],
+  "scope": "cars-template-modern only; no Cars pins or dealer deployment",
+  "publication": "Git push and resulting Vercel deployment verification follow this checkpoint."
+}

@@ -5,53 +5,14 @@
   .toolbar {
     position: relative;
     z-index: 42;
-    display: block;
-    width: min(92%, var(--layout-wide-max));
-    padding: var(--layout-gutter);
-    margin: 1.5rem auto var(--layout-section-gap);
-    color: var(--foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-vehicle);
-  }
-  .queryRow {
     display: flex;
-    gap: 0.75rem;
-    align-items: stretch;
+    justify-content: center;
+    padding: var(--panel-padding) 4%;
+    margin-bottom: var(--panel-padding);
+    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
+    border-bottom: 1px solid var(--inverse-border);
   }
-  .search {
-    flex: 1;
-    min-width: 0;
-  }
-  .search {
-    position: relative;
-  }
-  .searchIcon {
-    position: absolute;
-    top: calc(var(--control-height-search) / 2);
-    left: 1rem;
-    z-index: 1;
-    color: var(--muted-foreground);
-    pointer-events: none;
-    transform: translateY(-50%);
-  }
-  .searchHint {
-    position: absolute;
-    top: calc(var(--control-height-search) / 2);
-    right: 1rem;
-    padding: 0.125rem 0.375rem;
-    font-size: var(--text-micro);
-    line-height: var(--text-micro--line-height);
-    color: var(--muted-foreground);
-    pointer-events: none;
-    background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    transform: translateY(-50%);
-  }
-  .filters {
-    padding-top: 1rem;
-    margin-top: 1rem;
-    border-top: 1px solid var(--border);
+  .content {
+    width: min(100%, 60rem);
   }
 }

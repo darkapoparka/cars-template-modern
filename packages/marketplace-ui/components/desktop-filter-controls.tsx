@@ -15,6 +15,7 @@ import { cn } from "@repo/design-system/lib/utils";
 import { Check, ChevronDown, X } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
+import styles from "./desktop-filter-controls.module.css";
 import {
   NumericRangeFilter,
   type NumericRangePreset,
@@ -46,7 +47,8 @@ export const getDesktopQuickFilterClassName = (
 
   return cn(
     "h-10 rounded-full border border-border px-4 font-medium text-compact-control shadow-none transition-colors duration-150 hover:border-muted-foreground/50 focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
-    surfaceClassName
+    surfaceClassName,
+    styles.control
   );
 };
 
@@ -68,7 +70,10 @@ const ActiveQuickFilterClearButton = ({
   return (
     <Button
       aria-label={removeLabel}
-      className="h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-150 hover:bg-primary/90 hover:text-primary-foreground focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
+      className={cn(
+        "h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-150 hover:bg-primary/90 hover:text-primary-foreground focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]",
+        styles.clear
+      )}
       data-slot="desktop-quick-filter-clear"
       onClick={onClear}
       title={removeLabel}
@@ -109,6 +114,7 @@ export const DesktopQuickFilterButton = ({
         className,
         active && onClear && "rounded-r-none pr-2"
       )}
+      data-clearable={Boolean(active && onClear)}
       data-slot="desktop-quick-filter"
       onClick={onOpen}
       type="button"
@@ -152,6 +158,7 @@ export const DesktopQuickFilterDialog = ({
   onSelect,
   options,
   selected,
+  triggerIcon,
 }: {
   active: boolean;
   anyLabel: string;
@@ -165,6 +172,7 @@ export const DesktopQuickFilterDialog = ({
   onSelect: (value: string | undefined) => void;
   options: DesktopQuickOption[];
   selected?: string;
+  triggerIcon?: ReactNode;
 }) => {
   const [open, setOpen] = useState(false);
   const [draftSelected, setDraftSelected] = useState(selected);
@@ -196,10 +204,12 @@ export const DesktopQuickFilterDialog = ({
           active && onClear && "rounded-r-none pr-2",
           className
         )}
+        data-clearable={Boolean(active && onClear)}
         data-slot={dataSlot}
         type="button"
         variant={active ? "default" : "secondary"}
       >
+        {triggerIcon}
         <span className="min-w-0 truncate">{label}</span>
         <ChevronDown
           aria-hidden="true"
@@ -407,6 +417,7 @@ export const DesktopQuickRangeDialog = ({
           active && onClear && "rounded-r-none pr-2",
           className
         )}
+        data-clearable={Boolean(active && onClear)}
         data-slot={dataSlot}
         type="button"
         variant={active ? "default" : "secondary"}

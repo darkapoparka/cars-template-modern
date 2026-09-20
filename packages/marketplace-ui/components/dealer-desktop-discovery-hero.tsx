@@ -1,14 +1,16 @@
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import { DealerDesktopServiceLinks } from "./dealer-desktop-service-links";
-import type { DealerDesktopToolbarProps } from "./dealer-desktop-toolbar";
-import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
+import {
+  DealerHeroSearch,
+  type DealerHeroSearchProps,
+} from "./dealer-hero-search";
 
 export function DealerDesktopDiscoveryHero({
   locale,
   totalListings,
   ...toolbarProps
-}: DealerDesktopToolbarProps) {
+}: DealerHeroSearchProps & { totalListings: number }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const count = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US").format(
     totalListings
@@ -24,12 +26,7 @@ export function DealerDesktopDiscoveryHero({
       variant="landing"
     >
       <div className={styles.heroSearch}>
-        <DealerDesktopToolbar
-          {...toolbarProps}
-          locale={locale}
-          totalListings={totalListings}
-          variant="hero"
-        />
+        <DealerHeroSearch {...toolbarProps} locale={locale} />
       </div>
       <DealerDesktopServiceLinks locale={locale} placement="hero" />
     </DealerDesktopHero>

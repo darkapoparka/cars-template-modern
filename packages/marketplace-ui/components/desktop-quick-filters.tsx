@@ -42,8 +42,19 @@ import {
 } from "./desktop-filter-controls";
 import { DesktopFilterRailRanges } from "./desktop-filter-rail-ranges";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
+import styles from "./desktop-quick-filters.module.css";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
+
+const filterLayoutStyles = {
+  toolbar: {
+    row: styles.toolbarRow,
+    scroll: styles.toolbarScroll,
+    items: styles.toolbarItems,
+  },
+  rail: { row: undefined, scroll: undefined, items: undefined },
+  hero: { row: undefined, scroll: undefined, items: undefined },
+};
 
 const representedDesktopFilterChipIds = new Set([
   "q",
@@ -56,11 +67,60 @@ const representedDesktopFilterChipIds = new Set([
 
 export { getDesktopQuickFilterClassName } from "./desktop-filter-controls";
 
+const DesktopQuickSort = ({
+  visible,
+  filters,
+  elevated,
+  isBg,
+  label,
+  onApply,
+}: {
+  visible: boolean;
+  filters: MarketplaceSearchParams;
+  elevated: boolean;
+  isBg: boolean;
+  label: string;
+  onApply: ApplyFilters;
+}) => {
+  if (!visible) {
+    return null;
+  }
+  return (
+    <DesktopQuickFilterDialog
+      active={filters.sort !== "recommended"}
+      anyLabel={localizeMarketplace(isBg, "Препоръчани", "Recommended")}
+      className="w-auto min-w-28 shrink-0 gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]"
+      dataSlot="desktop-sort-trigger"
+      elevated={elevated}
+      isBg={isBg}
+      label={label}
+      onClear={() => onApply({ sort: "recommended" })}
+      onSelect={(sort) =>
+        onApply({
+          sort: (sort ?? "recommended") as MarketplaceSearchParams["sort"],
+        })
+      }
+      options={sortOptions
+        .filter((value) => value !== "recommended")
+        .map((value) => ({
+          label: isBg
+            ? marketplaceSortLabelsBg[value]
+            : filterLabels.sort[value],
+          value,
+        }))}
+      selected={filters.sort === "recommended" ? undefined : filters.sort}
+      title={localizeMarketplace(isBg, "Подреждане", "Sort")}
+    />
+  );
+};
+
 export const DesktopQuickFilters = ({
   compact,
   layout = "rail",
+  appearance = "default",
   elevated = false,
   showAdditionalFilters = false,
+  showSort = true,
   filterCount,
   filters,
   isBg,
@@ -73,8 +133,10 @@ export const DesktopQuickFilters = ({
 }: {
   compact: boolean;
   layout?: "rail" | "toolbar" | "hero";
+  appearance?: "default" | "inverse";
   elevated?: boolean;
   showAdditionalFilters?: boolean;
+  showSort?: boolean;
   filterCount: number;
   filters: MarketplaceSearchParams;
   isBg: boolean;
@@ -105,8 +167,10 @@ export const DesktopQuickFilters = ({
     <div
       className={cn(
         compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5",
-        layout !== "rail" && "p-0"
+        layout !== "rail" && "p-0",
+        appearance === "inverse" && styles.inverse
       )}
+      data-filter-appearance={appearance}
     >
       <fieldset className="w-full min-w-0">
         <legend className="sr-only">
@@ -115,18 +179,23 @@ export const DesktopQuickFilters = ({
         <div
           className={cn(
             "mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2",
-            layout !== "rail" && "justify-start"
+            layout !== "rail" && "justify-start",
+            filterLayoutStyles[layout].row
           )}
         >
           <div
             className={cn(
               "min-w-0 flex-[0_1_auto] overflow-x-auto overscroll-x-contain [scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
-              layout !== "rail" && "flex-1"
+              layout !== "rail" && "flex-1",
+              filterLayoutStyles[layout].scroll
             )}
             data-slot="desktop-quick-filter-scroll"
           >
             <div
-              className="flex w-max flex-nowrap justify-start gap-2"
+              className={cn(
+                "flex w-max flex-nowrap justify-start gap-2",
+                filterLayoutStyles[layout].items
+              )}
               data-slot="desktop-quick-filter-items"
             >
               <DesktopQuickFilterButton
@@ -463,38 +532,14 @@ export const DesktopQuickFilters = ({
                       />
                     </>
                   ) : null}
-                  <DesktopQuickFilterDialog
-                    active={filters.sort !== "recommended"}
-                    anyLabel={localizeMarketplace(
-                      isBg,
-                      "Препоръчани",
-                      "Recommended"
-                    )}
-                    className="w-auto min-w-28 shrink-0 gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]"
-                    dataSlot="desktop-sort-trigger"
+                  <DesktopQuickSort
                     elevated={elevated}
+                    filters={filters}
                     isBg={isBg}
                     label={labels.sort}
-                    onClear={() => onApply({ sort: "recommended" })}
-                    onSelect={(sort) =>
-                      onApply({
-                        sort: (sort ??
-                          "recommended") as MarketplaceSearchParams["sort"],
-                      })
-                    }
-                    options={sortOptions
-                      .filter((value) => value !== "recommended")
-                      .map((value) => ({
-                        label: isBg
-                          ? marketplaceSortLabelsBg[value]
-                          : filterLabels.sort[value],
-                        value,
-                      }))}
-                    selected={
-                      filters.sort === "recommended" ? undefined : filters.sort
-                    }
-                    title={localizeMarketplace(isBg, "Подреждане", "Sort")}
-                  />
+                    onApply={onApply}
+                    visible={showSort}
+                  />{" "}
                 </>
               )}
               {supplementaryActiveFilterChips.map((chip) => (

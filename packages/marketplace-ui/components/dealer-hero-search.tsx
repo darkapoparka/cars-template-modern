@@ -2,68 +2,106 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import {
-  Dialog,
-  DialogTrigger,
-} from "@repo/design-system/components/ui/dialog";
+  buildMarketplaceSearchHref,
+  fallbackVehicleTaxonomy,
+  getCategoryPath,
+  type MarketplaceSearchParams,
+  parseMarketplaceSearchParams,
+  type VehicleTaxonomyMakeOption,
+  withCategory,
+  withSearchParamUpdates,
+} from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import {
   isPublicSitePathEnabled,
   publicSite,
 } from "@repo/marketplace/site-config";
 import {
-  ArrowRight,
   Banknote,
   CarFront,
   ChevronDown,
   Grid2X2,
   HandCoins,
+  Search,
   Ship,
   SlidersHorizontal,
   Tag,
 } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import type { ReactNode } from "react";
+import { useState, useTransition } from "react";
+import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
+import { useMarketplaceOverlayCoordinator } from "../hooks/use-marketplace-overlay-coordinator";
 import {
   getDesktopPriceQuickFilterLabel,
-  getLocalizedDesktopCategoryLabel,
+  getDesktopQuickFilterLabels,
 } from "../lib/desktop-filter-policy";
 import {
   getMarketplaceCurrencyLabel,
+  marketplaceBodyFilterOptions,
   marketplacePricePresets,
   marketplacePriceRange,
   marketplaceSearchCurrency,
 } from "../lib/marketplace-filter-config";
+import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
-import type { DealerDesktopToolbarProps } from "./dealer-desktop-toolbar";
 import styles from "./dealer-hero-search.module.css";
-import { DesktopCategoryPickerContent } from "./desktop-discovery-search";
-import { DesktopQuickRangeDialog } from "./desktop-filter-controls";
+import {
+  DesktopQuickFilterDialog,
+  DesktopQuickRangeDialog,
+} from "./desktop-filter-controls";
 import {
   DesktopSearchAssistant,
   rememberMarketplaceSearchQuery,
 } from "./desktop-search-assistant";
+import { MarketplaceFullFilterOverlay } from "./marketplace-full-filter-overlay";
+import { MarketplaceMakeModelPicker } from "./marketplace-model-picker";
 
-/** Desktop landing composition; shared pickers, search and URL actions retain ownership. */
-export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
+export interface DealerHeroSearchProps {
+  assistantSlot?: ReactNode;
+  categoryTabs?: ReactNode;
+  filters: MarketplaceSearchParams;
+  locale?: string;
+  searchListings?: readonly InventorySearchListing[];
+  taxonomy?: VehicleTaxonomyMakeOption[];
+}
+
+/** Shared desktop buy box keeps one draft until Search is submitted. */
+export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const {
-    filters,
-    filterCount,
+    filters: initialFilters,
     locale,
-    query,
-    setQuery,
-    onApply,
-    onOpenMake,
-    onOpenModel,
-    onOpenFilters,
-    categoryCounts,
     searchListings,
     assistantSlot,
+    categoryTabs,
+    taxonomy = fallbackVehicleTaxonomy,
   } = props;
-  const isBg = locale?.startsWith("bg") ?? false;
+  const router = useRouter();
+  const isDesktop = useDesktopMarketplaceViewport();
+  const [filters, setFilters] = useState(initialFilters);
+  const query = filters.q ?? "";
+  const setQuery = (value: string) =>
+    setFilters((current) => ({ ...current, q: value }));
+  const [pending, startTransition] = useTransition();
+  const [makeModelStep, setMakeModelStep] = useState<"make" | "model" | null>(
+    null
+  );
+  const [filterOpen, setFilterOpen] = useState(false);
+  const openOverlay = useMarketplaceOverlayCoordinator(
+    makeModelStep !== null || filterOpen
+  );
+  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
-  const [categoryOpen, setCategoryOpen] = useState(false);
+  const filterCount = getActiveFilterChips(filters, locale).filter(
+    (chip) => chip.id !== "q"
+  ).length;
+  const onApply = (updates: Partial<MarketplaceSearchParams>) => {
+    setFilters((current) => withSearchParamUpdates(current, updates));
+  };
   const navigation = [
-    { path: "/cars", label: text("Купи", "Buy"), icon: CarFront },
+    { path: "/", label: text("Купи", "Buy"), icon: CarFront },
     { path: "/lease", label: text("Лизинг", "Lease"), icon: HandCoins },
     { path: "/sell", label: text("Продай", "Sell / Trade"), icon: Tag },
     { path: "/imports", label: text("Внос", "Import"), icon: Ship },
@@ -73,31 +111,54 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
     if (normalized) {
       rememberMarketplaceSearchQuery(normalized, "vehicles");
     }
-    onApply(normalized ? { q: normalized } : { q: undefined, sort: "newest" });
+    const next = withSearchParamUpdates(filters, {
+      q: normalized || undefined,
+      page: 1,
+    });
+    startTransition(() =>
+      router.push(
+        buildMarketplaceSearchHref(
+          next,
+          getLocalizedPublicPath(locale, getCategoryPath(next.category))
+        )
+      )
+    );
+  };
+  const resetDraft = () => {
+    setFilters(
+      withCategory(parseMarketplaceSearchParams({}), filters.category)
+    );
+    setQuery("");
   };
   const currencyLabel = getMarketplaceCurrencyLabel(isBg);
   return (
     <div
       className={styles.panel}
       data-slot="dealer-desktop-toolbar"
-      data-variant="hero"
+      data-variant={categoryTabs ? "default" : "hero"}
     >
       <nav
-        aria-label={text("Услуги за автомобили", "Vehicle services")}
+        aria-label={
+          categoryTabs
+            ? text("Категории превозни средства", "Vehicle categories")
+            : text("Услуги за автомобили", "Vehicle services")
+        }
         className={styles.tabs}
       >
-        {navigation.map(({ path, label, icon: Icon }) => (
-          <Link
-            aria-current={path === "/cars" ? "page" : undefined}
-            href={getLocalizedPublicPath(locale, path)}
-            key={path}
-          >
-            <Icon aria-hidden="true" size={18} />
-            {label}
-          </Link>
-        ))}
+        {categoryTabs ??
+          navigation.map(({ path, label, icon: Icon }) => (
+            <Link
+              aria-current={path === "/" ? "page" : undefined}
+              href={getLocalizedPublicPath(locale, path)}
+              key={path}
+            >
+              <Icon aria-hidden="true" size={18} />
+              {label}
+            </Link>
+          ))}
       </nav>
       <form
+        aria-busy={pending}
         aria-label={text("Търсене на автомобили", "Vehicle search")}
         className={styles.form}
         onSubmit={(event) => {
@@ -106,35 +167,32 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
         }}
       >
         <div className={styles.fields}>
-          <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
-            <DialogTrigger asChild>
-              <Button
-                aria-label={text("Избери категория", "Choose category")}
-                className={styles.field}
-                data-slot="desktop-search-category"
-                type="button"
-                variant="outline"
-              >
-                <CarFront aria-hidden="true" size={17} />
-                <span>
-                  {getLocalizedDesktopCategoryLabel(filters.category, isBg)}
-                </span>
-                <ChevronDown aria-hidden="true" size={15} />
-              </Button>
-            </DialogTrigger>
-            <DesktopCategoryPickerContent
-              categoryCounts={categoryCounts}
-              filters={filters}
-              isBg={isBg}
-              locale={locale}
-              onClose={() => setCategoryOpen(false)}
-            />
-          </Dialog>
+          <DesktopQuickFilterDialog
+            active={Boolean(filters.body)}
+            anyLabel={text("Всички типове", "Any body type")}
+            className={styles.field}
+            dataSlot="desktop-hero-body"
+            isBg={isBg}
+            label={
+              getDesktopQuickFilterLabels(filters, isBg, numberFormatter).body
+            }
+            onSelect={(body) =>
+              onApply({ body: body as MarketplaceSearchParams["body"] })
+            }
+            options={marketplaceBodyFilterOptions.map((option) => ({
+              value: option.value,
+              label: isBg ? option.labelBg : option.labelEn,
+            }))}
+            selected={filters.body}
+            title={text("Тип купе", "Body type")}
+            triggerIcon={<CarFront aria-hidden="true" size={17} />}
+          />
+
           <Button
             aria-haspopup="dialog"
             className={styles.field}
             data-slot="desktop-hero-make"
-            onClick={onOpenMake}
+            onClick={() => openOverlay(() => setMakeModelStep("make"))}
             type="button"
             variant="outline"
           >
@@ -146,7 +204,7 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
             aria-haspopup="dialog"
             className={styles.field}
             data-slot="desktop-hero-model"
-            onClick={onOpenModel}
+            onClick={() => openOverlay(() => setMakeModelStep("model"))}
             type="button"
             variant="outline"
           >
@@ -225,32 +283,74 @@ export function DealerHeroSearch(props: DealerDesktopToolbarProps) {
               query={query}
               scope="vehicles"
             />
+            <Button
+              aria-label={text("Търси автомобили", "Search vehicles")}
+              className={styles.submit}
+              data-slot="desktop-hero-submit"
+              disabled={!isDesktop || pending}
+              type="submit"
+            >
+              <Search aria-hidden="true" size={19} />
+            </Button>
           </div>
           <Button
             aria-haspopup="dialog"
-            aria-label={text("Филтри", "Filters")}
-            className={styles.more}
-            onClick={onOpenFilters}
-            title={text("Всички филтри", "All filters")}
+            aria-label={text("Още филтри", "More filters")}
+            className={styles.moreFilters}
+            data-slot="desktop-hero-more-filters"
+            onClick={() => openOverlay(() => setFilterOpen(true))}
             type="button"
-            variant="outline"
+            variant="ghost"
           >
-            <SlidersHorizontal aria-hidden="true" size={17} />
-            <span>
-              {text("Филтри", "Filters")}
-              {filterCount > 0 ? ` (${filterCount})` : ""}
-            </span>
-          </Button>
-          <Button
-            className={styles.submit}
-            data-slot="desktop-hero-submit"
-            type="submit"
-          >
-            {text("Търси автомобили", "Search vehicles")}
-            <ArrowRight aria-hidden="true" size={17} />
+            <SlidersHorizontal aria-hidden="true" size={19} />
           </Button>
         </div>
+        {(filterCount > 0 || query) && (
+          <div className={styles.footer}>
+            <span aria-live="polite" className={styles.draftStatus}>
+              {filterCount > 0
+                ? text(
+                    `Избрани филтри: ${filterCount}`,
+                    `Filters selected: ${filterCount}`
+                  )
+                : null}
+            </span>
+            {(filterCount > 0 || query) && (
+              <Button
+                className={styles.textAction}
+                onClick={resetDraft}
+                type="button"
+                variant="ghost"
+              >
+                {text("Изчисти", "Reset")}
+              </Button>
+            )}
+          </div>
+        )}
       </form>
+      <MarketplaceMakeModelPicker
+        applyLabel={text("Приложи", "Apply")}
+        filters={filters}
+        initialStep={makeModelStep ?? "make"}
+        locale={locale}
+        onApply={onApply}
+        onOpenChange={(open) => {
+          if (!open) {
+            setMakeModelStep(null);
+          }
+        }}
+        open={isDesktop && makeModelStep !== null}
+        taxonomy={taxonomy}
+      />
+      <MarketplaceFullFilterOverlay
+        applyLabel={text("Приложи филтрите", "Apply filters")}
+        filters={filters}
+        locale={locale}
+        onApply={onApply}
+        onOpenChange={setFilterOpen}
+        open={isDesktop && filterOpen}
+        taxonomy={taxonomy}
+      />
     </div>
   );
 }

@@ -19,7 +19,6 @@ import {
   withCategory,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ChevronDown, Search, X } from "lucide-react";
 import Link from "next/link";
 import { type ReactNode, useState } from "react";
@@ -173,26 +172,14 @@ export const DesktopCategoryPickerContent = ({
         const inventoryCount = categoryCounts?.find(
           (entry) => entry.category === category.id
         )?.count;
-
-        return (
-          <Link
-            aria-current={active ? "page" : undefined}
-            className={cn(
-              "group flex min-h-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border border-transparent bg-zinc-100 p-3 text-center text-foreground transition-[border-color,background-color,box-shadow,color] hover:border-zinc-300 hover:bg-zinc-200 focus-visible:border-zinc-400 focus-visible:bg-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400/55",
-              active &&
-                "border-transparent bg-brand text-brand-foreground hover:border-transparent hover:bg-[var(--lead-site-accent-active)] hover:text-white focus-visible:border-transparent focus-visible:bg-brand focus-visible:text-white focus-visible:ring-[var(--lead-site-accent-ring)]"
-            )}
-            data-slot="lead-category-option"
-            href={buildMarketplaceSearchHref(
-              withCategory(filters, category.id),
-              getLocalizedPublicPath(
-                locale,
-                isDealershipSite ? "/" : getCategoryPath(category.id)
-              )
-            )}
-            key={category.id}
-            onClick={onClose}
-          >
+        const className = cn(
+          "group flex h-auto min-h-32 flex-col items-center justify-center gap-2 overflow-hidden rounded-xl border bg-control p-3 text-center text-foreground transition-colors hover:bg-control-hover focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2",
+          active
+            ? "border-selected bg-selected text-selected-foreground hover:bg-selected"
+            : "border-transparent"
+        );
+        const content = (
+          <>
             <span
               className="flex h-14 w-full shrink-0 items-center justify-center rounded-lg bg-inherit"
               data-slot="lead-category-image-surface"
@@ -208,16 +195,27 @@ export const DesktopCategoryPickerContent = ({
                 {getLocalizedDesktopCategoryLabel(category.id, isBg)}
               </span>
               {inventoryCount === undefined ? null : (
-                <span
-                  className={cn(
-                    "mt-1 text-micro",
-                    active ? "text-white/75" : "text-zinc-500"
-                  )}
-                >
+                <span className="mt-1 text-micro opacity-75">
                   {formatVehicleCount(inventoryCount, category.id, locale)}
                 </span>
               )}
             </span>
+          </>
+        );
+
+        return (
+          <Link
+            aria-current={active ? "page" : undefined}
+            className={className}
+            data-slot="lead-category-option"
+            href={buildMarketplaceSearchHref(
+              withCategory(filters, category.id),
+              getLocalizedPublicPath(locale, getCategoryPath(category.id))
+            )}
+            key={category.id}
+            onClick={onClose}
+          >
+            {content}
           </Link>
         );
       })}

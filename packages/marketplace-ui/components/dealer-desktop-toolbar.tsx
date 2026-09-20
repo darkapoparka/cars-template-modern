@@ -1,168 +1,75 @@
 "use client";
 
-import { Dialog } from "@repo/design-system/components/ui/dialog";
-import type { MarketplaceSearchParams } from "@repo/marketplace";
+import {
+  buildMarketplaceSearchHref,
+  getCategoryPath,
+  type MarketplaceSearchParams,
+  type VehicleTaxonomyMakeOption,
+  withCategory,
+} from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { Bike, BusFront, CarFront, Search, Truck } from "lucide-react";
-import { type ReactNode, useState } from "react";
+import { Bike, BusFront, CarFront, Truck } from "lucide-react";
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { getLocalizedDesktopCategoryLabel } from "../lib/desktop-filter-policy";
+import { marketplaceCategorySelectorOptions } from "../lib/marketplace-filter-config";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-toolbar.module.css";
 import { DealerHeroSearch } from "./dealer-hero-search";
-import {
-  type DesktopCategoryInventoryCount,
-  DesktopCategoryPickerContent,
-  DesktopCategoryPickerTrigger,
-} from "./desktop-discovery-search";
-import { DesktopQuickFilters } from "./desktop-quick-filters";
-import {
-  DesktopSearchAssistant,
-  rememberMarketplaceSearchQuery,
-} from "./desktop-search-assistant";
-
 export interface DealerDesktopToolbarProps {
   assistantSlot?: ReactNode;
-  categoryCounts?: DesktopCategoryInventoryCount[];
-  filterCount: number;
   filters: MarketplaceSearchParams;
   locale?: string;
-  onApply: (filters: Partial<MarketplaceSearchParams>) => void;
-  onClearFilters: () => void;
-  onOpenFilters: () => void;
-  onOpenMake: () => void;
-  onOpenModel: () => void;
-  query: string;
   searchListings?: readonly InventorySearchListing[];
-  setQuery: (query: string) => void;
-  totalListings: number;
-  variant?: "default" | "hero";
+  taxonomy?: VehicleTaxonomyMakeOption[];
 }
 
-const DealerDesktopResultsToolbar = ({
-  assistantSlot,
-  searchListings,
-  categoryCounts,
-  filterCount,
-  filters,
-  locale,
-  onApply,
-  onClearFilters,
-  onOpenFilters,
-  onOpenMake,
-  onOpenModel,
-  query,
-  setQuery,
-}: DealerDesktopToolbarProps) => {
-  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
-  const [categoryOpen, setCategoryOpen] = useState(false);
-  const CategoryIcon = {
-    car: CarFront,
-    lease: CarFront,
-    motorbike: Bike,
-    truck: Truck,
-    van: BusFront,
-  }[filters.category];
-
-  const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
-  const submitSearch = (value: string) => {
-    const q = value.trim();
-    if (q) {
-      rememberMarketplaceSearchQuery(q, "vehicles");
-      onApply({ q });
-    } else {
-      // An empty hero search opens the complete inventory, rather than reloading the landing.
-      onApply({ q: undefined, sort: "newest" });
-    }
-  };
-
-  return (
-    <form
-      aria-label={isBg ? "Търсене на автомобили" : "Vehicle search"}
-      className={styles.toolbar}
-      data-slot="dealer-desktop-toolbar"
-      data-variant="default"
-      onSubmit={(event) => {
-        event.preventDefault();
-        submitSearch(query);
-      }}
-    >
-      <div className="dealer-desktop-search-band">
-        <div className={styles.queryRow}>
-          <Dialog onOpenChange={setCategoryOpen} open={categoryOpen}>
-            <DesktopCategoryPickerTrigger
-              appearance="toolbar"
-              categoryIcon={
-                <CategoryIcon
-                  aria-hidden="true"
-                  className="size-6 shrink-0"
-                  strokeWidth={1.7}
-                />
-              }
-              compact
-              filters={filters}
-              isBg={isBg}
-              open={categoryOpen}
-            />
-            <DesktopCategoryPickerContent
-              categoryCounts={categoryCounts}
-              filters={filters}
-              isBg={isBg}
-              locale={locale}
-              onClose={() => setCategoryOpen(false)}
-            />
-          </Dialog>
-          <div className={styles.search}>
-            <Search
-              aria-hidden="true"
-              className={styles.searchIcon}
-              size={19}
-            />
-            <DesktopSearchAssistant
-              appearance="toolbar"
-              ariaLabel={isBg ? "Търсене на автомобили" : "Search vehicles"}
-              assistantSlot={assistantSlot}
-              compact
-              isBg={isBg}
-              label={isBg ? "Търсене" : "Search"}
-              listings={searchListings}
-              locale={locale}
-              onQueryChange={setQuery}
-              onSearch={submitSearch}
-              placeholder={
-                isBg
-                  ? "Марка, модел или ключова дума"
-                  : "Make, model or keyword"
-              }
-              query={query}
-              scope="vehicles"
-            />
-            <span aria-hidden="true" className={styles.searchHint}>
-              Enter ↵
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className={styles.filters}>
-        <DesktopQuickFilters
-          compact
-          filterCount={filterCount}
-          filters={filters}
-          isBg={isBg}
-          layout="toolbar"
-          numberFormatter={numberFormatter}
-          onApply={onApply}
-          onClearFilters={onClearFilters}
-          onOpenFilters={onOpenFilters}
-          onOpenMake={onOpenMake}
-          onOpenModel={onOpenModel}
-          showAdditionalFilters
-        />
-      </div>
-    </form>
-  );
+const categoryIcons = {
+  car: CarFront,
+  lease: CarFront,
+  motorbike: Bike,
+  truck: Truck,
+  van: BusFront,
 };
 
-export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) =>
-  props.variant === "hero" ? (
-    <DealerHeroSearch {...props} />
-  ) : (
-    <DealerDesktopResultsToolbar {...props} />
+export const DealerDesktopToolbar = ({
+  assistantSlot,
+  searchListings,
+  filters,
+  locale,
+  taxonomy,
+}: DealerDesktopToolbarProps) => {
+  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+  return (
+    <div className={styles.toolbar}>
+      <div className={styles.content}>
+        <DealerHeroSearch
+          assistantSlot={assistantSlot}
+          categoryTabs={marketplaceCategorySelectorOptions.map((category) => {
+            const Icon = categoryIcons[category.id];
+            return (
+              <Link
+                aria-current={
+                  filters.category === category.id ? "page" : undefined
+                }
+                href={buildMarketplaceSearchHref(
+                  withCategory(filters, category.id),
+                  getLocalizedPublicPath(locale, getCategoryPath(category.id))
+                )}
+                key={category.id}
+              >
+                <Icon aria-hidden="true" size={18} />
+                {getLocalizedDesktopCategoryLabel(category.id, isBg)}
+              </Link>
+            );
+          })}
+          filters={filters}
+          key={JSON.stringify(filters)}
+          locale={locale}
+          searchListings={searchListings}
+          taxonomy={taxonomy}
+        />
+      </div>
+    </div>
   );
+};

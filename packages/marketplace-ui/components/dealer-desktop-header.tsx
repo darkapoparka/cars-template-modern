@@ -23,7 +23,7 @@ export const DealerDesktopHeader = ({
   layout = "showroom",
   site = publicSite,
 }: {
-  activeMode?: MarketplaceMode | null;
+  activeMode?: MarketplaceMode | "home" | null;
   children?: ReactNode;
   homeHref?: string;
   locale?: string;
@@ -32,7 +32,8 @@ export const DealerDesktopHeader = ({
 }) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const destinations = [
-    { id: "buy", path: "/cars", label: isBg ? "Купи" : "Buy" },
+    { id: "home", path: "/", label: isBg ? "Начало" : "Home" },
+    { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Inventory" },
     { id: "sell", path: "/sell", label: isBg ? "Продай" : "Sell" },
     { id: "imports", path: "/imports", label: isBg ? "Внос" : "Import" },
     { id: "lease", path: "/lease", label: isBg ? "Лизинг" : "Financing" },

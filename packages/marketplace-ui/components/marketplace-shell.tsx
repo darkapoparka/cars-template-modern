@@ -3,6 +3,7 @@
 import {
   buildMarketplaceSearchHref,
   fallbackVehicleTaxonomy,
+  getCategoryPath,
   type ListingViewMode,
   type MarketplaceSearchParams,
   type QuickFilterKey,
@@ -37,6 +38,7 @@ import {
   getMarketplaceQuickFilterLabel,
 } from "../lib/marketplace-filter-policy";
 import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import { BottomMarketplaceNav } from "./dealer-bottom-nav";
 import { DesktopMarketplaceBar } from "./desktop-discovery-bar";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
@@ -150,15 +152,28 @@ export const MarketplaceShell = ({
   }, [initialFilters]);
 
   const currentPath = getMarketplaceCurrentPath({ basePath, locale, pathname });
-  const commitFilters = (updates: Partial<MarketplaceSearchParams>) => {
+  const commitFilters = (
+    updates: Partial<MarketplaceSearchParams>,
+    targetPath = currentPath
+  ) => {
     const next = withSearchParamUpdates(filtersRef.current, updates);
-    const href = buildMarketplaceSearchHref(next, currentPath);
+    const href = buildMarketplaceSearchHref(next, targetPath);
 
     filtersRef.current = next;
     setFilters(next);
     startTransition(() => {
       router.push(href, { scroll: false });
     });
+  };
+
+  const commitDesktopFilters = (updates: Partial<MarketplaceSearchParams>) => {
+    const target = isDealershipSite
+      ? getLocalizedPublicPath(
+          locale,
+          getCategoryPath(updates.category ?? filtersRef.current.category)
+        )
+      : currentPath;
+    commitFilters(updates, target);
   };
 
   const appUrl = isDealershipSite ? "" : cleanMarketplaceBaseUrl(appBaseUrl);
@@ -190,7 +205,7 @@ export const MarketplaceShell = ({
       (currentUpdates, chip) => Object.assign(currentUpdates, chip.updates),
       {}
     );
-    commitFilters(updates);
+    commitDesktopFilters(updates);
   };
 
   const marketplaceOverlayOpen =
@@ -346,7 +361,7 @@ export const MarketplaceShell = ({
           filterCount={structuredFilterCount}
           filters={filters}
           locale={locale}
-          onApply={commitFilters}
+          onApply={commitDesktopFilters}
           onClearFilters={clearFilters}
           onOpenFilters={() =>
             openMarketplaceOverlay(() => setFilterOpen(true))
@@ -368,6 +383,7 @@ export const MarketplaceShell = ({
           searchListings={searchListings}
           setQuery={setQuery}
           showDealerDesktopLanding={showDealerDesktopLanding}
+          taxonomy={taxonomy}
           totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}
@@ -385,6 +401,7 @@ export const MarketplaceShell = ({
           isBg={isBg}
           listings={listings}
           locale={locale}
+          onApply={commitDesktopFilters}
           onChooseCategory={() =>
             openMarketplaceOverlay(() => setCategoryOpen(true))
           }
@@ -420,6 +437,7 @@ export const MarketplaceShell = ({
               : undefined
           }
           onApply={commitFilters}
+          onDesktopApply={commitDesktopFilters}
           onOpenChange={setMakeModelOpen}
           open={makeModelOpen}
           taxonomy={taxonomy}
@@ -460,6 +478,7 @@ export const MarketplaceShell = ({
           filters={filters}
           locale={locale}
           onApply={commitFilters}
+          onDesktopApply={commitDesktopFilters}
           onOpenChange={setFilterOpen}
           open={filterOpen}
           taxonomy={taxonomy}

@@ -1,0 +1,20 @@
+.inverse {
+  --quick-filter-foreground: var(--inverse-foreground);
+  --quick-filter-background: var(--inverse-control);
+  --quick-filter-border: var(--inverse-border);
+  --quick-filter-hover: var(--inverse);
+  --quick-filter-selected: var(--panel);
+  --quick-filter-selected-foreground: var(--foreground);
+  --quick-filter-focus: var(--inverse-foreground);
+}
+.toolbarRow,
+.toolbarItems {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  width: auto;
+}
+.toolbarScroll {
+  flex: 0 1 auto;
+  overflow: visible;
+}

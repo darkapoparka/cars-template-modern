@@ -4,6 +4,7 @@ import { cn } from "@repo/design-system/lib/utils";
 import type {
   ListingViewMode,
   MarketplaceSearchParams,
+  VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
@@ -49,6 +50,7 @@ interface DesktopMarketplaceBarProps {
   searchListings?: readonly InventorySearchListing[];
   setQuery: (query: string) => void;
   showDealerDesktopLanding?: boolean;
+  taxonomy?: VehicleTaxonomyMakeOption[];
   totalListings: number;
   variant?: "discovery" | "results";
   viewMode: ListingViewMode;
@@ -87,6 +89,7 @@ export const DesktopMarketplaceBar = ({
   query,
   setQuery,
   totalListings,
+  taxonomy,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -126,10 +129,15 @@ export const DesktopMarketplaceBar = ({
       searchListings,
       setQuery,
       totalListings,
+      taxonomy,
     };
 
     return (
-      <DealerDesktopHeader activeMode="buy" layout="showroom" locale={locale}>
+      <DealerDesktopHeader
+        activeMode={showDealerDesktopLanding ? "home" : "buy"}
+        layout="showroom"
+        locale={locale}
+      >
         {showDealerDesktopLanding ? (
           <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (

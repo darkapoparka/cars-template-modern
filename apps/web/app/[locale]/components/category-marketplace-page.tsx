@@ -7,7 +7,6 @@ import {
 } from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
-import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { redirect, unstable_rethrow } from "next/navigation";
@@ -103,18 +102,6 @@ export const CategoryMarketplacePage = async ({
           }
           basePath={basePath}
           defaultViewMode={supportsDiscoveryPresentation ? "grid" : undefined}
-          desktopDiscoverySlot={
-            isDealershipSite &&
-            filters.category === "car" &&
-            filters.sort === "recommended" &&
-            filters.page === 1 ? (
-              <DealerDesktopDiscoveryContent
-                currentPath={basePath}
-                listings={listings}
-                locale={locale}
-              />
-            ) : undefined
-          }
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
           inventoryFacets={facets}

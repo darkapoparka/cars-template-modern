@@ -39,21 +39,26 @@ import {
 } from "./mobile-marketplace-overlay";
 
 export const MarketplaceFullFilterOverlay = ({
+  applyLabel,
   filters,
   locale,
   onApply,
+  onDesktopApply,
   onOpenChange,
   open,
   taxonomy,
 }: {
+  applyLabel?: string;
   filters: MarketplaceSearchParams;
   locale?: string;
   onApply: (filters: Partial<MarketplaceSearchParams>) => void;
+  onDesktopApply?: (filters: Partial<MarketplaceSearchParams>) => void;
   onOpenChange: (open: boolean) => void;
   open: boolean;
   taxonomy: VehicleTaxonomyMakeOption[];
 }) => {
   const isDesktop = useDesktopMarketplaceViewport();
+  const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
   const triggerRef = useRef<HTMLElement | null>(null);
   const [view, setView] = useState<DiscoveryFilterView>("main");
   const [draft, setDraft] = useState(filters);
@@ -76,7 +81,7 @@ export const MarketplaceFullFilterOverlay = ({
   };
 
   const applyAndClose = () => {
-    onApply(draft);
+    applyFilters(draft);
     onOpenChange(false);
   };
 
@@ -196,7 +201,7 @@ export const MarketplaceFullFilterOverlay = ({
               className="h-12 w-full rounded-xl bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
               onClick={applyAndClose}
             >
-              {copy.actions.showResults}
+              {applyLabel ?? copy.actions.showResults}
             </Button>
           </DialogFooter>
         </DialogContent>

@@ -1,6 +1,6 @@
 # Modern native EN/BG localization — handoff
 
-Status: implemented and locally checked; NOT a published release and NOT complete mounted/production acceptance.
+Status: combined Modern publication is now explicitly authorized. The checkpoint below is historical; see the combined publication section and PUBLICATION-2026-09-20.json for the current release record.
 
 ## Exact source and scope
 
@@ -94,3 +94,11 @@ Before publication, obtain a deliberate release decision for the ten inherited r
 Application/source commit: 4a9f7d11f089fff6e2c0140ffb98dfd1ce4f245d. Committed tree: ef1dfc3911735e77820237e857bd8a0cbd9bcb46. It contains only the scoped localization source/tests/documentation. It is local on main and has NOT been pushed or deployed. All inherited working-file hashes in PRESERVATION.json were checked unchanged after committing. The three mixed files retain only their pre-existing desktop hunks in the unstaged diff. A documentation-only follow-up records this exact commit; it is not a new application release.
 
 The committed tree intentionally differs from the combined tested working tree in preserved desktop drafts. Exact committed-tree runtime acceptance and native mounted production checks are still required before release. Do not infer deployed source from the local commit or the working-source aggregate.
+
+## Combined publication authorized — 20 September 2026
+
+The owner explicitly approved committing and pushing all current Modern work to main, including the ten inherited refactor/design commits, the two localization commits, and the current shared buy-box/frontend refinements. This supersedes the earlier decision to withhold publication; no separate release approval is pending. No work was discarded, rebased, reset or force-pushed. Other repositories, Cars pins and dealer deployments remain out of scope.
+
+The combined checkout passed 470 affected unit tests, 14 localization/refactor contracts and the production web build with Node 22.22.0 / pnpm 11.4.0 / Next 16.3.3. Frontend lint is green after formatting the existing review script. The small narrow-desktop header integration fix targets phone text explicitly, preserving the visible language selector and current layout. Existing screenshots and older browser results remain historical evidence rather than a claim that every baseline was refreshed.
+
+Current combined source aggregate: `502fc9379d02cc224cf7d96c7a9548690f5c97b94dc7e0a6c2431ba85f16f219` (769 files). The source manifest describes the exact combined source prepared for this release. Git and Vercel outcomes will be recorded after publication; previous mounted/runtime limitations are not silently promoted to passing results.

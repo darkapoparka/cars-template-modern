@@ -1,0 +1,37 @@
+:global([data-filter-appearance="inverse"]) .control {
+  height: var(--control-height-lg);
+  color: var(--quick-filter-foreground, var(--foreground));
+  background: var(--quick-filter-background, var(--control));
+  border-color: var(--quick-filter-border, var(--border));
+  border-radius: var(--radius-pill);
+}
+:global([data-filter-appearance="inverse"]) .control:hover,
+:global([data-filter-appearance="inverse"]) .control[aria-expanded="true"] {
+  color: var(--quick-filter-foreground, var(--foreground));
+  background: var(--quick-filter-hover, var(--control-hover));
+}
+:global([data-filter-appearance="inverse"]) .control[aria-pressed="true"],
+:global([data-filter-appearance="inverse"]) .clear {
+  color: var(--quick-filter-selected-foreground, var(--primary-foreground));
+  background: var(--quick-filter-selected, var(--primary));
+  border-color: var(--quick-filter-selected, var(--primary));
+}
+:global([data-filter-appearance="inverse"]) .control[aria-pressed="true"]:hover,
+:global([data-filter-appearance="inverse"]) .clear:hover {
+  color: var(--quick-filter-selected-foreground, var(--primary-foreground));
+  background: var(--quick-filter-selected, var(--primary));
+  filter: brightness(0.95);
+}
+:global([data-filter-appearance="inverse"]) .control[data-clearable="true"] {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+:global([data-filter-appearance="inverse"]) .clear {
+  height: var(--control-height-lg);
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+}
+:global([data-filter-appearance="inverse"]) .control:focus-visible,
+:global([data-filter-appearance="inverse"]) .clear:focus-visible {
+  outline: 2px solid var(--quick-filter-focus, var(--ring));
+  outline-offset: 3px;
+}

@@ -76,6 +76,7 @@ export const VehicleCard = ({
       )}
       data-presentation={presentation}
       data-slot="vehicle-card"
+      data-view-mode={viewMode}
       onClickCapture={() => rememberInventoryReturn(listingHref)}
     >
       <div

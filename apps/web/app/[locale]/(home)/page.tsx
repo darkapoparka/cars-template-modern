@@ -110,7 +110,10 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
             filters.sort === "recommended" &&
             filters.page === 1 ? (
               <DealerDesktopDiscoveryContent
-                currentPath={getLocalizedPath(normalizeSeoLocale(locale), "/")}
+                currentPath={getLocalizedPath(
+                  normalizeSeoLocale(locale),
+                  "/cars"
+                )}
                 listings={listings}
                 locale={locale}
               />

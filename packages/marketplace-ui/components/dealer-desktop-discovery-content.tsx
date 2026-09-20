@@ -48,7 +48,7 @@ export const DealerDesktopDiscoveryContent = ({
             <Link
               className={styles.sectionAction}
               href={buildMarketplaceSearchHref(
-                { category: "car", sort: "newest" },
+                { category: "car" },
                 currentPath
               )}
             >

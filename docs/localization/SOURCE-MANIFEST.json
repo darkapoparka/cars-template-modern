@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-20T15:05:53.409Z",
-  "head": "1cf8edfe26a36e25b0d95dcc963b60de51cdeb50",
+  "recordedAt": "2026-09-20T15:26:32.535Z",
+  "head": "42ac1d6861be600a81f82b5560884447e6257514",
   "originMain": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
   "kind": "working-tree-source-not-release-approval",
-  "aggregateSha256": "26dc715ea387ee515822760f29e4129ad4b9407d3eb37042bc649713913c4e96",
+  "aggregateSha256": "502fc9379d02cc224cf7d96c7a9548690f5c97b94dc7e0a6c2431ba85f16f219",
   "files": [
     {
       "path": ".node-version",
@@ -2172,7 +2172,7 @@
     },
     {
       "path": "packages/marketplace-ui/components/dealer-desktop-header.module.css",
-      "sha256": "8ec2499dcb79421f2f400d3603d4a42062d091c5623fa1b51d29954c004cd0ba"
+      "sha256": "e28c5ffe0ce47b5e6e82f73ad3c289ccf946a8e98184cf1b84d500ad0705860f"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-desktop-header.tsx",
@@ -2192,11 +2192,11 @@
     },
     {
       "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.module.css",
-      "sha256": "ee3a0c51d32f390fbc4ef526a6fcab40ecb408600be65f3d1556e8f17d2592e3"
+      "sha256": "075dfd25d1bfb0e029d80770d7ea18d071833075dc037ff78c7b7bf871e8c7b9"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
-      "sha256": "5067ab31454f7deec6762d22ed78c37b89c75d0036f3a4bfacec3ff7bc7ea70e"
+      "sha256": "407c130bb885c20dffe95ab9e291aa4de38db6452482a1a2f1312436f6aa6323"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-hero-search.module.css",
@@ -2204,7 +2204,7 @@
     },
     {
       "path": "packages/marketplace-ui/components/dealer-hero-search.tsx",
-      "sha256": "103b1ad58dc59c8bf2531ce537e83f1a3337b6ca204e44723e88e4b5c9e9944b"
+      "sha256": "d3b0d8a009bc20d26914f2373b98d448f63fae14bb92c796aa7e3123f4054778"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-inventory-filters.tsx",

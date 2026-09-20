@@ -195,3 +195,54 @@
     transition: none;
   }
 }
+
+@media (min-width: 1024px) {
+  .card[data-presentation="showroom"]:focus-within {
+    border-color: var(--ring);
+    box-shadow: var(--elevation-card-hover);
+  }
+  .card[data-presentation="showroom"] a:hover [data-slot="vehicle-card-title"] {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card[data-presentation="showroom"][data-view-mode="list"] {
+    display: grid;
+    grid-template-columns: 17rem minmax(0, 1fr);
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="vehicle-card-media"] {
+    height: 100%;
+    min-height: 11.5rem;
+    aspect-ratio: auto;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="vehicle-card-content"] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 2rem;
+    align-content: center;
+    padding: 1.5rem;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-heading"] {
+    grid-column: 1;
+    min-height: 0;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-facts"] {
+    grid-column: 1;
+    min-height: 0;
+    margin-top: 0.5rem;
+  }
+  .card[data-presentation="showroom"][data-view-mode="list"]
+    [data-slot="showroom-vehicle-price-row"] {
+    grid-area: 1 / 2 / span 2 / 3;
+    gap: 1.25rem;
+    align-self: center;
+    margin-top: 0;
+  }
+}

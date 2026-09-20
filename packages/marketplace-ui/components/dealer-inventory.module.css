@@ -1,0 +1,105 @@
+.summary,
+.filterBar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .results[data-desktop-hidden="true"] {
+    display: none;
+  }
+  .results {
+    display: block;
+    width: min(92%, var(--layout-wide-max));
+    max-width: none;
+    padding: 0 0 4rem;
+    margin-inline: auto;
+  }
+  .filterBar {
+    display: block;
+    max-width: 100%;
+  }
+  .summary {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    min-width: 0;
+  }
+  .heading h1 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    letter-spacing: var(--tracking-heading);
+  }
+  .heading output {
+    font-size: var(--text-micro);
+    color: var(--muted-foreground);
+    white-space: nowrap;
+  }
+  .controls {
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.625rem;
+    align-items: center;
+  }
+  .sort {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--text-micro);
+    color: var(--muted-foreground);
+  }
+  .sort > span {
+    display: none;
+  }
+  .sort select {
+    max-width: 11rem;
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    font: inherit;
+    color: var(--foreground);
+    cursor: pointer;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .sort select:hover {
+    background: var(--control);
+  }
+  .sort select:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+  .viewToggle {
+    gap: 0.125rem;
+    height: 2.5rem;
+    padding: 0.1875rem;
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .viewToggle button {
+    width: 2rem;
+    height: 2rem;
+  }
+  .grid[data-view="grid"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: none;
+  }
+}
+@media (min-width: 1440px) {
+  .grid[data-view="grid"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

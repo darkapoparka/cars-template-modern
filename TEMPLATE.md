@@ -6,7 +6,8 @@
 - Portfolio role: **core**
 - Design position: premium minimal / inventory-first showroom
 - Stack: Next.js monorepo + pnpm/Turborepo
-- Primary entry: `/cars`
+- Desktop discovery: `/`
+- Inventory browsing and primary mobile entry: `/cars`
 - Suggested standalone review port: `6462`
 
 This is a **template master**, not a sendable dealer demo. The baseline intentionally preserves source/sample material for design fidelity; every lead copy requires a complete identity and content sweep.

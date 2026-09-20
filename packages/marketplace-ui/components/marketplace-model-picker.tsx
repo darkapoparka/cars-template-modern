@@ -237,25 +237,30 @@ const ModelDerivativeOptions = ({
 };
 
 export const MarketplaceMakeModelPicker = ({
+  applyLabel,
   filters,
   initialStep,
   locale,
   modelCounts,
   onApply,
+  onDesktopApply,
   onOpenChange,
   open,
   taxonomy,
 }: {
   filters: MarketplaceSearchParams;
+  applyLabel?: string;
   initialStep: "auto" | "make" | "model";
   locale?: string;
   modelCounts?: MarketplaceModelInventoryCount[];
   onApply: (filters: Partial<MarketplaceSearchParams>) => void;
+  onDesktopApply?: (filters: Partial<MarketplaceSearchParams>) => void;
   onOpenChange: (open: boolean) => void;
   open: boolean;
   taxonomy: VehicleTaxonomyMakeOption[];
 }) => {
   const isDesktop = useDesktopMarketplaceViewport();
+  const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
   const [step, setStep] = useState<"derivative" | "make" | "model">("make");
   const [make, setMake] = useState<string | undefined>(filters.make);
   const [model, setModel] = useState<string | undefined>(filters.model);
@@ -337,7 +342,7 @@ export const MarketplaceMakeModelPicker = ({
   }, [make, model, taxonomy]);
 
   const handleApply = () => {
-    onApply({ derivative, make, model, trim: undefined });
+    applyFilters({ derivative, make, model, trim: undefined });
     onOpenChange(false);
   };
   const goBack = () => {
@@ -345,7 +350,7 @@ export const MarketplaceMakeModelPicker = ({
     setStep(step === "derivative" ? "model" : "make");
   };
   const clearSelection = () => {
-    onApply({
+    applyFilters({
       derivative: undefined,
       make: undefined,
       model: undefined,
@@ -507,7 +512,7 @@ export const MarketplaceMakeModelPicker = ({
                 className="h-11 flex-1 rounded-lg shadow-none"
                 onClick={handleApply}
               >
-                {copy.actions.showResults}
+                {applyLabel ?? copy.actions.showResults}
               </Button>
             </div>
           </DialogFooter>
