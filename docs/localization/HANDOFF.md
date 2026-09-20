@@ -88,3 +88,9 @@ Existing previews were not stopped. The verified development server on 3002 serv
 No new deployment was made. Last verified existing READY deployment: dpl_GFusCRBBz4jX4WbFVKdaUDEuEaee, source 703feaeb060f28f6cd43308c0aa4ff1b0a670fe8, project prj_A4DN3YbKHzofjvcbYOh3foMBCMpy, team team_RTNXBnClGWDdcYFFUW0BnqvJ, deployment URL https://cars-template-modern-8yqz6f8cc-tyj5.vercel.app. New public localization behavior has not been verified there.
 
 Before publication, obtain a deliberate release decision for the ten inherited refactor/design parents and the separate desktop draft. Then complete the outstanding real endpoint, corrected route crawl, mounted production and exact committed-source checks. Push only the reviewed main release through the existing Git connection, verify its READY source and production alias, and repeat critical actual-cookie/cache/locale journeys. Do not update Cars pins or deploy dealers in this session.
+
+## Local committed checkpoint
+
+Application/source commit: 4a9f7d11f089fff6e2c0140ffb98dfd1ce4f245d. Committed tree: ef1dfc3911735e77820237e857bd8a0cbd9bcb46. It contains only the scoped localization source/tests/documentation. It is local on main and has NOT been pushed or deployed. All inherited working-file hashes in PRESERVATION.json were checked unchanged after committing. The three mixed files retain only their pre-existing desktop hunks in the unstaged diff. A documentation-only follow-up records this exact commit; it is not a new application release.
+
+The committed tree intentionally differs from the combined tested working tree in preserved desktop drafts. Exact committed-tree runtime acceptance and native mounted production checks are still required before release. Do not infer deployed source from the local commit or the working-source aggregate.

@@ -384,6 +384,23 @@
       "ended": "2026-09-20T15:05:05.290Z",
       "log": ".codex-artifacts/localization-resume-20260920/logs/release-contracts-final.log",
       "logSha256": "7dc63d87a6c6e34d47fd8174809919ff84cc6b609d94cf9ca129348af6ad3c07"
+    },
+    {
+      "name": "final-style-config-check",
+      "pid": 26632,
+      "args": [
+        "exec",
+        "biome",
+        "check",
+        "biome.jsonc",
+        "packages/internationalization/policy.ts"
+      ],
+      "env": {},
+      "started": "2026-09-20T15:12:11.567Z",
+      "exit": 0,
+      "ended": "2026-09-20T15:12:13.134Z",
+      "log": ".codex-artifacts/localization-resume-20260920/logs/final-style-config-check.log",
+      "logSha256": "09bd35391f6c9e0786f916818d0cc4a93554adc00190a25bc409fd36606e7444"
     }
   ],
   "counts": {
@@ -432,5 +449,10 @@
     "The attempted viewport harness correction and negative fixture call was denied before execution; the original failing harness and raw receipts are retained.",
     "The existing analytics/locale E2E source was updated and typechecked, but that complete analytics suite was not rerun.",
     "No owner approval for ten inherited unpublished commits, no Cars pin update, no dealer deployment, no Admin localization, no new language enabled."
-  ]
+  ],
+  "applicationCommitSha": "4a9f7d11f089fff6e2c0140ffb98dfd1ce4f245d",
+  "applicationTreeSha": "ef1dfc3911735e77820237e857bd8a0cbd9bcb46",
+  "gitPublication": "LOCAL_ONLY_NOT_PUSHED",
+  "preservedWorkingHashesVerifiedAt": "2026-09-20T15:12:11.543Z",
+  "currentWorkingSourceManifestVerified": true
 }

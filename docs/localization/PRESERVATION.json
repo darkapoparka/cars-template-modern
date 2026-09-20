@@ -62,5 +62,7 @@
     "packages/marketplace-ui/components/vehicle-card.tsx"
   ],
   "publication": "Not approved: do not push these parents incidentally",
-  "priorEvidence": ".codex-artifacts/localization-20260920/ownership-baseline.json predates later desktop work; current hashes above preserve the later work"
+  "priorEvidence": ".codex-artifacts/localization-20260920/ownership-baseline.json predates later desktop work; current hashes above preserve the later work",
+  "scopedLocalizationCommit": "4a9f7d11f089fff6e2c0140ffb98dfd1ce4f245d",
+  "preservationVerifiedAfterCommit": true
 }
