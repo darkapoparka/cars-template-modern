@@ -176,5 +176,29 @@
     }
   ],
   "scope": "cars-template-modern only; no Cars pins or dealer deployment",
-  "publication": "Git push and resulting Vercel deployment verification follow this checkpoint."
+  "publication": "Published",
+  "pushedCommit": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
+  "deployment": {
+    "verifiedAt": "2026-09-20T15:30:10.364Z",
+    "id": "dpl_6vAtNguRiVfz8WvQtaeZZxszLti9",
+    "source": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
+    "state": "READY",
+    "aliases": [
+      "cars-template-modern.vercel.app",
+      "cars-template-modern-tyj5.vercel.app",
+      "cars-template-modern-git-main-tyj5.vercel.app"
+    ],
+    "deploymentUrl": "https://cars-template-modern-2bxiqsg6d-tyj5.vercel.app"
+  },
+  "publicVerification": {
+    "source": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
+    "passed": 49,
+    "failed": 1,
+    "file": "PUBLIC-VERIFICATION-2026-09-20.json"
+  },
+  "followup": {
+    "sourceAggregateSha256": "859549eb63c3ebfb60b2452e7ad50d9539dadb754f8bc36dd09ee8342d4b6960",
+    "changes": "Owner search-icon/control polish, active-category navigation handling and stable category loading headers; native settings same-origin referrer metadata.",
+    "noJavaScriptSubmission": "Source correction prepared; post-fix real submission is not yet verified."
+  }
 }

@@ -102,3 +102,15 @@ The owner explicitly approved committing and pushing all current Modern work to 
 The combined checkout passed 470 affected unit tests, 14 localization/refactor contracts and the production web build with Node 22.22.0 / pnpm 11.4.0 / Next 16.3.3. Frontend lint is green after formatting the existing review script. The small narrow-desktop header integration fix targets phone text explicitly, preserving the visible language selector and current layout. Existing screenshots and older browser results remain historical evidence rather than a claim that every baseline was refreshed.
 
 Current combined source aggregate: `502fc9379d02cc224cf7d96c7a9548690f5c97b94dc7e0a6c2431ba85f16f219` (769 files). The source manifest describes the exact combined source prepared for this release. Git and Vercel outcomes will be recorded after publication; previous mounted/runtime limitations are not silently promoted to passing results.
+
+## Published combined release and public verification
+
+The combined release was committed and non-force pushed as `f4d4280c855a02fc7345e8c3769682effc0f9d47`. Existing Vercel project `cars-template-modern` produced READY deployment `dpl_6vAtNguRiVfz8WvQtaeZZxszLti9`; the public production alias is https://cars-template-modern.vercel.app. All previously unpublished refactor/localization commits are now on GitHub main.
+
+Public Chromium checks on this commit: 42/42 EN/BG route-width cases passed at 320/390/1440; language labels remained visible at 1024; actual JavaScript preference saving, Secure/HttpOnly/SameSite cookies, return-route preservation and reload passed. Four actual cross-visitor HTML/RSC cases passed using alternating country cookies with no-store responses and Vercel cache MISS. The real no-JavaScript form submission was the one failure (49/50 total), and is retained in PUBLIC-VERIFICATION-2026-09-20.json.
+
+The settings document now supplies native Next `referrer: "same-origin"` metadata: the global no-referrer policy can make a native form POST carry a null Origin. The strict request Origin check was not relaxed and the shared policy bytes remain unchanged. A fresh live diagnostic and final local build/test launch were blocked; those operations were not retried through other tools. Therefore this follow-up does not claim a passing post-fix no-JavaScript submission.
+
+The follow-up also captures the owner's search-icon/control polish and active-category navigation changes that arrived after the first push. Current source aggregate: `200aa171fc40fed4d654338e351adf6a90a21a746f0648b05e12ffa082050944`. Native mounted /variant-2 acceptance and remaining comprehensive interaction matrices remain separate from this successful publication.
+
+The final publication snapshot also includes the owner's new category-loading header/skeleton updates and category-navigation screenshot. Updated source aggregate: `859549eb63c3ebfb60b2452e7ad50d9539dadb754f8bc36dd09ee8342d4b6960`. These later frontend edits were explicitly included in the owner-authorized all-work snapshot; the earlier 49/50 public result still refers only to f4d4280.

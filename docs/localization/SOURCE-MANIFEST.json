@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-20T15:26:32.535Z",
-  "head": "42ac1d6861be600a81f82b5560884447e6257514",
-  "originMain": "703feaeb060f28f6cd43308c0aa4ff1b0a670fe8",
+  "recordedAt": "2026-09-20T15:39:27.768Z",
+  "head": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
+  "originMain": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
   "kind": "working-tree-source-not-release-approval",
-  "aggregateSha256": "502fc9379d02cc224cf7d96c7a9548690f5c97b94dc7e0a6c2431ba85f16f219",
+  "aggregateSha256": "859549eb63c3ebfb60b2452e7ad50d9539dadb754f8bc36dd09ee8342d4b6960",
   "files": [
     {
       "path": ".node-version",
@@ -76,7 +76,7 @@
     },
     {
       "path": "apps/web/app/[locale]/cars/loading.tsx",
-      "sha256": "ad557fabe8cef7272df08329a51d9d9377a98e7d223cd03ade43f6582c6f3b9c"
+      "sha256": "5017fe7240fae2d2890a8a07f9aae67f3a5fef18d474ac7b1638e9f2e18a39f3"
     },
     {
       "path": "apps/web/app/[locale]/cars/page.tsx",
@@ -212,7 +212,7 @@
     },
     {
       "path": "apps/web/app/[locale]/components/public-route-loading.tsx",
-      "sha256": "62a0115241681970fcfdcb88cb8d5a753a2633c3134645e7821cb569673ae0d0"
+      "sha256": "d8724090e579124572d13e504c483075f2b8ae281c338a96080be2134b291481"
     },
     {
       "path": "apps/web/app/[locale]/components/support-route-image.tsx",
@@ -368,7 +368,7 @@
     },
     {
       "path": "apps/web/app/[locale]/locale-settings/page.tsx",
-      "sha256": "bd2a292e7434a428fc87cf92fc3207a1a79327d8e7794449f20d4c6a5952d9ab"
+      "sha256": "d85e29971837002e81f2485e2bc66e0af9530431cde9c51f70bdedd470d573cd"
     },
     {
       "path": "apps/web/app/[locale]/mobile-final-polish.css",
@@ -376,7 +376,7 @@
     },
     {
       "path": "apps/web/app/[locale]/motorbikes/loading.tsx",
-      "sha256": "3ce66a6acb6e35aabd6742f7848ab780c15e7e6ec367fa767bfee612adc3411c"
+      "sha256": "2ad878ffc940bc0291b5f65d2365b37e32b8f9625829b57b72559ed9dca563f7"
     },
     {
       "path": "apps/web/app/[locale]/motorbikes/page.tsx",
@@ -396,7 +396,7 @@
     },
     {
       "path": "apps/web/app/[locale]/trucks/loading.tsx",
-      "sha256": "6eebe4905db9a4367e409a2dea008c2457330fb35731463fee0619e73ece316f"
+      "sha256": "f53b88681977f2f45117c6ee97e59d82ad1ac2f150b29fd9c58ed06437cfd734"
     },
     {
       "path": "apps/web/app/[locale]/trucks/page.tsx",
@@ -404,7 +404,7 @@
     },
     {
       "path": "apps/web/app/[locale]/vans/loading.tsx",
-      "sha256": "fd4c0b3016c8fd3673fb7fe113b06365e13e1b7edc73ba426481efed31d2765a"
+      "sha256": "74a71e157d44313df8f92260b5e7f6565674fa12f4998e334e232e9096599d4d"
     },
     {
       "path": "apps/web/app/[locale]/vans/page.tsx",
@@ -2196,11 +2196,11 @@
     },
     {
       "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
-      "sha256": "407c130bb885c20dffe95ab9e291aa4de38db6452482a1a2f1312436f6aa6323"
+      "sha256": "4571bfc6d1fa9bfb474f5633b471ac7ba7e713a75a5922d7e37538533e259fc2"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-hero-search.module.css",
-      "sha256": "ccdee20bed15a175a20331ebfa76cb25ee89cc448152fff9be3332b1a8b96b63"
+      "sha256": "b00adc6f4a0ea524cb50ca0ff3b4eed8015e55f1582274349d042a5ca6c15e86"
     },
     {
       "path": "packages/marketplace-ui/components/dealer-hero-search.tsx",
@@ -2280,7 +2280,7 @@
     },
     {
       "path": "packages/marketplace-ui/components/desktop-search-assistant.tsx",
-      "sha256": "604b6cebc8d5319d86c38a0935e4ee4def6cbeb0cd9f8d21a8a1b7dfc6f62313"
+      "sha256": "d1ff68c0d30ba80d89076b58a5c52f8080b349f541c9af9693486dce7eac64e3"
     },
     {
       "path": "packages/marketplace-ui/components/listing-actions.tsx",

@@ -461,16 +461,12 @@ export const DesktopSearchAssistant = ({
             : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50",
           appearance !== "standard" &&
             "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring",
-          { standard: "", hero: "relative pr-4", toolbar: "pl-4" }[appearance]
+          { standard: "", hero: "relative pr-4 pl-4", toolbar: "pl-4" }[
+            appearance
+          ]
         )}
         data-slot="desktop-search-query"
       >
-        {appearance === "hero" && (
-          <Search
-            aria-hidden="true"
-            className="pointer-events-none absolute top-1/2 left-4 size-[19px] -translate-y-1/2 text-muted-foreground"
-          />
-        )}
         <span
           className={cn("font-semibold text-micro", appearanceClasses.label)}
         >

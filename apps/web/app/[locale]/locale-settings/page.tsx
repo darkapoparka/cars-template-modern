@@ -12,6 +12,8 @@ export async function generateMetadata({
   return {
     title: locale === "bg" ? "Държава и език" : "Country and language",
     robots: { index: false, follow: false },
+    // Native same-origin form POSTs need a non-null Origin. External referrers remain suppressed.
+    referrer: "same-origin",
   };
 }
 /** Native HTML forms remain usable without JavaScript or browser storage. */

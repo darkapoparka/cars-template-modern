@@ -21,6 +21,7 @@ const loadingFilters = [
 ] as const;
 
 interface PublicRouteLoadingProps {
+  category?: MarketplaceSearchParams["category"];
   mobileTone?: "leasing";
   variant?: "discovery" | "results";
 }
@@ -178,7 +179,13 @@ const DesktopLoadingHeader = ({
 };
 
 const DesktopDiscoveryCards = () => (
-  <div className="hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5">
+  <div
+    className={
+      isDealershipSite
+        ? "hidden grid-cols-3 gap-6 lg:grid min-[1440px]:grid-cols-4"
+        : "hidden grid-cols-3 gap-5 lg:grid xl:grid-cols-4 2xl:grid-cols-5"
+    }
+  >
     {loadingCards.map((card) => (
       <div
         className="flex overflow-hidden rounded-lg border border-border bg-card"
@@ -210,6 +217,7 @@ const DesktopResultRows = () => (
 export const PublicRouteLoading = async ({
   variant = "discovery",
   mobileTone,
+  category,
 }: PublicRouteLoadingProps) => {
   const locale = await getRootLocale();
   return (
@@ -218,7 +226,18 @@ export const PublicRouteLoading = async ({
       className="min-h-screen bg-background text-foreground"
     >
       <MobileLoadingHeader locale={locale} mobileTone={mobileTone} />
-      <DesktopLoadingHeader locale={locale} variant={variant} />
+      {isDealershipSite && category ? (
+        <div aria-hidden="true" className="hidden lg:block" inert>
+          <DealerDesktopHeader activeMode="buy" locale={locale}>
+            <DealerDesktopToolbar
+              filters={{ ...parseMarketplaceSearchParams({}), category }}
+              locale={locale}
+            />
+          </DealerDesktopHeader>
+        </div>
+      ) : (
+        <DesktopLoadingHeader locale={locale} variant={variant} />
+      )}
 
       <div
         className="mx-auto max-w-[96rem] px-4 pb-3 lg:px-6 lg:pt-3 xl:px-10"
@@ -259,7 +278,7 @@ export const PublicRouteLoading = async ({
           ))}
         </div>
 
-        {variant === "results" ? (
+        {variant === "results" && !(isDealershipSite && category) ? (
           <DesktopResultRows />
         ) : (
           <DesktopDiscoveryCards />
@@ -383,7 +402,11 @@ export const ListingDetailLoading = async () => {
   );
 };
 
-import { leadSite } from "@repo/marketplace";
+import {
+  leadSite,
+  type MarketplaceSearchParams,
+  parseMarketplaceSearchParams,
+} from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import {
   DealerMobileBrandBar,
@@ -392,5 +415,6 @@ import {
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
+import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 import desktopStyles from "./public-desktop-layout.module.css";

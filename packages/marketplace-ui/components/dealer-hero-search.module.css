@@ -109,14 +109,14 @@
     width: 3rem;
     height: 3rem;
     padding: 0;
-    color: var(--muted-foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    border: 1px solid var(--inverse);
     border-radius: var(--radius-sm);
   }
   .moreFilters:hover {
-    color: var(--foreground);
-    background: var(--control);
+    color: var(--inverse-foreground);
+    background: var(--inverse-control);
   }
   .moreFilters:focus-visible {
     outline: 2px solid var(--ring);
@@ -135,12 +135,9 @@
     padding: 0;
     font-size: var(--text-meta);
     font-weight: var(--font-weight-semibold);
-    color: var(--selected-foreground);
-    background: linear-gradient(
-      135deg,
-      var(--inverse-control),
-      var(--selected)
-    );
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
     border-radius: var(--radius-sm);
     box-shadow: none;
   }
@@ -151,8 +148,9 @@
     outline-offset: 3px;
   }
   .submit:hover {
-    background: var(--inverse-control);
-    box-shadow: var(--elevation-panel);
+    color: var(--foreground);
+    background: transparent;
+    box-shadow: none;
   }
   .submit:active {
     box-shadow: none;

@@ -57,6 +57,13 @@ export const DealerDesktopToolbar = ({
                   getLocalizedPublicPath(locale, getCategoryPath(category.id))
                 )}
                 key={category.id}
+                onNavigate={(event) => {
+                  if (filters.category === category.id) {
+                    event.preventDefault();
+                  }
+                }}
+                prefetch={true}
+                scroll={false}
               >
                 <Icon aria-hidden="true" size={18} />
                 {getLocalizedDesktopCategoryLabel(category.id, isBg)}

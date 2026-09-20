@@ -1,0 +1,751 @@
+{
+  "origin": "https://cars-template-modern.vercel.app",
+  "source": "f4d4280c855a02fc7345e8c3769682effc0f9d47",
+  "results": [
+    {
+      "name": "route en 320 ",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /cars",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /imports",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /sell",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 320 /lease",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 ",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /cars",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /imports",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /sell",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 390 /lease",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 ",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /cars",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /imports",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /sell",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route en 1440 /lease",
+      "details": {
+        "status": 200,
+        "language": "en",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 ",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /cars",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /imports",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /sell",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 320 /lease",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 320,
+          "content": 305
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 ",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /cars",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /imports",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /sell",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 390 /lease",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 390,
+          "content": 375
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 ",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /cars",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /listing/bmw-x5-m50d-sofia-2020",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /contact?topic=trade-in",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /imports",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /sell",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "route bg 1440 /lease",
+      "details": {
+        "status": 200,
+        "language": "bg",
+        "geometry": {
+          "width": 1440,
+          "content": 1425
+        },
+        "cache": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "ok": true
+    },
+    {
+      "name": "visible language label at 1024 en",
+      "details": "EN",
+      "ok": true
+    },
+    {
+      "name": "visible language label at 1024 bg",
+      "details": "BG",
+      "ok": true
+    },
+    {
+      "name": "real preference save JavaScript",
+      "details": {
+        "url": "https://cars-template-modern.vercel.app/bg/contact?topic=trade-in#details",
+        "cookies": [
+          {
+            "name": "cars_prompt",
+            "value": "v1",
+            "secure": true,
+            "httpOnly": true,
+            "sameSite": "Lax",
+            "path": "/"
+          },
+          {
+            "name": "cars_locale",
+            "value": "bg",
+            "secure": true,
+            "httpOnly": true,
+            "sameSite": "Lax",
+            "path": "/"
+          },
+          {
+            "name": "cars_country",
+            "value": "DE",
+            "secure": true,
+            "httpOnly": true,
+            "sameSite": "Lax",
+            "path": "/"
+          }
+        ]
+      },
+      "ok": true
+    },
+    {
+      "name": "real preference save no JavaScript",
+      "ok": false,
+      "error": "page.waitForURL: Timeout 30000ms exceeded.\n=========================== logs ===========================\nwaiting for navigation until \"load\"\n  navigated to \"https://cars-template-modern.vercel.app/api/preferences\"\n============================================================\n    at J:\\template-repos\\cars-template-modern\\.codex-artifacts\\publish-modern-20260920\\public-smoke.mjs:24:714\n    at async record (J:\\template-repos\\cars-template-modern\\.codex-artifacts\\publish-modern-20260920\\public-smoke.mjs:10:61)\n    at async file:///J:/template-repos/cars-template-modern/.codex-artifacts/publish-modern-20260920/public-smoke.mjs:24:46"
+    },
+    {
+      "name": "public cross-visitor isolation en HTML",
+      "details": [
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ],
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ]
+      ],
+      "ok": true
+    },
+    {
+      "name": "public cross-visitor isolation en RSC",
+      "details": [
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ],
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ]
+      ],
+      "ok": true
+    },
+    {
+      "name": "public cross-visitor isolation bg HTML",
+      "details": [
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ],
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ]
+      ],
+      "ok": true
+    },
+    {
+      "name": "public cross-visitor isolation bg RSC",
+      "details": [
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ],
+        [
+          {
+            "country": "GB",
+            "actual": "GB",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          },
+          {
+            "country": "DE",
+            "actual": "DE",
+            "cache": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "vercel": "MISS"
+          }
+        ]
+      ],
+      "ok": true
+    }
+  ],
+  "summary": {
+    "passed": 49,
+    "failed": 1,
+    "total": 50
+  },
+  "notes": [
+    "The protected team alias was not used as the public site; testing used the public production alias.",
+    "The no-JavaScript form navigation failed before the route-level referrer metadata correction. A fresh live diagnostic was blocked; it was not retried.",
+    "The final source correction sets same-origin referrer metadata only on the native settings document; strict Origin validation and the portable policy remain unchanged. A post-fix real no-JavaScript submission still needs verification.",
+    "New local build/test launch for the final follow-up was blocked. The preceding full combined build passed; the later search-icon source also passed a web typecheck and focused lint before the final navigation/metadata additions."
+  ],
+  "sourceReferences": [
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy",
+    "https://nextjs.org/docs/app/api-reference/functions/generate-metadata"
+  ]
+}
