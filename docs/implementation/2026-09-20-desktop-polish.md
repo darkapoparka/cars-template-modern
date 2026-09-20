@@ -69,3 +69,9 @@ Verified BG and EN at 1024/1440/1920, mobile visibility/overflow at 390, modal f
 Owner requested actual component reuse. DealerDesktopToolbar now only supplies inventory category tabs and the page wrapper to DealerHeroSearch. The shared buy box owns body/make/model/price fields, search, draft/reset, taxonomy and accessible overlays on both routes. Category tabs are a slot in the existing tab surface; inventory no longer renders the separate filter row or search panel. Route filter changes remount the draft from current URL state.
 
 Inspected /bg and /bg/cars at 1024/1440. Browser checks passed shared make dialog/focus, query submission, URL-backed draft, reset then submission, vans navigation and hiding the desktop box at 390. No page errors. Web typecheck and scoped Biome passed. Screenshot: apps/e2e/shared-buy-box-inventory-1440.png. Build and legacy screenshot baselines were not rerun or refreshed. No publication.
+
+## Category navigation behavior
+
+Reproduced category links scrolling the document to zero; browser instrumentation showed client routing rather than a document reload. Category links now preserve scroll, prefetch destination data and prevent navigation to the already active category. Category route loading screens now reuse the shared inventory header/buy box, disabled during loading, with card-grid placeholders instead of the obsolete search skeleton/list rows. Mobile loading markup is unchanged.
+
+Web typecheck and scoped Biome passed. Browser instrumentation verified Cars -> Trucks -> Vans -> Cars at scrollY 80, including active-category no-op, with only the initial document request. Added desktop-category-navigation.spec.ts as persistent coverage. Screenshot: apps/e2e/category-navigation-stable.png. No build or snapshot baseline updates.
