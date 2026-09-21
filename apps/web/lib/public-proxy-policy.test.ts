@@ -25,7 +25,12 @@ describe("public proxy protection failure policy", () => {
 
 describe("demo mutation boundary", () => {
   it("allows only cookie preferences and deterministic filter parsing", () => {
-    for (const path of ["/api/preferences", "/api/ai/search"]) {
+    for (const path of [
+      "/api/preferences",
+      "/variant-2/api/preferences",
+      "/api/ai/search",
+      "/variant-2/api/ai/search",
+    ]) {
       expect(isPublicDemoRequestAllowed("POST", path)).toBe(true);
     }
   });
@@ -35,7 +40,9 @@ describe("demo mutation boundary", () => {
     "/api/leads",
     "/api/ai/provider",
     "/api/preferences/extra",
+    "/variant-2/api/preferences/extra",
     "/api/ai/search/extra",
+    "/variant-2/api/ai/search/extra",
   ])("blocks business/unknown POST %s", (path) =>
     expect(isPublicDemoRequestAllowed("POST", path)).toBe(false));
   it.each([

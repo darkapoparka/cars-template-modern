@@ -1,4 +1,10 @@
 const safeRequestMethods = new Set(["GET", "HEAD", "OPTIONS"]);
+const safePublicDemoPostPaths = new Set([
+  "/api/preferences",
+  "/variant-2/api/preferences",
+  "/api/ai/search",
+  "/variant-2/api/ai/search",
+]);
 
 export const shouldFailClosedOnProtectionError = (method: string): boolean =>
   !safeRequestMethods.has(method.toUpperCase());
@@ -10,5 +16,4 @@ export const isPublicDemoRequestAllowed = (
 ): boolean =>
   method === "GET" ||
   method === "HEAD" ||
-  (method === "POST" &&
-    (pathname === "/api/preferences" || pathname === "/api/ai/search"));
+  (method === "POST" && safePublicDemoPostPaths.has(pathname));
