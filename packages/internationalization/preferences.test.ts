@@ -105,6 +105,34 @@ describe("preferences", () => {
   ])("rejects unsafe return %s", async (returnTo) =>
     expect((await send({ ...body, returnTo })).status).toBe(400));
   it.each([
+    "/x/..//invalid.example/path",
+    "/%2e%2e//invalid.example/",
+    "/..//invalid.example/path?x=1",
+  ])("rejects normalized external return %s for save/dismiss JSON/form", async (returnTo) => {
+    expect(policy.safeReturnPath(returnTo, origin)).toBeNull();
+    for (const action of ["save", "dismiss"] as const) {
+      for (const contentType of [
+        "application/json",
+        "application/x-www-form-urlencoded",
+      ] as const) {
+        const data = { ...body, action, returnTo };
+        const response = await policy.preferenceResponse(
+          new Request(`${origin}/api/preferences`, {
+            method: "POST",
+            headers: { origin, "content-type": contentType },
+            body:
+              contentType === "application/json"
+                ? JSON.stringify(data)
+                : new URLSearchParams(data).toString(),
+          })
+        );
+        expect(response.status).toBe(400);
+        expect(response.headers.get("location")).toBeNull();
+        expect(response.headers.getSetCookie()).toEqual([]);
+      }
+    }
+  });
+  it.each([
     { locale: "ar" },
     { country: "ZZ" },
     { action: "send" },
