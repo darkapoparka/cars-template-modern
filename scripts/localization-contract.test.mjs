@@ -11,8 +11,10 @@ import ts from "typescript";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (file) => fs.readFileSync(path.join(root, file), "utf8");
 const sha = (source) => createHash("sha256").update(source).digest("hex");
+// Reviewed candidate plus 808d036: reject return paths that normalize to //host.
+// Keep this exact-body check so unreviewed policy drift still fails closed.
 const portableHash =
-  "e0adcfd9ca1efaf30c1410540cdbef25d2144bf9dc447971f0ce3b38cc5928c0";
+  "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc";
 const portableMarker =
   "/**\n * Framework-neutral locale routing and preference policy.";
 function assertPortableMirror(source) {
@@ -51,7 +53,7 @@ function bilingual(en, bg) {
     assert.deepEqual(placeholders(en[key]), placeholders(bg[key]), key);
   }
 }
-test("portable policy body exactly matches the reviewed shared candidate", () =>
+test("portable policy body exactly matches the reviewed hardened revision", () =>
   assertPortableMirror(read("packages/internationalization/policy.ts")));
 test("portable policy drift is detected, not silently blessed by formatting", () =>
   assert.throws(() =>
