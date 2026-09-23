@@ -34,6 +34,20 @@ test("home and inventory share a buy box and submit the same draft", async ({
     ).toHaveCount(0);
     const controlBox = await controls.boundingBox();
     expect(controlBox?.y).toBeGreaterThan((home?.y ?? 0) + (home?.height ?? 0));
+    const summaryBox = await page
+      .locator('[data-slot="dealer-inventory-summary"]')
+      .boundingBox();
+    if (!(controlBox && summaryBox)) {
+      throw new Error("Inventory filter and sort controls must be visible");
+    }
+    expect(
+      Math.abs(
+        controlBox.x +
+          controlBox.width / 2 -
+          summaryBox.x -
+          summaryBox.width / 2
+      )
+    ).toBeLessThan(1);
     const inputBox = await panel.locator("label").first().boundingBox();
     const submitBox = await panel
       .locator('[data-slot="desktop-hero-submit"]')

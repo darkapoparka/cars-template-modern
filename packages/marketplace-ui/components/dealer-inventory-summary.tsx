@@ -74,13 +74,13 @@ export function DealerInventorySummary({
             ))}
           </select>
         </label>
-        <MarketplaceViewModeToggle
-          className={styles.viewToggle}
-          locale={locale}
-          onViewModeChange={onViewModeChange}
-          viewMode={viewMode}
-        />
       </div>
+      <MarketplaceViewModeToggle
+        className={styles.viewToggle}
+        locale={locale}
+        onViewModeChange={onViewModeChange}
+        viewMode={viewMode}
+      />
     </div>
   );
 }

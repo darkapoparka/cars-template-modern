@@ -21,10 +21,10 @@
     max-width: 100%;
   }
   .summary {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: 1rem;
     align-items: center;
-    justify-content: space-between;
     min-height: 2.5rem;
     margin-bottom: 1.25rem;
   }
@@ -52,6 +52,11 @@
     flex-shrink: 0;
     gap: 0.625rem;
     align-items: center;
+    justify-self: center;
+    padding: 0.25rem;
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
   }
   .filterButton {
     gap: 0.5rem;
@@ -59,7 +64,7 @@
     padding-inline: 0.875rem;
     font-size: 0.8125rem;
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: 1px solid transparent;
     border-radius: 0.625rem;
     box-shadow: none;
   }
@@ -96,6 +101,7 @@
   }
   .viewToggle {
     gap: 0.125rem;
+    justify-self: end;
     height: 2.5rem;
     padding: 0.1875rem;
     background: var(--control);

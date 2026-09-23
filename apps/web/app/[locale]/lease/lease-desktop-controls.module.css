@@ -28,12 +28,14 @@
     font-size: 0.875rem;
   }
   .offerRow {
-    display: flex;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 1rem;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
   }
   .vehiclePreview {
     display: flex;
@@ -73,7 +75,7 @@
   .financeSummary {
     display: flex;
     flex-shrink: 0;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .summaryLabel {
     margin: 0 0 0.25rem;
@@ -94,6 +96,7 @@
   }
   .financeActions {
     flex-shrink: 0;
+    justify-self: end;
   }
   .financeActions a {
     height: 2.5rem;

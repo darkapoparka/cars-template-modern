@@ -1,6 +1,7 @@
 .hero {
   display: none;
 }
+
 .hero[data-variant="service"] {
   display: block;
 }
@@ -111,5 +112,20 @@
     max-height: none;
     overflow: visible;
     color: var(--foreground);
+  }
+}
+/* On narrower desktops, keep the complete vehicles alongside the heading
+   instead of letting the form cover them. Wide screens have room beside it. */
+@media (min-width: 1024px) and (max-width: 1855px) {
+  .scene {
+    inset: 0 7.5% auto;
+    height: 7rem;
+    mask-image:
+      linear-gradient(to bottom, #000 88%, transparent),
+      linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+    mask-composite: intersect;
+  }
+  .scene > img {
+    object-position: center 47%;
   }
 }
