@@ -42,35 +42,9 @@ export const LeaseDesktopControls = ({
       className={`hidden lg:grid ${styles.desktopControls}`}
       data-slot="lease-desktop-controls"
     >
-      <div className={styles.vehiclePreview}>
-        <Image
-          alt={selectedVehicle.imageAlt}
-          className={styles.vehicleImage}
-          height={300}
-          sizes="(min-width: 1024px) 280px, 0px"
-          src={selectedVehicle.imageUrl}
-          width={420}
-        />
-        <div className={styles.vehicleCopy}>
-          <strong>{selectedVehicle.title}</strong>
-          <p>
-            {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel} ·{" "}
-            {selectedVehicle.fuelLabel}
-          </p>
-          <Link href={selectedVehicle.detailHref}>
-            {copy.detailAction}
-            <ArrowRight aria-hidden="true" size={16} />
-          </Link>
-        </div>
-      </div>
       <div className={styles.preferences}>
         <div className={styles.intro}>
           <h2>{title}</h2>
-          <p>
-            {locale === "bg"
-              ? "Посочете предпочитанията си и обсъдете индивидуална оферта с нас."
-              : "Set your preferences and discuss a tailored offer with our team."}
-          </p>
         </div>
 
         <div className={styles.financeFields} data-slot="finance-fields">
@@ -125,6 +99,26 @@ export const LeaseDesktopControls = ({
         </div>
 
         <div className={styles.offerRow}>
+          <Link
+            aria-label={copy.detailAction}
+            className={styles.vehiclePreview}
+            href={selectedVehicle.detailHref}
+          >
+            <Image
+              alt=""
+              className={styles.vehicleImage}
+              height={96}
+              sizes="72px"
+              src={selectedVehicle.imageUrl}
+              width={144}
+            />
+            <span className={styles.vehicleCopy}>
+              <strong>{selectedVehicle.title}</strong>
+              <span>
+                {copy.detailAction} <ArrowRight aria-hidden="true" size={14} />
+              </span>
+            </span>
+          </Link>
           <div
             aria-live="polite"
             className={styles.financeSummary}

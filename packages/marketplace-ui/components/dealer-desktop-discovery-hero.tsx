@@ -1,4 +1,3 @@
-import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import {
@@ -8,7 +7,6 @@ import {
 
 export function DealerDesktopDiscoveryHero({
   locale,
-  totalListings,
   ...toolbarProps
 }: DealerHeroSearchProps & { totalListings: number }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -18,19 +16,7 @@ export function DealerDesktopDiscoveryHero({
       variant="landing"
     >
       <div className={styles.heroSearch}>
-        <DealerHeroSearch
-          {...toolbarProps}
-          locale={locale}
-          resultCountSlot={
-            <output>
-              {formatVehicleCount(
-                totalListings,
-                toolbarProps.filters.category,
-                locale
-              )}
-            </output>
-          }
-        />
+        <DealerHeroSearch {...toolbarProps} locale={locale} />
       </div>
     </DealerDesktopHero>
   );

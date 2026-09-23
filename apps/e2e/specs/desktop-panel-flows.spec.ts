@@ -27,6 +27,24 @@ test("home and inventory share a buy box and submit the same draft", async ({
       page.locator('[data-slot="public-route-loading-content"]')
     ).toBeHidden();
     expect(await panel.boundingBox()).toEqual(home);
+    const controls = page.locator('[data-slot="desktop-results-controls"]');
+    await expect(controls).toBeVisible();
+    await expect(
+      panel.locator('[data-slot="desktop-results-controls"]')
+    ).toHaveCount(0);
+    const controlBox = await controls.boundingBox();
+    expect(controlBox?.y).toBeGreaterThan((home?.y ?? 0) + (home?.height ?? 0));
+    const inputBox = await panel.locator("label").first().boundingBox();
+    const submitBox = await panel
+      .locator('[data-slot="desktop-hero-submit"]')
+      .boundingBox();
+    if (!(inputBox && submitBox)) {
+      throw new Error("Search input and submit action must be visible");
+    }
+    expect(submitBox.x + submitBox.width).toBeLessThan(
+      inputBox.x + inputBox.width
+    );
+    expect(submitBox.height).toBeLessThan(inputBox.height);
   }
 
   await page.goto("/en");

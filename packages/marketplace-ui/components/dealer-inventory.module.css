@@ -35,7 +35,7 @@
     align-items: center;
     min-width: 0;
   }
-  .heading h1 {
+  .heading h2 {
     margin: 0;
     font-size: var(--text-section-title-lg);
     font-weight: var(--font-weight-semibold);
@@ -53,6 +53,19 @@
     gap: 0.625rem;
     align-items: center;
   }
+  .filterButton {
+    gap: 0.5rem;
+    height: 2.5rem;
+    padding-inline: 0.875rem;
+    font-size: 0.8125rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0.625rem;
+    box-shadow: none;
+  }
+  .filterButton:hover {
+    background: var(--control);
+  }
   .sort {
     display: flex;
     gap: 0.5rem;
@@ -65,14 +78,14 @@
   }
   .sort select {
     max-width: 11rem;
-    min-height: var(--control-height-lg);
+    min-height: 2.5rem;
     padding: 0.5rem 0.75rem;
     font: inherit;
     color: var(--foreground);
     cursor: pointer;
     background: var(--control);
     border: 1px solid transparent;
-    border-radius: var(--radius-pill);
+    border-radius: 0.625rem;
   }
   .sort select:hover {
     background: var(--control-hover);

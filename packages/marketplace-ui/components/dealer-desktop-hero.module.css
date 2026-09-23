@@ -54,7 +54,7 @@
   .hero[data-variant="landing"],
   .hero[data-variant="service"] {
     height: auto;
-    min-height: var(--desktop-hero-height);
+    min-height: 0;
     background: var(--inverse);
   }
   .hero[data-scene-tone="quiet"] {

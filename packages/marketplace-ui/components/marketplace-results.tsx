@@ -103,6 +103,7 @@ export const MarketplaceResults = ({
             filters={filters}
             locale={locale}
             onApply={onApply}
+            onOpenFilters={onOpenFilters}
             onViewModeChange={onViewModeChange}
             totalListings={totalListings}
             viewMode={viewMode}

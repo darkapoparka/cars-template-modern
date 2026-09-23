@@ -1,5 +1,5 @@
 /** Desktop-only artwork: mobile continues to use its existing service images. */
 export const desktopBannerArtwork = {
-  inventory: "/images/desktop/studio-vehicles-v2.png",
-  service: "/images/desktop/studio-vehicles-v2.png",
+  inventory: "/images/desktop/showroom-calm-v3.png",
+  service: "/images/desktop/showroom-calm-v3.png",
 } as const;

@@ -15,13 +15,11 @@ import {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import {
-  ArrowDownWideNarrow,
   Bike,
   BusFront,
   CarFront,
   ChevronDown,
   Search,
-  SlidersHorizontal,
   Truck,
 } from "lucide-react";
 import Link from "next/link";
@@ -61,7 +59,6 @@ import {
   rememberMarketplaceSearchQuery,
 } from "./desktop-search-assistant";
 import { DesktopSearchFilterGrid } from "./desktop-search-filter-grid";
-import { MarketplaceFullFilterOverlay } from "./marketplace-full-filter-overlay";
 import { MarketplaceMakeModelPicker } from "./marketplace-model-picker";
 
 const fieldClassName = `${desktopQuickFilterOptionClassName} ${styles.field}`;
@@ -70,10 +67,8 @@ export interface DealerHeroSearchProps {
   assistantSlot?: ReactNode;
   filters: MarketplaceSearchParams;
   locale?: string;
-  resultCountSlot?: ReactNode;
   searchListings?: readonly InventorySearchListing[];
   taxonomy?: VehicleTaxonomyMakeOption[];
-  viewModeSlot?: ReactNode;
 }
 
 /** Shared desktop buy box keeps one draft until Search is submitted. */
@@ -83,8 +78,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     locale,
     searchListings,
     assistantSlot,
-    resultCountSlot,
-    viewModeSlot,
     taxonomy = fallbackVehicleTaxonomy,
   } = props;
   const router = useRouter();
@@ -98,10 +91,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const [makeModelStep, setMakeModelStep] = useState<"make" | "model" | null>(
     null
   );
-  const [filterOpen, setFilterOpen] = useState(false);
-  const openOverlay = useMarketplaceOverlayCoordinator(
-    makeModelStep !== null || filterOpen
-  );
+  const openOverlay = useMarketplaceOverlayCoordinator(makeModelStep !== null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
@@ -500,56 +490,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
             query={query}
           />
         </form>
-        <div className={styles.resultsRow} data-slot="desktop-results-controls">
-          <div className={styles.resultCount}>{resultCountSlot}</div>
-          <div className={styles.filterSortBar}>
-            {viewModeSlot ? (
-              <div className={styles.viewMode}>{viewModeSlot}</div>
-            ) : null}
-            <Button
-              aria-haspopup="dialog"
-              className={styles.filterButton}
-              onClick={() => openOverlay(() => setFilterOpen(true))}
-              type="button"
-            >
-              <SlidersHorizontal aria-hidden="true" size={17} />
-              {text("Филтри", "Filters")}
-              {filterCount > 0 ? ` (${filterCount})` : ""}
-            </Button>
-            <label className={styles.sortControl}>
-              <select
-                aria-label={text("Подреди по", "Sort by")}
-                disabled={pending}
-                onChange={(event) => {
-                  const sort = event.target
-                    .value as MarketplaceSearchParams["sort"];
-                  onApply({ sort });
-                  submit(query, sort);
-                }}
-                title={`${text("Подреди по", "Sort by")}: ${labels.sort}`}
-                value={filters.sort}
-              >
-                <option value="recommended">
-                  {text("Препоръчани", "Recommended")}
-                </option>
-                <option value="newest">{text("Най-нови", "Newest")}</option>
-                <option value="price_asc">
-                  {text("Цена: възходяща", "Price: low to high")}
-                </option>
-                <option value="price_desc">
-                  {text("Цена: низходяща", "Price: high to low")}
-                </option>
-                <option value="year_desc">
-                  {text("Година: най-нови", "Year: newest")}
-                </option>
-                <option value="mileage_asc">
-                  {text("Най-нисък пробег", "Lowest mileage")}
-                </option>
-              </select>
-              <ArrowDownWideNarrow aria-hidden="true" size={19} />
-            </label>
-          </div>
-        </div>
       </DesktopActionPanel>
       <MarketplaceMakeModelPicker
         applyLabel={text("Приложи", "Apply")}
@@ -563,15 +503,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
           }
         }}
         open={isDesktop && makeModelStep !== null}
-        taxonomy={taxonomy}
-      />
-      <MarketplaceFullFilterOverlay
-        applyLabel={text("Приложи филтрите", "Apply filters")}
-        filters={filters}
-        locale={locale}
-        onApply={onApply}
-        onOpenChange={setFilterOpen}
-        open={isDesktop && filterOpen}
         taxonomy={taxonomy}
       />
     </div>

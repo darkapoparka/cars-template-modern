@@ -1,63 +1,15 @@
 @media (min-width: 1024px) {
-  .desktopControls {
-    display: grid;
-    grid-template-columns: 16rem minmax(0, 1fr);
-    gap: 2rem;
-  }
-  .vehiclePreview {
-    align-self: start;
-    overflow: hidden;
-    background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 0.875rem;
-  }
-  .vehicleImage {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-  }
-  .vehicleCopy {
-    padding: 1rem;
-  }
-  .vehicleCopy strong {
-    display: block;
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.4;
-  }
-  .vehicleCopy p {
-    margin: 0.5rem 0 0.875rem;
-    font-size: 0.75rem;
-    line-height: 1.6;
-    color: var(--muted-foreground);
-  }
-  .vehicleCopy a {
-    display: inline-flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 0.8125rem;
-    font-weight: 600;
-  }
-  .vehicleCopy a:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  .desktopControls,
   .preferences {
     display: grid;
-    gap: 1.25rem;
     min-width: 0;
   }
-  .intro p {
-    margin: 0;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    color: var(--muted-foreground);
+  .preferences {
+    gap: 1rem;
   }
   .financeFields {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1.4fr 1fr 1fr;
     gap: 1rem;
   }
   .field {
@@ -68,9 +20,6 @@
     font-weight: 500;
     color: var(--foreground);
   }
-  .field:first-child {
-    grid-column: 1 / -1;
-  }
   .financeFields select {
     width: 100%;
     min-width: 0;
@@ -80,20 +29,54 @@
   }
   .offerRow {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.25rem;
+    padding-top: 1rem;
     border-top: 1px solid var(--border);
+  }
+  .vehiclePreview {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    min-width: 0;
+  }
+  .vehicleImage {
+    width: 4.5rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  .vehicleCopy {
+    display: grid;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+  .vehicleCopy strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .vehicleCopy > span {
+    display: flex;
+    gap: 0.375rem;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+  }
+  .vehiclePreview:hover .vehicleCopy > span {
+    color: var(--foreground);
+    text-decoration: underline;
   }
   .financeSummary {
     display: flex;
-    gap: 1.75rem;
-    min-width: 0;
+    flex-shrink: 0;
+    gap: 2rem;
   }
   .summaryLabel {
-    margin: 0 0 0.375rem;
+    margin: 0 0 0.25rem;
     font-size: 0.75rem;
     color: var(--muted-foreground);
   }
@@ -110,24 +93,17 @@
     color: var(--brand-text);
   }
   .financeActions {
-    margin-left: auto;
+    flex-shrink: 0;
   }
   .financeActions a {
-    height: 3rem;
+    height: 2.5rem;
     padding-inline: 1rem;
-    border-radius: 0.75rem;
+    border-radius: 0.625rem;
   }
   .financeNote {
-    max-width: 42rem;
     margin: 0;
     font-size: 0.75rem;
     line-height: 1.6;
     color: var(--muted-foreground);
-  }
-}
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .desktopControls {
-    grid-template-columns: 13rem minmax(0, 1fr);
-    gap: 1.5rem;
   }
 }
