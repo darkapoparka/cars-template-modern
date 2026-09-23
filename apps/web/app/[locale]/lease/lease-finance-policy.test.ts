@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   buildLeaseFinancingRequestHref,
   type FinancingVehicleOption,
+  getLeasePrincipal,
   getLeaseSelectedVehicle,
   matchesLeaseVehicleFilters,
 } from "./lease-finance-policy";
@@ -16,6 +17,7 @@ const vehicles: FinancingVehicleOption[] = [
     mileageLabel: "50,000 km",
     priceLabel: "50,000 EUR",
     priceAmount: 50_000,
+    priceCurrency: "EUR",
     fuelType: "diesel",
     filterData: {
       category: "car",
@@ -46,6 +48,19 @@ const vehicles: FinancingVehicleOption[] = [
 ];
 
 describe("lease finance policy", () => {
+  it("splits the price into deposit and principal without inventing interest", () => {
+    expect(getLeasePrincipal(89_379, "20")).toEqual({
+      initialPayment: 17_875.8,
+      amountToFinance: 71_503.2,
+    });
+    expect(getLeasePrincipal(50_000, "30")).toEqual({
+      initialPayment: 15_000,
+      amountToFinance: 35_000,
+    });
+    expect(getLeasePrincipal(50_000, "flexible")).toBeNull();
+    expect(getLeasePrincipal(50_000, "99")).toBeNull();
+    expect(getLeasePrincipal(Number.NaN, "20")).toBeNull();
+  });
   it("combines inclusive price and year bounds with fuel", () => {
     const vehicle = vehicles[0];
     if (!vehicle) {

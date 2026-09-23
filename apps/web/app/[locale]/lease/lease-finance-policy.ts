@@ -3,6 +3,7 @@ import {
   getIsoCountryName,
   leadSite,
   type MarketplaceSearchParams,
+  type Money,
   type VehicleListing,
 } from "@repo/marketplace";
 
@@ -20,12 +21,28 @@ export interface FinancingVehicleOption {
   mileageLabel: string;
   monthlyLabel?: string;
   priceAmount: number;
+  priceCurrency: Money["currency"];
   priceLabel: string;
   title: string;
   transmissionLabel: string;
   year: number;
   yearLabel: string;
 }
+
+/** Principal only: interest, fees and lender approval belong to the offer. */
+export const getLeasePrincipal = (price: number, deposit: string) => {
+  if (
+    !(["10", "20", "30"].includes(deposit) && Number.isFinite(price)) ||
+    price < 0
+  ) {
+    return null;
+  }
+  const initialPayment = Math.round(price * Number(deposit)) / 100;
+  return {
+    initialPayment,
+    amountToFinance: Math.round((price - initialPayment) * 100) / 100,
+  };
+};
 
 export const matchesLeaseVehicleFilters = (
   vehicle: FinancingVehicleOption,

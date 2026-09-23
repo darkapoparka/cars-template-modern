@@ -13,21 +13,18 @@
 @media (min-width: 1024px) {
   .hero,
   .hero[data-variant="service"] {
-    --desktop-action-panel-min-height: 25rem;
-    --desktop-hero-height: calc(
-      var(--desktop-action-panel-min-height) +
-      8.5rem
-    );
+    --desktop-action-panel-min-height: 20rem;
+    --desktop-hero-height: calc(var(--desktop-action-panel-min-height) + 7rem);
     position: relative;
     z-index: 20;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
     width: 100%;
     height: auto;
     min-height: var(--desktop-hero-height);
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     color: var(--inverse-foreground);
     background: var(--inverse);
     isolation: isolate;
@@ -142,7 +139,7 @@
 @media (min-width: 1280px) {
   .hero,
   .hero[data-variant="service"] {
-    --desktop-action-panel-min-height: 20.5rem;
+    --desktop-action-panel-min-height: 17.5rem;
   }
 }
 /* On narrower desktops, keep the complete vehicles alongside the heading

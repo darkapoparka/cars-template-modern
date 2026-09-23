@@ -46,9 +46,13 @@ export const LeaseVehicleSelector = ({
   const mobileSelectedVehicle = vehicles.find(
     (vehicle) => vehicle.id === vehicleId
   );
-  const updatePreference = (name: string, value: string) => {
+  const updatePreference = (
+    name: string,
+    value: string,
+    keepFlexible = false
+  ) => {
     const url = new URL(window.location.href);
-    if (value && value !== "flexible") {
+    if (value && (value !== "flexible" || keepFlexible)) {
       url.searchParams.set(name, value);
     } else {
       url.searchParams.delete(name);
@@ -112,14 +116,14 @@ export const LeaseVehicleSelector = ({
       />
 
       <LeaseDesktopControls
-        deposit={deposit}
+        deposit={searchParams.has("deposit") ? deposit : "20"}
         locale={locale}
-        onDepositChange={setDeposit}
-        onTermChange={setTerm}
+        onDepositChange={(value) => updatePreference("deposit", value, true)}
+        onTermChange={(value) => updatePreference("term", value, true)}
         onVehicleChange={selectVehicle}
         phoneHref={phoneHref}
         selectedVehicle={selectedVehicle}
-        term={term}
+        term={searchParams.has("term") ? term : "48"}
         title={desktopTitle}
         vehicles={vehicles}
       />

@@ -344,13 +344,13 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
             <section className="hidden lg:block">
               <DesktopActionPanel className={desktopStyles.importPanel}>
                 <h2>{text.sourceLabel}</h2>
-                <p className="mb-6 max-w-4xl text-muted-foreground text-sm leading-6">
+                <p className="mb-4 max-w-4xl text-muted-foreground text-sm leading-6">
                   {text.desktopDescription}
                 </p>
                 <search className="block">
                   <form
                     action={`${localize(path)}#import-request`}
-                    className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4 outline-none focus-within:ring-[3px] focus-within:ring-[var(--lead-site-accent-ring)]"
+                    className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4"
                     method="get"
                   >
                     {formOrigin ? (

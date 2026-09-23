@@ -40,7 +40,7 @@ const leadingYearPattern = /^\d{4}\s+/;
 const pageCopy = {
   bg: {
     badge: `Финансиране от ${leadSite.shortName}`,
-    formTitle: "Изберете автомобил и условия",
+    formTitle: "Условия на лизинга",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
@@ -67,7 +67,7 @@ const pageCopy = {
   },
   en: {
     badge: `Financing from ${leadSite.shortName}`,
-    formTitle: "Choose a vehicle and your preferences",
+    formTitle: "Financing preferences",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
@@ -152,6 +152,7 @@ export default async function LeasePage({
       : {}),
     priceLabel: formatMoney(listing.price, normalizedLocale),
     priceAmount: listing.price.amount,
+    priceCurrency: listing.price.currency,
     fuelType: listing.spec.fuelType,
     year: listing.spec.year,
     title: listing.title.replace(leadingYearPattern, ""),

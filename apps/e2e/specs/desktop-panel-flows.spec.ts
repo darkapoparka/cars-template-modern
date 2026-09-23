@@ -4,6 +4,7 @@ const dieselResultsPattern = /\/en\/cars\?.*fuel=diesel/;
 const fuelQueryPattern = /fuel=/;
 const listingPattern = /\/listing\//;
 const phonePattern = /^tel:/;
+const sourceQueryPattern = /sourceUrl=/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
@@ -208,22 +209,68 @@ test("financing selection and preferences survive details and Back", async ({
   await selector.selectOption(vehicleId ?? "");
   await expect(selector).toHaveValue(vehicleId ?? "");
   await expect(detailLink).not.toHaveAttribute("href", initialDetail ?? "");
-  const summary = page.locator('[data-slot="finance-summary"]');
-  const advertisedEstimate = await summary.textContent();
-  await page.locator("#finance-deposit").selectOption("20");
-  await page.locator("#finance-term").selectOption("36");
-  await expect(summary).toHaveText(advertisedEstimate ?? "");
+  const deposit = page.locator('[name="desktop-finance-deposit"][value="30"]');
+  const term = page.locator('[name="desktop-finance-term"][value="36"]');
+  const principal = page.locator('[data-slot="finance-principal"]');
+  const initialPrincipal = await principal.textContent();
+  await deposit.check();
+  await expect(principal).not.toHaveText(initialPrincipal ?? "");
+  const updatedPrincipal = await principal.textContent();
+  await term.check();
+  await expect(principal).toHaveText(updatedPrincipal ?? "");
   await page.getByRole("link", { name: "View vehicle", exact: true }).click();
   await expect(page).toHaveURL(listingPattern);
   await page.goBack();
   await expect(selector).toHaveValue(vehicleId ?? "");
-  await expect(page.locator("#finance-deposit")).toHaveValue("20");
-  await expect(page.locator("#finance-term")).toHaveValue("36");
+  await expect(deposit).toBeChecked();
+  await expect(term).toBeChecked();
   await page.reload();
   await expect(selector).toHaveValue(vehicleId ?? "");
-  await expect(page.locator("#finance-term")).toHaveValue("36");
+  await expect(term).toBeChecked();
+  const flexible = page.locator(
+    '[name="desktop-finance-deposit"][value="flexible"]'
+  );
+  await flexible.check();
+  await expect(principal).toHaveText("To be agreed");
+  await page.reload();
+  await expect(flexible).toBeChecked();
   await expect(page.locator('[data-slot="finance-actions"] a')).toHaveAttribute(
     "href",
     phonePattern
   );
+});
+
+test("desktop import has one focus treatment and carries the listing into the request", async ({
+  page,
+}) => {
+  await page.goto("/en/imports");
+  const input = page.locator('search input[name="sourceUrl"]:visible');
+  await input.click();
+  const focus = await input.evaluate((element) => {
+    const field = element as HTMLInputElement;
+    const fieldStyle = getComputedStyle(field);
+    if (!field.form) {
+      throw new Error("Import link input must belong to a form");
+    }
+    const formStyle = getComputedStyle(field.form);
+    return {
+      fieldOutline: fieldStyle.outlineStyle,
+      formOutline: formStyle.outlineStyle,
+      formColor: formStyle.outlineColor,
+    };
+  });
+  expect(focus.fieldOutline).toBe("none");
+  expect(focus.formOutline).toBe("solid");
+  expect(focus.formColor).not.toBe("rgb(17, 117, 222)");
+  const sourceUrl = "https://example.com/vehicles/test-car";
+  await input.fill(sourceUrl);
+  await page
+    .locator("search:visible")
+    .getByRole("button", { name: "Request a quote" })
+    .click();
+  await expect(page).toHaveURL(sourceQueryPattern);
+  await expect(page.locator("#import-request")).toBeVisible();
+  await expect(
+    page.locator('#import-request input[name="sourceUrl"]')
+  ).toHaveValue(sourceUrl);
 });

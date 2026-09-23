@@ -225,10 +225,10 @@ export default async function SellPage({
                   action={localize("/contact")}
                   aria-label={copy.formLabel}
                   className={cn(
-                    "grid grid-cols-2 gap-4 lg:grid-cols-3",
+                    "grid grid-cols-2 gap-3",
                     hasSelectedVehicle
-                      ? "xl:grid-cols-[minmax(9rem,1fr)_minmax(15rem,1.7fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
-                      : "xl:grid-cols-[minmax(9rem,1fr)_minmax(9rem,1fr)_minmax(11rem,1.25fr)_minmax(8rem,1fr)_minmax(9rem,1fr)_auto]"
+                      ? "lg:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)_minmax(0,.75fr)_minmax(0,1fr)_auto]"
+                      : "lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1.25fr)_minmax(0,.75fr)_minmax(0,1fr)_auto]"
                   )}
                   data-slot="sell-vehicle-start-form"
                   method="get"
