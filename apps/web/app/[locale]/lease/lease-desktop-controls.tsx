@@ -3,10 +3,9 @@
 import { withBasePath } from "@repo/internationalization/paths";
 import { formatMoney } from "@repo/marketplace";
 import { DesktopActionButton } from "@repo/marketplace-ui/components/desktop-action-panel";
-import Image from "@repo/marketplace-ui/components/public-image";
-import { ArrowRight, Phone } from "lucide-react";
-import Link from "next/link";
+import { Phone } from "lucide-react";
 import styles from "./lease-desktop-controls.module.css";
+import { LeaseDesktopVehiclePicker } from "./lease-desktop-vehicle-picker";
 import {
   type FinancingVehicleOption,
   getLeasePrincipal,
@@ -65,7 +64,7 @@ export const LeaseDesktopControls = ({
   onTermChange: (term: string) => void;
   onVehicleChange: (vehicleId: string) => void;
   phoneHref: string;
-  selectedVehicle: FinancingVehicleOption;
+  selectedVehicle?: FinancingVehicleOption;
   term: string;
   title: string;
   vehicles: FinancingVehicleOption[];
@@ -81,7 +80,6 @@ export const LeaseDesktopControls = ({
           monthly: "Месечна вноска",
           tailored: "По индивидуална оферта",
           note: "Изберете предпочитанията си. Месечната вноска, лихвата и таксите се потвърждават в офертата.",
-          advertised: "По обява от",
           beforeCosts: "Преди лихва и такси",
         }
       : {
@@ -92,61 +90,28 @@ export const LeaseDesktopControls = ({
           monthly: "Monthly payment",
           tailored: "Personalised offer",
           note: "Choose your preferences. Monthly payment, interest and fees are confirmed in your offer.",
-          advertised: "Advertised from",
           beforeCosts: "Before interest and fees",
         };
-  const principal = getLeasePrincipal(selectedVehicle.priceAmount, deposit);
+  const principal = selectedVehicle
+    ? getLeasePrincipal(selectedVehicle.priceAmount, deposit)
+    : null;
   const money = (amount: number) =>
-    formatMoney({ amount, currency: selectedVehicle.priceCurrency }, locale);
+    selectedVehicle
+      ? formatMoney({ amount, currency: selectedVehicle.priceCurrency }, locale)
+      : "—";
+  const principalPlaceholder = selectedVehicle ? text.chooseDeposit : "—";
+  const depositPlaceholder = selectedVehicle ? text.flexible : "—";
   return (
     <div
       className={`hidden lg:grid ${styles.desktopControls}`}
       data-slot="lease-desktop-controls"
     >
-      <div className={styles.vehicle}>
-        <div className={styles.vehicleLabel}>
-          <label htmlFor="finance-vehicle-desktop">{copy.vehicleLabel}</label>
-          <Link href={selectedVehicle.detailHref}>
-            {copy.detailAction}
-            <ArrowRight aria-hidden="true" size={14} />
-          </Link>
-        </div>
-        <select
-          id="finance-vehicle-desktop"
-          onChange={(event) => onVehicleChange(event.target.value)}
-          value={selectedVehicle.id}
-        >
-          {vehicles.map((vehicle) => (
-            <option key={vehicle.id} value={vehicle.id}>
-              {vehicle.title}
-            </option>
-          ))}
-        </select>
-        <div className={styles.vehiclePreview}>
-          <Image
-            alt={selectedVehicle.imageAlt}
-            className={styles.vehicleImage}
-            height={240}
-            sizes="128px"
-            src={selectedVehicle.imageUrl}
-            width={320}
-          />
-          <div className={styles.vehicleFacts}>
-            <span>
-              {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
-            </span>
-            <strong>{selectedVehicle.priceLabel}</strong>
-            {selectedVehicle.monthlyLabel ? (
-              <small>
-                {text.advertised}
-                <br />
-                {selectedVehicle.monthlyLabel}
-              </small>
-            ) : null}
-          </div>
-        </div>
-      </div>
-
+      <LeaseDesktopVehiclePicker
+        locale={locale}
+        onSelect={onVehicleChange}
+        selectedVehicle={selectedVehicle}
+        vehicles={vehicles}
+      />
       <div className={styles.preferences}>
         <h2 className={styles.heading}>{title}</h2>
         <PreferenceChoices
@@ -178,7 +143,9 @@ export const LeaseDesktopControls = ({
         <div aria-live="polite" className={styles.principal}>
           <span>{text.principal}</span>
           <strong data-slot="finance-principal">
-            {principal ? money(principal.amountToFinance) : text.chooseDeposit}
+            {principal
+              ? money(principal.amountToFinance)
+              : principalPlaceholder}
           </strong>
           <small>{text.beforeCosts}</small>
         </div>
@@ -186,7 +153,7 @@ export const LeaseDesktopControls = ({
           <div>
             <dt>{copy.depositShortLabel}</dt>
             <dd data-slot="finance-initial-payment">
-              {principal ? money(principal.initialPayment) : text.flexible}
+              {principal ? money(principal.initialPayment) : depositPlaceholder}
             </dd>
           </div>
           <div>
@@ -195,12 +162,18 @@ export const LeaseDesktopControls = ({
           </div>
         </dl>
         <div className={styles.actions} data-slot="finance-actions">
-          <DesktopActionButton asChild>
-            <a href={withBasePath(phoneHref)}>
-              <Phone aria-hidden="true" />
+          {selectedVehicle ? (
+            <DesktopActionButton asChild>
+              <a href={withBasePath(phoneHref)}>
+                <Phone aria-hidden="true" />
+                {copy.phoneAction}
+              </a>
+            </DesktopActionButton>
+          ) : (
+            <DesktopActionButton disabled>
               {copy.phoneAction}
-            </a>
-          </DesktopActionButton>
+            </DesktopActionButton>
+          )}
         </div>
       </div>
     </div>

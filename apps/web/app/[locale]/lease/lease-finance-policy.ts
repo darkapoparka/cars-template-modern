@@ -29,6 +29,21 @@ export interface FinancingVehicleOption {
   yearLabel: string;
 }
 
+const searchWhitespace = /\s+/u;
+
+export const searchLeaseVehicles = (
+  vehicles: FinancingVehicleOption[],
+  query: string,
+  locale: "bg" | "en"
+) => {
+  const terms = query.trim().toLocaleLowerCase(locale).split(searchWhitespace);
+  return vehicles.filter((vehicle) =>
+    terms.every((term) =>
+      vehicle.title.toLocaleLowerCase(locale).includes(term)
+    )
+  );
+};
+
 /** Principal only: interest, fees and lender approval belong to the offer. */
 export const getLeasePrincipal = (price: number, deposit: string) => {
   if (

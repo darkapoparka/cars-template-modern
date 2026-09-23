@@ -15,10 +15,9 @@ import { useRef, useState } from "react";
 import {
   type FinancingVehicleOption,
   leaseSelectorCopy,
+  searchLeaseVehicles,
 } from "./lease-finance-policy";
 import { LeaseSelectedVehicle } from "./lease-selected-vehicle";
-
-const searchWhitespace = /\s+/u;
 
 export function LeaseCarSelector({
   locale,
@@ -36,12 +35,7 @@ export function LeaseCarSelector({
   const triggerRef = useRef<HTMLButtonElement>(null);
   const didSelect = useRef(false);
   const copy = leaseSelectorCopy[locale];
-  const terms = query.trim().toLocaleLowerCase(locale).split(searchWhitespace);
-  const matches = vehicles.filter((vehicle) =>
-    terms.every((term) =>
-      vehicle.title.toLocaleLowerCase(locale).includes(term)
-    )
-  );
+  const matches = searchLeaseVehicles(vehicles, query, locale);
   return (
     <>
       <button

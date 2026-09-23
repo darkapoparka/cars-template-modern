@@ -342,7 +342,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
         <DealerDesktopHero title={text.mobileTitle} variant="service">
           <div className={cn(desktopStyles.content, desktopStyles.heroContent)}>
             <section className="hidden lg:block">
-              <DesktopActionPanel className={desktopStyles.importPanel}>
+              <DesktopActionPanel
+                className={desktopStyles.importPanel}
+                fitContent
+              >
                 <h2>{text.sourceLabel}</h2>
                 <p className="mb-4 max-w-4xl text-muted-foreground text-sm leading-6">
                   {text.desktopDescription}

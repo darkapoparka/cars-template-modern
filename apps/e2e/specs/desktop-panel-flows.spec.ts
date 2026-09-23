@@ -8,7 +8,7 @@ const sourceQueryPattern = /sourceUrl=/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("all main routes keep the same desktop hero, panel and banner geometry", async ({
+test("main routes share a stable hero with a content-sized import panel", async ({
   page,
 }) => {
   test.setTimeout(120_000);
@@ -23,6 +23,15 @@ test("all main routes keep the same desktop hero, panel and banner geometry", as
         ).toBeHidden();
         const hero = page.locator(desktopHeroSelector);
         await expect(hero.locator("[data-desktop-action-panel]")).toBeVisible();
+        const panel = await hero
+          .locator("[data-desktop-action-panel]")
+          .boundingBox();
+        const standardPanelHeight = width >= 1280 ? 280 : 320;
+        if (path === "/imports") {
+          expect(panel?.height).toBeLessThan(standardPanelHeight);
+        } else {
+          expect(panel?.height).toBe(standardPanelHeight);
+        }
         const geometry = await hero.evaluate((element) => {
           const rect = (target: Element | null) => {
             const box = target?.getBoundingClientRect();
@@ -31,7 +40,9 @@ test("all main routes keep the same desktop hero, panel and banner geometry", as
           return {
             hero: rect(element),
             heading: rect(element.querySelector("h1")?.parentElement ?? null),
-            panel: rect(element.querySelector("[data-desktop-action-panel]")),
+            panel: rect(
+              element.querySelector("[data-desktop-action-panel]")
+            )?.slice(0, 3),
             banner: rect(
               element.querySelector('[data-slot="desktop-hero-scene"]')
             ),
@@ -71,10 +82,15 @@ test("desktop navigation keeps hero geometry stable through loading", async ({
               hero,
               panel,
               hero.querySelector('[data-slot="desktop-hero-scene"]'),
-            ].map((element) => {
+            ].map((element, index) => {
               const box = element?.getBoundingClientRect();
               return box
-                ? [box.x, box.y + scrollY, box.width, box.height]
+                ? [
+                    box.x,
+                    box.y + scrollY,
+                    box.width,
+                    ...(index === 1 ? [] : [box.height]),
+                  ]
                 : null;
             })
           )
@@ -195,19 +211,46 @@ test("financing selection and preferences survive details and Back", async ({
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/en/lease");
-  const selector = page.locator("#finance-vehicle-desktop");
-  const vehicleId = await selector
-    .locator("option")
-    .nth(1)
-    .getAttribute("value");
-  expect(vehicleId).toBeTruthy();
+  const selector = page.locator('[data-slot="lease-desktop-vehicle-trigger"]');
+  await expect(selector).toHaveAttribute("data-selected", "false");
+  await expect(
+    page.locator('[data-slot="finance-actions"] button')
+  ).toBeDisabled();
+  await selector.click();
+  const dialog = page.getByRole("dialog");
+  const search = dialog.getByRole("searchbox");
+  await expect(search).toBeFocused();
+  await search.fill("no-such-car-xyz");
+  await expect(
+    dialog.getByText("No vehicles found. Try another make or model.")
+  ).toBeVisible();
+  await search.fill("BMW X5");
+  await dialog
+    .locator('[data-slot="lease-vehicle-option"] button')
+    .first()
+    .click();
+  await expect(dialog).toBeHidden();
+  await expect(selector).toBeFocused();
+  await expect(selector).toHaveAttribute("data-selected", "true");
   const detailLink = page.getByRole("link", {
     name: "View vehicle",
     exact: true,
   });
   const initialDetail = await detailLink.getAttribute("href");
-  await selector.selectOption(vehicleId ?? "");
-  await expect(selector).toHaveValue(vehicleId ?? "");
+  await selector.click();
+  await expect(search).toHaveValue("");
+  await expect(dialog.locator('[data-vehicle-selected="true"]')).toHaveCount(1);
+  const selectedTitle = await dialog
+    .locator('[data-slot="lease-selected-vehicle-title"]')
+    .nth(1)
+    .textContent();
+  await dialog
+    .locator('[data-slot="lease-vehicle-option"] button')
+    .nth(1)
+    .click();
+  await expect(
+    page.locator('[data-slot="lease-desktop-selected-title"]')
+  ).toHaveText(selectedTitle ?? "");
   await expect(detailLink).not.toHaveAttribute("href", initialDetail ?? "");
   const deposit = page.locator('[name="desktop-finance-deposit"][value="30"]');
   const term = page.locator('[name="desktop-finance-term"][value="36"]');
@@ -221,11 +264,15 @@ test("financing selection and preferences survive details and Back", async ({
   await page.getByRole("link", { name: "View vehicle", exact: true }).click();
   await expect(page).toHaveURL(listingPattern);
   await page.goBack();
-  await expect(selector).toHaveValue(vehicleId ?? "");
+  await expect(
+    page.locator('[data-slot="lease-desktop-selected-title"]')
+  ).toHaveText(selectedTitle ?? "");
   await expect(deposit).toBeChecked();
   await expect(term).toBeChecked();
   await page.reload();
-  await expect(selector).toHaveValue(vehicleId ?? "");
+  await expect(
+    page.locator('[data-slot="lease-desktop-selected-title"]')
+  ).toHaveText(selectedTitle ?? "");
   await expect(term).toBeChecked();
   const flexible = page.locator(
     '[name="desktop-finance-deposit"][value="flexible"]'

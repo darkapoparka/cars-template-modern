@@ -18,6 +18,9 @@
     line-height: 1.4;
     letter-spacing: -0.025em;
   }
+  .panel[data-fit-content] {
+    min-height: 0;
+  }
 
   .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
     color: var(--foreground);
@@ -64,6 +67,12 @@
   .action:hover {
     color: var(--brand-hover-foreground);
     background: var(--lead-site-accent-hover);
+  }
+  .action:disabled {
+    color: var(--muted-foreground);
+    background: var(--control);
+    border-color: var(--border);
+    opacity: 1;
   }
   .action[data-inset] {
     height: 2.25rem;

@@ -122,7 +122,7 @@ export const LeaseVehicleSelector = ({
         onTermChange={(value) => updatePreference("term", value, true)}
         onVehicleChange={selectVehicle}
         phoneHref={phoneHref}
-        selectedVehicle={selectedVehicle}
+        selectedVehicle={mobileSelectedVehicle}
         term={searchParams.has("term") ? term : "48"}
         title={desktopTitle}
         vehicles={vehicles}

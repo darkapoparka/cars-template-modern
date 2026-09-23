@@ -5,11 +5,13 @@ import styles from "./desktop-action-panel.module.css";
 /** Shared desktop surface for discovery, appraisal, import and finance. */
 export function DesktopActionPanel({
   className = "",
+  fitContent = false,
   ...props
-}: ComponentProps<"div">) {
+}: ComponentProps<"div"> & { fitContent?: boolean }) {
   return (
     <div
       data-desktop-action-panel=""
+      data-fit-content={fitContent || undefined}
       {...props}
       className={`${styles.panel} ${className}`}
     />
