@@ -2,7 +2,7 @@
 
 Desktop leasing now starts with an unselected grey card and a plus icon. Clicking opens a searchable vehicle modal built from the existing design-system Dialog and `LeaseSelectedVehicle` cards. Desktop and mobile pickers share `searchLeaseVehicles`; mobile presentation is unchanged. The modal handles empty results, marks the current vehicle, restores focus to its trigger and resets the search when reopened.
 
-Choosing a car produces a lightly tinted card with a red border, checkmark, image, title, price and change action. Vehicle details remain a separate link. Selection persists in the existing query state, and explicit incoming vehicle links still load their selection. No default vehicle is silently selected on desktop. Financing amounts and the phone action become available after selection. Existing deposit, term, calculation and delivery behavior is preserved.
+Choosing a car produces a soft green card with an image, title, price, a top-right clear button and a full-width Change vehicle button. The selected label, red styling and adjacent vertical separator were removed in the follow-up. Vehicle details remain a separate link. Clearing restores the plus card and focus, removes only the vehicle query parameter, clears the displayed amounts and disables the offer action; deposit and term are preserved. Selection persists in the existing query state, and explicit incoming vehicle links still load their selection. No default vehicle is silently selected on desktop. Existing calculation and delivery behavior is preserved.
 
 Sell's extra divider above optional details was removed. Import uses a new `fitContent` option on the shared `DesktopActionPanel`, so the white panel ends after its country controls instead of reserving unused space. Its hero frame, title position and banner geometry remain consistent with other routes. The intentional import panel-height difference is covered separately from the stable hero geometry checks.
 
@@ -16,7 +16,7 @@ Sell's extra divider above optional details was removed. Import uses a new `fitC
 - `apps/web/app/[locale]/components/public-desktop-layout.module.css`
 - `apps/e2e/specs/desktop-panel-flows.spec.ts`
 
-## Local verification
+## Initial picker verification
 
 Used the existing static-demo listener at `http://127.0.0.1:6462`, installed Chrome and Playwright:
 
@@ -29,3 +29,11 @@ Used the existing static-demo listener at `http://127.0.0.1:6462`, installed Chr
 - Scoped Biome and whitespace checks passed.
 
 Unrelated contact/mobile-content edits, the older desktop-polish ledger and existing untracked artwork/components were preserved. No dealer deployment, live enquiry submission or provider changes. Owner visual acceptance and public/mounted release verification remain separate from these local checks.
+
+## Selected-card follow-up verification
+
+- Targeted desktop financing test passed, including the new clear action, no accidental modal opening, focus restoration, retained preferences and cleared state after reload.
+- Mobile leasing regression passed at 390px.
+- Inspected the updated selected card at English 1440px and Bulgarian 1024px; modal selection, Escape and focus restoration passed at both widths.
+- Web typecheck, production build with the documented demo environment, scoped Biome and whitespace checks passed.
+- Scope: `lease-desktop-vehicle-picker.tsx`, its CSS module, `lease-desktop-controls.module.css`, the existing browser test and this note. Unrelated work remains preserved.

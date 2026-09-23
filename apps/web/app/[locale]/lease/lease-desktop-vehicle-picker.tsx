@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@repo/design-system/components/ui/button";
 import {
   Dialog,
   DialogClose,
@@ -10,9 +11,9 @@ import {
   DialogTrigger,
 } from "@repo/design-system/components/ui/dialog";
 import Image from "@repo/marketplace-ui/components/public-image";
-import { ArrowRight, Check, Plus, Search, X } from "lucide-react";
+import { ArrowRight, Plus, Search, X } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./lease-desktop-vehicle-picker.module.css";
 import {
   type FinancingVehicleOption,
@@ -34,20 +35,19 @@ export function LeaseDesktopVehiclePicker({
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const copy = leaseSelectorCopy[locale];
   const matches = searchLeaseVehicles(vehicles, query, locale);
   const text =
     locale === "bg"
       ? {
           browse: "Разгледайте наличните автомобили",
-          selected: "Избран автомобил",
           empty: "Няма намерени автомобили. Опитайте друга марка или модел.",
           description:
             "Потърсете марка или модел и изберете автомобил за лизинг.",
         }
       : {
           browse: "Browse available vehicles",
-          selected: "Vehicle selected",
           empty: "No vehicles found. Try another make or model.",
           description:
             "Search by make or model, then choose a vehicle to finance.",
@@ -63,60 +63,77 @@ export function LeaseDesktopVehiclePicker({
       open={open}
     >
       <div className={styles.picker}>
-        <DialogTrigger asChild>
-          <button
-            aria-label={
-              selectedVehicle
-                ? `${copy.changeVehicle}: ${selectedVehicle.title}`
-                : copy.vehicleLabel
-            }
-            className={styles.trigger}
-            data-selected={Boolean(selectedVehicle)}
-            data-slot="lease-desktop-vehicle-trigger"
-            type="button"
+        {selectedVehicle ? (
+          <div
+            className={styles.selectedCard}
+            data-slot="lease-desktop-selected-card"
           >
-            {selectedVehicle ? (
-              <>
-                <span className={styles.selectedLabel}>
-                  <Check aria-hidden="true" size={15} />
-                  {text.selected}
-                </span>
-                <span className={styles.vehicle}>
-                  <Image
-                    alt=""
-                    className={styles.image}
-                    height={180}
-                    sizes="104px"
-                    src={selectedVehicle.imageUrl}
-                    width={208}
-                  />
-                  <span className={styles.facts}>
-                    <strong data-slot="lease-desktop-selected-title">
-                      {selectedVehicle.title}
-                    </strong>
-                    <small>
-                      {selectedVehicle.yearLabel} ·{" "}
-                      {selectedVehicle.mileageLabel}
-                    </small>
-                    <b>{selectedVehicle.priceLabel}</b>
-                  </span>
-                </span>
-                <span className={styles.change}>
-                  {copy.changeVehicle}
-                  <ArrowRight aria-hidden="true" size={14} />
-                </span>
-              </>
-            ) : (
-              <>
-                <span className={styles.plus}>
-                  <Plus aria-hidden="true" size={28} strokeWidth={1.5} />
-                </span>
-                <strong>{copy.vehicleLabel}</strong>
-                <span className={styles.hint}>{text.browse}</span>
-              </>
-            )}
-          </button>
-        </DialogTrigger>
+            <Button
+              aria-label={copy.clearSelection}
+              className={styles.clear}
+              onClick={() => {
+                onSelect("");
+                requestAnimationFrame(() =>
+                  triggerRef.current?.focus({ preventScroll: true })
+                );
+              }}
+              size="icon-sm"
+              type="button"
+              variant="ghost"
+            >
+              <X aria-hidden="true" size={16} />
+            </Button>
+            <div className={styles.vehicle}>
+              <Image
+                alt=""
+                className={styles.image}
+                height={180}
+                sizes="104px"
+                src={selectedVehicle.imageUrl}
+                width={208}
+              />
+              <div className={styles.facts}>
+                <strong data-slot="lease-desktop-selected-title">
+                  {selectedVehicle.title}
+                </strong>
+                <small>
+                  {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
+                </small>
+                <b>{selectedVehicle.priceLabel}</b>
+              </div>
+            </div>
+            <DialogTrigger asChild>
+              <Button
+                className={styles.change}
+                data-selected="true"
+                data-slot="lease-desktop-vehicle-trigger"
+                ref={triggerRef}
+                type="button"
+                variant="outline"
+              >
+                {copy.changeVehicle}
+                <ArrowRight aria-hidden="true" size={14} />
+              </Button>
+            </DialogTrigger>
+          </div>
+        ) : (
+          <DialogTrigger asChild>
+            <button
+              aria-label={copy.vehicleLabel}
+              className={styles.trigger}
+              data-selected="false"
+              data-slot="lease-desktop-vehicle-trigger"
+              ref={triggerRef}
+              type="button"
+            >
+              <span className={styles.plus}>
+                <Plus aria-hidden="true" size={28} strokeWidth={1.5} />
+              </span>
+              <strong>{copy.vehicleLabel}</strong>
+              <span className={styles.hint}>{text.browse}</span>
+            </button>
+          </DialogTrigger>
+        )}
         <div className={styles.footer}>
           {selectedVehicle ? (
             <Link href={selectedVehicle.detailHref}>

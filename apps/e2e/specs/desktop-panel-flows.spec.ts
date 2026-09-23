@@ -5,6 +5,7 @@ const fuelQueryPattern = /fuel=/;
 const listingPattern = /\/listing\//;
 const phonePattern = /^tel:/;
 const sourceQueryPattern = /sourceUrl=/;
+const vehicleQueryPattern = /[?&]vehicle=/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
@@ -285,6 +286,21 @@ test("financing selection and preferences survive details and Back", async ({
     "href",
     phonePattern
   );
+  await page
+    .getByRole("button", { name: "Clear selection", exact: true })
+    .click();
+  await expect(selector).toHaveAttribute("data-selected", "false");
+  await expect(selector).toBeFocused();
+  await expect(page.getByRole("dialog")).toBeHidden();
+  await expect(principal).toHaveText("—");
+  await expect(
+    page.locator('[data-slot="finance-actions"] button')
+  ).toBeDisabled();
+  await expect(page).not.toHaveURL(vehicleQueryPattern);
+  await expect(flexible).toBeChecked();
+  await expect(term).toBeChecked();
+  await page.reload();
+  await expect(selector).toHaveAttribute("data-selected", "false");
 });
 
 test("desktop import has one focus treatment and carries the listing into the request", async ({
