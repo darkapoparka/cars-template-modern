@@ -91,22 +91,14 @@ export function LeaseDesktopVehiclePicker({
                 <X aria-hidden="true" size={16} />
               </Button>
             </div>
-            <div className={styles.vehicle}>
-              <div className={styles.media}>
-                <Image
-                  alt={selectedVehicle.imageAlt}
-                  className={styles.image}
-                  fill
-                  sizes="(min-width: 1280px) 160px, 132px"
-                  src={selectedVehicle.imageUrl}
-                />
-              </div>
-              <div className={styles.facts}>
-                <small>
-                  {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
-                </small>
-                <b>{selectedVehicle.priceLabel}</b>
-              </div>
+            <div className={styles.media}>
+              <Image
+                alt={selectedVehicle.imageAlt}
+                className={styles.image}
+                fill
+                sizes="(min-width: 1280px) 325px, 270px"
+                src={selectedVehicle.imageUrl}
+              />
             </div>
             <DialogTrigger asChild>
               <Button
