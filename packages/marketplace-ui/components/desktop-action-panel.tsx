@@ -1,3 +1,4 @@
+import { Button } from "@repo/design-system/components/ui/button";
 import type { ComponentProps } from "react";
 import styles from "./desktop-action-panel.module.css";
 
@@ -11,6 +12,21 @@ export function DesktopActionPanel({
       data-desktop-action-panel=""
       {...props}
       className={`${styles.panel} ${className}`}
+    />
+  );
+}
+
+/** One primary action treatment; inset actions fit inside search/link fields. */
+export function DesktopActionButton({
+  className = "",
+  inset = false,
+  ...props
+}: ComponentProps<typeof Button> & { inset?: boolean }) {
+  return (
+    <Button
+      {...props}
+      className={`${styles.action} ${className}`}
+      data-inset={inset || undefined}
     />
   );
 }

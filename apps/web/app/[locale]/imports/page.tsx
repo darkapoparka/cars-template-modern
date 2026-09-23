@@ -11,7 +11,10 @@ import {
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
-import { DesktopActionPanel } from "@repo/marketplace-ui/components/desktop-action-panel";
+import {
+  DesktopActionButton,
+  DesktopActionPanel,
+} from "@repo/marketplace-ui/components/desktop-action-panel";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
@@ -370,13 +373,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
                         type="url"
                       />
                     </label>
-                    <button
-                      className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-brand px-4 font-semibold text-brand-foreground text-sm outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
-                      type="submit"
-                    >
+                    <DesktopActionButton inset type="submit">
                       {text.submitText}
                       <ArrowRight aria-hidden="true" className="size-4" />
-                    </button>
+                    </DesktopActionButton>
                   </form>
                 </search>
                 <section

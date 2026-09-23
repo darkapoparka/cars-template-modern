@@ -1,14 +1,13 @@
 "use client";
 
-import { Button } from "@repo/design-system/components/ui/button";
 import { withBasePath } from "@repo/internationalization/paths";
+import { DesktopActionButton } from "@repo/marketplace-ui/components/desktop-action-panel";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
 import styles from "./lease-desktop-controls.module.css";
 import {
   type FinancingVehicleOption,
-  leaseSelectClassName,
   leaseSelectorCopy,
 } from "./lease-finance-policy";
 
@@ -43,32 +42,49 @@ export const LeaseDesktopControls = ({
       data-slot="lease-desktop-controls"
     >
       <div className={styles.preferences}>
-        <div className={styles.intro}>
-          <h2>{title}</h2>
-        </div>
+        <h2>{title}</h2>
 
         <div className={styles.financeFields} data-slot="finance-fields">
-          <label className={styles.field}>
-            <span>{copy.vehicleLabel}</span>
-            <select
-              aria-label={copy.vehicleLabel}
-              className={leaseSelectClassName}
-              id="finance-vehicle-desktop"
-              onChange={(event) => onVehicleChange(event.target.value)}
-              value={selectedVehicle.id}
-            >
-              {vehicles.map((vehicle) => (
-                <option key={vehicle.id} value={vehicle.id}>
-                  {vehicle.title}
-                </option>
-              ))}
-            </select>
-          </label>
+          <div className={styles.field}>
+            <div className={styles.labelRow}>
+              <label htmlFor="finance-vehicle-desktop">
+                {copy.vehicleLabel}
+              </label>
+              <Link href={selectedVehicle.detailHref}>
+                {copy.detailAction}
+                <ArrowRight aria-hidden="true" size={14} />
+              </Link>
+            </div>
+            <div className={styles.vehicleControl}>
+              <Image
+                alt=""
+                aria-hidden="true"
+                className={styles.vehicleImage}
+                height={72}
+                sizes="54px"
+                src={selectedVehicle.imageUrl}
+                width={108}
+              />
+              <select
+                aria-label={copy.vehicleLabel}
+                className={styles.select}
+                id="finance-vehicle-desktop"
+                onChange={(event) => onVehicleChange(event.target.value)}
+                value={selectedVehicle.id}
+              >
+                {vehicles.map((vehicle) => (
+                  <option key={vehicle.id} value={vehicle.id}>
+                    {vehicle.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
 
           <label className={styles.field} htmlFor="finance-deposit">
             <span>{copy.depositLabel}</span>
             <select
-              className={leaseSelectClassName}
+              className={styles.select}
               id="finance-deposit"
               onChange={(event) => onDepositChange(event.target.value)}
               value={deposit}
@@ -84,7 +100,7 @@ export const LeaseDesktopControls = ({
           <label className={styles.field} htmlFor="finance-term">
             <span>{copy.termLabel}</span>
             <select
-              className={leaseSelectClassName}
+              className={styles.select}
               id="finance-term"
               onChange={(event) => onTermChange(event.target.value)}
               value={term}
@@ -99,26 +115,6 @@ export const LeaseDesktopControls = ({
         </div>
 
         <div className={styles.offerRow}>
-          <Link
-            aria-label={copy.detailAction}
-            className={styles.vehiclePreview}
-            href={selectedVehicle.detailHref}
-          >
-            <Image
-              alt=""
-              className={styles.vehicleImage}
-              height={96}
-              sizes="72px"
-              src={selectedVehicle.imageUrl}
-              width={144}
-            />
-            <span className={styles.vehicleCopy}>
-              <strong>{selectedVehicle.title}</strong>
-              <span>
-                {copy.detailAction} <ArrowRight aria-hidden="true" size={14} />
-              </span>
-            </span>
-          </Link>
           <div
             aria-live="polite"
             className={styles.financeSummary}
@@ -131,7 +127,7 @@ export const LeaseDesktopControls = ({
               </p>
             </div>
             {selectedVehicle.monthlyLabel ? (
-              <div className={styles.estimate}>
+              <div>
                 <p className={styles.summaryLabel}>{copy.estimateLabel}</p>
                 <p className={styles.summaryValue}>
                   {selectedVehicle.monthlyLabel}
@@ -141,15 +137,12 @@ export const LeaseDesktopControls = ({
           </div>
 
           <div className={styles.financeActions} data-slot="finance-actions">
-            <Button
-              asChild
-              className="h-11 gap-2 rounded-xl bg-brand px-4 text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
-            >
+            <DesktopActionButton asChild>
               <a href={withBasePath(phoneHref)}>
                 <Phone aria-hidden="true" className="size-4" />
                 {copy.phoneAction}
               </a>
-            </Button>
+            </DesktopActionButton>
           </div>
         </div>
 

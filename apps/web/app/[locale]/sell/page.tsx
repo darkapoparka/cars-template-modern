@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@repo/design-system/components/ui/accordion";
-import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
@@ -12,7 +11,10 @@ import { cn } from "@repo/design-system/lib/utils";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite, vehicleCategories } from "@repo/marketplace";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
-import { DesktopActionPanel } from "@repo/marketplace-ui/components/desktop-action-panel";
+import {
+  DesktopActionButton,
+  DesktopActionPanel,
+} from "@repo/marketplace-ui/components/desktop-action-panel";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -311,13 +313,10 @@ export default async function SellPage({
                   </div>
 
                   <div className="col-span-2 flex items-end justify-end lg:col-span-1">
-                    <Button
-                      className="h-11 w-full gap-2 rounded-lg bg-brand px-5 text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
-                      type="submit"
-                    >
+                    <DesktopActionButton className="w-full" type="submit">
                       {copy.primaryAction}
                       <ArrowRight aria-hidden="true" className="size-4" />
-                    </Button>
+                    </DesktopActionButton>
                   </div>
 
                   <details

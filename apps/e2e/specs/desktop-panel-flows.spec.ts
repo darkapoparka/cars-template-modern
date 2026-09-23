@@ -200,12 +200,14 @@ test("financing selection and preferences survive details and Back", async ({
     .nth(1)
     .getAttribute("value");
   expect(vehicleId).toBeTruthy();
+  const detailLink = page.getByRole("link", {
+    name: "View vehicle",
+    exact: true,
+  });
+  const initialDetail = await detailLink.getAttribute("href");
   await selector.selectOption(vehicleId ?? "");
   await expect(selector).toHaveValue(vehicleId ?? "");
-  const title = await selector.locator("option:checked").textContent();
-  await expect(
-    page.locator('[data-slot="lease-desktop-controls"] strong')
-  ).toHaveText(title ?? "");
+  await expect(detailLink).not.toHaveAttribute("href", initialDetail ?? "");
   const summary = page.locator('[data-slot="finance-summary"]');
   const advertisedEstimate = await summary.textContent();
   await page.locator("#finance-deposit").selectOption("20");

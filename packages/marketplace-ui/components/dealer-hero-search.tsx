@@ -48,7 +48,10 @@ import {
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-hero-search.module.css";
-import { DesktopActionPanel } from "./desktop-action-panel";
+import {
+  DesktopActionButton,
+  DesktopActionPanel,
+} from "./desktop-action-panel";
 import {
   DesktopQuickFilterDialog,
   DesktopQuickRangeDialog,
@@ -195,17 +198,18 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 size={19}
               />
             </div>
-            <Button
+            <DesktopActionButton
               className={styles.submit}
               data-slot="desktop-hero-submit"
               disabled={pending}
+              inset
               type="submit"
             >
               <Search aria-hidden="true" size={18} />
               {pending
                 ? text("Търсене…", "Searching…")
                 : text("Покажи обявите", "Show results")}
-            </Button>
+            </DesktopActionButton>
           </div>
           <div className={styles.fields}>
             <Button
