@@ -2,7 +2,6 @@ import { expect, test } from "@playwright/test";
 
 const dieselResultsPattern = /\/en\/cars\?.*fuel=diesel/;
 const fuelQueryPattern = /fuel=/;
-const listingPattern = /\/listing\//;
 const phonePattern = /^tel:/;
 const sourceQueryPattern = /sourceUrl=/;
 const vehicleQueryPattern = /[?&]vehicle=/;
@@ -207,7 +206,7 @@ test("home and inventory share a buy box and submit the same draft", async ({
   await expect(page).not.toHaveURL(fuelQueryPattern);
 });
 
-test("financing selection and preferences survive details and Back", async ({
+test("financing selection and preferences survive navigation and clearing", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -233,11 +232,9 @@ test("financing selection and preferences survive details and Back", async ({
   await expect(dialog).toBeHidden();
   await expect(selector).toBeFocused();
   await expect(selector).toHaveAttribute("data-selected", "true");
-  const detailLink = page.getByRole("link", {
-    name: "View vehicle",
-    exact: true,
-  });
-  const initialDetail = await detailLink.getAttribute("href");
+  await expect(
+    page.getByRole("link", { name: "View vehicle", exact: true })
+  ).toHaveCount(0);
   await selector.click();
   await expect(search).toHaveValue("");
   await expect(dialog.locator('[data-vehicle-selected="true"]')).toHaveCount(1);
@@ -252,7 +249,6 @@ test("financing selection and preferences survive details and Back", async ({
   await expect(
     page.locator('[data-slot="lease-desktop-selected-title"]')
   ).toHaveText(selectedTitle ?? "");
-  await expect(detailLink).not.toHaveAttribute("href", initialDetail ?? "");
   const deposit = page.locator('[name="desktop-finance-deposit"][value="30"]');
   const term = page.locator('[name="desktop-finance-term"][value="36"]');
   const principal = page.locator('[data-slot="finance-principal"]');
@@ -262,8 +258,12 @@ test("financing selection and preferences survive details and Back", async ({
   const updatedPrincipal = await principal.textContent();
   await term.check();
   await expect(principal).toHaveText(updatedPrincipal ?? "");
-  await page.getByRole("link", { name: "View vehicle", exact: true }).click();
-  await expect(page).toHaveURL(listingPattern);
+  await page
+    .locator(
+      '[data-slot="dealer-desktop-header"] [data-marketplace-mode="home"]'
+    )
+    .click();
+  await expect(page.locator("#desktop-home-title")).toBeVisible();
   await page.goBack();
   await expect(
     page.locator('[data-slot="lease-desktop-selected-title"]')

@@ -12,7 +12,6 @@ import {
 } from "@repo/design-system/components/ui/dialog";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { ArrowRight, Plus, Search, X } from "lucide-react";
-import Link from "next/link";
 import { useRef, useState } from "react";
 import styles from "./lease-desktop-vehicle-picker.module.css";
 import {
@@ -85,12 +84,12 @@ export function LeaseDesktopVehiclePicker({
             </Button>
             <div className={styles.vehicle}>
               <Image
-                alt=""
+                alt={selectedVehicle.imageAlt}
                 className={styles.image}
-                height={180}
-                sizes="104px"
+                height={400}
+                sizes="(min-width: 1280px) 160px, 132px"
                 src={selectedVehicle.imageUrl}
-                width={208}
+                width={600}
               />
               <div className={styles.facts}>
                 <strong data-slot="lease-desktop-selected-title">
@@ -134,16 +133,6 @@ export function LeaseDesktopVehiclePicker({
             </button>
           </DialogTrigger>
         )}
-        <div className={styles.footer}>
-          {selectedVehicle ? (
-            <Link href={selectedVehicle.detailHref}>
-              {copy.detailAction}
-              <ArrowRight aria-hidden="true" size={14} />
-            </Link>
-          ) : (
-            <span>{text.description}</span>
-          )}
-        </div>
       </div>
       <DialogContent
         className={styles.dialog}
