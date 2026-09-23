@@ -67,21 +67,30 @@ export function LeaseDesktopVehiclePicker({
             className={styles.selectedCard}
             data-slot="lease-desktop-selected-card"
           >
-            <Button
-              aria-label={copy.clearSelection}
-              className={styles.clear}
-              onClick={() => {
-                onSelect("");
-                requestAnimationFrame(() =>
-                  triggerRef.current?.focus({ preventScroll: true })
-                );
-              }}
-              size="icon-sm"
-              type="button"
-              variant="ghost"
-            >
-              <X aria-hidden="true" size={16} />
-            </Button>
+            <div className={styles.cardHeader}>
+              <strong
+                className={styles.title}
+                data-slot="lease-desktop-selected-title"
+                title={selectedVehicle.title}
+              >
+                {selectedVehicle.title}
+              </strong>
+              <Button
+                aria-label={copy.clearSelection}
+                className={styles.clear}
+                onClick={() => {
+                  onSelect("");
+                  requestAnimationFrame(() =>
+                    triggerRef.current?.focus({ preventScroll: true })
+                  );
+                }}
+                size="icon-sm"
+                type="button"
+                variant="ghost"
+              >
+                <X aria-hidden="true" size={16} />
+              </Button>
+            </div>
             <div className={styles.vehicle}>
               <div className={styles.media}>
                 <Image
@@ -93,9 +102,6 @@ export function LeaseDesktopVehiclePicker({
                 />
               </div>
               <div className={styles.facts}>
-                <strong data-slot="lease-desktop-selected-title">
-                  {selectedVehicle.title}
-                </strong>
                 <small>
                   {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
                 </small>
