@@ -13,6 +13,11 @@
 @media (min-width: 1024px) {
   .hero,
   .hero[data-variant="service"] {
+    --desktop-action-panel-min-height: 25rem;
+    --desktop-hero-height: calc(
+      var(--desktop-action-panel-min-height) +
+      8.5rem
+    );
     position: relative;
     z-index: 20;
     display: flex;
@@ -20,8 +25,9 @@
     gap: 1.5rem;
     align-items: center;
     width: 100%;
-    height: var(--desktop-hero-height);
-    padding: 2rem 0 3rem;
+    height: auto;
+    min-height: var(--desktop-hero-height);
+    padding: 2rem 0;
     color: var(--inverse-foreground);
     background: var(--inverse);
     isolation: isolate;
@@ -31,7 +37,7 @@
     inset: 0;
     z-index: 0;
     display: block;
-    height: 100%;
+    height: var(--desktop-hero-height);
     overflow: hidden;
     pointer-events: none;
   }
@@ -55,7 +61,7 @@
   .hero[data-variant="landing"],
   .hero[data-variant="service"] {
     height: auto;
-    min-height: 0;
+    min-height: var(--desktop-hero-height);
     background: var(--inverse);
   }
   .hero[data-scene-tone="quiet"] {
@@ -68,12 +74,9 @@
     height: 100%;
     opacity: 0.62;
   }
-  .hero[data-variant="landing"] {
-    padding-bottom: 2rem;
-  }
   .hero[data-variant="landing"] .copy,
   .hero[data-variant="service"] .copy {
-    min-height: 2.875rem;
+    min-height: 3rem;
   }
   .copy h1 {
     margin: 0;
@@ -112,6 +115,34 @@
     max-height: none;
     overflow: visible;
     color: var(--foreground);
+  }
+  .loadingPanelFrame {
+    position: relative;
+    z-index: 1;
+    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+  }
+  .copy .loadingTitle {
+    max-width: 24rem;
+    margin-inline: auto;
+    color: transparent;
+    background: var(--inverse-control);
+    border-radius: var(--radius-sm);
+  }
+  .loadingFields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  .loadingFields > div {
+    height: 3rem;
+    background: var(--control);
+    border-radius: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero,
+  .hero[data-variant="service"] {
+    --desktop-action-panel-min-height: 20.5rem;
   }
 }
 /* On narrower desktops, keep the complete vehicles alongside the heading

@@ -6,5 +6,11 @@ export function DesktopActionPanel({
   className = "",
   ...props
 }: ComponentProps<"div">) {
-  return <div {...props} className={`${styles.panel} ${className}`} />;
+  return (
+    <div
+      data-desktop-action-panel=""
+      {...props}
+      className={`${styles.panel} ${className}`}
+    />
+  );
 }

@@ -11,6 +11,7 @@
   .panel {
     display: grid;
     gap: 1.25rem;
+    align-content: start;
   }
   .tabs {
     display: grid;

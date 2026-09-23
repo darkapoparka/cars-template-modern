@@ -4,6 +4,119 @@ const dieselResultsPattern = /\/en\/cars\?.*fuel=diesel/;
 const fuelQueryPattern = /fuel=/;
 const listingPattern = /\/listing\//;
 const phonePattern = /^tel:/;
+const desktopHeroSelector =
+  '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
+
+test("all main routes keep the same desktop hero, panel and banner geometry", async ({
+  page,
+}) => {
+  test.setTimeout(120_000);
+  for (const width of [1024, 1440, 1920]) {
+    await page.setViewportSize({ width, height: 1000 });
+    for (const locale of ["en", "bg"]) {
+      let reference: unknown;
+      for (const path of ["", "/cars", "/sell", "/lease", "/imports"]) {
+        await page.goto(`/${locale}${path}`);
+        await expect(
+          page.locator('[data-slot="public-route-loading-content"]')
+        ).toBeHidden();
+        const hero = page.locator(desktopHeroSelector);
+        await expect(hero.locator("[data-desktop-action-panel]")).toBeVisible();
+        const geometry = await hero.evaluate((element) => {
+          const rect = (target: Element | null) => {
+            const box = target?.getBoundingClientRect();
+            return box ? [box.x, box.y, box.width, box.height] : null;
+          };
+          return {
+            hero: rect(element),
+            heading: rect(element.querySelector("h1")?.parentElement ?? null),
+            panel: rect(element.querySelector("[data-desktop-action-panel]")),
+            banner: rect(
+              element.querySelector('[data-slot="desktop-hero-scene"]')
+            ),
+          };
+        });
+        if (reference) {
+          expect(geometry, `${locale}${path} at ${width}px`).toEqual(reference);
+        } else {
+          reference = geometry;
+        }
+      }
+    }
+  }
+});
+
+test("desktop navigation keeps hero geometry stable through loading", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto("/en");
+  await expect(
+    page.locator('[data-slot="public-route-loading-content"]')
+  ).toBeHidden();
+  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate((selector) => {
+    const samples = new Set<string>();
+    let frame = 0;
+    const sample = () => {
+      const hero = Array.from(document.querySelectorAll(selector)).find(
+        (element) => element.getBoundingClientRect().height > 0
+      );
+      const panel = hero?.querySelector("[data-desktop-action-panel]");
+      if (hero && panel) {
+        samples.add(
+          JSON.stringify(
+            [
+              hero,
+              panel,
+              hero.querySelector('[data-slot="desktop-hero-scene"]'),
+            ].map((element) => {
+              const box = element?.getBoundingClientRect();
+              return box
+                ? [box.x, box.y + scrollY, box.width, box.height]
+                : null;
+            })
+          )
+        );
+      }
+      frame = requestAnimationFrame(sample);
+    };
+    sample();
+    Object.assign(window, {
+      heroStability: {
+        stop: () => {
+          cancelAnimationFrame(frame);
+          return Array.from(samples);
+        },
+      },
+    });
+  }, desktopHeroSelector);
+  for (const [mode, title] of [
+    ["buy", "Vehicles in stock"],
+    ["sell", "Sell us your vehicle"],
+    ["lease", "Vehicle financing"],
+    ["imports", "Import a vehicle"],
+    ["home", "Find Your Next Drive"],
+  ]) {
+    await page
+      .locator(
+        `[data-slot="dealer-desktop-header"] [data-marketplace-mode="${mode}"]`
+      )
+      .click();
+    await expect(
+      page.locator(desktopHeroSelector).locator("h1").first()
+    ).toHaveText(title);
+    await expect(
+      page.locator('[data-slot="public-route-loading-content"]')
+    ).toBeHidden();
+  }
+  const samples = await page.evaluate(() =>
+    (
+      window as Window & { heroStability: { stop: () => string[] } }
+    ).heroStability.stop()
+  );
+  expect(samples).toHaveLength(1);
+});
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {

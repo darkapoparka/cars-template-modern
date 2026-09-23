@@ -91,27 +91,14 @@ const MobileLoadingHeader = ({
 );
 
 /** Keep the dealership masthead stable while route data resolves. */
-const DealerLoadingHeader = ({
-  variant,
-  locale,
-}: {
-  locale: string;
-  variant: "discovery" | "results";
-}) => (
+const DealerLoadingHeader = ({ locale }: { locale: string }) => (
   <div className="hidden lg:block" data-slot="dealer-desktop-loading">
     <DealerDesktopHeader activeMode={null} locale={locale} />
-    <div
-      aria-hidden="true"
-      className={desktopStyles.loadingHero}
-      data-variant={variant}
-    >
-      <div className={desktopStyles.loadingTitle} />
-      <div className={desktopStyles.loadingSearch}>
-        {loadingFilters.slice(0, 4).map((filter) => (
-          <div key={filter} />
-        ))}
-      </div>
-    </div>
+    <DealerDesktopHero
+      loading
+      title={locale === "bg" ? "Зареждане" : "Loading"}
+      variant="landing"
+    />
   </div>
 );
 
@@ -124,7 +111,7 @@ const DesktopLoadingHeader = ({
 }) => {
   const isResults = variant === "results";
   if (isDealershipSite) {
-    return <DealerLoadingHeader locale={locale} variant={variant} />;
+    return <DealerLoadingHeader locale={locale} />;
   }
 
   return (
@@ -415,6 +402,6 @@ import {
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
 import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
-import desktopStyles from "./public-desktop-layout.module.css";
