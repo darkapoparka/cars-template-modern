@@ -16,8 +16,10 @@ describe("public inventory search data boundary", () => {
     for (const item of summaries) {
       expect(Object.keys(item).sort()).toEqual([
         "category",
+        "features",
         "id",
         "images",
+        "location",
         "monthlyEstimate",
         "price",
         "slug",
@@ -25,6 +27,10 @@ describe("public inventory search data boundary", () => {
         "title",
       ]);
       expect(item.images.length).toBeLessThanOrEqual(1);
+      expect(Object.keys(item.location ?? {})).toEqual(["city"]);
+      for (const feature of item.features ?? []) {
+        expect(Object.keys(feature).sort()).toEqual(["bg", "en"]);
+      }
       expect(Object.keys(item.spec).sort()).toEqual([
         "fuelType",
         "make",

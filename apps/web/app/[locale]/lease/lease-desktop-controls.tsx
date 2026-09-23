@@ -2,8 +2,10 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { withBasePath } from "@repo/internationalization/paths";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { ArrowRight, Phone } from "lucide-react";
 import Link from "next/link";
+import styles from "./lease-desktop-controls.module.css";
 import {
   type FinancingVehicleOption,
   leaseSelectClassName,
@@ -16,10 +18,10 @@ export const LeaseDesktopControls = ({
   onDepositChange,
   onTermChange,
   onVehicleChange,
-  phoneDisplay,
   phoneHref,
   selectedVehicle,
   term,
+  title,
   vehicles,
 }: {
   deposit: string;
@@ -27,128 +29,143 @@ export const LeaseDesktopControls = ({
   onDepositChange: (deposit: string) => void;
   onTermChange: (term: string) => void;
   onVehicleChange: (vehicleId: string) => void;
-  phoneDisplay: string;
   phoneHref: string;
   selectedVehicle: FinancingVehicleOption;
   term: string;
+  title: string;
   vehicles: FinancingVehicleOption[];
 }) => {
   const copy = leaseSelectorCopy[locale];
-  const selectedDeposit = copy.depositOptions.find(
-    (option) => option.value === deposit
-  );
-  const selectedTerm = copy.termOptions.find((option) => option.value === term);
 
   return (
-    <div className="hidden lg:block" data-slot="lease-desktop-controls">
-      <div className="grid grid-cols-2 gap-3 text-left lg:grid-cols-[minmax(15rem,1.7fr)_minmax(11rem,1fr)_minmax(10rem,0.9fr)]">
-        <div className="col-span-2 grid gap-1.5 text-meta lg:col-span-1">
-          <span>{copy.vehicleLabel}</span>
-          <select
-            aria-label={copy.vehicleLabel}
-            className={leaseSelectClassName}
-            id="finance-vehicle-desktop"
-            onChange={(event) => onVehicleChange(event.target.value)}
-            value={selectedVehicle.id}
-          >
-            {vehicles.map((vehicle) => (
-              <option key={vehicle.id} value={vehicle.id}>
-                {vehicle.title} · {vehicle.priceLabel}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <label className="grid gap-1.5 text-meta" htmlFor="finance-deposit">
-          <span>{copy.depositLabel}</span>
-          <select
-            className={leaseSelectClassName}
-            id="finance-deposit"
-            onChange={(event) => onDepositChange(event.target.value)}
-            value={deposit}
-          >
-            {copy.depositOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
-
-        <label className="grid gap-1.5 text-meta" htmlFor="finance-term">
-          <span>{copy.termLabel}</span>
-          <select
-            className={leaseSelectClassName}
-            id="finance-term"
-            onChange={(event) => onTermChange(event.target.value)}
-            value={term}
-          >
-            {copy.termOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </label>
-      </div>
-
-      <div className="mt-3 flex flex-col gap-3 rounded-lg bg-secondary p-3.5 text-left sm:flex-row sm:items-center">
-        <div className="min-w-0 flex-1">
-          <p className="text-meta text-muted-foreground">
-            {copy.selectionLabel}
+    <div
+      className={`hidden lg:grid ${styles.desktopControls}`}
+      data-slot="lease-desktop-controls"
+    >
+      <div className={styles.vehiclePreview}>
+        <Image
+          alt={selectedVehicle.imageAlt}
+          className={styles.vehicleImage}
+          height={300}
+          sizes="(min-width: 1024px) 280px, 0px"
+          src={selectedVehicle.imageUrl}
+          width={420}
+        />
+        <div className={styles.vehicleCopy}>
+          <strong>{selectedVehicle.title}</strong>
+          <p>
+            {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel} ·{" "}
+            {selectedVehicle.fuelLabel}
           </p>
-          <p className="truncate font-semibold text-card-title tracking-heading">
-            {selectedVehicle.title}
-          </p>
-          <p className="mt-1 text-meta text-muted-foreground">
-            {selectedDeposit?.label} · {selectedTerm?.label}
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-4 sm:flex sm:items-center sm:gap-5">
-          <div>
-            <p className="text-meta text-muted-foreground">{copy.priceLabel}</p>
-            <p className="font-semibold text-price tracking-heading">
-              {selectedVehicle.priceLabel}
-            </p>
-          </div>
-          {selectedVehicle.monthlyLabel ? (
-            <div>
-              <p className="text-meta text-muted-foreground">
-                {copy.estimateLabel}
-              </p>
-              <p className="font-semibold text-brand-text text-price tracking-heading">
-                {selectedVehicle.monthlyLabel}
-              </p>
-            </div>
-          ) : null}
-        </div>
-      </div>
-
-      <div className="mt-4 flex flex-col items-stretch justify-center gap-2 sm:flex-row sm:items-center">
-        <Button
-          asChild
-          className="h-11 gap-2 rounded-lg bg-brand px-5 text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
-        >
-          <a href={withBasePath(phoneHref)}>
-            <Phone aria-hidden="true" className="size-4" />
-            {copy.phoneAction}
-          </a>
-        </Button>
-        <Button
-          asChild
-          className="h-11 gap-2 rounded-lg px-5 text-compact-control"
-          variant="secondary"
-        >
           <Link href={selectedVehicle.detailHref}>
             {copy.detailAction}
-            <ArrowRight aria-hidden="true" className="size-4" />
+            <ArrowRight aria-hidden="true" size={16} />
           </Link>
-        </Button>
+        </div>
       </div>
+      <div className={styles.preferences}>
+        <div className={styles.intro}>
+          <h2>{title}</h2>
+          <p>
+            {locale === "bg"
+              ? "Посочете предпочитанията си и обсъдете индивидуална оферта с нас."
+              : "Set your preferences and discuss a tailored offer with our team."}
+          </p>
+        </div>
 
-      <p className="mt-3 text-center text-meta text-muted-foreground">
-        {copy.note} {phoneDisplay}
-      </p>
+        <div className={styles.financeFields} data-slot="finance-fields">
+          <label className={styles.field}>
+            <span>{copy.vehicleLabel}</span>
+            <select
+              aria-label={copy.vehicleLabel}
+              className={leaseSelectClassName}
+              id="finance-vehicle-desktop"
+              onChange={(event) => onVehicleChange(event.target.value)}
+              value={selectedVehicle.id}
+            >
+              {vehicles.map((vehicle) => (
+                <option key={vehicle.id} value={vehicle.id}>
+                  {vehicle.title}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className={styles.field} htmlFor="finance-deposit">
+            <span>{copy.depositLabel}</span>
+            <select
+              className={leaseSelectClassName}
+              id="finance-deposit"
+              onChange={(event) => onDepositChange(event.target.value)}
+              value={deposit}
+            >
+              {copy.depositOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className={styles.field} htmlFor="finance-term">
+            <span>{copy.termLabel}</span>
+            <select
+              className={leaseSelectClassName}
+              id="finance-term"
+              onChange={(event) => onTermChange(event.target.value)}
+              value={term}
+            >
+              {copy.termOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div className={styles.offerRow}>
+          <div
+            aria-live="polite"
+            className={styles.financeSummary}
+            data-slot="finance-summary"
+          >
+            <div>
+              <p className={styles.summaryLabel}>{copy.priceLabel}</p>
+              <p className={styles.summaryValue}>
+                {selectedVehicle.priceLabel}
+              </p>
+            </div>
+            {selectedVehicle.monthlyLabel ? (
+              <div className={styles.estimate}>
+                <p className={styles.summaryLabel}>{copy.estimateLabel}</p>
+                <p className={styles.summaryValue}>
+                  {selectedVehicle.monthlyLabel}
+                </p>
+              </div>
+            ) : null}
+          </div>
+
+          <div className={styles.financeActions} data-slot="finance-actions">
+            <Button
+              asChild
+              className="h-11 gap-2 rounded-xl bg-brand px-4 text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+            >
+              <a href={withBasePath(phoneHref)}>
+                <Phone aria-hidden="true" className="size-4" />
+                {copy.phoneAction}
+              </a>
+            </Button>
+          </div>
+        </div>
+
+        <p className={styles.financeNote} data-slot="finance-note">
+          {copy.note}{" "}
+          {locale === "bg"
+            ? "Изборът на срок и вноска не преизчислява тази сума."
+            : "Changing preferences does not recalculate this estimate."}
+        </p>
+      </div>
     </div>
   );
 };

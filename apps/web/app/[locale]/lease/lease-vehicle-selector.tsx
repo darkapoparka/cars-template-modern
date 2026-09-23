@@ -3,7 +3,7 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import { withBasePath } from "@repo/internationalization/paths";
 import { Phone } from "lucide-react";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { LeaseDesktopControls } from "./lease-desktop-controls";
 import {
   buildLeaseFinancingRequestHref,
@@ -17,45 +17,49 @@ export type { FinancingVehicleOption } from "./lease-finance-policy";
 
 interface LeaseVehicleSelectorProps {
   contactHref: string;
+  desktopTitle: string;
   faqs: readonly { question: string; answer: string }[];
-  initialVehicleId?: string;
   locale: "bg" | "en";
-  phoneDisplay: string;
   phoneHref: string;
   vehicles: FinancingVehicleOption[];
 }
 
 export const LeaseVehicleSelector = ({
   contactHref,
-  initialVehicleId = "",
   faqs,
   locale,
-  phoneDisplay,
   phoneHref,
+  desktopTitle,
   vehicles,
 }: LeaseVehicleSelectorProps) => {
   const copy = leaseSelectorCopy[locale];
-  const [vehicleId, setVehicleId] = useState(
-    initialVehicleId || vehicles[0]?.id || ""
-  );
-  const [mobileVehicleId, setMobileVehicleId] = useState(initialVehicleId);
-  const [deposit, setDeposit] = useState("flexible");
-  const [term, setTerm] = useState("flexible");
+  const searchParams = useSearchParams();
+  const vehicleId = searchParams.get("vehicle") ?? "";
+  const deposit =
+    copy.depositOptions.find(
+      (option) => option.value === searchParams.get("deposit")
+    )?.value ?? "flexible";
+  const term =
+    copy.termOptions.find((option) => option.value === searchParams.get("term"))
+      ?.value ?? "flexible";
   const selectedVehicle = getLeaseSelectedVehicle(vehicles, vehicleId);
   const mobileSelectedVehicle = vehicles.find(
-    (vehicle) => vehicle.id === mobileVehicleId
+    (vehicle) => vehicle.id === vehicleId
   );
-  const selectVehicle = (id: string) => {
-    setVehicleId(id);
-    setMobileVehicleId(id);
+  const updatePreference = (name: string, value: string) => {
     const url = new URL(window.location.href);
-    if (id) {
-      url.searchParams.set("vehicle", id);
+    if (value && value !== "flexible") {
+      url.searchParams.set(name, value);
     } else {
-      url.searchParams.delete("vehicle");
+      url.searchParams.delete(name);
     }
-    window.history.replaceState(window.history.state, "", url);
+    // Next copies its internal history state and updates useSearchParams for
+    // native calls. Passing that internal state ourselves bypasses the update.
+    window.history.replaceState(null, "", url);
   };
+  const selectVehicle = (id: string) => updatePreference("vehicle", id);
+  const setDeposit = (value: string) => updatePreference("deposit", value);
+  const setTerm = (value: string) => updatePreference("term", value);
   const clearVehicle = () => {
     selectVehicle("");
     requestAnimationFrame(() => {
@@ -113,10 +117,10 @@ export const LeaseVehicleSelector = ({
         onDepositChange={setDeposit}
         onTermChange={setTerm}
         onVehicleChange={selectVehicle}
-        phoneDisplay={phoneDisplay}
         phoneHref={phoneHref}
         selectedVehicle={selectedVehicle}
         term={term}
+        title={desktopTitle}
         vehicles={vehicles}
       />
     </div>

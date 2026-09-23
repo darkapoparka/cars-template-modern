@@ -30,7 +30,7 @@ interface DesktopQuickOption {
 export const desktopQuickFilterRailItemClassName =
   "w-auto min-w-24 shrink-0 justify-between gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]";
 
-const desktopQuickFilterOptionClassName =
+export const desktopQuickFilterOptionClassName =
   "min-h-12 justify-start rounded-xl border border-transparent bg-zinc-100 px-4 font-medium text-body text-zinc-900 tabular-nums shadow-none transition-colors duration-150 hover:border-zinc-300 hover:bg-zinc-200 active:bg-zinc-300 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-offset-1";
 
 export const getDesktopQuickFilterClassName = (

@@ -25,6 +25,7 @@
   --inverse-border: oklch(0.34 0.006 264);
   --inverse-control: oklch(0.25 0.006 264);
   --layout-content-max: 87rem;
+  --desktop-hero-height: 28rem;
   --layout-wide-max: 100rem;
   --layout-gutter: 1.5rem;
   --layout-section-gap: 3rem;

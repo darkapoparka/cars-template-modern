@@ -80,6 +80,12 @@ export const marketplaceSearchSchema = z
     mileageMax: z
       .preprocess(emptyToUndefined, z.coerce.number().int().min(0).optional())
       .catch(undefined),
+    powerMin: z
+      .preprocess(emptyToUndefined, z.coerce.number().int().min(0).optional())
+      .catch(undefined),
+    extra: z
+      .preprocess(emptyToUndefined, z.string().optional())
+      .catch(undefined),
     fuel: z
       .preprocess(emptyToUndefined, fuelTypeSchema.optional())
       .catch(undefined),

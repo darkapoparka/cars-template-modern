@@ -248,6 +248,20 @@ export const getActiveFilterChips = (
       updates: { mileageMax: undefined },
     });
   }
+  if (filters.powerMin !== undefined) {
+    chips.push({
+      id: "power",
+      label: `${filters.powerMin}+ hp`,
+      updates: { powerMin: undefined },
+    });
+  }
+  if (filters.extra) {
+    chips.push({
+      id: "extra",
+      label: filters.extra,
+      updates: { extra: undefined },
+    });
+  }
   if (filters.body) {
     chips.push({
       id: "body",

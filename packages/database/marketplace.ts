@@ -164,6 +164,12 @@ const getOriginWhere = (
 const getRangeWhere = (
   filters: MarketplaceSearchParams
 ): Prisma.MarketplaceListingWhereInput => ({
+  ...(filters.powerMin !== undefined
+    ? { enginePowerHp: { gte: filters.powerMin } }
+    : {}),
+  // Equipment is not projected into database listings yet; unknown equipment
+  // must not be treated as a match for an explicit equipment filter.
+  ...(filters.extra ? { id: { in: [] } } : {}),
   ...(filters.priceMin !== undefined || filters.priceMax !== undefined
     ? {
         priceAmountMinor: {

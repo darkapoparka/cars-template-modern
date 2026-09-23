@@ -5,14 +5,11 @@
   .toolbar {
     position: relative;
     z-index: 42;
-    display: flex;
-    justify-content: center;
-    padding: var(--panel-padding) 4%;
-    margin-bottom: var(--panel-padding);
-    background: linear-gradient(110deg, var(--inverse-control), var(--inverse));
-    border-bottom: 1px solid var(--inverse-border);
+    display: block;
   }
   .content {
-    width: min(100%, 60rem);
+    position: relative;
+    z-index: 3;
+    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
   }
 }

@@ -15,6 +15,7 @@ export interface VehicleCardTrustSignal {
 
 export interface VehicleCardProps {
   density?: "default" | "compact";
+  desktopHeadingLevel?: 2 | 3;
   desktopLayout?: "list" | "grid";
   href?: string;
   listing: VehicleListing;

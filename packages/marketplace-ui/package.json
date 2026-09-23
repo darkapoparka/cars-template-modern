@@ -22,6 +22,7 @@
     "./lib/mobile-vehicle-card-layout": "./lib/mobile-vehicle-card-layout.ts",
     "./lib/vehicle-card-policy": "./lib/vehicle-card-policy.ts",
     "./components/dealer-desktop-discovery-content": "./components/dealer-desktop-discovery-content.tsx",
+    "./components/desktop-action-panel": "./components/desktop-action-panel.tsx",
     "./components/dealer-desktop-hero": "./components/dealer-desktop-hero.tsx",
     "./components/dealer-desktop-header": "./components/dealer-desktop-header.tsx",
     "./components/locale-preferences": "./components/locale-preferences.tsx",

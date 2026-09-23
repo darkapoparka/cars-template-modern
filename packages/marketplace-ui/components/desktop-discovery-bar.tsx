@@ -86,6 +86,8 @@ export const DesktopMarketplaceBar = ({
   onOpenFilters,
   onOpenMake,
   onOpenModel,
+  onViewModeChange,
+  viewMode,
   query,
   setQuery,
   totalListings,
@@ -115,6 +117,8 @@ export const DesktopMarketplaceBar = ({
 
   if (isDealershipSite) {
     const dealerToolbarProps = {
+      onViewModeChange,
+      viewMode,
       assistantSlot,
       categoryCounts,
       filterCount,

@@ -1,0 +1,37 @@
+@media (min-width: 1024px) {
+  .panel {
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    color: var(--foreground);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    box-shadow: 0 16px 40px rgb(0 0 0 / 14%);
+  }
+
+  .panel h2:not([class~="sr-only"]) {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+  }
+
+  .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
+    color: var(--foreground);
+    background-color: var(--control);
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    box-shadow: none;
+  }
+
+  .panel :is([data-slot="input"], select) {
+    height: 3rem;
+  }
+
+  .panel :is(input, select, textarea, button, a):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}

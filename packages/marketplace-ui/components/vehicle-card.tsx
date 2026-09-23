@@ -34,6 +34,7 @@ export type {
 
 export const VehicleCard = ({
   density = "default",
+  desktopHeadingLevel = 2,
   desktopLayout = "list",
   href,
   listing: sourceListing,
@@ -67,7 +68,6 @@ export const VehicleCard = ({
       className={cn(
         styles.card,
         "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
-        "lg:transition-[border-color,box-shadow] lg:hover:border-foreground/25 lg:hover:shadow-sm",
         !isDesktopComparison &&
           "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
@@ -160,6 +160,7 @@ export const VehicleCard = ({
       </div>
 
       <VehicleCardContent
+        desktopHeadingLevel={desktopHeadingLevel}
         isDesktopComparison={isDesktopComparison}
         listing={listing}
         listingHref={listingHref}

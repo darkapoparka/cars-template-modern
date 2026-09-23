@@ -8,9 +8,10 @@ import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
 import {
   getMobileQuickPillClassName,
-  marketplaceDiscoveryFrameClassName,
   mobileDealerContentClassName,
 } from "@repo/marketplace-ui";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DesktopActionPanel } from "@repo/marketplace-ui/components/desktop-action-panel";
 import { MobilePillRail } from "@repo/marketplace-ui/components/mobile-pill-rail";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
@@ -271,10 +272,6 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
     <PublicMarketplaceFrame
       activeMode="imports"
       dealerActive
-      desktopIntro={{
-        title: text.mobileTitle,
-        description: text.desktopDescription,
-      }}
       locale={normalizedLocale}
       mastheadVariant="discovery"
       showMobileDealerHeader={false}
@@ -339,72 +336,77 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           </section>
         </div>
 
+        <DealerDesktopHero title={text.mobileTitle} variant="service">
+          <div className={cn(desktopStyles.content, desktopStyles.heroContent)}>
+            <section className="hidden lg:block">
+              <DesktopActionPanel className={desktopStyles.importPanel}>
+                <h2>{text.sourceLabel}</h2>
+                <p className="mb-6 max-w-4xl text-muted-foreground text-sm leading-6">
+                  {text.desktopDescription}
+                </p>
+                <search className="block">
+                  <form
+                    action={`${localize(path)}#import-request`}
+                    className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4 outline-none focus-within:ring-[3px] focus-within:ring-[var(--lead-site-accent-ring)]"
+                    method="get"
+                  >
+                    {formOrigin ? (
+                      <input name="origin" type="hidden" value={formOrigin} />
+                    ) : null}
+                    <Search
+                      aria-hidden="true"
+                      className="size-4 shrink-0 text-muted-foreground"
+                    />
+                    <label className="flex h-full min-w-0 flex-1 items-center">
+                      <span className="sr-only">{text.sourceLabel}</span>
+                      <input
+                        className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+                        defaultValue={defaultSourceUrl}
+                        inputMode="url"
+                        maxLength={500}
+                        name="sourceUrl"
+                        placeholder={text.sourcePlaceholderLong}
+                        required
+                        type="url"
+                      />
+                    </label>
+                    <button
+                      className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-brand px-4 font-semibold text-brand-foreground text-sm outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
+                      type="submit"
+                    >
+                      {text.submitText}
+                      <ArrowRight aria-hidden="true" className="size-4" />
+                    </button>
+                  </form>
+                </search>
+                <section
+                  aria-labelledby="desktop-import-routes-heading"
+                  className="hidden scroll-mt-24 lg:mt-5 lg:block"
+                  data-slot="desktop-import-routes"
+                >
+                  <h2 className="sr-only" id="desktop-import-routes-heading">
+                    {text.routesTitle}
+                  </h2>
+                  <nav
+                    aria-label={text.routesLabel}
+                    className="no-scrollbar overflow-x-auto"
+                  >
+                    <div className="flex min-w-max gap-2">
+                      {renderImportRouteLinks()}
+                    </div>
+                  </nav>
+                </section>
+              </DesktopActionPanel>
+            </section>
+          </div>
+        </DealerDesktopHero>
         <div
           className={cn(
-            marketplaceDiscoveryFrameClassName,
-            "py-0",
-            desktopStyles.content
+            "max-lg:mx-auto max-lg:px-3 sm:max-lg:px-4",
+            desktopStyles.content,
+            desktopStyles.serviceBody
           )}
         >
-          <section className="hidden lg:block">
-            <div className={desktopStyles.panel}>
-              <h2>{text.sourceLabel}</h2>
-              <search className="block">
-                <form
-                  action={`${localize(path)}#import-request`}
-                  className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4 outline-none focus-within:ring-[3px] focus-within:ring-[var(--lead-site-accent-ring)]"
-                  method="get"
-                >
-                  {formOrigin ? (
-                    <input name="origin" type="hidden" value={formOrigin} />
-                  ) : null}
-                  <Search
-                    aria-hidden="true"
-                    className="size-4 shrink-0 text-muted-foreground"
-                  />
-                  <label className="flex h-full min-w-0 flex-1 items-center">
-                    <span className="sr-only">{text.sourceLabel}</span>
-                    <input
-                      className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-                      defaultValue={defaultSourceUrl}
-                      inputMode="url"
-                      maxLength={500}
-                      name="sourceUrl"
-                      placeholder={text.sourcePlaceholderLong}
-                      required
-                      type="url"
-                    />
-                  </label>
-                  <button
-                    className="inline-flex h-10 shrink-0 items-center gap-2 rounded-lg bg-brand px-4 font-semibold text-brand-foreground text-sm outline-none transition-colors hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)] focus-visible:ring-offset-2"
-                    type="submit"
-                  >
-                    {text.submitText}
-                    <ArrowRight aria-hidden="true" className="size-4" />
-                  </button>
-                </form>
-              </search>
-            </div>
-          </section>
-
-          <section
-            aria-labelledby="desktop-import-routes-heading"
-            className="hidden scroll-mt-24 lg:mt-5 lg:block"
-            data-slot="desktop-import-routes"
-          >
-            <h2 className="sr-only" id="desktop-import-routes-heading">
-              {text.routesTitle}
-            </h2>
-            <nav
-              aria-label={text.routesLabel}
-              className="no-scrollbar overflow-x-auto"
-            >
-              <div className="flex min-w-max gap-2">
-                {renderImportRouteLinks()}
-              </div>
-            </nav>
-          </section>
-
           {showImportRequest ? (
             <section
               className="relative isolate mt-5 lg:mt-6"

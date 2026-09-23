@@ -699,6 +699,13 @@ const createListingPredicates = (
     listing.spec.mileageValue <= filters.mileageMax,
   (listing) => !filters.fuel || listing.spec.fuelType === filters.fuel,
   (listing) =>
+    filters.powerMin === undefined ||
+    (listing.spec.enginePowerHp !== undefined &&
+      listing.spec.enginePowerHp >= filters.powerMin),
+  (listing) =>
+    !filters.extra ||
+    Boolean(listing.features?.some((feature) => feature.en === filters.extra)),
+  (listing) =>
     !filters.transmission || listing.spec.transmission === filters.transmission,
   (listing) => !filters.body || listing.spec.bodyType === filters.body,
   (listing) => !filters.seller || listing.seller.type === filters.seller,

@@ -70,11 +70,12 @@ export const DealerDesktopDiscoveryContent = ({
             <CarouselItem className={styles.vehicleSlide} key={listing.id}>
               <VehicleCard
                 density="compact"
+                desktopHeadingLevel={3}
                 desktopLayout="grid"
                 href={getLocalizedPublicPath(locale, getListingPath(listing))}
                 listing={listing}
                 locale={locale}
-                presentation="showroom"
+                presentation="discovery"
                 priority={false}
                 viewMode="grid"
               />

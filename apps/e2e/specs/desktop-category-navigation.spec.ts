@@ -18,6 +18,14 @@ test("desktop category navigation preserves scroll and the browser document", as
     await dismiss.click();
   }
   await expect(page.getByRole("dialog")).toBeHidden();
+  // Keep the non-sticky header fully visible; Playwright otherwise scrolls the
+  // clipped link into view before clicking, independently of navigation.
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await page
+    .getByRole("navigation", { name: "Основни действия" })
+    .getByRole("link", { name: "Автомобили", exact: true })
+    .click();
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
   await page.evaluate(() => window.scrollTo({ top: 80, behavior: "instant" }));
   for (const [name, path] of [
     ["Автомобили", "/bg/cars"],

@@ -3,8 +3,15 @@ import type { VehicleListing } from "./types";
 /** Only the public fields needed by search suggestions, not a listing record. */
 export type InventorySearchListing = Pick<
   VehicleListing,
-  "id" | "slug" | "title" | "category" | "price" | "monthlyEstimate"
+  | "id"
+  | "slug"
+  | "title"
+  | "category"
+  | "price"
+  | "monthlyEstimate"
+  | "features"
 > & {
+  location?: Pick<VehicleListing["location"], "city">;
   images: Pick<VehicleListing["images"][number], "url" | "alt">[];
   spec: Pick<
     VehicleListing["spec"],
@@ -16,6 +23,8 @@ export const toInventorySearchListing = (
   listing: VehicleListing
 ): InventorySearchListing => ({
   id: listing.id,
+  location: { city: listing.location.city },
+  features: listing.features,
   slug: listing.slug,
   title: listing.title,
   category: listing.category,

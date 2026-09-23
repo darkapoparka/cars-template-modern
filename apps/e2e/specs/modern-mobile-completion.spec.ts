@@ -514,6 +514,7 @@ for (const viewport of [
   }) => {
     await page.setViewportSize(viewport);
     await page.goto("/imports");
+    const initialPath = new URL(page.url()).pathname;
     const trigger = page.getByRole("button", {
       name: "Отворете полето за линк към обява",
       exact: true,
@@ -555,6 +556,6 @@ for (const viewport of [
         (element: HTMLInputElement) => element.validity.typeMismatch
       )
     ).toBe(true);
-    expect(new URL(page.url()).pathname).toBe("/imports");
+    expect(new URL(page.url()).pathname).toBe(initialPath);
   });
 }

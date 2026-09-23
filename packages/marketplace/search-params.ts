@@ -71,6 +71,8 @@ export const createMarketplaceSearchParams = (
   append("yearMin", normalized.yearMin);
   append("yearMax", normalized.yearMax);
   append("mileageMax", normalized.mileageMax);
+  append("powerMin", normalized.powerMin);
+  append("extra", normalized.extra);
   append("fuel", normalized.fuel);
   append("transmission", normalized.transmission);
   append("body", normalized.body);

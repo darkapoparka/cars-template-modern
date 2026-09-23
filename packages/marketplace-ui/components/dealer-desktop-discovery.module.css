@@ -1,75 +1,126 @@
-.discoveryContent {
+﻿.discoveryContent {
   display: none;
 }
+
 @media (min-width: 1024px) {
   .heroSearch {
     position: relative;
     z-index: 3;
-    width: clamp(46rem, 54vw, 55rem);
-    max-width: 100%;
-    margin-top: 2rem;
+    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    margin-top: 0;
   }
+
   .serviceLinks {
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
+    display: grid;
+    align-items: stretch;
   }
+
   .serviceLinks a {
-    display: inline-flex;
-    gap: 0.875rem;
+    display: flex;
+    gap: 0.75rem;
     align-items: center;
     min-width: 0;
-    border-radius: var(--radius-sm);
+    color: inherit;
+    border-radius: var(--radius-lg);
+    transition:
+      color var(--duration-interaction),
+      background-color var(--duration-interaction),
+      border-color var(--duration-interaction);
   }
+
   .serviceLinks svg {
     flex-shrink: 0;
   }
+
   .serviceLinks strong,
   .serviceLinks small {
     display: block;
-    font-size: var(--text-meta);
     line-height: 1.25rem;
   }
+
   .serviceLinks strong {
+    font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
   }
+
   .serviceLinks small {
-    margin-top: 0.25rem;
+    margin-top: 0.125rem;
     font-size: var(--text-micro);
     color: var(--muted-foreground);
   }
+
   .serviceLinks[data-placement="hero"] {
     position: relative;
     z-index: 1;
-    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(100%, 49rem);
-    margin-top: 1.875rem;
+    width: min(100%, 64rem);
+    margin-top: 1rem;
+    color: var(--inverse-foreground);
   }
+
+  .serviceLinks[data-placement="hero"] a {
+    min-height: 3.5rem;
+    padding-inline: 1.25rem;
+    border-left: 1px solid var(--inverse-border);
+  }
+
+  .serviceLinks[data-placement="hero"] a:first-child {
+    border-left: 0;
+  }
+
   .serviceLinks[data-placement="hero"] small {
     color: var(--inverse-muted);
   }
+
   .serviceLinks[data-placement="inventory"] {
-    padding: 2.5rem clamp(1rem, 5vw, 6rem);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 2rem;
     color: var(--muted-foreground);
   }
+
+  .serviceLinks[data-placement="inventory"] a {
+    min-height: 4.25rem;
+    padding: 0.875rem 1rem;
+    background: color-mix(in srgb, var(--control) 58%, var(--panel));
+    border: 1px solid color-mix(in srgb, var(--border) 72%, transparent);
+    border-radius: var(--radius-xl);
+  }
+
   .serviceLinks[data-placement="inventory"] strong {
     color: var(--foreground);
   }
+
+  .serviceLinks[data-placement="inventory"] svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--foreground);
+  }
+
+  .serviceLinks[data-placement="inventory"] a:hover {
+    background: var(--control-hover);
+    border-color: color-mix(in srgb, var(--foreground) 16%, var(--border));
+  }
+
+  .serviceLinks[data-placement="hero"] a:hover {
+    background: color-mix(in srgb, var(--inverse-control) 72%, transparent);
+  }
+
   .serviceLinks a:focus-visible {
     outline: 2px solid var(--ring);
-    outline-offset: 5px;
+    outline-offset: 3px;
   }
-  .serviceLinks a:hover strong {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+
   .discoveryContent {
     display: block;
-    width: min(92%, var(--layout-wide-max));
-    padding-block: 1.75rem 1rem;
+    width: min(
+      calc(100% - (2 * var(--layout-gutter))),
+      var(--layout-content-max)
+    );
+    padding-block: 2.5rem 2rem;
     margin-inline: auto;
   }
+
   .sectionHeading {
     display: flex;
     gap: 1.5rem;
@@ -77,62 +128,74 @@
     justify-content: space-between;
     margin-bottom: 1.25rem;
   }
+
   .sectionHeading h2 {
     margin: 0;
-    font-size: 1.625rem;
+    font-size: var(--text-section-title-lg);
     font-weight: var(--font-weight-bold);
-    line-height: 2rem;
+    line-height: var(--text-section-title-lg--line-height);
     letter-spacing: var(--tracking-heading);
   }
+
   .sectionActions {
     display: flex;
-    gap: 0.625rem;
+    gap: 0.5rem;
     align-items: center;
   }
+
   .sectionAction {
     display: inline-flex;
-    gap: 0.75rem;
+    gap: 0.625rem;
     align-items: center;
     justify-content: center;
-    min-height: 2.5rem;
+    min-height: var(--control-height-lg);
     padding-inline: 1rem;
     font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
     color: var(--foreground);
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-pill);
   }
+
   .sectionAction:hover {
-    background: var(--control);
+    background: var(--control-hover);
   }
+
   .sectionAction:focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 3px;
   }
+
   .sectionActions .arrow {
     position: static;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: transparent;
+    width: var(--control-height-lg);
+    height: var(--control-height-lg);
+    background: var(--panel);
     border-color: var(--border);
+    border-radius: var(--radius-pill);
     translate: none;
   }
+
   .vehicleSlide {
     display: flex;
     flex-basis: 33.333333%;
     min-width: 0;
   }
+
   .vehicleSlide > article {
     width: 100%;
   }
 }
+
 @media (min-width: 1280px) {
   .vehicleSlide {
     flex-basis: 25%;
   }
 }
-@media (min-width: 1440px) {
-  .vehicleSlide {
-    flex-basis: 20%;
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .serviceLinks[data-placement="inventory"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

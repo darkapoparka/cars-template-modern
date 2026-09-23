@@ -10,6 +10,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
+import { DealerNavigationLink } from "./dealer-navigation-link";
 import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import Image from "./public-image";
@@ -73,7 +74,7 @@ export const DealerDesktopHeader = ({
                 isPublicSitePathEnabled(destination.path, site)
               )
               .map((destination) => (
-                <Link
+                <DealerNavigationLink
                   aria-current={
                     activeMode === destination.id ? "page" : undefined
                   }
@@ -83,7 +84,7 @@ export const DealerDesktopHeader = ({
                   key={destination.id}
                 >
                   {destination.label}
-                </Link>
+                </DealerNavigationLink>
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
