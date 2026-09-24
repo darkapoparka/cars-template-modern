@@ -149,8 +149,14 @@
     inset: 0 7.5% auto;
     height: 7rem;
     mask-image:
-      linear-gradient(to bottom, #000 88%, transparent),
-      linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+      linear-gradient(to bottom, var(--inverse) 88%, transparent),
+      linear-gradient(
+        to right,
+        transparent,
+        var(--inverse) 5%,
+        var(--inverse) 95%,
+        transparent
+      );
     mask-composite: intersect;
   }
   .scene > img {
