@@ -41,6 +41,12 @@ if (publicE2E) {
 nextConfig.basePath = publicBasePath;
 
 nextConfig.images = nextConfig.images ?? {};
+// Vercel's mounted multi-app service does not expose Next's image optimizer at
+// the nested base path. Keep standalone optimization, but serve committed
+// raster assets directly when this app is mounted under /variant-2.
+if (publicBasePath) {
+  nextConfig.images.unoptimized = true;
+}
 nextConfig.images.remotePatterns = [
   ...(nextConfig.images.remotePatterns ?? []),
   {

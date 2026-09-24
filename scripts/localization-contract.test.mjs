@@ -122,6 +122,8 @@ test("visitor preferences remain a dynamic Server Component composition", () => 
 test("native mounting remains configurable rather than a forced locale rewrite", () => {
   const config = read("apps/web/next.config.ts");
   assert.ok(config.includes("nextConfig.basePath = publicBasePath"));
+  assert.ok(config.includes("if (publicBasePath)"));
+  assert.ok(config.includes("nextConfig.images.unoptimized = true"));
   assert.ok(
     !read("packages/internationalization/request.ts").includes("rewriteDefault")
   );
