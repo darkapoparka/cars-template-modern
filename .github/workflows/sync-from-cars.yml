@@ -1,0 +1,148 @@
+name: Sync publishing mirror from Cars
+
+on:
+  workflow_dispatch:
+    inputs:
+      cars_commit:
+        description: Exact 40-character Cars main commit to mirror
+        required: true
+        default: b7462812d29ba5a4758ddd069049ee50282b79f4
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sync-from-cars.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-cars-template-modern
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      TEMPLATE_KEY: modern
+      DEFAULT_CARS_COMMIT: b7462812d29ba5a4758ddd069049ee50282b79f4
+    steps:
+      - name: Check out publishing mirror
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Capture immutable mirror head
+        shell: bash
+        run: echo "MIRROR_HEAD=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.0'
+          cache: pnpm
+
+      - name: Enable pinned pnpm
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.4.0 --activate
+
+      - name: Resolve exact Cars source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            cars_commit="${{ inputs.cars_commit }}"
+          else
+            cars_commit="$DEFAULT_CARS_COMMIT"
+          fi
+          [[ "$cars_commit" =~ ^[0-9a-f]{40}$ ]] || { echo 'Use an exact 40-character Cars commit.' >&2; exit 1; }
+          echo "CARS_COMMIT=$cars_commit" >> "$GITHUB_ENV"
+          cars="$RUNNER_TEMP/cars-source"
+          rm -rf "$cars"
+          git init "$cars"
+          git -C "$cars" remote add origin https://github.com/darkapoparka/cars.git
+          git -C "$cars" config core.sparseCheckout true
+          printf '%s\n' '/scripts/' "/templates/$TEMPLATE_KEY/" > "$cars/.git/info/sparse-checkout"
+          git -C "$cars" fetch --no-tags --filter=blob:none --depth=1 origin "$cars_commit"
+          git -C "$cars" checkout --detach FETCH_HEAD
+          test "$(git -C "$cars" rev-parse HEAD)" = "$cars_commit"
+          test -s "$cars/templates/$TEMPLATE_KEY/package.json"
+
+      - name: Export reviewed source policy
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf "$RUNNER_TEMP/template-export"
+          CARS_ROOT="$RUNNER_TEMP/cars-source" EXPORT_ROOT="$RUNNER_TEMP/template-export" node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import { execFileSync } from 'node:child_process';
+          import { pathToFileURL } from 'node:url';
+          const cars = process.env.CARS_ROOT;
+          const output = process.env.EXPORT_ROOT;
+          const commit = process.env.CARS_COMMIT;
+          const key = process.env.TEMPLATE_KEY;
+          const workflow = await import(pathToFileURL(path.join(cars, 'scripts/lib/workflow.mjs')).href);
+          const result = workflow.exportCommit(cars, commit, output, { prefix: `templates/${key}` });
+          const tree = execFileSync('git', ['-C', cars, 'rev-parse', `${commit}:templates/${key}`], { encoding: 'utf8' }).trim();
+          const mirroredAt = execFileSync('git', ['-C', cars, 'show', '-s', '--format=%cI', commit], { encoding: 'utf8' }).trim();
+          fs.mkdirSync(path.join(output, '.template'), { recursive: true });
+          fs.writeFileSync(path.join(output, '.template/source-manifest.json'), JSON.stringify({ schemaVersion: 2, key, source: { repository: 'darkapoparka/cars', commit, path: `templates/${key}`, tree, digest: result.digest, exportPolicy: workflow.POLICY }, mirroredAt, files: result.files.length }, null, 2) + '\n');
+          fs.appendFileSync(process.env.GITHUB_ENV, `SOURCE_TREE=${tree}\nSOURCE_DIGEST=${result.digest}\n`);
+          console.log(JSON.stringify({ key, commit, tree, digest: result.digest, files: result.files.length }));
+          NODE
+
+      - name: Preserve mirror-only tracked files and install export
+        shell: bash
+        run: |
+          set -euo pipefail
+          cars="$RUNNER_TEMP/cars-source"
+          export_root="$RUNNER_TEMP/template-export"
+          canonical_paths="$RUNNER_TEMP/canonical-paths.txt"
+          git -C "$cars" ls-tree -r --name-only "$CARS_COMMIT:templates/$TEMPLATE_KEY" > "$canonical_paths"
+          recovery=".template/recovery/standalone-only/$MIRROR_HEAD"
+          preserved=0
+          while IFS= read -r -d '' file; do
+            case "$file" in .github/*|.template/*) continue ;; esac
+            if ! grep -Fqx -- "$file" "$canonical_paths"; then
+              mkdir -p "$recovery/$(dirname "$file")"
+              cp -a -- "$file" "$recovery/$file"
+              preserved=$((preserved + 1))
+            fi
+          done < <(git ls-files -z)
+          echo "Preserved $preserved mirror-only tracked files."
+          rsync -a --delete --exclude='.git/' --exclude='.github/' --exclude='.template/recovery/' "$export_root/" ./
+
+      - name: Verify policy parity and application
+        shell: bash
+        run: |
+          set -euo pipefail
+          CARS_ROOT="$RUNNER_TEMP/cars-source" node --input-type=module <<'NODE'
+          import path from 'node:path';
+          import { pathToFileURL } from 'node:url';
+          const workflow = await import(pathToFileURL(path.join(process.env.CARS_ROOT, 'scripts/lib/workflow.mjs')).href);
+          const actual = workflow.fingerprint(process.cwd());
+          if (actual.digest !== process.env.SOURCE_DIGEST) throw new Error(`Mirror digest mismatch: expected ${process.env.SOURCE_DIGEST}, found ${actual.digest}`);
+          console.log(JSON.stringify({ digest: actual.digest, files: actual.files.length }));
+          NODE
+          pnpm install --frozen-lockfile
+          pnpm localization:contracts
+          pnpm typecheck
+          pnpm build
+
+      - name: Commit guarded mirror update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config core.autocrlf false
+          git add -A
+          git diff --cached --check
+          if git diff --cached --quiet; then echo 'Publishing mirror already matches the requested Cars source.'; exit 0; fi
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$MIRROR_HEAD" || { echo 'Mirror main changed during synchronization; refusing to overwrite concurrent work.' >&2; exit 1; }
+          git commit -m 'Sync Modern publishing mirror from Cars' -m "Cars source: $CARS_COMMIT" -m "Cars tree: $SOURCE_TREE" -m "Cars digest: $SOURCE_DIGEST"
+          git push origin HEAD:main
