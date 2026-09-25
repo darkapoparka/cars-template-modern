@@ -6,7 +6,7 @@ on:
       cars_commit:
         description: Exact 40-character Cars main commit to mirror
         required: true
-        default: b7462812d29ba5a4758ddd069049ee50282b79f4
+        default: eb71de5330f8408754984c04e1ec0a79089ab859
   push:
     branches: [main]
     paths:
@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 90
     env:
       TEMPLATE_KEY: modern
-      DEFAULT_CARS_COMMIT: b7462812d29ba5a4758ddd069049ee50282b79f4
+      DEFAULT_CARS_COMMIT: eb71de5330f8408754984c04e1ec0a79089ab859
     steps:
       - name: Check out publishing mirror
         uses: actions/checkout@v4
@@ -40,13 +40,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.22.0'
-          cache: pnpm
 
       - name: Enable pinned pnpm
         shell: bash
         run: |
           corepack enable
           corepack prepare pnpm@11.4.0 --activate
+          pnpm --version
 
       - name: Resolve exact Cars source
         shell: bash
