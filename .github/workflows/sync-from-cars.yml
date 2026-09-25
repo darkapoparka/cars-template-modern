@@ -6,7 +6,7 @@ on:
       cars_commit:
         description: Exact 40-character Cars main commit to mirror
         required: true
-        default: eb71de5330f8408754984c04e1ec0a79089ab859
+        default: a67b1939e3561e416ff74af798f10363794c6fd5
   push:
     branches: [main]
     paths:
@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 90
     env:
       TEMPLATE_KEY: modern
-      DEFAULT_CARS_COMMIT: eb71de5330f8408754984c04e1ec0a79089ab859
+      DEFAULT_CARS_COMMIT: a67b1939e3561e416ff74af798f10363794c6fd5
     steps:
       - name: Check out publishing mirror
         uses: actions/checkout@v4
@@ -140,7 +140,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git config core.autocrlf false
           git add -A
-          git diff --cached --check
+          git diff --cached --check -- . ':(exclude).template/recovery/**'
           if git diff --cached --quiet; then echo 'Publishing mirror already matches the requested Cars source.'; exit 0; fi
           git fetch origin main
           test "$(git rev-parse origin/main)" = "$MIRROR_HEAD" || { echo 'Mirror main changed during synchronization; refusing to overwrite concurrent work.' >&2; exit 1; }
