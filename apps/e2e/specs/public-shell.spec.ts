@@ -7,7 +7,7 @@ import {
 const categoryTriggerPattern = /категория/i;
 const clearFilterPattern = /^Премахни филтъра/;
 const truckCategoryPattern = /^Камиони/;
-const mobileSearchTriggerPattern = /Търси \d+ автомобил/;
+const mobileSearchTriggerPattern = /Търси автомобили\. \d+ налич(?:ен|ни)\./;
 
 test("mobile import separates field clear from overlay close", async ({
   page,

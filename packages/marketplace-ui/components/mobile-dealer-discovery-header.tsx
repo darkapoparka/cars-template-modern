@@ -86,27 +86,39 @@ interface MobileDealerQuickFiltersProps {
   readonly items: readonly MobileQuickFilterItem[];
 }
 
-const getMobileSearchText = (
+interface MobileSearchCopy {
+  readonly accessibleLabel: string;
+  readonly action: string;
+  readonly availability: string;
+  readonly count: string;
+}
+
+const getMobileSearchCopy = (
   isBg: boolean,
   totalListings: number,
   category: VehicleCategory
-) => {
-  const nouns = {
-    car: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
-    lease: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
-    motorbike: {
-      bg: ["мотоциклет", "мотоциклета"],
-      en: ["motorcycle", "motorcycles"],
-    },
-    truck: { bg: ["камион", "камиона"], en: ["truck", "trucks"] },
-    van: { bg: ["бус", "буса"], en: ["van", "vans"] },
+): MobileSearchCopy => {
+  const actions: Record<VehicleCategory, { bg: string; en: string }> = {
+    car: { bg: "Търси автомобили", en: "Search cars" },
+    lease: { bg: "Търси автомобили", en: "Search cars" },
+    motorbike: { bg: "Търси мотори", en: "Search motorcycles" },
+    truck: { bg: "Търси камиони", en: "Search trucks" },
+    van: { bg: "Търси бусове", en: "Search vans" },
   };
-  const noun = nouns[category][isBg ? "bg" : "en"][totalListings === 1 ? 0 : 1];
-  if (isBg) {
-    return `Търси ${totalListings} ${noun}`;
-  }
+  const count = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US").format(
+    totalListings
+  );
+  const action = actions[category][isBg ? "bg" : "en"];
+  const availability = isBg
+    ? `${count} ${totalListings === 1 ? "наличен" : "налични"}`
+    : `${count} available`;
 
-  return `Search ${totalListings} ${noun}`;
+  return {
+    accessibleLabel: `${action}. ${availability}.`,
+    action,
+    availability,
+    count,
+  };
 };
 
 const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
@@ -148,7 +160,7 @@ const MobileSearchButton = ({
   makeModelValue,
   onDark = false,
   onOpenSearch,
-  searchLabel,
+  searchCopy,
 }: {
   readonly hasMakeModelSelection: boolean;
   readonly isCompact?: boolean;
@@ -156,14 +168,14 @@ const MobileSearchButton = ({
   readonly makeModelValue: string;
   readonly onDark?: boolean;
   readonly onOpenSearch: () => void;
-  readonly searchLabel: string;
+  readonly searchCopy: MobileSearchCopy;
 }) => (
   <button
     aria-haspopup="dialog"
     aria-label={
       hasMakeModelSelection
         ? `${isBg ? "Марка и модел" : "Make and model"}: ${makeModelValue}`
-        : searchLabel
+        : searchCopy.accessibleLabel
     }
     className={cn(
       "flex min-w-0 items-center gap-2.5 text-left ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
@@ -185,17 +197,36 @@ const MobileSearchButton = ({
     />
     <span
       className={cn(
-        "min-w-0 flex-1 truncate font-medium tabular-nums",
-        isCompact ? "text-compact-control" : "text-body",
-        hasMakeModelSelection ? "text-zinc-950" : "text-zinc-600"
+        "min-w-0 flex-1 truncate font-semibold text-zinc-950",
+        isCompact ? "text-compact-control" : "text-body"
       )}
     >
-      {hasMakeModelSelection ? makeModelValue : searchLabel}
+      {hasMakeModelSelection ? makeModelValue : searchCopy.action}
     </span>
+    {hasMakeModelSelection ? null : (
+      <span
+        aria-hidden="true"
+        className={cn(
+          "shrink-0 rounded-full bg-zinc-950/[0.06] font-semibold text-zinc-600 tabular-nums ring-1 ring-zinc-950/[0.06] ring-inset",
+          isCompact ? "px-1.5 py-0.5 text-micro" : "px-2.5 py-1 text-meta"
+        )}
+      >
+        {isCompact ? (
+          searchCopy.count
+        ) : (
+          <>
+            <span className="min-[380px]:hidden">{searchCopy.count}</span>
+            <span className="hidden min-[380px]:inline">
+              {searchCopy.availability}
+            </span>
+          </>
+        )}
+      </span>
+    )}
     {isCompact ? null : (
       <ChevronRight
         aria-hidden="true"
-        className="size-5 shrink-0 text-zinc-950"
+        className="hidden size-5 shrink-0 text-zinc-950 min-[360px]:block"
       />
     )}
   </button>
@@ -210,7 +241,7 @@ const MobileCompactDiscoverySurface = ({
   onOpenCategory,
   onOpenFilters,
   onOpenSearch,
-  searchLabel,
+  searchCopy,
 }: {
   readonly category: VehicleCategory;
   readonly categoryLabel: string;
@@ -220,7 +251,7 @@ const MobileCompactDiscoverySurface = ({
   readonly onOpenCategory: () => void;
   readonly onOpenFilters: () => void;
   readonly onOpenSearch: () => void;
-  readonly searchLabel: string;
+  readonly searchCopy: MobileSearchCopy;
 }) => {
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
@@ -228,7 +259,7 @@ const MobileCompactDiscoverySurface = ({
 
   return (
     <fieldset
-      aria-label={searchLabel}
+      aria-label={searchCopy.accessibleLabel}
       className="flex h-11 w-full min-w-0 items-stretch gap-2"
       data-slot="mobile-discovery-surface"
     >
@@ -251,7 +282,7 @@ const MobileCompactDiscoverySurface = ({
         makeModelValue={makeModelValue}
         onDark
         onOpenSearch={onOpenSearch}
-        searchLabel={searchLabel}
+        searchCopy={searchCopy}
       />
 
       <button
@@ -345,7 +376,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchLabel={getMobileSearchText(isBg, totalListings, category)}
+          searchCopy={getMobileSearchCopy(isBg, totalListings, category)}
         />
       </div>
     </div>
@@ -367,7 +398,7 @@ export const MobileDealerDiscoveryHeader = ({
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchLabel = getMobileSearchText(isBg, totalListings, category);
+  const searchCopy = getMobileSearchCopy(isBg, totalListings, category);
 
   return (
     <div className="bg-zinc-950 text-white">
@@ -415,7 +446,7 @@ export const MobileDealerDiscoveryHeader = ({
           makeModelValue={makeModelValue}
           onDark
           onOpenSearch={onOpenSearch}
-          searchLabel={searchLabel}
+          searchCopy={searchCopy}
         />
       </MobileDealerChrome>
     </div>
