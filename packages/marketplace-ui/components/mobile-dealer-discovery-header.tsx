@@ -89,8 +89,6 @@ interface MobileDealerQuickFiltersProps {
 interface MobileSearchCopy {
   readonly accessibleLabel: string;
   readonly action: string;
-  readonly availability: string;
-  readonly count: string;
 }
 
 const getMobileSearchCopy = (
@@ -116,8 +114,6 @@ const getMobileSearchCopy = (
   return {
     accessibleLabel: `${action}. ${availability}.`,
     action,
-    availability,
-    count,
   };
 };
 
@@ -197,32 +193,15 @@ const MobileSearchButton = ({
     />
     <span
       className={cn(
-        "min-w-0 flex-1 truncate font-semibold text-zinc-950",
-        isCompact ? "text-compact-control" : "text-body"
+        "min-w-0 flex-1 truncate",
+        isCompact ? "text-compact-control" : "text-body",
+        hasMakeModelSelection
+          ? "font-medium text-zinc-950"
+          : "font-normal text-zinc-600"
       )}
     >
       {hasMakeModelSelection ? makeModelValue : searchCopy.action}
     </span>
-    {hasMakeModelSelection ? null : (
-      <span
-        aria-hidden="true"
-        className={cn(
-          "shrink-0 rounded-full bg-zinc-950/[0.06] font-semibold text-zinc-600 tabular-nums ring-1 ring-zinc-950/[0.06] ring-inset",
-          isCompact ? "px-1.5 py-0.5 text-micro" : "px-2.5 py-1 text-meta"
-        )}
-      >
-        {isCompact ? (
-          searchCopy.count
-        ) : (
-          <>
-            <span className="min-[380px]:hidden">{searchCopy.count}</span>
-            <span className="hidden min-[380px]:inline">
-              {searchCopy.availability}
-            </span>
-          </>
-        )}
-      </span>
-    )}
     {isCompact ? null : (
       <ChevronRight
         aria-hidden="true"
