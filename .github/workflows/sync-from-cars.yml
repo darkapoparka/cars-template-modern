@@ -23,6 +23,20 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_USER: ci_user
+          POSTGRES_PASSWORD: ci_password
+          POSTGRES_DB: ci_build
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ci_user -d ci_build"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
     env:
       TEMPLATE_KEY: modern
       DEFAULT_CARS_COMMIT: a67b1939e3561e416ff74af798f10363794c6fd5
@@ -125,7 +139,7 @@ jobs:
           AUTOMARKET_ENABLE_PRIVATE_IMPORTS: "false"
           AUTOMARKET_PUBLIC_DATA_MODE: unavailable
           CLERK_SECRET_KEY: sk_test_c2VjcmV0X2J1aWxkX2tleV8xMjM0NTY3ODkw
-          DATABASE_URL: postgresql://ci_user:ci_password@127.0.0.1:5432/ci_build
+          DATABASE_URL: postgresql://ci_user:ci_password@127.0.0.1:5432/ci_build?schema=public
           NEXT_PUBLIC_API_URL: https://api.ci.automarket.example.com
           NEXT_PUBLIC_APP_URL: https://app.ci.automarket.example.com
           NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: /
@@ -146,6 +160,7 @@ jobs:
           console.log(JSON.stringify({ digest: actual.digest, files: actual.files.length }));
           NODE
           pnpm install --frozen-lockfile
+          pnpm --dir packages/database exec prisma migrate deploy --schema=prisma/schema.prisma
           pnpm localization:contracts
           pnpm typecheck
           pnpm build
