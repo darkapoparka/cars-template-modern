@@ -117,6 +117,24 @@ jobs:
 
       - name: Verify policy parity and application
         shell: bash
+        env:
+          AUTOMARKET_ENABLE_AUTH_RECOVERY: "false"
+          AUTOMARKET_ENABLE_BILLING: "false"
+          AUTOMARKET_ENABLE_EXTERNAL_INVENTORY: "false"
+          AUTOMARKET_ENABLE_KYB_RETENTION: "false"
+          AUTOMARKET_ENABLE_PRIVATE_IMPORTS: "false"
+          AUTOMARKET_PUBLIC_DATA_MODE: unavailable
+          CLERK_SECRET_KEY: sk_test_c2VjcmV0X2J1aWxkX2tleV8xMjM0NTY3ODkw
+          DATABASE_URL: postgresql://ci_user:ci_password@127.0.0.1:5432/ci_build
+          NEXT_PUBLIC_API_URL: https://api.ci.automarket.example.com
+          NEXT_PUBLIC_APP_URL: https://app.ci.automarket.example.com
+          NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL: /
+          NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL: /
+          NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: pk_test_Y2xlcmsuY2kuYXV0b21hcmtldC5leGFtcGxlLmNvbSQ=
+          NEXT_PUBLIC_CLERK_SIGN_IN_URL: /sign-in
+          NEXT_PUBLIC_CLERK_SIGN_UP_URL: /sign-up
+          NEXT_PUBLIC_DOCS_URL: https://docs.ci.automarket.example.com
+          NEXT_PUBLIC_WEB_URL: https://web.ci.automarket.example.com
         run: |
           set -euo pipefail
           CARS_ROOT="$RUNNER_TEMP/cars-source" node --input-type=module <<'NODE'
