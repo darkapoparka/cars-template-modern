@@ -10,6 +10,7 @@ export const vehicleTaxonomySelectClassName =
 
 export const vehicleTaxonomyPickerCopy = {
   bg: {
+    clear: "Изчисти търсенето",
     close: "Затвори",
     makeDescription: "Потърсете или изберете марка от списъка.",
     makeGroup: "Марки",
@@ -22,6 +23,7 @@ export const vehicleTaxonomyPickerCopy = {
     use: "Използвайте",
   },
   en: {
+    clear: "Clear search",
     close: "Close",
     makeDescription: "Search or choose a make from the list.",
     makeGroup: "Makes",

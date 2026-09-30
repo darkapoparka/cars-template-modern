@@ -203,7 +203,9 @@ export const ImportRequestForm = ({
             {hasSource ? text.attachedDescription : text.formDescription}
           </CardDescription>
         ) : (
-          <PublicContactUnavailable locale={locale} />
+          <CardDescription className="text-compact-control text-muted-foreground leading-6">
+            {text.callPreparation}
+          </CardDescription>
         )}
       </CardHeader>
 
@@ -266,7 +268,14 @@ export const ImportRequestForm = ({
               </p>
               <ImportRequestSubmitButton locale={locale} />
             </div>
-          ) : null}
+          ) : (
+            <div className="space-y-3 pt-2">
+              <p className="text-meta text-muted-foreground">
+                {text.callReview}
+              </p>
+              <PublicContactUnavailable locale={locale} />
+            </div>
+          )}
         </form>
       </CardContent>
     </Card>

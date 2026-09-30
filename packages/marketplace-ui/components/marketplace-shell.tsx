@@ -325,7 +325,10 @@ export const MarketplaceShell = ({
             }
             totalListings={totalListings}
           />
-          <MobileDealerQuickFilters items={mobileQuickFilterItems} />
+          <MobileDealerQuickFilters
+            isBg={isBg}
+            items={mobileQuickFilterItems}
+          />
         </div>
         <div
           aria-hidden="true"

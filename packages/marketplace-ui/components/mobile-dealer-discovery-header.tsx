@@ -14,6 +14,10 @@ import {
   X,
 } from "lucide-react";
 import type { MouseEvent } from "react";
+import {
+  mobileSearchTriggerClassName,
+  mobileSearchTriggerLabelClassName,
+} from "../lib/mobile-form-control";
 import { mobileHeaderIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getMobileQuickPillClassName } from "../lib/mobile-quick-pill";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
@@ -83,38 +87,31 @@ interface MobileQuickFilterItem {
 }
 
 interface MobileDealerQuickFiltersProps {
+  readonly isBg: boolean;
   readonly items: readonly MobileQuickFilterItem[];
 }
 
-interface MobileSearchCopy {
-  readonly accessibleLabel: string;
-  readonly action: string;
-}
-
-const getMobileSearchCopy = (
+const getMobileSearchText = (
   isBg: boolean,
   totalListings: number,
   category: VehicleCategory
-): MobileSearchCopy => {
-  const actions: Record<VehicleCategory, { bg: string; en: string }> = {
-    car: { bg: "Търси автомобили", en: "Search cars" },
-    lease: { bg: "Търси автомобили", en: "Search cars" },
-    motorbike: { bg: "Търси мотори", en: "Search motorcycles" },
-    truck: { bg: "Търси камиони", en: "Search trucks" },
-    van: { bg: "Търси бусове", en: "Search vans" },
+) => {
+  const nouns = {
+    car: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    lease: { bg: ["автомобил", "автомобила"], en: ["car", "cars"] },
+    motorbike: {
+      bg: ["мотоциклет", "мотоциклета"],
+      en: ["motorcycle", "motorcycles"],
+    },
+    truck: { bg: ["камион", "камиона"], en: ["truck", "trucks"] },
+    van: { bg: ["бус", "буса"], en: ["van", "vans"] },
   };
-  const count = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US").format(
-    totalListings
-  );
-  const action = actions[category][isBg ? "bg" : "en"];
-  const availability = isBg
-    ? `${count} ${totalListings === 1 ? "наличен" : "налични"}`
-    : `${count} available`;
+  const noun = nouns[category][isBg ? "bg" : "en"][totalListings === 1 ? 0 : 1];
+  if (isBg) {
+    return `Търси ${totalListings} ${noun}`;
+  }
 
-  return {
-    accessibleLabel: `${action}. ${availability}.`,
-    action,
-  };
+  return `Search ${totalListings} ${noun}`;
 };
 
 const categoryLabels: Record<VehicleCategory, { bg: string; en: string }> = {
@@ -156,7 +153,7 @@ const MobileSearchButton = ({
   makeModelValue,
   onDark = false,
   onOpenSearch,
-  searchCopy,
+  searchLabel,
 }: {
   readonly hasMakeModelSelection: boolean;
   readonly isCompact?: boolean;
@@ -164,23 +161,21 @@ const MobileSearchButton = ({
   readonly makeModelValue: string;
   readonly onDark?: boolean;
   readonly onOpenSearch: () => void;
-  readonly searchCopy: MobileSearchCopy;
+  readonly searchLabel: string;
 }) => (
   <button
     aria-haspopup="dialog"
     aria-label={
       hasMakeModelSelection
         ? `${isBg ? "Марка и модел" : "Make and model"}: ${makeModelValue}`
-        : searchCopy.accessibleLabel
+        : searchLabel
     }
     className={cn(
-      "flex min-w-0 items-center gap-2.5 text-left ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2",
+      mobileSearchTriggerClassName,
       onDark
         ? "bg-white ring-white/15 hover:bg-zinc-100 focus-visible:outline-[var(--lead-site-accent-bright)]"
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
-      isCompact
-        ? "h-11 flex-1 rounded-full px-3"
-        : "h-12 w-full rounded-full px-4"
+      isCompact ? "h-11 flex-1 px-3" : "h-12 w-full px-4"
     )}
     data-slot="mobile-discovery-search"
     onClick={(event) => openFromButton(event, onOpenSearch)}
@@ -191,21 +186,13 @@ const MobileSearchButton = ({
       className="size-[18px] shrink-0 text-zinc-600"
       strokeWidth={2}
     />
-    <span
-      className={cn(
-        "min-w-0 flex-1 truncate",
-        isCompact ? "text-compact-control" : "text-body",
-        hasMakeModelSelection
-          ? "font-medium text-zinc-950"
-          : "font-normal text-zinc-600"
-      )}
-    >
-      {hasMakeModelSelection ? makeModelValue : searchCopy.action}
+    <span className={mobileSearchTriggerLabelClassName}>
+      {hasMakeModelSelection ? makeModelValue : searchLabel}
     </span>
     {isCompact ? null : (
       <ChevronRight
         aria-hidden="true"
-        className="hidden size-5 shrink-0 text-zinc-950 min-[360px]:block"
+        className="size-5 shrink-0 text-zinc-950"
       />
     )}
   </button>
@@ -220,7 +207,7 @@ const MobileCompactDiscoverySurface = ({
   onOpenCategory,
   onOpenFilters,
   onOpenSearch,
-  searchCopy,
+  searchLabel,
 }: {
   readonly category: VehicleCategory;
   readonly categoryLabel: string;
@@ -230,7 +217,7 @@ const MobileCompactDiscoverySurface = ({
   readonly onOpenCategory: () => void;
   readonly onOpenFilters: () => void;
   readonly onOpenSearch: () => void;
-  readonly searchCopy: MobileSearchCopy;
+  readonly searchLabel: string;
 }) => {
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
@@ -238,7 +225,7 @@ const MobileCompactDiscoverySurface = ({
 
   return (
     <fieldset
-      aria-label={searchCopy.accessibleLabel}
+      aria-label={searchLabel}
       className="flex h-11 w-full min-w-0 items-stretch gap-2"
       data-slot="mobile-discovery-surface"
     >
@@ -261,7 +248,7 @@ const MobileCompactDiscoverySurface = ({
         makeModelValue={makeModelValue}
         onDark
         onOpenSearch={onOpenSearch}
-        searchCopy={searchCopy}
+        searchLabel={searchLabel}
       />
 
       <button
@@ -288,6 +275,7 @@ const MobileCompactDiscoverySurface = ({
 
 export const MobileDealerQuickFilters = ({
   items,
+  isBg,
 }: MobileDealerQuickFiltersProps) => (
   <div
     className={cn(mobileDealerContentClassName, "overflow-hidden pb-3")}
@@ -296,6 +284,7 @@ export const MobileDealerQuickFilters = ({
     <MobilePillRail
       className="flex items-center gap-2"
       data-slot="mobile-discovery-quick-rail"
+      label={isBg ? "Бързи филтри" : "Quick filters"}
     >
       {items.map((item) => (
         <button
@@ -355,7 +344,7 @@ export const MobileCompactSearchHeader = ({
           onOpenCategory={onOpenCategory}
           onOpenFilters={onOpenFilters}
           onOpenSearch={onOpenSearch}
-          searchCopy={getMobileSearchCopy(isBg, totalListings, category)}
+          searchLabel={getMobileSearchText(isBg, totalListings, category)}
         />
       </div>
     </div>
@@ -377,7 +366,7 @@ export const MobileDealerDiscoveryHeader = ({
   const makeModelValue = getMakeModelValue(makeModelLabel, isBg);
   const hasMakeModelSelection =
     makeModelValue !== "Всички марки" && makeModelValue !== "All makes";
-  const searchCopy = getMobileSearchCopy(isBg, totalListings, category);
+  const searchLabel = getMobileSearchText(isBg, totalListings, category);
 
   return (
     <div className="bg-zinc-950 text-white">
@@ -425,7 +414,7 @@ export const MobileDealerDiscoveryHeader = ({
           makeModelValue={makeModelValue}
           onDark
           onOpenSearch={onOpenSearch}
-          searchCopy={searchCopy}
+          searchLabel={searchLabel}
         />
       </MobileDealerChrome>
     </div>

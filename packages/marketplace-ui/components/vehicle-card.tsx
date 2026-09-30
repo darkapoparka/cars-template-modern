@@ -8,7 +8,10 @@ import { Heart, Images } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { rememberInventoryReturn } from "../lib/inventory-return";
-import { mobileVehicleCardMediaClassName } from "../lib/mobile-vehicle-card-layout";
+import {
+  mobileVehicleCardClassName,
+  mobileVehicleCardMediaClassName,
+} from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
 import type { VehicleCardProps } from "../lib/vehicle-card-types";
 import {
@@ -67,9 +70,11 @@ export const VehicleCard = ({
     <article
       className={cn(
         styles.card,
-        "group flex overflow-hidden rounded-xl border-0 bg-card p-0 **:data-[slot=vehicle-card-title]:line-clamp-2 lg:rounded-lg lg:border lg:border-border",
-        !isDesktopComparison &&
-          "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
+        mobileVehicleCardClassName,
+        "group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border",
+        isDesktopComparison
+          ? "lg:**:data-[slot=vehicle-card-title]:line-clamp-2"
+          : "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
@@ -82,7 +87,7 @@ export const VehicleCard = ({
       <div
         className={cn(
           mobileVehicleCardMediaClassName,
-          "lg:min-h-0 lg:w-full lg:max-w-none",
+          "lg:min-h-0 lg:w-full lg:min-w-0 lg:max-w-none",
           getVehicleCardMediaClassName(isCompact, isGrid, isDesktopComparison)
         )}
         data-slot="vehicle-card-media"
@@ -101,7 +106,7 @@ export const VehicleCard = ({
         >
           <Image
             alt={primaryImage?.alt ?? listing.title}
-            className="object-cover object-center lg:object-[center_60%]"
+            className="object-cover object-[center_60%]"
             fill
             loading={priority ? "eager" : "lazy"}
             onError={() => {
@@ -123,7 +128,7 @@ export const VehicleCard = ({
         <VehicleCardMediaBadges listing={listing} locale={locale} />
 
         {listing.images.length > 1 ? (
-          <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2">
+          <span className="pointer-events-none absolute bottom-1.5 left-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2 lg:left-auto">
             <Images aria-hidden="true" className="size-3" />
             <span aria-hidden="true">{listing.images.length}</span>
             <span className="sr-only">
@@ -136,7 +141,7 @@ export const VehicleCard = ({
           <Button
             asChild
             className={cn(
-              "absolute top-1.5 right-1.5 z-20 size-8 rounded-lg border border-border/70 bg-card text-foreground shadow-sm after:absolute after:-inset-1.5 after:content-[''] hover:bg-accent lg:top-2 lg:right-2 lg:size-9 lg:after:inset-0",
+              "absolute right-1.5 bottom-1.5 z-20 size-9 rounded-lg border border-border/70 bg-card text-foreground shadow-sm after:absolute after:-inset-1 after:content-[''] hover:bg-accent lg:top-2 lg:right-2 lg:bottom-auto lg:size-9 lg:after:inset-0",
               isDesktopComparison &&
                 "lg:size-10 lg:rounded-full lg:border-0 lg:bg-transparent lg:text-white lg:shadow-none lg:hover:bg-black/15"
             )}

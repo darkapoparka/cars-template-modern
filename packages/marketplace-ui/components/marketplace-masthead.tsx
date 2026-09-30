@@ -22,7 +22,6 @@ import {
   Banknote,
   CarFront,
   CircleDollarSign,
-  Globe2,
   Heart,
   Landmark,
   MapPin,
@@ -41,7 +40,7 @@ import {
 } from "../lib/marketplace-layout";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
-import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
+import { DealerDesktopLocaleMenu } from "./dealer-desktop-locale-menu";
 import Image from "./public-image";
 
 export type MarketplaceMode = "buy" | "sell" | "lease" | "imports";
@@ -424,34 +423,8 @@ const LeadContactGroup = ({ isBg }: { isBg: boolean }) => {
   );
 };
 
-const LocaleUtilityAction = ({
-  label,
-  locale,
-}: {
-  label: string;
-  locale?: string;
-}) => (
-  <Tooltip>
-    <TooltipTrigger asChild>
-      <Button
-        asChild
-        className="size-11 rounded-full bg-card text-zinc-700 shadow-none hover:bg-card/80 hover:text-zinc-950"
-        size="icon"
-        variant="ghost"
-      >
-        <MarketplaceLocaleSwitchLink label={label} locale={locale}>
-          <Globe2
-            aria-hidden="true"
-            className="size-[22px]"
-            strokeWidth={1.8}
-          />
-        </MarketplaceLocaleSwitchLink>
-      </Button>
-    </TooltipTrigger>
-    <TooltipContent side="bottom" sideOffset={6}>
-      {label}
-    </TooltipContent>
-  </Tooltip>
+const LocaleUtilityAction = ({ locale }: { locale?: string }) => (
+  <DealerDesktopLocaleMenu locale={locale} />
 );
 
 const DiscoveryModeArtwork = ({
@@ -516,7 +489,6 @@ export const MarketplaceMasthead = ({
     isDiscovery
   );
   const resolvedHomeHref = homeHref ?? getLocalizedPublicPath(locale, "/");
-  const localeSwitchLabel = isBg ? "English" : "Български";
   const showLocaleSwitch = !isDealershipSite;
   const contactAction = {
     href: leadSite.phoneHref,
@@ -775,9 +747,7 @@ export const MarketplaceMasthead = ({
           {utilityActions.map((action) => (
             <UtilityAction key={action.label} {...action} />
           ))}
-          {showLocaleSwitch ? (
-            <LocaleUtilityAction label={localeSwitchLabel} locale={locale} />
-          ) : null}
+          {showLocaleSwitch ? <LocaleUtilityAction locale={locale} /> : null}
         </div>
       </div>
     </header>

@@ -31,7 +31,14 @@ import {
   type ListingOrganizationRole,
   type ListingSellerRole,
 } from "../lib/listing-truth";
-import { mobileVehicleCardContentClassName } from "../lib/mobile-vehicle-card-layout";
+import {
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
+  mobileVehicleCardPriceClassName,
+  mobileVehicleCardPriceSummaryClassName,
+  mobileVehicleCardTitleClassName,
+} from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
   getShowroomVehicleHeading,
@@ -60,6 +67,7 @@ import {
 } from "../lib/vehicle-card-view-policy";
 import { DealerVehicleFacts } from "./dealer-vehicle-facts";
 import Image from "./public-image";
+import { VehicleCardMoney } from "./vehicle-card-money";
 
 const sellerRoleIcons = {
   dealer: Store,
@@ -85,12 +93,12 @@ export const VehicleCardMediaBadges = ({
 
   return (
     <div
-      className="pointer-events-none absolute top-1.5 left-1.5 z-10 flex max-w-[calc(100%-2.5rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
+      className="pointer-events-none absolute top-1.5 left-1.5 z-10 flex max-w-[calc(100%-0.75rem)] flex-wrap gap-1 lg:top-2 lg:left-2 lg:max-w-[calc(100%-4.25rem)] lg:gap-1.5"
       data-slot="vehicle-card-media-badges"
     >
       {labels.map((label) => (
         <Badge
-          className="h-6 rounded-md border-0 bg-white/95 px-2 font-medium text-foreground text-micro"
+          className="h-auto min-h-5 max-w-full whitespace-normal break-words rounded-md border-0 bg-white/95 px-1.5 py-0.5 font-medium text-foreground text-micro ring-1 ring-black/5 ring-inset lg:h-6 lg:px-2 lg:py-0 lg:ring-0"
           key={label}
           variant="secondary"
         >
@@ -126,12 +134,18 @@ const VehiclePriceSummary = ({
   );
 
   return (
-    <div className="min-w-0" data-slot="vehicle-card-price-summary">
+    <div
+      className={mobileVehicleCardPriceSummaryClassName}
+      data-slot="vehicle-card-price-summary"
+    >
       <p
-        className="whitespace-nowrap font-semibold text-foreground text-price tabular-nums tracking-heading lg:text-price-lg"
+        className={cn(
+          mobileVehicleCardPriceClassName,
+          "whitespace-nowrap lg:font-semibold lg:text-price-lg lg:tracking-heading"
+        )}
         data-slot="vehicle-card-price"
       >
-        {formatVehicleCardMoney(pricePolicy.primaryPrice, variant, locale)}
+        <VehicleCardMoney locale={locale} money={pricePolicy.primaryPrice} />
         {pricePolicy.isMonthlyPrice ? (
           <span className="ml-1 font-medium text-meta text-muted-foreground">
             {copy.monthSuffix}
@@ -140,7 +154,7 @@ const VehiclePriceSummary = ({
       </p>
       {secondaryPriceLabel ? (
         <p
-          className="text-meta text-muted-foreground"
+          className="text-card-spec text-muted-foreground lg:text-meta"
           title={secondaryPriceLabel}
         >
           {secondaryPriceLabel}
@@ -488,12 +502,14 @@ const MobileDealerVehicleCardContent = ({
       mobileVehicleCardContentClassName,
       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
     )}
+    data-slot="vehicle-card-mobile-content"
     href={listingHref}
   >
-    <div className="min-w-0 space-y-0.5">
+    <div className={mobileVehicleCardInfoClassName}>
       <h2
-        className="line-clamp-2 font-semibold text-card-title text-foreground tracking-heading"
+        className={mobileVehicleCardTitleClassName}
         data-slot="vehicle-card-title"
+        title={getVehicleCardTitle(listing, "comparison")}
       >
         {getVehicleCardTitle(listing, "comparison")}
       </h2>
@@ -503,7 +519,9 @@ const MobileDealerVehicleCardContent = ({
         variant="comparison"
       />
     </div>
-    <VehicleSpecPills listing={listing} locale={locale} />
+    <div className={mobileVehicleCardFactsClassName}>
+      <VehicleSpecPills listing={listing} locale={locale} />
+    </div>
   </Link>
 );
 

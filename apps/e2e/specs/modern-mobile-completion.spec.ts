@@ -413,7 +413,7 @@ test("Sell overlay resolves semantic type and primary-action contrast", async ({
     clientWidth: element.clientWidth,
     scrollWidth: element.scrollWidth,
   }));
-  expect(titleMetrics.fontSize).toBe("16px");
+  expect(titleMetrics.fontSize).toBe("18px");
   expect(titleMetrics.scrollWidth).toBeLessThanOrEqual(
     titleMetrics.clientWidth
   );

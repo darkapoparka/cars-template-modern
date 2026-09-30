@@ -1,4 +1,30 @@
+import { cn } from "@repo/design-system/lib/utils";
+import {
+  leadSite,
+  type MarketplaceSearchParams,
+  parseMarketplaceSearchParams,
+} from "@repo/marketplace";
+import { isDealershipSite } from "@repo/marketplace/site-config";
+import {
+  DealerMobileBrandBar,
+  LeadSiteMark,
+  MobileDealerChrome,
+  mobileDealerContentClassName,
+} from "@repo/marketplace-ui";
+import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
+import {
+  mobileVehicleCardClassName,
+  mobileVehicleCardContentClassName,
+  mobileVehicleCardFactsClassName,
+  mobileVehicleCardInfoClassName,
+  mobileVehicleCardMediaClassName,
+  mobileVehicleCardPriceSummaryClassName,
+  mobileVehicleCardTitleClassName,
+} from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
 import { locale as getRootLocale } from "next/root-params";
+import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";
 
 const loadingCards = [
   "one",
@@ -241,24 +267,32 @@ export const PublicRouteLoading = async ({
         <div className="animate-pulse space-y-2 motion-reduce:animate-none lg:hidden">
           {loadingCards.slice(0, 3).map((card) => (
             <div
-              className="flex min-h-28 overflow-hidden rounded-xl bg-card"
+              className={cn(
+                mobileVehicleCardClassName,
+                "overflow-hidden rounded-xl bg-card"
+              )}
               key={card}
             >
-              <div className="w-[32%] min-w-24 max-w-36 shrink-0 bg-secondary min-[360px]:w-[34%]" />
-              <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5 px-2 py-2.5 min-[360px]:gap-2 min-[360px]:px-2.5 min-[360px]:py-3">
-                <div className="space-y-1">
-                  <div className="h-4 w-4/5 rounded bg-secondary" />
-                  <div className="h-4 w-3/5 rounded bg-secondary" />
+              <div className={mobileVehicleCardMediaClassName} />
+              <div className={mobileVehicleCardContentClassName}>
+                <div className={mobileVehicleCardInfoClassName}>
+                  <div
+                    className={cn(mobileVehicleCardTitleClassName, "h-[1lh]")}
+                  >
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
+                  </div>
+                  <div className={mobileVehicleCardPriceSummaryClassName}>
+                    <div className="h-6 w-3/4 rounded bg-secondary" />
+                    <div className="h-4 w-4/5 rounded bg-secondary" />
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <div className="h-[19px] w-2/5 rounded bg-secondary" />
-                  <div className="h-3 w-1/2 rounded bg-secondary" />
-                </div>
-                <div className="grid grid-cols-2 gap-1">
-                  <div className="h-[22px] rounded-md bg-secondary" />
-                  <div className="h-[22px] rounded-md bg-secondary" />
-                  <div className="h-[22px] rounded-md bg-secondary" />
-                  <div className="h-[22px] rounded-md bg-secondary" />
+                <div className={mobileVehicleCardFactsClassName}>
+                  <div className="grid grid-cols-[max-content_minmax(0,1fr)] gap-1">
+                    <div className="h-6 w-8 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
+                    <div className="h-6 w-10 rounded-md bg-secondary" />
+                    <div className="h-6 w-16 rounded-md bg-secondary" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -388,20 +422,3 @@ export const ListingDetailLoading = async () => {
     </div>
   );
 };
-
-import {
-  leadSite,
-  type MarketplaceSearchParams,
-  parseMarketplaceSearchParams,
-} from "@repo/marketplace";
-import { isDealershipSite } from "@repo/marketplace/site-config";
-import {
-  DealerMobileBrandBar,
-  LeadSiteMark,
-  MobileDealerChrome,
-  mobileDealerContentClassName,
-} from "@repo/marketplace-ui";
-import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
-import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
-import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
-import { MobileDealerServiceHero } from "./mobile-dealer-service-hero";

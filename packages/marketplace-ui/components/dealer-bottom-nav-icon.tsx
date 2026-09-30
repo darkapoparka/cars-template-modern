@@ -18,7 +18,7 @@ export function DealerBottomNavIcon({
     return (
       <span
         aria-hidden="true"
-        className="block h-8 w-10 shrink-0"
+        className="block h-6 w-7.5 shrink-0"
         data-icon-family="generated-assets"
         data-nav-icon={name}
         style={{

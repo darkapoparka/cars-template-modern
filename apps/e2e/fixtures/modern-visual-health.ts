@@ -19,7 +19,12 @@ export const settleModernPage = async (page: Page) => {
           return false;
         }
         const imageBounds = image.getBoundingClientRect();
-        if (imageBounds.top >= innerHeight || imageBounds.bottom <= 0) {
+        if (
+          imageBounds.top >= innerHeight ||
+          imageBounds.bottom <= 0 ||
+          imageBounds.left >= innerWidth ||
+          imageBounds.right <= 0
+        ) {
           return false;
         }
         const viewport = image.closest('[data-slot="carousel-content"]');

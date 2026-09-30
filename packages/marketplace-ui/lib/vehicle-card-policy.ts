@@ -1,4 +1,5 @@
 import {
+  type FuelType,
   formatBodyType,
   formatFuelType,
   formatListingBadge,
@@ -23,6 +24,7 @@ export type VehicleCardSpecFactId =
   | "year";
 
 export interface VehicleCardSpecFact {
+  displayValue?: string;
   id: VehicleCardSpecFactId;
   value: string;
 }
@@ -46,9 +48,6 @@ interface VehicleCardVariantInput {
   desktopLayout: "grid" | "list";
   viewMode: ListingViewMode;
 }
-
-const isBulgarianLocale = (locale?: string) =>
-  locale?.toLowerCase().startsWith("bg") ?? false;
 
 export const getVehicleCardVariant = ({
   density,
@@ -110,11 +109,19 @@ const compactTransmissionLabels = {
   semi_automatic: { bg: "Полуавтоматик", en: "Semi-auto" },
 } as const satisfies Record<Transmission, { bg: string; en: string }>;
 
+const compactFuelLabels: Partial<Record<FuelType, { bg: string; en: string }>> =
+  {
+    electric: { bg: "Електро", en: "Electric" },
+    plug_in_hybrid: { bg: "PHEV", en: "PHEV" },
+  };
+
 export const getVehicleCardSpecFacts = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec">,
   locale?: string
 ): VehicleCardSpecFact[] => {
   const language = locale?.toLowerCase().startsWith("bg") ? "bg" : "en";
+  const fuelValue = formatFuelType(listing.spec.fuelType, locale);
+  const fuelDisplayValue = compactFuelLabels[listing.spec.fuelType]?.[language];
 
   return (
     [
@@ -123,10 +130,19 @@ export const getVehicleCardSpecFacts = (
         id: "mileage",
         value: formatMileage(listing.spec.mileageValue, locale),
       },
-      { id: "fuel", value: formatFuelType(listing.spec.fuelType, locale) },
+      {
+        id: "fuel",
+        value: fuelValue,
+        ...(fuelDisplayValue && fuelDisplayValue !== fuelValue
+          ? { displayValue: fuelDisplayValue }
+          : {}),
+      },
       {
         id: "transmission",
         value: compactTransmissionLabels[listing.spec.transmission][language],
+        ...(listing.spec.transmission === "semi_automatic" && language === "bg"
+          ? { displayValue: "Полуавт." }
+          : {}),
       },
     ] satisfies VehicleCardSpecFact[]
   ).filter((fact) => fact.value);
@@ -181,28 +197,9 @@ export const getVehicleCardPricePolicy = (
   };
 };
 
-const formatComparisonCardMoney = (money: Money, locale?: string) => {
-  const amount = new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-  })
-    .format(money.amount)
-    .replaceAll(",", "\u00A0");
-  let currency = money.currency;
-
-  if (money.currency === "BGN") {
-    currency = isBulgarianLocale(locale) ? "лв." : "BGN";
-  } else if (money.currency === "EUR") {
-    currency = "€";
-  }
-
-  return `${amount} ${currency}`;
-};
-
+/** Presentation changes geometry, never currency or locale formatting. */
 export const formatVehicleCardMoney = (
   money: Money,
-  variant: VehicleCardVariant,
+  _variant: VehicleCardVariant,
   locale?: string
-) =>
-  variant === "comparison"
-    ? formatComparisonCardMoney(money, locale)
-    : formatMoney(money, locale);
+) => formatMoney(money, locale);

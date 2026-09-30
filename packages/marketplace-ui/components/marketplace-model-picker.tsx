@@ -43,6 +43,7 @@ import {
   MobileMarketplaceOverlay,
   MobileMarketplaceOverlayBackAction,
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayIconAction,
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "./mobile-marketplace-overlay";
@@ -136,24 +137,39 @@ const MakeModelSearchField = ({
   locale?: string;
 }) => {
   const copy = getMarketplaceControlCopy(locale);
+  if (!isDesktop) {
+    return (
+      <MobileMarketplaceOverlayField
+        aria-label={copy.makeModel.searchAriaLabel}
+        className="mt-3"
+        clearAction={{ label: copy.actions.clear, onClear: () => onSearch("") }}
+        icon={
+          <Search
+            aria-hidden="true"
+            className="size-[18px] shrink-0 text-zinc-600"
+          />
+        }
+        onChange={(event) => onSearch(event.target.value)}
+        placeholder={
+          step === "make"
+            ? copy.makeModel.searchMakes
+            : copy.makeModel.searchModels
+        }
+        type="search"
+        value={search}
+      />
+    );
+  }
   return (
     <div className="relative mt-3 block">
       <Search
         aria-hidden="true"
-        className={cn(
-          "absolute top-1/2 -translate-y-1/2 text-muted-foreground",
-          isDesktop ? "left-3 size-4" : "left-3.5 size-[18px]"
-        )}
+        className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
       />
       <Input
         aria-label={copy.makeModel.searchAriaLabel}
-        autoFocus={isDesktop}
-        className={cn(
-          "focus-visible:border-[var(--lead-site-accent)] focus-visible:ring-[var(--lead-site-accent)]/35",
-          isDesktop
-            ? "h-10 rounded-lg bg-secondary pl-9"
-            : "h-12 rounded-xl border-0 bg-zinc-100 pl-10 text-body shadow-none"
-        )}
+        autoFocus
+        className="h-10 rounded-lg bg-secondary pl-9 focus-visible:border-[var(--lead-site-accent)] focus-visible:ring-[var(--lead-site-accent)]/35"
         onChange={(event) => onSearch(event.target.value)}
         placeholder={
           step === "make"

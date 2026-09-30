@@ -9,7 +9,7 @@ import {
   getListingPath,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { CarFront, Search, X } from "lucide-react";
+import { CarFront, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -20,8 +20,10 @@ import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import {
   MobileMarketplaceOverlayCloseAction,
+  MobileMarketplaceOverlayField,
   MobileMarketplaceOverlayHeader,
   MobileMarketplaceOverlayShell,
+  mobileMarketplaceOverlayFieldRowClassName,
 } from "./mobile-marketplace-overlay";
 import Image from "./public-image";
 
@@ -104,12 +106,6 @@ export const MobileInventorySearch = ({
   return (
     <MobileMarketplaceOverlayShell
       contentDataSlot="mobile-inventory-search"
-      onOpenAutoFocus={(event) => {
-        event.preventDefault();
-        if (event.currentTarget instanceof HTMLElement) {
-          event.currentTarget.focus({ preventScroll: true });
-        }
-      }}
       onOpenChange={onOpenChange}
       open={open}
     >
@@ -126,49 +122,37 @@ export const MobileInventorySearch = ({
       />
 
       <div
-        className="shrink-0 px-3 pb-3"
+        className={mobileMarketplaceOverlayFieldRowClassName}
         data-slot="mobile-inventory-search-header"
       >
-        <label className="flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-3">
-          <Search
-            aria-hidden="true"
-            className="size-[18px] shrink-0 text-zinc-600"
-            strokeWidth={2}
-          />
-          <input
-            aria-label={copy.search.ariaLabel}
-            autoComplete="off"
-            autoFocus={false}
-            className="h-full min-w-0 flex-1 bg-transparent px-2 text-body text-zinc-950 outline-none placeholder:text-zinc-600"
-            enterKeyHint="search"
-            inputMode="search"
-            name="q"
-            onChange={(event) => setDraft(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter") {
-                event.preventDefault();
-                commitDraft();
-              }
-            }}
-            placeholder={isBg ? "Търси марка, модел…" : "Search make or model…"}
-            spellCheck={false}
-            type="search"
-            value={draft}
-          />
-          {draft.trim() ? (
-            <Button
-              aria-label={copy.actions.clear}
-              className="size-11 shrink-0 rounded-full bg-zinc-200 p-0 text-zinc-950 shadow-none hover:bg-zinc-300 active:bg-zinc-300"
-              onClick={() => setDraft("")}
-              size="icon"
-              title={copy.actions.clear}
-              type="button"
-              variant="ghost"
-            >
-              <X aria-hidden="true" className="size-4" />
-            </Button>
-          ) : null}
-        </label>
+        <MobileMarketplaceOverlayField
+          aria-label={copy.search.ariaLabel}
+          clearAction={{
+            label: copy.actions.clear,
+            onClear: () => setDraft(""),
+          }}
+          enterKeyHint="search"
+          icon={
+            <Search
+              aria-hidden="true"
+              className="size-[18px] shrink-0 text-zinc-600"
+              strokeWidth={2}
+            />
+          }
+          inputMode="search"
+          name="q"
+          onChange={(event) => setDraft(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              commitDraft();
+            }
+          }}
+          placeholder={isBg ? "Търси марка, модел…" : "Search make or model…"}
+          spellCheck={false}
+          type="search"
+          value={draft}
+        />
       </div>
 
       <div
@@ -256,7 +240,7 @@ const SearchResultButton = ({
         <>
           {listingImage ? (
             <Image
-              alt={listingImage.alt}
+              alt=""
               className="h-14 w-[88px] shrink-0 rounded-lg object-cover"
               height={112}
               sizes="88px"
@@ -269,15 +253,15 @@ const SearchResultButton = ({
             </span>
           )}
           <span className="min-w-0">
-            <span className="block truncate font-semibold text-card-title text-zinc-950 tracking-heading">
+            <span className="block whitespace-normal break-words font-semibold text-card-title text-zinc-950 tracking-heading">
               {item.label}
             </span>
-            <span className="mt-1 flex min-w-0 items-center gap-2">
-              <span className="min-w-0 flex-1 truncate text-meta text-zinc-600">
-                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
-              </span>
-              <span className="shrink-0 whitespace-nowrap font-semibold text-meta text-zinc-950 tabular-nums">
+            <span className="mt-1 flex min-w-0 flex-col gap-1">
+              <span className="whitespace-normal break-words font-semibold text-meta text-zinc-950 tabular-nums">
                 {formatMoney(listing.price, isBg ? "bg" : "en")}
+              </span>
+              <span className="whitespace-normal break-words text-meta text-zinc-600">
+                {`${listing.spec.year} · ${formatMileage(listing.spec.mileageValue, locale)} · ${formatFuelType(listing.spec.fuelType, locale)}`}
               </span>
             </span>
           </span>

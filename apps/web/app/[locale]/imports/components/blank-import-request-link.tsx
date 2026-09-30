@@ -63,7 +63,11 @@ export function BlankImportRequestLink({
         bodyClassName="no-scrollbar pb-[calc(1rem+env(safe-area-inset-bottom))] text-left"
         contentClassName="z-50"
         contentDataSlot="mobile-import-request"
-        description={importRequestCopy[locale].formDescription}
+        description={
+          submissionAvailable
+            ? importRequestCopy[locale].formDescription
+            : importRequestCopy[locale].callPreparation
+        }
         onCloseAutoFocus={(event) => {
           event.preventDefault();
           triggerRef.current?.focus({ preventScroll: true });

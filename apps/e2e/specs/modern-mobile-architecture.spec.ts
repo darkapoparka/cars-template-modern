@@ -11,7 +11,7 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
-test("financing remains dismissible while its deferred form loads", async ({
+test("static financing remains dismissible while additional scripts are deferred", async ({
   page,
 }) => {
   await page.goto("/lease");
@@ -23,19 +23,17 @@ test("financing remains dismissible while its deferred form loads", async ({
   const held = new Promise<void>((resolve) => {
     release = resolve;
   });
-  let deferredScripts = 0;
   await page.route("**/_next/static/**/*.js", async (route) => {
-    deferredScripts += 1;
     await held;
     await route.continue();
   });
   try {
     await trigger.tap();
     const dialog = page.getByRole("dialog");
-    await expect(dialog.getByRole("status")).toHaveText(
-      "Зареждане на формата…"
-    );
-    expect(deferredScripts).toBeGreaterThan(0);
+    await expect(
+      dialog.locator('[data-slot="public-contact-unavailable"]')
+    ).toBeVisible();
+    await expect(dialog.locator('input[name="name"]')).toHaveCount(0);
     await dialog.getByRole("button", { name: "Затворете", exact: true }).tap();
     await expect(dialog).toBeHidden();
     await expect(trigger).toBeFocused();

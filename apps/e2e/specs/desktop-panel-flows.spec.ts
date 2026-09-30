@@ -129,7 +129,9 @@ test("desktop navigation keeps hero geometry stable through loading", async ({
   }
   const samples = await page.evaluate(() =>
     (
-      window as Window & { heroStability: { stop: () => string[] } }
+      window as unknown as Window & {
+        heroStability: { stop: () => string[] };
+      }
     ).heroStability.stop()
   );
   expect(samples).toHaveLength(1);

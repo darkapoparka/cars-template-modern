@@ -16,6 +16,7 @@ import {
   getSourceLabel,
 } from "../lib/listing-truth";
 import Image from "./public-image";
+import { VehicleCard } from "./vehicle-card";
 
 interface RelatedListingCardProps {
   readonly href: string;
@@ -23,7 +24,7 @@ interface RelatedListingCardProps {
   readonly locale?: string;
 }
 
-export const RelatedListingCard = ({
+const DesktopRelatedListingCard = ({
   href,
   listing: sourceListing,
   locale,
@@ -96,3 +97,31 @@ export const RelatedListingCard = ({
     </article>
   );
 };
+
+export const RelatedListingCard = ({
+  href,
+  listing,
+  locale,
+}: RelatedListingCardProps) => (
+  <>
+    <div className="min-w-0 snap-start lg:hidden">
+      <VehicleCard
+        density="compact"
+        desktopHeadingLevel={3}
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="discovery"
+        viewMode="grid"
+      />
+    </div>
+    <div className="hidden lg:contents">
+      <DesktopRelatedListingCard
+        href={href}
+        listing={listing}
+        locale={locale}
+      />
+    </div>
+  </>
+);

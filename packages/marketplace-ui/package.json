@@ -7,10 +7,12 @@
   "exports": {
     ".": "./index.ts",
     "./lib/mobile-form-control": "./lib/mobile-form-control.ts",
+    "./lib/mobile-overlay-styles": "./lib/mobile-overlay-styles.ts",
     "./components/listing-price-intelligence": "./components/listing-price-intelligence.tsx",
     "./components/listing-trust-panel": "./components/listing-trust-panel.tsx",
     "./components/mobile-marketplace-overlay": "./components/mobile-marketplace-overlay.tsx",
     "./components/vehicle-card": "./components/vehicle-card.tsx",
+    "./components/vehicle-card-money": "./components/vehicle-card-money.tsx",
     "./components/dealer-mobile-header-icon": "./components/dealer-mobile-header-icon.tsx",
     "./components/dealer-social-links": "./components/dealer-social-links.tsx",
     "./components/dealer-ui-icon": "./components/dealer-ui-icon.tsx",

@@ -1,7 +1,12 @@
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
 import { Textarea } from "@repo/design-system/components/ui/textarea";
-import { mobileResponsiveFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import { formatMoney } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
+import {
+  mobileResponsiveFormFocusClassName,
+  mobileResponsiveFormTextClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import type { MobileFormDraft } from "../../components/mobile-form-draft";
 import { MobileVehicleTaxonomyFields } from "../../components/mobile-vehicle-taxonomy-fields";
 import { PublicContactFields } from "../../components/public-contact-fields";
@@ -52,7 +57,7 @@ export const ImportVehicleFields = ({
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-3 min-[360px]:grid-cols-2">
         <div className="grid gap-1.5">
           <Label className="text-meta" htmlFor="import-year">
             {text.year}
@@ -87,7 +92,7 @@ export const ImportVehicleFields = ({
           />
         </div>
 
-        <div className="col-span-2 grid gap-1.5 sm:col-span-1">
+        <div className="grid gap-1.5 sm:col-span-1 min-[360px]:col-span-2">
           <Label className="text-meta" htmlFor="import-budget">
             {text.budget}
           </Label>
@@ -97,7 +102,13 @@ export const ImportVehicleFields = ({
             id="import-budget"
             maxLength={80}
             name="budget"
-            placeholder={text.budgetPlaceholder}
+            placeholder={text.budgetPlaceholder.replace(
+              "{budget}",
+              formatMoney(
+                { amount: 50_000, currency: publicSite.market.currency },
+                locale
+              )
+            )}
           />
         </div>
       </div>
@@ -107,7 +118,7 @@ export const ImportVehicleFields = ({
           {text.message}
         </Label>
         <Textarea
-          className={`h-24 min-h-24 resize-none rounded-xl border-transparent bg-zinc-100 text-base shadow-none placeholder:text-zinc-600 lg:h-20 lg:min-h-20 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormFocusClassName}`}
+          className={`h-24 min-h-24 resize-none rounded-xl border-transparent bg-zinc-100 text-base shadow-none placeholder:text-zinc-600 lg:h-20 lg:min-h-20 lg:rounded-lg lg:bg-secondary ${mobileResponsiveFormTextClassName} ${mobileResponsiveFormFocusClassName}`}
           defaultValue={draft.message}
           id="import-message"
           maxLength={3000}

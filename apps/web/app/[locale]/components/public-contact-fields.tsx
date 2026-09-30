@@ -1,5 +1,7 @@
 import { Input } from "@repo/design-system/components/ui/input";
 import { Label } from "@repo/design-system/components/ui/label";
+import { cn } from "@repo/design-system/lib/utils";
+import { mobileResponsiveFormTextClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import { publicContactLimits } from "../../../lib/public-contact-contract";
 
 const contactFields = [
@@ -50,7 +52,7 @@ export function PublicContactFields({
       </Label>
       <Input
         {...field}
-        className={inputClassName}
+        className={cn(inputClassName, mobileResponsiveFormTextClassName)}
         defaultValue={draft[field.name]}
         id={`${idPrefix}-${field.name}`}
         placeholder={copy[`${field.name}Placeholder`]}

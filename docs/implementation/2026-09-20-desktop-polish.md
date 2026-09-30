@@ -75,3 +75,15 @@ Inspected /bg and /bg/cars at 1024/1440. Browser checks passed shared make dialo
 Reproduced category links scrolling the document to zero; browser instrumentation showed client routing rather than a document reload. Category links now preserve scroll, prefetch destination data and prevent navigation to the already active category. Category route loading screens now reuse the shared inventory header/buy box, disabled during loading, with card-grid placeholders instead of the obsolete search skeleton/list rows. Mobile loading markup is unchanged.
 
 Web typecheck and scoped Biome passed. Browser instrumentation verified Cars -> Trucks -> Vans -> Cars at scrollY 80, including active-category no-op, with only the initial document request. Added desktop-category-navigation.spec.ts as persistent coverage. Screenshot: apps/e2e/category-navigation-stable.png. No build or snapshot baseline updates.
+
+## Header same-route link and shared field hierarchy
+
+The earlier navigation fix covered inventory category tabs but missed the separate header destination. DealerNavigationLink now cancels same-path navigation in the desktop header, preserving scroll and current search parameters. Regression coverage now clicks both the header Cars destination and category links; passed against port 3002. Shared home/inventory fields now use one bordered segmented row with dividers and plain labels, removing redundant leading icons and the form gradient. Keyboard focus stays visible inside the row.
+
+Web typecheck, scoped Biome and the navigation regression passed. Inspected the Bulgarian inventory screenshot; verified body/make/model dialogs and focus return. Capture: apps/e2e/shared-buy-box-segmented.png. No full build or baseline refresh.
+
+## Coherent desktop controls and cards
+
+Extended the overlay-inspired rounded surfaces across shared home/inventory category tabs, header selected navigation and showroom action, sort/view controls and home carousel actions. Cards now share rounded shells, readable secondary text, soft spec surfaces, a separated price area and dark open actions. Plain icon search and black filters remain. Changes are in five existing desktop CSS modules; no mobile rules changed.
+
+Scoped Biome passed. Browser checks covered home plus BG/EN inventory at 1024/1440/1920/390 without horizontal overflow, card detail and Back, no page errors, list view and sorting. The header/category navigation regression also passed. Visually inspected home, BG inventory and list screenshots. An initial verification script left its viewport mobile between routes; corrected the harness and reran successfully. Screenshots: apps/e2e/desktop-coherent--bg.png, desktop-coherent--bg-cars.png, desktop-coherent-list.png. No build/typecheck rerun for CSS-only changes, no baseline refresh or publication.

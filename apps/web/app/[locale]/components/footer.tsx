@@ -1,4 +1,4 @@
-import { Button } from "@repo/design-system/components/ui/button";
+import { ButtonLink } from "@repo/design-system/components/ui/button-link";
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
@@ -227,16 +227,14 @@ export const Footer = ({ locale }: FooterProps) => {
               </span>
             </div>
 
-            <Button
-              asChild
+            <ButtonLink
               className="mt-5 h-11 bg-brand px-4 font-semibold text-body text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+              href={leadSite.phoneHref}
               size="sm"
             >
-              <Link href={leadSite.phoneHref} prefetch={false}>
-                {ctaLabel}
-                <ArrowRight aria-hidden="true" className="size-4" />
-              </Link>
-            </Button>
+              {ctaLabel}
+              <ArrowRight aria-hidden="true" className="size-4" />
+            </ButtonLink>
           </div>
 
           <nav

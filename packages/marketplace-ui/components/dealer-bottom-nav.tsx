@@ -23,7 +23,20 @@ import {
   isPublicSitePathEnabled,
   publicSite,
 } from "@repo/marketplace/site-config";
-import { CircleDollarSign, Heart, Plus, Store, User } from "lucide-react";
+import {
+  BookOpenText,
+  Building2,
+  CarFront,
+  ChevronRight,
+  CircleDollarSign,
+  Heart,
+  MapPin,
+  Phone,
+  Plus,
+  Store,
+  User,
+  X,
+} from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
@@ -32,17 +45,23 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerBottomNavIcon } from "./dealer-bottom-nav-icon";
 import { DealerMobileBrandBar } from "./dealer-mobile-brand-bar";
 import { DealerSocialLinks } from "./dealer-social-links";
-import { DealerUiIcon } from "./dealer-ui-icon";
 import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import { mobileMarketplaceDrawerIconActionClassName } from "./mobile-marketplace-drawer";
 
 const getDealerNavigationItemClassName = (active: boolean) =>
   cn(
-    "relative flex min-h-[60px] min-w-0 touch-manipulation flex-col items-center justify-center gap-1 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
+    "relative flex min-h-13 min-w-0 touch-manipulation flex-col items-center justify-center gap-0.5 px-0.5 text-meta transition-[background-color,color,transform] duration-150 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px] active:scale-[0.97]",
     active
       ? "font-semibold text-brand-text"
       : "font-medium text-zinc-600 hover:bg-zinc-50 hover:text-zinc-950 active:bg-zinc-100"
+  );
+
+const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
+  withBasePath(
+    `${getLocalizedPublicPath(locale, "/locale-settings")}?returnTo=${encodeURIComponent(
+      returnTo ?? getLocalizedPublicPath(locale, "/cars")
+    )}`
   );
 
 export const DealerBottomNav = ({
@@ -54,6 +73,10 @@ export const DealerBottomNav = ({
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const preferences = useLocalePreferences();
+  const localeSettingsHref = getLocaleSettingsHref(
+    locale,
+    preferences?.returnTo
+  );
   const localeRequested = useRef(false);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -96,17 +119,17 @@ export const DealerBottomNav = ({
   const secondaryMenuItems = [
     {
       href: getLocalizedPublicPath(locale, "/cars"),
-      icon: "car" as const,
+      icon: CarFront,
       label: isBg ? "Всички автомобили" : "All vehicles",
     },
     {
       href: getLocalizedPublicPath(locale, "/guides"),
-      icon: "guide" as const,
+      icon: BookOpenText,
       label: isBg ? "Съвети за покупка" : "Buying guides",
     },
     {
       href: getLocalizedPublicPath(locale, "/contact"),
-      icon: "about" as const,
+      icon: Building2,
       label: isBg ? "За нас и контакти" : "About and contact",
     },
   ];
@@ -120,7 +143,7 @@ export const DealerBottomNav = ({
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <div
-          className="mx-auto grid min-h-[60px] max-w-lg px-1.5"
+          className="mx-auto grid max-w-lg px-1.5"
           style={{
             gridTemplateColumns: `repeat(${visibleItems.length + 1}, minmax(0, 1fr))`,
           }}
@@ -135,12 +158,7 @@ export const DealerBottomNav = ({
                 href={item.href}
                 key={item.label}
               >
-                <span className="grid h-8 w-10 place-items-center">
-                  <DealerBottomNavIcon
-                    active={visuallyActive}
-                    name={item.icon}
-                  />
-                </span>
+                <DealerBottomNavIcon active={visuallyActive} name={item.icon} />
                 <span className="whitespace-nowrap">{item.label}</span>
               </Link>
             );
@@ -156,12 +174,7 @@ export const DealerBottomNav = ({
             ref={menuTriggerRef}
             type="button"
           >
-            <span className="grid h-8 w-10 place-items-center">
-              <DealerBottomNavIcon
-                active={menuOpen || !activeMode}
-                name="menu"
-              />
-            </span>
+            <DealerBottomNavIcon active={menuOpen || !activeMode} name="menu" />
             <span className="whitespace-nowrap">{menuLabel}</span>
           </button>
         </div>
@@ -209,7 +222,11 @@ export const DealerBottomNav = ({
                 type="button"
                 variant="ghost"
               >
-                <DealerUiIcon className="size-[18px]" name="close" />
+                <X
+                  aria-hidden="true"
+                  className="size-[18px]"
+                  strokeWidth={1.75}
+                />
               </Button>
             </div>
           </DrawerHeader>
@@ -228,7 +245,11 @@ export const DealerBottomNav = ({
                 href={withBasePath(leadSite.phoneHref)}
                 onClick={() => setMenuOpen(false)}
               >
-                <DealerUiIcon className="size-5 shrink-0" name="phone" />
+                <Phone
+                  aria-hidden="true"
+                  className="size-5 shrink-0"
+                  strokeWidth={1.75}
+                />
                 <span className="whitespace-nowrap font-medium text-body tabular-nums">
                   {isBg ? "Обади се" : "Call us"}
                 </span>
@@ -245,7 +266,11 @@ export const DealerBottomNav = ({
                 rel="noreferrer"
                 target="_blank"
               >
-                <DealerUiIcon className="size-5 shrink-0" name="location" />
+                <MapPin
+                  aria-hidden="true"
+                  className="size-5 shrink-0"
+                  strokeWidth={1.75}
+                />
                 <span className="min-w-0 whitespace-nowrap text-center font-medium text-body">
                   {isBg ? "Посети ни" : "Visit us"}
                 </span>
@@ -262,6 +287,7 @@ export const DealerBottomNav = ({
                   isPublicSitePathEnabled(item.href, publicSite)
                 )
                 .map((item) => {
+                  const Icon = item.icon;
                   return (
                     <Link
                       className="flex min-h-14 items-center gap-3 rounded-xl bg-zinc-100 px-4 font-semibold text-compact-control text-zinc-950 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
@@ -269,14 +295,18 @@ export const DealerBottomNav = ({
                       key={item.href}
                       onClick={() => setMenuOpen(false)}
                     >
-                      <DealerUiIcon
-                        className="size-5 shrink-0 text-zinc-600"
-                        name={item.icon}
-                      />
+                      <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-white text-zinc-600">
+                        <Icon
+                          aria-hidden="true"
+                          className="size-5"
+                          strokeWidth={1.75}
+                        />
+                      </span>
                       <span className="min-w-0 flex-1 py-3">{item.label}</span>
-                      <DealerUiIcon
+                      <ChevronRight
+                        aria-hidden="true"
                         className="size-4 shrink-0 text-zinc-400"
-                        name="chevronRight"
+                        strokeWidth={1.5}
                       />
                     </Link>
                   );
@@ -285,9 +315,7 @@ export const DealerBottomNav = ({
             <a
               className="mt-4 flex min-h-11 items-center rounded-xl border px-4 font-medium"
               data-locale-trigger
-              href={withBasePath(
-                getLocalizedPublicPath(locale, "/locale-settings")
-              )}
+              href={localeSettingsHref}
               onClick={(event) => {
                 if (
                   preferences &&

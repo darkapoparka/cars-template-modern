@@ -6,6 +6,7 @@ import {
   MobileMarketplaceOverlayShell,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { FinancingCallSummary } from "./mobile-financing-call-summary";
 import {
   type FinancingRequest,
   financingRequestCopy,
@@ -102,16 +103,22 @@ export const MobileFinancingInterceptor = ({
         setOpen(nextOpen);
       }}
       open={open}
+      presentation={submissionAvailable ? "fullscreen" : "sheet"}
     >
       <MobileMarketplaceOverlayHeader
-        description={copy.description}
+        description={
+          submissionAvailable ? copy.description : copy.callDescription
+        }
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.close} />
         }
-        title={copy.title}
+        title={submissionAvailable ? copy.title : copy.callTitle}
       />
 
-      {request ? (
+      {request && !submissionAvailable ? (
+        <FinancingCallSummary locale={locale} request={request} />
+      ) : null}
+      {request && submissionAvailable ? (
         <Suspense
           fallback={
             <output className="block px-4 py-6 text-compact-control text-zinc-600">

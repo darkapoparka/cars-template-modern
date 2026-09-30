@@ -5,6 +5,8 @@ import { Label } from "@repo/design-system/components/ui/label";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace/lead-site";
 import { getMobileQuickPillClassName } from "@repo/marketplace-ui";
+import { mobileFormTextClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import { mobileMarketplaceOverlayPrimaryActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import {
   CarFront,
   CheckCircle2,
@@ -19,6 +21,7 @@ import {
   type ContactActionState,
   submitContactRequest,
 } from "../contact/actions/contact";
+import { FinancingCallSummary } from "./mobile-financing-call-summary";
 import {
   buildFinancingContactMessage,
   type FinancingRequest,
@@ -28,7 +31,6 @@ import {
 } from "./mobile-financing-policy";
 import type { MobileFormDraft } from "./mobile-form-draft";
 import { PublicContactFields } from "./public-contact-fields";
-import { PublicContactUnavailable } from "./public-contact-unavailable";
 
 const initialState: ContactActionState = { status: "idle" };
 const submitFinancingRequest = (
@@ -42,7 +44,7 @@ const SubmitButton = ({ locale }: { locale: "bg" | "en" }) => {
 
   return (
     <Button
-      className="h-12 w-full rounded-xl bg-brand font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
+      className={mobileMarketplaceOverlayPrimaryActionClassName}
       disabled={pending}
       type="submit"
     >
@@ -87,10 +89,10 @@ export const FinancingRequestForm = ({
 
   if (!submissionAvailable) {
     return (
-      <div className="overflow-y-auto px-4 pb-6">
-        <p className="mb-4 font-semibold text-card-title">{request.vehicle}</p>
-        <PublicContactUnavailable locale={locale} />
-      </div>
+      <FinancingCallSummary
+        locale={locale}
+        request={{ ...request, deposit, term }}
+      />
     );
   }
 
@@ -211,7 +213,7 @@ export const FinancingRequestForm = ({
             {copy.note}
           </Label>
           <textarea
-            className="min-h-24 resize-none rounded-xl border-0 bg-zinc-100 px-3.5 py-3 text-body outline-none placeholder:text-zinc-500 focus:ring-[3px] focus:ring-zinc-900/20"
+            className={`min-h-24 resize-none rounded-xl border-0 bg-zinc-100 px-3.5 py-3 outline-none focus:ring-[3px] focus:ring-zinc-900/20 ${mobileFormTextClassName}`}
             id="finance-note"
             maxLength={500}
             name="note"

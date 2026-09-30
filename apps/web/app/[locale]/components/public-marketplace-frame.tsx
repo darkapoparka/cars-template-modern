@@ -13,7 +13,6 @@ import {
   DealerBottomNav,
   DealerMobileBrandBar,
   LeadSiteMark,
-  MarketplaceLocaleSwitchLink,
   MarketplaceMasthead,
   type MarketplaceMode,
   MobileDealerChrome,
@@ -22,8 +21,9 @@ import {
   DealerDesktopHero,
   type DealerDesktopHeroProps,
 } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DealerDesktopLocaleMenu } from "@repo/marketplace-ui/components/dealer-desktop-locale-menu";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { Globe2, Heart, MapPin, Phone, Plus } from "lucide-react";
+import { Heart, MapPin, Phone, Plus } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
@@ -247,20 +247,7 @@ export const PublicMarketplaceFrame = ({
               </Button>
             ) : null}
             {isDealershipSite ? null : (
-              <Button
-                asChild
-                className="h-10 min-w-10 rounded-lg focus-visible:[outline-offset:2px] focus-visible:[outline:2px_solid_var(--ring)]"
-                size="sm"
-                variant="secondary"
-              >
-                <MarketplaceLocaleSwitchLink
-                  label={isBg ? "English" : "Български"}
-                  locale={normalizedLocale}
-                >
-                  <Globe2 aria-hidden="true" className="h-4 w-4" />
-                  <span>{isBg ? "EN" : "BG"}</span>
-                </MarketplaceLocaleSwitchLink>
-              </Button>
+              <DealerDesktopLocaleMenu locale={normalizedLocale} tone="light" />
             )}
             <Button
               asChild

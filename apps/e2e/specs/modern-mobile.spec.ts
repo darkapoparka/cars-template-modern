@@ -402,7 +402,8 @@ for (const route of ["/cars", "/imports", "/lease", "/contact"]) {
   test(`${route} primary mobile composition passes automated accessibility`, async ({
     page,
   }) => {
-    await page.goto(route);
+    const response = await page.goto(route);
+    expect(response?.status()).toBe(200);
     await expectAccessible(page);
   });
 }

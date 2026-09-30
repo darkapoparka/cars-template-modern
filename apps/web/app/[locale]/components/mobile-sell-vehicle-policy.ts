@@ -1,4 +1,7 @@
-import { mobileFormFocusClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
+import {
+  mobileFormFocusClassName,
+  mobileFormTextClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import {
   type SellVehicleCategory,
   sellCategoryLabels,
@@ -123,6 +126,6 @@ export const mobileSellVehicleCopy = {
   },
 } as const;
 
-export const mobileSellInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 text-base shadow-none ${mobileFormFocusClassName}`;
+export const mobileSellInputClassName = `h-12 rounded-xl border-transparent bg-zinc-100 shadow-none ${mobileFormTextClassName} ${mobileFormFocusClassName}`;
 export const mobileSellSelectClassName =
   "h-12 w-full rounded-xl border border-transparent bg-zinc-100 px-3 text-base outline-none transition-shadow focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50";

@@ -330,7 +330,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
               {text.routesTitle}
             </h2>
             <nav aria-label={text.routesLabel}>
-              <MobilePillRail data-slot="import-country-rail">
+              <MobilePillRail
+                data-slot="import-country-rail"
+                label={text.routesLabel}
+              >
                 <div className="flex min-w-max gap-2">
                   {renderImportRouteLinks()}
                 </div>

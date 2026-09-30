@@ -6,12 +6,19 @@ import { type ReactNode, Suspense } from "react";
 import { useLocalePreferences } from "./locale-preferences";
 
 interface Props {
+  readonly beforeOpen?: () => void;
   readonly children: ReactNode;
   readonly className?: string;
   readonly label: string;
   readonly locale?: string;
 }
-function ResolvedPreferenceLink({ children, className, label, locale }: Props) {
+function ResolvedPreferenceLink({
+  children,
+  className,
+  label,
+  locale,
+  beforeOpen,
+}: Props) {
   const preferences = useLocalePreferences();
   const pathname = usePathname();
   const search = useSearchParams().toString();
@@ -36,6 +43,7 @@ function ResolvedPreferenceLink({ children, className, label, locale }: Props) {
           event.button === 0
         ) {
           event.preventDefault();
+          beforeOpen?.();
           preferences.open();
         }
       }}

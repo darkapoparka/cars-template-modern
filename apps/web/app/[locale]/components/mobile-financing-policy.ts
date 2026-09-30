@@ -9,6 +9,9 @@ export interface FinancingRequest {
 export const financingRequestCopy = {
   bg: {
     call: "Обадете се",
+    callTitle: "Обсъдете лизинг",
+    callDescription:
+      "Използвайте тези данни при разговора. Ще уточним наличността и индивидуалните условия по телефона.",
     close: "Затворете",
     deposit: "Първоначална вноска",
     description: "Оставете данни и ще уточним индивидуалните условия.",
@@ -31,6 +34,9 @@ export const financingRequestCopy = {
   },
   en: {
     call: "Call us",
+    callTitle: "Discuss financing",
+    callDescription:
+      "Use these details when you call. We will confirm availability and individual terms by phone.",
     close: "Close",
     deposit: "Initial payment",
     description: "Leave your details and we will confirm the individual terms.",

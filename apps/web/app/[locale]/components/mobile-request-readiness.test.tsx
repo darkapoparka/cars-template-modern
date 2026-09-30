@@ -50,6 +50,9 @@ describe("mobile request delivery readiness", () => {
     expect(html).not.toContain('name="name"');
     expect(html).not.toContain('name="phone"');
     expect(html).not.toContain('type="submit"');
+    expect(
+      html.indexOf('data-slot="public-contact-unavailable"')
+    ).toBeGreaterThan(html.indexOf('name="message"'));
   });
 
   it.each([
@@ -71,5 +74,10 @@ describe("mobile request delivery readiness", () => {
     expect(html.includes('data-slot="public-contact-unavailable"')).toBe(
       !submissionAvailable
     );
+    if (!submissionAvailable) {
+      expect(html).toContain("36 месеца");
+      expect(html).toContain("20%");
+      expect(html).toContain("по телефона");
+    }
   });
 });

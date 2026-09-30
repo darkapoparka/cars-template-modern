@@ -1,4 +1,8 @@
-import { getMockListingBySlug, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getMockListingBySlug,
+  type VehicleListing,
+} from "@repo/marketplace";
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
@@ -69,6 +73,38 @@ describe("vehicle card policy", () => {
     ).toEqual(["Препоръчана"]);
   });
 
+  it("keeps full descriptions when compact fuel and transmission labels are displayed", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    const spec = {
+      ...listing.spec,
+      fuelType: "plug_in_hybrid" as const,
+      transmission: "semi_automatic" as const,
+    };
+
+    expect(getVehicleCardSpecFacts({ spec }, "bg")).toEqual(
+      expect.arrayContaining([
+        { id: "fuel", value: "Плъгин хибрид", displayValue: "PHEV" },
+        {
+          id: "transmission",
+          value: "Полуавтоматик",
+          displayValue: "Полуавт.",
+        },
+      ])
+    );
+    expect(getVehicleCardSpecFacts({ spec }, "en")).toContainEqual({
+      id: "fuel",
+      value: "Plug-in hybrid",
+      displayValue: "PHEV",
+    });
+    expect(
+      getVehicleCardSpecFacts({ spec: { ...spec, fuelType: "electric" } }, "bg")
+    ).toContainEqual({
+      id: "fuel",
+      value: "Електрически",
+      displayValue: "Електро",
+    });
+  });
+
   it("surfaces an attached monthly estimate on comparison cards", () => {
     const listing = getListing("bmw-x5-m50d-sofia-2020");
 
@@ -89,7 +125,7 @@ describe("vehicle card policy", () => {
         "comparison",
         "bg"
       )
-    ).toBe("1 360 лв.");
+    ).toBe(formatMoney({ amount: 1360, currency: "BGN" }, "bg"));
   });
 
   it("keeps a lease vehicle purchase price and estimate distinct", () => {
@@ -114,7 +150,7 @@ describe("vehicle card policy", () => {
     expect(policy.monthlyEstimate).toBeUndefined();
     expect(
       formatVehicleCardMoney(policy.primaryPrice, "comparison", "bg")
-    ).toBe("57 499 €");
+    ).toBe(formatMoney(policy.primaryPrice, "bg"));
   });
 
   it("surfaces negotiable status without converting it into a finance claim", () => {

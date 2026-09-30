@@ -9,6 +9,7 @@ import {
   getSourceLabel,
   type ListingOrganizationRole,
 } from "./listing-truth";
+import { mobileVehicleCardImageSizes } from "./mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
   type VehicleCardPricePolicy,
@@ -304,14 +305,14 @@ export const getVehicleCardImageSizes = (
   isDesktopGrid: boolean
 ) => {
   if (isDesktopGrid) {
-    return "(max-width: 1023px) 240px, (max-width: 1279px) 33vw, 25vw";
+    return `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1279px) 33vw, 25vw`;
   }
   if (isCompact) {
     return isGrid
-      ? "(max-width: 1023px) 240px, (max-width: 1280px) 28vw, 20vw"
-      : "(max-width: 1023px) 240px, (max-width: 1280px) 13rem, 15rem";
+      ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1280px) 28vw, 20vw`
+      : `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1280px) 13rem, 15rem`;
   }
   return isGrid
-    ? "(max-width: 1023px) 240px, 25vw"
-    : "(max-width: 1023px) 240px, 50vw";
+    ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, 25vw`
+    : `(max-width: 1023px) ${mobileVehicleCardImageSizes}, 50vw`;
 };

@@ -282,7 +282,7 @@ export const MobileVehicleTaxonomyFields = ({
         className={
           variant === "sell"
             ? "contents lg:hidden"
-            : "col-span-full grid grid-cols-2 gap-3 lg:hidden"
+            : "col-span-full grid gap-3 lg:hidden min-[360px]:grid-cols-2"
         }
       >
         <MobileTaxonomyTrigger

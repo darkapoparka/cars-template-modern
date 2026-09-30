@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { mobileMarketplaceOverlayPrimaryActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import { ChevronRight } from "lucide-react";
 import { mobileSellVehicleCopy } from "./mobile-sell-vehicle-policy";
 import { MobileServiceHelpDrawer } from "./mobile-service-help-drawer";
@@ -27,7 +28,7 @@ export const MobileSellHowItWorksDrawer = ({
       description={content.howDescription}
       footer={
         <Button
-          className="h-12 w-full rounded-xl bg-brand font-semibold text-brand-foreground text-compact-control shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)] active:bg-[var(--lead-site-accent-hover)]"
+          className={mobileMarketplaceOverlayPrimaryActionClassName}
           onClick={onStart}
           type="button"
         >

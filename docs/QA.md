@@ -56,7 +56,7 @@ Check console/page errors. Forms, chat widgets and calculators may be demo inter
 
 Run `pnpm --filter web test` and `pnpm --filter @repo/marketplace-ui test`. The web Vitest config uses automatic JSX transformation for component rendering while Next retains its own JSX configuration.
 
-With the local demo already running, set `E2E_BASE_URL` to its actual origin and run `pnpm --filter e2e exec playwright test --config=playwright.modern.config.ts`. The browser tests block enquiry submissions. For a bounded WebKit check, select `modern-mobile-completion.spec.ts` and `modern-mobile-architecture.spec.ts` with `--project=modern-mobile-webkit`.
+With the local demo already running, set `E2E_BASE_URL` to its actual origin and run `pnpm --filter e2e exec playwright test --config=playwright.modern.config.ts`. The suite prepares a returning-visitor cookie through the local preferences endpoint so page checks can reach the underlying UI. Separate welcome tests start with an empty session and verify dismissal persists at 320px and 390px. Tests block enquiry submissions; the welcome tests allow only the local preferences write. Static financing opens the phone handoff immediately, including when additional scripts are delayed. For a bounded WebKit check, select `modern-mobile-completion.spec.ts` and `modern-mobile-architecture.spec.ts` with `--project=modern-mobile-webkit`.
 
 ## Final identity search
 Search the full lead copy for: `Day & Night|Day Night|day-night|0877 733 110|Атанас Манчев|kristiankirilov` plus the old domain/social/logo filenames. Provenance/history files can retain source names if clearly historical; active UI/data/metadata cannot.

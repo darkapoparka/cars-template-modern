@@ -125,12 +125,19 @@ const normalizeFormattingLocale = (locale?: string) =>
     ? "bg-BG"
     : "en-GB";
 
-export const formatMoney = (money: Money, locale?: string) =>
+const moneyFormatter = (money: Money, locale?: string) =>
   new Intl.NumberFormat(normalizeFormattingLocale(locale), {
     currency: money.currency,
     maximumFractionDigits: 0,
     style: "currency",
-  }).format(money.amount);
+  });
+
+export const formatMoney = (money: Money, locale?: string) =>
+  moneyFormatter(money, locale).format(money.amount);
+
+/** Preserve locale ordering and spacing when the currency needs separate styling. */
+export const formatMoneyParts = (money: Money, locale?: string) =>
+  moneyFormatter(money, locale).formatToParts(money.amount);
 
 export const formatMileage = (value: number, locale?: string) =>
   `${new Intl.NumberFormat(normalizeFormattingLocale(locale)).format(value)} ${

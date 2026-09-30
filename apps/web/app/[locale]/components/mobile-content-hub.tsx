@@ -45,6 +45,11 @@ interface MobileContentHubProps {
   locale: "bg" | "en";
 }
 
+const contentCategoryLabels = {
+  bg: "Категории материали",
+  en: "Content categories",
+} as const;
+
 function DesktopContentSearch({
   isBg,
   ready,
@@ -243,8 +248,12 @@ export const MobileContentHub = ({
         )}
       >
         <div className="relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8">
-          <div className="px-4 lg:px-6">
-            <MobilePillRail className="gap-2">
+          <div className="px-4 lg:px-0">
+            <MobilePillRail
+              className="gap-2"
+              data-slot="editorial-filter-pills"
+              label={contentCategoryLabels[locale]}
+            >
               {contentFilters.map(({ id: value, ...labels }) => (
                 <button
                   aria-pressed={filter === value}
@@ -260,7 +269,7 @@ export const MobileContentHub = ({
             </MobilePillRail>
           </div>
 
-          <div className="px-4 pt-3 pb-2 lg:px-6">
+          <div className="px-4 pt-3 pb-2 lg:px-0">
             <div className="flex items-center justify-between gap-3">
               <h1 className="font-semibold text-section-title tracking-heading lg:hidden">
                 {isBg ? "Съвети и статии" : "Guides and articles"}
@@ -274,7 +283,7 @@ export const MobileContentHub = ({
             </div>
           </div>
 
-          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-5 lg:px-6 xl:grid-cols-3">
+          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-5 lg:px-0 xl:grid-cols-3">
             {visibleItems.map((item, index) => (
               <Link
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
@@ -325,7 +334,7 @@ export const MobileContentHub = ({
             ))}
           </div>
           {visibleItems.length === 0 ? (
-            <div className="mx-4 mb-8 rounded-2xl bg-white px-5 py-10 text-center lg:mx-6">
+            <div className="mx-4 mb-8 rounded-2xl bg-white px-5 py-10 text-center lg:mx-0">
               <p className="font-semibold text-card-title tracking-heading">
                 {isBg
                   ? "Няма материали с тези критерии"

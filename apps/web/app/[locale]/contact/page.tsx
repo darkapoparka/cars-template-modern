@@ -5,6 +5,7 @@ import {
   isPublicSitePathEnabled,
   publicSite,
 } from "@repo/marketplace/site-config";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
@@ -113,79 +114,86 @@ export default async function ContactPage({
 
   return (
     <PublicMarketplaceFrame
-      desktopIntro={{
-        title:
-          normalizedLocale === "bg" ? "За нас и контакти" : "About and contact",
-        description: copy.contactDescription,
-      }}
       locale={normalizedLocale}
       showMobileDealerHeader={false}
     >
       <main className="bg-background text-zinc-950">
         <MobileAboutContact locale={normalizedLocale} services={services} />
-        <div className="hidden lg:block">
-          <div className={desktopStyles.content}>
-            <section
-              aria-label={copy.contactTitle}
-              className={desktopStyles.panel}
+        <DealerDesktopHero
+          title={
+            normalizedLocale === "bg"
+              ? "За нас и контакти"
+              : "About and contact"
+          }
+          variant="service"
+        >
+          <div className="hidden lg:block">
+            <div
+              className={`${desktopStyles.content} ${desktopStyles.heroContent}`}
             >
-              <div className={desktopStyles.contactGrid}>
-                <a
-                  className={desktopStyles.contactCard}
-                  href={withBasePath(leadSite.phoneHref)}
-                >
-                  <Phone aria-hidden="true" size={28} strokeWidth={1.5} />
-                  <span>
-                    <small>
-                      {normalizedLocale === "bg" ? "Телефон" : "Phone"}
-                    </small>
-                    <strong>{leadSite.phoneDisplay}</strong>
-                  </span>
-                </a>
-                <a
-                  aria-label={copy.mapAction}
-                  className={desktopStyles.contactCard}
-                  href={withBasePath(leadSite.mapsUrl)}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <MapPin aria-hidden="true" size={28} strokeWidth={1.5} />
-                  <span>
-                    <small>{copy.locationLabel}</small>
-                    <strong>
-                      {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
-                    </strong>
-                  </span>
-                  <ArrowUpRight aria-hidden="true" size={18} />
-                </a>
-              </div>
-              <h2 className={desktopStyles.sectionTitle}>
-                {copy.servicesTitle}
-              </h2>
-              <div className={desktopStyles.serviceGrid}>
-                {services.map((service) => {
-                  const Icon = service.icon;
-                  return (
-                    <Link
-                      className={desktopStyles.serviceCard}
-                      href={localize(service.href)}
-                      key={service.href}
-                    >
-                      <Icon aria-hidden="true" size={26} strokeWidth={1.5} />
-                      <span>
-                        <strong>
-                          {service.title}
-                          <ArrowUpRight aria-hidden="true" size={17} />
-                        </strong>
-                        <p>{service.description}</p>
-                      </span>
-                    </Link>
-                  );
-                })}
-              </div>
-            </section>
+              <section
+                aria-label={copy.contactTitle}
+                className={desktopStyles.panel}
+              >
+                <div className={desktopStyles.contactGrid}>
+                  <a
+                    className={desktopStyles.contactCard}
+                    href={withBasePath(leadSite.phoneHref)}
+                  >
+                    <Phone aria-hidden="true" size={28} strokeWidth={1.5} />
+                    <span>
+                      <small>
+                        {normalizedLocale === "bg" ? "Телефон" : "Phone"}
+                      </small>
+                      <strong>{leadSite.phoneDisplay}</strong>
+                    </span>
+                  </a>
+                  <a
+                    aria-label={copy.mapAction}
+                    className={desktopStyles.contactCard}
+                    href={withBasePath(leadSite.mapsUrl)}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <MapPin aria-hidden="true" size={28} strokeWidth={1.5} />
+                    <span>
+                      <small>{copy.locationLabel}</small>
+                      <strong>
+                        {getLeadCopy(locale).address},{" "}
+                        {getLeadCopy(locale).city}
+                      </strong>
+                    </span>
+                    <ArrowUpRight aria-hidden="true" size={18} />
+                  </a>
+                </div>
+                <h2 className={desktopStyles.sectionTitle}>
+                  {copy.servicesTitle}
+                </h2>
+                <div className={desktopStyles.serviceGrid}>
+                  {services.map((service) => {
+                    const Icon = service.icon;
+                    return (
+                      <Link
+                        className={desktopStyles.serviceCard}
+                        href={localize(service.href)}
+                        key={service.href}
+                      >
+                        <Icon aria-hidden="true" size={26} strokeWidth={1.5} />
+                        <span>
+                          <strong>
+                            {service.title}
+                            <ArrowUpRight aria-hidden="true" size={17} />
+                          </strong>
+                          <p>{service.description}</p>
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            </div>
           </div>
-        </div>
+        </DealerDesktopHero>
         {submissionAvailable && (
           <div className="mx-auto max-w-2xl px-4 py-8" id="contact-form">
             <PublicEnquiryForm

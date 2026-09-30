@@ -19,6 +19,7 @@ import {
   marketplaceOptionButtonClassName,
   marketplaceSelectedOptionButtonClassName,
 } from "./marketplace-model-picker-options";
+import { MobileMarketplaceOverlayField } from "./mobile-marketplace-overlay";
 
 export type DiscoveryFilterView =
   | MarketplaceFilterView
@@ -138,25 +139,28 @@ const DiscoveryFilterMainView = ({
 
   return (
     <div className="w-full min-w-0 space-y-3 overflow-hidden bg-zinc-50 px-4 py-3">
-      <label className="flex h-12 items-center gap-2 rounded-2xl border border-zinc-200 bg-white px-4 text-zinc-950 focus-within:border-zinc-300 focus-within:outline-2 focus-within:outline-ring focus-within:outline-offset-2">
-        <Search
-          aria-hidden="true"
-          className="size-[18px] shrink-0 text-zinc-600"
-          strokeWidth={2}
-        />
-        <span className="sr-only">{copy.search.ariaLabel}</span>
-        <input
-          className="h-full min-w-0 flex-1 bg-transparent text-body outline-none placeholder:text-zinc-600"
-          onChange={(event) =>
-            setDraft({ ...draft, q: event.target.value || undefined })
-          }
-          placeholder={
-            isBg ? "Марка, модел или ключова дума" : "Make, model or keyword"
-          }
-          type="search"
-          value={draft.q ?? ""}
-        />
-      </label>
+      <MobileMarketplaceOverlayField
+        aria-label={copy.search.ariaLabel}
+        className="bg-white"
+        clearAction={{
+          label: copy.actions.clear,
+          onClear: () => setDraft({ ...draft, q: undefined }),
+        }}
+        icon={
+          <Search
+            aria-hidden="true"
+            className="size-[18px] shrink-0 text-zinc-600"
+          />
+        }
+        onChange={(event) =>
+          setDraft({ ...draft, q: event.target.value || undefined })
+        }
+        placeholder={
+          isBg ? "Марка, модел или ключова дума" : "Make, model or keyword"
+        }
+        type="search"
+        value={draft.q ?? ""}
+      />
 
       <DiscoveryFilterMenuRow
         label={isBg ? "Автомобил" : "Vehicle"}
@@ -228,6 +232,7 @@ const DiscoveryMakeView = ({
   return (
     <div className="grid grid-cols-2 gap-2 p-4">
       <TaxonomySearch
+        clearLabel={isBg ? "Изчисти търсенето" : "Clear search"}
         label={isBg ? "Търси марка" : "Search makes"}
         onChange={setQuery}
         value={query}
@@ -306,6 +311,7 @@ const DiscoveryModelView = ({
   return (
     <div className="grid grid-cols-2 gap-2 p-4">
       <TaxonomySearch
+        clearLabel={isBg ? "Изчисти търсенето" : "Clear search"}
         label={isBg ? "Търси модел" : "Search models"}
         onChange={setQuery}
         value={query}
@@ -366,25 +372,31 @@ const DiscoveryModelView = ({
 };
 
 const TaxonomySearch = ({
+  clearLabel,
   label,
   onChange,
   value,
 }: {
+  clearLabel: string;
   label: string;
   onChange: (value: string) => void;
   value: string;
 }) => (
-  <label className="col-span-2 mb-1 flex h-12 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 focus-within:outline-2 focus-within:outline-ring">
-    <Search aria-hidden="true" className="size-[18px] shrink-0 text-zinc-500" />
-    <span className="sr-only">{label}</span>
-    <input
-      className="min-w-0 flex-1 bg-transparent text-body outline-none"
-      onChange={(event) => onChange(event.target.value)}
-      placeholder={label}
-      type="search"
-      value={value}
-    />
-  </label>
+  <MobileMarketplaceOverlayField
+    aria-label={label}
+    className="col-span-2 mb-1"
+    clearAction={{ label: clearLabel, onClear: () => onChange("") }}
+    icon={
+      <Search
+        aria-hidden="true"
+        className="size-[18px] shrink-0 text-zinc-600"
+      />
+    }
+    onChange={(event) => onChange(event.target.value)}
+    placeholder={label}
+    type="search"
+    value={value}
+  />
 );
 
 const DiscoveryMoreFiltersView = ({

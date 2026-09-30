@@ -1,0 +1,45 @@
+.cars {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .cars {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .left,
+  .right {
+    position: absolute;
+    bottom: -3.75rem;
+    width: clamp(20rem, 28vw, 28rem);
+  }
+  .left {
+    left: -8rem;
+    transform: scaleX(-1);
+  }
+  .right {
+    right: -8rem;
+  }
+  .cars img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .cars[data-variant="inventory"] {
+    bottom: 5.25rem;
+  }
+  .cars[data-variant="landing"] .left,
+  .cars[data-variant="landing"] .right {
+    bottom: -2rem;
+  }
+}
+@media (min-width: 1600px) {
+  .left {
+    left: -3rem;
+  }
+  .right {
+    right: -3rem;
+  }
+}

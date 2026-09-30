@@ -13,6 +13,7 @@
     "./components/ui/breadcrumb": "./components/ui/breadcrumb.tsx",
     "./components/ui/button": "./components/ui/button.tsx",
     "./components/ui/button-group": "./components/ui/button-group.tsx",
+    "./components/ui/button-link": "./components/ui/button-link.tsx",
     "./components/ui/calendar": "./components/ui/calendar.tsx",
     "./components/ui/card": "./components/ui/card.tsx",
     "./components/ui/carousel": "./components/ui/carousel.tsx",
