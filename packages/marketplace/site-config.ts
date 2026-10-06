@@ -11,6 +11,7 @@ export type {
   PublicSiteConfig,
 } from "@repo/marketplace-domain/site-config";
 export { isPublicSitePathEnabled } from "@repo/marketplace-domain/site-config";
+export { defaultAboutArtwork } from "./site-artwork";
 
 const getDesktopPreviewIdentity = (
   config: LeadSiteConfig
@@ -25,6 +26,22 @@ const getDesktopPreviewIdentity = (
     logo: preview.markArtwork,
     tagline: preview.copy,
   };
+};
+
+const getDesktopDiscoveryVehicles = (artwork: LeadSiteConfig["artwork"]) => {
+  if (artwork && "desktopDiscoveryVehicles" in artwork) {
+    return artwork.desktopDiscoveryVehicles;
+  }
+  // Keep explicitly personalized photography and older cutouts authoritative.
+  if (
+    artwork?.desktopHeroScene ||
+    artwork?.heroScene ||
+    artwork?.heroLeft ||
+    artwork?.heroRight
+  ) {
+    return undefined;
+  }
+  return defaultSiteArtwork.desktopDiscoveryVehicles;
 };
 
 const getDesktopServiceCards = (artwork: LeadSiteConfig["artwork"]) =>
@@ -100,6 +117,7 @@ export const createPublicSiteConfig = (
       ...config.artwork,
       // Older dealer service sets remain authoritative unless a card set is supplied.
       desktopServiceCards: getDesktopServiceCards(config.artwork),
+      desktopDiscoveryVehicles: getDesktopDiscoveryVehicles(config.artwork),
       // Explicit cutouts from older dealer copies must not be hidden by the master scene.
       heroScene:
         config.artwork?.heroScene ??

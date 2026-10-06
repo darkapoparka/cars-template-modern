@@ -130,8 +130,6 @@ const pageCopy = {
   bg: {
     deliveryDestination: "България",
     deliveryPrefix: "Внос и доставка до ",
-    desktopDescription:
-      "Разгледайте актуални оферти от свързани източници или поставете линк към автомобил, който вече сте намерили.",
     desktopFormDescription:
       "Намерили сте автомобил? Поставете линка или изберете държава, за да разгледате оферти.",
     desktopTitle: "Реални обяви за внос",
@@ -166,8 +164,6 @@ const pageCopy = {
   en: {
     deliveryDestination: "Bulgaria",
     deliveryPrefix: "Import and delivery to ",
-    desktopDescription:
-      "Browse current offers from connected sources or paste a vehicle listing you have already found.",
     desktopFormDescription:
       "Already found a car? Paste its link, or choose a country to browse offers.",
     desktopTitle: "Real vehicles available for import",
@@ -348,7 +344,6 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
         </div>
 
         <DealerDesktopHero
-          description={text.desktopDescription}
           locale={normalizedLocale}
           title={text.mobileTitle}
           variant="service"

@@ -2,7 +2,7 @@ import { Badge } from "@repo/design-system/components/ui/badge";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListing } from "@repo/marketplace";
 import {
-  ArrowUpRight,
+  ArrowRight,
   BadgeCheck,
   Boxes,
   Clock3,
@@ -663,10 +663,7 @@ const ShowroomVehicleCardContent = ({
           variant="comparison"
         />
         <span aria-hidden="true" data-slot="showroom-vehicle-open">
-          <span>
-            {locale?.toLowerCase().startsWith("bg") ? "Детайли" : "Details"}
-          </span>
-          <ArrowUpRight size={17} />
+          <ArrowRight size={18} />
         </span>
       </div>
     </Link>

@@ -11,7 +11,7 @@
     position: relative;
     z-index: var(--desktop-layer-raised);
     display: grid;
-    gap: calc(var(--spacing) * 3);
-    width: min(100%, calc(var(--spacing) * 285));
+    gap: calc(var(--spacing) * 5);
+    width: 100%;
   }
 }

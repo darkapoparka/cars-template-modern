@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-10-06",
+  "producer": "built-in image generation tool",
+  "kind": "generated template identity",
+  "source": "final-generated.png",
+  "sourceSha256": "43DA389E8A8417AF0E65AF9EE593C7A90B2C9239B794DE77E9309D48487800F7",
+  "derivative": "apps/web/public/images/brand/modern-logo-v1.webp",
+  "derivativeSha256": "A16758D78D49A92A47DF3C05669C3A716C89C7E449E21B033CE6E6F8D668C582",
+  "width": 960,
+  "height": 137,
+  "bytes": 60548,
+  "alpha": true,
+  "deliveryPreparation": "Trim transparent outer padding, resize to 960px width, lossless WebP encoding.",
+  "promptRecord": "apps/web/public/images/brand/modern-logo-v1.provenance.md",
+  "configuration": "desktopPreviewIdentity.markArtwork",
+  "evidence": "docs/modern-generated-logo-2026-10-06/"
+}

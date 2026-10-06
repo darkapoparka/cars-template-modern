@@ -81,7 +81,10 @@ export const LeadSiteListingIdentityCard = ({
         />
       </a>
 
-      <dl className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta">
+      <dl
+        className="mt-4 divide-y divide-border rounded-lg bg-control px-3 text-meta"
+        data-slot="listing-reference-details"
+      >
         <div className="grid grid-cols-[7rem_minmax(0,1fr)] gap-3 py-3">
           <dt className="text-muted-foreground">
             {isBg ? "Реф. номер" : "Reference"}
@@ -98,16 +101,16 @@ export const LeadSiteListingIdentityCard = ({
         </div>
       </dl>
 
-      <div className="mt-4 h-48 overflow-hidden rounded-lg bg-control">
-        <iframe
-          allowFullScreen
-          className="block h-full w-full border-0"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          src={leadSite.mapsEmbedUrl}
-          title={isBg ? "Карта на шоурума" : "Showroom map"}
-        />
-      </div>
+      <a
+        className="mt-4 flex items-center justify-between gap-3 rounded-lg bg-control px-4 py-3 font-medium text-meta hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        data-slot="listing-showroom-directions"
+        href={withBasePath(leadSite.mapsUrl)}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {isBg ? "Как да ни намерите" : "Get directions"}
+        <ArrowUpRight aria-hidden className="size-4 shrink-0" />
+      </a>
     </section>
   );
 };

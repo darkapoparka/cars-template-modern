@@ -133,6 +133,7 @@ const getStaticDemoFooterGroups = (
     {
       title: isBg ? "Помощ" : "Resources",
       links: [
+        { href: localize("/services"), label: isBg ? "Услуги" : "Services" },
         {
           href: localize("/guides"),
           label: isBg ? "Съвети за покупка" : "Buying guides",

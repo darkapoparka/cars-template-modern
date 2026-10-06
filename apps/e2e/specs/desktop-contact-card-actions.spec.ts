@@ -89,7 +89,7 @@ for (const locale of ["bg", "en"] as const) {
     const before = await phone.boundingBox();
     await phone.hover();
     await expect(phone).toHaveCSS("background-color", "rgb(255, 255, 255)");
-    await expect(phone).toHaveCSS("color", "rgb(5, 11, 32)");
+    await expect(phone).toHaveCSS("color", "rgb(35, 35, 35)");
     await expect(
       phone.getByText(locale === "bg" ? "Телефон" : "Phone", {
         exact: true,
@@ -111,7 +111,7 @@ for (const locale of ["bg", "en"] as const) {
     ).toBeGreaterThan(0);
     await page.keyboard.press("Tab");
     await expect(copy).toBeFocused();
-    await expect(copy).toHaveCSS("outline-color", "rgb(64, 95, 242)");
+    await expect(copy).toHaveCSS("outline-color", "rgb(48, 52, 59)");
     expect(
       Number.parseFloat(
         await copy.evaluate((element) => getComputedStyle(element).outlineWidth)

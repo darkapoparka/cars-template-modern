@@ -1,0 +1,31 @@
+{
+  "approved": "Owner accepted the cutout preview on 2026-10-05",
+  "sourceComponent": "templates/import/src/lib/components/common/HeroCars.svelte",
+  "generation": "No new generation; byte-identical reuse of existing Import assets",
+  "assets": [
+    {
+      "side": "left",
+      "source": "L:/CODEX/cars/templates/import/static/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "served": "apps/web/public/images/desktop/desktop-hero-gclass-profile-v1.webp",
+      "bytes": 84112,
+      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a",
+      "modified": false,
+      "width": 1000,
+      "height": 667,
+      "baseline": 542,
+      "mirroredInPresentation": true
+    },
+    {
+      "side": "right",
+      "source": "L:/CODEX/cars/templates/import/static/assets/daynight/banners/hero-car-right-profile-v1.webp",
+      "served": "apps/web/public/images/desktop/desktop-hero-urus-profile-v1.webp",
+      "bytes": 65210,
+      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027",
+      "modified": false,
+      "width": 1000,
+      "height": 667,
+      "baseline": 495,
+      "mirroredInPresentation": false
+    }
+  ]
+}

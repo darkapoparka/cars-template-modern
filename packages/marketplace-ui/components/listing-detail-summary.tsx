@@ -50,15 +50,11 @@ export const DesktopListingSummaryHeader = ({
   if (isDealershipSite) {
     return (
       <div className="hidden lg:block" data-slot="listing-summary-header">
-        <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
-          <ArrowLeft aria-hidden size={18} />
-          {copy.backToSearch}
-        </ListingBackLink>
-        <header data-slot="listing-title-panel">
-          <div>
-            <h1>{listing.title}</h1>
-            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
-          </div>
+        <div data-slot="listing-utility-row">
+          <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
+            <ArrowLeft aria-hidden size={18} />
+            {copy.backToSearch}
+          </ListingBackLink>
           <div data-slot="listing-title-actions">
             <DesktopSaveCarButton
               car={createDesktopSavedCar(
@@ -70,11 +66,18 @@ export const DesktopListingSummaryHeader = ({
               presentation="action"
             />
             <ListingActions
+              compactLabel
               listingTitle={listing.title}
               listingUrl={listingUrl}
               locale={locale}
-              saveHref={saveHref}
+              showPrint={false}
             />
+          </div>
+        </div>
+        <header data-slot="listing-title-panel">
+          <div>
+            <h1>{listing.title}</h1>
+            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
           </div>
         </header>
       </div>

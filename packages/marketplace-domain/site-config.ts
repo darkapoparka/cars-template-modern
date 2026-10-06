@@ -35,9 +35,28 @@ export const publicServicesSchema = z.object({
 });
 export type PublicService = keyof z.infer<typeof publicServicesSchema>;
 
+const publicDesktopVehicleArtworkSchema = z
+  .object({
+    src: publicAssetPathSchema,
+    width: z.number().int().positive().max(10_000),
+    height: z.number().int().positive().max(10_000),
+    baseline: z.number().int().positive(),
+    mirrored: z.boolean().optional(),
+  })
+  .refine((vehicle) => vehicle.baseline <= vehicle.height, {
+    message: "The vehicle baseline must be inside its image",
+    path: ["baseline"],
+  });
+
 export const publicArtworkSchema = z.object({
   heroScene: publicAssetPathSchema.optional(),
   desktopHeroScene: publicAssetPathSchema.optional(),
+  desktopDiscoveryVehicles: z
+    .object({
+      left: publicDesktopVehicleArtworkSchema,
+      right: publicDesktopVehicleArtworkSchema,
+    })
+    .optional(),
   desktopPageBanner: z
     .object({ left: publicAssetPathSchema, right: publicAssetPathSchema })
     .optional(),
@@ -63,6 +82,14 @@ export const publicArtworkSchema = z.object({
       sell: publicAssetPathSchema,
       finance: publicAssetPathSchema,
       imports: publicAssetPathSchema,
+    })
+    .optional(),
+  aboutBenefits: z
+    .object({
+      choice: publicAssetPathSchema,
+      details: publicAssetPathSchema,
+      budget: publicAssetPathSchema,
+      viewing: publicAssetPathSchema,
     })
     .optional(),
   financePromotion: publicAssetPathSchema,

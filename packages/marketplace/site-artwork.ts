@@ -1,9 +1,33 @@
 import type { PublicSiteArtwork } from "@repo/marketplace-domain/site-config";
 
+export const defaultAboutArtwork: NonNullable<
+  PublicSiteArtwork["aboutBenefits"]
+> = {
+  choice: "/images/about/charcoal-choice-v1.webp",
+  details: "/images/about/charcoal-details-v1.webp",
+  budget: "/images/about/charcoal-budget-v1.webp",
+  viewing: "/images/about/charcoal-viewing-v1.webp",
+};
+
 /** Template artwork defaults. Dealer copies override roles in lead-site.ts. */
 export const defaultSiteArtwork: PublicSiteArtwork = {
   heroScene: "/lead-car-showroom-scene-v3.webp",
-  desktopHeroScene: "/desktop-boxcars/hero.jpg",
+  desktopHeroScene: "/images/desktop/showroom-editorial-v1.webp",
+  desktopDiscoveryVehicles: {
+    left: {
+      src: "/images/desktop/desktop-hero-gclass-profile-v1.webp",
+      width: 1000,
+      height: 667,
+      baseline: 542,
+      mirrored: true,
+    },
+    right: {
+      src: "/images/desktop/desktop-hero-urus-profile-v1.webp",
+      width: 1000,
+      height: 667,
+      baseline: 495,
+    },
+  },
   desktopPageBanner: {
     left: "/desktop-boxcars/banner-estate-right.webp",
     right: "/desktop-boxcars/banner-suv-left.webp",
@@ -28,6 +52,7 @@ export const defaultSiteArtwork: PublicSiteArtwork = {
     finance: "/images/services/desktop-finance-v1.webp",
     imports: "/images/services/desktop-imports-v1.webp",
   },
+  aboutBenefits: defaultAboutArtwork,
   financePromotion: "/images/services/leasing-red-suv-v2.webp",
   bodyTypes: {
     suv: "/marketplace/discovery/body-suv.webp",

@@ -46,7 +46,6 @@ export function SellContactHandoff({
       activeMode="sell"
       desktopIntro={{
         title: copy.sellHandoffTitle,
-        description: copy.sellHandoffDescription,
       }}
       locale={locale}
     >

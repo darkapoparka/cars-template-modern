@@ -175,11 +175,6 @@ export default async function LeasePage({
     >
       <main className="lg:min-h-[38rem]">
         <DealerDesktopHero
-          description={
-            normalizedLocale === "bg"
-              ? "Изберете автомобил, посочете предпочитанията си и обсъдете индивидуална оферта с екипа ни."
-              : "Choose a vehicle, set your preferences and discuss a tailored offer with our team."
-          }
           locale={normalizedLocale}
           title={
             normalizedLocale === "bg"

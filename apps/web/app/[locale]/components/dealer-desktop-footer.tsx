@@ -37,6 +37,7 @@ export function DealerDesktopFooter({ locale }: { locale: string }) {
       title: text("Разгледайте", "Explore"),
       links: [
         ["/about", text("За нас", "About us")],
+        ["/services", text("Услуги", "Services")],
         ["/blog", text("Съвети за покупка", "Buying advice")],
         ["/guides", text("Ръководства", "Buyer guides")],
         ["/imports", text("Внос на автомобил", "Import a car")],

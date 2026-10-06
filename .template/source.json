@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "standalone-template-publishing-mirror",
+  "candidate": true,
+  "editableSource": "darkapoparka/cars",
+  "sourceCommit": "c71ec81977b592bde32106282ec1a7a4b3377c9b",
+  "sourcePath": "templates/modern",
+  "sourceTree": "7f3fdc33b84f1d5cdeed077d1a61e5bcd0d1b9e9",
+  "exportPolicy": "cars-source-v1",
+  "sourceDigest": "a7e8881d9337856d7c5fe2b2c6762c1788f2d33eae8117e65b9f58dfd04841e3",
+  "publishingRepository": "darkapoparka/cars-template-modern",
+  "preparedAt": "2026-10-06T21:53:00.286Z"
+}

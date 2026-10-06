@@ -1,0 +1,9 @@
+# Right-facing silver discovery car
+
+Generated with the built-in image-generation tool on 6 October 2026 as an edit of `apps/web/public/images/categories/day-night-category-car-v2.png`. `apps/web/public/images/services/header-van-silver-v1.png` supplies the finish and viewpoint reference. Existing source images remain intact.
+
+The original generated output is preserved as `generated-car-right-silver-v2.png`. The production thumbnail is `apps/web/public/images/categories/discovery-pill-car-v2.webp`: transparent-margin crop, proportional LANCZOS resize contained in 92 × 60 px, then bottom-aligned on a transparent 96 × 64 px canvas with 2 px padding. WebP quality 92, method 6. No post-generation paint, mirroring or vehicle-shape edits are applied.
+
+Prompt: Edit the existing dark SUV category cutout into a matching silver navigation asset. Use the silver van only as the finish, lighting and right-facing three-quarter viewpoint reference. Output one complete SUV with its nose facing right, its left side visible and the same grounded front three-quarter angle as the van. Preserve the SUV identity, recognizable shape, proportions, wheels, body panels, windows and photographic realism. Change the dark paint and wheel finish to bright neutral satin metallic silver, with charcoal glass and black tyres. Remove red brake accents, badges and text. Keep full tyres and bumpers, realistic studio highlights and a crisp silhouette readable at 36 × 24 px. Genuine transparent alpha background; no floor, exterior shadow, text, logos, other objects or border. Show the front and broad left side, with the front at the right-hand end of the composition. Avoid a straight-on symmetrical front view. Landscape canvas with the SUV filling most of the width.
+
+[Asset manifest](../../../docs/assets/DISCOVERY-PILL-ORIENTATION-2026-10-06.json) records the generated source, thumbnail hashes and unchanged companion assets.

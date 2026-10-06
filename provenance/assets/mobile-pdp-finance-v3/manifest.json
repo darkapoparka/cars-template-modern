@@ -1,0 +1,17 @@
+{
+  "generated": "2026-10-06",
+  "source": "source.png",
+  "sourceDimensions": [
+    1536,
+    1024
+  ],
+  "sourceSha256": "3685acadacd7447e9c46ffb344e59ca10eede6aca2fc1a5b0a567feacce1018d",
+  "deliveryPath": "/images/lease/mobile-pdp-finance-cutout-v3.webp",
+  "deliveryDimensions": [
+    640,
+    283
+  ],
+  "deliverySha256": "7bad8b2556d3841fe5aa358303bccf1ebcd540a0f1884a509f8dab9dd49f4247",
+  "bytes": 48624,
+  "preparation": "Trim empty alpha padding with threshold 8, restore a 16px transparent safety margin, resize and encode WebP. No repainting or object movement."
+}

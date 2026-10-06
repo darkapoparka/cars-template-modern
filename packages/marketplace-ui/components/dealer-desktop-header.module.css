@@ -13,7 +13,10 @@
   }
   .nav {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-columns: minmax(max-content, 1fr) auto minmax(
+        max-content,
+        1fr
+      );
     gap: calc(var(--spacing) * 8);
     align-items: center;
     width: var(--desktop-frame-width);
@@ -62,64 +65,55 @@
     color: var(--brand-text);
   }
   .segments a[aria-current="page"] {
-    font-weight: var(--font-weight-medium);
+    text-decoration: underline;
+    text-decoration-thickness: calc(var(--spacing) * 0.5);
+    text-underline-offset: calc(var(--spacing) * 2);
   }
   .contact {
-    display: flex;
-    gap: calc(var(--spacing) * 7);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+    gap: calc(var(--spacing) * 3);
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
     min-width: 0;
   }
-  .contact a {
+  .contact .action {
     display: inline-flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
+    min-width: calc(var(--spacing) * 34);
     height: calc(var(--spacing) * 11);
-    padding-inline: calc(var(--spacing) * 2.5);
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 5);
+    font-size: var(--text-compact-control);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--foreground);
     white-space: nowrap;
-    border-radius: var(--radius-lg);
+    cursor: pointer;
+    background: var(--control);
+    border: 0;
+    border-radius: calc(var(--spacing) * 2);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction);
   }
-  .contact a:hover {
-    color: var(--brand-text);
-  }
-  .contact .showroom {
-    color: var(--muted-foreground);
-  }
-  .contact .showroom:hover {
+  .contact .action:hover {
     color: var(--foreground);
-    background: var(--control);
+    background: var(--desktop-control-neutral-hover);
   }
-  .contact .phone {
-    gap: calc(var(--spacing) * 2.5);
-    height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 6);
+  .contact .primaryAction {
     color: var(--brand-foreground);
     background: var(--brand);
   }
-  .contact .phone:hover {
-    color: var(--brand-hover-foreground);
+  .contact .primaryAction:hover {
+    color: var(--brand-foreground);
     background: var(--lead-site-accent-hover);
   }
-  .contact .language {
-    gap: var(--spacing);
-    min-width: calc(var(--spacing) * 13);
-    font-size: var(--text-card-spec);
-    font-weight: var(--font-weight-semibold);
-    color: var(--muted-foreground);
-  }
-  .contact .language:hover {
-    color: var(--foreground);
-    background: var(--control);
-  }
-  .header a:focus-visible {
+  .header a:focus-visible,
+  .contact .action:focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
     outline-offset: var(--desktop-focus-offset);
   }
@@ -140,8 +134,5 @@
   }
   .contact {
     gap: calc(var(--spacing) * 2);
-  }
-  .contact .phone {
-    padding-inline: calc(var(--spacing) * 6);
   }
 }

@@ -210,7 +210,6 @@ export default async function SellPage({
           locale={normalizedLocale}
         />
         <DealerDesktopHero
-          description={copy.formDescription}
           locale={normalizedLocale}
           title={copy.title}
           variant="service"

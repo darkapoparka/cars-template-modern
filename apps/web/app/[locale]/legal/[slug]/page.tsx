@@ -171,7 +171,7 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
 
   return (
     <PublicMarketplaceFrame
-      desktopIntro={{ title, description, variant: "compact" }}
+      desktopIntro={{ title, variant: "compact" }}
       locale={normalizedLocale}
     >
       <main

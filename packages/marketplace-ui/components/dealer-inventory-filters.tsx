@@ -23,24 +23,31 @@ import {
 } from "lucide-react";
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
+import { DealerInventorySummary } from "./dealer-inventory-summary";
 
 /** Applied filters and display preferences remain separate from banner search. */
 export function DealerInventoryFilters({
   filters,
+  filterCount,
   locale,
   layout,
   onLayoutChange,
   onApply,
   onClearFilters,
+  onOpenFilters,
   onViewModeChange,
   viewMode,
+  totalListings,
 }: {
   filters: MarketplaceSearchParams;
+  filterCount: number;
+  totalListings: number;
   locale?: string;
   layout: PublicInventoryFilterLayout;
   onLayoutChange: (layout: PublicInventoryFilterLayout) => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
+  onOpenFilters: () => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   viewMode: ListingViewMode;
 }) {
@@ -51,6 +58,14 @@ export function DealerInventoryFilters({
       data-filter-layout={layout}
       data-slot="dealer-inventory-filters"
     >
+      <DealerInventorySummary
+        filterCount={filterCount}
+        filters={filters}
+        locale={locale}
+        onApply={onApply}
+        onOpenFilters={onOpenFilters}
+        totalListings={totalListings}
+      />
       <div className={styles.displayControls}>
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger asChild>
@@ -69,7 +84,7 @@ export function DealerInventoryFilters({
           <DropdownMenuContent
             align="end"
             className={styles.previewMenu}
-            side="top"
+            side="bottom"
             sideOffset={8}
           >
             <DropdownMenuLabel>
@@ -147,36 +162,50 @@ function DealerInventoryAppliedFilters({
   onClearFilters: () => void;
 }) {
   const chips = getActiveFilterChips(filters, locale);
-  if (chips.length === 0) {
-    return null;
-  }
   return (
     <fieldset
+      aria-hidden={chips.length === 0 || undefined}
       aria-label={isBg ? "Приложени филтри" : "Applied filters"}
       className={styles.activeFilters}
+      data-slot="dealer-inventory-applied-filters"
     >
-      {chips.map((chip) => (
-        <button
-          aria-label={`${isBg ? "Премахни" : "Remove"}: ${chip.label}`}
-          className={styles.activeFilter}
-          data-filter-id={chip.id}
-          data-slot="dealer-inventory-active-filter"
-          key={chip.id}
-          onClick={() => onApply(chip.updates)}
-          type="button"
-        >
-          <span>{chip.label}</span>
-          <X aria-hidden="true" size={14} />
-        </button>
-      ))}
-      <button
-        className={styles.clearFilters}
-        data-slot="desktop-clear-all-filters"
-        onClick={onClearFilters}
-        type="button"
+      <div
+        className={styles.activeFilterList}
+        onFocusCapture={(event) => {
+          if (event.target instanceof HTMLElement) {
+            event.target.scrollIntoView({
+              behavior: "instant",
+              block: "nearest",
+              inline: "nearest",
+            });
+          }
+        }}
       >
-        {isBg ? "Изчисти всички" : "Clear all"}
-      </button>
+        {chips.map((chip) => (
+          <button
+            aria-label={`${isBg ? "Премахни" : "Remove"}: ${chip.label}`}
+            className={styles.activeFilter}
+            data-filter-id={chip.id}
+            data-slot="dealer-inventory-active-filter"
+            key={chip.id}
+            onClick={() => onApply(chip.updates)}
+            type="button"
+          >
+            <span>{chip.label}</span>
+            <X aria-hidden="true" size={14} />
+          </button>
+        ))}
+        {chips.length > 0 && (
+          <button
+            className={styles.clearFilters}
+            data-slot="desktop-clear-all-filters"
+            onClick={onClearFilters}
+            type="button"
+          >
+            {isBg ? "Изчисти всички" : "Clear all"}
+          </button>
+        )}
+      </div>
     </fieldset>
   );
 }

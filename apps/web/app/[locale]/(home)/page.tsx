@@ -14,7 +14,10 @@ import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
-import { getPublicContentCards } from "@/lib/public-content-data";
+import {
+  getDesktopContentCardTitle,
+  getPublicContentCards,
+} from "@/lib/public-content-data";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
@@ -109,16 +112,22 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
             isDealershipSite ? (
               <DealerDesktopDiscoveryContent
                 articles={getPublicContentCards(normalizeSeoLocale(locale))
-                  .filter((item) => item.type === "article")
-                  .slice(0, 3)
+                  .slice(0, 4)
                   .map((item, index) => ({
                     category: item.category,
                     href: getLocalizedPath(
                       normalizeSeoLocale(locale),
-                      `/blog/${item.slug}`
+                      `/${item.type === "article" ? "blog" : "guides"}/${item.slug}`
                     ),
-                    image: `/desktop-boxcars/journal-${index + 1}.jpg`,
+                    image:
+                      index < 3
+                        ? `/desktop-boxcars/journal-${index + 1}.jpg`
+                        : item.image,
                     meta: item.meta,
+                    shortTitle: getDesktopContentCardTitle(
+                      item,
+                      normalizeSeoLocale(locale)
+                    ),
                     title: item.title,
                   }))}
                 currentPath={getLocalizedPath(

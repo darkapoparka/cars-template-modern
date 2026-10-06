@@ -1,0 +1,14 @@
+{
+  "role": "desktopHeroScene",
+  "description": "Generated illustrative showroom backdrop for desktop About and Contact. It does not depict an actual dealership.",
+  "generatedAt": "2026-10-05",
+  "source": "source.png",
+  "output": "/images/desktop/showroom-editorial-v1.webp",
+  "width": 2172,
+  "height": 724,
+  "sourceSha256": "5ee840a06db6f5e72999dcd0f2a9ea3de8c4a1a51309fc5e9f42cf11307569e5",
+  "outputSha256": "76617573a19651c5a2c0bbaeb52724fdb6231c65d87e6be43e8888223a8547f1",
+  "sourceBytes": 2053012,
+  "outputBytes": 147720,
+  "processing": "WebP encoding only; original dimensions and composition retained."
+}

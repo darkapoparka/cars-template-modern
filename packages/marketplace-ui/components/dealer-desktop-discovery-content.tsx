@@ -1,6 +1,9 @@
 import type { VehicleListing } from "@repo/marketplace";
-import { publicSite } from "@repo/marketplace/site-config";
-import { ArrowUpRight } from "lucide-react";
+import {
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
@@ -13,6 +16,7 @@ export interface DealerDesktopJournalCard {
   href: string;
   image: string;
   meta: string;
+  shortTitle?: string;
   title: string;
 }
 
@@ -55,12 +59,6 @@ export const DealerDesktopDiscoveryContent = ({
               "A Better Way To Find Your Next Car"
             )}
           </h2>
-          <p>
-            {text(
-              "Покупка, продажба и планиране на следващата стъпка — на едно място.",
-              "Buy, sell and plan your next move, all in one place."
-            )}
-          </p>
         </div>
         <DealerDesktopServiceLinks locale={locale} placement="inventory" />
       </section>
@@ -79,8 +77,8 @@ export const DealerDesktopDiscoveryContent = ({
         <div>
           <h2>
             {text(
-              "Следващият ви автомобил. По-лесно.",
-              "Your Next Car, Made Simple"
+              "Следващият ви автомобил ви очаква.",
+              "Your next car is waiting."
             )}
           </h2>
           <p>
@@ -109,9 +107,11 @@ export const DealerDesktopDiscoveryContent = ({
             </h2>
           </div>
           <div className={styles.journalGrid}>
-            {articles.slice(0, 3).map((article) => (
+            {articles.slice(0, 4).map((article) => (
               <Link
+                aria-label={article.title}
                 className={styles.journalCard}
+                data-slot="desktop-advice-card"
                 href={article.href}
                 key={article.href}
               >
@@ -119,22 +119,35 @@ export const DealerDesktopDiscoveryContent = ({
                   <Image
                     alt=""
                     fill
-                    sizes="(min-width: 1400px) 420px, calc((100vw - 140px) / 3)"
+                    sizes="(min-width: 1400px) 312px, (min-width: 1200px) calc((100vw - 152px) / 4), calc((100vw - 104px) / 2)"
                     src={article.image}
                   />
+                  <span className={styles.journalCategory}>
+                    {article.category}
+                  </span>
                 </div>
                 <div className={styles.journalCardBody}>
-                  <p>
-                    <span className={styles.journalCategory}>
-                      {article.category}
-                    </span>
-                    <span>{article.meta}</span>
-                  </p>
-                  <h3>{article.title}</h3>
+                  <p>{article.meta}</p>
+                  <h3 title={article.title}>
+                    {article.shortTitle ?? article.title}
+                  </h3>
+                  <span
+                    className={styles.journalCardAction}
+                    data-slot="desktop-advice-card-action"
+                  >
+                    {text("Прочетете", "Read more")}
+                    <ArrowUpRight aria-hidden size={16} />
+                  </span>
                 </div>
               </Link>
             ))}
           </div>
+          {isPublicSitePathEnabled("/guides", publicSite) && (
+            <Link className={styles.journalAction} href={path("/guides")}>
+              {text("Всички съвети", "All advice")}
+              <ArrowRight aria-hidden size={16} />
+            </Link>
+          )}
         </section>
       )}
     </div>

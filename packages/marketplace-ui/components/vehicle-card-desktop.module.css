@@ -238,9 +238,9 @@
     min-height: 0;
     margin-bottom: calc(var(--spacing) * 2.5);
     overflow: visible;
-    font-size: calc(var(--spacing) * 4.5);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 6);
+    font-size: var(--text-desktop-card);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-card--line-height);
     letter-spacing: normal;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-facts"] {
@@ -249,8 +249,8 @@
     gap: calc(var(--spacing) * 1.5);
     padding: 0;
     margin-bottom: calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 3);
-    line-height: calc(var(--spacing) * 4.5);
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
     color: var(--desktop-prose-text);
     background: transparent;
     border: 0;
@@ -285,9 +285,9 @@
     overflow-wrap: anywhere;
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-price"] {
-    font-size: calc(var(--spacing) * 5);
-    font-weight: var(--font-weight-bold);
-    line-height: calc(var(--spacing) * 7.5);
+    font-size: var(--text-desktop-price);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-price--line-height);
     letter-spacing: normal;
   }
   .card[data-presentation="showroom"]
@@ -295,22 +295,23 @@
     > div
     > p:not([data-slot]) {
     margin-top: calc(var(--spacing) * 0.5);
-    font-size: calc(var(--spacing) * 2.75);
-    line-height: calc(var(--spacing) * 4.5);
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-open"] {
     display: inline-flex;
     flex-shrink: 0;
-    gap: calc(var(--spacing) * 1.5);
     align-items: center;
-    min-height: calc(var(--spacing) * 9);
-    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 3.25);
-    font-weight: var(--font-weight-medium);
-    color: var(--brand-foreground);
-    background: var(--brand);
+    justify-content: center;
+    width: calc(var(--spacing) * 9);
+    height: calc(var(--spacing) * 9);
+    padding: 0;
+    color: var(--desktop-muted-text);
+    background: transparent;
     border-radius: calc(var(--spacing) * 2);
-    transition: background-color var(--duration-interaction);
+    transition:
+      color var(--duration-interaction),
+      background-color var(--duration-interaction);
   }
   .card[data-presentation="showroom"]
     :where(
@@ -318,7 +319,8 @@
       [data-slot="vehicle-card-content"]:focus-visible
     )
     [data-slot="showroom-vehicle-open"] {
-    background: var(--lead-site-accent-hover);
+    color: var(--foreground);
+    background: var(--control);
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media-badges"] {
     top: calc(var(--spacing) * 3.5);

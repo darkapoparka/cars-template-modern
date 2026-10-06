@@ -1,23 +1,11 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@repo/design-system/components/ui/select";
 import { type MarketplaceSearchParams, withCategory } from "@repo/marketplace";
 import { ChevronDown, Search } from "lucide-react";
 import type { MouseEvent } from "react";
-import {
-  getDesktopPriceQuickFilterLabel,
-  getLocalizedDesktopCategoryLabel,
-} from "../lib/desktop-filter-policy";
-import { marketplaceCategorySelectorOptions } from "../lib/marketplace-filter-config";
+import { getDesktopPriceQuickFilterLabel } from "../lib/desktop-filter-policy";
 import searchStyles from "./dealer-hero-search.module.css";
 import styles from "./dealer-inventory-search.module.css";
+import { DealerVehicleTypePills } from "./dealer-vehicle-type-pills";
 import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 
 function openFromButton(
@@ -105,55 +93,6 @@ export function DealerInventorySearch({
           aria-label={text("Търсене на превозни средства", "Vehicle search")}
           className={searchStyles.form}
         >
-          <div className={searchStyles.filterField} data-field="category">
-            <Select
-              disabled={disabled || !onApply}
-              onValueChange={(nextCategory) =>
-                onApply?.(
-                  withCategory(
-                    filters,
-                    nextCategory as MarketplaceSearchParams["category"]
-                  )
-                )
-              }
-              value={category}
-            >
-              <SelectTrigger
-                aria-label={text("Тип", "Type")}
-                className={searchStyles.field}
-                data-slot="dealer-inventory-search-field"
-              >
-                <span className={styles.typeValue}>
-                  <span className={styles.typeLabel}>
-                    {text("Тип:", "Type:")}
-                  </span>
-                  <SelectValue>
-                    {getLocalizedDesktopCategoryLabel(category, isBg)}
-                  </SelectValue>
-                </span>
-              </SelectTrigger>
-              <SelectContent
-                align="start"
-                className={styles.typeMenu}
-                sideOffset={6}
-              >
-                <SelectGroup>
-                  <SelectLabel>
-                    {text("Тип превозно средство", "Vehicle type")}
-                  </SelectLabel>
-                  {marketplaceCategorySelectorOptions.map((option) => (
-                    <SelectItem
-                      className={styles.typeOption}
-                      key={option.id}
-                      value={option.id}
-                    >
-                      {getLocalizedDesktopCategoryLabel(option.id, isBg)}
-                    </SelectItem>
-                  ))}
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-          </div>
           <SearchField
             active={Boolean(filters.make)}
             disabled={disabled}
@@ -177,6 +116,7 @@ export function DealerInventorySearch({
           />
           <Button
             aria-haspopup="dialog"
+            aria-label={text("Търси", "Search")}
             className={searchStyles.submit}
             data-slot="dealer-inventory-search-open"
             disabled={disabled}
@@ -186,9 +126,17 @@ export function DealerInventorySearch({
             type="button"
           >
             <Search aria-hidden="true" size={20} />
-            <span>{text("Търси", "Search")}</span>
           </Button>
         </fieldset>
+        <DealerVehicleTypePills
+          category={category}
+          disabled={disabled || !onApply}
+          isBg={isBg}
+          onSelect={(nextCategory) =>
+            onApply?.(withCategory(filters, nextCategory))
+          }
+          slot="desktop-inventory-types"
+        />
       </div>
     </div>
   );

@@ -435,6 +435,7 @@ export const MarketplaceShell = ({
           setQuery={setQuery}
           showDealerDesktopLanding={showDealerDesktopLanding}
           taxonomy={taxonomy}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
           variant={desktopSearchVariant}
           viewMode={viewMode}

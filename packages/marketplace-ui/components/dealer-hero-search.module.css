@@ -108,7 +108,7 @@
     box-shadow: none;
   }
   .desktopSearch .submit:hover {
-    color: var(--brand-hover-foreground);
+    color: var(--brand-foreground);
     background: var(--lead-site-accent-hover);
   }
   .footer {
@@ -128,9 +128,10 @@
     display: flex;
     gap: 0;
     align-items: center;
-    height: calc(var(--spacing) * 19);
-    padding: calc(var(--spacing) * 2.5);
+    height: calc(var(--spacing) * 16);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
     background: var(--panel);
+    border: 0;
     border-radius: calc(var(--spacing) * 12.5);
   }
   .desktopSearch[data-surface="hero"]
@@ -153,7 +154,7 @@
     position: relative;
     display: flex;
     flex: 1 1 0;
-    height: calc(var(--spacing) * 14);
+    height: calc(var(--spacing) * 12);
   }
   .desktopSearch[data-surface="hero"]
     .filterField:is([data-field="year"], [data-field="mileage"]) {
@@ -167,44 +168,117 @@
     width: calc(var(--spacing) * 0.25);
     content: "";
     background: var(--border);
+    transition: opacity var(--duration-interaction);
+  }
+  .desktopSearch[data-surface="hero"]
+    .filterField:has(.field:is(:hover, :focus-visible))::before,
+  .desktopSearch[data-surface="hero"]
+    .filterField:has(.field:is(:hover, :focus-visible))
+    + .filterField::before {
+    opacity: 0;
+  }
+  .desktopSearch[data-search-context="hero"] [data-field="category"],
+  .desktopSearch[data-search-context="hero"] [data-field="make"]::before {
+    display: none;
   }
   .desktopSearch[data-surface="hero"] .field {
-    height: calc(var(--spacing) * 14);
-    min-height: calc(var(--spacing) * 14);
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
     padding-inline: calc(var(--spacing) * 6);
     font-size: calc(var(--spacing) * 3.75);
     background: transparent;
     border: 0;
-    border-radius: 0;
+    border-radius: var(--radius-pill);
+    transition: background-color var(--duration-interaction);
   }
-  .desktopSearch[data-surface="hero"] .field:hover {
-    color: var(--brand-text);
-    background: transparent;
+  .desktopSearch[data-surface="hero"] .field:is(:hover, :focus-visible) {
+    color: var(--foreground);
+    background: var(--control-hover);
   }
   .desktopSearch[data-surface="hero"] .submit {
-    flex: 0 0 auto;
-    width: auto;
+    flex: 0 0 calc(var(--spacing) * 12);
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding: 0;
     border-radius: calc(var(--spacing) * 10);
+  }
+  .desktopSearch[data-surface="hero"] .submit > span {
+    display: none;
+  }
+  .desktopSearch[data-surface="hero"] .submit svg {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+  }
+  .desktopSearch[data-surface="hero"] {
+    gap: calc(var(--spacing) * 6);
+  }
+  .categoryPills {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  .desktopSearch .categoryPill {
+    gap: calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 9);
+    min-height: calc(var(--spacing) * 9);
+    padding: 0 calc(var(--spacing) * 3.5);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    color: var(--desktop-hero-type-foreground, var(--inverse-foreground));
+    background: var(--desktop-hero-type-background);
+    border: var(--desktop-border-width) solid var(--desktop-hero-type-border);
+    border-radius: var(--radius-pill);
+    backdrop-filter: blur(calc(var(--spacing) * 2));
+  }
+  .desktopSearch .categoryPill:hover {
+    background: var(--desktop-hero-type-hover);
+    border-color: var(
+      --desktop-hero-type-hover-border,
+      var(--desktop-hero-type-border)
+    );
+  }
+  .desktopSearch .categoryPill[aria-pressed="true"] {
+    color: var(--desktop-hero-type-selected-foreground, var(--foreground));
+    background: var(--desktop-hero-type-selected-background, var(--panel));
+    border-color: var(--desktop-hero-type-selected-background, var(--panel));
+  }
+  .categoryPill:focus-visible {
+    outline: var(--desktop-focus-width) solid
+      var(--desktop-hero-type-focus, var(--inverse-foreground));
+    outline-offset: var(--desktop-focus-offset);
+  }
+  .desktopSearch .categoryPill[aria-pressed="true"]:hover {
+    background: var(
+      --desktop-hero-type-selected-hover-background,
+      var(--lead-site-accent-hover)
+    );
+    border-color: var(
+      --desktop-hero-type-selected-hover-background,
+      var(--lead-site-accent-hover)
+    );
+  }
+  .desktopSearch .categoryArtwork {
+    flex: none;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 6);
+    object-fit: contain;
   }
   .desktopSearch[data-surface="hero"][data-search-context="inventory"] .form {
     min-inline-size: 0;
-    height: calc(var(--spacing) * 16);
-    padding: calc(var(--spacing) * 2);
     margin: 0;
-    border: var(--desktop-border-width) solid var(--border);
   }
-  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
-    .filterField {
-    height: calc(var(--spacing) * 12);
-  }
-  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
-    :is(.field, .submit) {
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"] .field {
     height: calc(var(--spacing) * 12);
     min-height: calc(var(--spacing) * 12);
     padding-inline: calc(var(--spacing) * 5);
   }
-  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
-    :is(.field, .submit):focus-visible {
+  .desktopSearch[data-surface="hero"] :is(.field, .submit):focus-visible {
     outline: var(--desktop-focus-width) solid var(--foreground);
     outline-offset: var(--desktop-focus-offset);
     border-radius: calc(var(--spacing) * 10);
@@ -214,10 +288,6 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   .desktopSearch[data-surface="hero"] .field {
     padding-inline: calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
-  }
-  .desktopSearch[data-surface="hero"] .submit {
-    padding-inline: calc(var(--spacing) * 5);
     font-size: calc(var(--spacing) * 3.5);
   }
 }

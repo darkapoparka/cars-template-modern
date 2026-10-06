@@ -12,21 +12,26 @@ import {
 } from "../lib/listing-action-policy";
 
 interface ListingActionsProps {
+  readonly compactLabel?: boolean;
   readonly floating?: boolean;
   readonly listingTitle: string;
   readonly listingUrl: string;
   readonly locale?: string;
   readonly saveHref?: string;
+  readonly showPrint?: boolean;
 }
 
 export const ListingActions = ({
   floating = false,
+  compactLabel = false,
   listingTitle,
   listingUrl,
   locale,
   saveHref,
+  showPrint = true,
 }: ListingActionsProps) => {
   const copy = getListingActionCopy(locale);
+  const shortShareLabel = locale?.startsWith("bg") ? "Сподели" : "Share";
   const [sharePending, setSharePending] = useState(false);
   const [shareStatus, setShareStatus] = useState("");
   const actionClassName = cn(
@@ -70,7 +75,7 @@ export const ListingActions = ({
           </Link>
         </Button>
       ) : null}
-      {floating ? null : (
+      {floating || !showPrint ? null : (
         <Button
           aria-label={copy.print}
           className={actionClassName}
@@ -103,7 +108,9 @@ export const ListingActions = ({
           <Share2 aria-hidden="true" className="size-4" />
         )}
         {floating ? null : (
-          <span className="hidden lg:inline">{copy.share}</span>
+          <span className="hidden lg:inline">
+            {compactLabel ? shortShareLabel : copy.share}
+          </span>
         )}
       </Button>
       <span aria-live="polite" className="sr-only">

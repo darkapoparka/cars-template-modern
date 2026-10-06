@@ -5,7 +5,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@repo/design-system/components/ui/tooltip";
-import { Check, Copy, Phone } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./boxcar-desktop-pages.module.css";
 
@@ -73,7 +73,6 @@ export function DesktopContactPhoneCard({
       data-slot="desktop-contact-phone-card"
     >
       <a className={styles.contactCardMain} href={phoneHref}>
-        <Phone aria-hidden size={26} />
         <div>
           <h3>{isBg ? "Телефон" : "Phone"}</h3>
           <p ref={numberRef}>{phoneDisplay}</p>

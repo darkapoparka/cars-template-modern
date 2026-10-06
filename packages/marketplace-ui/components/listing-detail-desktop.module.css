@@ -24,13 +24,12 @@
     border-radius: 0;
   }
 
-  .detail :global([data-slot="listing-summary-header"]) > a {
+  .detail :global([data-slot="listing-desktop-back"]) {
     display: inline-flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     min-height: calc(var(--spacing) * 11);
     padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4);
-    margin-bottom: calc(var(--spacing) * 4);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-normal);
     color: var(--foreground);
@@ -40,11 +39,20 @@
   }
 
   .detail :global([data-slot="listing-summary-header"]) h1 {
-    font-size: calc(var(--spacing) * 7.5);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-heading);
+    font-size: clamp(1.25rem, 2.1vw, 1.75rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
     letter-spacing: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+  }
+
+  .detail :global([data-slot="listing-utility-row"]) {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(var(--spacing) * 11);
+    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .detail :global([data-slot="listing-summary-header"]) > div:last-child {
@@ -106,7 +114,7 @@
 
   .detail :global([data-slot="listing-transaction-card"]),
   .detail :global([data-slot="listing-dealership-card"]) {
-    padding: calc(var(--spacing) * 7.5);
+    padding: calc(var(--spacing) * 6);
     background: var(--desktop-surface);
     border: 0;
     border-radius: calc(var(--spacing) * 4);
@@ -119,7 +127,9 @@
     line-height: var(--desktop-leading-tight);
   }
 
-  .detail :global([data-slot="listing-transaction-card"]) > div {
+  .detail
+    :global([data-slot="listing-transaction-card"])
+    > div:not([data-slot="listing-purchase-options"]) {
     gap: calc(var(--spacing) * 3);
     margin-top: calc(var(--spacing) * 6);
   }
@@ -128,16 +138,100 @@
     min-height: calc(var(--spacing) * 13.5);
   }
 
-  .detail :global([data-slot="listing-dealership-card"]) > a {
+  .detail
+    :global([data-slot="listing-dealership-card"])
+    > a:not([data-slot="listing-showroom-directions"]) {
     padding: 0;
     background: transparent;
     border-radius: 0;
   }
 
   .detail :global([data-slot="listing-dealership-card"]) dl {
-    padding-inline: 0;
-    background: transparent;
-    border-radius: 0;
+    padding-inline: calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 5);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .detail :global([data-slot="listing-reference-details"]) > div {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    justify-content: space-between;
+  }
+  .detail :global([data-slot="listing-reference-details"]) dd {
+    text-align: right;
+  }
+  .detail :global([data-slot="listing-showroom-directions"]) {
+    min-height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 4);
+    background: var(--control);
+    border-radius: var(--radius-pill);
+  }
+  .detail :global([data-slot="listing-showroom-directions"]):hover {
+    background: var(--desktop-control-neutral-hover);
+  }
+
+  .purchaseOptions {
+    gap: calc(var(--spacing) * 5);
+    min-width: 0;
+  }
+  .purchaseTabList {
+    width: 100%;
+    height: calc(var(--spacing) * 11);
+    padding: var(--spacing);
+    background: var(--control);
+    border-radius: var(--radius-pill);
+  }
+  .purchaseTab {
+    height: calc(var(--spacing) * 9);
+    padding: 0 calc(var(--spacing) * 2);
+    font-size: var(--text-compact-control);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--muted-foreground);
+    border-radius: var(--radius-pill);
+  }
+  .purchaseTab[data-state="active"] {
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .purchasePanel {
+    flex-direction: column;
+    min-height: calc(var(--spacing) * 48);
+    margin: 0;
+  }
+  .purchasePanel:not([hidden]) {
+    display: flex;
+  }
+  .purchaseLabel,
+  .purchaseHint {
+    margin: 0;
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
+    color: var(--muted-foreground);
+  }
+  .purchaseHint {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .financePrice {
+    margin: calc(var(--spacing) * 2) 0 0;
+    font-size: calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--desktop-leading-tight);
+  }
+  .financePrice span {
+    margin-left: var(--spacing);
+    font-size: var(--text-compact-control);
+    font-weight: var(--font-weight-normal);
+    color: var(--muted-foreground);
+  }
+  .purchaseActions {
+    padding-top: calc(var(--spacing) * 5);
+    margin-top: auto;
+  }
+  .detail :global([data-slot="listing-transaction-card"]) .purchaseActions a {
+    min-height: calc(var(--spacing) * 12);
+    border-radius: var(--radius-pill);
   }
 
   .detail :global([data-slot="listing-details-tabs-desktop"]) {
@@ -208,7 +302,7 @@
   }
   .detail :global([data-slot="listing-title-actions"]) {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: calc(var(--spacing) * 2);
     align-items: center;
   }
@@ -223,36 +317,45 @@
     font-weight: var(--font-weight-normal);
     background: var(--control);
     border: 0;
-    border-radius: calc(var(--spacing) * 3);
+    border-radius: var(--radius-pill);
   }
-  .detail :global([data-slot="listing-details-sections-desktop"]) > section {
-    padding: calc(var(--spacing) * 7.5);
-    margin-top: calc(var(--spacing) * 7);
+  .detail :global([data-slot="listing-details-sections-desktop"]) {
+    display: grid;
+    gap: calc(var(--spacing) * 6);
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .detail
+    :global([data-slot="listing-details-sections-desktop"])
+    > :is(section, [data-slot="listing-vehicle-facts"]) {
+    padding: calc(var(--spacing) * 6);
+    margin-top: 0;
     background: var(--desktop-surface);
     border: 0;
     border-radius: calc(var(--spacing) * 4);
     box-shadow: var(--desktop-surface-shadow);
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) h2 {
-    margin: 0 0 calc(var(--spacing) * 6);
-    font-size: calc(var(--spacing) * 6);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-section);
+    margin: 0 0 calc(var(--spacing) * 5);
+    font-size: var(--text-desktop-subsection);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-subsection--line-height);
     letter-spacing: normal;
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) dl {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 5) calc(var(--spacing) * 11.25);
+    gap: calc(var(--spacing) * 3);
     font-size: calc(var(--spacing) * 3.5);
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) dl > div {
-    display: flex;
-    gap: calc(var(--spacing) * 5);
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
     justify-content: space-between;
     min-height: 0;
-    padding: 0;
-    background: transparent;
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2.5);
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) dt {
     font-size: calc(var(--spacing) * 3.5);
@@ -267,6 +370,25 @@
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-medium);
     text-align: right;
+  }
+  .detail
+    :global([data-slot="listing-vehicle-facts"])
+    :global([data-slot="listing-specifications"]) {
+    padding-top: calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 4);
+    border-top: var(--desktop-border-width) solid var(--border);
+  }
+  .detail
+    :global([data-slot="listing-vehicle-facts"])
+    :global([data-slot="listing-specifications"])
+    h2 {
+    display: none;
+  }
+  .detail :global([data-slot="listing-description"]) p {
+    max-width: 72ch;
+    margin-top: 0;
+    font-size: var(--text-desktop-body);
+    line-height: var(--text-desktop-body--line-height);
   }
   .detail :global([data-slot="listing-equipment"]) {
     margin-bottom: 0;
@@ -292,8 +414,8 @@
     gap: calc(var(--spacing) * 5);
   }
   .detail :global([data-slot="listing-related"] h2) {
-    font-size: calc(var(--spacing) * 8);
-    line-height: var(--desktop-leading-body);
+    font-size: var(--text-desktop-section);
+    line-height: var(--text-desktop-section--line-height);
   }
   .detail :global([data-slot="listing-related"] > div:first-child > a) {
     gap: calc(var(--spacing) * 2);

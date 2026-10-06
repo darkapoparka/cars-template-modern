@@ -40,6 +40,7 @@ import {
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-hero-search.module.css";
+import { DealerVehicleTypePills } from "./dealer-vehicle-type-pills";
 import { DesktopActionPanel } from "./desktop-action-panel";
 import {
   DesktopQuickFilterDialog,
@@ -54,6 +55,10 @@ import { DesktopSearchFilterGrid } from "./desktop-search-filter-grid";
 import { MarketplaceMakeModelPicker } from "./marketplace-model-picker";
 
 const fieldClassName = `${desktopQuickFilterOptionClassName} ${styles.field}`;
+const searchActionLabels = {
+  hero: ["Търси", "Search"],
+  inventory: ["Търси автомобили", "Search cars"],
+} as const;
 function getHeroCategoryLabel(
   category: MarketplaceSearchParams["category"],
   isBg: boolean
@@ -82,7 +87,16 @@ export interface DealerHeroSearchProps {
   searchListings?: readonly InventorySearchListing[];
   surface?: "hero" | "inventory";
   taxonomy?: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<MarketplaceSearchParams["category"], VehicleTaxonomyMakeOption[]>
+  >;
 }
+
+const getHeroTaxonomy = (
+  category: MarketplaceSearchParams["category"],
+  taxonomy: VehicleTaxonomyMakeOption[],
+  taxonomyByCategory?: DealerHeroSearchProps["taxonomyByCategory"]
+) => taxonomyByCategory?.[category] ?? taxonomy;
 
 /** Both desktop search surfaces keep a draft until Search is submitted. */
 export function DealerHeroSearch(props: DealerHeroSearchProps) {
@@ -94,6 +108,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     compact = false,
     surface = "inventory",
     taxonomy = fallbackVehicleTaxonomy,
+    taxonomyByCategory,
   } = props;
   const router = useRouter();
   const isDesktop = useDesktopMarketplaceViewport();
@@ -110,6 +125,8 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const openOverlay = useMarketplaceOverlayCoordinator(makeModelStep !== null);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
+  const [searchLabelBg, searchLabelEn] = searchActionLabels[surface];
+  const searchLabel = text(searchLabelBg, searchLabelEn);
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
   const activeFilterChips = getActiveFilterChips(filters, locale).filter(
     (chip) => chip.id !== "q"
@@ -158,6 +175,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     <div
       className={styles.desktopSearch}
       data-compact={compact}
+      data-search-context={surface}
       data-surface={surface}
     >
       <DesktopActionPanel
@@ -571,18 +589,14 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
             </div>
           </div>
           <Button
-            aria-label={
-              pending
-                ? text("Търсене…", "Searching…")
-                : text("Търси автомобили", "Search cars")
-            }
+            aria-label={pending ? text("Търсене…", "Searching…") : searchLabel}
             className={styles.submit}
             data-slot="desktop-hero-submit"
             disabled={pending}
             type="submit"
           >
             <Search aria-hidden="true" size={22} />
-            <span>{text("Търси автомобили", "Search cars")}</span>
+            <span>{searchLabel}</span>
           </Button>
           <SearchDraftStatus
             filterCount={filterCount}
@@ -592,6 +606,16 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
           />
         </form>
       </DesktopActionPanel>
+      {surface === "hero" && (
+        <DealerVehicleTypePills
+          category={filters.category}
+          disabled={pending}
+          isBg={isBg}
+          onSelect={(category) =>
+            setFilters((current) => withCategory(current, category))
+          }
+        />
+      )}
       <MarketplaceMakeModelPicker
         applyLabel={text("Приложи", "Apply")}
         filters={filters}
@@ -604,7 +628,11 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
           }
         }}
         open={isDesktop && makeModelStep !== null}
-        taxonomy={taxonomy}
+        taxonomy={getHeroTaxonomy(
+          filters.category,
+          taxonomy,
+          taxonomyByCategory
+        )}
       />
     </div>
   );

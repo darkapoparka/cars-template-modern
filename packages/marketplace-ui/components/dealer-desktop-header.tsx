@@ -17,6 +17,9 @@ import { DealerNavigationLink } from "./dealer-navigation-link";
 import { DesktopSavedCars } from "./desktop-saved-cars";
 import type { MarketplaceMode } from "./marketplace-masthead";
 
+const inventoryRoutePattern =
+  /^\/(?:bg|en)\/(?:cars|trucks|vans|motorbikes|listing)(?:\/|$)/;
+
 export { DesktopSavedCars } from "./desktop-saved-cars";
 
 /** Desktop-only dealership navigation, shared by inventory and service routes. */
@@ -40,6 +43,7 @@ export const DealerDesktopHeader = ({
   const destinations = [
     { id: "home", path: "/", label: isBg ? "Начало" : "Home" },
     { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Cars" },
+    { id: "services", path: "/services", label: isBg ? "Услуги" : "Services" },
     { id: "about", path: "/about", label: isBg ? "За нас" : "About us" },
     { id: "contact", path: "/contact", label: isBg ? "Контакти" : "Contact" },
   ];
@@ -75,7 +79,9 @@ export const DealerDesktopHeader = ({
                   aria-current={
                     pathname ===
                       getLocalizedPublicPath(locale, destination.path) ||
-                    (destination.id === "buy" && activeMode === "buy")
+                    (destination.id === "buy" &&
+                      activeMode === "buy" &&
+                      inventoryRoutePattern.test(pathname))
                       ? "page"
                       : undefined
                   }
@@ -89,9 +95,9 @@ export const DealerDesktopHeader = ({
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
-            <DesktopSavedCars locale={locale} />
+            <DesktopSavedCars className={styles.action} locale={locale} />
             <Link
-              className={styles.phone}
+              className={cn(styles.action, styles.primaryAction)}
               href={getLocalizedPublicPath(locale, "/contact")}
             >
               {isBg ? "Свържете се" : "Contact us"}

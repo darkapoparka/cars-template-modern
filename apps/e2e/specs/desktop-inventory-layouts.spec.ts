@@ -47,7 +47,7 @@ for (const locale of ["bg", "en"] as const) {
     await page.goto(`/${locale}/cars?priceMax=150000`);
     const bar = page.locator('[data-slot="dealer-inventory-filters"]');
     const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
-    const summary = hero.locator('[data-slot="dealer-inventory-summary"]');
+    const summary = bar.locator('[data-slot="dealer-inventory-summary"]');
     await expect(summary).toBeVisible();
     await expect(summary.getByRole("combobox")).toHaveCount(1);
     await expect(

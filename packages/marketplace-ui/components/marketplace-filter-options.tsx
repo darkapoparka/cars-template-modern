@@ -112,6 +112,7 @@ interface NumericFilterSubviewProps {
   draft: MarketplaceSearchParams;
   locale?: string;
   setDraft: (draft: MarketplaceSearchParams) => void;
+  showSummaryLabel?: boolean;
 }
 
 const PriceFilterSubview = ({
@@ -207,6 +208,7 @@ const MileageFilterSubview = ({
   draft,
   locale,
   setDraft,
+  showSummaryLabel = true,
 }: NumericFilterSubviewProps) => {
   const copy = getMarketplaceControlCopy(locale);
   const isBg = isBulgarianMarketplaceLocale(locale);
@@ -215,6 +217,7 @@ const MileageFilterSubview = ({
     marketplaceMileageRange[0],
     draft.mileageMax ?? marketplaceMileageRange[1],
   ] as const;
+  const summaryLabel = isBg ? "Избрана стойност" : "Selected value";
 
   return (
     <NumericRangeFilter
@@ -222,7 +225,7 @@ const MileageFilterSubview = ({
       formatValue={(nextValue) =>
         `${numberFormatter.format(nextValue)} ${isBg ? "км" : "km"}`
       }
-      label={isBg ? "Избрана стойност" : "Selected value"}
+      label={showSummaryLabel ? summaryLabel : ""}
       maximumLabel={copy.options.maximumMileage}
       maximumOnly
       maximumPrefix={isBg ? "До" : "Up to"}
@@ -251,6 +254,7 @@ const NumericFilterSubview = ({
   draft,
   locale,
   setDraft,
+  showSummaryLabel,
   view,
 }: NumericFilterSubviewProps & { view: "mileage" | "price" | "year" }) => {
   if (view === "price") {
@@ -264,7 +268,12 @@ const NumericFilterSubview = ({
     );
   }
   return (
-    <MileageFilterSubview draft={draft} locale={locale} setDraft={setDraft} />
+    <MileageFilterSubview
+      draft={draft}
+      locale={locale}
+      setDraft={setDraft}
+      showSummaryLabel={showSummaryLabel}
+    />
   );
 };
 
@@ -272,11 +281,13 @@ export const MarketplaceFilterSubview = ({
   draft,
   locale,
   setDraft,
+  showSummaryLabel,
   view,
 }: {
   draft: MarketplaceSearchParams;
   locale?: string;
   setDraft: (draft: MarketplaceSearchParams) => void;
+  showSummaryLabel?: boolean;
   view: MarketplaceFilterView;
 }) => {
   const copy = getMarketplaceControlCopy(locale);
@@ -331,6 +342,7 @@ export const MarketplaceFilterSubview = ({
         draft={draft}
         locale={locale}
         setDraft={setDraft}
+        showSummaryLabel={showSummaryLabel}
         view={view}
       />
     );

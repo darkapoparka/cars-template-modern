@@ -10,12 +10,12 @@ import {
   type MarketplaceSearchParams,
   sortOptions,
 } from "@repo/marketplace";
-import { SlidersHorizontal } from "lucide-react";
+import { ArrowUpDown, SlidersHorizontal } from "lucide-react";
 import { marketplaceSortLabelsBg } from "../lib/marketplace-filter-config";
 import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
 
-/** Controls below the inventory banner own filtering, sorting and result announcements. */
+/** Results controls reuse the inventory URL state and full-filter draft. */
 export function DealerInventorySummary({
   filterCount,
   filters,
@@ -33,6 +33,12 @@ export function DealerInventorySummary({
 }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const selectedSort = filters.sort ?? "recommended";
+  const defaultSortLabel = isBg ? "Сортирай" : "Sort";
+  const selectedSortLabel = isBg
+    ? marketplaceSortLabelsBg[selectedSort]
+    : filterLabels.sort[selectedSort];
+  const sortTriggerLabel =
+    selectedSort === "recommended" ? defaultSortLabel : selectedSortLabel;
   return (
     <div className={styles.summary} data-slot="dealer-inventory-summary">
       <output
@@ -54,7 +60,11 @@ export function DealerInventorySummary({
           }}
           type="button"
         >
-          <SlidersHorizontal aria-hidden="true" size={18} />
+          <SlidersHorizontal
+            aria-hidden="true"
+            className={styles.controlIcon}
+            size={18}
+          />
           <span>{isBg ? "Филтри" : "Filters"}</span>
           {filterCount > 0 ? (
             <span className={styles.filterBadge}>{filterCount}</span>
@@ -69,14 +79,15 @@ export function DealerInventorySummary({
           <SelectTrigger
             aria-label={isBg ? "Подреждане" : "Sort order"}
             className={styles.sort}
+            title={sortTriggerLabel}
           >
-            <span className={styles.sortLabel}>
-              {isBg ? "Подреди:" : "Sort:"}
-            </span>
-            <SelectValue>
-              {isBg
-                ? marketplaceSortLabelsBg[selectedSort]
-                : filterLabels.sort[selectedSort]}
+            <ArrowUpDown
+              aria-hidden="true"
+              className={styles.controlIcon}
+              size={18}
+            />
+            <SelectValue className={styles.sortValue}>
+              <span className={styles.sortText}>{sortTriggerLabel}</span>
             </SelectValue>
           </SelectTrigger>
           <SelectContent align="end" className={styles.sortMenu} sideOffset={6}>

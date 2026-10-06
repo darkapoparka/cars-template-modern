@@ -10,19 +10,29 @@ const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-for (const width of [1024, 1440, 1920]) {
+for (const width of [1024, 1280, 1440, 1920]) {
   for (const locale of ["en", "bg"] as const) {
     test(`desktop keeps the Home 10 frame and stock visible below its search (${locale}, ${width}px)`, async ({
       page,
     }) => {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(`/${locale}`);
+      await expect(
+        page.locator('[data-slot="public-route-loading-content"]')
+      ).toBeHidden();
       const pageWidth = await page
         .locator("body")
         .evaluate((element) => element.getBoundingClientRect().width);
       const header = page.locator(
         '[data-slot="dealer-desktop-header"]:visible'
       );
+      await expect(header).toBeVisible();
+      await page.evaluate(async () => {
+        await document.fonts.ready;
+      });
+      await expect
+        .poll(async () => (await header.boundingBox())?.height)
+        .toBe(90);
       const headerBox = await header.boundingBox();
       expect(headerBox?.height).toBe(90);
       expect(headerBox?.x).toBe(0);
@@ -37,9 +47,8 @@ for (const width of [1024, 1440, 1920]) {
       const heroBox = await hero.boundingBox();
       expect(heroBox?.x).toBeGreaterThanOrEqual(40);
       expect(heroBox?.y).toBe(90);
-      expect(heroBox?.height).toBeGreaterThanOrEqual(400);
-      expect(heroBox?.height).toBeLessThanOrEqual(440);
-      expect(heroBox?.width).toBeLessThanOrEqual(1320);
+      expect(heroBox?.height).toBe(352);
+      expect(heroBox?.width).toBeLessThanOrEqual(1400);
       expect((heroBox?.x ?? 0) + (heroBox?.width ?? 0)).toBeLessThanOrEqual(
         pageWidth - 40
       );
@@ -70,9 +79,67 @@ for (const width of [1024, 1440, 1920]) {
         await hero.evaluate(
           (element) => getComputedStyle(element).backgroundImage
         )
-      ).toContain("desktop-boxcars/hero.jpg");
+      ).toContain("linear-gradient");
+      await expect(hero).toHaveAttribute("data-appearance", "vehicles");
+      await expect(
+        hero.getByText(
+          locale === "bg"
+            ? "Разгледайте наличните автомобили и уговорете оглед."
+            : "Browse available cars and arrange a viewing.",
+          { exact: true }
+        )
+      ).toHaveCount(0);
+      const vehicleScene = hero.locator(
+        '[data-slot="dealer-desktop-hero-vehicles"]'
+      );
+      if (width < 1200) {
+        await expect(vehicleScene).toBeHidden();
+      } else {
+        await expect(vehicleScene).toBeVisible();
+        await expect
+          .poll(() =>
+            vehicleScene
+              .locator("img")
+              .evaluateAll((images) =>
+                images.every(
+                  (image) => (image as HTMLImageElement).naturalWidth === 1000
+                )
+              )
+          )
+          .toBe(true);
+      }
       const search = hero.locator("form");
-      expect((await search.boundingBox())?.height).toBe(76);
+      const searchBox = await search.boundingBox();
+      const headingBox = await hero.locator("h1").boundingBox();
+      expect(searchBox?.height).toBe(64);
+      expect(searchBox?.y).toBe(240);
+      expect(headingBox?.y).toBe(168);
+      expect(headingBox?.height).toBe(48);
+      const searchButton = hero.getByRole("button", {
+        name: locale === "bg" ? "Търси" : "Search",
+        exact: true,
+      });
+      const searchButtonBox = await searchButton.boundingBox();
+      expect(searchButtonBox?.width).toBe(48);
+      expect(searchButtonBox?.height).toBe(48);
+      await expect(searchButton.locator("span")).toBeHidden();
+      const vehicleBoxes = await vehicleScene
+        .locator("picture")
+        .evaluateAll((pictures) =>
+          pictures.map((picture) => {
+            const { x, y, width, height } = picture.getBoundingClientRect();
+            return { x, y, width, height };
+          })
+        );
+      const types = hero.locator('[data-slot="desktop-home-types"]');
+      await expect(types.getByRole("button")).toHaveCount(4);
+      const typesBox = await types.boundingBox();
+      expect(typesBox?.y).toBeGreaterThanOrEqual(
+        ((await search.boundingBox())?.y ?? 0) + 64 + 20
+      );
+      expect((typesBox?.y ?? 0) + (typesBox?.height ?? 0)).toBeLessThanOrEqual(
+        (heroBox?.y ?? 0) + 352 - 32
+      );
       const stock = page.locator('[data-slot="home-stock-panel"]');
       const stockBox = await stock.boundingBox();
       expect(stockBox?.x).toBe(heroBox?.x);
@@ -86,8 +153,27 @@ for (const width of [1024, 1440, 1920]) {
           (element) =>
             getComputedStyle(element).gridTemplateColumns.split(" ").length
         )
-      ).toBe(width < 1200 ? 3 : 4);
-      await expect(stockGrid.locator("article")).toHaveCount(8);
+      ).toBe(width < 1200 ? 2 : 4);
+      await expect(stockGrid.locator("article")).toHaveCount(4);
+      const stockActionBox = await stock
+        .getByRole("link", {
+          name: locale === "bg" ? "Виж всички автомобили" : "View all cars",
+        })
+        .boundingBox();
+      const stockGridBox = await stockGrid.boundingBox();
+      expect(stockGridBox?.x).toBe(stockBox?.x);
+      expect(stockGridBox?.width).toBe(stockBox?.width);
+      expect(stockActionBox?.y).toBeGreaterThanOrEqual(
+        (stockGridBox?.y ?? 0) + (stockGridBox?.height ?? 0) + 20
+      );
+      expect(
+        Math.abs(
+          (stockActionBox?.x ?? 0) +
+            (stockActionBox?.width ?? 0) / 2 -
+            (stockBox?.x ?? 0) -
+            (stockBox?.width ?? 0) / 2
+        )
+      ).toBeLessThan(1);
       const imageSizes = await stockGrid
         .locator("article img")
         .first()
@@ -116,12 +202,13 @@ for (const width of [1024, 1440, 1920]) {
         });
       expect(
         Math.abs(imageSizes.hintedWidth - imageSizes.renderedWidth)
-      ).toBeLessThanOrEqual(2);
+        // Image hints use viewport units; the grid also reserves the OS gutter.
+      ).toBeLessThanOrEqual(2 + (width - pageWidth) / (width < 1200 ? 2 : 4));
       expect(
         (await stockGrid.locator("article").first().boundingBox())?.y
       ).toBeLessThan(800);
       if (width === 1440 && locale === "en") {
-        expect((await search.boundingBox())?.width).toBe(1090);
+        expect(searchBox?.width).toBe(900);
         expect(
           await hero
             .locator("h1")
@@ -129,7 +216,7 @@ for (const width of [1024, 1440, 1920]) {
               Number.parseFloat(getComputedStyle(element).fontSize)
             )
           // The OS gutter slightly trims the width used by responsive vw type.
-        ).toBeCloseTo(52, 0);
+        ).toBe(40);
       }
       for (const path of [
         "/cars",
@@ -149,6 +236,15 @@ for (const width of [1024, 1440, 1920]) {
           page.locator(desktopHeroSelector).locator("h1").first()
         ).toBeVisible();
         expect(await header.boundingBox()).toEqual(headerBox);
+        const sharedBanner = page.locator(
+          path === "/cars"
+            ? '[data-slot="dealer-desktop-context-hero"][data-variant="inventory"]'
+            : '[data-slot="dealer-desktop-hero-banner"]'
+        );
+        const sharedBannerBox = await sharedBanner.boundingBox();
+        expect(sharedBannerBox?.x).toBe(heroBox?.x);
+        expect(sharedBannerBox?.width).toBe(heroBox?.width);
+        expect(sharedBannerBox?.height).toBe(352);
         if (path === "/cars") {
           const inventoryHero = page.locator(
             '[data-slot="dealer-desktop-context-hero"][data-variant="inventory"]'
@@ -156,12 +252,54 @@ for (const width of [1024, 1440, 1920]) {
           const inventoryHeroBox = await inventoryHero.boundingBox();
           expect(inventoryHeroBox?.x).toBe(heroBox?.x);
           expect(inventoryHeroBox?.width).toBe(heroBox?.width);
-          expect(inventoryHeroBox?.height).toBeLessThan(heroBox?.height ?? 0);
+          expect(inventoryHeroBox?.height).toBe(heroBox?.height);
+          const inventorySearchBox = await inventoryHero
+            .getByRole("group", {
+              name:
+                locale === "bg"
+                  ? "Търсене на превозни средства"
+                  : "Vehicle search",
+              exact: true,
+            })
+            .boundingBox();
+          expect(inventorySearchBox).toEqual(searchBox);
+          expect(await inventoryHero.locator("h1").boundingBox()).toEqual(
+            headingBox
+          );
+          const inventorySearchButton = inventoryHero.getByRole("button", {
+            name: locale === "bg" ? "Търси" : "Search",
+            exact: true,
+          });
+          const inventorySearchButtonBox =
+            await inventorySearchButton.boundingBox();
+          expect(inventorySearchButtonBox?.width).toBe(searchButtonBox?.width);
+          expect(inventorySearchButtonBox?.height).toBe(
+            searchButtonBox?.height
+          );
+          expect(inventorySearchButtonBox?.y).toBe(searchButtonBox?.y);
+          // WebKit distributes a fraction of a pixel across the field columns.
+          expect(inventorySearchButtonBox?.x).toBeCloseTo(
+            searchButtonBox?.x ?? 0,
+            1
+          );
+          await expect(inventorySearchButton).toHaveText("");
+          expect(
+            await inventoryHero.locator("picture").evaluateAll((pictures) =>
+              pictures.map((picture) => {
+                const { x, y, width, height } = picture.getBoundingClientRect();
+                return { x, y, width, height };
+              })
+            )
+          ).toEqual(vehicleBoxes);
           expect(
             await inventoryHero.evaluate(
               (element) => getComputedStyle(element).backgroundImage
             )
-          ).toContain("desktop-boxcars/hero.jpg");
+          ).toContain("linear-gradient");
+          await expect(inventoryHero).toHaveAttribute(
+            "data-appearance",
+            "vehicles"
+          );
           const panel = await page
             .locator('[data-slot="dealer-inventory-panel"]:visible')
             .boundingBox();
@@ -196,24 +334,32 @@ for (const width of [1024, 1440, 1920]) {
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe((panel?.x ?? 0) + 24);
-            expect(sidebar?.y).toBe((panel?.y ?? 0) + 24);
+            const filterBar = await layout.boundingBox();
+            expect(sidebar?.y).toBe(
+              (filterBar?.y ?? 0) + (filterBar?.height ?? 0) + 24
+            );
             expect(sidebar?.y).toBe(gridBox?.y);
           }
           await selectInventoryFilterLayout(page, "quick", locale);
         }
         if (path === "/about" || path === "/contact") {
           const banner = page.locator(
-            '[data-slot="dealer-desktop-context-hero"][data-appearance="photo"] [data-slot="dealer-desktop-hero-banner"]'
+            '[data-slot="dealer-desktop-context-hero"][data-appearance="neutral"] [data-slot="dealer-desktop-hero-banner"]'
           );
           const bannerBox = await banner.boundingBox();
           expect(bannerBox?.x).toBe(heroBox?.x);
           expect(bannerBox?.width).toBe(heroBox?.width);
-          expect(bannerBox?.height).toBe(224);
+          expect(bannerBox?.height).toBe(352);
           expect(
             await banner.evaluate(
               (element) => getComputedStyle(element).backgroundImage
             )
-          ).toContain("desktop-boxcars/hero.jpg");
+          ).toContain("images/desktop/showroom-editorial-v1.webp");
+          expect(
+            await banner.evaluate(
+              (element) => getComputedStyle(element).backgroundColor
+            )
+          ).toBe("rgb(237, 237, 237)");
           const contentLabel =
             path === "/about"
               ? {
@@ -257,8 +403,8 @@ for (const width of [1024, 1440, 1920]) {
               }
             }
             await expect(
-              page.locator('[data-slot="about-benefits"]').getByRole("listitem")
-            ).toHaveCount(4);
+              page.locator('[data-slot="about-benefits"]')
+            ).toHaveCount(0);
           }
         }
         expect(
@@ -270,6 +416,49 @@ for (const width of [1024, 1440, 1920]) {
     });
   }
 }
+
+test("desktop loading hero matches the finished Home search frame", async ({
+  page,
+}) => {
+  for (const width of [1024, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto("/en");
+    await expect(
+      page.locator('[data-slot="public-route-loading-content"]')
+    ).toBeHidden();
+    const home = page.locator('[data-slot="dealer-desktop-home-hero"]:visible');
+    const heroBox = await home.boundingBox();
+    const headingBox = await home.locator("h1").boundingBox();
+    const searchBox = await home.locator("form").boundingBox();
+
+    // Freeze the real streamed server fallback before React replaces it.
+    const response = await page.request.get("/en");
+    const shell = (await response.text()).replace(
+      /<script\b[^>]*>[\s\S]*?<\/script>/g,
+      ""
+    );
+    expect(shell).toContain('data-slot="dealer-desktop-loading"');
+    await page.route("**/en", (route) =>
+      route.fulfill({ body: shell, contentType: "text/html", status: 200 })
+    );
+    try {
+      await page.reload();
+      const loading = page.locator(
+        '[data-slot="dealer-desktop-home-hero"][data-loading="true"]:visible'
+      );
+      await expect(loading).toBeVisible();
+      expect(await loading.boundingBox()).toEqual(heroBox);
+      expect((await loading.locator("h1").boundingBox())?.y).toBe(
+        headingBox?.y
+      );
+      expect(
+        await loading.locator("[data-desktop-action-panel]").boundingBox()
+      ).toEqual(searchBox);
+    } finally {
+      await page.unroute("**/en");
+    }
+  }
+});
 
 test("desktop navigation keeps the header stable through loading", async ({
   page,
@@ -331,6 +520,79 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
+for (const locale of ["bg", "en"]) {
+  test(`home vehicle pills keep the search draft and route to the selected type (${locale})`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    for (const [category, path] of [
+      ["car", "cars"],
+      ["motorbike", "motorbikes"],
+      ["van", "vans"],
+      ["truck", "trucks"],
+    ]) {
+      await page.goto(`/${locale}`);
+      await expect(
+        page.locator('[data-slot="public-route-loading-content"]')
+      ).toBeHidden();
+      const hero = page.locator(
+        '[data-slot="dealer-desktop-home-hero"]:visible'
+      );
+      const make = hero.locator('[data-slot="desktop-hero-make"]');
+      const applyLabel = locale === "bg" ? "Приложи" : "Apply";
+      const dialog = page.getByRole("dialog");
+      await make.focus();
+      await page.keyboard.press("Enter");
+      await dialog.getByRole("button", { name: "BMW", exact: true }).click();
+      await dialog
+        .getByRole("button", { name: applyLabel, exact: true })
+        .click();
+      await expect(dialog).toBeHidden();
+      await expect(make).toBeFocused();
+      await expect(make).toContainText("BMW");
+      const price = hero.locator('[data-slot="desktop-hero-price"]');
+      await price.focus();
+      await page.keyboard.press("Enter");
+      await dialog
+        .getByRole("button", {
+          name: locale === "bg" ? "До 40 000 лв." : "Up to 40,000 BGN",
+          exact: true,
+        })
+        .click();
+      await dialog
+        .getByRole("button", { name: applyLabel, exact: true })
+        .click();
+      await expect(dialog).toBeHidden();
+      await expect(price).toBeFocused();
+      const pills = hero.locator('[data-slot="desktop-home-types"]');
+      const selected = pills.locator(`[data-category="${category}"]`);
+      await selected.focus();
+      await expect(selected).toBeFocused();
+      await page.keyboard.press("Space");
+      await expect(selected).toHaveAttribute("aria-pressed", "true");
+      await expect(pills.locator('[aria-pressed="true"]')).toHaveCount(1);
+      await expect(make).not.toContainText("BMW");
+      expect(new URL(page.url()).pathname).toBe(`/${locale}`);
+      await make.focus();
+      await page.keyboard.press("Enter");
+      // This demo supplies passenger-car taxonomy and no stock in the other types.
+      await expect(
+        dialog.getByRole("button", { name: "Audi", exact: true })
+      ).toHaveCount(category === "car" ? 1 : 0);
+      await page.keyboard.press("Escape");
+      await expect(dialog).toBeHidden();
+      await hero.locator('[data-slot="desktop-hero-submit"]').click();
+      await expect
+        .poll(() => new URL(page.url()).pathname)
+        .toBe(`/${locale}/${path}`);
+      const query = new URL(page.url()).searchParams;
+      expect(query.get("priceMax")).toBe("40000");
+      expect(query.get("make")).toBeNull();
+      expect(query.get("model")).toBeNull();
+    }
+  });
+}
+
 test("home search and inventory sidebar apply drafts without losing filters", async ({
   page,
 }) => {
@@ -339,12 +601,12 @@ test("home search and inventory sidebar apply drafts without losing filters", as
     await page.setViewportSize({ width, height: 1000 });
     await page.goto("/en");
     const home = page.locator('[data-slot="dealer-desktop-toolbar"]:visible');
-    for (const slot of ["category", "make", "model", "price"]) {
+    for (const slot of ["make", "model", "price"]) {
       await expect(
         home.locator(`[data-slot="desktop-hero-${slot}"]`)
       ).toBeVisible();
     }
-    for (const slot of ["year", "mileage"]) {
+    for (const slot of ["category", "year", "mileage"]) {
       await expect(
         home.locator(`[data-slot="desktop-hero-${slot}"]`)
       ).toBeHidden();

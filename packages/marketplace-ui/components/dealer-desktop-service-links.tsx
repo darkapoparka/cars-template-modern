@@ -8,18 +8,13 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
 import Image from "./public-image";
 
+const artwork =
+  publicSite.artwork.desktopServiceCards ?? publicSite.artwork.desktopServices;
 const serviceArtwork: Record<string, string> = {
-  "/cars?sort=newest":
-    publicSite.artwork.desktopServices?.browse ??
-    publicSite.artwork.financePromotion,
-  "/sell":
-    publicSite.artwork.desktopServices?.sell ?? publicSite.artwork.sellHero,
-  "/lease":
-    publicSite.artwork.desktopServices?.finance ??
-    publicSite.artwork.financePromotion,
-  "/imports":
-    publicSite.artwork.desktopServices?.imports ??
-    publicSite.artwork.importHero,
+  "/cars?sort=newest": artwork?.browse ?? publicSite.artwork.financePromotion,
+  "/sell": artwork?.sell ?? publicSite.artwork.sellHero,
+  "/lease": artwork?.finance ?? publicSite.artwork.financePromotion,
+  "/imports": artwork?.imports ?? publicSite.artwork.importHero,
 };
 const serviceActions: Record<string, { bg: string; en: string }> = {
   "/cars?sort=newest": { bg: "Виж автомобилите", en: "Explore cars" },

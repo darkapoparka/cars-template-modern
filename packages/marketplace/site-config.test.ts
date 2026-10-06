@@ -7,6 +7,30 @@ const dealer = (overrides: Partial<typeof leadSite> = {}) =>
   createPublicSiteConfig({ ...leadSite, ...overrides });
 
 describe("public dealership configuration", () => {
+  it("exposes the services index only when a dealer offers a vehicle service", () => {
+    const services = {
+      buy: false,
+      sell: false,
+      imports: false,
+      lease: false,
+      editorial: true,
+    };
+    expect(isPublicSitePathEnabled("/services", dealer({ services }))).toBe(
+      false
+    );
+    expect(
+      isPublicSitePathEnabled(
+        "/bg/services",
+        dealer({ services: { ...services, imports: true } })
+      )
+    ).toBe(true);
+    expect(
+      isPublicSitePathEnabled(
+        "/en/services",
+        dealer({ services: { ...services, lease: true } })
+      )
+    ).toBe(true);
+  });
   it("supports a dealer-specific desktop filter layout and rejects unknown layouts", () => {
     expect(dealer().inventory?.desktopFilterLayout).toBe("quick");
     expect(
@@ -51,6 +75,55 @@ describe("public dealership configuration", () => {
           desktopPageBanner: {
             left: "//external.test/a.webp",
             right: "/right.webp",
+          },
+        },
+      })
+    ).toThrow();
+  });
+  it("adapts the About illustration set and validates its asset paths", () => {
+    const source = dealer();
+    const aboutBenefits = {
+      choice: "/dealer/choice.webp",
+      details: "/dealer/details.webp",
+      budget: "/dealer/budget.webp",
+      viewing: "/dealer/viewing.webp",
+    };
+    const adapted = dealer({ artwork: { aboutBenefits } });
+    expect(adapted.artwork.aboutBenefits).toEqual(aboutBenefits);
+    expect(adapted.artwork.financeHero).toBe(source.artwork.financeHero);
+    expect(source.artwork.aboutBenefits?.choice).toBe(
+      "/images/about/charcoal-choice-v1.webp"
+    );
+    expect(() =>
+      dealer({
+        artwork: {
+          aboutBenefits: { ...aboutBenefits, choice: "//external.test/a.webp" },
+        },
+      })
+    ).toThrow();
+  });
+  it("adapts desktop service cards independently and respects older dealer sets", () => {
+    const source = dealer();
+    const cards = {
+      browse: "/dealer/cards-browse.webp",
+      sell: "/dealer/cards-sell.webp",
+      finance: "/dealer/cards-finance.webp",
+      imports: "/dealer/cards-imports.webp",
+    };
+    const adapted = dealer({ artwork: { desktopServiceCards: cards } });
+    expect(adapted.artwork.desktopServiceCards).toEqual(cards);
+    expect(adapted.artwork.desktopServices).toEqual(
+      source.artwork.desktopServices
+    );
+    const legacy = dealer({ artwork: { desktopServices: cards } });
+    expect(legacy.artwork.desktopServiceCards).toEqual(cards);
+    expect(legacy.artwork.desktopServices).toEqual(cards);
+    expect(() =>
+      dealer({
+        artwork: {
+          desktopServiceCards: {
+            ...cards,
+            imports: "//external.test/cargo.webp",
           },
         },
       })
@@ -206,4 +279,60 @@ it("rejects unsafe scene URLs", () => {
   expect(() =>
     dealer({ artwork: { heroScene: "https://example.invalid/scene.webp" } })
   ).toThrow();
+});
+
+describe("desktop discovery vehicles", () => {
+  it("supports a complete dealer pair with independent geometry", () => {
+    const master = dealer();
+    const pair = {
+      left: {
+        src: "/dealer/left.webp",
+        width: 1200,
+        height: 800,
+        baseline: 650,
+      },
+      right: {
+        src: "/dealer/right.webp",
+        width: 900,
+        height: 600,
+        baseline: 480,
+        mirrored: true,
+      },
+    };
+    const adapted = dealer({ artwork: { desktopDiscoveryVehicles: pair } });
+    expect(adapted.artwork.desktopDiscoveryVehicles).toEqual(pair);
+    expect(adapted.artwork.heroScene).toBe(master.artwork.heroScene);
+    expect(master.artwork.desktopDiscoveryVehicles?.left.mirrored).toBe(true);
+  });
+
+  it.each([
+    { desktopHeroScene: "/dealer/desktop.webp" },
+    { heroScene: "/dealer/scene.webp" },
+    { heroLeft: "/dealer/cutout.webp" },
+    { heroRight: "/dealer/cutout.webp" },
+    { desktopDiscoveryVehicles: undefined },
+  ])("preserves explicitly personalized legacy artwork: %j", (artwork) => {
+    expect(
+      dealer({ artwork }).artwork.desktopDiscoveryVehicles
+    ).toBeUndefined();
+  });
+
+  it("rejects incomplete pairs, unsafe paths and invalid baseline geometry", () => {
+    const source = dealer();
+    const pair = source.artwork.desktopDiscoveryVehicles;
+    expect(pair).toBeDefined();
+    for (const replacement of [
+      { left: pair?.left },
+      { ...pair, left: { ...pair?.left, src: "//external.test/car.webp" } },
+      { ...pair, left: { ...pair?.left, baseline: 668 } },
+      { ...pair, right: { ...pair?.right, width: 0 } },
+    ]) {
+      expect(() =>
+        publicSiteSchema.parse({
+          ...source,
+          artwork: { ...source.artwork, desktopDiscoveryVehicles: replacement },
+        })
+      ).toThrow();
+    }
+  });
 });

@@ -119,8 +119,6 @@ export default async function ChineseCollectionPage({
           isDealershipSite
             ? {
                 title: copy.title,
-                description: copy.description,
-                eyebrow: copy.badge,
                 variant: "compact",
               }
             : undefined
@@ -221,8 +219,6 @@ export default async function ChineseCollectionPage({
           isDealershipSite
             ? {
                 title: copy.title,
-                description: copy.description,
-                eyebrow: copy.badge,
                 variant: "compact",
               }
             : undefined

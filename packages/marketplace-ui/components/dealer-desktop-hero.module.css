@@ -1,14 +1,12 @@
-.hero {
+.hero,
+.copy,
+.vehicleScene,
+.actions {
   display: none;
 }
+
 .hero[data-variant="service"] {
   display: block;
-}
-.copy {
-  display: none;
-}
-.breadcrumb {
-  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -19,168 +17,47 @@
     z-index: var(--desktop-layer-hero);
     display: flex;
     flex-direction: column;
-    gap: 0;
     align-items: center;
-    padding: calc(var(--spacing) * 11) 0 calc(var(--spacing) * 11);
+    padding: 0;
     color: var(--foreground);
     background: var(--desktop-surface);
     isolation: isolate;
   }
-  .copy {
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: var(--desktop-content-width);
-    text-align: left;
-  }
-  .breadcrumb {
-    display: flex;
-    gap: calc(var(--spacing) * 2.5);
-    align-items: center;
-    width: var(--desktop-content-width);
-    min-height: calc(var(--spacing) * 8);
-    margin: 0 auto calc(var(--spacing) * 5);
-    font-size: calc(var(--spacing) * 3.5);
-    line-height: calc(var(--spacing) * 6);
-  }
-  .breadcrumb a {
-    color: var(--brand-text);
-  }
-  .copy h1 {
-    margin: 0;
-    font-size: var(--text-desktop-hero);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-tight);
-    letter-spacing: calc(var(--spacing) * -0.3);
-    text-wrap: balance;
-  }
-  .description {
-    max-width: calc(var(--spacing) * 168);
-    margin: calc(var(--spacing) * 4) 0 0;
-    font-size: var(--text-desktop-lead);
-    line-height: var(--desktop-leading-prose);
-    color: var(--muted-foreground);
-    text-wrap: pretty;
-  }
-  .eyebrow {
-    margin: 0 0 calc(var(--spacing) * 4);
-    font-size: var(--text-meta);
-    line-height: var(--desktop-leading-copy);
-    color: var(--muted-foreground);
-  }
-  .hero[data-variant="landing"] {
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 0;
-    height: var(--desktop-home-hero-height);
-    min-height: var(--desktop-home-hero-height);
-  }
-  .hero[data-variant="landing"] .copy {
-    grid-row: 1;
-    align-self: end;
-    justify-self: center;
-    width: min(100% - calc(var(--spacing) * 12), calc(var(--spacing) * 285));
-    padding-bottom: calc(var(--spacing) * 6);
-    text-align: center;
-  }
-  .hero[data-variant="landing"] h1 {
-    font-size: clamp(
-      calc(var(--spacing) * 10),
-      4.2vw,
-      calc(var(--spacing) * 13)
-    );
-    line-height: var(--desktop-leading-display);
-    letter-spacing: var(--desktop-heading-tracking);
-  }
-  .hero[data-variant="landing"] .description {
-    max-width: none;
-    margin-top: calc(var(--spacing) * 5);
-    color: var(--inverse-foreground);
-  }
-  .hero[data-variant="landing"] .eyebrow {
-    margin-bottom: calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 3.75);
-    font-weight: var(--font-weight-normal);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--inverse-foreground);
-  }
-  .hero[data-variant="page"] .copy {
-    text-align: center;
-  }
-  .hero[data-variant="page"] .description {
-    max-width: calc(var(--spacing) * 160);
-    margin: calc(var(--spacing) * 4) auto 0;
-    font-size: calc(var(--spacing) * 4);
-    line-height: calc(var(--spacing) * 6.5);
-  }
-  .serviceContent {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    color: var(--foreground);
-  }
-  .hero[data-variant="service"] .serviceContent {
-    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 14);
-    margin-top: calc(var(--spacing) * 9);
-    background: var(--desktop-service-canvas);
-  }
-  .hero[data-variant="service"] {
-    padding-bottom: 0;
-    background: var(--desktop-surface);
-  }
-  .hero[data-variant="service"] .copy {
-    text-align: center;
-  }
-  .hero[data-variant="service"] .description {
-    max-width: calc(var(--spacing) * 160);
-    margin: calc(var(--spacing) * 4) auto 0;
-    font-size: calc(var(--spacing) * 4);
-    line-height: calc(var(--spacing) * 6.5);
-  }
-  .loadingPanelFrame {
-    position: relative;
-    z-index: 1;
-    width: var(--desktop-content-width);
-  }
-  .loadingPanelFrame [data-desktop-action-panel] {
-    min-height: calc(var(--spacing) * 51.5);
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-  }
-  .copy .loadingTitle {
-    max-width: calc(var(--spacing) * 96);
-    color: transparent;
-    background: var(--control);
-    border-radius: var(--radius-sm);
-  }
-  .loadingFields {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 3);
-  }
-  .loadingFields > div {
-    height: calc(var(--spacing) * 14);
-    background: var(--control);
-    border-radius: calc(var(--spacing) * 2);
-  }
-}
 
-/* The curated Boxcar banner is desktop only; mobile retains its existing chrome. */
-@media (min-width: 1024px) {
-  .hero:not([data-variant="landing"], [data-variant="inventory"]) {
-    padding: 0;
-    background: var(--desktop-surface);
+  .hero:is([data-variant="landing"], [data-variant="inventory"]) {
+    gap: calc(var(--spacing) * 6);
+    justify-content: center;
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    min-height: var(--desktop-banner-height);
+    padding: calc(var(--spacing) * 8);
+    margin-inline: auto;
+    color: var(--inverse-foreground);
+    background-color: var(--inverse);
+    background-image:
+      linear-gradient(
+        180deg,
+        var(--desktop-hero-overlay-top) 0%,
+        var(--desktop-hero-overlay-middle) 55%,
+        var(--desktop-hero-overlay-bottom) 100%
+      ),
+      var(--desktop-hero-scene, none);
+    background-position: center 95%;
+    background-size: cover;
+    border-radius: var(--radius-desktop-frame);
   }
+
   .banner {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    min-height: calc(var(--spacing) * 45);
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    min-height: var(--desktop-banner-height);
     padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
+    margin-inline: auto;
     overflow: hidden;
     background: linear-gradient(
       110deg,
@@ -188,18 +65,16 @@
       var(--desktop-banner-center) 55%,
       var(--desktop-banner-end) 100%
     );
+    border-radius: var(--radius-desktop-frame);
     isolation: isolate;
   }
+
   .banner::before {
     position: absolute;
     top: calc(var(--spacing) * -51.25);
     left: max(
       calc(var(--spacing) * -30),
-      calc(
-        (100% - var(--desktop-showroom-max)) /
-        2 -
-        calc(var(--spacing) * 42.5)
-      )
+      calc((100% - var(--desktop-showroom-max)) / 2 - var(--spacing) * 42.5)
     );
     width: calc(var(--spacing) * 110);
     height: calc(var(--spacing) * 110);
@@ -211,6 +86,7 @@
       0 0 0 calc(var(--spacing) * 14) var(--desktop-banner-orbit-middle),
       0 0 0 calc(var(--spacing) * 28) var(--desktop-banner-orbit-outer);
   }
+
   .banner::after {
     position: absolute;
     top: 0;
@@ -233,48 +109,23 @@
       right calc(var(--spacing) * -2) bottom calc(var(--spacing) * 2);
     background-size: calc(var(--spacing) * 75) auto;
   }
-  .hero:not([data-variant="landing"]) .breadcrumb {
-    position: relative;
-    z-index: 1;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: calc(var(--spacing) * 6);
-    padding: 0;
-    margin: 0 0 calc(var(--spacing) * 2);
-    font-size: calc(var(--spacing) * 3.25);
-    line-height: calc(var(--spacing) * 5);
-    color: var(--desktop-breadcrumb-text);
+
+  .banner[data-has-actions="true"] {
+    gap: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 8);
   }
-  .hero:not([data-variant="landing"]) .copy {
-    width: min(100%, calc(var(--spacing) * 125));
+
+  .hero[data-variant="inventory"] .banner {
+    width: 100%;
+    max-width: none;
     min-height: 0;
     padding: 0;
-    text-align: center;
+    background: transparent;
+    border-radius: 0;
   }
-  .hero:not([data-variant="landing"]) .copy h1 {
-    font-size: calc(var(--spacing) * 10);
-    line-height: calc(var(--spacing) * 12.5);
-    letter-spacing: calc(var(--spacing) * -0.3);
-  }
-  .hero:not([data-variant="landing"]) .description {
-    max-width: calc(var(--spacing) * 125);
-    margin: calc(var(--spacing) * 2.5) auto 0;
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6.5);
-    color: var(--desktop-description-text);
-  }
-  .hero[data-variant="service"] .serviceContent {
-    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
-    margin: 0;
-    background: var(--desktop-surface);
-  }
-  .hero:is([data-variant="landing"], [data-variant="inventory"]),
+
   .hero[data-appearance="photo"] .banner {
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-showroom-max);
-    padding: 0;
-    margin-inline: auto;
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
     color: var(--inverse-foreground);
     background-color: var(--inverse);
     background-image:
@@ -285,66 +136,289 @@
         var(--desktop-hero-overlay-bottom) 100%
       ),
       var(--desktop-hero-scene, none);
+    background-position: center 95%;
+    background-size: cover;
+  }
+
+  .hero[data-appearance="neutral"] .banner {
+    padding: calc(var(--spacing) * 8);
+    color: var(--foreground);
+    background-color: var(--desktop-discovery-surface);
+    background-image:
+      linear-gradient(
+        90deg,
+        var(--desktop-context-artwork-edge) 0%,
+        var(--desktop-context-artwork-center) 32%,
+        var(--desktop-context-artwork-center) 68%,
+        var(--desktop-context-artwork-edge) 100%
+      ),
+      var(--desktop-hero-scene, none);
     background-position: center;
     background-size: cover;
-    border-radius: var(--radius-desktop-frame);
   }
-  .hero[data-appearance="photo"] .banner {
-    min-height: calc(var(--spacing) * 56);
-    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
-  }
-  .hero[data-variant="landing"] {
-    background-position: center 95%;
-  }
-  .hero[data-variant="inventory"] {
-    gap: calc(var(--spacing) * 6);
-    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
-  }
-  .hero[data-variant="inventory"] .banner {
-    min-height: 0;
-    padding: 0;
-    background: transparent;
-  }
-  .hero[data-variant="inventory"],
-  .hero[data-appearance="photo"] .banner {
-    background-position: center 95%;
-  }
-  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+
+  .hero[data-variant="inventory"] .banner::before,
+  .hero[data-variant="inventory"] .banner::after,
+  .hero:is([data-appearance="photo"], [data-appearance="neutral"])
     .banner::before,
-  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+  .hero:is([data-appearance="photo"], [data-appearance="neutral"])
     .banner::after {
     display: none;
   }
-  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .copy {
+
+  .discoveryHeading {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    width: 100%;
+  }
+
+  .copy {
+    position: relative;
+    z-index: 1;
+    display: block;
     width: min(100%, calc(var(--spacing) * 225));
+    min-height: var(--text-desktop-hero--line-height);
+    text-align: center;
   }
-  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb,
-  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb a,
-  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .description {
-    color: var(--inverse-foreground);
+
+  .copy h1 {
+    margin: 0;
+    font-size: var(--text-desktop-hero);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-hero--line-height);
+    letter-spacing: var(--desktop-heading-tracking);
+    text-wrap: balance;
   }
-  .hero:is([data-variant="inventory"], [data-appearance="photo"])
-    .breadcrumb
-    a:hover {
-    text-decoration: underline;
-    text-underline-offset: var(--spacing);
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 3);
+    margin: 0 0 calc(var(--spacing) * 3);
+    font-size: var(--text-desktop-support);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--text-desktop-support--line-height);
+    color: var(--desktop-muted-text);
+    text-wrap: balance;
+    background: color-mix(in srgb, var(--panel) 75%, transparent);
+    border: var(--desktop-border-width) solid
+      color-mix(in srgb, var(--foreground) 7%, transparent);
+    border-radius: calc(var(--spacing) * 2);
   }
-  .hero:is([data-variant="inventory"], [data-appearance="photo"])
-    .breadcrumb
-    a:focus-visible {
-    outline: var(--desktop-focus-width) solid currentcolor;
+
+  .actions {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    max-width: 100%;
+    min-height: calc(var(--spacing) * 12);
+    margin-inline: auto;
+  }
+
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 6);
+    font-size: var(--text-desktop-control);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--text-desktop-control--line-height);
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border: var(--desktop-border-width) solid var(--brand);
+    border-radius: var(--radius-pill);
+    transition:
+      background-color var(--duration-interaction),
+      border-color var(--duration-interaction);
+  }
+
+  .action:hover {
+    background: var(--lead-site-accent-hover);
+    border-color: var(--lead-site-accent-hover);
+  }
+
+  .action[data-secondary="true"] {
+    color: var(--foreground);
+    background: var(--panel);
+    border-color: var(--border);
+  }
+
+  .action[data-secondary="true"]:hover {
+    background: var(--panel);
+    border-color: var(--desktop-border-hover);
+  }
+
+  .action:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--brand);
     outline-offset: var(--desktop-focus-offset);
-    border-radius: var(--radius-sm);
   }
-  .hero[data-appearance="photo"][data-variant="service"] .serviceContent {
+
+  .serviceContent {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
+    color: var(--foreground);
+    background: var(--desktop-surface);
+  }
+
+  .hero:is([data-appearance="photo"], [data-appearance="neutral"])
+    .serviceContent {
     padding-top: 0;
     margin-top: calc(var(--spacing) * 10);
+  }
+
+  .discoveryControls,
+  .loadingPanelFrame {
+    position: relative;
+    z-index: var(--desktop-layer-raised);
+    width: var(--desktop-content-width);
+  }
+
+  .hero:is([data-variant="landing"], [data-variant="inventory"])
+    :is(.discoveryControls, .loadingPanelFrame) {
+    width: min(100%, var(--desktop-discovery-search-width));
+    min-height: calc(var(--spacing) * 30);
+  }
+
+  .loadingPanelFrame [data-desktop-action-panel] {
+    min-height: calc(var(--spacing) * 51.5);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .hero:is([data-variant="landing"], [data-variant="inventory"])
+    .loadingPanelFrame
+    [data-desktop-action-panel] {
+    height: calc(var(--spacing) * 16);
+    min-height: calc(var(--spacing) * 16);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 2.5);
+    background: var(--panel);
+    border-radius: var(--radius-pill);
+  }
+
+  .copy .loadingTitle {
+    max-width: calc(var(--spacing) * 96);
+    color: transparent;
+    background: var(--control);
+    border-radius: var(--radius-sm);
+  }
+
+  .loadingFields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .loadingFields > div {
+    height: calc(var(--spacing) * 14);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2);
+  }
+
+  .hero:is([data-variant="landing"], [data-variant="inventory"])
+    .loadingFields {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) calc(var(--spacing) * 12);
+  }
+
+  .hero:is([data-variant="landing"], [data-variant="inventory"])
+    .loadingFields
+    > div {
+    height: calc(var(--spacing) * 12);
+  }
+
+  .hero[data-appearance="vehicles"] {
+    /* Preserve the reviewed tyre baseline at the search capsule. */
+    --desktop-vehicle-baseline: calc(var(--spacing) * 38);
+    --desktop-hero-type-background: var(--desktop-discovery-glass-background);
+    --desktop-hero-type-border: var(--desktop-discovery-glass-border);
+    --desktop-hero-type-hover: var(--desktop-discovery-glass-hover);
+    --desktop-hero-type-hover-border: var(
+      --desktop-discovery-glass-hover-border
+    );
+    --desktop-hero-type-foreground: var(--desktop-discovery-dark-foreground);
+    --desktop-hero-type-selected-background: var(--panel);
+    --desktop-hero-type-selected-hover-background: var(
+      --desktop-discovery-selected-hover
+    );
+    --desktop-hero-type-selected-foreground: var(--foreground);
+    --desktop-hero-type-selected-artwork-filter: none;
+    --desktop-hero-type-artwork-filter: brightness(0) invert(1);
+    --desktop-hero-type-artwork-background: transparent;
+    --desktop-hero-type-focus: var(--desktop-discovery-dark-foreground);
+    overflow: hidden;
+    color: var(--desktop-discovery-dark-foreground);
+    background-color: var(--desktop-discovery-dark-surface);
+    background-image: var(--desktop-discovery-dark-background);
+  }
+
+  .vehicleScene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .vehicle {
+    --desktop-vehicle-width: var(--desktop-discovery-vehicle-width);
+    --desktop-vehicle-inset: max(
+      calc(var(--spacing) * 5),
+      calc(
+        (100% - var(--desktop-discovery-vehicle-span)) /
+        2 -
+        var(--spacing) *
+        4
+      )
+    );
+    position: absolute;
+    top: calc(
+      var(--desktop-vehicle-baseline) -
+      var(--desktop-vehicle-width) *
+      var(--desktop-vehicle-baseline-ratio)
+    );
+    width: var(--desktop-vehicle-width);
+  }
+
+  .vehicle[data-side="left"] {
+    left: var(--desktop-vehicle-inset);
+  }
+
+  .vehicle[data-side="right"] {
+    right: var(--desktop-vehicle-inset);
+  }
+
+  .vehicle img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .vehicle[data-mirrored="true"] img {
+    transform: scaleX(-1);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1240px) {
   .banner::after {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .vehicleScene {
+    display: block;
   }
 }
 

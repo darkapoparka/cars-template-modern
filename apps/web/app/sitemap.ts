@@ -39,6 +39,7 @@ const staticPaths = [
   "/sell",
   "/guides",
   "/contact",
+  "/services",
   "/legal/privacy",
   "/legal/terms",
   getImportsPath(),

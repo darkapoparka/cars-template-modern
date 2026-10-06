@@ -43,7 +43,7 @@ export interface LeadSiteConfig {
   readonly currency: LeadSiteCurrency;
   readonly desktopAccent?: string;
   readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
-  /** Source-bound master wordmark; dealer adaptation changes the slug and disables it. */
+  /** Source-bound master identity; dealer adaptation changes the slug and disables it. */
   readonly desktopPreviewIdentity?: {
     readonly sourceSlug: string;
     readonly label: string;
@@ -111,7 +111,6 @@ export const leadSite: LeadSiteConfig = {
     },
   },
   accent: "#30343b",
-  desktopAccent: "#405ff2",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",

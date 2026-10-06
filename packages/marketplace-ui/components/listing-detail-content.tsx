@@ -6,7 +6,7 @@ import {
   type Money,
   type VehicleListing,
 } from "@repo/marketplace";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
@@ -46,6 +46,12 @@ export const ListingDetailContent = ({
   trustEvidence: readonly ListingTrustEvidence[];
 }) => {
   const copy = getListingDetailCopy(locale);
+  const desktopDescription = publicSite.identity.desktopPreview
+    ? listing.description.replaceAll(
+        "Day & Night",
+        publicSite.identity.desktopPreview.shortName
+      )
+    : listing.description;
 
   return (
     <>
@@ -97,7 +103,14 @@ export const ListingDetailContent = ({
               {copy.description}
             </h2>
             <p className="whitespace-pre-line font-normal text-compact-control text-zinc-600 leading-6 lg:mt-3 lg:max-w-3xl lg:text-prose lg:text-zinc-900">
-              {listing.description}
+              {desktopDescription === listing.description ? (
+                listing.description
+              ) : (
+                <>
+                  <span className="lg:hidden">{listing.description}</span>
+                  <span className="hidden lg:inline">{desktopDescription}</span>
+                </>
+              )}
             </p>
             {isDealershipSite ? null : (
               <p className="mt-4 max-w-2xl text-meta text-zinc-500 lg:text-muted-foreground">
@@ -106,6 +119,7 @@ export const ListingDetailContent = ({
             )}
           </section>
         }
+        showDesktopEquipment={Boolean(listing.features?.length)}
         specifications={
           <ListingSpecs listing={listing} locale={locale} variant="details" />
         }

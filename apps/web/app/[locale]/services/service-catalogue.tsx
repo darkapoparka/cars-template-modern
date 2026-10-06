@@ -199,12 +199,18 @@ export function ServiceCatalogue({
   const pillProps = { bg, onSelect: setSelected, selected, services };
   return (
     <>
-      <DealerDesktopHero artwork={artwork} locale={locale} title={title}>
-        <div className={styles.discovery}>
-          <ServiceSearch {...searchProps} />
-          <ServicePills {...pillProps} />
-        </div>
-      </DealerDesktopHero>
+      <DealerDesktopHero
+        appearance="neutral"
+        artwork={artwork}
+        controls={
+          <div className={styles.discovery}>
+            <ServiceSearch {...searchProps} />
+            <ServicePills {...pillProps} />
+          </div>
+        }
+        locale={locale}
+        title={title}
+      />
       <header
         className={styles.mobileHeader}
         data-slot="mobile-services-header"

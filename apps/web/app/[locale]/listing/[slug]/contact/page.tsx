@@ -361,7 +361,6 @@ const ContactListingPage = async ({
       activeMode="buy"
       desktopIntro={{
         title: copy.title,
-        description: listing.title,
         variant: "compact",
       }}
       locale={normalizedLocale}

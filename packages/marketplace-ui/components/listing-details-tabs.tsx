@@ -18,6 +18,7 @@ interface ListingDetailsTabsProps {
   readonly mobileDetails: ReactNode;
   readonly mobilePhotos: ReactNode;
   readonly overview: ReactNode;
+  readonly showDesktopEquipment?: boolean;
   readonly specifications: ReactNode;
 }
 
@@ -47,6 +48,7 @@ export const ListingDetailsTabs = ({
   mobilePhotos,
   overview,
   specifications,
+  showDesktopEquipment = true,
 }: ListingDetailsTabsProps) => {
   const copy = getTabCopy(locale);
   const mobileTabs: readonly { id: MobileListingTabId; label: string }[] = [
@@ -190,10 +192,12 @@ export const ListingDetailsTabs = ({
           className="hidden lg:block"
           data-slot="listing-details-sections-desktop"
         >
-          {information}
+          <div data-slot="listing-vehicle-facts">
+            {information}
+            {specifications}
+          </div>
           {overview}
-          {specifications}
-          {equipment}
+          {showDesktopEquipment ? equipment : null}
         </div>
       ) : (
         <div

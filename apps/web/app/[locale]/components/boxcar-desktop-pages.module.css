@@ -76,16 +76,16 @@
   }
   .contact h2 {
     margin: 0 0 calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 7.5);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-section);
-    letter-spacing: calc(var(--spacing) * -0.2);
+    font-size: var(--text-desktop-subsection);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-subsection--line-height);
+    letter-spacing: var(--desktop-heading-tracking);
   }
   .intro {
     max-width: calc(var(--spacing) * 135);
     margin: 0 0 calc(var(--spacing) * 6.5);
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6.5);
+    font-size: var(--text-desktop-body);
+    line-height: var(--text-desktop-body--line-height);
   }
   .details {
     display: flex;
@@ -95,7 +95,6 @@
   }
   .details h2 {
     margin-bottom: calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 6);
   }
   .details .intro {
     margin-bottom: calc(var(--spacing) * 7.5);
@@ -115,12 +114,6 @@
     box-shadow: var(--desktop-surface-shadow);
     transition: box-shadow var(--duration-interaction);
   }
-  .contactCard > svg,
-  .contactCardMain > svg {
-    flex: none;
-    margin-top: calc(var(--spacing) * 0.5);
-    color: var(--brand);
-  }
   .contactCard h3 {
     margin: 0 0 calc(var(--spacing) * 1);
     font-size: calc(var(--spacing) * 3.75);
@@ -138,6 +131,9 @@
   .contactCardLink,
   .contactCardMain {
     text-decoration: none;
+  }
+  .contactCardLink {
+    padding-right: calc(var(--spacing) * 12);
   }
   :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) {
     box-shadow: var(--desktop-surface-hover-shadow);
@@ -325,9 +321,9 @@
   }
   .benefits > h2 {
     margin-bottom: calc(var(--spacing) * 8);
-    font-size: calc(var(--spacing) * 8);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-section);
+    font-size: var(--text-desktop-section);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-section--line-height);
     text-align: center;
     letter-spacing: calc(var(--spacing) * -0.2);
   }
@@ -372,6 +368,7 @@
   }
   .aboutAction {
     padding: calc(var(--spacing) * 12) calc(var(--spacing) * 7);
+    margin-top: calc(var(--spacing) * 16);
     color: var(--desktop-surface);
     text-align: center;
     background: var(--brand);
@@ -379,8 +376,9 @@
   }
   .aboutAction h2 {
     margin-bottom: calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 8);
-    font-weight: var(--font-weight-bold);
+    font-size: var(--text-desktop-section);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-section--line-height);
   }
   .aboutAction p {
     margin-bottom: calc(var(--spacing) * 6);
@@ -388,10 +386,14 @@
     line-height: calc(var(--spacing) * 6.5);
   }
   .aboutActions {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     gap: calc(var(--spacing) * 3.5);
     justify-content: center;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
   }
   .secondaryAction {
     display: inline-flex;
@@ -408,36 +410,42 @@
     border-radius: calc(var(--spacing) * 3);
   }
   .aboutActions :is(.contactAction, .secondaryAction) {
+    min-height: calc(var(--spacing) * 12);
+    padding-block: calc(var(--spacing) * 3);
     color: var(--foreground);
     background: var(--desktop-surface);
     border-color: var(--desktop-surface);
+    border-radius: var(--radius-pill);
   }
   .aboutActions :is(.contactAction, .secondaryAction):hover {
     background: var(--desktop-surface-subtle);
   }
   .aboutFaq {
-    max-width: calc(var(--spacing) * 205);
-    padding-bottom: calc(var(--spacing) * 22.5);
-    margin: calc(var(--spacing) * 19.5) auto 0;
+    padding: calc(var(--spacing) * 12);
+    margin: calc(var(--spacing) * 16) 0 calc(var(--spacing) * 22.5);
+    background: var(--desktop-support-surface);
+    border-radius: var(--radius-desktop-frame);
   }
   .aboutFaq h2 {
     margin: 0 0 calc(var(--spacing) * 7.5);
-    font-size: calc(var(--spacing) * 8);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-section);
+    font-size: var(--text-desktop-section);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-section--line-height);
     text-align: center;
     letter-spacing: calc(var(--spacing) * -0.2);
   }
   .aboutFaq details {
-    padding: calc(var(--spacing) * 5) 0;
-    border-bottom: var(--desktop-border-width) solid
-      var(--desktop-control-border);
+    max-width: calc(var(--spacing) * 205);
+    margin: calc(var(--spacing) * 2) auto 0;
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 3);
   }
   .aboutFaq summary {
     display: flex;
     gap: calc(var(--spacing) * 5);
     align-items: center;
     justify-content: space-between;
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
     font-size: calc(var(--spacing) * 4.5);
     font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 6.5);
@@ -447,13 +455,18 @@
   .aboutFaq summary::-webkit-details-marker {
     display: none;
   }
+  .aboutFaq summary svg {
+    flex: none;
+  }
   .aboutFaq details[open] summary svg {
     transform: rotate(45deg);
   }
   .aboutFaq p {
-    margin: calc(var(--spacing) * 4) 0 0;
+    padding: 0 calc(var(--spacing) * 6) calc(var(--spacing) * 5);
+    margin: 0;
     font-size: calc(var(--spacing) * 3.75);
     line-height: calc(var(--spacing) * 6.5);
+    color: var(--desktop-description-text);
   }
   .aboutContent a:focus-visible,
   .aboutFaq summary:focus-visible,

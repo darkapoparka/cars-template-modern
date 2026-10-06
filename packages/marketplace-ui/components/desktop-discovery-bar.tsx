@@ -4,6 +4,7 @@ import { cn } from "@repo/design-system/lib/utils";
 import type {
   ListingViewMode,
   MarketplaceSearchParams,
+  VehicleCategory,
   VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
@@ -55,6 +56,9 @@ interface DesktopMarketplaceBarProps {
   setQuery: (query: string) => void;
   showDealerDesktopLanding?: boolean;
   taxonomy?: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
+  >;
   totalListings: number;
   variant?: "discovery" | "results";
   viewMode: ListingViewMode;
@@ -97,6 +101,7 @@ export const DesktopMarketplaceBar = ({
   setQuery,
   totalListings,
   taxonomy,
+  taxonomyByCategory,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
   const pathname = usePathname();
@@ -140,6 +145,7 @@ export const DesktopMarketplaceBar = ({
       setQuery,
       totalListings,
       taxonomy,
+      taxonomyByCategory,
     };
 
     return (

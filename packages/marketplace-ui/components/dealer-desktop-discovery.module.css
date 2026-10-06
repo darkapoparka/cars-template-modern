@@ -6,141 +6,42 @@
   .heroSearch {
     position: relative;
     z-index: var(--desktop-layer-raised);
-    grid-row: 2;
-    justify-self: center;
-    width: min(
-      calc(100% - calc(var(--spacing) * 16)),
-      calc(var(--spacing) * 272.5)
-    );
+    width: 100%;
     margin: 0 auto;
   }
   .discoveryContent {
     display: block;
     width: var(--desktop-frame-width);
     max-width: var(--desktop-showroom-max);
-    padding: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 18);
+    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 18);
     margin-inline: auto;
   }
   .stockPanel {
-    padding: calc(var(--spacing) * 7) calc(var(--spacing) * 8);
-    background: var(--desktop-surface-subtle);
+    padding: calc(var(--spacing) * 5) 0;
+    background: transparent;
     border: 0;
-    border-radius: calc(var(--spacing) * 4);
+    border-radius: 0;
   }
   .sectionHeading {
-    margin-bottom: calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 4);
     text-align: center;
   }
   .sectionHeading h2,
   .journalHeading h2 {
     margin: 0;
-    font-size: calc(var(--spacing) * 9);
-    font-weight: var(--font-weight-bold);
-    line-height: calc(var(--spacing) * 11);
+    font-size: var(--text-desktop-section);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-section--line-height);
     letter-spacing: normal;
   }
   .sectionHeading p {
     margin: calc(var(--spacing) * 3) auto 0;
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6.5);
+    font-size: var(--text-desktop-body);
+    line-height: var(--text-desktop-body--line-height);
     color: var(--muted-foreground);
   }
-  .stockPanel .sectionHeading h2 {
-    font-size: calc(var(--spacing) * 8);
-    line-height: calc(var(--spacing) * 10);
-  }
-  .stockPanel .sectionHeading p {
-    margin-top: calc(var(--spacing) * 2);
-    font-size: calc(var(--spacing) * 3.5);
-    line-height: calc(var(--spacing) * 6);
-  }
-  .stockSwitch {
-    gap: 0;
-  }
-  .stockTabs {
-    position: relative;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    gap: var(--spacing);
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
-    height: auto;
-    padding: var(--spacing);
-    margin: 0 auto calc(var(--spacing) * 6);
-    background: var(--control);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-pill);
-    isolation: isolate;
-  }
-  .stockIndicator {
-    position: absolute;
-    top: var(--spacing);
-    bottom: var(--spacing);
-    left: var(--spacing);
-    z-index: 0;
-    width: calc(
-      (
-        100% -
-        var(--spacing) *
-        2 -
-        var(--spacing) *
-        (var(--stock-tab-count) - 1)
-      ) /
-      var(--stock-tab-count)
-    );
-    pointer-events: none;
-    background: var(--brand);
-    border-radius: var(--radius-pill);
-    transform: translateX(
-      calc(var(--stock-active-index) * (100% + var(--spacing)))
-    );
-    transition: transform var(--duration-interaction) ease-out;
-  }
-  .stockTabs button {
-    position: relative;
-    z-index: 1;
-    flex: initial;
-    gap: calc(var(--spacing) * 2);
-    height: auto;
-    min-height: calc(var(--spacing) * 11);
-    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4.5);
-    font-size: calc(var(--spacing) * 4);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--desktop-prose-text);
-    background: transparent;
-    border: 0;
-    border-radius: var(--radius-pill);
-    box-shadow: none;
-  }
-  .stockTabs button:hover {
-    color: var(--brand-text);
-    background: var(--panel);
-  }
-  .stockTabs button[data-state="active"] {
-    color: var(--brand-foreground);
-    background: transparent;
-  }
-  .stockTabs button:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--ring);
-    outline-offset: calc(var(--spacing) * 0.75);
-  }
-  .stockTabCount {
-    min-width: calc(var(--spacing) * 5.5);
-    padding: 0 calc(var(--spacing) * 1.25);
-    font-size: calc(var(--spacing) * 3);
-    font-variant-numeric: tabular-nums;
-    line-height: calc(var(--spacing) * 5);
-    background: var(--desktop-tab-count-background);
-    border-radius: var(--radius-pill);
-  }
-  .stockTabs button[data-state="active"] .stockTabCount {
-    background: var(--lead-site-accent-hover);
-  }
-  .stockView {
-    min-width: 0;
+  .stockPanel .sectionHeading {
+    margin-bottom: calc(var(--spacing) * 8);
   }
   .stockGrid {
     display: grid;
@@ -151,7 +52,6 @@
   .stockGrid article {
     min-width: 0;
   }
-  .primaryAction,
   .bannerAction {
     display: flex;
     gap: calc(var(--spacing) * 2.5);
@@ -168,18 +68,51 @@
     background: var(--brand);
     border-radius: calc(var(--spacing) * 3);
   }
-  .primaryAction:hover {
+  .stockAction,
+  .journalAction {
+    display: flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 5);
+    margin: calc(var(--spacing) * 6) auto 0;
+    font-size: var(--text-compact-control);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--foreground);
+    white-space: nowrap;
+    background: var(--control);
+    border: var(--desktop-border-width) solid var(--desktop-control-border);
+    border-radius: calc(var(--spacing) * 2);
+    transition: background-color var(--duration-interaction);
+  }
+  .journalAction {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+    border-radius: calc(var(--spacing) * 2);
+  }
+  .journalAction:hover {
     background: var(--lead-site-accent-hover);
+    border-color: var(--lead-site-accent-hover);
+  }
+  .stockAction {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .stockAction:hover {
+    background: var(--lead-site-accent-hover);
+    border-color: var(--lead-site-accent-hover);
   }
   .servicesSection {
     margin-top: calc(var(--spacing) * 22.5);
   }
   .servicesSection .sectionHeading {
-    margin-bottom: calc(var(--spacing) * 10);
-  }
-  .servicesSection .sectionHeading p {
-    margin-top: calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--spacing) * 8);
   }
   .serviceLinks {
     display: grid;
@@ -210,25 +143,26 @@
     align-items: center;
   }
   .serviceLinks strong {
-    font-size: calc(var(--spacing) * 6);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 8);
+    font-size: var(--text-desktop-feature-card);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-feature-card--line-height);
   }
   .serviceLinks small {
     max-width: calc(var(--spacing) * 65);
     min-height: calc(var(--spacing) * 12);
-    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 6);
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6);
+    margin: calc(var(--spacing) * 2) 0 calc(var(--spacing) * 4);
+    font-size: var(--text-desktop-body);
+    line-height: var(--text-desktop-body--line-height);
     color: var(--desktop-prose-text);
     text-wrap: balance;
   }
   .serviceArt {
     order: -1;
     width: 100%;
-    height: calc(var(--spacing) * 38);
-    margin-bottom: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 36);
+    margin-bottom: calc(var(--spacing) * 3);
     object-fit: contain;
+    object-position: center bottom;
   }
   .serviceArrow {
     display: flex;
@@ -242,12 +176,12 @@
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 6);
-    color: var(--desktop-surface);
+    color: var(--brand-foreground);
     background: var(--brand);
     border-radius: calc(var(--spacing) * 3);
   }
   .serviceLinks a:hover .serviceArrow {
-    background: var(--inverse);
+    background: var(--lead-site-accent-hover);
   }
   .serviceLinks a:hover {
     border-color: var(--brand);
@@ -261,7 +195,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: calc(var(--spacing) * 24) calc(var(--spacing) * 6);
+    min-height: calc(var(--spacing) * 80);
+    padding: calc(var(--spacing) * 16) calc(var(--spacing) * 8);
     margin-top: calc(var(--spacing) * 22.5);
     overflow: hidden;
     color: var(--desktop-surface);
@@ -282,27 +217,28 @@
     background: var(--desktop-artwork-overlay);
   }
   .visitBanner > div {
-    width: min(100%, calc(var(--spacing) * 190));
+    width: 100%;
     text-align: center;
   }
   .visitBanner h2 {
     margin: 0;
-    font-size: calc(var(--spacing) * 13);
-    font-weight: var(--font-weight-medium);
-    line-height: var(--desktop-leading-display);
-    letter-spacing: calc(var(--spacing) * -0.3);
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-callout--line-height);
+    letter-spacing: var(--desktop-heading-tracking);
   }
   .visitBanner p {
-    max-width: calc(var(--spacing) * 135);
-    margin: calc(var(--spacing) * 5) auto 0;
-    font-size: calc(var(--spacing) * 4);
-    line-height: calc(var(--spacing) * 6.5);
+    max-width: calc(var(--spacing) * 160);
+    margin: calc(var(--spacing) * 4) auto 0;
+    font-size: var(--text-desktop-body);
+    line-height: var(--text-desktop-body--line-height);
   }
   .bannerAction {
-    min-height: calc(var(--spacing) * 14);
-    margin: calc(var(--spacing) * 8) auto 0;
+    min-height: calc(var(--spacing) * 12);
+    margin: calc(var(--spacing) * 6) auto 0;
     color: var(--foreground);
     background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 2);
   }
   .bannerAction:hover {
     color: var(--brand-text);
@@ -312,25 +248,13 @@
     margin-top: calc(var(--spacing) * 22.5);
   }
   .journalHeading {
-    margin-bottom: calc(var(--spacing) * 12.5);
+    margin-bottom: calc(var(--spacing) * 8);
     text-align: center;
-  }
-  .journalHeading > a {
-    display: flex;
-    gap: calc(var(--spacing) * 2);
-    align-items: center;
-    min-height: calc(var(--spacing) * 11);
-    padding: 0 calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 3.75);
-    color: var(--brand-text);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 3);
   }
   .journalGrid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 7.5);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 6);
     align-items: stretch;
   }
   .journalCard {
@@ -340,8 +264,8 @@
     min-width: 0;
     overflow: hidden;
     background: var(--panel);
-    border: 0;
-    border-radius: 0;
+    border: var(--desktop-border-width) solid var(--desktop-panel-border);
+    border-radius: calc(var(--spacing) * 4);
     box-shadow: none;
   }
   .journalImage {
@@ -350,7 +274,7 @@
     aspect-ratio: 3 / 2;
     margin: 0;
     overflow: hidden;
-    border-radius: calc(var(--spacing) * 4);
+    border-radius: 0;
   }
   .journalImage img {
     object-fit: cover;
@@ -360,53 +284,64 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: calc(var(--spacing) * 5) 0 0;
+    padding: calc(var(--spacing) * 4);
   }
   .journalCard p {
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
     align-items: center;
-    margin: 0 0 calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 3.25);
+    margin: 0 0 calc(var(--spacing) * 2);
+    font-size: var(--text-desktop-support);
+    line-height: var(--text-desktop-support--line-height);
     color: var(--muted-foreground);
   }
   .journalCategory {
     position: absolute;
-    top: calc(var(--spacing) * 5);
-    left: calc(var(--spacing) * 5);
+    top: calc(var(--spacing) * 3);
+    left: calc(var(--spacing) * 3);
     padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3.5);
     color: var(--foreground);
     background: var(--desktop-surface);
     border-radius: calc(var(--spacing) * 4);
   }
   .journalCard h3 {
-    margin: 0;
-    font-size: calc(var(--spacing) * 4.75);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 7);
-  }
-  .journalAction {
-    display: flex;
-    gap: calc(var(--spacing) * 2);
-    align-items: center;
-    justify-content: space-between;
-    min-height: calc(var(--spacing) * 10);
-    padding-top: calc(var(--spacing) * 4);
-    margin-top: auto;
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-medium);
-    color: var(--brand-text);
-  }
-  .journalCard:hover,
-  .journalHeading > a:hover {
-    border-color: var(--brand);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    min-height: calc(var(--spacing) * 13);
+    max-height: calc(var(--spacing) * 13);
+    margin: 0 0 calc(var(--spacing) * 4);
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .journalCard:hover h3 {
     color: var(--brand-text);
   }
   .journalCard:hover {
-    box-shadow: none;
+    border-color: var(--desktop-border-hover);
+  }
+  .journalCardAction {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+    min-height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 4);
+    margin-top: auto;
+    font-size: var(--text-desktop-control);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--text-desktop-control--line-height);
+    color: var(--foreground);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2);
+    transition: background-color var(--duration-interaction);
+  }
+  .journalCard:hover .journalCardAction {
+    background: var(--desktop-control-neutral-hover);
   }
   .discoveryContent a:focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
@@ -415,11 +350,8 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .stockTabs button {
-    padding-inline: calc(var(--spacing) * 3);
-  }
   .stockGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: calc(var(--spacing) * 5);
   }
   .serviceLinks {
@@ -430,27 +362,10 @@
     padding: calc(var(--spacing) * 6) calc(var(--spacing) * 6)
       calc(var(--spacing) * 8);
   }
-  .serviceLinks strong {
-    font-size: calc(var(--spacing) * 6);
-  }
   .visitBanner {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .visitBanner h2 {
-    font-size: calc(var(--spacing) * 13);
-  }
-  .journalCardBody {
-    padding-inline: 0;
-  }
-  .journalCard h3 {
-    font-size: calc(var(--spacing) * 4.75);
-    line-height: calc(var(--spacing) * 7);
-  }
-}
-
-@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
-  .stockIndicator,
-  .stockTabs button {
-    transition: none;
+  .journalGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

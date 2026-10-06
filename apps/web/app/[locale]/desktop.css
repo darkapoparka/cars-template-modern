@@ -16,20 +16,20 @@
     --primary: var(--brand);
     --primary-foreground: var(--brand-foreground);
     --ring: var(--brand);
-    --foreground: #050b20;
+    --foreground: var(--desktop-body-text);
     --background: var(--desktop-canvas);
     --panel: var(--desktop-surface);
     --card: var(--desktop-surface);
-    --card-foreground: #050b20;
-    --muted-foreground: #667085;
-    --border: #e3e6eb;
-    --control: #f5f6f8;
-    --control-hover: #f0f3ff;
+    --card-foreground: var(--foreground);
+    --muted-foreground: var(--desktop-muted-text);
+    --border: var(--desktop-panel-border);
+    --control: var(--desktop-canvas);
+    --control-hover: var(--desktop-control-neutral-hover);
     --desktop-accent-soft: color-mix(in srgb, var(--brand) 8%, var(--panel));
     --desktop-picker-hover: color-mix(in srgb, var(--brand) 3%, var(--panel));
-    --inverse: #050b20;
+    --inverse: var(--desktop-body-text);
     --inverse-foreground: #ffffff;
-    --font-sans: var(--font-desktop), var(--font-inter), Arial, sans-serif;
+    --font-sans: var(--font-inter), Arial, sans-serif;
     font-family: var(--font-sans);
     color: var(--foreground);
     background: var(--background);
@@ -91,8 +91,9 @@
       [data-slot="sell-faq"]
     )
     h2 {
-    font-size: 32px;
-    line-height: 1.3;
+    font-size: var(--text-desktop-section);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--text-desktop-section--line-height);
   }
 
   :root[data-site-kind="dealership"]

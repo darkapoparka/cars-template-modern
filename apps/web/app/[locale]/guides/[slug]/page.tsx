@@ -90,7 +90,7 @@ export default async function GuideOrArticlePage({
         })}
       />
       <PublicMarketplaceFrame
-        desktopIntro={{ title, description, eyebrow, variant: "compact" }}
+        desktopIntro={{ title, variant: "compact" }}
         locale={normalizedLocale}
         showMobileFooter={false}
       >

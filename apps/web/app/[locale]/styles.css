@@ -3,7 +3,19 @@
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
 
 :root[data-site-kind="dealership"] {
-  --canvas: oklch(0.945 0.006 264);
+  --canvas: oklch(0.945 0 0);
+  --foreground: var(--desktop-body-text);
+  --card-foreground: var(--foreground);
+  --muted-foreground: var(--desktop-muted-text);
+  --control: var(--desktop-canvas);
+  --control-hover: var(--desktop-control-neutral-hover);
+  --selected: var(--brand);
+  --selected-foreground: var(--brand-foreground);
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --focus: var(--brand);
+  --ring: var(--brand);
+  --inverse: var(--desktop-body-text);
 }
 
 @media (min-width: 1024px) {
@@ -54,7 +66,7 @@
  * Dealer mobile polish
  *
  * Keep the existing visual language intact: white surfaces, zinc controls,
- * and the dealer red accent for selected states and conversion actions.
+ * and the configured dealer accent for selected states and conversion actions.
  */
 @media (max-width: 1023px) {
   /* The source/timestamp strip is desktop metadata, not mobile UI. */
@@ -74,14 +86,14 @@
    * command surface directly instead of relying on an ancestor selector.
    */
   [data-slot="drawer-content"] [data-slot="command"] {
-    background: white;
+    background: var(--panel);
   }
 
   [data-slot="drawer-content"] [data-slot="command-input-wrapper"] {
     height: 52px;
     padding-inline: 1rem;
     margin: 0 0.75rem 0.5rem;
-    background: #f4f4f5;
+    background: var(--control);
     border: 0;
     border-radius: 9999px;
   }
@@ -89,7 +101,7 @@
   [data-slot="drawer-content"] [data-slot="command-input-wrapper"] svg {
     width: 18px;
     height: 18px;
-    color: #71717a;
+    color: var(--muted-foreground);
     opacity: 1;
   }
 
@@ -98,12 +110,12 @@
     padding-block: 0;
     font-size: var(--text-body);
     line-height: var(--text-body--line-height);
-    color: #09090b;
+    color: var(--foreground);
     border-radius: 0;
   }
 
   [data-slot="drawer-content"] [data-slot="command-input"]::placeholder {
-    color: #71717a;
+    color: var(--muted-foreground);
   }
 
   [data-slot="drawer-content"] [data-slot="command-list"] {

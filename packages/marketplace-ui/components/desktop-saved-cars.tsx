@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@repo/design-system/lib/utils";
 import { publicBasePath } from "@repo/internationalization/paths";
 import { publicSite } from "@repo/marketplace/site-config";
 import { Bookmark, X } from "lucide-react";
@@ -118,7 +119,13 @@ export function DesktopSaveCarButton({
   );
 }
 
-export function DesktopSavedCars({ locale }: { locale?: string }) {
+export function DesktopSavedCars({
+  className,
+  locale,
+}: {
+  className?: string;
+  locale?: string;
+}) {
   const saved = useSavedCars();
   const dialog = useRef<HTMLDialogElement>(null);
   const opener = useRef<HTMLButtonElement>(null);
@@ -159,7 +166,7 @@ export function DesktopSavedCars({ locale }: { locale?: string }) {
     <>
       <button
         aria-haspopup="dialog"
-        className={styles.saved}
+        className={cn(styles.saved, className)}
         data-slot="desktop-saved-cars"
         onClick={() => dialog.current?.showModal()}
         ref={opener}

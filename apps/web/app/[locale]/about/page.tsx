@@ -1,4 +1,5 @@
 import { leadSite } from "@repo/marketplace";
+import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import {
   isPublicSitePathEnabled,
   publicSite,
@@ -14,7 +15,6 @@ import { getPublicWebBaseUrl } from "@/lib/public-url";
 import styles from "../components/boxcar-desktop-pages.module.css";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
-import { pageCopy } from "../contact/copy";
 
 interface AboutProps {
   params: Promise<{ locale: string }>;
@@ -36,6 +36,7 @@ export default async function AboutPage({ params }: AboutProps) {
   const { locale } = await params;
   const normalized = normalizeSeoLocale(locale);
   const bg = normalized === "bg";
+  const copy = getLeadCopy(normalized);
   const desktopIdentity =
     publicSite.identity.desktopPreview ?? publicSite.identity;
   const text = (bulgarian: string, english: string) =>
@@ -62,40 +63,6 @@ export default async function AboutPage({ params }: AboutProps) {
       alt: text(
         "Ръкостискане при предаване на автомобил",
         "A handshake at a vehicle handover"
-      ),
-    },
-  ];
-  const benefits = [
-    {
-      artwork: "choice",
-      title: text("Открийте своя автомобил", "Find your fit"),
-      detail: text(
-        "Разгледайте марки и бюджети и открийте подходящия автомобил.",
-        "Explore makes and budgets to find your ideal car."
-      ),
-    },
-    {
-      artwork: "details",
-      title: text("Вижте детайлите", "See the details"),
-      detail: text(
-        "Сравнете цена, пробег и характеристики преди избора си.",
-        "Compare prices, mileage and details before you shortlist."
-      ),
-    },
-    {
-      artwork: "budget",
-      title: text("Планирайте бюджета си", "Plan your budget"),
-      detail: text(
-        "Разгледайте възможностите за финансиране и месечните вноски.",
-        "Explore financing options and monthly payments."
-      ),
-    },
-    {
-      artwork: "viewing",
-      title: text("Направете следващата стъпка", "Take the next step"),
-      detail: text(
-        "Попитайте за автомобил и уговорете оглед на място.",
-        "Ask about a car and arrange a showroom viewing."
       ),
     },
   ];
@@ -131,21 +98,30 @@ export default async function AboutPage({ params }: AboutProps) {
   return (
     <PublicMarketplaceFrame locale={normalized} showMobileDealerHeader={false}>
       <main className={styles.aboutPage}>
-        <MobileAboutContact
-          locale={normalized}
-          services={pageCopy[normalized].services.filter((service) =>
-            isPublicSitePathEnabled(service.href, publicSite)
-          )}
-        />
+        <MobileAboutContact locale={normalized} services={[]} />
         <DealerDesktopHero
-          appearance="photo"
+          actions={[
+            {
+              href: path(publicSite.services.buy ? "/cars" : "/contact"),
+              label: publicSite.services.buy
+                ? text("Нашите автомобили", "Our cars")
+                : text("Свържете се с нас", "Get in touch"),
+            },
+            {
+              href: path("/services"),
+              label: text("Нашите услуги", "Our services"),
+              secondary: true,
+            },
+          ].filter((action) =>
+            isPublicSitePathEnabled(action.href, publicSite)
+          )}
+          appearance="neutral"
           artwork={
             publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
           }
-          description={text(
-            "Разгледайте автомобилите и сравнете избора си преди следващия оглед.",
-            "Browse our cars and compare your favourites before your next viewing."
-          )}
+          eyebrow={[copy.city, leadSite.district[normalized]]
+            .filter(Boolean)
+            .join(" · ")}
           locale={normalized}
           title={text(
             `За ${desktopIdentity.shortName}`,
@@ -176,33 +152,6 @@ export default async function AboutPage({ params }: AboutProps) {
               </figure>
             ))}
           </section>
-          <section
-            aria-labelledby="about-benefits-title"
-            className={styles.benefits}
-            data-slot="about-benefits"
-          >
-            <h2 id="about-benefits-title">
-              {text(
-                "По-лесен път към следващия ви автомобил",
-                "A simpler way to find your next car"
-              )}
-            </h2>
-            <ul className={styles.benefitGrid}>
-              {benefits.map((benefit) => (
-                <li key={benefit.artwork}>
-                  <Image
-                    alt=""
-                    height={384}
-                    src={`/images/about/blue-${benefit.artwork}-v1.webp`}
-                    unoptimized
-                    width={384}
-                  />
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.detail}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
           <section className={styles.aboutAction}>
             <h2>
               {text(
@@ -218,15 +167,19 @@ export default async function AboutPage({ params }: AboutProps) {
             </p>
             <div className={styles.aboutActions}>
               <Link className={styles.contactAction} href={path("/cars")}>
-                {text("Разгледайте автомобилите", "Explore cars")}
+                {text("Нашите автомобили", "Our cars")}
               </Link>
               <Link className={styles.secondaryAction} href={path("/contact")}>
                 {text("Свържете се с нас", "Get in touch")}
               </Link>
             </div>
           </section>
-          <section className={styles.aboutFaq}>
-            <h2>
+          <section
+            aria-labelledby="about-faq-title"
+            className={styles.aboutFaq}
+            data-slot="about-faq"
+          >
+            <h2 id="about-faq-title">
               {text(
                 "Няколко полезни отговора",
                 "A few things you might want to know"

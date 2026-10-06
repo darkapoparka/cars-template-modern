@@ -1,0 +1,277 @@
+{
+  "prepared": "2026-10-06",
+  "description": "Existing header artwork at its original framing; new diagonal silver phone.",
+  "delivery": "Transparent WebP at four times the rendered CSS size, served directly.",
+  "assets": [
+    {
+      "role": "car",
+      "source": "/images/services/header-car-v1.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 1449767,
+      "sourceSha256": "b0296b8be54063f8aace90521af728b509bf8c4025b194b88c29e2542a96bb15",
+      "path": "/images/services/header-silver-car-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        0.75,
+        3,
+        26.5,
+        22.25
+      ],
+      "bytes": 6286,
+      "sha256": "73584f60afd0368b05b826d0579317eda9f393027b3efbfbb7eadf9fb4496cfe",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "bike",
+      "source": "/images/services/header-motorbike-silver-v1.png",
+      "sourceDimensions": [
+        1586,
+        992
+      ],
+      "sourceBytes": 1417839,
+      "sourceSha256": "d430a0bf5a82bb0c32d9c4750a2f61ceaa183fbe9db588fdf5b09406fbceb3eb",
+      "path": "/images/services/header-silver-bike-v2.webp",
+      "canvas": [
+        136,
+        136
+      ],
+      "cssSize": 34,
+      "visibleCssBounds": [
+        3.25,
+        7.75,
+        25,
+        18.75
+      ],
+      "bytes": 6496,
+      "sha256": "d99ec479ea2e57a7e583541e934d81188934870e68f2de2b67a7b501942e3937",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "truck",
+      "source": "/images/services/header-truck-silver-v1.png",
+      "sourceDimensions": [
+        1586,
+        992
+      ],
+      "sourceBytes": 1027000,
+      "sourceSha256": "1650856c93553058721679c1875783ff56334eaabdf351541e923ee26e3da3ea",
+      "path": "/images/services/header-silver-truck-v2.webp",
+      "canvas": [
+        136,
+        136
+      ],
+      "cssSize": 34,
+      "visibleCssBounds": [
+        5.5,
+        8.75,
+        23,
+        16
+      ],
+      "bytes": 4400,
+      "sha256": "384fe10509f153cd4255cdadc932928f72c53d3beceef3aa97e17382aa43f781",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "van",
+      "source": "/images/services/header-van-silver-v1.png",
+      "sourceDimensions": [
+        1586,
+        992
+      ],
+      "sourceBytes": 891413,
+      "sourceSha256": "5af18080ec56f05a53515e89b61c56b26b366a8e49be75287c4cf0336e0d0a43",
+      "path": "/images/services/header-silver-van-v2.webp",
+      "canvas": [
+        136,
+        136
+      ],
+      "cssSize": 34,
+      "visibleCssBounds": [
+        3.25,
+        11,
+        27,
+        12.5
+      ],
+      "bytes": 4216,
+      "sha256": "c49beeab4f644a51cfc7c63d533f5f3b7e6af8be59a25f1fbe3d8e3735f425c8",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "guides",
+      "source": "/images/services/header-guides-v1.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 1303048,
+      "sourceSha256": "e568e889db35db504ca6d64ec45c97b6ac9aca74c98b93e914e1aee47fe46aec",
+      "path": "/images/services/header-silver-guides-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        0.75,
+        5,
+        26.5,
+        18.25
+      ],
+      "bytes": 3698,
+      "sha256": "9234e3eff93894d2a2d7eb1b56e60eed1836da45079062beaad97ee17408c980",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "filters",
+      "source": "/images/services/header-filters-v1.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 1035292,
+      "sourceSha256": "13a5e509aae9a0aef97c3d1508a8b9e8684eb290d0060eea7126b0004ddccc30",
+      "path": "/images/services/header-silver-filters-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        4.25,
+        2,
+        19.5,
+        24.25
+      ],
+      "bytes": 5032,
+      "sha256": "d7ac107bb26a3114d32ad8ab1411c6a9a9ccf2338f595f196f9c2e370e265780",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "info",
+      "source": "/images/services/header-info-v1.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 1041226,
+      "sourceSha256": "d08a539b48224eaef177e999aa43907c401cac51d943caff9ddfba757826e389",
+      "path": "/images/services/header-silver-info-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        5.75,
+        1.25,
+        16.75,
+        25.5
+      ],
+      "bytes": 4728,
+      "sha256": "f2c9fca627928df0a4f8339d24873bbe93f1e5dce9a9c546e3f549a9028d6e39",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "location",
+      "source": "/images/services/header-location-v1.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 1065694,
+      "sourceSha256": "4a6e705287e88cc1b22a167f7a1c51fef7818ee4bf2d59213d0cf36d463a2d4a",
+      "path": "/images/services/header-silver-location-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        4.75,
+        1.25,
+        18.5,
+        25.5
+      ],
+      "bytes": 4658,
+      "sha256": "ac24cd30b2bc658614093af2f5194511a424f0e3af2709e01d495e9b2537d4b8",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "phone",
+      "source": "phone-source.png",
+      "sourceDimensions": [
+        1254,
+        1254
+      ],
+      "sourceBytes": 726262,
+      "sourceSha256": "9ff9f1313aaa449a8cabccafd873647fb94ce0f316fd44579cdd00ba273ea931",
+      "path": "/images/services/header-silver-phone-v2.webp",
+      "canvas": [
+        112,
+        112
+      ],
+      "cssSize": 28,
+      "visibleCssBounds": [
+        4,
+        2,
+        20.75,
+        23.25
+      ],
+      "bytes": 3620,
+      "sha256": "1728d36ba8d6ac2c2d9e895bda0c90669f06dddf418f9134f6c0a17243b667b3",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

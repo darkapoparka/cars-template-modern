@@ -9,7 +9,7 @@ import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-deskto
 import { DealerDesktopLogo } from "@repo/marketplace-ui/components/dealer-desktop-logo";
 import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
 import { normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowUpRight, CarFront, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import {
@@ -85,14 +85,25 @@ function DesktopContact({
     bg ? bulgarian : english;
   return (
     <DealerDesktopHero
-      appearance="photo"
+      actions={[
+        {
+          href: withBasePath(leadSite.phoneHref),
+          label: text("Обадете се", "Call us"),
+        },
+        {
+          href: withBasePath(leadSite.mapsUrl),
+          label: text("Как да ни намерите", "Get directions"),
+          secondary: true,
+          external: true,
+        },
+      ]}
+      appearance="neutral"
       artwork={
         publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
       }
-      description={text(
-        "Въпроси за автомобил или оглед? Нека поговорим.",
-        "Questions about a car or a viewing? Let’s talk."
-      )}
+      eyebrow={[getLeadCopy(locale).city, leadSite.district[locale]]
+        .filter(Boolean)
+        .join(" · ")}
       locale={locale}
       title={text("Свържете се с нас", "Contact us")}
       variant="service"
@@ -174,7 +185,6 @@ function DesktopContact({
               rel="noreferrer"
               target="_blank"
             >
-              <MapPin aria-hidden size={26} />
               <div>
                 <h3>{text("Автосалон", "Showroom")}</h3>
                 <p>
@@ -198,7 +208,6 @@ function DesktopContact({
                 data-slot="desktop-contact-email-card"
                 href={`mailto:${leadSite.email}`}
               >
-                <Mail aria-hidden size={26} />
                 <div>
                   <h3>{text("Имейл", "Email")}</h3>
                   <p>{leadSite.email}</p>
@@ -215,7 +224,6 @@ function DesktopContact({
               data-slot="desktop-contact-viewing-card"
               href={withBasePath(leadSite.phoneHref)}
             >
-              <CarFront aria-hidden size={26} />
               <div>
                 <h3>{text("Уговорете оглед", "Arrange a viewing")}</h3>
                 <p>

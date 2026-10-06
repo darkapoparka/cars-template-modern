@@ -6,7 +6,6 @@ import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-po
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
 import { DealerInventorySearch } from "./dealer-inventory-search";
-import { DealerInventorySummary } from "./dealer-inventory-summary";
 import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 export type DealerDesktopToolbarProps = {
   filters: MarketplaceSearchParams;
@@ -34,13 +33,14 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
     <div className={styles.toolbar}>
       <div data-slot="dealer-desktop-inventory-hero">
         <DealerDesktopHero
-          artwork={
-            publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+          appearance={
+            publicSite.artwork.desktopDiscoveryVehicles ? "vehicles" : undefined
           }
-          description={
-            locale?.startsWith("bg")
-              ? "Открийте автомобил. Запазете и сравнете избора си."
-              : "Find your next car. Save your favourites and compare the details."
+          artwork={
+            publicSite.artwork.desktopDiscoveryVehicles
+              ? undefined
+              : (publicSite.artwork.desktopHeroScene ??
+                publicSite.artwork.heroScene)
           }
           locale={locale}
           title={getMarketplaceResultTitle(filters, locale)}
@@ -57,16 +57,6 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
           </div>
         </DealerDesktopHero>
       </div>
-      {!props.loading && (
-        <DealerInventorySummary
-          filterCount={props.filterCount}
-          filters={filters}
-          locale={locale}
-          onApply={props.onApply}
-          onOpenFilters={props.onOpenFilters}
-          totalListings={props.totalListings}
-        />
-      )}
     </div>
   );
 };

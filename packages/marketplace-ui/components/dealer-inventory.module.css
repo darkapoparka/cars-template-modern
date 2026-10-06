@@ -22,9 +22,6 @@
     background: var(--desktop-surface-subtle);
     border-radius: calc(var(--spacing) * 4);
   }
-  .results[data-desktop-hidden="false"] {
-    margin-top: calc(var(--spacing) * 4);
-  }
   .sidebar {
     display: block;
     padding: calc(var(--spacing) * 5.5);
@@ -37,11 +34,20 @@
     display: none;
   }
   .filterBar {
-    display: contents;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-column: 1 / -1;
+    gap: calc(var(--spacing) * 4);
+    align-items: center;
+    min-width: 0;
   }
   .results[data-filter-layout="quick"] {
     --inventory-grid-columns: 4;
     grid-template-columns: minmax(0, 1fr);
+    gap: calc(var(--spacing) * 4);
+    padding: 0;
+    margin-block-start: calc(var(--spacing) * 4);
+    background: transparent;
   }
   .previewTrigger {
     display: inline-flex;
@@ -50,16 +56,17 @@
     align-items: center;
     justify-content: center;
     min-width: calc(var(--spacing) * 13);
-    height: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 11);
     padding-inline: calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
+    font-size: var(--text-desktop-control);
     font-weight: var(--font-weight-medium);
+    line-height: var(--text-desktop-control--line-height);
     color: var(--foreground);
     cursor: pointer;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 6);
-    box-shadow: var(--elevation-overlay);
+    box-shadow: none;
   }
   .previewTrigger:hover,
   .previewTrigger[data-state="open"] {
@@ -85,17 +92,33 @@
   }
   .activeFilters {
     display: flex;
-    flex-wrap: wrap;
-    grid-column: 1 / -1;
-    gap: calc(var(--spacing) * 2);
+    grid-row: 1;
+    grid-column: 1;
     align-items: center;
     min-width: 0;
-    padding: 0;
+    height: calc(var(--spacing) * 11);
+    padding: 0 var(--spacing);
     margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
     border: 0;
+  }
+  .activeFilterList {
+    display: flex;
+    flex: none;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+    min-width: 100%;
+  }
+  .activeFilters :is(.activeFilter, .clearFilters):focus-visible {
+    outline-offset: calc(var(--spacing) * -0.75);
   }
   .activeFilter {
     display: inline-flex;
+    flex-shrink: 0;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     max-width: 100%;
@@ -110,9 +133,7 @@
   }
   .activeFilter span {
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow-wrap: anywhere;
   }
   .activeFilter svg {
     flex-shrink: 0;
@@ -121,6 +142,7 @@
     background: var(--control-hover);
   }
   .clearFilters {
+    flex-shrink: 0;
     min-height: calc(var(--spacing) * 8);
     padding-inline: calc(var(--spacing) * 2);
     font-size: calc(var(--spacing) * 3.25);
@@ -133,38 +155,49 @@
   }
   .summary {
     display: flex;
+    grid-row: 1;
+    grid-column: 2;
     justify-content: center;
-    width: var(--desktop-content-width);
-    padding-inline: calc(var(--spacing) * 6);
-    margin: calc(var(--spacing) * 6) auto 0;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .controls {
     display: flex;
+    flex-wrap: wrap;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
+  }
+  .filters,
+  .sort {
+    flex: none;
+    width: calc(var(--spacing) * 36);
+    min-width: calc(var(--spacing) * 36);
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 3.5);
+    font-size: var(--text-desktop-control);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--text-desktop-control--line-height);
+    color: var(--brand-foreground);
+    cursor: pointer;
+    background: var(--brand);
+    border: var(--desktop-border-width) solid var(--brand);
+    border-radius: calc(var(--spacing) * 5);
   }
   .filters {
     display: inline-flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    min-width: calc(var(--spacing) * 26);
-    height: calc(var(--spacing) * 10);
-    padding-inline: calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-medium);
-    color: var(--foreground);
-    cursor: pointer;
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 5);
   }
   .filters:hover {
-    background: var(--control-hover);
+    background: var(--lead-site-accent-hover);
+    border-color: var(--lead-site-accent-hover);
   }
   .filters svg {
-    color: var(--brand);
+    color: currentcolor;
   }
   .filters:focus-visible,
   .sort:focus-visible {
@@ -184,35 +217,46 @@
     border-radius: calc(var(--spacing) * 5);
   }
   .displayControls {
-    position: fixed;
-    right: calc(var(--spacing) * 6);
-    bottom: calc(var(--spacing) * 6);
-    z-index: var(--desktop-layer-toolbar);
     display: flex;
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: end;
   }
   .sort {
-    gap: calc(var(--spacing) * 1.5);
-    width: calc(var(--spacing) * 64);
-    height: calc(var(--spacing) * 10);
-    min-height: calc(var(--spacing) * 10);
-    padding-inline: calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-normal);
-    color: var(--foreground);
-    cursor: pointer;
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 5);
+    gap: calc(var(--spacing) * 2);
+    justify-content: center;
     box-shadow: none;
+  }
+  .controls :is(.filters, .sort) > .controlIcon {
+    flex: none;
+    width: calc(var(--spacing) * 4.5);
+    height: calc(var(--spacing) * 4.5);
+    color: currentcolor;
+  }
+  .sort > svg:not(.controlIcon) {
+    display: none;
+  }
+  .sortValue {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .sortText {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .sort:hover,
   .sort[data-state="open"] {
-    background: var(--control-hover);
+    background: var(--lead-site-accent-hover);
+    border-color: var(--lead-site-accent-hover);
   }
-  .sortLabel {
-    flex-shrink: 0;
-    font-weight: var(--font-weight-normal);
-    color: var(--muted-foreground);
+  .sort > svg {
+    color: inherit;
+    opacity: 1;
   }
   .sortMenu {
     min-width: calc(var(--spacing) * 64);

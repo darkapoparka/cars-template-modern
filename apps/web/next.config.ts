@@ -37,6 +37,13 @@ if (publicE2E) {
   // Keep the provider-free browser gate isolated from the developer's normal
   // Next cache and from other concurrent browser gates.
   nextConfig.distDir = `.next-public-e2e-${publicE2ERunId}-${publicE2EMode}`;
+  // These isolated QA runs do not share a warm compiler cache. Keep their
+  // development and production compilations from persisting another copy.
+  nextConfig.experimental = {
+    ...nextConfig.experimental,
+    turbopackFileSystemCacheForDev: false,
+    turbopackFileSystemCacheForBuild: false,
+  };
 }
 
 nextConfig.basePath = publicBasePath;

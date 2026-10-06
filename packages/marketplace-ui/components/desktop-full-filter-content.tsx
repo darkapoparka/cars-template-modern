@@ -117,6 +117,7 @@ export function DesktopFullFilterSectionFields({
         draft={draft}
         locale={locale}
         setDraft={onChange}
+        showSummaryLabel={!showHeading}
         view={section}
       />
     );

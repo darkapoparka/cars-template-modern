@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-10-05T07:54:12.008Z",
+  "palette": "charcoal #30343b and neutral silver",
+  "assets": [
+    {
+      "role": "choice",
+      "prompt": "Edit the supplied illustration only. Keep the same object count, exact shapes, perspective, placement, scale, spacing, lighting, soft contact shadow and balanced square composition as the reference. Convert every cobalt/royal-blue painted or plastic surface into refined satin charcoal #30343b with restrained black/graphite shading and soft grey highlights. Convert blue glass or pale blue surfaces into clear neutral glass or pale neutral silver-grey. Keep brushed silver parts silver. Preserve realistic dimensional depth and good small-size readability on a white website card. This is the same premium 3D illustration in a charcoal-and-silver palette, not a redesigned object. No blue tint anywhere, no warm-colour accent, no text, logos, extra objects, badges, background or floor slab. Fully transparent background and the same generous transparent margins. Do not crop any part of the objects.",
+      "reference": "apps/web/public/images/about/blue-choice-v1.webp",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10a21-b0e2-7983-9cf9-cd5470a0f49f\\exec-75a4f608-e60e-472e-9f58-873edc18df07.png",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-charcoal-v1/choice-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1031231,
+        "sha256": "559ced76d626e7dcfb8917cf0994e167353e62429cf4f434051ea23898406be5",
+        "hasAlpha": true
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/charcoal-choice-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 25294,
+        "sha256": "4b5100f5ef2175b7d2a1e67e9dd7f88bd90e04f6a56202018938a25a1e97a49d",
+        "hasAlpha": true,
+        "transparentPixels": 90626,
+        "edgeAlphaMax": 6
+      },
+      "processing": "Resize only to 384x384, keeping the source aspect ratio; WebP quality 90 and alpha quality 100. No crop, colour filter, background change or creative edits after image generation."
+    },
+    {
+      "role": "details",
+      "prompt": "Edit the supplied illustration only. Keep the same object count, exact shapes, perspective, placement, scale, spacing, lighting, soft contact shadow and balanced square composition as the reference. Convert every cobalt/royal-blue painted or plastic surface into refined satin charcoal #30343b with restrained black/graphite shading and soft grey highlights. Convert blue glass or pale blue surfaces into clear neutral glass or pale neutral silver-grey. Keep brushed silver parts silver. Preserve realistic dimensional depth and good small-size readability on a white website card. This is the same premium 3D illustration in a charcoal-and-silver palette, not a redesigned object. No blue tint anywhere, no warm-colour accent, no text, logos, extra objects, badges, background or floor slab. Fully transparent background and the same generous transparent margins. Do not crop any part of the objects.",
+      "reference": "apps/web/public/images/about/blue-details-v1.webp",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10a21-b0e2-7983-9cf9-cd5470a0f49f\\exec-7276deb8-ee3b-4a22-a0d2-f7be4d98050e.png",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-charcoal-v1/details-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1192030,
+        "sha256": "0958544180bd713524ab64e46c5ec94fa23bfd2116aad1622a4e7ab0f71a5c4d",
+        "hasAlpha": true
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/charcoal-details-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 23054,
+        "sha256": "154929d29ac3224a7cd2921b3020444a173c997f33e4ab29688f75cebaeca58b",
+        "hasAlpha": true,
+        "transparentPixels": 73899,
+        "edgeAlphaMax": 1
+      },
+      "processing": "Resize only to 384x384, keeping the source aspect ratio; WebP quality 90 and alpha quality 100. No crop, colour filter, background change or creative edits after image generation."
+    },
+    {
+      "role": "budget",
+      "prompt": "Edit the supplied illustration only. Keep the same object count, exact shapes, perspective, placement, scale, spacing, lighting, soft contact shadow and balanced square composition as the reference. Convert every cobalt/royal-blue painted or plastic surface into refined satin charcoal #30343b with restrained black/graphite shading and soft grey highlights. Convert blue glass or pale blue surfaces into clear neutral glass or pale neutral silver-grey. Keep brushed silver parts silver. Preserve realistic dimensional depth and good small-size readability on a white website card. This is the same premium 3D illustration in a charcoal-and-silver palette, not a redesigned object. No blue tint anywhere, no warm-colour accent, no text, logos, extra objects, badges, background or floor slab. Fully transparent background and the same generous transparent margins. Do not crop any part of the objects.",
+      "reference": "apps/web/public/images/about/blue-budget-v1.webp",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10a21-b0e2-7983-9cf9-cd5470a0f49f\\exec-a9e2aaeb-e0e0-4c71-9d28-7943f194fd0e.png",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-charcoal-v1/budget-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1103634,
+        "sha256": "f8ccd7f66f561141e3e003bfbd9d4784afd5d73631ffd03606b3c27fa72dd8c0",
+        "hasAlpha": true
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/charcoal-budget-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 24754,
+        "sha256": "4012d69f730997820530c28dfcc6be6b3c35b1232a514c2e8db1d77da2a53f7f",
+        "hasAlpha": true,
+        "transparentPixels": 83266,
+        "edgeAlphaMax": 0
+      },
+      "processing": "Resize only to 384x384, keeping the source aspect ratio; WebP quality 90 and alpha quality 100. No crop, colour filter, background change or creative edits after image generation."
+    },
+    {
+      "role": "viewing",
+      "prompt": "Edit the supplied illustration only. Keep the same object count, exact shapes, perspective, placement, scale, spacing, lighting, soft contact shadow and balanced square composition as the reference. Convert every cobalt/royal-blue painted or plastic surface into refined satin charcoal #30343b with restrained black/graphite shading and soft grey highlights. Convert blue glass or pale blue surfaces into clear neutral glass or pale neutral silver-grey. Keep brushed silver parts silver. Preserve realistic dimensional depth and good small-size readability on a white website card. This is the same premium 3D illustration in a charcoal-and-silver palette, not a redesigned object. No blue tint anywhere, no warm-colour accent, no text, logos, extra objects, badges, background or floor slab. Fully transparent background and the same generous transparent margins. Do not crop any part of the objects.",
+      "reference": "apps/web/public/images/about/blue-viewing-v1.webp",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10a21-b0e2-7983-9cf9-cd5470a0f49f\\exec-2f5fc885-168d-45c6-8492-679ca28151a6.png",
+      "tool": "image_gen.imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-charcoal-v1/viewing-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1193201,
+        "sha256": "70ecd8c7c9962b6a78d8916e3cfd7d5677fd1f00ed70d74ea99ac92361278837",
+        "hasAlpha": true
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/charcoal-viewing-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 25628,
+        "sha256": "03b27e40f1d9f4c4477737feab3a17d4798e8262835effd9cef463cc2ac11d17",
+        "hasAlpha": true,
+        "transparentPixels": 86963,
+        "edgeAlphaMax": 0
+      },
+      "processing": "Resize only to 384x384, keeping the source aspect ratio; WebP quality 90 and alpha quality 100. No crop, colour filter, background change or creative edits after image generation."
+    }
+  ]
+}
