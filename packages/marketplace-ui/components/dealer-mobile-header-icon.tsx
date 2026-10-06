@@ -8,29 +8,15 @@ import {
 import Image from "./public-image";
 
 const artworkPaths = {
-  car: "/images/services/header-car-v1.png",
-  bike: "/images/services/header-motorbike-silver-v1.png",
-  truck: "/images/services/header-truck-silver-v1.png",
-  van: "/images/services/header-van-silver-v1.png",
-  guides: "/images/services/header-guides-v1.png",
-  filters: "/images/services/header-filters-v1.png",
-  info: "/images/services/header-info-v1.png",
-  location: "/images/services/header-location-v1.png",
-  phone: "/images/services/header-phone-v4.png",
-};
-
-// Balance the visible silhouettes, including each image's transparent margins.
-// The surrounding 44px hit target and 36px artwork frame stay identical.
-const artworkSize = {
-  car: "size-[30px]",
-  bike: "size-9",
-  truck: "size-9",
-  van: "size-9",
-  filters: "size-7",
-  info: "size-[30px]",
-  location: "size-[30px]",
-  phone: "size-[30px]",
-  guides: "size-[30px]",
+  car: "/images/services/header-system-car-v3.webp",
+  bike: "/images/services/header-system-bike-v3.webp",
+  truck: "/images/services/header-system-truck-v3.webp",
+  van: "/images/services/header-system-van-v3.webp",
+  guides: "/images/services/header-system-guides-v3.webp",
+  filters: "/images/services/header-system-filters-v3.webp",
+  info: "/images/services/header-system-info-v3.webp",
+  location: "/images/services/header-system-location-v3.webp",
+  phone: "/images/services/header-system-phone-v3.webp",
 };
 
 const categoryIconName = (icon: LucideIcon) => {
@@ -64,21 +50,31 @@ export function DealerMobileHeaderIcon({
     <span
       aria-hidden="true"
       className="relative grid size-9 place-items-center"
+      data-header-artwork={name}
       data-header-icon={kind}
       data-icon-family="silver-header-artwork"
     >
       <Image
         alt=""
-        className={`${artworkSize[name]} select-none object-contain`}
+        // All nine assets share one normalized slot. Vehicle artwork clears
+        // the fixed chevron through one shared 2px lift, never per-icon nudges.
+        className={
+          kind === "category"
+            ? "size-7 -translate-y-0.5 select-none object-contain"
+            : "size-7 select-none object-contain"
+        }
         draggable={false}
         height={36}
+        loading="eager"
         sizes="36px"
         src={artworkPaths[name]}
+        // Delivery artwork is already sized at 4x its CSS slot.
+        unoptimized
         width={36}
       />
       {kind === "category" ? (
         <ChevronDown
-          className="absolute -bottom-1 left-1/2 size-2.5 -translate-x-1/2"
+          className="absolute -bottom-0.5 left-1/2 size-2.5 -translate-x-1/2"
           strokeWidth={2}
         />
       ) : null}

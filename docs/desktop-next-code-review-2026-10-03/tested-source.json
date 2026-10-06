@@ -1,0 +1,48 @@
+{
+  "Source": "L:/CODEX/cars/templates/modern",
+  "Files": [
+    {
+      "Path": "templates/modern/apps/web/app/[locale]/(home)/page.tsx",
+      "Sha256": "392EBCC29B02F6C6DD51C3912B5C4A12030BBDADDED91DE1865A3F1AAE718735"
+    },
+    {
+      "Path": "templates/modern/apps/web/app/[locale]/components/dealer-desktop-footer.tsx",
+      "Sha256": "DC1C0D0F664DCD857C5620A8EA72FC19800897DDF6F13EBEA2626F17CA3704C7"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx",
+      "Sha256": "031DD431B48435B8AA48C39B88BCF40036DAEF7190E427394DF19B3FCED05976"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/components/dealer-desktop-header.tsx",
+      "Sha256": "CA94AA7FD31BB5B4E3B6844013B040DD0ECF84371431832EB5B9952BB7C3E7EB"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/components/desktop-saved-cars.tsx",
+      "Sha256": "38B1944F202A665E7FEA3DA52A922464E1EA3D84487D35B8BF2DBFEF3620FE62"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/components/listing-detail-summary.tsx",
+      "Sha256": "090419D06E69E04D767125E0CEF0FB113E9C2CA66309CDB07F8864DB46B9914D"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/components/vehicle-card.tsx",
+      "Sha256": "D5987393CBC8A87A3ADC783FA2955514D106FD97A72C896A05B9D9095FFF36E5"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/lib/desktop-saved-car.ts",
+      "Sha256": "A8CA6C71872052EA4A624A67FB1B956C7957352C4BAED11654387B65C932FCF8"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/lib/vehicle-card-types.ts",
+      "Sha256": "7581E0CEB323C44F9A2784582BE3438E44D1E5DFC5B930ED4A837903D7901407"
+    },
+    {
+      "Path": "templates/modern/packages/marketplace-ui/package.json",
+      "Sha256": "397AC26EBA0DDAC5BEA22FFCF617EA1059CC0DA8947347532657023ACB54C2DD"
+    }
+  ],
+  "Head": "990f79fc52e1bfd8b4c10bbcc2331e5bc96c93e6",
+  "CreatedAt": "2026-10-03T04:50:32.1246338Z",
+  "Runtime": "production"
+}

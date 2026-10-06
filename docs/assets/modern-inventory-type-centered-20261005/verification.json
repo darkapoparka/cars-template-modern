@@ -1,0 +1,520 @@
+{
+  "scope": "Modern desktop Type search and centered controls below the banner",
+  "verifiedAt": "2026-10-04T23:34:24.735Z",
+  "canonical": {
+    "base": "http://127.0.0.1:6482",
+    "buildId": "VzJcEvZUe46jl2PVvzmI_",
+    "records": [
+      {
+        "locale": "bg",
+        "status": 200,
+        "controlsBelowBanner": true,
+        "centeredOverCards": true,
+        "bannerToControls": 24,
+        "controlsToPanel": 16,
+        "searchWidth": 1140,
+        "typeChoices": [
+          "Автомобили",
+          "Камиони",
+          "Мотори",
+          "Бусове"
+        ],
+        "viewMenuChoices": [
+          "Изглед в решетка",
+          "Списъчен изглед",
+          "Бързи филтри",
+          "Страничен панел"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "status": 200,
+        "controlsBelowBanner": true,
+        "centeredOverCards": true,
+        "bannerToControls": 24,
+        "controlsToPanel": 16,
+        "searchWidth": 1140,
+        "typeChoices": [
+          "Cars",
+          "Trucks",
+          "Motorbikes",
+          "Vans"
+        ],
+        "viewMenuChoices": [
+          "Grid view",
+          "List view",
+          "Quick filters",
+          "Sidebar"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      }
+    ]
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "webTypecheck": "passed",
+    "scopedBiome": "passed",
+    "refactorAndReleaseContractTests": 94,
+    "releasePreflightContracts": "passed"
+  },
+  "browser": {
+    "acceptedCases": 16,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "stats": {
+      "startTime": "2026-10-04T23:19:19.116Z",
+      "duration": 485665.387,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "review": {
+    "base": "http://127.0.0.1:6499",
+    "records": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "filterFocus": {
+          "outline": "solid",
+          "width": "2px",
+          "shadow": "none"
+        },
+        "sortFocus": {
+          "outline": "solid",
+          "width": "2px",
+          "shadow": "none"
+        },
+        "typeKeyboardFocusContained": true,
+        "accessibilityScans": 3,
+        "scanScopes": [
+          "page",
+          "Type popup",
+          "page with View menu"
+        ],
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "typeKeyboardFocusContained": true,
+        "accessibilityScans": 3,
+        "scanScopes": [
+          "page",
+          "Type popup",
+          "page with View menu"
+        ],
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "typeKeyboardFocusContained": true,
+        "accessibilityScans": 3,
+        "scanScopes": [
+          "page",
+          "Type popup",
+          "page with View menu"
+        ],
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "typeKeyboardFocusContained": true,
+        "accessibilityScans": 3,
+        "scanScopes": [
+          "page",
+          "Type popup",
+          "page with View menu"
+        ],
+        "violations": 0,
+        "errors": []
+      }
+    ]
+  },
+  "captureBefore": {
+    "base": "http://127.0.0.1:6499",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "captureAfter": {
+    "base": "http://127.0.0.1:6499",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "preservation": [
+    {
+      "name": "bg-cars-320",
+      "changedPixels": 37,
+      "maximumChannelDifference": 8,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-cars-390",
+      "changedPixels": 21,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-cars-1023",
+      "changedPixels": 20,
+      "maximumChannelDifference": 6,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-home-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-320",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-390",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-1023",
+      "changedPixels": 9,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-home-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    }
+  ],
+  "sourceHashes": {
+    "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx": "29025ea25f571f240633f5f62c44b072bbea40c1908a0514a0d05ee861fd9ca6",
+    "packages/marketplace-ui/components/dealer-inventory-summary.tsx": "41e8069ea120204349a7ca9a8ebe2b0b14c31f07c413e990d6b821225f7c5a31",
+    "packages/marketplace-ui/components/dealer-inventory.module.css": "cd7ac777b7a7ec56cb1c21b96b0157559bfeb27669b7f920b0385b92e767c95d",
+    "packages/marketplace-ui/components/dealer-inventory-search.tsx": "c66765579f0130991879c392e258a89eff02418794a9e83c09989c7707a18cb9",
+    "packages/marketplace-ui/components/dealer-inventory-search.module.css": "7e7c9a4389751f149b281fa07db959d6ab1c5b9f24a4a87bc48fdbbecb01b8b4",
+    "apps/e2e/specs/desktop-inventory-search.spec.ts": "6f86febb1f2f93757dc7c270660410a992483f7150ef61739f139ee76b6d26ee",
+    "apps/e2e/specs/desktop-overlay-scrollbar.spec.ts": "4029220630a794a4265ccef7ed6e33c6bfe9733d18d2677933975e88530fab2c"
+  }
+}

@@ -13,6 +13,7 @@ const mergeClassNames = extendTailwindMerge({
         "prose",
         "dialog-title",
         "dialog-description",
+        "mobile-page-title",
         "card-title",
         "card-title-lg",
         "price",

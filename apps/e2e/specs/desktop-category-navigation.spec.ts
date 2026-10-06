@@ -1,8 +1,10 @@
 import { expect, test } from "@playwright/test";
+import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
 
-test("desktop category navigation preserves scroll and the browser document", async ({
+test("desktop category drafts preserve filters and browser Back context", async ({
   page,
 }) => {
+  test.setTimeout(90_000);
   await page.setViewportSize({ width: 1440, height: 900 });
   let documents = 0;
   page.on("request", (request) => {
@@ -10,39 +12,60 @@ test("desktop category navigation preserves scroll and the browser document", as
       documents += 1;
     }
   });
-  await page.goto("/bg/cars");
-  const submit = page.locator('[data-slot="desktop-hero-submit"]');
+  await page.goto(
+    "/bg/cars?make=BMW&model=X5&priceMax=100000&yearMin=2010&sort=newest"
+  );
+  await selectInventoryFilterLayout(page, "sidebar", "bg");
+  const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
+  const submit = sidebar.locator('[data-slot="desktop-hero-submit"]');
   await expect(submit).toBeEnabled();
-  const dismiss = page.getByRole("button", { name: "Не сега", exact: true });
-  if (await dismiss.isVisible()) {
-    await dismiss.click();
-  }
   await expect(page.getByRole("dialog")).toBeHidden();
-  // Keep the non-sticky header fully visible; Playwright otherwise scrolls the
-  // clipped link into view before clicking, independently of navigation.
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
-  await page
-    .getByRole("navigation", { name: "Основни действия" })
-    .getByRole("link", { name: "Автомобили", exact: true })
-    .click();
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
-  await page.evaluate(() => window.scrollTo({ top: 80, behavior: "instant" }));
+  // Wait for the development server's initial reload and chunks before
+  // checking continuity of the subsequent category transitions.
+  await page.waitForLoadState("networkidle");
+  await page.evaluate(() => document.fonts.ready);
+  const initialDocuments = documents;
+  await page.evaluate(() => {
+    document.documentElement.dataset.navigationContinuity = "initial";
+  });
+
   for (const [name, path] of [
-    ["Автомобили", "/bg/cars"],
     ["Камиони", "/bg/trucks"],
     ["Бусове", "/bg/vans"],
-    ["Автомобили", "/bg/cars"],
+    ["Мотори", "/bg/motorbikes"],
   ]) {
-    await page
-      .getByRole("navigation", { name: "Категории превозни средства" })
-      .getByRole("link", { name, exact: true })
-      .click();
+    const before = page.url();
+    await sidebar.locator('[data-slot="desktop-hero-category"]').click();
+    const dialog = page.getByRole("dialog");
+    await dialog.getByRole("button", { name, exact: true }).click();
+    await dialog.getByRole("button", { name: "Приложи", exact: true }).click();
+    expect(page.url()).toBe(before);
+    await submit.click();
     await expect.poll(() => new URL(page.url()).pathname).toBe(path);
     await expect(
       page.locator('[data-slot="public-route-loading-content"]')
     ).toBeHidden();
     await expect(submit).toBeEnabled();
-    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(80);
+    const params = new URL(page.url()).searchParams;
+    expect(params.get("priceMax")).toBe("100000");
+    expect(params.get("yearMin")).toBe("2010");
+    expect(params.get("sort")).toBe("newest");
+    expect(params.get("make")).toBeNull();
+    expect(params.get("model")).toBeNull();
+    await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(0);
+    await expect(page.locator("html")).toHaveAttribute(
+      "data-navigation-continuity",
+      "initial"
+    );
   }
-  expect(documents).toBe(1);
+  for (const path of ["/bg/vans", "/bg/trucks", "/bg/cars"]) {
+    await page.goBack();
+    await expect.poll(() => new URL(page.url()).pathname).toBe(path);
+    await expect(submit).toBeEnabled();
+  }
+  expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
+  await expect(
+    sidebar.locator('[data-slot="desktop-hero-make"]')
+  ).toContainText("BMW");
+  expect(documents).toBe(initialDocuments);
 });

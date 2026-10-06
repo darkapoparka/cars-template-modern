@@ -10,11 +10,13 @@ import { Textarea } from "@repo/design-system/components/ui/textarea";
 import { cn } from "@repo/design-system/lib/utils";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite, vehicleCategories } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import {
   DesktopActionButton,
   DesktopActionPanel,
 } from "@repo/marketplace-ui/components/desktop-action-panel";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -73,6 +75,8 @@ const pageCopy = {
     ],
     formDescription:
       "Без регистрация. Започнете с основните данни, а ние ще уточним следващата стъпка.",
+    desktopFormDescription:
+      "Посочете марка, модел, година и пробег. Добавете екстри и бележки, ако желаете.",
     formLabel: "Заявете оценка на автомобил",
     makeLabel: "Марка",
     mileageLabel: "Пробег",
@@ -119,6 +123,8 @@ const pageCopy = {
     ],
     formDescription:
       "No account required. Start with the essentials and we will agree the next step with you.",
+    desktopFormDescription:
+      "Enter the make, model, year and mileage. Add extras and notes if you wish.",
     formLabel: "Request a vehicle appraisal",
     makeLabel: "Make",
     mileageLabel: "Mileage",
@@ -203,7 +209,12 @@ export default async function SellPage({
           key={serializeSellVehicleDraft(initialDraft)}
           locale={normalizedLocale}
         />
-        <DealerDesktopHero title={copy.title} variant="service">
+        <DealerDesktopHero
+          description={copy.formDescription}
+          locale={normalizedLocale}
+          title={copy.title}
+          variant="service"
+        >
           <div
             className={cn(
               "hidden lg:block",
@@ -211,14 +222,17 @@ export default async function SellPage({
               desktopStyles.heroContent
             )}
           >
-            <DesktopActionPanel data-slot="sell-hero">
+            <DesktopActionPanel
+              className={desktopStyles.sellPanel}
+              data-slot="sell-hero"
+            >
               <div data-slot="sell-form-panel">
                 <div className="mb-4 max-w-3xl">
                   <h2 className="font-semibold text-xl tracking-tight">
                     {copy.formLabel}
                   </h2>
                   <p className="mt-2 text-muted-foreground text-sm leading-6">
-                    {copy.formDescription}
+                    {copy.desktopFormDescription}
                   </p>
                 </div>
                 <form
@@ -350,6 +364,20 @@ export default async function SellPage({
                     {leadSite.phoneDisplay}
                   </a>
                 </p>
+              </div>
+              <div
+                className={desktopStyles.serviceArtwork}
+                data-slot="sell-desktop-artwork"
+              >
+                <Image
+                  alt=""
+                  fill
+                  sizes="180px"
+                  src={
+                    publicSite.artwork.desktopServices?.sell ??
+                    publicSite.artwork.sellHero
+                  }
+                />
               </div>
             </DesktopActionPanel>
           </div>

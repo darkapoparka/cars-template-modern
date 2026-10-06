@@ -12,6 +12,26 @@ export type {
 } from "@repo/marketplace-domain/site-config";
 export { isPublicSitePathEnabled } from "@repo/marketplace-domain/site-config";
 
+const getDesktopPreviewIdentity = (
+  config: LeadSiteConfig
+): PublicSiteConfig["identity"]["desktopPreview"] => {
+  const preview = config.desktopPreviewIdentity;
+  if (!config.staticDemoMode || preview?.sourceSlug !== config.slug) {
+    return undefined;
+  }
+  return {
+    name: preview.label,
+    shortName: preview.wordmark,
+    logo: preview.markArtwork,
+    tagline: preview.copy,
+  };
+};
+
+const getDesktopServiceCards = (artwork: LeadSiteConfig["artwork"]) =>
+  artwork?.desktopServiceCards ??
+  artwork?.desktopServices ??
+  defaultSiteArtwork.desktopServiceCards;
+
 /** Translate the existing Cars adaptation contract once, at the configuration boundary. */
 export const createPublicSiteConfig = (
   config: LeadSiteConfig
@@ -33,6 +53,7 @@ export const createPublicSiteConfig = (
       logo: config.logoPath,
       inverseLogo: config.logoInversePath ?? config.logoPath,
       icon: config.iconPath ?? config.logoPath,
+      desktopPreview: getDesktopPreviewIdentity(config),
     },
     contact: {
       address: config.address,
@@ -69,17 +90,36 @@ export const createPublicSiteConfig = (
       "van",
       "motorbike",
     ],
+    inventory: {
+      desktopFilterLayout: config.desktopInventoryFilterLayout ?? "quick",
+    },
     theme: { accent: config.accent, colorMode: config.colorMode ?? "light" },
     artwork: {
       ...defaultSiteArtwork,
       financePromotion: config.financingArtworkPath,
       ...config.artwork,
+      // Older dealer service sets remain authoritative unless a card set is supplied.
+      desktopServiceCards: getDesktopServiceCards(config.artwork),
       // Explicit cutouts from older dealer copies must not be hidden by the master scene.
       heroScene:
         config.artwork?.heroScene ??
         (config.artwork?.heroLeft || config.artwork?.heroRight
           ? undefined
           : defaultSiteArtwork.heroScene),
+      desktopHeroScene:
+        config.artwork?.desktopHeroScene ??
+        config.artwork?.heroScene ??
+        (config.artwork?.heroLeft || config.artwork?.heroRight
+          ? undefined
+          : defaultSiteArtwork.desktopHeroScene),
+      desktopFinanceHero:
+        config.artwork?.desktopFinanceHero ??
+        config.artwork?.financeHero ??
+        defaultSiteArtwork.desktopFinanceHero,
+      desktopVisitBanner:
+        config.artwork?.desktopVisitBanner ??
+        config.artwork?.contactHero ??
+        defaultSiteArtwork.desktopVisitBanner,
       bodyTypes: {
         ...defaultSiteArtwork.bodyTypes,
         ...config.artwork?.bodyTypes,

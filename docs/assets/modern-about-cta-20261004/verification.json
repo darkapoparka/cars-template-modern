@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-04",
+  "scope": "Modern desktop About CTA solid brand blue with white copy and white buttons with dark text",
+  "baseline": {
+    "buildId": "WgJSolw4iI8FV0LLKy0_4",
+    "sourceState": "Previously qualified local About gallery/artwork revision, before CTA palette refinement",
+    "priorReceipt": "docs/assets/modern-about-gallery-20261004/verification.json"
+  },
+  "buildId": "_Zp0sscLR7dNexOlhppCG",
+  "runtime": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8",
+    "origin": "http://127.0.0.1:6482"
+  },
+  "source": [
+    {
+      "path": "apps/web/app/[locale]/about/page.tsx",
+      "sha256": "438156da3b7bda4639f94bc7fbe049fe3df873c41d2a7c47d7b4e8cb3c2d0ccb"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "sha256": "8137a692273f375f6958ac31166d0c8f4495c9e242c5c8c04e0b6f0db0be3945"
+    },
+    {
+      "path": "apps/e2e/specs/desktop-panel-flows.spec.ts",
+      "sha256": "742317450c2459ac0bf5b5a210632a03aaf26b80b8b04e4dc505366fe474c477"
+    },
+    {
+      "path": "TEMPLATE.md",
+      "sha256": "c7102fbaca7d226bea5499453ee09dec955aa8113a1a33131e168a2dbeaea568"
+    }
+  ],
+  "screenshots": [
+    {
+      "stage": "before",
+      "path": "docs/assets/modern-about-cta-20261004/cta-before.png",
+      "bytes": 21517,
+      "width": 1320,
+      "height": 265,
+      "sha256": "025dc4067127ba8e63a9ba279b814e7b860e5ea17e2c6b6380b31e1067221a37"
+    },
+    {
+      "stage": "after",
+      "path": "docs/assets/modern-about-cta-20261004/cta-after.png",
+      "bytes": 20080,
+      "width": 1320,
+      "height": 265,
+      "sha256": "552ab5664321898b798dc6a41c02c4a80452d20969654f8e6a0715e971fec4c7"
+    }
+  ],
+  "palette": {
+    "panel": "rgb(64, 95, 242)",
+    "text": "rgb(255, 255, 255)",
+    "button": "rgb(255, 255, 255)",
+    "buttonText": "rgb(5, 11, 32)",
+    "hover": "rgb(249, 251, 252)",
+    "focus": {
+      "visible": true,
+      "color": "rgb(255, 255, 255)",
+      "style": "solid",
+      "width": "2px",
+      "offset": "4px"
+    }
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "buildTypeScript": "passed",
+    "refactorTests": 7,
+    "preflightContracts": "passed",
+    "preflightTests": 87,
+    "desktopCtaStates": 16,
+    "browsers": [
+      "chromium",
+      "webkit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "desktopWidths": [
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "nativeAboutContactCaptures": 28,
+    "ctaGeometryPreservation": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 1024,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 1280,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 1440,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 1920,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 1024,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 1280,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 1440,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 1920,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 1024,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 1280,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 1440,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 1920,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 1024,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 1280,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 1440,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 1920,
+        "samePanelBounds": true,
+        "sameButtonBounds": true
+      }
+    ],
+    "mobileWidths": [
+      320,
+      390,
+      1023
+    ],
+    "mobilePreservation": [
+      {
+        "name": "bg-about-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      }
+    ],
+    "contactPreservation": [
+      {
+        "name": "bg-contact-1024",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-1280",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-1440",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-1920",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-1024",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-1280",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-1440",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-contact-1920",
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      }
+    ],
+    "aboutLayoutPreservation": [
+      {
+        "name": "bg-about-1024",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-1280",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-1440",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-1920",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-1024",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-1280",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-1440",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      },
+      {
+        "name": "en-about-1920",
+        "sameLayout": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "preserved": true
+      }
+    ],
+    "accessibility": [
+      {
+        "locale": "bg",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "violations": []
+      }
+    ],
+    "navigation": [
+      {
+        "locale": "bg",
+        "href": "/bg/cars",
+        "actual": "/bg/cars"
+      },
+      {
+        "locale": "bg",
+        "href": "/bg/contact",
+        "actual": "/bg/contact"
+      },
+      {
+        "locale": "en",
+        "href": "/en/cars",
+        "actual": "/en/cars"
+      },
+      {
+        "locale": "en",
+        "href": "/en/contact",
+        "actual": "/en/contact"
+      }
+    ]
+  },
+  "harness": {
+    "styleSampling": "Poll the expected hover and focus styles before recording; immediate samples sometimes preceded style invalidation.",
+    "preservedEarlyDiagnostics": [
+      "initial-focus-sample.json",
+      "focus-diagnostic.json",
+      "cta-review-immediate-hover.log",
+      "after-cta-immediate-hover.json"
+    ],
+    "productionSourceChangedForHarnessRetry": false
+  },
+  "logs": [
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/build.log",
+      "sha256": "3410fc20651855cec3d46538590f5f3ca1dc653c4e85229ed57c19fd8033da6f"
+    },
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/refactor-contracts.log",
+      "sha256": "9a40009ef698438eeb7cb698f2a494b7ed1b1162aebcfd9aa6eaf0e9b16135c4"
+    },
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/preflight-contracts.log",
+      "sha256": "701cba74823a619335009b47e8d8313506adf627e28b76a6c894583993a85e6c"
+    },
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/preflight-tests.log",
+      "sha256": "aacc02743acf1dbe685a6181a1540495f79dcbbf2750b6e490546c433a0c3ac2"
+    },
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/cta-review-final.log",
+      "sha256": "00710c9642a026582839e412d2cf2b50f02f71316e6da74a190e84512a69ec5a"
+    },
+    {
+      "path": "L:/CODEX/cars/runtime/modern-about-cta-20261004/workspace-doctor.log",
+      "sha256": "adbe9147c3d454958510de10e555efc52c928253c6653bb5bda93a786a4b36a6"
+    }
+  ],
+  "rawArtifacts": "L:/CODEX/cars/runtime/modern-about-cta-20261004",
+  "scopeLimits": [
+    "Local desktop About verification only",
+    "Existing mobile and Contact presentation preserved",
+    "Template release selection, dealer deployment and real-provider delivery remain outside this change"
+  ]
+}

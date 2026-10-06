@@ -10,15 +10,15 @@ import type { ReactNode } from "react";
 
 const serviceWordmarkTones = {
   leasing: "light",
-  import: "dark",
-  sell: "dark",
+  import: "light",
+  sell: "light",
   contact: "original",
 } as const;
 const serviceBackgrounds = {
-  leasing: "#bd001b",
-  import: "#f5c542",
-  sell: "#dce8ee",
-  contact: "#09090b",
+  leasing: "var(--brand)",
+  import: "var(--brand)",
+  sell: "var(--brand)",
+  contact: "var(--brand)",
 } as const;
 
 /** Shared brand alignment with route-specific service artwork. */
@@ -30,20 +30,24 @@ export function MobileDealerServiceHero({
   locale,
   tone,
   helpAction,
+  title,
+  titleId,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   imageClassName?: string;
   imageSrc: string;
   locale: "bg" | "en";
   tone?: "leasing" | "import" | "sell" | "contact";
   helpAction?: ReactNode;
+  title?: string;
+  titleId?: string;
 }) {
   return (
     <section
       className={cn(
         "relative isolate flex flex-col overflow-hidden bg-zinc-200 text-zinc-950 lg:hidden",
-        tone === "leasing" && "[--mobile-header-action-fill:20%]",
+        tone && "[--lead-site-accent-bright:white] [--ring:white]",
         className
       )}
       data-slot="mobile-service-hero"
@@ -77,9 +81,7 @@ export function MobileDealerServiceHero({
           <div
             className={cn(
               "grid h-11 grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-3",
-              tone === "leasing" || tone === "contact"
-                ? "text-white"
-                : "text-zinc-950"
+              tone ? "text-white" : "text-zinc-950"
             )}
           >
             <div>{helpAction}</div>
@@ -99,6 +101,9 @@ export function MobileDealerServiceHero({
             </a>
           </div>
         }
+        title={title}
+        titleClassName={tone ? "text-white" : "text-zinc-950"}
+        titleId={titleId}
       >
         {children}
       </MobileDealerChrome>

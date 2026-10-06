@@ -1,0 +1,508 @@
+{
+  "date": "2026-10-03",
+  "runtime": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.3",
+    "mode": "production static-demo",
+    "port": 6482
+  },
+  "build": {
+    "exitCode": 0,
+    "webpack": true
+  },
+  "typecheck": {
+    "exitCode": 0
+  },
+  "units": {
+    "web": {
+      "files": 36,
+      "tests": 186
+    },
+    "marketplaceUi": {
+      "files": 19,
+      "tests": 85
+    }
+  },
+  "biome": {
+    "files": 4,
+    "exitCode": 0
+  },
+  "browserFlows": {
+    "startTime": "2026-10-03T03:33:34.575Z",
+    "duration": 138532.611,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "renders": {
+    "chromium": [
+      {
+        "name": "bg-home-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-cars-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-cars-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "settled-chromium"
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-contact-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-contact-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-imports-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "settled-chromium"
+      },
+      {
+        "name": "bg-imports-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-sell-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-sell-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-lease-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-lease-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-blog-320",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-blog-390",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-1023",
+        "width": 1023,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-1024",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 460
+        },
+        "firstStockCard": {
+          "x": 72,
+          "y": 778,
+          "width": 280,
+          "height": 406.328125
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "en-home-1024",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 460
+        },
+        "firstStockCard": {
+          "x": 72,
+          "y": 778,
+          "width": 280,
+          "height": 406.328125
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-1280",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 486.390625
+        },
+        "firstStockCard": {
+          "x": 72,
+          "y": 804.390625,
+          "width": 266,
+          "height": 425
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "en-home-1280",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 486.390625
+        },
+        "firstStockCard": {
+          "x": 72,
+          "y": 804.390625,
+          "width": 266,
+          "height": 425
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 92,
+          "y": 838,
+          "width": 296,
+          "height": 445
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "en-home-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 92,
+          "y": 838,
+          "width": 296,
+          "height": 417
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-home-1920",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 332,
+          "y": 838,
+          "width": 296,
+          "height": 445
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "en-home-1920",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 332,
+          "y": 838,
+          "width": 296,
+          "height": 417
+        },
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-cars-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      },
+      {
+        "name": "bg-contact-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null,
+        "captureSource": "after-chromium"
+      }
+    ],
+    "webkit": [
+      {
+        "name": "bg-home-1024",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 460
+        },
+        "firstStockCard": {
+          "x": 72,
+          "y": 778,
+          "width": 280,
+          "height": 406.328125
+        }
+      },
+      {
+        "name": "bg-home-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 92,
+          "y": 838,
+          "width": 296,
+          "height": 445
+        }
+      },
+      {
+        "name": "en-home-1920",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "firstStockCard": {
+          "x": 332,
+          "y": 838,
+          "width": 296,
+          "height": 417
+        }
+      },
+      {
+        "name": "bg-cars-1440",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "hero": null,
+        "firstStockCard": null
+      }
+    ]
+  },
+  "mobile": {
+    "states": 17,
+    "changedPixels": 0,
+    "maxChannelDelta": 0,
+    "sameGeometry": true
+  },
+  "captures": {
+    "originalReceiptsPreserved": true,
+    "settledRecaptures": [
+      "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "bg-imports-320"
+    ],
+    "reason": "Waited for visible image/background decoding and stable painting before selecting the two settled frames"
+  },
+  "rawEvidence": "runtime/boxcar-home10-final-20261003",
+  "sourceHashes": "tested-source.json"
+}

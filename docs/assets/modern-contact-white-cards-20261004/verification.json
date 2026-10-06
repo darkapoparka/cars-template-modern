@@ -1,0 +1,551 @@
+{
+  "verifiedAt": "2026-10-04T08:29:52.9024869Z",
+  "baseline": {
+    "buildId": "7mbKs3C0C-yVctJVienCF",
+    "capturedStates": 12,
+    "origin": "http://127.0.0.1:6482"
+  },
+  "build": {
+    "pnpm": "11.4.0",
+    "logicalOutput": "apps/web/.next-public-e2e-contact-white-cards-isolated-20261004-demo",
+    "node": "22.23.2",
+    "physicalOutput": "C:/Users/radev/AppData/Local/Temp/cars-modern-contact-white-cards-20261004/.next",
+    "status": "passed",
+    "id": "Top3hISwH_fKUeHPHrTgo",
+    "next": "16.3.8",
+    "mode": "static demo"
+  },
+  "checks": {
+    "webTypecheck": "passed",
+    "biome": "1 CSS file, passed",
+    "workspaceDoctor": "--fetch completed; unrelated Cars changes preserved",
+    "webProductionBuild": "passed",
+    "refactorContracts": "7/7 passed"
+  },
+  "browserStates": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "formHeight": 793.6875,
+      "detailsHeight": 793.6875,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "formHeight": 725,
+      "detailsHeight": 725,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ],
+      "accessibility": "No WCAG A/AA violations",
+      "focus": {
+        "color": "rgb(64, 95, 242)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "formHeight": 725,
+      "detailsHeight": 725,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedMobilePixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "formHeight": 743.6875,
+      "detailsHeight": 743.6875,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "formHeight": 725,
+      "detailsHeight": 725,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ],
+      "accessibility": "No WCAG A/AA violations",
+      "focus": {
+        "color": "rgb(64, 95, 242)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "formHeight": 725,
+      "detailsHeight": 725,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "formHeight": 793.6875,
+      "detailsHeight": 793.6875,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "formHeight": 731,
+      "detailsHeight": 731,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ],
+      "accessibility": "No WCAG A/AA violations",
+      "focus": {
+        "color": "rgb(64, 95, 242)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "formHeight": 731,
+      "detailsHeight": 731,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "formHeight": 743.6875,
+      "detailsHeight": 743.6875,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "formHeight": 731,
+      "detailsHeight": 731,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ],
+      "accessibility": "No WCAG A/AA violations",
+      "focus": {
+        "color": "rgb(64, 95, 242)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "formHeight": 731,
+      "detailsHeight": 731,
+      "logoHeight": 28,
+      "detailsBackground": "rgb(64, 95, 242)",
+      "cardBackgrounds": [
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)",
+        "rgb(255, 255, 255)"
+      ],
+      "cardColors": [
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)",
+        "rgb(5, 11, 32)"
+      ],
+      "cardRadii": [
+        "16px",
+        "16px",
+        "16px",
+        "16px"
+      ],
+      "iconColors": [
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)",
+        "rgb(64, 95, 242)"
+      ]
+    }
+  ],
+  "canonical": {
+    "origin": "http://127.0.0.1:6482",
+    "buildId": "Top3hISwH_fKUeHPHrTgo",
+    "records": [
+      {
+        "locale": "bg",
+        "contactStatus": 200,
+        "contactMatchesQualifiedPixels": true,
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "contactStatus": 200,
+        "contactMatchesQualifiedPixels": true,
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      }
+    ]
+  },
+  "sourceHashes": [
+    {
+      "Path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "Hash": "25F55CC26B4470EDE66EA34ADF46375937D68AF96A80808820FF449A232298AF"
+    },
+    {
+      "Path": "apps/web/app/[locale]/desktop.css",
+      "Hash": "6BED140C45CB494CC04720A8CDA446AA42F9FA8E8E5C2B9359C4BD2EACA6387D"
+    },
+    {
+      "Path": "apps/web/app/[locale]/styles.css",
+      "Hash": "6B2272FFEA05C4CA190D347F2945218184F94D191BA98BCBC513D2FC5BDB71E8"
+    },
+    {
+      "Path": "apps/web/app/[locale]/contact/page.tsx",
+      "Hash": "7FDEC9944AF7D509BC2B9D42D93DE22CDB5ACADD452F027F7D80487043852E6B"
+    }
+  ],
+  "preserved": [
+    "unrelated Cars staged/unstaged/untracked work",
+    "docs/DESKTOP-HERO-CORRECTION-2026-10-03.md",
+    "earlier builds and screenshots",
+    "failed build logs and generated output"
+  ]
+}

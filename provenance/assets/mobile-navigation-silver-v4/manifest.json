@@ -1,0 +1,124 @@
+{
+  "generated": "2026-10-06",
+  "source": "source.png",
+  "sourceDimensions": [
+    2172,
+    724
+  ],
+  "deliveryCanvas": [
+    120,
+    96
+  ],
+  "assets": [
+    {
+      "role": "car",
+      "path": "/images/services/navigation-silver-car-v4.webp",
+      "crop": {
+        "left": 30,
+        "top": 251,
+        "width": 435,
+        "height": 248
+      },
+      "visibleDimensions": [
+        112,
+        64
+      ],
+      "bytes": 5000,
+      "sha256": "5c6d406816400b98f5b182bca96b4e4ed897a1f26b03845b6b8cd1ed18807dcd",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "import",
+      "path": "/images/services/navigation-silver-import-v4.webp",
+      "crop": {
+        "left": 481,
+        "top": 180,
+        "width": 400,
+        "height": 336
+      },
+      "visibleDimensions": [
+        95,
+        80
+      ],
+      "bytes": 4140,
+      "sha256": "d066900b403846326e30abb3d0772c2fed936cdf896d74a6bc4144a73e6ad736",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "sell",
+      "path": "/images/services/navigation-silver-sell-v4.webp",
+      "crop": {
+        "left": 960,
+        "top": 173,
+        "width": 296,
+        "height": 364
+      },
+      "visibleDimensions": [
+        72,
+        88
+      ],
+      "bytes": 3426,
+      "sha256": "612c1affee8d1727140a02c9171414039d6c734f87b3ed026e632cd24faf8ab5",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "lease",
+      "path": "/images/services/navigation-silver-lease-v4.webp",
+      "crop": {
+        "left": 1375,
+        "top": 200,
+        "width": 304,
+        "height": 330
+      },
+      "visibleDimensions": [
+        81,
+        88
+      ],
+      "bytes": 4416,
+      "sha256": "29d0e6d5bf9aa4420ddc77418a5fd8e36d6371aa4b77a8ad0057fc5d3012558d",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "role": "menu",
+      "path": "/images/services/navigation-silver-menu-v4.webp",
+      "crop": {
+        "left": 1804,
+        "top": 216,
+        "width": 276,
+        "height": 289
+      },
+      "visibleDimensions": [
+        84,
+        88
+      ],
+      "bytes": 4066,
+      "sha256": "53dd7cd3722af5eee2e6205512a7bbdc660c255044ae294ea0cdeda66b05613b",
+      "cornerAlpha": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

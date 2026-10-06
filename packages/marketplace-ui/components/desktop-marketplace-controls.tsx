@@ -86,6 +86,7 @@ export const ResultToolbar = ({
   const resultTitle = getMarketplaceResultTitle(filters, locale);
   const activeFilterCount = getActiveFilterChips(filters, locale).length;
   const clearFiltersLabel = isBg ? "Изчисти филтрите" : "Clear filters";
+  const ResultsHeading = isDealershipSite ? "h2" : "h1";
 
   const clearFiltersButton =
     activeFilterCount > 0 && onClearFilters ? (
@@ -103,9 +104,12 @@ export const ResultToolbar = ({
 
   return (
     <>
-      <h1 className="sr-only" data-slot="marketplace-results-heading">
+      <ResultsHeading
+        className="sr-only"
+        data-slot="marketplace-results-heading"
+      >
         {resultTitle}
-      </h1>
+      </ResultsHeading>
       <div
         className={
           hideDesktopSummary

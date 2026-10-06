@@ -7,9 +7,11 @@ import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Heart, Images } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   mobileVehicleCardClassName,
+  mobileVehicleCardImageSizes,
   mobileVehicleCardMediaClassName,
 } from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
@@ -22,6 +24,7 @@ import {
   getVehicleCardViewListingLabel,
   vehicleCardPlaceholder,
 } from "../lib/vehicle-card-view-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
 import Image from "./public-image";
 import {
   VehicleCardContent,
@@ -38,7 +41,9 @@ export type {
 export const VehicleCard = ({
   density = "default",
   desktopHeadingLevel = 2,
+  desktopImageSizes,
   desktopLayout = "list",
+  desktopSurface = "inventory",
   href,
   listing: sourceListing,
   locale,
@@ -65,6 +70,17 @@ export const VehicleCard = ({
       ? vehicleCardPlaceholder
       : primaryImage.url;
   const copy = getVehicleCardCopy(locale);
+  let imageSizes = getVehicleCardImageSizes(
+    isCompact,
+    isGrid,
+    isDesktopComparison
+  );
+  if (presentation === "showroom") {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 45vw, 400px`;
+  }
+  if (desktopImageSizes) {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, ${desktopImageSizes}`;
+  }
 
   return (
     <article
@@ -79,6 +95,7 @@ export const VehicleCard = ({
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
       )}
+      data-desktop-surface={desktopSurface}
       data-presentation={presentation}
       data-slot="vehicle-card"
       data-view-mode={viewMode}
@@ -115,17 +132,19 @@ export const VehicleCard = ({
             }}
             onLoad={() => setImageLoaded(true)}
             referrerPolicy="no-referrer"
-            sizes={getVehicleCardImageSizes(
-              isCompact,
-              isGrid,
-              isDesktopComparison
-            )}
+            sizes={imageSizes}
             src={imageSource}
             unoptimized={imageSource.startsWith("data:")}
           />
         </Link>
 
         <VehicleCardMediaBadges listing={listing} locale={locale} />
+        {presentation === "showroom" && !saveHref && (
+          <DesktopSaveCarButton
+            car={createDesktopSavedCar(listing, listingHref, locale)}
+            locale={locale}
+          />
+        )}
 
         {listing.images.length > 1 ? (
           <span className="pointer-events-none absolute bottom-1.5 left-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2 lg:left-auto">

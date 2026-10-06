@@ -1,0 +1,485 @@
+{
+  "scope": "Modern desktop inventory controls below the banner",
+  "verifiedAt": "2026-10-04T22:57:11.190Z",
+  "canonical": {
+    "base": "http://127.0.0.1:6482",
+    "buildId": "rtELF3kTLxdLPybEycCrB",
+    "records": [
+      {
+        "locale": "bg",
+        "status": 200,
+        "controlsBelowBanner": true,
+        "alignedToCards": true,
+        "bannerToControls": 24,
+        "controlsToPanel": 16,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Изглед в решетка",
+          "Списъчен изглед",
+          "Бързи филтри",
+          "Страничен панел"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "status": 200,
+        "controlsBelowBanner": true,
+        "alignedToCards": true,
+        "bannerToControls": 24,
+        "controlsToPanel": 16,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Grid view",
+          "List view",
+          "Quick filters",
+          "Sidebar"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      }
+    ]
+  },
+  "canonicalNotes": [
+    "The refreshed server required additional time beyond the initial readiness loop.",
+    "The canonical helper exited during its first browser launch with code 3221225773. It passed after the owned temporary preview and separate agent-browser session were closed."
+  ],
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "webTypecheck": "passed",
+    "scopedBiome": "passed",
+    "refactorAndReleaseContractTests": 94,
+    "releasePreflightContracts": "passed"
+  },
+  "browser": {
+    "acceptedCases": 8,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "stats": {
+      "startTime": "2026-10-04T22:30:34.885Z",
+      "duration": 142153.99,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "review": {
+    "base": "http://127.0.0.1:6499",
+    "records": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "filterFocus": {
+          "outline": "solid",
+          "width": "3px",
+          "shadow": "none"
+        },
+        "sortFocus": {
+          "outline": "solid",
+          "width": "2px",
+          "shadow": "none"
+        },
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      }
+    ]
+  },
+  "captureBefore": {
+    "base": "http://127.0.0.1:6482",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "captureAfter": {
+    "base": "http://127.0.0.1:6499",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "preservation": [
+    {
+      "name": "bg-cars-320",
+      "changedPixels": 66,
+      "maximumChannelDifference": 8,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-cars-390",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-cars-1023",
+      "changedPixels": 21,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-home-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-320",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-390",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-1023",
+      "changedPixels": 4,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-home-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    }
+  ],
+  "sourceHashes": {
+    "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx": "119ded50c6f2032aecb3997cc6a45fc68a37bbf532977ceeb890cdf96b0f757f",
+    "packages/marketplace-ui/components/dealer-inventory-summary.tsx": "41e8069ea120204349a7ca9a8ebe2b0b14c31f07c413e990d6b821225f7c5a31",
+    "packages/marketplace-ui/components/dealer-inventory.module.css": "ca22925d882b59d7d5305d38879e834912c065b8df8b6859c7d5cddd3bf68d45",
+    "apps/e2e/specs/desktop-inventory-search.spec.ts": "54f33aff61df35f8c6d6cb73c5b1fd2d8132a37500e6b7f2102432c483c9966a"
+  }
+}

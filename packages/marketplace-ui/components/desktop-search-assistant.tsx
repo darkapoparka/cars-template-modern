@@ -186,7 +186,7 @@ const DesktopSearchDialog = ({
 }) => (
   <Dialog onOpenChange={handleOpenChange} open={open}>
     <DialogContent
-      className="fixed top-1/2 left-1/2 z-[100] flex h-[min(32rem,calc(100dvh_-_3rem))] w-[min(72rem,calc(100vw_-_3rem))] max-w-none -translate-x-1/2 -translate-y-1/2 flex-col gap-0 overflow-hidden rounded-3xl border border-border/75 bg-panel p-0 shadow-[0_28px_72px_rgba(0,0,0,0.3)] sm:max-w-none"
+      className="fixed top-1/2 left-1/2 z-[var(--desktop-layer-dialog)] flex h-[var(--desktop-search-dialog-height)] w-[var(--desktop-search-dialog-width)] max-w-none -translate-x-1/2 -translate-y-1/2 flex-col gap-0 overflow-hidden rounded-3xl border border-border/75 bg-panel p-0 shadow-overlay sm:max-w-none"
       data-slot="desktop-search-dialog"
       id={dialogId}
       onCloseAutoFocus={onCloseAutoFocus}
@@ -202,7 +202,7 @@ const DesktopSearchDialog = ({
             ? "Търсете автомобили или задайте филтри. Натиснете Escape, за да затворите търсенето."
             : "Search vehicles or set filters. Press Escape to close search."}
         </DialogDescription>
-        <div className="mx-auto flex w-full max-w-[68rem] items-center justify-between gap-4">
+        <div className="mx-auto flex w-full max-w-[var(--desktop-search-dialog-content)] items-center justify-between gap-4">
           <DialogTitle className="font-semibold text-foreground text-xl tracking-tight">
             {dialogTitle}
           </DialogTitle>
@@ -218,7 +218,7 @@ const DesktopSearchDialog = ({
             </Button>
           </DialogClose>
         </div>
-        <div className="mx-auto w-full max-w-[68rem] pt-4 pb-5">
+        <div className="mx-auto w-full max-w-[var(--desktop-search-dialog-content)] pt-4 pb-5">
           <div className="relative flex min-w-0 items-center">
             <Search
               aria-hidden="true"
@@ -286,7 +286,7 @@ const DesktopSearchDialog = ({
       </div>
       <footer className="shrink-0 bg-panel px-6 pb-5 sm:px-8">
         {filterSlot ? (
-          <div className="mx-auto flex w-full max-w-[68rem] items-center justify-end">
+          <div className="mx-auto flex w-full max-w-[var(--desktop-search-dialog-content)] items-center justify-end">
             <Button
               className="h-11 gap-2 rounded-full bg-brand px-6 font-semibold text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
               data-slot="desktop-search-submit"
@@ -299,7 +299,7 @@ const DesktopSearchDialog = ({
             </Button>
           </div>
         ) : (
-          <div className="mx-auto flex min-h-10 w-full max-w-[64rem] items-center justify-between gap-4 text-micro text-muted-foreground">
+          <div className="mx-auto flex min-h-10 w-full max-w-[var(--desktop-search-dialog-footer)] items-center justify-between gap-4 text-micro text-muted-foreground">
             <span>
               {isBg
                 ? "↑↓ избор · Enter отвори · Esc затвори"
@@ -349,14 +349,14 @@ const ListingSuggestionContent = ({
       {listingImage ? (
         <Image
           alt={listingImage.alt}
-          className="h-16 w-[104px] shrink-0 rounded-xl object-cover"
+          className="h-16 w-[var(--desktop-search-thumbnail-width)] shrink-0 rounded-xl object-cover"
           height={128}
           sizes="104px"
           src={listingImage.url}
           width={208}
         />
       ) : (
-        <span className="grid h-16 w-[104px] shrink-0 place-items-center rounded-xl bg-control text-muted-foreground">
+        <span className="grid h-16 w-[var(--desktop-search-thumbnail-width)] shrink-0 place-items-center rounded-xl bg-control text-muted-foreground">
           <CarFront aria-hidden="true" className="size-5" />
         </span>
       )}
@@ -453,11 +453,12 @@ const SearchSuggestionOption = ({
   let surfaceClassName = "rounded-xl px-3 py-2.5";
   let dataSlot = "desktop-search-suggestion";
   if (listing) {
-    surfaceClassName = "min-h-[76px] rounded-xl px-3 py-2";
+    surfaceClassName =
+      "min-h-[var(--desktop-search-result-height)] rounded-xl px-3 py-2";
     dataSlot = "desktop-search-listing-suggestion";
   } else if (locationPanel) {
     surfaceClassName =
-      "min-h-[76px] rounded-xl bg-control px-4 py-3 hover:bg-control-hover";
+      "min-h-[var(--desktop-search-result-height)] rounded-xl bg-control px-4 py-3 hover:bg-control-hover";
     dataSlot = "desktop-search-location-suggestion";
   }
 
@@ -473,7 +474,7 @@ const SearchSuggestionOption = ({
         "h-auto w-full justify-start text-left font-normal",
         surfaceClassName,
         selectedClassName,
-        spansWidePanel && "min-[70rem]:col-span-2"
+        spansWidePanel && "desktop-wide:col-span-2"
       )}
       data-slot={dataSlot}
       id={id}
@@ -530,7 +531,7 @@ const SearchSuggestionGroup = ({
         {group.heading}
       </p>
       <div
-        className={cn("grid gap-0.5", twoColumns && "min-[70rem]:grid-cols-2")}
+        className={cn("grid gap-0.5", twoColumns && "desktop-wide:grid-cols-2")}
       >
         {group.items.map((item, groupItemIndex) => {
           const itemIndex = items.findIndex(
@@ -690,7 +691,7 @@ export const DesktopSearchAssistant = ({
           "flex h-full min-w-0 flex-col justify-center transition-colors",
           compact
             ? "rounded-lg border border-border/90 bg-card px-4 focus-within:border-foreground/25 focus-within:ring-2 focus-within:ring-ring/25 focus-within:ring-inset"
-            : "rounded-xl px-4 focus-within:bg-zinc-100 hover:bg-zinc-50",
+            : "rounded-xl px-4 focus-within:bg-control hover:bg-canvas",
           appearance !== "standard" &&
             "h-[var(--control-height-search)] rounded-xl border border-border bg-panel pr-20 pl-12 focus-within:ring-ring",
           { standard: "", hero: "relative pr-4 pl-4", toolbar: "pl-4" }[

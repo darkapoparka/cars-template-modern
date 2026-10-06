@@ -1,6 +1,32 @@
-import { expect, test } from "@playwright/test";
+import { expect, type Page, test } from "@playwright/test";
 
 const defaultLocalePrefix = /^\/bg(?=\/)/;
+const serviceTitles: Record<string, string> = {
+  Коли: "Открийте автомобил",
+  Лизинг: "Лизинг на автомобил",
+  Внос: "Внос на автомобил",
+  Продай: "Продайте автомобил",
+};
+
+const primaryControlSlots: Record<string, string> = {
+  Лизинг: "lease-mobile-vehicle-trigger",
+  Внос: "mobile-import-search-trigger",
+  Продай: "mobile-sell-vin-entry",
+};
+
+const waitForTitleFont = async (page: Page) => {
+  await page.evaluate(async () => {
+    const title = document.querySelector('[data-slot="mobile-dealer-title"]');
+    if (title) {
+      const style = getComputedStyle(title);
+      const font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+      const text = title.textContent ?? "";
+      if (!document.fonts.check(font, text)) {
+        await document.fonts.load(font, text);
+      }
+    }
+  });
+};
 
 for (const width of [320, 360, 390, 430, 844]) {
   test(`mobile header stays aligned across navigation at ${width}px`, async ({
@@ -35,7 +61,7 @@ for (const width of [320, 360, 390, 430, 844]) {
       };
       requestAnimationFrame(sample);
     });
-    await page.goto("/");
+    await page.goto("/", { waitUntil: "domcontentloaded" });
     const nav = page.getByRole("navigation", {
       name: "Навигация на автокъщата",
       exact: true,
@@ -53,8 +79,9 @@ for (const width of [320, 360, 390, 430, 844]) {
         await link.click();
         await page.waitForURL(
           (url) =>
-            `${url.pathname}${url.search}` ===
-            href?.replace(defaultLocalePrefix, "")
+            `${url.pathname}${url.search}`.replace(defaultLocalePrefix, "") ===
+            href?.replace(defaultLocalePrefix, ""),
+          { waitUntil: "domcontentloaded" }
         );
       }
       await expect(
@@ -62,9 +89,37 @@ for (const width of [320, 360, 390, 430, 844]) {
       ).toBeVisible();
       const chrome = page.locator('[data-slot="mobile-dealer-chrome"]:visible');
       await expect(chrome).toBeVisible();
-      await page.waitForLoadState("networkidle");
-      const logo = chrome.locator('img[alt="Day & Night Auto Group"]');
+      await expect
+        .poll(() =>
+          chrome
+            .locator("[data-header-icon] img")
+            .evaluateAll(
+              (images) =>
+                images.length > 0 &&
+                images.every(
+                  (image) =>
+                    image instanceof HTMLImageElement &&
+                    image.complete &&
+                    image.naturalWidth > 0
+                )
+            )
+        )
+        .toBe(true);
+      const controlSlot =
+        (label && primaryControlSlots[label]) || "mobile-discovery-search";
+      const control = chrome.locator(`[data-slot="${controlSlot}"]`);
+      await expect(control).toBeVisible();
+      await expect(control).toBeEnabled();
+      await expect(
+        chrome.locator('[data-slot="mobile-dealer-title"]')
+      ).toHaveCSS("font-size", "18px");
+      await waitForTitleFont(page);
+      const logo = chrome
+        .locator('[data-slot="mobile-dealer-brand-row"]')
+        .getByRole("img");
+      await expect(logo).toBeVisible();
       const current = await logo.boundingBox();
+      expect(current).not.toBeNull();
       if (logoBox) {
         expect(current).toEqual(logoBox);
       } else {
@@ -73,14 +128,21 @@ for (const width of [320, 360, 390, 430, 844]) {
       const content = page.locator(
         '[data-slot="mobile-dealer-content"]:visible'
       );
-      expect((await content.boundingBox())?.y).toBe(128);
+      const title = chrome.locator('[data-slot="mobile-dealer-title"]');
+      const expectedTitle = label ? serviceTitles[label] : "Открийте автомобил";
+      await expect(title).toHaveText(expectedTitle);
+      await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
+      const titleBox = await title.boundingBox();
+      expect(titleBox?.y).toBe(68);
+      expect(titleBox?.height).toBe(28);
+      expect((await content.boundingBox())?.y).toBe(168);
       expect(
         (
           await chrome
             .locator('[data-slot="mobile-dealer-primary-control"]')
             .boundingBox()
         )?.y
-      ).toBe(64);
+      ).toBe(68);
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= window.innerWidth
@@ -92,9 +154,9 @@ for (const width of [320, 360, 390, 430, 844]) {
     );
     expect(samples.length).toBeGreaterThan(0);
     for (const positions of samples) {
-      expect(positions).toEqual([0, 12, 64, 128]);
+      expect(positions).toEqual([0, 12, 68, 168]);
     }
-    await page.goBack();
+    await page.goBack({ waitUntil: "domcontentloaded" });
     await expect(
       page.locator('[data-slot="mobile-discovery-search"]:visible')
     ).toBeVisible();
@@ -104,6 +166,26 @@ for (const width of [320, 360, 390, 430, 844]) {
           .locator('[data-slot="mobile-dealer-content"]:visible')
           .boundingBox()
       )?.y
-    ).toBe(128);
+    ).toBe(168);
+    for (const [route, title] of [
+      ["/services", "Нашите услуги"],
+      ["/guides", "Съвети и статии"],
+      ["/about", "За нас и контакти"],
+      ["/contact", "За нас и контакти"],
+    ]) {
+      await page.goto(route, { waitUntil: "domcontentloaded" });
+      const heading = page.locator('[data-slot="mobile-dealer-title"]:visible');
+      await expect(heading).toHaveText(title);
+      await expect(heading).toHaveCSS("font-size", "18px");
+      await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
+      await waitForTitleFont(page);
+      expect((await heading.boundingBox())?.y).toBe(68);
+      expect((await heading.boundingBox())?.height).toBe(28);
+      expect(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= window.innerWidth
+        )
+      ).toBe(true);
+    }
   });
 }

@@ -1,0 +1,3528 @@
+{
+  "scope": "Modern desktop modal stability and Contact",
+  "date": "2026-10-04",
+  "build": "7mbKs3C0C-yVctJVienCF",
+  "sourceHashes": [
+    {
+      "Path": "apps/web/app/[locale]/desktop.css",
+      "Sha256": "6BED140C45CB494CC04720A8CDA446AA42F9FA8E8E5C2B9359C4BD2EACA6387D"
+    },
+    {
+      "Path": "apps/web/app/[locale]/styles.css",
+      "Sha256": "6B2272FFEA05C4CA190D347F2945218184F94D191BA98BCBC513D2FC5BDB71E8"
+    },
+    {
+      "Path": "apps/web/app/[locale]/contact/page.tsx",
+      "Sha256": "7FDEC9944AF7D509BC2B9D42D93DE22CDB5ACADD452F027F7D80487043852E6B"
+    },
+    {
+      "Path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "Sha256": "8BD23189DEBC922D6BD3A42E3593A5BFE9FC8BCC5F3225647402CC127D7EB87A"
+    }
+  ],
+  "canonical": [
+    {
+      "locale": "bg",
+      "origin": "http://127.0.0.1:6482",
+      "build": "7mbKs3C0C-yVctJVienCF",
+      "carsStatus": 200,
+      "contactStatus": 200,
+      "modalShift": 0,
+      "contactHeight": 725,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "origin": "http://127.0.0.1:6482",
+      "build": "7mbKs3C0C-yVctJVienCF",
+      "carsStatus": 200,
+      "contactStatus": 200,
+      "modalShift": 0,
+      "contactHeight": 725,
+      "errors": []
+    }
+  ],
+  "modalGeometry": {
+    "before": {
+      "before": {
+        "viewport": 1440,
+        "client": 1425,
+        "scroll": 1425,
+        "scrollbarGutter": "auto",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1425,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      },
+      "open": {
+        "viewport": 1440,
+        "client": 1440,
+        "scroll": 1440,
+        "scrollbarGutter": "auto",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1440,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      },
+      "closed": {
+        "viewport": 1440,
+        "client": 1425,
+        "scroll": 1425,
+        "scrollbarGutter": "auto",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1425,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      }
+    },
+    "after": {
+      "before": {
+        "viewport": 1440,
+        "client": 1425,
+        "scroll": 1425,
+        "scrollbarGutter": "stable",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1425,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      },
+      "open": {
+        "viewport": 1440,
+        "client": 1440,
+        "scroll": 1425,
+        "scrollbarGutter": "stable",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1425,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      },
+      "closed": {
+        "viewport": 1440,
+        "client": 1425,
+        "scroll": 1425,
+        "scrollbarGutter": "stable",
+        "root": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 2308.96875
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1425,
+          "height": 90
+        },
+        "hero": {
+          "x": 0,
+          "y": 90,
+          "width": 1425,
+          "height": 270
+        },
+        "form": null,
+        "details": null,
+        "bodyMarginRight": "0px",
+        "bodyPaddingRight": "0px"
+      }
+    }
+  },
+  "browser": {
+    "qualifiedCases": 56,
+    "initialStats": {
+      "startTime": "2026-10-04T07:25:38.562Z",
+      "duration": 249136.275,
+      "expected": 50,
+      "skipped": 0,
+      "unexpected": 6,
+      "flaky": 0
+    },
+    "recheckStats": {
+      "startTime": "2026-10-04T07:32:38.290Z",
+      "duration": 103806.769,
+      "expected": 15,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "finalStats": {
+      "startTime": "2026-10-04T07:36:25.973Z",
+      "duration": 7929.099,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "portableStats": {
+      "startTime": "2026-10-04T07:55:20.220Z",
+      "duration": 77405.864,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "regressionOwnsScrollbarAndVisitorSetup": true,
+    "cases": [
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "the desktop hero preloads only at desktop widths",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "the desktop hero preloads only at desktop widths",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "boxcar-desktop-actions.spec.ts",
+        "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (bg)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (bg)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (en)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (en)",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (bg)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (bg)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (en)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-inventory-search.spec.ts",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (en)",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-overlay-scrollbar.spec.ts",
+        "title": "desktop overlays preserve page geometry with visible scrollbars (bg)",
+        "project": "scrollbar-chromium",
+        "run": "self-contained overlay check on canonical preview",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-overlay-scrollbar.spec.ts",
+        "title": "desktop overlays preserve page geometry with visible scrollbars (en)",
+        "project": "scrollbar-chromium",
+        "run": "self-contained overlay check on canonical preview",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-overlay-scrollbar.spec.ts",
+        "title": "desktop overlays preserve page geometry with visible scrollbars (bg)",
+        "project": "scrollbar-webkit",
+        "run": "self-contained overlay check on canonical preview",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-overlay-scrollbar.spec.ts",
+        "title": "desktop overlays preserve page geometry with visible scrollbars (en)",
+        "project": "scrollbar-webkit",
+        "run": "self-contained overlay check on canonical preview",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1024px)",
+        "project": "scrollbar-chromium",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1024px)",
+        "project": "scrollbar-chromium",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)",
+        "project": "scrollbar-chromium",
+        "run": "final frame check",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)",
+        "project": "scrollbar-chromium",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1920px)",
+        "project": "scrollbar-chromium",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1920px)",
+        "project": "scrollbar-chromium",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop navigation keeps the header stable through loading",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "financing selection and preferences survive navigation and clearing",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop import has one focus treatment and carries the listing into the request",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1024px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1024px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1920px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1920px)",
+        "project": "scrollbar-webkit",
+        "run": "gutter-aware recheck",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop navigation keeps the header stable through loading",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "financing selection and preferences survive navigation and clearing",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "desktop-panel-flows.spec.ts",
+        "title": "desktop import has one focus treatment and carries the listing into the request",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "master desktop wordmarks stay within the existing frame",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "legacy shortlist is sanitized and opens in the active locale",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "PDP has accurate desktop image sizing and visible photo count",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "narrow desktop related cards keep price actions and facts inside each card",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "home stock tabs filter in place and support keyboard browsing",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "home stock rail follows selection and respects reduced motion",
+        "project": "scrollbar-chromium",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "master desktop wordmarks stay within the existing frame",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "legacy shortlist is sanitized and opens in the active locale",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "PDP has accurate desktop image sizing and visible photo count",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "narrow desktop related cards keep price actions and facts inside each card",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "home stock tabs filter in place and support keyboard browsing",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      },
+      {
+        "file": "modern-desktop-reuse.spec.ts",
+        "title": "home stock rail follows selection and respects reduced motion",
+        "project": "scrollbar-webkit",
+        "run": "initial",
+        "status": "passed"
+      }
+    ],
+    "automaticRetries": 0,
+    "skipped": 0
+  },
+  "units": {
+    "marketplaceUI": {
+      "files": 20,
+      "tests": 95
+    },
+    "web": {
+      "files": 36,
+      "tests": 186
+    },
+    "refactorContracts": 7,
+    "releaseHarness": 87
+  },
+  "checks": [
+    "Scoped Biome: 6 source/test files",
+    "Explicit web typecheck",
+    "Next 16.3.8 production webpack build",
+    "Release preflight contracts"
+  ],
+  "captureMatrix": {
+    "before": [
+      {
+        "name": "bg-cars-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1024",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1024,
+          "client": 1024,
+          "scroll": 1024,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 2114.6875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 2114.6875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 791,
+            "width": 461.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 622.140625,
+            "y": 791,
+            "width": 320.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1280",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1280,
+          "client": 1280,
+          "scroll": 1280,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 2064.6875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 2064.6875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 791,
+            "width": 608.203125,
+            "height": 39
+          },
+          "details": {
+            "x": 769.203125,
+            "y": 791,
+            "width": 429.796875,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "client": 1440,
+          "scroll": 1440,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": -469,
+            "width": 1440,
+            "height": 2038.6875
+          },
+          "body": {
+            "x": 0,
+            "y": -469,
+            "width": 1440,
+            "height": 2038.6875
+          },
+          "header": {
+            "x": 0,
+            "y": -469,
+            "width": 1440,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 101,
+            "y": 322,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 858.140625,
+            "y": 322,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1920",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1920,
+          "client": 1920,
+          "scroll": 1920,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 2038.6875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 2038.6875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 341,
+            "y": 791,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 1098.140625,
+            "y": 791,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1024",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1024,
+          "client": 1024,
+          "scroll": 1024,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 2064.6875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 2064.6875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1024,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 791,
+            "width": 461.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 622.140625,
+            "y": 791,
+            "width": 320.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1280",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1280,
+          "client": 1280,
+          "scroll": 1280,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 2038.6875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 2038.6875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 791,
+            "width": 608.203125,
+            "height": 39
+          },
+          "details": {
+            "x": 769.203125,
+            "y": 791,
+            "width": 429.796875,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "client": 1440,
+          "scroll": 1440,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": -424,
+            "width": 1440,
+            "height": 1994
+          },
+          "body": {
+            "x": 0,
+            "y": -424,
+            "width": 1440,
+            "height": 1994
+          },
+          "header": {
+            "x": 0,
+            "y": -424,
+            "width": 1440,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 101,
+            "y": 367,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 858.140625,
+            "y": 367,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1920",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1920,
+          "client": 1920,
+          "scroll": 1920,
+          "scrollbarGutter": "auto",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1994
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 1994
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 341,
+            "y": 791,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 1098.140625,
+            "y": 791,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      }
+    ],
+    "after": [
+      {
+        "name": "bg-cars-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1024",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1024,
+          "client": 1024,
+          "scroll": 1009,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 843,
+            "width": 452.53125,
+            "height": 39
+          },
+          "details": {
+            "x": 613.53125,
+            "y": 791,
+            "width": 314.46875,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1280",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1280,
+          "client": 1280,
+          "scroll": 1265,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 843,
+            "width": 599.59375,
+            "height": 39
+          },
+          "details": {
+            "x": 760.59375,
+            "y": 791,
+            "width": 423.40625,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1440",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1440,
+          "client": 1440,
+          "scroll": 1425,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 93.5,
+            "y": 367,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 850.640625,
+            "y": 315,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-contact-1920",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1920,
+          "client": 1920,
+          "scroll": 1905,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 333.5,
+            "y": 843,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 1090.640625,
+            "y": 791,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-home-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 844
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "details": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1024",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1024,
+          "client": 1024,
+          "scroll": 1009,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1009,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 843,
+            "width": 452.53125,
+            "height": 39
+          },
+          "details": {
+            "x": 613.53125,
+            "y": 791,
+            "width": 314.46875,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1280",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1280,
+          "client": 1280,
+          "scroll": 1265,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 81,
+            "y": 843,
+            "width": 599.59375,
+            "height": 39
+          },
+          "details": {
+            "x": 760.59375,
+            "y": 791,
+            "width": 423.40625,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1440",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1440,
+          "client": 1440,
+          "scroll": 1425,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": -476,
+            "width": 1425,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 93.5,
+            "y": 367,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 850.640625,
+            "y": 315,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-contact-1920",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1920,
+          "client": 1920,
+          "scroll": 1905,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 2046
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 2046
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 90
+          },
+          "hero": null,
+          "form": {
+            "x": 333.5,
+            "y": 843,
+            "width": 677.140625,
+            "height": 39
+          },
+          "details": {
+            "x": 1090.640625,
+            "y": 791,
+            "width": 480.859375,
+            "height": 31.1875
+          },
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-320",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 320,
+          "client": 320,
+          "scroll": 305,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 305,
+            "height": 2136.171875
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-390",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 390,
+          "client": 390,
+          "scroll": 375,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 2383.75
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      },
+      {
+        "name": "en-home-1023",
+        "origin": "http://127.0.0.1:6493",
+        "metrics": {
+          "viewport": 1023,
+          "client": 1023,
+          "scroll": 1008,
+          "scrollbarGutter": "stable",
+          "root": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "body": {
+            "x": 0,
+            "y": 0,
+            "width": 1008,
+            "height": 1623.8125
+          },
+          "header": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "hero": null,
+          "form": null,
+          "details": null,
+          "bodyMarginRight": "0px",
+          "bodyPaddingRight": "0px"
+        },
+        "errors": []
+      }
+    ]
+  },
+  "mobilePreservation": {
+    "initial": [
+      {
+        "name": "bg-cars-320",
+        "width": 305,
+        "height": 2136,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-cars-390",
+        "width": 375,
+        "height": 2384,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-cars-1023",
+        "width": 1008,
+        "height": 1624,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-contact-320",
+        "width": 320,
+        "height": 844,
+        "changedPixels": 22
+      },
+      {
+        "name": "bg-contact-390",
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-contact-1023",
+        "width": 1023,
+        "height": 844,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-home-320",
+        "width": 305,
+        "height": 2136,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-home-390",
+        "width": 375,
+        "height": 2384,
+        "changedPixels": 0
+      },
+      {
+        "name": "bg-home-1023",
+        "width": 1008,
+        "height": 1624,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-cars-320",
+        "width": 305,
+        "height": 2136,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-cars-390",
+        "width": 375,
+        "height": 2384,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-cars-1023",
+        "width": 1008,
+        "height": 1624,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-contact-320",
+        "width": 320,
+        "height": 844,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-contact-390",
+        "width": 390,
+        "height": 844,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-contact-1023",
+        "width": 1023,
+        "height": 844,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-home-320",
+        "width": 305,
+        "height": 2136,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-home-390",
+        "width": 375,
+        "height": 2384,
+        "changedPixels": 0
+      },
+      {
+        "name": "en-home-1023",
+        "width": 1008,
+        "height": 1624,
+        "changedPixels": 0
+      }
+    ],
+    "settledRecheck": {
+      "records": [
+        {
+          "name": "before",
+          "logo": {
+            "source": "/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "x": 23,
+            "y": 19,
+            "width": 30,
+            "height": 30,
+            "naturalWidth": 36,
+            "naturalHeight": 36,
+            "style": {
+              "opacity": "1",
+              "border-radius": "0px",
+              "filter": "none",
+              "object-fit": "contain",
+              "transform": "none",
+              "clip-path": "none"
+            }
+          },
+          "imageHash": "ed426ad55769be17273c247b35b4940e4787268f837d8ff0a1f28f412b7ae5fe"
+        },
+        {
+          "name": "before-again",
+          "logo": {
+            "source": "/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "x": 23,
+            "y": 19,
+            "width": 30,
+            "height": 30,
+            "naturalWidth": 36,
+            "naturalHeight": 36,
+            "style": {
+              "opacity": "1",
+              "border-radius": "0px",
+              "filter": "none",
+              "object-fit": "contain",
+              "transform": "none",
+              "clip-path": "none"
+            }
+          },
+          "imageHash": "ed426ad55769be17273c247b35b4940e4787268f837d8ff0a1f28f412b7ae5fe"
+        },
+        {
+          "name": "after",
+          "logo": {
+            "source": "/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "x": 23,
+            "y": 19,
+            "width": 30,
+            "height": 30,
+            "naturalWidth": 36,
+            "naturalHeight": 36,
+            "style": {
+              "opacity": "1",
+              "border-radius": "0px",
+              "filter": "none",
+              "object-fit": "contain",
+              "transform": "none",
+              "clip-path": "none"
+            }
+          },
+          "imageHash": "ed426ad55769be17273c247b35b4940e4787268f837d8ff0a1f28f412b7ae5fe"
+        },
+        {
+          "name": "after-again",
+          "logo": {
+            "source": "/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=48&q=75",
+            "x": 23,
+            "y": 19,
+            "width": 30,
+            "height": 30,
+            "naturalWidth": 36,
+            "naturalHeight": 36,
+            "style": {
+              "opacity": "1",
+              "border-radius": "0px",
+              "filter": "none",
+              "object-fit": "contain",
+              "transform": "none",
+              "clip-path": "none"
+            }
+          },
+          "imageHash": "ed426ad55769be17273c247b35b4940e4787268f837d8ff0a1f28f412b7ae5fe"
+        }
+      ],
+      "comparisons": [
+        {
+          "a": "before",
+          "b": "after",
+          "changedPixels": 0
+        },
+        {
+          "a": "before",
+          "b": "before-again",
+          "changedPixels": 0
+        },
+        {
+          "a": "after",
+          "b": "after-again",
+          "changedPixels": 0
+        }
+      ]
+    }
+  },
+  "accessibilityAndContact": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "widths": [
+        {
+          "width": 1024,
+          "form": {
+            "x": 41,
+            "y": 275,
+            "width": 532.53125,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 573.53125,
+            "y": 275,
+            "width": 394.46875,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "form": {
+            "x": 41,
+            "y": 275,
+            "width": 679.59375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 720.59375,
+            "y": 275,
+            "width": 503.40625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "form": {
+            "x": 53.5,
+            "y": 275,
+            "width": 757.140625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 810.640625,
+            "y": 275,
+            "width": 560.859375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1920,
+          "form": {
+            "x": 293.5,
+            "y": 275,
+            "width": 757.140625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 1050.640625,
+            "y": 275,
+            "width": 560.859375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "contact",
+          "violations": []
+        },
+        {
+          "state": "focused-make",
+          "violations": []
+        }
+      ],
+      "nativeSaved": "same geometry, dismisses and restores focus",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "widths": [
+        {
+          "width": 1024,
+          "form": {
+            "x": 41,
+            "y": 275,
+            "width": 532.53125,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 573.53125,
+            "y": 275,
+            "width": 394.46875,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "form": {
+            "x": 41,
+            "y": 275,
+            "width": 679.59375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 720.59375,
+            "y": 275,
+            "width": 503.40625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "form": {
+            "x": 53.5,
+            "y": 275,
+            "width": 757.140625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 810.640625,
+            "y": 275,
+            "width": 560.859375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1920,
+          "form": {
+            "x": 293.5,
+            "y": 275,
+            "width": 757.140625,
+            "height": 725,
+            "bottom": 1000
+          },
+          "details": {
+            "x": 1050.640625,
+            "y": 275,
+            "width": 560.859375,
+            "height": 725,
+            "bottom": 1000
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 367,
+          "logoBottom": 343,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "contact",
+          "violations": []
+        },
+        {
+          "state": "focused-make",
+          "violations": []
+        }
+      ],
+      "nativeSaved": "same geometry, dismisses and restores focus",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "widths": [
+        {
+          "width": 1024,
+          "form": {
+            "x": 41,
+            "y": 268,
+            "width": 541.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 582.140625,
+            "y": 268,
+            "width": 400.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "form": {
+            "x": 41,
+            "y": 268,
+            "width": 688.203125,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 729.203125,
+            "y": 268,
+            "width": 509.78125,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "form": {
+            "x": 61,
+            "y": 268,
+            "width": 757.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 818.140625,
+            "y": 268,
+            "width": 560.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1920,
+          "form": {
+            "x": 301,
+            "y": 268,
+            "width": 757.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 1058.140625,
+            "y": 268,
+            "width": 560.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "contact",
+          "violations": []
+        },
+        {
+          "state": "focused-make",
+          "violations": []
+        }
+      ],
+      "nativeSaved": "same geometry, dismisses and restores focus",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "widths": [
+        {
+          "width": 1024,
+          "form": {
+            "x": 41,
+            "y": 268,
+            "width": 541.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 582.140625,
+            "y": 268,
+            "width": 400.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "form": {
+            "x": 41,
+            "y": 268,
+            "width": 688.203125,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 729.203125,
+            "y": 268,
+            "width": 509.78125,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "form": {
+            "x": 61,
+            "y": 268,
+            "width": 757.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 818.140625,
+            "y": 268,
+            "width": 560.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        },
+        {
+          "width": 1920,
+          "form": {
+            "x": 301,
+            "y": 268,
+            "width": 757.140625,
+            "height": 731,
+            "bottom": 999
+          },
+          "details": {
+            "x": 1058.140625,
+            "y": 268,
+            "width": 560.859375,
+            "height": 731,
+            "bottom": 999
+          },
+          "logo": {
+            "text": "Modern",
+            "height": 28
+          },
+          "headingY": 360,
+          "logoBottom": 336,
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "contact",
+          "violations": []
+        },
+        {
+          "state": "focused-make",
+          "violations": []
+        }
+      ],
+      "nativeSaved": "same geometry, dismisses and restores focus",
+      "errors": []
+    }
+  ],
+  "canonicalContactMatchesCandidatePixels": true,
+  "boundary": "Local reusable master; no template promotion or dealer deployment"
+}

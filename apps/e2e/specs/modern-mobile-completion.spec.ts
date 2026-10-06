@@ -441,7 +441,9 @@ test("320px guide cards keep metadata and primary content readable", async ({
   const mediaBounds = await media.boundingBox();
   expect(mediaBounds?.width).toBeLessThanOrEqual(97);
 
-  const metadata = card.locator('[data-slot="content-card-meta"] > span');
+  const metadata = card.locator(
+    '[data-slot="content-card-meta"] > span:visible'
+  );
   const metrics = await metadata.evaluateAll((elements) =>
     elements.map((element) => ({
       text: element.textContent,
@@ -449,7 +451,7 @@ test("320px guide cards keep metadata and primary content readable", async ({
       scrollWidth: element.scrollWidth,
     }))
   );
-  expect(metrics).toHaveLength(2);
+  expect(metrics).toHaveLength(1);
   for (const metric of metrics) {
     expect(
       metric.scrollWidth,
@@ -460,13 +462,25 @@ test("320px guide cards keep metadata and primary content readable", async ({
     card.locator('[data-slot="content-card-description"]')
   ).toBeHidden();
   await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
+  const count = page.locator('[data-slot="content-search-count"]');
+  const total = await page.locator('[data-slot="content-card"]').count();
+  await expect(count).toHaveText(`(${total})`);
+  await page
+    .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
+    .fill("no-guide-matches-this-query");
+  await expect(count).toHaveText("(0)");
+  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Изчисти търсенето", exact: true })
+    .click();
+  await expect(count).toHaveText(`(${total})`);
 });
 
 test("320px inventory keeps semantic type and complete vehicle facts", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 320, height: 700 });
-  await page.goto("/cars");
+  await page.goto("/bg/cars");
   await page.evaluate(() => document.fonts.ready);
 
   const navLabels = page.locator(
@@ -488,7 +502,7 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
   const facts = page
     .locator('[data-slot="vehicle-card-spec-pills"]:visible')
     .first()
-    .locator("li > span");
+    .locator('[data-slot="vehicle-card-spec"] > span:first-child');
   const metrics = await facts.evaluateAll((elements) =>
     elements.map((element) => ({
       text: element.textContent,
@@ -505,6 +519,85 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
   }
 });
 
+for (const width of [320, 375, 390, 430]) {
+  test(`mobile cards keep landscape photos and one complete badge row at ${width}px`, async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width, height: 844 });
+    for (const locale of ["bg", "en"]) {
+      await page.goto(`/${locale}/cars`);
+      await page.evaluate(() => document.fonts.ready);
+      const cards = page.locator('[data-slot="vehicle-card-mobile-content"]');
+      await expect(cards.first()).toBeVisible();
+      const metrics = await cards.evaluateAll((elements) =>
+        elements.map((card) => {
+          const title = card.querySelector('[data-slot="vehicle-card-title"]');
+          const media = card
+            .closest("article")
+            ?.querySelector('[data-slot="vehicle-card-media"]')
+            ?.getBoundingClientRect();
+          const facts = card
+            .querySelector('[data-slot="vehicle-card-spec-pills"]')
+            ?.getBoundingClientRect();
+          return {
+            titleName: title?.getAttribute("aria-label"),
+            fullTitle: title?.getAttribute("title"),
+            mediaWidth: media?.width ?? 0,
+            mediaHeight: media?.height ?? 0,
+            factsGap: (facts?.top ?? 0) - (media?.bottom ?? 0),
+            factsRight: facts?.right ?? 0,
+            pills: [
+              ...card.querySelectorAll(
+                '[data-slot="vehicle-card-spec-pills"] > [data-slot="vehicle-card-spec"]'
+              ),
+            ]
+              .filter((pill) => pill.getBoundingClientRect().width > 0)
+              .map((pill) => {
+                const text = pill.firstElementChild;
+                const rect = pill.getBoundingClientRect();
+                return {
+                  top: rect.top,
+                  right: rect.right,
+                  height: rect.height,
+                  padding: getComputedStyle(pill).paddingInlineStart,
+                  textClientWidth: text?.clientWidth ?? 0,
+                  textScrollWidth: text?.scrollWidth ?? 0,
+                  text: text?.textContent,
+                };
+              }),
+          };
+        })
+      );
+      expect(metrics.length).toBeGreaterThan(0);
+      for (const card of metrics) {
+        expect(card.titleName).toBe(card.fullTitle);
+        expect(card.mediaWidth).toBeGreaterThan(card.mediaHeight);
+        expect(card.factsGap).toBeGreaterThanOrEqual(8);
+        expect(card.pills).toHaveLength(4);
+        for (const pill of card.pills) {
+          expect(Math.abs(pill.top - card.pills[0].top)).toBeLessThan(1);
+          expect(pill.right).toBeLessThanOrEqual(card.factsRight + 1);
+          expect(
+            pill.textScrollWidth,
+            pill.text ?? "vehicle fact"
+          ).toBeLessThanOrEqual(pill.textClientWidth);
+          expect(pill.height).toBe(24);
+          expect(Number.parseFloat(pill.padding)).toBeGreaterThanOrEqual(6);
+        }
+      }
+      const automatic = cards.locator('[data-fact="transmission"]').first();
+      await expect(automatic.locator("span").first()).toHaveText(
+        locale === "bg" ? "Автом." : "Auto"
+      );
+      await expect(automatic.locator(".sr-only")).toHaveText(
+        locale === "bg" ? "Автоматик" : "Automatic"
+      );
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth)
+      ).toBeLessThanOrEqual(width);
+    }
+  });
+}
 for (const viewport of [
   { width: 320, height: 700 },
   { width: 844, height: 390 },

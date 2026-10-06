@@ -26,8 +26,13 @@ export type VehicleCardSpecFactId =
 export interface VehicleCardSpecFact {
   displayValue?: string;
   id: VehicleCardSpecFactId;
+  mobileDisplayValue?: string;
   value: string;
 }
+
+type ShowroomVehicleCardSpecFact = Omit<VehicleCardSpecFact, "id"> & {
+  id: VehicleCardSpecFactId | "variant" | "body";
+};
 
 export interface VehicleCardBadgeCopy {
   featured: string;
@@ -65,13 +70,29 @@ export const getVehicleCardVariant = ({
 };
 
 export const getVehicleCardTitle = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec" | "title">,
   _variant: VehicleCardVariant
 ) => {
   const yearPrefix = `${listing.spec.year} `;
   return listing.title.startsWith(yearPrefix)
     ? listing.title.slice(yearPrefix.length)
     : listing.title;
+};
+
+/** Keep the actual brand separate without dropping any model or trim text. */
+export const getMobileVehicleCardHeading = (
+  listing: Pick<VehicleListing, "spec" | "title">
+) => {
+  const brand = listing.spec.make.trim();
+  const fullTitle = getVehicleCardTitle(listing, "comparison").trim();
+  const hasBrandPrefix =
+    brand &&
+    fullTitle.toLocaleLowerCase().startsWith(`${brand.toLocaleLowerCase()} `);
+  return {
+    brand,
+    fullTitle,
+    title: hasBrandPrefix ? fullTitle.slice(brand.length).trim() : fullTitle,
+  };
 };
 
 /** Split the actual listing title into a scannable model and variant; never invent stock details. */
@@ -95,11 +116,12 @@ export const getShowroomVehicleHeading = (
       break;
     }
   }
+  const bodyType = formatBodyType(listing.spec.bodyType, locale);
   return {
+    detail,
+    bodyType,
     title: `${listing.spec.year} ${model || original}`,
-    subtitle: [detail, formatBodyType(listing.spec.bodyType, locale)]
-      .filter(Boolean)
-      .join(" · "),
+    subtitle: [detail, bodyType].filter(Boolean).join(" · "),
   };
 };
 
@@ -140,12 +162,34 @@ export const getVehicleCardSpecFacts = (
       {
         id: "transmission",
         value: compactTransmissionLabels[listing.spec.transmission][language],
+        ...(listing.spec.transmission === "automatic"
+          ? { mobileDisplayValue: language === "bg" ? "Автом." : "Auto" }
+          : {}),
         ...(listing.spec.transmission === "semi_automatic" && language === "bg"
           ? { displayValue: "Полуавт." }
           : {}),
       },
     ] satisfies VehicleCardSpecFact[]
   ).filter((fact) => fact.value);
+};
+
+/** Desktop badges retain the complete variant and body style alongside the shared vehicle facts. */
+export const getShowroomVehicleCardSpecFacts = (
+  listing: VehicleListing,
+  locale?: string
+): ShowroomVehicleCardSpecFact[] => {
+  const heading = getShowroomVehicleHeading(listing, locale);
+  const facts = getVehicleCardSpecFacts(listing, locale);
+  return [
+    ...facts.filter((fact) => fact.id === "year"),
+    ...(
+      [
+        { id: "variant", value: heading.detail },
+        { id: "body", value: heading.bodyType },
+      ] satisfies ShowroomVehicleCardSpecFact[]
+    ).filter((fact) => fact.value),
+    ...facts.filter((fact) => fact.id !== "year"),
+  ];
 };
 
 export const getVehicleCardBadgeLabels = (

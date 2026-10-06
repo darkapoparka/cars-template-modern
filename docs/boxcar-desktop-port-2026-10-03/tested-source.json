@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-03",
+  "files": [
+    {
+      "path": "apps/e2e/specs/desktop-panel-flows.spec.ts",
+      "sha256": "90e911aae39fb5218a5e82908241ddacefe1262fbdb97b8ef962dc076ea8c94a",
+      "bytes": 16943
+    },
+    {
+      "path": "apps/e2e/specs/boxcar-desktop-actions.spec.ts",
+      "sha256": "81dd9f80342060b27e28f2f2d28dada4669995380605556018cd998e90fd3bf0",
+      "bytes": 3188
+    },
+    {
+      "path": "apps/web/app/[locale]/(home)/page.tsx",
+      "sha256": "acaf95188fe57749a287d82cb0c46e46e683554c81d25d6ea4a4771ddc486c01",
+      "bytes": 6029
+    },
+    {
+      "path": "apps/web/app/[locale]/about/page.tsx",
+      "sha256": "d2050da508ee020dc3b8a4b0425bbf3ae39e072a5106add356cfff4190dc40c2",
+      "bytes": 10492
+    },
+    {
+      "path": "apps/web/app/[locale]/components/footer.tsx",
+      "sha256": "94b1173a8273ceba3acbbab2eb862b053855d308eddcf98b803d7e5048b0ad57",
+      "bytes": 11690
+    },
+    {
+      "path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "sha256": "cf8839c40aaecf19fc68e246d05dd6c837364a1739c583d3c25094fc00b38346",
+      "bytes": 7712
+    },
+    {
+      "path": "apps/web/app/[locale]/components/dealer-desktop-footer.module.css",
+      "sha256": "a5ef90e3d0ef3537a6d96032c08e029b1b0a5fa711180895f8e8a69b6bd91683",
+      "bytes": 2187
+    },
+    {
+      "path": "apps/web/app/[locale]/components/dealer-desktop-footer.tsx",
+      "sha256": "0ad8ee99a563e668ecf8f48836a84ff67fad8dc3d905f629de4c65375c3148c8",
+      "bytes": 5062
+    },
+    {
+      "path": "apps/web/app/[locale]/components/desktop-contact-preview-form.tsx",
+      "sha256": "12fb534d1f20fe3df916c73bc9aa8b069041dd6baf7e8bf3fc814de7dfe346e5",
+      "bytes": 4086
+    },
+    {
+      "path": "apps/web/app/[locale]/contact/page.tsx",
+      "sha256": "4750d595bee1dd0a122214186941907b6a748752be8898c1b774a306b1069118",
+      "bytes": 11072
+    },
+    {
+      "path": "apps/web/app/[locale]/desktop.css",
+      "sha256": "4c89d7c83982f895ccfa5e669d10f38f5ac76262fb51f23ac1ad57cc29f731ae",
+      "bytes": 7544
+    },
+    {
+      "path": "apps/web/lib/fonts.ts",
+      "sha256": "1d42a5500972043a9ebbc795ef7ff6edc5d1b11a3eb5a5b74bb1f0f3ae0c14d1",
+      "bytes": 719
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/README.md",
+      "sha256": "83e570944d0c8bc8e7cc12202e63282e35d5437d1c58e7799973b93816ec8fc3",
+      "bytes": 3278
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx",
+      "sha256": "bed551c02907df7c3b2191e98493d9da93e591eaf0ab151da9a895915908a227",
+      "bytes": 6897
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+      "sha256": "7c42425dc871166f5471fcb17130152a34764a29e740f900e1293612fc87a92b",
+      "bytes": 8036
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-header.module.css",
+      "sha256": "ab8844296552d5add60462b8b05146b7629797edc8ddbdf6ad8b4c902c95816d",
+      "bytes": 3293
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-header.tsx",
+      "sha256": "b75c2642f54dd8997eee036cf3de3b30bdd1ad5bde8c742edbdc735fabd280df",
+      "bytes": 3911
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+      "sha256": "fe78117a2197487bd25c0dfd0ccc4d079ec16a78484608dbafd6b54b32ad2670",
+      "bytes": 7054
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.tsx",
+      "sha256": "0f9e2e18c5f122f92be564ed27a019aaa4ad012cf677e02604117af7fad02d72",
+      "bytes": 3114
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-service-links.tsx",
+      "sha256": "47767c02431762f04af1fbd40c459f5379e58430e7242a445ce75e42fda7f1fa",
+      "bytes": 5281
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+      "sha256": "4c05715c3e7b93c96fe6123617b0d609b01a75d73eafe95ea25588bf93af7576",
+      "bytes": 1403
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-inventory.module.css",
+      "sha256": "390dc8f74b63b394e1684a8a4a7591baa3e04345828a8c30370b4088ba380eee",
+      "bytes": 3450
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail-content.tsx",
+      "sha256": "f55aa45a3fba1dce68a8b5cdaa3722eb40b0ae782608b8b6236ec98f9cc82fbf",
+      "bytes": 6483
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail-desktop.module.css",
+      "sha256": "57177def46a75b282088b1143093ce6629ad6d9cf4fa822bd5f65d7e3cf1974a",
+      "bytes": 8302
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail-summary.tsx",
+      "sha256": "f22bafdde38a163a2fd0a905db2d8015f8801c5ec0d3e3cc4563437e65a77c10",
+      "bytes": 9503
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-detail.tsx",
+      "sha256": "56e5d323278047ff7a87d9097856ba03eb368393071c0b59f1493b106f5b362f",
+      "bytes": 7025
+    },
+    {
+      "path": "packages/marketplace-ui/components/listing-details-tabs.tsx",
+      "sha256": "d6986648fef1231c50bf8e090ffefea1bba5f4393678ef1337ca7e70d68506ab",
+      "bytes": 8693
+    },
+    {
+      "path": "packages/marketplace-ui/components/related-listing-card.tsx",
+      "sha256": "c477e6aa43c8529e71202f2fb11e5698f966f119dd2c5f671489acdd507d7861",
+      "bytes": 4571
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+      "sha256": "b066bcadbd7963d058461d853a09bc7130f7bdcd79fd87ab6a2336c7b2264306",
+      "bytes": 12784
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card.tsx",
+      "sha256": "c44ac7f166362bc049498459d1ab47d2d705dd1586b7d0d1a35328378035726e",
+      "bytes": 7054
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-saved-cars.module.css",
+      "sha256": "569b973b8ca28ef66c0af57d837a5cfe640346ca8beab83e26b53185db96d179",
+      "bytes": 2363
+    },
+    {
+      "path": "packages/marketplace-ui/components/desktop-saved-cars.tsx",
+      "sha256": "d6e505b64ee7910ce2f537c7078c06fc5343464d97b675992c07505988dd3af5",
+      "bytes": 6408
+    },
+    {
+      "path": "packages/marketplace/site-artwork.ts",
+      "sha256": "49cc2b2aac1b33764c93bed3c7e88564e1d9abf6431b9fde9e507357e2d6a3f9",
+      "bytes": 1674
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/viewing.jpg",
+      "sha256": "8612fc28c9bb16bed254a0e5184f5420d8031c571db2ac40bda4021de74f0570",
+      "bytes": 65571
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/journal-1.jpg",
+      "sha256": "d99527c88a9347f3642b2ea8313dd1b7e21fe20ec1396045238347be3420a1af",
+      "bytes": 23744
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/journal-2.jpg",
+      "sha256": "e1d85cee7744332f7bbe0009d28fbc72a62e675bf6a9bd8e1c65012405e5f424",
+      "bytes": 191433
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/journal-3.jpg",
+      "sha256": "ac04314e14cc1c08db3d2cb47cc0104ead3f9094b0cd2a3de248cab1d4dab8b3",
+      "bytes": 46067
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-1.jpg",
+      "sha256": "8dc56f989c86b60598ba733ed9f9a53a2ba4d0518710efb74d0b26578beab9fa",
+      "bytes": 10414
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-2.jpg",
+      "sha256": "edef93c3bded0015a9117bd9a4ca86cb9ffff406455dc944920870a46cdb97ad",
+      "bytes": 389421
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-3.jpg",
+      "sha256": "fca9c589aaba8c116f36f5507812d125c9b1702c52d7f743374b4aa360d3be96",
+      "bytes": 252405
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-4.jpg",
+      "sha256": "b4bc085cbebee152058b788905cb86088eee7038daa8fd818c5a6c36822509dd",
+      "bytes": 79342
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-5.jpg",
+      "sha256": "1de7c47facab4a7343f492e5d0e5feb5036aae357216ed2018d88aa423828ec0",
+      "bytes": 99255
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-choice.svg",
+      "sha256": "9d90ac9bf93a6dd8447157204481da0b238496cf593e9de49fbf904ef8e6dba8",
+      "bytes": 2383
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-pricing.svg",
+      "sha256": "d207933185937d7f8aa5c7df24bed72d8869b77f40daa5524c37e7817a0ecd6a",
+      "bytes": 2294
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-finance.svg",
+      "sha256": "91fa795cd229c09f7c01e7f9acad20636233193b0de4fde03d61864f7b35067e",
+      "bytes": 2078
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/about-care.svg",
+      "sha256": "cc8a7dca1f7ad305bbca73d5496dbed4330710fa540adab257ddb83d27232e30",
+      "bytes": 1751
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/banner-estate-right.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+      "bytes": 58860
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/banner-suv-left.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+      "bytes": 65004
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/desktop-port-20261003.provenance.json",
+      "sha256": "d8f2e8b440543d4fa4e56b2f7bd70e653a55a34c20c1d490b57aa19c2ddcf864",
+      "bytes": 3809
+    },
+    {
+      "path": "apps/web/public/desktop-boxcars/page-banner-art-provenance.md",
+      "sha256": "e8611a238a5aac6023380f9e7669b841923e70c1b663c4f7215eea37c471f8c6",
+      "bytes": 3672
+    }
+  ]
+}

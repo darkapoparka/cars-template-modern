@@ -2,21 +2,21 @@
   .panel {
     position: relative;
     width: 100%;
-    min-height: var(--desktop-action-panel-min-height, 0px);
-    padding: 1.25rem;
+    min-height: var(--desktop-action-panel-min-height, 0);
+    padding: calc(var(--spacing) * 6);
     color: var(--foreground);
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 1.25rem;
-    box-shadow: 0 16px 40px rgb(0 0 0 / 14%);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-vehicle);
+    box-shadow: var(--desktop-surface-shadow);
   }
 
   .panel h2:not([class~="sr-only"]) {
-    margin: 0 0 0.5rem;
-    font-size: 1.25rem;
+    margin: 0 0 calc(var(--spacing) * 2);
+    font-size: var(--text-dialog-title);
     font-weight: var(--font-weight-semibold);
-    line-height: 1.4;
-    letter-spacing: -0.025em;
+    line-height: var(--desktop-leading-body);
+    letter-spacing: var(--desktop-tracking-section);
   }
   .panel[data-fit-content] {
     min-height: 0;
@@ -25,23 +25,19 @@
   .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
     color: var(--foreground);
     background-color: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 0.625rem;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-lg);
     box-shadow: none;
   }
 
   .panel :is([data-slot="input"], select) {
-    height: 2.75rem;
+    height: calc(var(--spacing) * 11);
   }
 
   .panel select {
-    padding-inline: 0.875rem 2.75rem;
-    appearance: none;
+    padding-inline: calc(var(--spacing) * 3.5) calc(var(--spacing) * 11);
+    appearance: auto;
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23656d78' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.875rem center;
-    background-size: 1rem;
   }
 
   .panel :is([data-slot="input"], select):hover {
@@ -50,18 +46,18 @@
 
   .action {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    height: 2.75rem;
-    padding-inline: 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1;
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--desktop-leading-none);
     color: var(--brand-foreground);
     background: var(--brand);
-    border: 1px solid transparent;
-    border-radius: 0.625rem;
+    border: var(--desktop-border-width) solid transparent;
+    border-radius: var(--radius-lg);
     box-shadow: none;
   }
   .action:hover {
@@ -75,20 +71,20 @@
     opacity: 1;
   }
   .action[data-inset] {
-    height: 2.25rem;
-    padding-inline: 0.875rem;
-    font-size: 0.8125rem;
-    border-radius: 0.375rem;
+    height: calc(var(--spacing) * 9);
+    padding-inline: calc(var(--spacing) * 3.5);
+    font-size: var(--text-card-spec);
+    border-radius: calc(var(--spacing) * 1.5);
   }
   .action > svg {
     flex-shrink: 0;
-    width: 1rem;
-    height: 1rem;
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
   }
 
   .panel :is(input, select, textarea, button, a):focus-visible {
-    outline: 2px solid var(--brand);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: var(--desktop-focus-offset);
     box-shadow: none;
   }
 }

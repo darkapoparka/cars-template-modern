@@ -1,6 +1,6 @@
 import { formatMoneyParts, type Money } from "@repo/marketplace";
 
-/** Keep the full localized price, with a quieter currency on mobile. */
+/** Keep the localized amount and currency in one consistent price treatment. */
 export function VehicleCardMoney({
   money,
   locale,
@@ -16,9 +16,7 @@ export function VehicleCardMoney({
   return (
     <>
       {join(parts.slice(0, currencyIndex))}
-      <span className="max-lg:font-medium max-lg:text-meta max-lg:text-muted-foreground">
-        {parts[currencyIndex]?.value}
-      </span>
+      <span>{parts[currencyIndex]?.value}</span>
       {join(parts.slice(currencyIndex + 1))}
     </>
   );

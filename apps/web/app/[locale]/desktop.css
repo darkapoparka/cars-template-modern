@@ -1,0 +1,295 @@
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] {
+    scrollbar-gutter: stable;
+  }
+
+  :root[data-site-kind="dealership"] body {
+    --brand: var(--desktop-brand);
+    --brand-foreground: var(--desktop-brand-foreground);
+    --brand-text: var(--desktop-brand-text);
+    --brand-hover-foreground: var(--desktop-brand-hover-foreground);
+    --brand-active-foreground: var(--desktop-brand-active-foreground);
+    --lead-site-accent: var(--brand);
+    --lead-site-accent-hover: color-mix(in srgb, var(--brand) 82%, black);
+    --lead-site-accent-bright: color-mix(in srgb, var(--brand) 82%, white);
+    --lead-site-accent-ring: color-mix(in srgb, var(--brand) 55%, transparent);
+    --primary: var(--brand);
+    --primary-foreground: var(--brand-foreground);
+    --ring: var(--brand);
+    --foreground: #050b20;
+    --background: var(--desktop-canvas);
+    --panel: var(--desktop-surface);
+    --card: var(--desktop-surface);
+    --card-foreground: #050b20;
+    --muted-foreground: #667085;
+    --border: #e3e6eb;
+    --control: #f5f6f8;
+    --control-hover: #f0f3ff;
+    --desktop-accent-soft: color-mix(in srgb, var(--brand) 8%, var(--panel));
+    --desktop-picker-hover: color-mix(in srgb, var(--brand) 3%, var(--panel));
+    --inverse: #050b20;
+    --inverse-foreground: #ffffff;
+    --font-sans: var(--font-desktop), var(--font-inter), Arial, sans-serif;
+    font-family: var(--font-sans);
+    color: var(--foreground);
+    background: var(--background);
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-footer"] {
+    padding-top: 0;
+    color: #ffffff;
+    background: var(--brand);
+    border: 0;
+    border-radius: 32px 32px 0 0;
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="marketplace-main"] {
+    display: flow-root;
+  }
+
+  :root[data-site-kind="dealership"]
+    [data-slot="marketplace-main"]:has(
+      [data-slot="dealer-desktop-home-hero"],
+      [data-slot="dealer-desktop-inventory-hero"]
+    ) {
+    --background: var(--desktop-surface);
+    background: var(--background);
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-footer"] a {
+    color: inherit;
+  }
+
+  :root[data-site-kind="dealership"]
+    [data-slot="public-marketplace-footer"]
+    [data-slot="button"] {
+    color: var(--brand-text);
+    background: #ffffff;
+    border-radius: 12px;
+  }
+
+  :root[data-site-kind="dealership"]
+    [data-slot="public-marketplace-footer"]
+    svg {
+    color: inherit;
+  }
+
+  :root[data-site-kind="dealership"]
+    :is(
+      [data-slot="lease-faq"],
+      [data-slot="imports-faq"],
+      [data-slot="sell-faq"]
+    ) {
+    max-width: 900px;
+    margin-top: 70px;
+  }
+
+  :root[data-site-kind="dealership"]
+    :is(
+      [data-slot="lease-faq"],
+      [data-slot="imports-faq"],
+      [data-slot="sell-faq"]
+    )
+    h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  :root[data-site-kind="dealership"]
+    :is(
+      [data-slot="lease-faq"],
+      [data-slot="imports-faq"],
+      [data-slot="sell-faq"]
+    )
+    [data-slot="accordion"] {
+    padding: 0 24px;
+    border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
+  }
+
+  :root[data-site-kind="dealership"]
+    :is(
+      [data-slot="lease-faq"],
+      [data-slot="imports-faq"],
+      [data-slot="sell-faq"]
+    )
+    [data-slot="accordion-trigger"] {
+    min-height: 72px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] [data-slot="public-not-found-body"] {
+    width: min(calc(100% - 80px), 900px);
+    min-height: 360px;
+    padding: 0 0 90px;
+    margin-inline: auto;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-not-found-body"]
+    section {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-not-found-body"]
+    section
+    > p:first-child {
+    font-size: 120px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-not-found-body"]
+    section
+    > p:nth-of-type(2) {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-not-found-body"]
+    [data-slot="button"] {
+    min-height: 54px;
+    padding-inline: 28px;
+    border-radius: 12px;
+  }
+}
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] [data-slot="public-legal-body"] {
+    width: min(calc(100% - 80px), 900px);
+    max-width: none;
+    min-height: 0;
+    padding: 24px 0 90px;
+  }
+  :root[data-site-kind="dealership"] [data-slot="public-legal-body"] > a {
+    display: none;
+  }
+  :root[data-site-kind="dealership"] [data-slot="public-legal-body"] article {
+    padding: 40px;
+    margin: 0;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-legal-body"]
+    article
+    > div {
+    max-width: none;
+    margin-top: 0;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-legal-body"]
+    section
+    + section {
+    margin-top: 36px;
+  }
+  :root[data-site-kind="dealership"] [data-slot="public-legal-body"] h2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  :root[data-site-kind="dealership"] [data-slot="public-legal-body"] section p {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 28px;
+    color: var(--foreground);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] [data-slot="public-editorial-article"] {
+    min-height: 0;
+    padding: 24px 0 90px;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article {
+    width: min(calc(100% - 80px), 1100px);
+    max-width: none;
+    padding: 32px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    > a:first-child {
+    padding: 0;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--brand-text);
+    background: transparent;
+    border-radius: 0;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    > div:first-of-type {
+    aspect-ratio: 2;
+    border-radius: 16px;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    > div:last-of-type {
+    max-width: 900px;
+    margin: 44px auto 0;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    section {
+    padding: 0;
+    margin-top: 36px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    section
+    > p:first-child {
+    display: none;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    section
+    h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    section
+    > p:last-child {
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  :root[data-site-kind="dealership"]
+    [data-slot="public-editorial-article"]
+    article
+    > a:last-child {
+    max-width: 900px;
+    min-height: 54px;
+    padding-inline: 24px;
+    margin: 44px auto 0;
+    color: white;
+    background: var(--brand);
+    border-radius: 12px;
+  }
+}

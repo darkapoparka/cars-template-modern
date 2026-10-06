@@ -1,0 +1,689 @@
+{
+  "schemaVersion": 1,
+  "approved": false,
+  "verifiedAt": "2026-10-03T19:18:31.942Z",
+  "repository": "darkapoparka/cars",
+  "sourcePath": "templates/modern",
+  "beforeCommit": "629e23fead391fa3b0f853c19a988334f75bac2e",
+  "sourceFiles": [
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-stock.tsx",
+      "sha256": "a54e56dc5dfecb07597b7329b1ca574e3173d09c18ca2b03a27b7f2a7fef991b"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+      "sha256": "c000fa416e6573996f9edbe9875a5e359437c14ab4317c704364d8e021fc84cd"
+    },
+    {
+      "path": "apps/e2e/specs/modern-desktop-reuse.spec.ts",
+      "sha256": "fe93c503b296212777fffe3400ab3ea96b19eb7b81e3615ef3bc618042c36b3a"
+    },
+    {
+      "path": "docs/SITE-CONFIGURATION.md",
+      "sha256": "0803fe44d8b4f464050ae6ecc249e4b4cb20551b169e1313331163231b78605f"
+    }
+  ],
+  "runtime": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8",
+    "react": "19.2.4",
+    "tailwind": "4.3.0",
+    "artifact": ".next-public-e2e-desktop-stock-final-20261003-demo",
+    "buildId": "2e5VMTmeihQACW_xfWUCI",
+    "imageCacheRetained": true
+  },
+  "checks": {
+    "productionBuild": true,
+    "uiTypecheck": true,
+    "e2eTypecheck": true,
+    "lint": {
+      "passed": true,
+      "files": 1108
+    },
+    "uiUnit": {
+      "passed": true,
+      "tests": 95,
+      "files": 20
+    },
+    "refactorContracts": {
+      "passed": true,
+      "tests": 7
+    },
+    "preflightContracts": true,
+    "preflightTests": {
+      "passed": true,
+      "tests": 87
+    },
+    "desktopExisting": {
+      "passed": 4,
+      "engines": [
+        "chromium",
+        "webkit"
+      ]
+    },
+    "desktopMotionFinal": {
+      "startTime": "2026-10-03T19:11:53.541Z",
+      "duration": 16619.93,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "engines": [
+        "chromium",
+        "webkit"
+      ]
+    },
+    "accessibility": [
+      {
+        "locale": "bg",
+        "state": "Всички\n12",
+        "violations": []
+      },
+      {
+        "locale": "bg",
+        "state": "Препоръчани\n3",
+        "violations": []
+      },
+      {
+        "locale": "bg",
+        "state": "Последни\n8",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "All\n12",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "Recommended\n3",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "Recently added\n8",
+        "violations": []
+      }
+    ]
+  },
+  "geometry": {
+    "frames": [
+      {
+        "locale": "bg",
+        "width": 1024,
+        "status": 200,
+        "states": [
+          {
+            "label": "Всички\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Препоръчани\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Последни\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "status": 200,
+        "states": [
+          {
+            "label": "Всички\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Препоръчани\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Последни\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "status": 200,
+        "states": [
+          {
+            "label": "Всички\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Препоръчани\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Последни\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "status": 200,
+        "states": [
+          {
+            "label": "Всички\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Препоръчани\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Последни\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "status": 200,
+        "states": [
+          {
+            "label": "All\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recommended\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recently added\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "status": 200,
+        "states": [
+          {
+            "label": "All\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recommended\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recently added\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "status": 200,
+        "states": [
+          {
+            "label": "All\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recommended\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recently added\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "status": 200,
+        "states": [
+          {
+            "label": "All\n12",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recommended\n3",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          },
+          {
+            "label": "Recently added\n8",
+            "alignment": 0,
+            "labelsFit": true,
+            "pageOverflow": false
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "mixedStockLayout": [
+      {
+        "locale": "bg",
+        "width": 1024,
+        "syntheticLayoutOnly": true,
+        "tabs": [
+          {
+            "label": "Всички\n12",
+            "width": 166.15625,
+            "innerWidth": 166,
+            "contentWidth": 166,
+            "overflow": false
+          },
+          {
+            "label": "Нови\n12",
+            "width": 166.15625,
+            "innerWidth": 166,
+            "contentWidth": 166,
+            "overflow": false
+          },
+          {
+            "label": "Употребявани\n12",
+            "width": 166.15625,
+            "innerWidth": 166,
+            "contentWidth": 166,
+            "overflow": false
+          },
+          {
+            "label": "Препоръчани\n3",
+            "width": 166.15625,
+            "innerWidth": 166,
+            "contentWidth": 166,
+            "overflow": false
+          },
+          {
+            "label": "Последни\n8",
+            "width": 166.15625,
+            "innerWidth": 166,
+            "contentWidth": 166,
+            "overflow": false
+          }
+        ]
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "syntheticLayoutOnly": true,
+        "tabs": [
+          {
+            "label": "All\n12",
+            "width": 170.796875,
+            "innerWidth": 171,
+            "contentWidth": 171,
+            "overflow": false
+          },
+          {
+            "label": "New\n12",
+            "width": 170.796875,
+            "innerWidth": 171,
+            "contentWidth": 171,
+            "overflow": false
+          },
+          {
+            "label": "Used\n12",
+            "width": 170.796875,
+            "innerWidth": 171,
+            "contentWidth": 171,
+            "overflow": false
+          },
+          {
+            "label": "Recommended\n3",
+            "width": 170.796875,
+            "innerWidth": 171,
+            "contentWidth": 171,
+            "overflow": false
+          },
+          {
+            "label": "Recently added\n8",
+            "width": 170.8125,
+            "innerWidth": 171,
+            "contentWidth": 171,
+            "overflow": false
+          }
+        ]
+      }
+    ]
+  },
+  "mobilePreservation": [
+    {
+      "name": "bg-320",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-390",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-cars-320",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-cars-390",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    },
+    {
+      "name": "bg-1023",
+      "sameDimensions": true,
+      "sameGeometry": true,
+      "sameTextContent": true,
+      "changedPixels": 0,
+      "maxChannelDifference": 0,
+      "exact": true
+    }
+  ],
+  "cardHeights": {
+    "before": [
+      {
+        "locale": "bg",
+        "heights": [
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393
+        ]
+      },
+      {
+        "locale": "en",
+        "heights": [
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393
+        ]
+      }
+    ],
+    "after": [
+      {
+        "locale": "bg",
+        "heights": [
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393
+        ]
+      },
+      {
+        "locale": "en",
+        "heights": [
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393,
+          393
+        ]
+      }
+    ]
+  },
+  "renderedRoutes": [
+    {
+      "name": "bg-1440",
+      "route": "/bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-cars-1440",
+      "route": "/bg/cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-1440",
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1440",
+      "route": "/en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-320",
+      "route": "/bg",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-390",
+      "route": "/bg",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-cars-320",
+      "route": "/bg/cars",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-cars-390",
+      "route": "/bg/cars",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-1023",
+      "route": "/bg",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "rail-before.png",
+      "sha256": "52dd938aa63fab5801671cb099ef55821b7dc603d29f1f2039811eccfa9b0d37",
+      "width": 1320,
+      "height": 1120,
+      "pageWidth": 1440,
+      "allCardImagesDecoded": true
+    },
+    {
+      "file": "rail-after.png",
+      "sha256": "b1c3e2bc3522748ff6fa8b42684eb9c690d0a6c9a621e0b46f984d46d07daa40",
+      "width": 1320,
+      "height": 1120,
+      "pageWidth": 1440,
+      "allCardImagesDecoded": true
+    }
+  ],
+  "limits": [
+    "Local desktop review; no template release promotion or dealer deployment.",
+    "Mobile comparisons retain the existing optimized-image cache and do not qualify cold Windows PNG optimization.",
+    "Five-tab geometry is a synthetic layout stress probe, not native mixed-inventory acceptance.",
+    "Native, mounted, hosted and owner release gates remain separate."
+  ]
+}

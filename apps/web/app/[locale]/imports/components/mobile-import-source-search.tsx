@@ -11,9 +11,11 @@ import {
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import {
+  mobileSearchIconClassName,
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
+import { Link2 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 interface MobileImportSourceSearchProps {
@@ -82,17 +84,14 @@ export const MobileImportSourceSearch = ({
           ref={triggerRef}
           type="button"
         >
-          <DealerUiIcon
-            className="size-[18px] shrink-0 text-zinc-500"
-            name="search"
+          <Link2
+            aria-hidden="true"
+            className={mobileSearchIconClassName}
+            strokeWidth={1.75}
           />
           <span className={mobileSearchTriggerLabelClassName}>
             {sourceUrl || placeholder}
           </span>
-          <DealerUiIcon
-            className="size-5 shrink-0 text-zinc-950"
-            name="chevronRight"
-          />
         </button>
       </search>
 
@@ -135,9 +134,10 @@ export const MobileImportSourceSearch = ({
                 onClear: () => setSourceUrl(""),
               }}
               icon={
-                <DealerUiIcon
+                <Link2
+                  aria-hidden="true"
                   className="size-[18px] shrink-0 text-zinc-600"
-                  name="search"
+                  strokeWidth={1.75}
                 />
               }
               inputMode="url"

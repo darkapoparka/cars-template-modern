@@ -12,15 +12,15 @@
   .left,
   .right {
     position: absolute;
-    bottom: -3.75rem;
-    width: clamp(20rem, 28vw, 28rem);
+    bottom: calc(var(--spacing) * -15);
+    width: var(--desktop-artwork-size);
   }
   .left {
-    left: -8rem;
+    left: calc(var(--spacing) * -32);
     transform: scaleX(-1);
   }
   .right {
-    right: -8rem;
+    right: calc(var(--spacing) * -32);
   }
   .cars img {
     display: block;
@@ -28,18 +28,18 @@
     height: auto;
   }
   .cars[data-variant="inventory"] {
-    bottom: 5.25rem;
+    bottom: calc(var(--spacing) * 21);
   }
   .cars[data-variant="landing"] .left,
   .cars[data-variant="landing"] .right {
-    bottom: -2rem;
+    bottom: calc(var(--spacing) * -8);
   }
 }
 @media (min-width: 1600px) {
   .left {
-    left: -3rem;
+    left: calc(var(--spacing) * -12);
   }
   .right {
-    right: -3rem;
+    right: calc(var(--spacing) * -12);
   }
 }

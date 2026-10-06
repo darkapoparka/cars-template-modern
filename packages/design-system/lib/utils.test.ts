@@ -11,6 +11,10 @@ describe("cn semantic typography", () => {
       input: "text-white text-compact-control",
       expected: ["text-white", "text-compact-control"],
     },
+    {
+      input: "text-mobile-page-title text-white",
+      expected: ["text-mobile-page-title", "text-white"],
+    },
   ])("keeps custom font sizes alongside colors: $input", ({
     input,
     expected,

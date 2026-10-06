@@ -1,0 +1,1615 @@
+{
+  "task": "Modern desktop Contact standard hover and copy tooltip",
+  "beforeOrigin": "http://127.0.0.1:6482",
+  "afterOrigin": "http://127.0.0.1:6493",
+  "presentation": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 532.53125,
+          "height": 741.6875,
+          "bottom": 1492.6875
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 573.53125,
+          "y": 751,
+          "width": 394.46875,
+          "height": 741.6875,
+          "bottom": 1492.6875
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 916.1875,
+            "width": 314.46875,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1044.1875,
+            "width": 314.46875,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1146.1875,
+            "width": 314.46875,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1248.1875,
+            "width": 314.46875,
+            "height": 204.5,
+            "bottom": 1452.6875
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 819,
+        "y": 434,
+        "width": 134.53125,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 679.59375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 720.59375,
+          "y": 751,
+          "width": 503.40625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 916.1875,
+            "width": 423.40625,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1044.1875,
+            "width": 423.40625,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1146.1875,
+            "width": 423.40625,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1255.5,
+            "width": 423.40625,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1075,
+        "y": 434,
+        "width": 134.53125,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 53.5,
+          "y": 751,
+          "width": 757.140625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 810.640625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 916.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 1018.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 1120.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 1255.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1222,
+        "y": 434,
+        "width": 134.53125,
+        "height": 28,
+        "clipped": false
+      },
+      "tooltipAccessibility": "No WCAG A/AA violations with tooltip open",
+      "accessibility": "No WCAG A/AA violations",
+      "phoneHover": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(5, 11, 32)",
+        "title": "Телефон",
+        "number": "0877 733 110",
+        "shadow": "rgba(5, 11, 32, 0.06) 0px 8px 24px 0px"
+      },
+      "focus": {
+        "color": "rgb(255, 255, 255)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 293.5,
+          "y": 751,
+          "width": 757.140625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 1050.640625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 916.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 1018.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 1120.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 1255.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1462,
+        "y": 434,
+        "width": 134.53125,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 532.53125,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 573.53125,
+          "y": 751,
+          "width": 394.46875,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 916.1875,
+            "width": 314.46875,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1044.1875,
+            "width": 314.46875,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1146.1875,
+            "width": 314.46875,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 613.53125,
+            "y": 1255.5,
+            "width": 314.46875,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 817,
+        "y": 434,
+        "width": 138.375,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 679.59375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 720.59375,
+          "y": 751,
+          "width": 503.40625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 916.1875,
+            "width": 423.40625,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1018.1875,
+            "width": 423.40625,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1120.1875,
+            "width": 423.40625,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 760.59375,
+            "y": 1255.5,
+            "width": 423.40625,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1073,
+        "y": 434,
+        "width": 138.375,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 53.5,
+          "y": 751,
+          "width": 757.140625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 810.640625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 890.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 980.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 992.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1082.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 1094.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1184.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 850.640625,
+            "y": 1255.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1220,
+        "y": 434,
+        "width": 138.375,
+        "height": 28,
+        "clipped": false
+      },
+      "tooltipAccessibility": "No WCAG A/AA violations with tooltip open",
+      "accessibility": "No WCAG A/AA violations",
+      "phoneHover": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(5, 11, 32)",
+        "title": "Phone",
+        "number": "0877 733 110",
+        "shadow": "rgba(5, 11, 32, 0.06) 0px 8px 24px 0px"
+      },
+      "focus": {
+        "color": "rgb(255, 255, 255)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 293.5,
+          "y": 751,
+          "width": 757.140625,
+          "height": 725,
+          "bottom": 1476
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 1050.640625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 725,
+          "bottom": 1476
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 890.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 980.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 992.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1082.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 1094.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1184.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1090.640625,
+            "y": 1255.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1436
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1460,
+        "y": 434,
+        "width": 138.375,
+        "height": 28,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 541.140625,
+          "height": 741.6875,
+          "bottom": 1492.6875
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 582.140625,
+          "y": 751,
+          "width": 400.859375,
+          "height": 741.6875,
+          "bottom": 1492.6875
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 916.1875,
+            "width": 320.859375,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1044.1875,
+            "width": 320.859375,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1146.1875,
+            "width": 320.859375,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1248.1875,
+            "width": 320.859375,
+            "height": 204.5,
+            "bottom": 1452.6875
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 834,
+        "y": 433,
+        "width": 134.546875,
+        "height": 27.984375,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 688.203125,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 729.203125,
+          "y": 751,
+          "width": 509.78125,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 916.1875,
+            "width": 429.78125,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1044.1875,
+            "width": 429.78125,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1146.1875,
+            "width": 429.78125,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1261.5,
+            "width": 429.78125,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1090,
+        "y": 433,
+        "width": 134.546875,
+        "height": 27.984375,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 61,
+          "y": 751,
+          "width": 757.140625,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 818.140625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 916.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 1018.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 1120.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 1261.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1230,
+        "y": 433,
+        "width": 134.546875,
+        "height": 27.984375,
+        "clipped": false
+      },
+      "tooltipAccessibility": "No WCAG A/AA violations with tooltip open",
+      "accessibility": "No WCAG A/AA violations",
+      "phoneHover": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(5, 11, 32)",
+        "title": "Телефон",
+        "number": "0877 733 110",
+        "shadow": "rgba(5, 11, 32, 0.06) 0px 8px 24px 0px"
+      },
+      "focus": {
+        "color": "rgb(255, 255, 255)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 301,
+          "y": 751,
+          "width": 757.140625,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 1058.140625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 916.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 1018.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 1120.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 1261.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Обадете се за удобен час.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Копирайте номера",
+        "x": 1470,
+        "y": 433,
+        "width": 134.546875,
+        "height": 27.984375,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 541.140625,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 582.140625,
+          "y": 751,
+          "width": 400.859375,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 916.1875,
+            "width": 320.859375,
+            "height": 116,
+            "bottom": 1032.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1044.1875,
+            "width": 320.859375,
+            "height": 90,
+            "bottom": 1134.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1146.1875,
+            "width": 320.859375,
+            "height": 90,
+            "bottom": 1236.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 622.140625,
+            "y": 1261.5,
+            "width": 320.859375,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 832,
+        "y": 433,
+        "width": 138.484375,
+        "height": 27.984375,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 41,
+          "y": 751,
+          "width": 688.203125,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 729.203125,
+          "y": 751,
+          "width": 509.78125,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 916.1875,
+            "width": 429.78125,
+            "height": 90,
+            "bottom": 1006.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1018.1875,
+            "width": 429.78125,
+            "height": 90,
+            "bottom": 1108.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1120.1875,
+            "width": 429.78125,
+            "height": 90,
+            "bottom": 1210.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 769.203125,
+            "y": 1261.5,
+            "width": 429.78125,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1088,
+        "y": 433,
+        "width": 138.484375,
+        "height": 27.984375,
+        "clipped": false
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 61,
+          "y": 751,
+          "width": 757.140625,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 818.140625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 890.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 980.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 992.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1082.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 1094.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1184.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 858.140625,
+            "y": 1261.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1228,
+        "y": 433,
+        "width": 138.484375,
+        "height": 27.984375,
+        "clipped": false
+      },
+      "tooltipAccessibility": "No WCAG A/AA violations with tooltip open",
+      "accessibility": "No WCAG A/AA violations",
+      "phoneHover": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(5, 11, 32)",
+        "title": "Phone",
+        "number": "0877 733 110",
+        "shadow": "rgba(5, 11, 32, 0.06) 0px 8px 24px 0px"
+      },
+      "focus": {
+        "color": "rgb(255, 255, 255)",
+        "width": "2px"
+      }
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "geometry": {
+        "form": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(5, 11, 32)",
+          "radius": "0px",
+          "x": 301,
+          "y": 751,
+          "width": 757.140625,
+          "height": 731,
+          "bottom": 1482
+        },
+        "details": {
+          "background": "rgb(64, 95, 242)",
+          "color": "rgb(255, 255, 255)",
+          "radius": "0px",
+          "x": 1058.140625,
+          "y": 751,
+          "width": 560.859375,
+          "height": 731,
+          "bottom": 1482
+        },
+        "logoHeight": 28,
+        "cards": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 890.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 980.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 992.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1082.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 1094.1875,
+            "width": 480.859375,
+            "height": 90,
+            "bottom": 1184.1875
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "color": "rgb(5, 11, 32)",
+            "radius": "16px",
+            "x": 1098.140625,
+            "y": 1261.5,
+            "width": 480.859375,
+            "height": 180.5,
+            "bottom": 1442
+          }
+        ],
+        "icons": [
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)",
+          "rgb(64, 95, 242)"
+        ],
+        "viewing": {
+          "text": "Call to book a viewing.",
+          "lines": 1,
+          "clipped": false
+        }
+      },
+      "tooltip": {
+        "text": "Copy phone number",
+        "x": 1468,
+        "y": 433,
+        "width": 138.484375,
+        "height": 27.984375,
+        "clipped": false
+      }
+    }
+  ],
+  "interactionTests": {
+    "startTime": "2026-10-04T10:14:39.893Z",
+    "duration": 78517.70000000001,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0,
+    "chromiumClipboard": "Actual write and readback",
+    "webkitClipboard": "Stubbed success; denied and missing access separately verified"
+  },
+  "canonical": {
+    "origin": "http://127.0.0.1:6482",
+    "buildId": "VeDfi3mjWMZDDjseSmbrs",
+    "records": [
+      {
+        "locale": "bg",
+        "contactStatus": 200,
+        "contactMatchesQualifiedLayout": true,
+        "panelChangedPixels": 53,
+        "comparisonTolerance": "100 pixels; inspected differences are SVG edge antialiasing",
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "contactStatus": 200,
+        "contactMatchesQualifiedLayout": true,
+        "panelChangedPixels": 46,
+        "comparisonTolerance": "100 pixels; inspected differences are SVG edge antialiasing",
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      }
+    ]
+  },
+  "sourceHashes": [
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\modern\\apps\\web\\app\\[locale]\\components\\desktop-contact-phone-card.tsx",
+      "Hash": "6CD36F4FEE1C7FA3A5843D90CE91FC67BF2648A5B4DAECCADB32149B291A0AEC"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\modern\\apps\\web\\app\\[locale]\\components\\boxcar-desktop-pages.module.css",
+      "Hash": "A4AF225CB1AC07C6346A0813EC0D9ABF1E2317C68171DCBAC34F4707522B2D85"
+    }
+  ],
+  "checks": {
+    "biome": "Passed for the two product files and regression spec",
+    "webTypecheck": "Passed",
+    "productionWebpackBuild": "Passed",
+    "refactorContracts": {
+      "passed": 7
+    },
+    "releaseContracts": "Passed",
+    "releasePreflightTests": {
+      "passed": 87
+    },
+    "workspaceDoctor": "Fetched main; unrelated work preserved"
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8"
+  },
+  "generatedBuild": "H:/Temp/cars-modern-contact-card-hover-20261004/.next",
+  "scope": "Local reusable master; no release promotion or dealer deployment"
+}

@@ -1,4 +1,5 @@
 @import "@repo/design-system/styles/globals.css";
+@import "./desktop.css";
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
 
 :root[data-site-kind="dealership"] {
@@ -7,7 +8,34 @@
 
 @media (min-width: 1024px) {
   :root[data-site-kind="dealership"] {
-    --canvas: oklch(0.99 0 0);
+    --canvas: var(--desktop-canvas);
+    background: var(--desktop-surround);
+  }
+
+  :root[data-site-kind="dealership"] body {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0;
+  }
+
+  :root[data-site-kind="dealership"]
+    :is([data-slot="marketplace-main"], [data-slot="listing-detail"]) {
+    border-radius: 0;
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-frame"] {
+    border-radius: 0;
+  }
+}
+
+@layer base {
+  @media (min-width: 1024px) {
+    :root[data-site-kind="dealership"] body[data-scroll-locked] {
+      padding: 0 !important;
+      /* The root gutter owns scrollbar space, including nested overlays. */
+      margin-right: 0 !important;
+    }
   }
 }
 

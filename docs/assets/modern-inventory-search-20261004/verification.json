@@ -1,0 +1,4073 @@
+{
+  "checkedAt": "2026-10-04T02:16:34.972Z",
+  "origin": "http://127.0.0.1:6482",
+  "routes": [
+    "/bg/cars",
+    "/en/cars"
+  ],
+  "buildId": "Qmf7DM80CBaCIYb7WOmAt",
+  "sourceHead": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "workingSourceUncommittedDuringQualification": true,
+  "publicDataMode": "demo",
+  "desktopOnlyVisualChanges": true,
+  "sourceScope": [
+    {
+      "path": "templates/modern/apps/web/app/[locale]/about/page.tsx",
+      "sha256": "438156da3b7bda4639f94bc7fbe049fe3df873c41d2a7c47d7b4e8cb3c2d0ccb"
+    },
+    {
+      "path": "templates/modern/apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "sha256": "8137a692273f375f6958ac31166d0c8f4495c9e242c5c8c04e0b6f0db0be3945"
+    },
+    {
+      "path": "templates/modern/apps/e2e/specs/desktop-panel-flows.spec.ts",
+      "sha256": "103beaa57843e15db5ec8b80327288ab635be83470d1987d6a79c6e76dccf3c5"
+    },
+    {
+      "path": "templates/modern/TEMPLATE.md",
+      "sha256": "41e122977a13d230dc734cc7ad4b8116b51d697e803e5fb6e33f44655c9eae14"
+    },
+    {
+      "path": "templates/modern/docs/DESKTOP-ABOUT-GALLERY-2026-10-04.md",
+      "sha256": "043dd883e0c14499051efbed6928efe6bf6e2a5cfd13ada5ee5e8b5fc211f0a0"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-gallery-20261004/about-before.png",
+      "sha256": "19d3becd4f9cea0794123a219266a9bbd3cc9df2ca435cbf8147c3da236c3784"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-gallery-20261004/about-after.png",
+      "sha256": "ea3899a9f2e83f877a504b5ef9cfed1ad6a1c5c3b7904f778c4c959235b4436f"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-gallery-20261004/verification.json",
+      "sha256": "92a2047fd4c9d1c9e58d10ff167d940c1ff58f328c395ac27dbfb6ab837d0b61"
+    },
+    {
+      "path": "templates/modern/provenance/assets/about-blue-v1/generation.json",
+      "sha256": "da6408337631ac981ad8f981a1fec01bbf7ddedf85d3f293250761fc53f2af4e"
+    },
+    {
+      "path": "templates/modern/provenance/assets/about-blue-v1/choice-source.png",
+      "sha256": "b7c6b85075bc98a8b0ab27181bf7a9ab9e7eb2df0ea404edb50b83a4a7cdf46e"
+    },
+    {
+      "path": "templates/modern/apps/web/public/images/about/blue-choice-v1.webp",
+      "sha256": "a4eee66f297b96f989fda67d5c9bebf523eef4eb184bac5e301fdb528b9321c9"
+    },
+    {
+      "path": "templates/modern/provenance/assets/about-blue-v1/details-source.png",
+      "sha256": "3cd87dd096be44f258e18e94a2d2aaf00f74da2311aebf37c76604dc3593ecb4"
+    },
+    {
+      "path": "templates/modern/apps/web/public/images/about/blue-details-v1.webp",
+      "sha256": "d90ce79fd817d307a17f139b44fd187a8b9e290b5566308018ada34455c3deb3"
+    },
+    {
+      "path": "templates/modern/provenance/assets/about-blue-v1/budget-source.png",
+      "sha256": "8a45ee43ace883db192bcdec3c7ae4230854905a4050a239bfa593364f5115f1"
+    },
+    {
+      "path": "templates/modern/apps/web/public/images/about/blue-budget-v1.webp",
+      "sha256": "d4c846cb1886d562e9840df30f0cf83cfe4862d8528bce07a8db6779548ab0b3"
+    },
+    {
+      "path": "templates/modern/provenance/assets/about-blue-v1/viewing-source.png",
+      "sha256": "36ee6f13a20ae6eb021d276d7cdbaf030ed930a965f3dafecd366382cc3c7790"
+    },
+    {
+      "path": "templates/modern/apps/web/public/images/about/blue-viewing-v1.webp",
+      "sha256": "3b8a91e2ed0bacc0f88c77fb21d75445cc98ec8b3dad841017ec8f6c0bd28359"
+    },
+    {
+      "path": "templates/modern/docs/DESKTOP-ABOUT-CTA-2026-10-04.md",
+      "sha256": "ff0477a35cbc096fa0d7c476ddde7e711e602eb2c8f796eb910f0ea7b7869bce"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-cta-20261004/cta-before.png",
+      "sha256": "025dc4067127ba8e63a9ba279b814e7b860e5ea17e2c6b6380b31e1067221a37"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-cta-20261004/cta-after.png",
+      "sha256": "552ab5664321898b798dc6a41c02c4a80452d20969654f8e6a0715e971fec4c7"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-about-cta-20261004/verification.json",
+      "sha256": "91700f53898387a2e3d189ad7393ce2acfc3da7c03eb19187c16de8529e36699"
+    },
+    {
+      "path": "templates/modern/apps/web/app/[locale]/components/category-marketplace-page.tsx",
+      "sha256": "946395741a58548be89a19b5eb174d7c30d9436961e96cafdc80b59b3ee6234d"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-domain/site-config.ts",
+      "sha256": "b661638c14067fa588643ef682e422bb14cec2d0eefa02b7da2a68764b7d1ab7"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-filters.tsx",
+      "sha256": "32f8ef58134dbdf813e53695359636a8bff551017c0ac5622505a5e77619dcbd"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory.module.css",
+      "sha256": "1743ce4ff0f67dce6b2cd2c97eee5d090c5bbb65c686742540ceba5a990ac7ed"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-quick-filters.tsx",
+      "sha256": "df4aa99c47154a1f6fa8f4e0f2c2bfeb25d85abab064c980e9f05c041142a012"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-results.tsx",
+      "sha256": "45465c4ef19cd76d2bae8d41e82db2421ac25af262690c19419c7a013274e564"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-shell.tsx",
+      "sha256": "4472416f8446b183258577c41862c6722b518aff9e4683c3d8191eb369956380"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/lead-site.ts",
+      "sha256": "39c6a0835cda66ec100324127cf4322f200875878708469f6ae3d5f2a7efe90e"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/package.json",
+      "sha256": "84d97431bfb844fd5b77d19dc758b9d0479ec44a77d8908ed5c03f0698f957f8"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/site-config.test.ts",
+      "sha256": "34b47f66012d0438cf10761de068b5e642c035ff87ac6f21da8820523b4f33a1"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/site-config.ts",
+      "sha256": "c395e741224a6611c30723f224722e11225ac111e1fa056cf611629ea7439c65"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/inventory-presentation.ts",
+      "sha256": "707f5338f64e3db3798abf01b439b8bee857fc7cd9451d8be9cad3613627567f"
+    },
+    {
+      "path": "templates/modern/packages/marketplace/inventory-presentation.test.ts",
+      "sha256": "f387aba92667216dd7f5c6f2047d558a80b4f29c8122728dfb93bccb78f30abc"
+    },
+    {
+      "path": "templates/modern/apps/e2e/specs/desktop-category-navigation.spec.ts",
+      "sha256": "4b6fcb41f1d1b028da985e8f163d63ed5721b5dad419b47c44aa1f313563b370"
+    },
+    {
+      "path": "templates/modern/apps/e2e/specs/desktop-inventory-layouts.spec.ts",
+      "sha256": "68645107dddda30b4c8596dd0777fc61c267144cc70d6faa82178e34d8826a0f"
+    },
+    {
+      "path": "templates/modern/docs/SITE-CONFIGURATION.md",
+      "sha256": "d949e84c4577f9d270f4d16132ad5933896a903f3982683ecffdcb6771a23a97"
+    },
+    {
+      "path": "templates/modern/docs/QA.md",
+      "sha256": "e6a2de03c774893e34c7067f0c5d4f2084de52aa80b3cdc4038bdd836a78a238"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/inventory-before.png",
+      "sha256": "c835f5a34c0a98c2a7ac9630ed520af97ddd0a730f82e898af7712fd84f6e7cf"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/inventory-quick-after.png",
+      "sha256": "e4f05183086acf992bfb7cdb73b3d6141bc0dd6ed9400d415f26cc8a82bc53e6"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/inventory-sidebar-after.png",
+      "sha256": "1cb26e99ac4d0194fdd6ba8b9132abb1b9584d013777746cd2fab10dd7ff4264"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/inventory-before-full.png",
+      "sha256": "c701f0059b536526ba616f7f6ee6df0c530e488f9ba34776cb2c677b566248cd"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/inventory-quick-after-full.png",
+      "sha256": "e57701f34e64d6a8162af6579064de3550733e6098e8bb11450e48b2ecc4cfb6"
+    },
+    {
+      "path": "templates/modern/docs/assets/modern-inventory-layouts-20261004/verification.json",
+      "sha256": "07df52e8dea003f3e5f6a696e067b7988fb183cc1e0056a2423b84b2c02e251d"
+    },
+    {
+      "path": "templates/modern/docs/DESKTOP-INVENTORY-LAYOUTS-2026-10-04.md",
+      "sha256": "2305cecdf83c1a81d09282c5bc137134c68e04f71a654a9c42445aeda26be367"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-summary.tsx",
+      "sha256": "12fff61f697a77ef0090f3be1141edbb2bb40f7928d466643e84966cb587565d"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-filter-controls.tsx",
+      "sha256": "e32e0015d5d6f4722b7c5002d2b0c97bc510510726587cd934d0d1821e7b5528"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-make-model-dialog.tsx",
+      "sha256": "789db2203f481766a3121a4de50d88f3320020fdcc62b5f1d5a6294328070233"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-model-picker.tsx",
+      "sha256": "1ed10c19eb74cbdbbd48714cd82fe62f387a37593f5cc1d5996f4e4bfc21bac1"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-model-picker-options.tsx",
+      "sha256": "1e99afbbc2eb2e162dad1b820badcae9525b5809e1b8f0c12f5d628950f78450"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-model-picker.module.css",
+      "sha256": "fe2c65cc5a00f287eca282318935a3638e1ca39c28bc692579b967cd242ad6ff"
+    }
+  ],
+  "checks": {
+    "productionBuild": {
+      "passed": true,
+      "includesTypeScript": true,
+      "log": "L:/CODEX/cars/runtime/modern-inventory-search-20261004/build.log"
+    },
+    "e2eTypeScript": {
+      "passed": true,
+      "log": "L:/CODEX/cars/runtime/modern-inventory-search-20261004/e2e-types.log"
+    },
+    "contracts": {
+      "passed": 94,
+      "log": "L:/CODEX/cars/runtime/modern-inventory-search-20261004/contracts.log"
+    },
+    "browserFlows": {
+      "startTime": "2026-10-04T02:08:12.664Z",
+      "duration": 482409.907,
+      "expected": 36,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "log": "L:/CODEX/cars/runtime/modern-inventory-search-20261004/browser-tests.log"
+    },
+    "layouts": {
+      "states": 32,
+      "widths": [
+        1024,
+        1280,
+        1440,
+        1920
+      ],
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "failures": [],
+      "records": [
+        {
+          "name": "chromium-bg-1024-quick",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 1796.546875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 896,
+            "height": 1603.546875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.34375
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1024-sidebar",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 2598.9375
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 240,
+            "height": 952
+          },
+          "grid": {
+            "x": 328,
+            "y": 467,
+            "width": 632,
+            "height": 2461.9375
+          },
+          "columns": 2,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1280-quick",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1280,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1371.96875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 1152,
+            "height": 1178.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1280-sidebar",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1280,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1697.875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 368,
+            "y": 467,
+            "width": 848,
+            "height": 1560.875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.34375
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1440-quick",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 84,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1440-sidebar",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5625
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 84,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 388,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5625
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.34375
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1920-quick",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1920,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 324,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-bg-1920-sidebar",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1920,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5625
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 324,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 628,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5625
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.34375
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1024-quick",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 1796.546875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 896,
+            "height": 1603.546875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.34375
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1024-sidebar",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 2598.9375
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 240,
+            "height": 924
+          },
+          "grid": {
+            "x": 328,
+            "y": 467,
+            "width": 632,
+            "height": 2461.9375
+          },
+          "columns": 2,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1280-quick",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1280,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1371.96875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 1152,
+            "height": 1178.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1280-sidebar",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1280,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1697.875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 368,
+            "y": 467,
+            "width": 848,
+            "height": 1560.875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.34375
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1440-quick",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 84,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1440-sidebar",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5625
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 84,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 388,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5625
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.34375
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1920-quick",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1920,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 324,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "chromium-en-1920-sidebar",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1920,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5625
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 324,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 628,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5625
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.34375
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1024-quick",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 1796.5
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 896,
+            "height": 1603.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1024-sidebar",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 2598.9375
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 240,
+            "height": 952
+          },
+          "grid": {
+            "x": 328,
+            "y": 467,
+            "width": 632,
+            "height": 2461.9375
+          },
+          "columns": 2,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1280-quick",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1280,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1371.96875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 1152,
+            "height": 1178.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1280-sidebar",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1280,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1697.875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 368,
+            "y": 467,
+            "width": 848,
+            "height": 1560.875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1440-quick",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 84,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1440-sidebar",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 84,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 388,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1920-quick",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1920,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 324,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-bg-1920-sidebar",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1920,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 324,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 628,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1024-quick",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 1796.5
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 896,
+            "height": 1603.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            },
+            {
+              "hintedWidth": 283.328125,
+              "renderedWidth": 283.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1024-sidebar",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 944,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 944,
+            "height": 2598.9375
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 896,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 240,
+            "height": 924
+          },
+          "grid": {
+            "x": 328,
+            "y": 467,
+            "width": 632,
+            "height": 2461.9375
+          },
+          "columns": 2,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            },
+            {
+              "hintedWidth": 304,
+              "renderedWidth": 304
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1280-quick",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1280,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1371.96875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 64,
+            "y": 523,
+            "width": 1152,
+            "height": 1178.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            },
+            {
+              "hintedWidth": 271,
+              "renderedWidth": 271
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1280-sidebar",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1280,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 40,
+            "y": 90,
+            "width": 1200,
+            "height": 224
+          },
+          "panel": {
+            "x": 40,
+            "y": 354,
+            "width": 1200,
+            "height": 1697.875
+          },
+          "bar": {
+            "x": 64,
+            "y": 378,
+            "width": 1152,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 64,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 368,
+            "y": 467,
+            "width": 848,
+            "height": 1560.875
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            },
+            {
+              "hintedWidth": 267.328125,
+              "renderedWidth": 267.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1440-quick",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 84,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1440-sidebar",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 60,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 60,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5
+          },
+          "bar": {
+            "x": 84,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 84,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 388,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1920-quick",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1920,
+          "layout": "quick",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1407.96875
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 121
+          },
+          "sidebar": null,
+          "grid": {
+            "x": 324,
+            "y": 523,
+            "width": 1272,
+            "height": 1214.96875
+          },
+          "columns": 4,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            },
+            {
+              "hintedWidth": 301,
+              "renderedWidth": 301
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        },
+        {
+          "name": "webkit-en-1920-sidebar",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1920,
+          "layout": "sidebar",
+          "status": 200,
+          "errors": [],
+          "hero": {
+            "x": 300,
+            "y": 90,
+            "width": 1320,
+            "height": 224
+          },
+          "panel": {
+            "x": 300,
+            "y": 354,
+            "width": 1320,
+            "height": 1780.5
+          },
+          "bar": {
+            "x": 324,
+            "y": 378,
+            "width": 1272,
+            "height": 65
+          },
+          "sidebar": {
+            "x": 324,
+            "y": 467,
+            "width": 280,
+            "height": 928
+          },
+          "grid": {
+            "x": 628,
+            "y": 467,
+            "width": 968,
+            "height": 1643.5
+          },
+          "columns": 3,
+          "cards": 12,
+          "images": [
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            },
+            {
+              "hintedWidth": 308,
+              "renderedWidth": 307.328125
+            }
+          ],
+          "overflow": false,
+          "clippedControls": [],
+          "brokenImages": []
+        }
+      ]
+    },
+    "picker": {
+      "states": 48,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 1024,
+          "height": 768
+        },
+        {
+          "width": 1440,
+          "height": 600
+        }
+      ],
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "failures": [],
+      "records": [
+        {
+          "name": "chromium-bg-1440x900-make",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1440x900-model",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-bg-1440x900-empty",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1440x900-derivative",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 114.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 289,
+            "y": 703.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 271.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-bg-1024x768-make",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1024x768-model",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-bg-1024x768-empty",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1024x768-derivative",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 48.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 81,
+            "y": 637.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 205.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-bg-1440x600-make",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1440x600-model",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-bg-1440x600-empty",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-bg-1440x600-derivative",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 189,
+            "width": 814,
+            "height": 281
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1440x900-make",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1440x900-model",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1440x900-empty",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1440x900-derivative",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 114.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 289,
+            "y": 703.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 271.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1024x768-make",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1024x768-model",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1024x768-empty",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1024x768-derivative",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 48.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 81,
+            "y": 637.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 205.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1440x600-make",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1440x600-model",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "chromium-en-1440x600-empty",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "chromium-en-1440x600-derivative",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 189,
+            "width": 814,
+            "height": 281
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "webkit-bg-1440x900-make",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1440x900-model",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-bg-1440x900-empty",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1440x900-derivative",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 900,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 114.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 289,
+            "y": 703.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 271.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-bg-1024x768-make",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1024x768-model",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-bg-1024x768-empty",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1024x768-derivative",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "height": 768,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 48.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 81,
+            "y": 637.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 205.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-bg-1440x600-make",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1440x600-model",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "DIV"
+        },
+        {
+          "name": "webkit-bg-1440x600-empty",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-bg-1440x600-derivative",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "height": 600,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 189,
+            "width": 814,
+            "height": 281
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1440x900-make",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1440x900-model",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1440x900-empty",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 116.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 289,
+            "y": 701.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 333.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1440x900-derivative",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 900,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 114.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 289,
+            "y": 703.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 271.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1024x768-make",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1024x768-model",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1024x768-empty",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 50.5,
+            "width": 864,
+            "height": 667
+          },
+          "footer": {
+            "x": 81,
+            "y": 635.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 267.5,
+            "width": 814,
+            "height": 352
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1024x768-derivative",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "height": 768,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 80,
+            "y": 48.5,
+            "width": 864,
+            "height": 671
+          },
+          "footer": {
+            "x": 81,
+            "y": 637.5,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 105,
+            "y": 205.5,
+            "width": 814,
+            "height": 416
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1440x600-make",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "make",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1440x600-model",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "model",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        },
+        {
+          "name": "webkit-en-1440x600-empty",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "empty",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 249,
+            "width": 814,
+            "height": 221
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "INPUT"
+        },
+        {
+          "name": "webkit-en-1440x600-derivative",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "height": 600,
+          "step": "derivative",
+          "errors": [],
+          "dialog": {
+            "x": 288,
+            "y": 32,
+            "width": 864,
+            "height": 536
+          },
+          "footer": {
+            "x": 289,
+            "y": 486,
+            "width": 862,
+            "height": 81
+          },
+          "options": {
+            "x": 313,
+            "y": 189,
+            "width": 814,
+            "height": 281
+          },
+          "horizontalOverflow": false,
+          "clippedControls": [],
+          "focusTag": "BODY"
+        }
+      ]
+    },
+    "activeFilters": {
+      "states": 8,
+      "records": [
+        {
+          "name": "chromium-bg-1024-active",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "errors": [],
+          "violations": [],
+          "barHeight": 225,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "До 150 000 лв.",
+            "От 2020",
+            "До 200 000 км",
+            "Дизел",
+            "Търсене: GLS",
+            "SUV",
+            "Автоматична"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "chromium-bg-1440-active",
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "errors": [],
+          "violations": [],
+          "barHeight": 173,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "До 150 000 лв.",
+            "От 2020",
+            "До 200 000 км",
+            "Дизел",
+            "Търсене: GLS",
+            "SUV",
+            "Автоматична"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "chromium-en-1024-active",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "errors": [],
+          "violations": [],
+          "barHeight": 225,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "To 150,000 BGN",
+            "From 2020",
+            "To 200,000 km",
+            "Diesel",
+            "Search: GLS",
+            "SUV",
+            "Automatic"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "chromium-en-1440-active",
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "errors": [],
+          "violations": [],
+          "barHeight": 173,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "To 150,000 BGN",
+            "From 2020",
+            "To 200,000 km",
+            "Diesel",
+            "Search: GLS",
+            "SUV",
+            "Automatic"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "webkit-bg-1024-active",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "errors": [],
+          "violations": [],
+          "barHeight": 225,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "До 150 000 лв.",
+            "От 2020",
+            "До 200 000 км",
+            "Дизел",
+            "Търсене: GLS",
+            "SUV",
+            "Автоматична"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "webkit-bg-1440-active",
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "errors": [],
+          "violations": [],
+          "barHeight": 173,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "До 150 000 лв.",
+            "От 2020",
+            "До 200 000 км",
+            "Дизел",
+            "Търсене: GLS",
+            "SUV",
+            "Автоматична"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "webkit-en-1024-active",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "errors": [],
+          "violations": [],
+          "barHeight": 225,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "To 150,000 BGN",
+            "From 2020",
+            "To 200,000 km",
+            "Diesel",
+            "Search: GLS",
+            "SUV",
+            "Automatic"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        },
+        {
+          "name": "webkit-en-1440-active",
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "errors": [],
+          "violations": [],
+          "barHeight": 173,
+          "selectedLabels": [
+            "Mercedes-Benz",
+            "GLS",
+            "To 150,000 BGN",
+            "From 2020",
+            "To 200,000 km",
+            "Diesel",
+            "Search: GLS",
+            "SUV",
+            "Automatic"
+          ],
+          "hiddenActive": [],
+          "clipped": [],
+          "overflow": false
+        }
+      ]
+    },
+    "accessibility": {
+      "scans": 32,
+      "violations": 0,
+      "records": [
+        {
+          "name": "chromium-bg-1440-quick",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440-sidebar",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440-quick",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440-sidebar",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440-quick",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440-sidebar",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440-quick",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440-sidebar",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440x900-make",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440x900-model",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440x900-empty",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440x900-derivative",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440x900-make",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440x900-model",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440x900-empty",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440x900-derivative",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440x900-make",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440x900-model",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440x900-empty",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440x900-derivative",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440x900-make",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440x900-model",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440x900-empty",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440x900-derivative",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1024-active",
+          "violations": []
+        },
+        {
+          "name": "chromium-bg-1440-active",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1024-active",
+          "violations": []
+        },
+        {
+          "name": "chromium-en-1440-active",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1024-active",
+          "violations": []
+        },
+        {
+          "name": "webkit-bg-1440-active",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1024-active",
+          "violations": []
+        },
+        {
+          "name": "webkit-en-1440-active",
+          "violations": []
+        }
+      ]
+    },
+    "matchedPageCaptures": {
+      "states": 14,
+      "failures": 0,
+      "beforeCardsY": 582,
+      "afterCardsY": 523
+    },
+    "mobile": {
+      "states": 6,
+      "widths": [
+        320,
+        390,
+        1023
+      ],
+      "changedPixels": 0,
+      "identicalGeometry": true,
+      "records": [
+        {
+          "name": "bg-cars-320",
+          "width": 320,
+          "height": 2136,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        },
+        {
+          "name": "bg-cars-390",
+          "width": 390,
+          "height": 2384,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        },
+        {
+          "name": "bg-cars-1023",
+          "width": 1023,
+          "height": 1624,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        },
+        {
+          "name": "en-cars-320",
+          "width": 320,
+          "height": 2136,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        },
+        {
+          "name": "en-cars-390",
+          "width": 390,
+          "height": 2384,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        },
+        {
+          "name": "en-cars-1023",
+          "width": 1023,
+          "height": 1624,
+          "changedPixels": 0,
+          "geometryUnchanged": true
+        }
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "path": "inventory-before.png",
+      "source": "before-chromium/bg-cars-1440.png",
+      "sha256": "e4f05183086acf992bfb7cdb73b3d6141bc0dd6ed9400d415f26cc8a82bc53e6",
+      "nativeCapture": true
+    },
+    {
+      "path": "inventory-after.png",
+      "source": "after-chromium/bg-cars-1440.png",
+      "sha256": "ecc2371aa97eea62e3ad753c6d462b3b94df53049212f417dca8296bede7ecee",
+      "nativeCapture": true
+    },
+    {
+      "path": "inventory-sidebar-after.png",
+      "source": "layouts/chromium-bg-1440-sidebar.png",
+      "sha256": "176bca89c583d9d6ebcc533e0d640d004dff8c3e5b00a7ea161976e06723143f",
+      "nativeCapture": true
+    },
+    {
+      "path": "inventory-before-full.png",
+      "source": "before-chromium/bg-cars-1440-full.png",
+      "sha256": "e57701f34e64d6a8162af6579064de3550733e6098e8bb11450e48b2ecc4cfb6",
+      "nativeCapture": true
+    },
+    {
+      "path": "inventory-after-full.png",
+      "source": "after-chromium/bg-cars-1440-full.png",
+      "sha256": "12491cf9faac90ee98f1ebc9ebe0b916c8683ad849b4c76c591fc25db1e6d191",
+      "nativeCapture": true
+    },
+    {
+      "path": "picker-before.png",
+      "source": "before-picker-chromium/bg-model.png",
+      "sha256": "87a8b7ae213886e34a2a6053b6621f5ecf52be07bb6a9d767668ad66906a4944",
+      "nativeCapture": true
+    },
+    {
+      "path": "picker-after.png",
+      "source": "picker/chromium-bg-1440x900-model.png",
+      "sha256": "178be9a1d6360dac30e06f88149a62005fea959af5f00fd40b02a3656545fc67",
+      "nativeCapture": true
+    }
+  ],
+  "boundaries": {
+    "templateLockUpdated": false,
+    "promoted": false,
+    "dealerDeployed": false,
+    "liveProvidersConfigured": false,
+    "mobilePickerInteractionPixelComparison": false
+  }
+}

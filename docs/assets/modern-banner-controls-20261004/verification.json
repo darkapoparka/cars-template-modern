@@ -1,0 +1,289 @@
+{
+  "scope": "Reusable Modern desktop inventory controls; local preview only",
+  "verifiedAt": "2026-10-04T12:33:27.287Z",
+  "canonical": {
+    "base": "http://127.0.0.1:6482",
+    "buildId": "k0mYTeci_rZD1HIteVVpF",
+    "records": [
+      {
+        "locale": "bg",
+        "status": 200,
+        "centeredBannerControls": true,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Изглед в решетка",
+          "Списъчен изглед",
+          "Бързи филтри",
+          "Страничен панел"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "status": 200,
+        "centeredBannerControls": true,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Grid view",
+          "List view",
+          "Quick filters",
+          "Sidebar"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      }
+    ]
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "webTypecheck": "passed",
+    "uiTypecheck": "passed",
+    "e2eTypecheck": "passed",
+    "scopedBiome": "passed",
+    "refactorContracts": 7,
+    "releasePreflightContracts": "passed",
+    "releasePreflightTests": 87,
+    "webAndUiUnitTests": 289
+  },
+  "browser": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "acceptedCases": 16,
+    "geometryAndOverlays": {
+      "startTime": "2026-10-04T12:25:18.228Z",
+      "duration": 98935.109,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "displayPreferencesAndDrafts": {
+      "firstRun": {
+        "startTime": "2026-10-04T12:26:48.545Z",
+        "duration": 57980.829,
+        "expected": 7,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "targetedRecheck": {
+        "startTime": "2026-10-04T12:31:10.283Z",
+        "duration": 9298.841,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    "settlingCorrections": [
+      "Wait for a unique completed inventory banner after streaming navigation.",
+      "Wait for the closing sidebar search-dialog overlay and menu to unmount before opening View, so delayed modal focus restoration cannot dismiss it."
+    ],
+    "accessibility": {
+      "base": "http://127.0.0.1:6498",
+      "records": [
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1024,
+          "height": 600,
+          "sortingAndReload": "passed",
+          "viewMenuFits": true,
+          "focusRestored": true,
+          "errors": [],
+          "accessibilityScans": 2,
+          "violations": 0
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1024,
+          "height": 600,
+          "sortingAndReload": "passed",
+          "viewMenuFits": true,
+          "focusRestored": true,
+          "errors": [],
+          "accessibilityScans": 2,
+          "violations": 0
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1024,
+          "height": 600,
+          "sortingAndReload": "passed",
+          "viewMenuFits": true,
+          "focusRestored": true,
+          "errors": [],
+          "accessibilityScans": 2,
+          "violations": 0
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1024,
+          "height": 600,
+          "sortingAndReload": "passed",
+          "viewMenuFits": true,
+          "focusRestored": true,
+          "errors": [],
+          "accessibilityScans": 2,
+          "violations": 0
+        }
+      ]
+    }
+  },
+  "captures": {
+    "base": "http://127.0.0.1:6498",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "preservation": {
+    "comparisons": [
+      {
+        "name": "bg-cars-320",
+        "changedPixels": 22,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-cars-390",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-cars-1023",
+        "changedPixels": 19,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-home-1440",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-320",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-390",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-1023",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-home-1440",
+        "changedPixels": 0,
+        "dimensionsMatch": true
+      }
+    ],
+    "interpretation": "Six exact comparisons. BG 320 and BG 1023 differ only at 22 and 19 antialiasing edge pixels; maximum channel differences 8 and 5 respectively, with identical layout and content."
+  },
+  "sourceSha256": {
+    "packages/marketplace-ui/components/dealer-desktop-toolbar.module.css": "4005bda5b6f363c1e5f2961f8162842e60f470ca10091f35c41d52fec84b3ff5",
+    "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx": "f50b82baed4a2db2e9b66afad6db59359ba7a3b41b3cc6b9720c4e0a124461e6",
+    "packages/marketplace-ui/components/dealer-inventory-filters.tsx": "26ecde1c296efc56e954c80280ce189ae229f01a0ea6c87f162488fd6a799777",
+    "packages/marketplace-ui/components/dealer-inventory-summary.tsx": "68a311e97e53a5d6d28dc65ed99f2b8b08f146869e4d9430add0efaecb8b7318",
+    "packages/marketplace-ui/components/dealer-inventory.module.css": "df8203eb080a3d6f77f9e0a3bd4680fd2946d1e13b7ad23354c057c4d8a4d74d",
+    "packages/marketplace-ui/components/desktop-discovery-bar.tsx": "c7c414de4d2ffa12b0139c2b86a9394c76d8c278bceada632bca6cc5aed1f409",
+    "packages/marketplace-ui/components/marketplace-results.tsx": "ea6757595d6992215af2c39551a0611a2feeafd816413d3a8ba52faddcc13691"
+  },
+  "preserved": [
+    "Unrelated Cars source and staged work",
+    "Modern recovery note",
+    "Generated next-env.d.ts preimage",
+    "Existing compact full-filter dialog",
+    "Mobile and Home presentation"
+  ],
+  "releaseBoundary": "No template lock promotion, dealer publication or hosted-release claim"
+}

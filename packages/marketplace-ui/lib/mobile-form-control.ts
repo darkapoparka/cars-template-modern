@@ -5,9 +5,11 @@ export const mobileFormTextClassName =
 export const mobileResponsiveFormTextClassName =
   "max-lg:font-normal max-lg:text-body max-lg:text-muted-foreground max-lg:placeholder:text-muted-foreground";
 
-/** Search entry points share geometry and type with their overlay fields. */
-export const mobileSearchTriggerClassName =
-  "flex h-12 w-full min-w-0 items-center gap-2.5 rounded-full px-4 text-left text-muted-foreground ring-1 ring-inset transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2";
+/** Header inputs, entry points and loading states share one 48px height. */
+export const mobileSearchFieldHeightClassName = "h-12";
+export const mobileSearchFieldClassName = `flex ${mobileSearchFieldHeightClassName} w-full min-w-0 items-center gap-2 rounded-full px-4 text-left ring-1 ring-inset shadow-[0_1px_2px_rgb(0_0_0/0.06)]`;
+export const mobileSearchTriggerClassName = `${mobileSearchFieldClassName} text-muted-foreground transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60`;
+export const mobileSearchIconClassName = "size-[18px] shrink-0 text-zinc-500";
 export const mobileSearchTriggerLabelClassName =
   "min-w-0 flex-1 truncate font-normal text-body text-muted-foreground tracking-normal";
 

@@ -1,0 +1,15 @@
+.mobileCard > [data-slot="vehicle-card"] {
+  grid-template-columns: 44% minmax(0, 1fr);
+  background: transparent;
+  border-radius: inherit;
+}
+
+.mobileCard [data-slot="vehicle-card-spec-pills"] {
+  flex-wrap: wrap;
+}
+
+.mobileCard [data-slot="vehicle-card-spec"] {
+  padding-inline: var(--spacing);
+  background: var(--panel);
+  border-color: transparent;
+}

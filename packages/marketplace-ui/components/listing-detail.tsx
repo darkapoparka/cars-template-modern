@@ -20,6 +20,7 @@ import {
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { getVehicleCardBadgeLabels } from "../lib/vehicle-card-policy";
 import { ListingDetailContent } from "./listing-detail-content";
+import desktopStyles from "./listing-detail-desktop.module.css";
 import {
   DesktopListingSummaryHeader,
   MobileListingGalleryActions,
@@ -91,6 +92,7 @@ export const ListingDetail = ({
   return (
     <main
       className={cn(
+        desktopStyles.detail,
         "min-h-[100dvh] bg-card text-foreground lg:bg-background lg:pb-10",
         hasFixedContactBar
           ? "pb-[calc(4.5rem+env(safe-area-inset-bottom))]"
@@ -105,20 +107,45 @@ export const ListingDetail = ({
         variant="discovery"
       />
 
-      <div className="mx-auto max-w-[96rem] lg:px-6 lg:py-4 xl:px-10">
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_min(21rem,40%)] lg:items-start lg:gap-6 xl:grid-cols-[minmax(0,1fr)_min(22rem,40%)] xl:gap-8">
+      <div
+        className={cn(
+          desktopStyles.content,
+          "mx-auto max-w-[96rem] lg:px-6 lg:py-4 xl:px-10"
+        )}
+      >
+        {isDealershipSite ? null : (
+          <DesktopListingSummaryHeader
+            backHref={backHref}
+            listing={listing}
+            listingUrl={listingUrl}
+            locale={locale}
+            saveHref={saveHref}
+          />
+        )}
+        <div
+          className={cn(
+            desktopStyles.columns,
+            "lg:grid lg:grid-cols-[minmax(0,1fr)_min(21rem,40%)] lg:items-start lg:gap-6 xl:grid-cols-[minmax(0,1fr)_min(22rem,40%)] xl:gap-8"
+          )}
+        >
           <div className="min-w-0">
-            <DesktopListingSummaryHeader
-              backHref={backHref}
-              listing={listing}
-              listingUrl={listingUrl}
-              locale={locale}
-              saveHref={saveHref}
-            />
-
+            {isDealershipSite ? (
+              <DesktopListingSummaryHeader
+                backHref={backHref}
+                listing={listing}
+                listingUrl={listingUrl}
+                locale={locale}
+                saveHref={saveHref}
+              />
+            ) : null}
             <div className="relative w-full">
               <ListingGallery
                 badges={galleryBadges}
+                desktopImageSizes={
+                  isDealershipSite
+                    ? "(max-width: 1399px) calc(100vw - 452px), 948px"
+                    : undefined
+                }
                 images={listing.images}
                 key={listing.id}
                 locale={locale}
@@ -155,7 +182,10 @@ export const ListingDetail = ({
           </div>
 
           <aside
-            className="min-w-0 lg:sticky lg:top-4"
+            className={cn(
+              desktopStyles.purchaseColumn,
+              "min-w-0 lg:sticky lg:top-4"
+            )}
             data-slot="listing-purchase-column"
           >
             <div className="hidden lg:block">

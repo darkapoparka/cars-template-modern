@@ -26,6 +26,7 @@ import {
 import { log } from "@repo/observability/log";
 import { cache } from "react";
 import { getCurrentPublicDataMode } from "./public-data-policy";
+import { buildPublicInventoryTaxonomy } from "./public-inventory-taxonomy";
 
 export const PUBLIC_LISTING_PAGE_SIZE = 24;
 
@@ -331,12 +332,21 @@ export const getPublicVehicleTaxonomy = cache(
     );
 
     if (requireDatabaseOrDemo() === "demo") {
-      return fallback;
+      return fallback.length
+        ? fallback
+        : buildPublicInventoryTaxonomy(getDemoTaxonomy(category));
     }
 
     try {
       const taxonomy = await getVehicleTaxonomyOptions(category);
-      return taxonomy.length > 0 ? taxonomy : fallback;
+      if (taxonomy.length > 0) {
+        return taxonomy;
+      }
+      return fallback.length
+        ? fallback
+        : buildPublicInventoryTaxonomy(
+            await getPublicMakeModelTaxonomy(category)
+          );
     } catch (error) {
       log.warn("Vehicle taxonomy query failed; using curated fallback.", {
         error,
@@ -345,6 +355,18 @@ export const getPublicVehicleTaxonomy = cache(
     }
   }
 );
+
+/** The full filter draft can change category before navigation applies it. */
+export const getPublicVehicleTaxonomies = cache(async () => {
+  const [car, truck, motorbike, van, lease] = await Promise.all([
+    getPublicVehicleTaxonomy("car"),
+    getPublicVehicleTaxonomy("truck"),
+    getPublicVehicleTaxonomy("motorbike"),
+    getPublicVehicleTaxonomy("van"),
+    getPublicVehicleTaxonomy("lease"),
+  ]);
+  return { car, truck, motorbike, van, lease };
+});
 
 export const getPublicMakeModelTaxonomy = cache(
   async (category: VehicleCategory = "car"): Promise<PublicMakeModelPair[]> => {

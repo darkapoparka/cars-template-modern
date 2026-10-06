@@ -10,6 +10,7 @@ import {
   mobileMarketplaceOverlayFieldRowClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import {
+  mobileSearchIconClassName,
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
@@ -53,14 +54,14 @@ export function LeaseCarSelector({
         ref={triggerRef}
         type="button"
       >
-        <DealerUiIcon
-          className="size-[18px] shrink-0 text-zinc-600"
-          name="search"
-        />
+        <DealerUiIcon className={mobileSearchIconClassName} name="search" />
         <span className={mobileSearchTriggerLabelClassName}>
           {selectedVehicle ? copy.changeVehicle : copy.vehicleLabel}
         </span>
-        <DealerUiIcon className="size-5 shrink-0" name="chevronRight" />
+        <DealerUiIcon
+          className={mobileSearchIconClassName}
+          name="chevronRight"
+        />
       </button>
       <MobileMarketplaceOverlay
         bodyClassName="bg-zinc-50"

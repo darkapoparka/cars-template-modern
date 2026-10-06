@@ -1,0 +1,219 @@
+/* Desktop presentation uses the shared palette, type, and spacing scale.
+ * These additions do not replace any token consumed by mobile.
+ */
+@theme static {
+  --breakpoint-desktop-wide: 70rem;
+  --breakpoint-desktop-expanded: 85rem;
+  --breakpoint-desktop-full: 96rem;
+  --breakpoint-desktop-ultra: 112rem;
+  --radius-desktop-control: 0.75rem;
+  --radius-desktop-frame: 1.25rem;
+  --radius-desktop-flag: 0.1875rem;
+  --text-desktop-lead: 1.0625rem;
+  --text-desktop-hero: 2.5rem;
+  --text-desktop-section: 2rem;
+  --text-desktop-fine: 0.6875rem;
+  --text-desktop-tiny: 0.625rem;
+  --text-desktop-finance: 1.625rem;
+  --text-desktop-wordmark: 1.75rem;
+}
+
+:root {
+  --desktop-frame-max: 78rem;
+  --desktop-showroom-max: 1320px;
+  --desktop-home-hero-height: clamp(400px, 30vw, 440px);
+  --desktop-content-max: 82.5rem;
+  --desktop-content-width: min(calc(100% - 5rem), var(--desktop-content-max));
+  --desktop-frame-width: var(--desktop-content-width);
+  --desktop-frame-min-height: calc(100dvh - var(--layout-gutter) * 2);
+  --desktop-canvas: #f5f6f8;
+  --desktop-surround: var(--desktop-canvas);
+  --desktop-service-canvas: var(--desktop-canvas);
+  --desktop-surface: #ffffff;
+  --desktop-surface-shadow: 0 2px 8px rgb(5 11 32 / 3%);
+  --desktop-surface-hover-shadow: 0 8px 24px rgb(5 11 32 / 6%);
+  --desktop-tab-rail: #e2e6ed;
+  --desktop-tab-rail-height: 4px;
+  --desktop-tab-count-background: color-mix(
+    in srgb,
+    currentcolor 10%,
+    transparent
+  );
+  --desktop-frame-border: #dce0e6;
+  --desktop-frame-shadow: 0 12px 48px rgb(31 40 58 / 5%);
+  --desktop-border-width: 1px;
+  --desktop-focus-width: 2px;
+  --desktop-focus-offset: 3px;
+  --desktop-header-height: 90px;
+  --desktop-logo-width: calc(var(--spacing) * 46);
+  --desktop-logo-compact-width: calc(var(--spacing) * 36);
+  --desktop-category-width: 40rem;
+  --desktop-category-image-width: calc(var(--spacing) * 22);
+  --desktop-category-image-height: calc(var(--spacing) * 12);
+  --desktop-category-image-opacity: 0.88;
+  --desktop-filter-height: calc(var(--spacing) * 12);
+  --desktop-icon-target: calc(var(--spacing) * 11);
+  --desktop-icon-size: calc(var(--spacing) * 4.5);
+  --desktop-icon-stroke: 1.8;
+  --desktop-service-icon-size: calc(var(--spacing) * 6.75);
+  --desktop-service-icon-stroke: 1.5;
+  --desktop-submit-size: calc(
+    var(--desktop-filter-height) -
+    var(--desktop-focus-width)
+  );
+  --desktop-control-compact-padding: calc(var(--spacing) * 4.5);
+  --desktop-leading-display: 1.15;
+  --desktop-leading-none: 1;
+  --desktop-leading-tight: 1.2;
+  --desktop-leading-heading: 1.25;
+  --desktop-leading-section: 1.3;
+  --desktop-leading-card: 1.35;
+  --desktop-leading-body: 1.4;
+  --desktop-leading-copy: 1.5;
+  --desktop-leading-prose: 1.6;
+  --desktop-tracking-display: -0.045em;
+  --desktop-tracking-page: -0.04em;
+  --desktop-tracking-section: -0.025em;
+  --desktop-tracking-card: -0.015em;
+  --desktop-border-subtle: color-mix(in srgb, var(--border) 70%, transparent);
+  --desktop-border-card: color-mix(in srgb, var(--border) 84%, transparent);
+  --desktop-border-hover: color-mix(
+    in srgb,
+    var(--foreground) 22%,
+    var(--border)
+  );
+  --desktop-border-hover-soft: color-mix(
+    in srgb,
+    var(--foreground) 16%,
+    var(--border)
+  );
+  --desktop-spec-divider: color-mix(
+    in srgb,
+    var(--muted-foreground) 38%,
+    transparent
+  );
+  --desktop-accent-soft: color-mix(in srgb, var(--brand) 8%, var(--panel));
+  --desktop-filter-selected-background: color-mix(
+    in srgb,
+    var(--brand) 10%,
+    var(--panel)
+  );
+  --desktop-filter-selected-border: color-mix(
+    in srgb,
+    var(--brand) 25%,
+    var(--border)
+  );
+  --desktop-filter-selected-text: color-mix(
+    in srgb,
+    var(--brand-text) 85%,
+    var(--foreground)
+  );
+  --desktop-picker-hover: color-mix(in srgb, var(--brand) 3%, var(--panel));
+  --desktop-success-hover: color-mix(in srgb, var(--success) 12%, transparent);
+  --desktop-success-soft: color-mix(in srgb, var(--success) 6%, var(--panel));
+  --desktop-inverse-hover: color-mix(in srgb, var(--inverse) 85%, var(--panel));
+  --desktop-inverse-soft: color-mix(
+    in srgb,
+    var(--inverse-control) 72%,
+    transparent
+  );
+  --desktop-selected-hover-brightness: 0.95;
+  --desktop-vehicle-aspect: 3 / 2;
+  --desktop-editorial-aspect: 16 / 9;
+  --desktop-gallery-aspect: 16 / 10;
+  --desktop-list-media-width: 17rem;
+  --desktop-sidebar-width: 22rem;
+  --desktop-layer-raised: 3;
+  --desktop-layer-hero: 20;
+  --desktop-layer-action: 21;
+  --desktop-layer-header: 40;
+  --desktop-layer-toolbar: 42;
+  --desktop-layer-popover: 60;
+  --desktop-layer-dialog: 100;
+  --desktop-search-max: 70rem;
+  --desktop-search-columns: 14rem minmax(18rem, 1fr) 4rem;
+  --desktop-search-compact-columns: 12rem minmax(18rem, 1fr) 3rem;
+  --desktop-sell-columns: 14rem minmax(18rem, 1fr) auto;
+  --desktop-import-columns: minmax(20rem, 1.2fr) minmax(18rem, 1fr) auto;
+  --desktop-search-dialog-height: min(
+    32rem,
+    calc(100dvh - var(--layout-gutter) * 2)
+  );
+  --desktop-search-dialog-width: min(
+    72rem,
+    calc(100vw - var(--layout-gutter) * 2)
+  );
+  --desktop-search-dialog-content: 68rem;
+  --desktop-search-dialog-footer: 64rem;
+  --desktop-search-thumbnail-width: calc(var(--spacing) * 26);
+  --desktop-search-result-height: calc(var(--spacing) * 19);
+  --desktop-dialog-max-height: calc(100dvh - var(--spacing) * 8);
+  --desktop-dialog-width: calc(100% - var(--spacing) * 8);
+  --desktop-model-options-height: 24rem;
+  --desktop-model-derivatives-height: min(
+    28rem,
+    calc(100dvh - var(--spacing) * 48)
+  );
+  --desktop-model-dialog-max-height: calc(100dvh - var(--spacing) * 16);
+  --desktop-model-dialog-width: calc(100vw - var(--layout-gutter) * 2);
+  --desktop-model-dialog-max-width: 54rem;
+  --desktop-model-header-columns: 6rem minmax(0, 1fr) 6rem;
+  --desktop-artwork-width: 22rem;
+  --desktop-artwork-size: clamp(20rem, 28vw, 28rem);
+  --desktop-editorial-search-width: min(80%, 44rem);
+  --desktop-contact-min-height: calc(var(--spacing) * 30);
+  --desktop-lease-columns: minmax(0, 1.05fr) minmax(0, 1.2fr) minmax(0, 0.95fr);
+  --desktop-inventory-columns: 2;
+  --desktop-service-columns: 2;
+  --desktop-advanced-columns: 4;
+  --desktop-carousel-basis: calc(100% / 3);
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --desktop-inventory-columns: 3;
+    --desktop-service-columns: 4;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --desktop-carousel-basis: calc(100% / 3);
+  }
+}
+
+/* Curated dealership desktop surfaces; values preserve the reviewed Boxcars composition. */
+:root {
+  --desktop-banner-start: #e4eaff;
+  --desktop-banner-center: #eef1ff;
+  --desktop-banner-end: #e6edff;
+  --desktop-banner-orbit: #405ff20a;
+  --desktop-banner-orbit-middle: #405ff206;
+  --desktop-banner-orbit-outer: #405ff204;
+  --desktop-breadcrumb-text: #596582;
+  --desktop-description-text: #465270;
+  --desktop-surface-subtle: #f9fbfc;
+  --desktop-preview-surface: #edf3ff;
+  --desktop-prose-text: #3e4557;
+  --desktop-control-border: #e1e1e1;
+  --desktop-panel-border: #e4e7ee;
+  --desktop-support-surface: #f2f4f7;
+  --desktop-about-surface: #eef1fb;
+  --desktop-hero-overlay-top: rgb(5 11 32 / 40%);
+  --desktop-hero-overlay-middle: rgb(5 11 32 / 28%);
+  --desktop-hero-overlay-bottom: rgb(5 11 32 / 16%);
+  --desktop-heading-tracking: -0.02em;
+  --desktop-wordmark-tracking: 0.08em;
+  --desktop-artwork-overlay: rgb(5 11 32 / 70%);
+  --desktop-dialog-backdrop: rgb(5 11 32 / 55%);
+  --desktop-inverse-divider: rgb(255 255 255 / 18%);
+  --desktop-inverse-muted: rgb(255 255 255 / 85%);
+  --desktop-direction-shadow-color: rgb(5 11 32 / 10%);
+  --desktop-form-focus-ring: color-mix(
+    in srgb,
+    var(--desktop-brand) 15%,
+    transparent
+  );
+  --desktop-icon-overlay: rgb(5 11 32 / 80%);
+  --desktop-artwork-shadow-color: rgb(5 11 32 / 15%);
+}

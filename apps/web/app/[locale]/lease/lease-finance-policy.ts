@@ -19,6 +19,7 @@ export interface FinancingVehicleOption {
   imageAlt: string;
   imageUrl: string;
   mileageLabel: string;
+  monthlyEstimate?: Money;
   monthlyLabel?: string;
   priceAmount: number;
   priceCurrency: Money["currency"];

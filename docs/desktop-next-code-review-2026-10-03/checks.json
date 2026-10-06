@@ -1,0 +1,491 @@
+{
+  "date": "2026-10-03",
+  "scope": "Modern desktop code; existing mobile presentation preserved",
+  "stack": {
+    "next": "16.3.3",
+    "react": "19.2.4",
+    "tailwind": "4.3.0",
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "checks": {
+    "productionWebpackBuild": "passed",
+    "webTypecheck": "passed",
+    "webUnitTests": 186,
+    "marketplaceUiUnitTests": 85,
+    "scopedBiome": "passed",
+    "mobileExactMatches": 17,
+    "uniqueDesktopFlowChecks": 18,
+    "renderedStates": 31
+  },
+  "flowEvidence": "Full matrix plus the affected listing case rechecked in both browsers after its selectors were scoped to visible streamed content; original attempts retained in runtime.",
+  "flows": [
+    {
+      "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "the desktop hero preloads only at desktop widths",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "the desktop hero preloads only at desktop widths",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+      "file": "boxcar-desktop-actions.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop keeps the Home 10 frame and stock visible below its search",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop navigation keeps the header stable through loading",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "home search and inventory sidebar apply drafts without losing filters",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop listing keeps the gallery, information and phone handoff usable",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "listing-recheck.json"
+    },
+    {
+      "title": "financing selection and preferences survive navigation and clearing",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop import has one focus treatment and carries the listing into the request",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "chromium",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop keeps the Home 10 frame and stock visible below its search",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop navigation keeps the header stable through loading",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "home search and inventory sidebar apply drafts without losing filters",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop listing keeps the gallery, information and phone handoff usable",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "listing-recheck.json"
+    },
+    {
+      "title": "financing selection and preferences survive navigation and clearing",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    },
+    {
+      "title": "desktop import has one focus treatment and carries the listing into the request",
+      "file": "desktop-panel-flows.spec.ts",
+      "project": "webkit",
+      "status": "passed",
+      "run": "flows-verified.json"
+    }
+  ],
+  "renders": [
+    {
+      "name": "bg-home-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-home-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-cars-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-cars-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-contact-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-contact-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-imports-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-imports-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-sell-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-sell-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-lease-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-lease-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-blog-320",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-blog-390",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-home-1023",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-home-1024",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 40,
+        "y": 90,
+        "width": 944,
+        "height": 460
+      }
+    },
+    {
+      "name": "en-home-1024",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 40,
+        "y": 90,
+        "width": 944,
+        "height": 460
+      }
+    },
+    {
+      "name": "bg-home-1280",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 40,
+        "y": 90,
+        "width": 1200,
+        "height": 486.390625
+      }
+    },
+    {
+      "name": "en-home-1280",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 40,
+        "y": 90,
+        "width": 1200,
+        "height": 486.390625
+      }
+    },
+    {
+      "name": "bg-home-1440",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 60,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "en-home-1440",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 60,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "bg-home-1920",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 300,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "en-home-1920",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 300,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "bg-cars-1440",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-contact-1440",
+      "browser": "chromium",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    },
+    {
+      "name": "bg-home-1024",
+      "browser": "webkit",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 40,
+        "y": 90,
+        "width": 944,
+        "height": 460
+      }
+    },
+    {
+      "name": "bg-home-1440",
+      "browser": "webkit",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 60,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "en-home-1920",
+      "browser": "webkit",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": {
+        "x": 300,
+        "y": 90,
+        "width": 1320,
+        "height": 520
+      }
+    },
+    {
+      "name": "bg-cars-1440",
+      "browser": "webkit",
+      "status": 200,
+      "errors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "hero": null
+    }
+  ],
+  "boundaries": {
+    "runtime": "local production static demo",
+    "templatePromotion": false,
+    "dealerDeployment": false
+  }
+}

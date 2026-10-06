@@ -144,9 +144,9 @@ export const MobileMarketplaceOverlayHeader = ({
     className="shrink-0 gap-0 bg-white text-left"
     data-slot="mobile-marketplace-overlay-header"
   >
-    <div className="grid min-h-16 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2">
+    <div className="grid min-h-16 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3">
       <div className="flex justify-start">{leftAction}</div>
-      <DialogTitle className="whitespace-normal break-words text-center font-semibold text-card-title-lg tracking-normal">
+      <DialogTitle className="whitespace-normal text-balance break-words text-center font-semibold text-card-title-lg tracking-normal">
         {title}
       </DialogTitle>
       <div className="flex justify-end">{rightAction}</div>

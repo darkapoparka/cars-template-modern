@@ -81,6 +81,7 @@ export const ListingActions = ({
           variant="secondary"
         >
           <Printer aria-hidden="true" className="size-4" />
+          <span className="hidden lg:inline">{copy.print}</span>
         </Button>
       )}
       <Button
@@ -100,6 +101,9 @@ export const ListingActions = ({
           />
         ) : (
           <Share2 aria-hidden="true" className="size-4" />
+        )}
+        {floating ? null : (
+          <span className="hidden lg:inline">{copy.share}</span>
         )}
       </Button>
       <span aria-live="polite" className="sr-only">

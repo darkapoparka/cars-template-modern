@@ -6,6 +6,11 @@ their data and actions rather than copying control markup.
 
 ## Shared boundaries
 
+- `MobileDealerChrome` owns the 16px page gutter and the 12px gap between the
+  brand row and primary control. Header fields share 48px geometry and quiet
+  18px icons through `lib/mobile-form-control.ts`; inventory, import, VIN,
+  financing and guides reuse it. The compact scrolling inventory bar keeps
+  44px controls. Guides use a 44px clear action and retain typing focus.
 - `packages/marketplace-ui/lib/mobile-overlay-styles.ts` owns focus, field,
   icon-action, scrolling and primary-action geometry. Icon targets are 44px;
   primary actions have a 48px minimum and allow translated labels to wrap.
@@ -18,6 +23,10 @@ their data and actions rather than copying control markup.
 - `MobileMarketplaceOverlayHeader` wraps long localized titles. Full-screen
   overlays serve search and forms; short choices use its sheet presentation.
   Existing draggable navigation/help drawers share the same icon-action style.
+- Vehicle search and full-filter prompts use `search.makeModelPlaceholder` from
+  the shared localized control copy. Category choices use a title, regular-weight
+  subtext capped at two lines on mobile, and a 64px artwork tile; keep the line
+  clamp's display style intact rather than overriding it with `block`.
 - The existing visual-viewport bridge and safe-area styles continue to govern
   keyboard height and scrolling. Do not introduce route-specific viewport or
   global Escape handlers.

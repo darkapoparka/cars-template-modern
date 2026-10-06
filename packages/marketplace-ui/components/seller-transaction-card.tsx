@@ -60,7 +60,10 @@ export const SellerTransactionCard = ({
       <p className="font-medium text-foreground/70 text-meta">
         {transactionLabel}
       </p>
-      <p className="mt-1 font-semibold text-price-lg tracking-heading">
+      <p
+        className="mt-1 font-semibold text-price-lg tracking-heading"
+        data-slot="listing-transaction-price"
+      >
         {formatMoney(primaryPrice, locale)}
         {isMonthlyTransaction ? `/${copy.month}` : ""}
       </p>

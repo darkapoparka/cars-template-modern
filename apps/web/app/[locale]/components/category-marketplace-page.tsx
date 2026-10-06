@@ -5,16 +5,21 @@ import {
   parseMarketplaceSearchParams,
   type VehicleCategory,
 } from "@repo/marketplace";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import {
+  getInventoryLayoutCookieName,
+  resolveInventoryFilterLayout,
+} from "@repo/marketplace/inventory-presentation";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
+import { cookies } from "next/headers";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
-  getPublicVehicleTaxonomy,
+  getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
@@ -75,9 +80,14 @@ export const CategoryMarketplacePage = async ({
       : "results";
 
   try {
-    const [{ facets, listings, totalListings }, taxonomy] = await Promise.all([
+    const [
+      { facets, listings, totalListings },
+      taxonomyByCategory,
+      cookieStore,
+    ] = await Promise.all([
       getPublicMarketplaceListings(filters),
-      getPublicVehicleTaxonomy(category),
+      getPublicVehicleTaxonomies(),
+      cookies(),
     ]);
     const pageRedirect = getMarketplacePageRedirect({
       basePath,
@@ -104,6 +114,12 @@ export const CategoryMarketplacePage = async ({
           defaultViewMode={supportsDiscoveryPresentation ? "grid" : undefined}
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
+          initialDesktopFilterLayout={resolveInventoryFilterLayout(
+            cookieStore.get(
+              getInventoryLayoutCookieName(publicSite.identity.slug)
+            )?.value,
+            publicSite.inventory?.desktopFilterLayout ?? "quick"
+          )}
           inventoryFacets={facets}
           listings={listings}
           locale={normalizedLocale}
@@ -111,7 +127,8 @@ export const CategoryMarketplacePage = async ({
             filters.category,
             listings
           )}
-          taxonomy={taxonomy}
+          taxonomy={taxonomyByCategory[category]}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
         <Footer locale={normalizedLocale} />

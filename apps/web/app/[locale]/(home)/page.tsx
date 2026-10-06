@@ -14,10 +14,11 @@ import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
+import { getPublicContentCards } from "@/lib/public-content-data";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
-  getPublicVehicleTaxonomy,
+  getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
@@ -85,10 +86,11 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     const hasSearchCriteria = createMarketplaceSearchParams(filters).size > 0;
     const desktopSearchVariant =
       !isDealershipSite && hasSearchCriteria ? "results" : "discovery";
-    const [{ facets, listings, totalListings }, taxonomy] = await Promise.all([
-      getPublicMarketplaceListings(filters),
-      getPublicVehicleTaxonomy(filters.category),
-    ]);
+    const [{ facets, listings, totalListings }, taxonomyByCategory] =
+      await Promise.all([
+        getPublicMarketplaceListings(filters),
+        getPublicVehicleTaxonomies(),
+      ]);
     const pageRedirect = getMarketplacePageRedirect({
       basePath: getLocalizedPath(normalizeSeoLocale(locale), "/"),
       filters,
@@ -98,24 +100,34 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     if (pageRedirect) {
       redirect(pageRedirect);
     }
-
     return (
       <>
         <MarketplaceShell
           appBaseUrl={isDealershipSite ? undefined : getPublicAppBaseUrl()}
           defaultViewMode="grid"
           desktopDiscoverySlot={
-            isDealershipSite &&
-            filters.category === "car" &&
-            filters.sort === "recommended" &&
-            filters.page === 1 ? (
+            isDealershipSite ? (
               <DealerDesktopDiscoveryContent
+                articles={getPublicContentCards(normalizeSeoLocale(locale))
+                  .filter((item) => item.type === "article")
+                  .slice(0, 3)
+                  .map((item, index) => ({
+                    category: item.category,
+                    href: getLocalizedPath(
+                      normalizeSeoLocale(locale),
+                      `/blog/${item.slug}`
+                    ),
+                    image: `/desktop-boxcars/journal-${index + 1}.jpg`,
+                    meta: item.meta,
+                    title: item.title,
+                  }))}
                 currentPath={getLocalizedPath(
                   normalizeSeoLocale(locale),
                   "/cars"
                 )}
                 listings={listings}
                 locale={locale}
+                totalListings={totalListings}
               />
             ) : undefined
           }
@@ -128,7 +140,8 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
             filters.category,
             listings
           )}
-          taxonomy={taxonomy}
+          taxonomy={taxonomyByCategory[filters.category]}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
         <Footer locale={locale} />

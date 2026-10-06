@@ -4,6 +4,7 @@
   "tasks": {
     "analyze": {
       "env": [
+        "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
         "AUTOMARKET_ENABLE_BILLING",
         "AUTOMARKET_PUBLIC_E2E",
         "BETTER*",
@@ -40,6 +41,7 @@
     },
     "build": {
       "env": [
+        "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
         "AUTOMARKET_ENABLE_BILLING",
         "AUTOMARKET_PUBLIC_E2E",
         "BETTER*",
@@ -76,6 +78,7 @@
     },
     "dev": {
       "env": [
+        "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
         "AUTOMARKET_ENABLE_BILLING",
         "AUTOMARKET_PUBLIC_E2E",
         "BETTER*",
@@ -111,6 +114,7 @@
     },
     "test": {
       "env": [
+        "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
         "AUTOMARKET_ENABLE_BILLING",
         "AUTOMARKET_PUBLIC_E2E",
         "BETTER*",
@@ -147,6 +151,7 @@
     },
     "typecheck": {
       "env": [
+        "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
         "AUTOMARKET_ENABLE_BILLING",
         "AUTOMARKET_PUBLIC_E2E",
         "BETTER*",

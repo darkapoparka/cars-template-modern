@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-05",
+  "scope": "Modern desktop showroom cards",
+  "node": "22.23.2",
+  "pnpm": "11.4.0",
+  "buildId": "P2KgXOGNvJKvDWvKxcdG5",
+  "canonicalOrigin": "http://127.0.0.1:6482",
+  "biome": "PASS",
+  "marketplaceUiUnits": 101,
+  "webUnits": 188,
+  "refactorContracts": 7,
+  "preflightContracts": "PASS",
+  "preflightTests": 87,
+  "productionBuild": "PASS",
+  "webTypecheck": "PASS",
+  "protectedNextEnvRestored": true,
+  "desktopBrowserCases": {
+    "correctedListCasesPassed": 2,
+    "initialFailed": 2,
+    "initialPassed": 12,
+    "uniqueCasesPassed": 14,
+    "engines": [
+      "chromium",
+      "webkit"
+    ]
+  },
+  "capturesPerPhase": 32,
+  "desktopWidths": [
+    1024,
+    1280,
+    1440,
+    1920
+  ],
+  "mobileWidths": [
+    320,
+    390,
+    1023
+  ],
+  "locales": [
+    "bg",
+    "en"
+  ],
+  "desktopFacts": [
+    "year",
+    "variant when present",
+    "body",
+    "mileage",
+    "fuel",
+    "transmission"
+  ],
+  "keyboardNavigation": "PASS",
+  "horizontalOverflow": false,
+  "factOverflow": false,
+  "priceActionOverlap": false,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "mobileComparisons": 12,
+  "pixelIdenticalMobileComparisons": 9,
+  "maximumOtherChangedPixels": 30,
+  "maximumChannelDifference": 5,
+  "templateReleaseSelected": false,
+  "dealerDeploymentChanged": false,
+  "homeCompositionProposalOnly": true
+}

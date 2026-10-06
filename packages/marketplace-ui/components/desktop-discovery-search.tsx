@@ -65,10 +65,10 @@ export const DesktopCategoryPickerTrigger = ({
         "Choose category"
       )}
       className={cn(
-        "group h-auto min-h-0 cursor-pointer justify-between self-stretch px-4 text-left shadow-none transition-[background-color,box-shadow] duration-150 focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-inset",
+        "group h-auto min-h-0 cursor-pointer justify-between self-stretch px-4 text-left shadow-none transition-[background-color,box-shadow] duration-[var(--duration-interaction)] focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent-ring)] focus-visible:ring-inset",
         compact
           ? "rounded-lg border border-border/90 bg-card hover:bg-control active:bg-control-hover"
-          : "m-1.5 rounded-[14px] bg-control hover:bg-border/75 active:bg-border",
+          : "m-1.5 rounded-desktop-control bg-control hover:bg-border/75 active:bg-border",
         appearance !== "standard" &&
           "h-[var(--control-height-search)] w-52 shrink-0 rounded-xl bg-control",
         appearance === "hero" && "w-44",
@@ -83,7 +83,7 @@ export const DesktopCategoryPickerTrigger = ({
         <span
           className={cn(
             "block font-semibold text-meta",
-            open ? "text-white/80" : "text-foreground"
+            open ? "text-brand-foreground/80" : "text-foreground"
           )}
         >
           {localizeMarketplace(isBg, "Категория", "Category")}
@@ -92,7 +92,7 @@ export const DesktopCategoryPickerTrigger = ({
           className={cn(
             "mt-1 flex items-center gap-2 truncate font-normal text-compact-control transition-colors",
             open
-              ? "text-white group-hover:text-white"
+              ? "text-brand-foreground group-hover:text-brand-foreground"
               : "text-muted-foreground group-hover:text-foreground"
           )}
         >
@@ -109,8 +109,9 @@ export const DesktopCategoryPickerTrigger = ({
       <ChevronDown
         aria-hidden="true"
         className={cn(
-          "size-4 opacity-50 transition-transform duration-150 group-hover:opacity-80",
-          open && "rotate-180 text-white opacity-100 group-hover:opacity-100"
+          "size-4 opacity-50 transition-transform duration-[var(--duration-interaction)] group-hover:opacity-80",
+          open &&
+            "rotate-180 text-brand-foreground opacity-100 group-hover:opacity-100"
         )}
       />
     </Button>
@@ -131,21 +132,21 @@ export const DesktopCategoryPickerContent = ({
   onClose: () => void;
 }) => (
   <DialogContent
-    className="max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-3xl gap-0 overflow-hidden rounded-2xl border-zinc-200 bg-white p-0 shadow-2xl"
+    className="max-h-[var(--desktop-dialog-max-height)] w-[var(--desktop-dialog-width)] max-w-3xl gap-0 overflow-hidden rounded-2xl border-border bg-panel p-0 shadow-overlay"
     data-slot="lead-category-dialog"
     showCloseButton={false}
   >
     <DialogHeader className="px-5 py-4 text-left">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <DialogTitle className="text-dialog-title text-zinc-950">
+          <DialogTitle className="text-dialog-title text-foreground">
             {localizeMarketplace(
               isBg,
               "Изберете тип превозно средство",
               "Choose vehicle category"
             )}
           </DialogTitle>
-          <DialogDescription className="mt-1 text-body text-zinc-600">
+          <DialogDescription className="mt-1 text-body text-muted-foreground">
             {localizeMarketplace(
               isBg,
               "Категорията определя наличностите и филтрите в търсенето.",
@@ -156,7 +157,7 @@ export const DesktopCategoryPickerContent = ({
         <DialogClose asChild>
           <Button
             aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-            className="-mr-2 size-10 rounded-full text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
+            className="-mr-2 size-10 rounded-full text-muted-foreground hover:bg-control hover:text-foreground"
             size="icon"
             type="button"
             variant="ghost"
@@ -274,11 +275,11 @@ export const DesktopDiscoverySearch = ({
         className={cn(
           "grid items-stretch",
           compact
-            ? "h-16 w-full grid-cols-[12rem_minmax(18rem,1fr)_3rem] grid-rows-[48px] gap-2 rounded-xl border border-border bg-control p-2"
-            : "mx-auto h-16 w-full max-w-[70rem] grid-cols-[14rem_minmax(18rem,1fr)_4rem] rounded-[20px] border border-zinc-200 bg-card shadow-[0_8px_24px_rgba(0,0,0,0.14)] transition-shadow focus-within:shadow-[0_16px_42px_rgba(0,0,0,0.24)]",
+            ? "h-16 w-full grid-cols-[var(--desktop-search-compact-columns)] grid-rows-[var(--desktop-filter-height)] gap-2 rounded-xl border border-border bg-control p-2"
+            : "mx-auto h-16 w-full max-w-[var(--desktop-search-max)] grid-cols-[var(--desktop-search-columns)] rounded-desktop-frame border border-border bg-card shadow-overlay transition-shadow focus-within:shadow-overlay",
           searchMenuOpen &&
             !compact &&
-            "relative z-[60] rounded-b-none shadow-[0_18px_38px_rgba(0,0,0,0.2)] focus-within:shadow-[0_18px_38px_rgba(0,0,0,0.2)]"
+            "relative z-[var(--desktop-layer-popover)] rounded-b-none shadow-overlay focus-within:shadow-overlay"
         )}
         data-slot="desktop-search-surface"
       >
@@ -328,7 +329,9 @@ export const DesktopDiscoverySearch = ({
             aria-label={localizeMarketplace(isBg, "Търси", "Search")}
             className={cn(
               "bg-brand font-semibold text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]",
-              compact ? "size-[46px] rounded-lg" : "size-12 rounded-full"
+              compact
+                ? "size-[var(--desktop-submit-size)] rounded-lg"
+                : "size-12 rounded-full"
             )}
             data-search-menu-action
             onClick={submitSearch}
@@ -337,7 +340,7 @@ export const DesktopDiscoverySearch = ({
           >
             <Search
               aria-hidden="true"
-              className="size-[18px]"
+              className="size-[var(--desktop-icon-size)]"
               strokeWidth={2.2}
             />
           </Button>

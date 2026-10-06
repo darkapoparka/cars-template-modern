@@ -1,0 +1,394 @@
+{
+  "recordedAt": "2026-10-03T20:59:10.471Z",
+  "beforeCarsCommit": "598b46c34e010d2ce185c33b167fb4314460454d",
+  "beforeModernCommit": "5b111b173",
+  "afterBuildId": "ZSaUENOWEtkvQWb11LcuM",
+  "preview": "http://127.0.0.1:6482/bg",
+  "sourceHashes": [
+    {
+      "path": "apps/e2e/specs/boxcar-desktop-actions.spec.ts",
+      "sha256": "d2a45882148b1c95e04e71738f8221e47b63fa541381c79a55902decc4b700b3"
+    },
+    {
+      "path": "apps/e2e/specs/desktop-panel-flows.spec.ts",
+      "sha256": "4820030a34326de4ac44b393f8940af565c18193e31f85f442686016526fb673"
+    },
+    {
+      "path": "apps/web/app/[locale]/(home)/page.tsx",
+      "sha256": "b1d09961446b4d5b411213e85727ec586a2b2da73132bea17cb32c4b9d84b297"
+    },
+    {
+      "path": "apps/web/app/[locale]/desktop.css",
+      "sha256": "bfa1e93a0f014309cfba7302c872728e88cff76bbb03595caf1ccc1a3c96b445"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+      "sha256": "c45cc4924588224e4056febb0daa326f2307cbf03b83bcb1438a1f71c6c96b44"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.tsx",
+      "sha256": "3563936e58976771d51276ec6975e1b3b4ec1365edb69b92c2c160537cb38c82"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+      "sha256": "7312dbac928c4df576d3fcba6532f2dc6dd2baa598cc545a983b424ccc588d1e"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-inventory.module.css",
+      "sha256": "82f1a7d3d5161b4db3a97c5c08923120232c12ecc7778c8559ea9bfe2c13a6f8"
+    },
+    {
+      "path": "packages/marketplace-ui/components/marketplace-results.tsx",
+      "sha256": "c86f4d3dd1a07be7747ee90ebb6f7f4c43ab614fae116cbe31f3286f1838d401"
+    },
+    {
+      "path": "packages/marketplace-ui/components/related-listing-card.tsx",
+      "sha256": "55982cebf7656ac8f09c6c5432e37f2f07e52a88d7ba0c4c3fbb2fa57503b200"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-content.tsx",
+      "sha256": "6f256e6b692a11ab192a5e7c3c2bcbd2f26c82f20b4c0e031c6626c728da3eb3"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+      "sha256": "a62d4843cb533b6a04d589a9a9ff0ee1ef34ba7a8a1c8f61e93fdff0d3e3c9e6"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card.tsx",
+      "sha256": "40d71f44bfb433d7730c5688d17c988f582ea16ae0d7246fceb6ddffdd8d4b8a"
+    }
+  ],
+  "screenshotHashes": [
+    {
+      "path": "cards-before.png",
+      "sha256": "1fcd2213eb49e57ab30edcb2440b94ffe9ea58c747c2a0683d19314ea037b7f9"
+    },
+    {
+      "path": "cards-after.png",
+      "sha256": "cb2b02c665dbc881e94f2df4031c24f9c6222cb2f13d845b957b3fc7bf0fe992"
+    },
+    {
+      "path": "cars-before.png",
+      "sha256": "4d37cd752305f96301af7e055d5e64ad75c76f436003d31ffc42febae35da8ca"
+    },
+    {
+      "path": "cars-after.png",
+      "sha256": "ca51aaef5565a1f134ef72e16338f60451a62a171bc0d66d769deab2214d20c3"
+    }
+  ],
+  "checks": {
+    "uiUnitTests": 95,
+    "uiUnitFiles": 20,
+    "refactorContracts": 7,
+    "releasePreflightTests": 87,
+    "desktopGeometryStates": 24,
+    "listStates": 8,
+    "accessibilityScans": 6,
+    "accessibilityViolations": 0,
+    "mobileFramesPixelIdentical": 7,
+    "renderedCaptureStates": 34
+  },
+  "browser": {
+    "fullRun": {
+      "startTime": "2026-10-03T20:45:50.911Z",
+      "duration": 381328.876,
+      "expected": 29,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "focusedMotionRun": {
+      "startTime": "2026-10-03T20:54:01.271Z",
+      "duration": 11916.305999999999,
+      "expected": 2,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "qualifiedCases": [
+      {
+        "project": "desktop-chromium",
+        "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "the desktop hero preloads only at desktop widths",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop shortlist persists, updates across tabs and closes below its breakpoint",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "the desktop hero preloads only at desktop widths",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop enquiry previews locally, preserves viewing intent and clears stale feedback",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "desktop navigation keeps the header stable through loading",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "financing selection and preferences survive navigation and clearing",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "desktop import has one focus treatment and carries the listing into the request",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop navigation keeps the header stable through loading",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "financing selection and preferences survive navigation and clearing",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "desktop import has one focus treatment and carries the listing into the request",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "master desktop wordmarks stay within the existing frame",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "legacy shortlist is sanitized and opens in the active locale",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "PDP has accurate desktop image sizing and visible photo count",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "narrow desktop related cards keep price actions and facts inside each card",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "home stock tabs filter in place and support keyboard browsing",
+        "passed": true
+      },
+      {
+        "project": "desktop-chromium",
+        "title": "home stock rail follows selection and respects reduced motion",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "master desktop wordmarks stay within the existing frame",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "legacy shortlist is sanitized and opens in the active locale",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "PDP has accurate desktop image sizing and visible photo count",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "narrow desktop related cards keep price actions and facts inside each card",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "home stock tabs filter in place and support keyboard browsing",
+        "passed": true
+      },
+      {
+        "project": "desktop-webkit",
+        "title": "home stock rail follows selection and respects reduced motion",
+        "passed": true
+      }
+    ],
+    "limitation": "The full run passed 29 of 30 cases; WebKit did not sample an intermediate frame in the rail motion case while other capture work ran. Both unchanged motion cases passed in a separate Chromium/WebKit run. This is not a clean 30-of-30 full-run claim."
+  },
+  "stock": [
+    {
+      "locale": "bg",
+      "heights": [
+        387,
+        387,
+        387,
+        387,
+        387,
+        387,
+        387,
+        387
+      ],
+      "errors": [],
+      "skeletons": 0
+    },
+    {
+      "locale": "en",
+      "heights": [
+        387,
+        387,
+        387,
+        387,
+        387,
+        387,
+        387,
+        387
+      ],
+      "errors": [],
+      "skeletons": 0
+    }
+  ],
+  "mobile": [
+    {
+      "name": "bg-320",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [
+        {
+          "index": 19,
+          "before": null,
+          "after": "dealer-inventory-panel"
+        }
+      ],
+      "exact": true
+    },
+    {
+      "name": "bg-390",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [
+        {
+          "index": 19,
+          "before": null,
+          "after": "dealer-inventory-panel"
+        }
+      ],
+      "exact": true
+    },
+    {
+      "name": "bg-cars-320",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [
+        {
+          "index": 19,
+          "before": null,
+          "after": "dealer-inventory-panel"
+        }
+      ],
+      "exact": true
+    },
+    {
+      "name": "bg-cars-390",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [
+        {
+          "index": 19,
+          "before": null,
+          "after": "dealer-inventory-panel"
+        }
+      ],
+      "exact": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [],
+      "exact": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [],
+      "exact": true
+    },
+    {
+      "name": "bg-1023",
+      "sameDimensions": true,
+      "changedPixels": 0,
+      "sameGeometry": true,
+      "sameText": true,
+      "slotChanges": [
+        {
+          "index": 19,
+          "before": null,
+          "after": "dealer-inventory-panel"
+        }
+      ],
+      "exact": true
+    }
+  ],
+  "limits": [
+    "Local production preview only; no native, mounted, hosted or owner visual acceptance is claimed.",
+    "The retained image cache was used. Existing Windows cold PNG optimizer stalls and the previously documented braces security advisory remain release holds.",
+    "Template lock and dealer copies were not changed."
+  ]
+}

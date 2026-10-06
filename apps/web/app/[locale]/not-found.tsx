@@ -66,6 +66,7 @@ const NotFound = () => {
 
       <main
         className="grid flex-1 place-items-center px-4 py-10"
+        data-slot="public-not-found-body"
         id="main-content"
         tabIndex={-1}
       >

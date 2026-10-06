@@ -94,6 +94,7 @@ interface MarketplaceControlCopy {
   search: {
     allFilters: string;
     ariaLabel: string;
+    makeModelPlaceholder: string;
     placeholder: string;
   };
   sort: Record<SortOption, string>;
@@ -125,27 +126,27 @@ const copyByLanguage = {
     },
     categories: {
       car: {
-        description: "Леки автомобили, SUV, комбита, купета и хечбеци",
+        description: "Седани, SUV и комбита",
         label: "Автомобили",
         shortLabel: "Коли",
       },
       truck: {
-        description: "Товарни автомобили, пикапи и тежкотоварна техника",
+        description: "Пикапи и тежкотоварни",
         label: "Камиони",
         shortLabel: "Камиони",
       },
       motorbike: {
-        description: "Мотоциклети, скутери и туристически модели",
+        description: "Мотори и скутери",
         label: "Мотоциклети",
         shortLabel: "Мотори",
       },
       van: {
-        description: "Товарни и пътнически бусове и микробуси",
+        description: "Пътнически и товарни",
         label: "Бусове",
         shortLabel: "Бусове",
       },
       lease: {
-        description: "Автомобили на лизинг и оферти с месечна вноска",
+        description: "С месечна вноска",
         label: "Лизинг",
         shortLabel: "Лизинг",
       },
@@ -226,6 +227,7 @@ const copyByLanguage = {
     search: {
       allFilters: "Отвори всички филтри",
       ariaLabel: "Търси автомобили",
+      makeModelPlaceholder: "Марка или модел",
       placeholder: "Търси…",
     },
     sort: {
@@ -262,27 +264,27 @@ const copyByLanguage = {
     },
     categories: {
       car: {
-        description: "Passenger cars, SUVs, wagons, coupes, and hatchbacks",
+        description: "Sedans, SUVs and wagons",
         label: "Cars",
         shortLabel: "Cars",
       },
       truck: {
-        description: "Commercial trucks, pickups, and heavy duty vehicles",
+        description: "Pickups and heavy trucks",
         label: "Trucks",
         shortLabel: "Trucks",
       },
       motorbike: {
-        description: "Motorcycles, scooters, and touring bikes",
+        description: "Motorcycles and scooters",
         label: "Motorbikes",
         shortLabel: "Bikes",
       },
       van: {
-        description: "Cargo vans, passenger vans, and minibuses",
+        description: "Passenger and cargo vans",
         label: "Vans",
         shortLabel: "Vans",
       },
       lease: {
-        description: "Lease-ready vehicles and monthly offers",
+        description: "Cars with monthly payments",
         label: "Lease",
         shortLabel: "Lease",
       },
@@ -364,6 +366,7 @@ const copyByLanguage = {
     search: {
       allFilters: "Open all filters",
       ariaLabel: "Search vehicles",
+      makeModelPlaceholder: "Make or model",
       placeholder: "Search…",
     },
     sort: {

@@ -134,10 +134,10 @@ export const MobileVehicleTaxonomyPicker = ({
           value={query}
           wrapperClassName={cn(
             mobileMarketplaceOverlayFieldClassName,
-            "mx-3 mb-3 shrink-0 border-0 [&>svg]:size-[18px] [&>svg]:text-zinc-600 [&>svg]:opacity-100"
+            "mx-4 mb-3 shrink-0 border-0 [&>svg]:size-[18px] [&>svg]:text-zinc-600 [&>svg]:opacity-100"
           )}
         />
-        <CommandList className="no-scrollbar max-h-none flex-1 overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <CommandList className="no-scrollbar max-h-none flex-1 overscroll-contain px-4 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <CommandEmpty className="px-4 py-10 text-compact-control text-zinc-500">
             {text.noMatch}
           </CommandEmpty>

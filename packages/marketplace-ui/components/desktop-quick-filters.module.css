@@ -10,7 +10,7 @@
 .toolbarRow,
 .toolbarItems {
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: calc(var(--spacing) * 2);
   justify-content: center;
   width: auto;
 }

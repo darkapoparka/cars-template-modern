@@ -33,12 +33,12 @@ type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
 export const LeadSiteSearchCutouts = () => (
   <div
     aria-hidden="true"
-    className="pointer-events-none absolute inset-0 z-0 hidden select-none overflow-hidden min-[112rem]:block"
+    className="pointer-events-none absolute inset-0 z-0 desktop-ultra:block hidden select-none overflow-hidden"
     data-slot="lead-site-search-cutouts"
   >
     <Image
       alt=""
-      className="absolute inset-y-0 left-0 h-full w-[22rem] max-w-none object-cover"
+      className="absolute inset-y-0 left-0 h-full w-[var(--desktop-sidebar-width)] max-w-none object-cover"
       height={216}
       priority
       sizes="(min-width: 1792px) 352px, 0px"
@@ -47,7 +47,7 @@ export const LeadSiteSearchCutouts = () => (
     />
     <Image
       alt=""
-      className="absolute inset-y-0 right-0 h-full w-[22rem] max-w-none object-cover"
+      className="absolute inset-y-0 right-0 h-full w-[var(--desktop-sidebar-width)] max-w-none object-cover"
       height={216}
       priority
       sizes="(min-width: 1792px) 352px, 0px"
@@ -135,7 +135,7 @@ export const LeadImportFlag = ({
   <span
     aria-hidden="true"
     className={cn(
-      "[&>svg]:!block [&>svg]:!h-full [&>svg]:!w-full inline-flex shrink-0 overflow-hidden rounded-[3px] border border-black/15 bg-white",
+      "[&>svg]:!block [&>svg]:!h-full [&>svg]:!w-full inline-flex shrink-0 overflow-hidden rounded-desktop-flag border border-border bg-panel",
       className
     )}
     data-slot="lead-import-flag"
@@ -175,7 +175,7 @@ const DesktopSellSurface = ({
 }) => (
   <form
     action={getLocalizedPublicPath(locale, "/sell")}
-    className="mx-auto grid h-16 w-full max-w-[70rem] grid-cols-[14rem_minmax(18rem,1fr)_auto] rounded-2xl bg-card shadow-none focus-within:ring-2 focus-within:ring-[var(--lead-site-accent-ring)]"
+    className="mx-auto grid h-16 w-full max-w-[var(--desktop-search-max)] grid-cols-[var(--desktop-sell-columns)] rounded-2xl bg-card shadow-none focus-within:ring-2 focus-within:ring-[var(--lead-site-accent-ring)]"
     data-slot="desktop-sell-surface"
     method="get"
   >
@@ -252,7 +252,7 @@ const DesktopImportSurface = ({
   return (
     <form
       action={getLocalizedPublicPath(locale, "/imports")}
-      className="mx-auto grid h-16 w-full max-w-[70rem] grid-cols-[minmax(20rem,1.2fr)_minmax(18rem,1fr)_auto] rounded-2xl bg-card shadow-none"
+      className="mx-auto grid h-16 w-full max-w-[var(--desktop-search-max)] grid-cols-[var(--desktop-import-columns)] rounded-2xl bg-card shadow-none"
       data-slot="desktop-import-surface"
       method="get"
     >
@@ -290,13 +290,16 @@ const DesktopImportSurface = ({
             <ChevronDown
               aria-hidden="true"
               className={cn(
-                "size-[18px] shrink-0 transition-transform",
+                "size-[var(--desktop-icon-size)] shrink-0 transition-transform",
                 originOpen && "rotate-180"
               )}
             />
           </Button>
         </PopoverTrigger>
-        <PopoverContent align="start" className="w-[22rem] p-2" sideOffset={8}>
+        <PopoverContent
+          align="start"
+          className="w-[var(--desktop-sidebar-width)] p-2"
+        >
           <p className="px-2 pt-1 pb-2 font-semibold text-meta text-muted-foreground">
             {localizeMarketplace(
               isBg,
@@ -358,7 +361,10 @@ const DesktopImportSurface = ({
                 {localizeMarketplace(isBg, "Доставка до", "Deliver to")}
               </span>
               <span className="mt-1 flex min-w-0 items-center gap-2 font-semibold text-base">
-                <LeadImportFlag className="h-[18px] w-7" code="BG" />
+                <LeadImportFlag
+                  className="h-[var(--desktop-icon-size)] w-7"
+                  code="BG"
+                />
                 <span>{localizeMarketplace(isBg, "България", "Bulgaria")}</span>
                 <span className="ml-1 inline-flex shrink-0 items-center gap-1 rounded-full bg-control-hover px-2 py-0.5 font-semibold text-micro text-muted-foreground">
                   <LockKeyhole aria-hidden="true" className="size-3" />
@@ -368,11 +374,11 @@ const DesktopImportSurface = ({
             </span>
             <Info
               aria-hidden="true"
-              className="size-[18px] shrink-0 text-muted-foreground"
+              className="size-[var(--desktop-icon-size)] shrink-0 text-muted-foreground"
             />
           </Button>
         </PopoverTrigger>
-        <PopoverContent align="start" className="w-80 p-4" sideOffset={8}>
+        <PopoverContent align="start" className="w-80 p-4">
           <p className="font-semibold text-sm">
             {localizeMarketplace(
               isBg,
@@ -550,7 +556,10 @@ export const DesktopServiceShortcuts = ({
                 `/imports?origin=${origin.code}&start=1#import-request`
               )}
             >
-              <LeadImportFlag className="h-[18px] w-7" code={origin.code} />
+              <LeadImportFlag
+                className="h-[var(--desktop-icon-size)] w-7"
+                code={origin.code}
+              />
               <span>{isBg ? origin.labelBg : origin.labelEn}</span>
             </Link>
           </Button>

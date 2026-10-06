@@ -6,6 +6,8 @@ import {
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
+  getShowroomVehicleCardSpecFacts,
   getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
@@ -25,6 +27,28 @@ const getListing = (slug: string): VehicleListing => {
 };
 
 describe("vehicle card policy", () => {
+  it("separates the real brand only at a complete title prefix", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    expect(getMobileVehicleCardHeading(listing)).toEqual({
+      brand: "BMW",
+      fullTitle: "BMW X5 M50d",
+      title: "X5 M50d",
+    });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "2020 bmw X5 M50d" })
+    ).toEqual({ brand: "BMW", fullTitle: "bmw X5 M50d", title: "X5 M50d" });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "BMWi special edition" })
+        .title
+    ).toBe("BMWi special edition");
+    expect(
+      getMobileVehicleCardHeading({
+        ...listing,
+        spec: { ...listing.spec, make: "" },
+      })
+    ).toEqual({ brand: "", fullTitle: "BMW X5 M50d", title: "BMW X5 M50d" });
+  });
+
   it("resolves explicit comparison, compact-list, and standard variants", () => {
     expect(
       getVehicleCardVariant({
@@ -56,7 +80,11 @@ describe("vehicle card policy", () => {
       { id: "year", value: "2020" },
       { id: "mileage", value: "167 000 км" },
       { id: "fuel", value: "Дизел" },
-      { id: "transmission", value: "Автоматик" },
+      {
+        id: "transmission",
+        value: "Автоматик",
+        mobileDisplayValue: "Автом.",
+      },
     ]);
   });
 
@@ -170,6 +198,14 @@ describe("showroom title hierarchy", () => {
     const heading = getShowroomVehicleHeading(listing, "bg");
     expect(heading.title).toBe("2020 BMW X5");
     expect(heading.subtitle).toContain("M50d");
+    expect(getShowroomVehicleCardSpecFacts(listing, "bg")).toEqual([
+      { id: "year", value: "2020" },
+      { id: "variant", value: "M50d" },
+      { id: "body", value: heading.bodyType },
+      ...getVehicleCardSpecFacts(listing, "bg").filter(
+        (fact) => fact.id !== "year"
+      ),
+    ]);
     expect(getVehicleCardTitle(listing, "comparison")).toBe("BMW X5 M50d");
   });
   it("retains a custom listing title", () => {
@@ -180,6 +216,10 @@ describe("showroom title hierarchy", () => {
     expect(getShowroomVehicleHeading(listing, "en").subtitle).toContain(
       listing.title
     );
+    expect(getShowroomVehicleCardSpecFacts(listing, "en")).toContainEqual({
+      id: "variant",
+      value: listing.title,
+    });
   });
   it("does not confuse a model with a prefix of a different model", () => {
     const listing = {
@@ -198,5 +238,10 @@ describe("showroom title hierarchy", () => {
     expect(getShowroomVehicleHeading(listing, "en").subtitle).not.toContain(
       "BMW X5"
     );
+    expect(
+      getShowroomVehicleCardSpecFacts(listing, "en").some(
+        (fact) => fact.id === "variant"
+      )
+    ).toBe(false);
   });
 });

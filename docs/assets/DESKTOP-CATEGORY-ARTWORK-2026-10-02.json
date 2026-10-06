@@ -1,0 +1,29 @@
+{
+  "created": "2026-10-02",
+  "method": "Built-in image_gen tool",
+  "usage": "Desktop category pills above the Modern vehicle search; not inventory photographs or mobile assets.",
+  "transparent_background": true,
+  "source_dimensions": { "width": 1698, "height": 926, "format": "RGBA PNG" },
+  "assets": [
+    {
+      "category": "car",
+      "path": "apps/web/public/images/categories/desktop-category-car-v1.png",
+      "prompt": "Use case: product-mockup.\nAsset type: small desktop automotive search category artwork, part of a matching four-vehicle set.\nStyle: premium, believable studio product photography with crisp silhouettes that remain readable at 88 by 48 CSS pixels.\nComposition: one entire vehicle only, front three-quarter view, nose pointing toward the lower left, camera at wheel-to-headlight level. Wide landscape composition with the vehicle occupying about 88 percent of canvas width and tightly balanced top and bottom space. All wheels and mirrors fully visible, never cropped.\nLighting: soft neutral studio light, controlled highlights and a very faint contact shadow.\nBackdrop: genuinely transparent alpha, no floor, no scene, no enclosing shape.\nText: none.\nAvoid: people, logos, lettering, badges, license plate text, watermark, colored glows, platforms, decorative shapes, cartoon styling, dramatic black shadows.\nSubject: a modern premium graphite metallic passenger crossover SUV, sculpted bonnet, dark glass, silver alloy wheels, elegant and understated, generic design without visible manufacturer branding."
+    },
+    {
+      "category": "truck",
+      "path": "apps/web/public/images/categories/desktop-category-truck-v1.png",
+      "prompt": "Use case: product-mockup.\nAsset type: small desktop automotive search category artwork, part of a matching four-vehicle set.\nStyle: premium, believable studio product photography with crisp silhouettes that remain readable at 88 by 48 CSS pixels.\nComposition: one entire vehicle only, front three-quarter view, nose pointing toward the lower left, camera at wheel-to-headlight level. Wide landscape composition with the vehicle occupying about 88 percent of canvas width and tightly balanced top and bottom space. All wheels and mirrors fully visible, never cropped.\nLighting: soft neutral studio light, controlled highlights and a very faint contact shadow.\nBackdrop: genuinely transparent alpha, no floor, no scene, no enclosing shape.\nText: none.\nAvoid: people, logos, lettering, badges, license plate text, watermark, colored glows, platforms, decorative shapes, cartoon styling, dramatic black shadows.\nSubject: a modern graphite metallic European articulated truck tractor cab with its rear chassis and wheels, no trailer, unmistakable tall commercial truck silhouette, clean refined body, generic design without visible manufacturer branding."
+    },
+    {
+      "category": "motorbike",
+      "path": "apps/web/public/images/categories/desktop-category-motorbike-v1.png",
+      "prompt": "Use case: product-mockup.\nAsset type: small desktop automotive search category artwork, part of a matching four-vehicle set.\nStyle: premium, believable studio product photography with crisp silhouettes that remain readable at 88 by 48 CSS pixels.\nComposition: one entire vehicle only, front three-quarter view, nose pointing toward the lower left, camera at wheel-to-headlight level. Wide landscape composition with the vehicle occupying about 88 percent of canvas width and tightly balanced top and bottom space. All wheels and mirrors fully visible, never cropped.\nLighting: soft neutral studio light, controlled highlights and a very faint contact shadow.\nBackdrop: genuinely transparent alpha, no floor, no scene, no enclosing shape.\nText: none.\nAvoid: people, logos, lettering, badges, license plate text, watermark, colored glows, platforms, decorative shapes, cartoon styling, dramatic black shadows.\nSubject: a modern graphite black road motorcycle, sculpted fuel tank, compact front headlight, two clearly visible wheels, restrained silver mechanical parts, premium realistic street bike, no rider, generic design without visible manufacturer branding."
+    },
+    {
+      "category": "van",
+      "path": "apps/web/public/images/categories/desktop-category-van-v1.png",
+      "prompt": "Use case: product-mockup.\nAsset type: small desktop automotive search category artwork, part of a matching four-vehicle set.\nStyle: premium, believable studio product photography with crisp silhouettes that remain readable at 88 by 48 CSS pixels.\nComposition: one entire vehicle only, front three-quarter view, nose pointing toward the lower left, camera at wheel-to-headlight level. Wide landscape composition with the vehicle occupying about 88 percent of canvas width and tightly balanced top and bottom space. All wheels and mirrors fully visible, never cropped.\nLighting: soft neutral studio light, controlled highlights and a very faint contact shadow.\nBackdrop: genuinely transparent alpha, no floor, no scene, no enclosing shape.\nText: none.\nAvoid: people, logos, lettering, badges, license plate text, watermark, colored glows, platforms, decorative shapes, cartoon styling, dramatic black shadows.\nSubject: a modern graphite metallic commercial passenger van, tall rectangular cabin, sliding side door, side windows, clean contemporary body, silver wheels, unmistakable van silhouette, generic design without visible manufacturer branding."
+    }
+  ]
+}

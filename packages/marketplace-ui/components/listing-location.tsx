@@ -1,6 +1,7 @@
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
 import { publicSite } from "@repo/marketplace/site-config";
+import { ChevronDown } from "lucide-react";
 import { ListingCtaBanner } from "./listing-cta-banner";
 
 interface ListingLocationProps {
@@ -15,7 +16,7 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
   return (
     <section
       aria-labelledby="listing-location-heading"
-      className="overflow-hidden rounded-xl bg-secondary"
+      className="overflow-hidden rounded-2xl bg-zinc-950 text-white"
       data-slot="listing-location"
       id="listing-location"
     >
@@ -28,20 +29,27 @@ export const ListingLocation = ({ locale }: ListingLocationProps) => {
             </span>
           </>
         }
-        artwork={publicSite.artwork.contactHero}
+        artwork={
+          leadSite.mobileShowroomArtworkPath ?? publicSite.artwork.contactHero
+        }
         external
         heading={isBg ? "Посетете шоурума" : "Visit the showroom"}
         headingId="listing-location-heading"
         href={leadSite.mapsUrl}
+        layout="photo"
         slot="listing-showroom-card"
       >
-        <p className="max-w-64 text-meta text-white/90">
+        <p className="text-meta text-white/85 leading-5">
           {copy.address}, {copy.city}
         </p>
       </ListingCtaBanner>
-      <details className="group">
-        <summary className="cursor-pointer px-4 py-3 font-medium text-meta focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-[-2px]">
+      <details className="group border-white/15 border-t">
+        <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between px-4 py-3 font-medium text-meta text-white/85 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-[-4px] [&::-webkit-details-marker]:hidden">
           {isBg ? "Карта на шоурума" : "Showroom map"}
+          <ChevronDown
+            aria-hidden="true"
+            className="size-4 transition-transform group-open:rotate-180 motion-reduce:transition-none"
+          />
         </summary>
         <iframe
           allowFullScreen

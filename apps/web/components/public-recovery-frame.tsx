@@ -35,7 +35,11 @@ export function PublicRecoveryFrame({
         <DealerDesktopHeader activeMode={null} locale={locale} />
       ) : null}
       {isDealershipSite && desktopTitle ? (
-        <DealerDesktopHero title={desktopTitle} variant="compact" />
+        <DealerDesktopHero
+          locale={locale}
+          title={desktopTitle}
+          variant="compact"
+        />
       ) : null}
       {children}
       {isDealershipSite ? <DealerBottomNav locale={locale} /> : null}

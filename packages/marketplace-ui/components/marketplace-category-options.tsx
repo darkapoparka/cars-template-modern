@@ -28,7 +28,7 @@ export const MarketplaceCategoryOptions = ({
           <Button
             aria-pressed={selected}
             className={cn(
-              "grid h-auto min-h-[84px] w-full grid-cols-[4rem_minmax(0,1fr)_1.5rem] items-center gap-3 whitespace-normal rounded-2xl border px-2.5 py-2 text-left shadow-none",
+              "grid h-auto min-h-[84px] w-full grid-cols-[4rem_minmax(0,1fr)_1.5rem] items-center gap-3 whitespace-normal rounded-2xl border px-2.5 py-2 text-left shadow-none max-lg:grid-cols-[5rem_minmax(0,1fr)_1.5rem]",
               selected
                 ? "border-zinc-300 bg-zinc-50 text-zinc-950 hover:bg-zinc-100"
                 : "border-zinc-200 bg-white text-zinc-950 hover:bg-zinc-50"
@@ -39,18 +39,18 @@ export const MarketplaceCategoryOptions = ({
             type="button"
             variant="ghost"
           >
-            <span className="grid h-[52px] w-16 place-items-center rounded-xl bg-zinc-100">
+            <span className="grid h-[52px] w-16 place-items-center rounded-xl bg-zinc-100 max-lg:h-16 max-lg:w-20">
               <VehicleCategoryArtwork
                 category={category.id}
-                className="h-9 w-14"
-                sizes="56px"
+                className="h-9 w-14 max-lg:h-13 max-lg:w-18"
+                sizes="(min-width: 1024px) 56px, 72px"
               />
             </span>
             <span className="min-w-0">
               <span className="block font-semibold text-compact-control">
                 {copy.categories[category.id].label}
               </span>
-              <span className="mt-0.5 line-clamp-2 block text-meta text-zinc-500">
+              <span className="mt-0.5 text-meta text-zinc-500 max-lg:line-clamp-2 max-lg:font-normal lg:block">
                 {copy.categories[category.id].description}
               </span>
             </span>

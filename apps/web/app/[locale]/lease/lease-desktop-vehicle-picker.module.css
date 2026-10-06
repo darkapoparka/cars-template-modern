@@ -1,51 +1,51 @@
 .picker {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: calc(var(--spacing) * 2);
   min-width: 0;
 }
 .trigger {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 0.625rem;
+  gap: calc(var(--spacing) * 2.5);
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 11.5rem;
-  padding: 1rem;
+  min-height: calc(var(--spacing) * 46);
+  padding: calc(var(--spacing) * 4);
   cursor: pointer;
   background: var(--control);
-  border: 1px dashed var(--border);
-  border-radius: 0.875rem;
+  border: var(--desktop-border-width) dashed var(--border);
+  border-radius: var(--radius-desktop-control);
   transition:
-    border-color 150ms,
-    background-color 150ms;
+    border-color var(--duration-interaction),
+    background-color var(--duration-interaction);
 }
 .trigger:hover {
-  background: color-mix(in srgb, var(--brand) 3%, var(--panel));
+  background: var(--desktop-picker-hover);
   border-color: var(--brand);
 }
 .trigger:focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 3px;
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-offset);
 }
 .trigger > strong {
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: var(--text-compact-control);
+  font-weight: var(--font-weight-semibold);
 }
 .plus {
   display: grid;
   place-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: calc(var(--spacing) * 12);
+  height: calc(var(--spacing) * 12);
   color: var(--muted-foreground);
   background: var(--panel);
-  border: 1px solid var(--border);
+  border: var(--desktop-border-width) solid var(--border);
   border-radius: 50%;
 }
 .hint {
-  font-size: 0.75rem;
+  font-size: var(--text-micro);
   color: var(--muted-foreground);
 }
 .selectedCard {
@@ -53,59 +53,59 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: calc(var(--spacing) * 2);
   justify-content: space-between;
-  min-height: 11.5rem;
-  padding: 0.75rem;
+  min-height: calc(var(--spacing) * 46);
+  padding: calc(var(--spacing) * 3);
   background: var(--success-surface);
-  border-radius: 0.875rem;
+  border-radius: var(--radius-desktop-control);
 }
 .cardHeader {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.5rem;
+  gap: calc(var(--spacing) * 2);
   align-items: center;
   min-width: 0;
 }
 .title {
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  line-height: 1.4;
+  font-size: var(--text-compact-control);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--desktop-leading-body);
   white-space: nowrap;
 }
 .selectedCard .clear {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: calc(var(--spacing) * 7);
+  height: calc(var(--spacing) * 7);
   color: var(--success-foreground);
 }
 .selectedCard .clear:hover {
-  background: color-mix(in srgb, var(--success) 12%, transparent);
+  background: var(--desktop-success-hover);
 }
 .selectedCard .change {
   width: 100%;
-  height: 2.25rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
+  height: calc(var(--spacing) * 9);
+  font-size: var(--text-card-spec);
+  font-weight: var(--font-weight-medium);
   color: var(--foreground);
   background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
+  border: var(--desktop-border-width) solid var(--border);
+  border-radius: calc(var(--spacing) * 2);
   box-shadow: none;
 }
 .selectedCard .change:hover {
-  background: color-mix(in srgb, var(--success) 6%, var(--panel));
+  background: var(--desktop-success-soft);
   border-color: var(--success);
 }
 .media {
   position: relative;
   flex: 1;
   width: 100%;
-  min-height: 7.5rem;
+  min-height: calc(var(--spacing) * 30);
   overflow: hidden;
   background: var(--foreground);
-  border-radius: 0.5rem;
+  border-radius: calc(var(--spacing) * 2);
 }
 .image {
   object-fit: contain;
@@ -113,49 +113,55 @@
 .dialog {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: min(56rem, calc(100vw - 4rem));
+  gap: calc(var(--spacing) * 4);
+  width: min(
+    calc(var(--spacing) * 224),
+    calc(100vw - calc(var(--spacing) * 16))
+  );
   max-width: none;
-  max-height: min(48rem, calc(100dvh - 4rem));
-  padding: 1.5rem;
-  border-radius: 1rem;
+  max-height: min(
+    calc(var(--spacing) * 192),
+    calc(100dvh - calc(var(--spacing) * 16))
+  );
+  padding: calc(var(--spacing) * 6);
+  border-radius: var(--radius-vehicle);
 }
 .search {
   display: flex;
   flex-shrink: 0;
-  gap: 0.75rem;
+  gap: calc(var(--spacing) * 3);
   align-items: center;
-  padding: 0.75rem 1rem;
+  padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
   color: var(--muted-foreground);
   background: var(--control);
-  border: 1px solid var(--border);
-  border-radius: 0.625rem;
+  border: var(--desktop-border-width) solid var(--border);
+  border-radius: var(--radius-lg);
 }
 .search input {
   width: 100%;
   min-width: 0;
-  font-size: 0.875rem;
+  font-size: var(--text-meta);
   color: var(--foreground);
   outline: none;
   background: transparent;
 }
 .search:focus-within {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-width);
 }
 .results {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: max-content;
-  gap: 0.75rem;
+  gap: calc(var(--spacing) * 3);
   min-height: 0;
-  padding: 3px;
+  padding: calc(var(--spacing) * 0.75);
   overflow-y: auto;
   scrollbar-gutter: stable;
 }
 .results article {
-  min-height: 12rem;
-  border: 1px solid var(--border);
+  min-height: calc(var(--spacing) * 48);
+  border: var(--desktop-border-width) solid var(--border);
 }
 .results article:has([data-vehicle-selected="true"]) {
   border-color: var(--success);
@@ -168,32 +174,171 @@
 }
 .empty {
   grid-column: 1 / -1;
-  padding: 3rem 1rem;
+  padding: calc(var(--spacing) * 12) calc(var(--spacing) * 4);
   color: var(--muted-foreground);
   text-align: center;
 }
 .close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: calc(var(--spacing) * 4);
+  right: calc(var(--spacing) * 4);
   display: grid;
   place-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: calc(var(--spacing) * 8);
+  height: calc(var(--spacing) * 8);
   color: var(--muted-foreground);
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: calc(var(--spacing) * 2);
 }
 .close:hover {
   color: var(--foreground);
   background: var(--control);
 }
 .close:focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
+  outline: var(--desktop-focus-width) solid var(--brand);
+  outline-offset: var(--desktop-focus-width);
 }
 @media (max-width: 767px) {
   .results {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .picker {
+    position: relative;
+    min-height: 0;
+  }
+  .trigger {
+    position: relative;
+    display: grid;
+    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) auto;
+    gap: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 38);
+    min-height: 0;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 6)
+      calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+    overflow: hidden;
+    color: var(--foreground);
+    text-align: left;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .preview {
+    position: relative;
+    width: calc(var(--spacing) * 40);
+    height: calc(var(--spacing) * 29.5);
+  }
+  .emptyImage {
+    object-fit: contain;
+  }
+  .triggerCopy {
+    display: grid;
+    gap: calc(var(--spacing) * 2.5);
+    min-width: 0;
+  }
+  .trigger:hover {
+    background: var(--desktop-picker-hover);
+  }
+  .triggerCopy > strong {
+    font-size: calc(var(--spacing) * 6);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 8);
+  }
+  .plus {
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+    color: var(--desktop-surface);
+    background: var(--brand);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .hint {
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--muted-foreground);
+  }
+  .selectedCard {
+    display: grid;
+    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) calc(
+        var(--spacing) *
+        56
+      );
+    gap: calc(var(--spacing) * 6);
+    align-items: center;
+    min-height: calc(var(--spacing) * 38);
+    padding: calc(var(--spacing) * 4);
+    overflow: hidden;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .cardHeader {
+    grid-row: 1;
+    grid-column: 2;
+    gap: calc(var(--spacing) * 4);
+    padding: 0;
+  }
+  .cardHeading {
+    min-width: 0;
+  }
+  .title {
+    display: block;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .selectedMeta {
+    margin: calc(var(--spacing) * 1.5) 0 0;
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 5.5);
+    color: var(--muted-foreground);
+  }
+  .vehiclePrice {
+    margin: calc(var(--spacing) * 2) 0 0;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .media {
+    grid-row: 1;
+    grid-column: 1;
+    height: calc(var(--spacing) * 29.5);
+    min-height: 0;
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2.5);
+  }
+  .image {
+    object-fit: cover;
+  }
+  .selectedCard .clear {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+    color: var(--foreground);
+  }
+  .selectedCard .clear:hover {
+    background: var(--border);
+  }
+  .selectedCard .change {
+    width: 100%;
+    height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 4);
+    margin: 0;
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--desktop-surface);
+    background: var(--brand);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .selectedCard .change:hover {
+    color: var(--desktop-surface);
+    background: var(--lead-site-accent-hover);
+  }
+  .results article:has([data-vehicle-selected="true"]) {
+    border-color: var(--brand);
+  }
+  .results [data-vehicle-selected="true"] > span {
+    color: var(--brand-text);
   }
 }

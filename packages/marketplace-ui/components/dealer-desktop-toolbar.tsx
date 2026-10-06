@@ -1,51 +1,72 @@
 "use client";
 
-import type {
-  ListingViewMode,
-  MarketplaceSearchParams,
-  VehicleTaxonomyMakeOption,
-} from "@repo/marketplace";
-import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import type { ReactNode } from "react";
+import type { MarketplaceSearchParams } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
+import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-policy";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
-import { DealerHeroSearch } from "./dealer-hero-search";
-export interface DealerDesktopToolbarProps {
-  assistantSlot?: ReactNode;
+import { DealerInventorySearch } from "./dealer-inventory-search";
+import { DealerInventorySummary } from "./dealer-inventory-summary";
+import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
+export type DealerDesktopToolbarProps = {
   filters: MarketplaceSearchParams;
   locale?: string;
-  onViewModeChange?: (mode: ListingViewMode) => void;
-  searchListings?: readonly InventorySearchListing[];
-  taxonomy?: VehicleTaxonomyMakeOption[];
-  totalListings?: number;
-  viewMode?: ListingViewMode;
-}
+} & (
+  | { loading: true; onOpenSection?: never }
+  | {
+      loading?: false;
+      filterCount: number;
+      totalListings: number;
+      onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+      onOpenFilters: () => void;
+      onOpenSection: (section: DesktopFullFilterEntry) => void;
+    }
+);
 
-export const DealerDesktopToolbar = ({
-  assistantSlot,
-  searchListings,
-  filters,
-  locale,
-  taxonomy,
-}: DealerDesktopToolbarProps) => {
-  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
+  const { filters, locale } = props;
+  const openSection = (section: DesktopFullFilterEntry) => {
+    if (!props.loading) {
+      props.onOpenSection(section);
+    }
+  };
   return (
-    <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
-      <DealerDesktopHero
-        title={isBg ? "Автомобили в наличност" : "Vehicles in stock"}
-        variant="landing"
-      >
-        <div className={styles.content}>
-          <DealerHeroSearch
-            assistantSlot={assistantSlot}
-            filters={filters}
-            key={JSON.stringify(filters)}
-            locale={locale}
-            searchListings={searchListings}
-            taxonomy={taxonomy}
-          />
-        </div>
-      </DealerDesktopHero>
+    <div className={styles.toolbar}>
+      <div data-slot="dealer-desktop-inventory-hero">
+        <DealerDesktopHero
+          artwork={
+            publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+          }
+          description={
+            locale?.startsWith("bg")
+              ? "Открийте автомобил. Запазете и сравнете избора си."
+              : "Find your next car. Save your favourites and compare the details."
+          }
+          locale={locale}
+          title={getMarketplaceResultTitle(filters, locale)}
+          variant="inventory"
+        >
+          <div className={styles.content}>
+            <DealerInventorySearch
+              disabled={props.loading}
+              filters={filters}
+              locale={locale}
+              onApply={props.loading ? undefined : props.onApply}
+              onOpenSection={openSection}
+            />
+          </div>
+        </DealerDesktopHero>
+      </div>
+      {!props.loading && (
+        <DealerInventorySummary
+          filterCount={props.filterCount}
+          filters={filters}
+          locale={locale}
+          onApply={props.onApply}
+          onOpenFilters={props.onOpenFilters}
+          totalListings={props.totalListings}
+        />
+      )}
     </div>
   );
 };

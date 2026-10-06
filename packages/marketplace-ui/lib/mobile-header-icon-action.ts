@@ -1,3 +1,3 @@
-/** One treatment for every mobile masthead action, regardless of route colour. */
+/** A 40px visible circle inside the shared 44px mobile tap target. */
 export const mobileHeaderIconActionClassName =
-  "relative grid size-11 shrink-0 place-items-center rounded-full bg-[color-mix(in_srgb,currentColor_var(--mobile-header-action-fill,10%),transparent)] text-current shadow-[inset_0_1px_0_rgb(255_255_255/0.14),inset_0_0_0_1px_rgb(255_255_255/0.05)] transition-colors hover:bg-current/15 active:bg-current/20 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2";
+  "relative isolate grid size-11 shrink-0 place-items-center rounded-full text-current before:pointer-events-none before:absolute before:inset-0.5 before:-z-10 before:rounded-full before:bg-current/10 before:shadow-[inset_0_1px_0_rgb(255_255_255/0.1),inset_0_0_0_1px_rgb(255_255_255/0.04)] before:transition-colors hover:before:bg-current/15 active:before:bg-current/20 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-[var(--lead-site-accent-bright)] focus-visible:outline-offset-2";

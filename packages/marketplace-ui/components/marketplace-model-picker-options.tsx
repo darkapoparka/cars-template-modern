@@ -63,6 +63,7 @@ const ModelPickerOptionButton = ({
             "font-medium text-micro tabular-nums",
             isSelected ? "text-background/70" : "text-muted-foreground"
           )}
+          data-slot="picker-option-meta"
         >
           ({inventoryCount})
         </span>

@@ -1,6 +1,10 @@
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
+import {
+  isPublicSitePathEnabled,
+  publicSite,
+} from "@repo/marketplace/site-config";
 import { DealerMobileHeaderIcon } from "@repo/marketplace-ui/components/dealer-mobile-header-icon";
 import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
@@ -40,12 +44,9 @@ export function MobileAboutContact({
         }
         imageSrc=""
         locale={locale}
+        title={isBg ? "За нас и контакти" : "About and contact"}
         tone="contact"
-      >
-        <h1 className="flex h-full items-center justify-center px-1 text-center font-semibold text-page-title text-white tracking-heading">
-          {isBg ? "За нас и контакти" : "About and contact"}
-        </h1>
-      </MobileDealerServiceHero>
+      />
       <div className="relative -mt-3 rounded-t-2xl bg-background px-4 pt-4 pb-6">
         <div className="grid gap-2">
           <a className={cardClassName} href={withBasePath(leadSite.phoneHref)}>
@@ -90,42 +91,58 @@ export function MobileAboutContact({
             />
           </a>
         </div>
-        <section className="mt-5">
-          <h2 className="mb-3 font-semibold text-card-title-lg tracking-heading">
-            {isBg ? "С какво можем да помогнем" : "How we can help"}
-          </h2>
-          <div className="grid gap-2">
-            {services.map((service) => {
-              const serviceIcons = {
-                "/imports": "import",
-                "/sell": "sell",
-                "/lease": "lease",
-              } as const;
-              const iconName =
-                serviceIcons[service.href as keyof typeof serviceIcons] ??
-                "car";
-              return (
-                <Link
-                  className={cardClassName}
-                  href={getLocalizedPath(locale, service.href)}
-                  key={service.href}
-                >
-                  <DealerUiIcon
-                    className="size-[22px] shrink-0 text-zinc-600"
-                    name={iconName}
-                  />
-                  <span className="min-w-0 flex-1 font-medium text-compact-control">
-                    {service.title}
-                  </span>
-                  <DealerUiIcon
-                    className="size-5 shrink-0 text-zinc-600"
-                    name="chevronRight"
-                  />
-                </Link>
-              );
-            })}
-          </div>
-        </section>
+        {services.length > 0 && (
+          <section className="mt-5">
+            <h2 className="mb-3 font-semibold text-card-title-lg tracking-heading">
+              {isBg ? "С какво можем да помогнем" : "How we can help"}
+            </h2>
+            <div className="grid gap-2">
+              {services.map((service) => {
+                const serviceIcons = {
+                  "/imports": "import",
+                  "/sell": "sell",
+                  "/lease": "lease",
+                } as const;
+                const iconName =
+                  serviceIcons[service.href as keyof typeof serviceIcons] ??
+                  "car";
+                return (
+                  <Link
+                    className={cardClassName}
+                    href={getLocalizedPath(locale, service.href)}
+                    key={service.href}
+                  >
+                    <DealerUiIcon
+                      className="size-[22px] shrink-0 text-zinc-600"
+                      name={iconName}
+                    />
+                    <span className="min-w-0 flex-1 font-medium text-compact-control">
+                      {service.title}
+                    </span>
+                    <DealerUiIcon
+                      className="size-5 shrink-0 text-zinc-600"
+                      name="chevronRight"
+                    />
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
+        {isPublicSitePathEnabled("/services", publicSite) && (
+          <Link
+            className={`${cardClassName} mt-5`}
+            href={getLocalizedPath(locale, "/services")}
+          >
+            <span className="min-w-0 flex-1 font-medium text-compact-control">
+              {isBg ? "Всички услуги" : "All services"}
+            </span>
+            <DealerUiIcon
+              className="size-5 shrink-0 text-zinc-600"
+              name="chevronRight"
+            />
+          </Link>
+        )}
         <DealerSocialLinks isBg={isBg} links={leadSite.socialLinks} />
       </div>
     </div>

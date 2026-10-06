@@ -1,0 +1,20 @@
+Create ONE premium automotive mobile UI icon family containing exactly NINE separate silver icons arranged in a strict 3-by-3 contact sheet on a real fully transparent background.
+
+CONSISTENCY is the main design requirement. These nine objects are designed as one icon system, not nine unrelated illustrations. Identical satin brushed silver material, silver dominant front surfaces, narrow graphite side faces, same soft studio light from upper left, same restrained broad highlight, same shallow 3D relief, same crisp rounded bevels, same level of abstraction and visual density. Monochrome only. All icons must remain instantly identifiable at 24 pixels on a charcoal interface. Avoid excessive realism, small texture, brand badges, exaggerated chrome, black dominant faces, dramatically different camera angles, ground shadows or floating shadows.
+
+The grid is precise. Square canvas with 3 equal columns and 3 equal rows. Exactly one icon centered in each equal square cell, centered both vertically and horizontally with identical clear outer padding. Each icon occupies approximately 66 percent of its cell's width or height with balanced optical weight. Icons are not enclosed in circles, tiles or backgrounds. Fully transparent space separates all cells. No captions, no typography except the intentional question mark, no numbers, no decorative extras, no guide lines, no additional icons.
+
+Exact ordered roles:
+ROW 1: (1) a modern SUV CAR, (2) a MOTORCYCLE, (3) a BOX TRUCK.
+ROW 2: (4) a PASSENGER VAN, (5) an OPEN GUIDE BOOK, (6) three VERTICAL FILTER SLIDERS.
+ROW 3: (7) a QUESTION MARK help symbol with detached dot, (8) a MAP LOCATION PIN with clear circular hole, (9) a TELEPHONE HANDSET.
+
+Orientation is carefully coordinated, not random:
+All FOUR VEHICLES are seen DIRECTLY FROM THE FRONT, perfectly straight-on and upright, centered symmetrically, with identical camera height and frontal orthographic projection. No side views, no three-quarter views, no turning to left or right, no dramatic perspective. A wide but compact silver SUV with broad grille; a clear motorcycle with symmetrical handlebars, headlamp, two forks and one front tire; a tall medium box-truck cab with cargo box visible above the cab; a tall silver passenger van with large windscreen and broad front. Use simplified bold automotive forms and graphite tires/windows/grilles, predominantly silver bodywork. All four vehicle tire contact baselines should occupy the same relative location within their cells. No visible manufacturer marks or colored headlights.
+The open book is upright, straight-on and symmetrically opened with a shallow central crease, silver pages with two broad subtle engraved lines on each page, graphite page edges.
+The three filter sliders are straight, equally spaced, upright, identical in thickness, with three large silver knobs at deliberately staggered heights, all knobs equal in diameter. Clear straight-on face, same shallow material treatment.
+Question mark is an upright solid silver glyph with broad strokes and distinct round dot, NOT a black fill with a thin silver outline.
+Location pin is perfectly upright, symmetric, solid satin silver front, one centered circular hole, slim graphite side.
+Phone is a conventional broad telephone-call C-shaped handset, placed at a deliberate fixed 45-degree diagonal with upper-left earpiece and lower-right mouthpiece. Both ends face the viewer enough to read clearly. Silver front, shallow graphite underside. Its center and optical mass align with the center of its grid cell.
+
+Professional final-delivery quality: smooth clean alpha boundaries, no checkerboard pattern baked in, no disconnected artifacts, no clipping, no ornaments. It should feel like one meticulous handcrafted silver icon set.

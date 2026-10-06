@@ -48,6 +48,7 @@ In the tables, “P/P” means configure separate Preview and Production values 
 
 | Variable | Visibility and timing | Environment | Requirement and source |
 | --- | --- | --- | --- |
+| `AUTOMARKET_DEALER_ORG_ID` | Server build/runtime binding | Local, P/P | Optional for the marketplace; required for scoped live dealership inventory and inbox intake. Use the authorized internal DealerOrg id; keep empty for the static master. |
 | `DATABASE_URL` | Server; build validation and runtime | Local, P/P | Required. Obtain a pooled Postgres connection from the environment-specific Neon branch/project. Same target as app/API within one environment; different target across Preview and Production. |
 | `RESEND_FROM` | Server runtime | Local, P/P | Required for launch. Plain verified email address accepted by the runtime schema; use a monitored Preview/Production mailbox from the matching Resend domain. |
 | `RESEND_TOKEN` | Server runtime secret | Local, P/P | Required for launch. Restricted environment-specific Resend API key beginning with `re_`. |
@@ -72,6 +73,7 @@ Preview activation of public contact paths requires the Preview-only `DATABASE_U
 
 | Variable | Visibility and timing | Environment | Requirement and source |
 | --- | --- | --- | --- |
+| `AUTOMARKET_AI_LISTING_TRIAL_LIMIT` | Server build/runtime limit | Optional Local, P/P | Integer 0–100 for the existing listing-copy entitlement. Empty uses the existing default. Declared in the runtime schema and every app Turbo task's cache inputs. |
 | `AUTOMARKET_ENABLE_BILLING` | Server build/runtime intent | P/P | Required and currently exactly `false`; match the API project. |
 | `DATABASE_URL` | Server; build validation and runtime | Local, P/P | Required. Same environment-specific Postgres target used by web/API. |
 | `BLOB_READ_WRITE_TOKEN` | Server runtime secret | P/P | Required. Vercel Blob read/write token for the environment’s media store. |
@@ -98,6 +100,8 @@ Preview activation of public contact paths requires the Preview-only `DATABASE_U
 
 | Variable | Visibility and timing | Environment | Requirement and source |
 | --- | --- | --- | --- |
+| `AUTO_DEV_API_KEY` | Server runtime secret | Optional Local, P/P | Secret consumed by the existing external inventory adapter. Keep empty for the static master and isolate configured Preview/Production credentials. |
+| `AUTOMARKET_ENABLE_EXTERNAL_INVENTORY` | Server build/runtime intent | Optional Local, P/P | Defaults to disabled; enable only with an explicitly configured and verified external inventory source. This desktop audit does not enable the capability. |
 | `AUTOMARKET_ENABLE_AUTH_RECOVERY` | Server build/runtime intent | P/P | Required and currently exactly `false`. |
 | `AUTOMARKET_ENABLE_BILLING` | Server build/runtime intent | P/P | Required and currently exactly `false`; match the app project. |
 | `AUTOMARKET_ENABLE_KYB_RETENTION` | Server build/runtime intent | P/P | Required and currently exactly `false`. |

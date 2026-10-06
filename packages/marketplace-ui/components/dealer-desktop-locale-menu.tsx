@@ -20,7 +20,7 @@ export function DealerDesktopLocaleMenu({
   const triggerClassName =
     tone === "light"
       ? "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-control text-foreground shadow-none hover:bg-control-hover focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
-      : "inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-transparent bg-transparent text-inherit hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2";
+      : "inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-transparent bg-transparent text-inherit hover:bg-panel/10 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2";
 
   useEffect(() => {
     if (!open) {
@@ -62,12 +62,12 @@ export function DealerDesktopLocaleMenu({
         title={menuLabel}
         type="button"
       >
-        <MoreHorizontal aria-hidden="true" size={20} />
+        <MoreHorizontal aria-hidden="true" className="size-5" />
       </button>
       {open ? (
         <fieldset
           aria-label={localeLabel}
-          className="absolute top-full right-0 z-50 m-0 mt-2 w-60 min-w-0 rounded-xl border border-zinc-200 bg-white p-1 text-zinc-950 shadow-xl"
+          className="absolute top-full right-0 z-50 m-0 mt-2 w-60 min-w-0 rounded-xl border border-border bg-panel p-1 text-foreground shadow-overlay"
           id="dealer-desktop-locale-menu"
         >
           <MarketplaceLocaleSwitchLink
@@ -75,7 +75,7 @@ export function DealerDesktopLocaleMenu({
               trigger.current?.focus({ preventScroll: true });
               setOpen(false);
             }}
-            className="flex min-h-11 items-center rounded-lg px-3 font-medium text-sm hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-ring"
+            className="flex min-h-11 items-center rounded-lg px-3 font-medium text-sm hover:bg-control focus-visible:outline-2 focus-visible:outline-ring"
             label={localeLabel}
             locale={locale}
           >

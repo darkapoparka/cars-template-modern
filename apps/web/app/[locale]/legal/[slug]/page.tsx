@@ -174,7 +174,10 @@ const LegalPage = async ({ params }: LegalPageProperties) => {
       desktopIntro={{ title, description, variant: "compact" }}
       locale={normalizedLocale}
     >
-      <main className="mx-auto min-h-[60dvh] max-w-5xl px-4 py-8 lg:px-6 lg:py-10">
+      <main
+        className="mx-auto min-h-[60dvh] max-w-5xl px-4 py-8 lg:px-6 lg:py-10"
+        data-slot="public-legal-body"
+      >
         <Button
           asChild
           className="min-h-11 rounded-lg lg:min-h-0"

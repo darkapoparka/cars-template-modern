@@ -1,0 +1,51 @@
+[
+  {
+    "brokenImages": [],
+    "route": "/bg",
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/cars",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/contact",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/imports",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/sell",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  },
+  {
+    "route": "/bg/lease",
+    "brokenImages": [],
+    "scrollWidth": 1425,
+    "truncatedTitles": [],
+    "width": 1440
+  }
+]

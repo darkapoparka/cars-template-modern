@@ -6,6 +6,7 @@ import {
 } from "@repo/design-system/components/ui/accordion";
 import { cn } from "@repo/design-system/lib/utils";
 import { leadSite } from "@repo/marketplace";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   getMobileQuickPillClassName,
   mobileDealerContentClassName,
@@ -131,6 +132,8 @@ const pageCopy = {
     deliveryPrefix: "Внос и доставка до ",
     desktopDescription:
       "Разгледайте актуални оферти от свързани източници или поставете линк към автомобил, който вече сте намерили.",
+    desktopFormDescription:
+      "Намерили сте автомобил? Поставете линка или изберете държава, за да разгледате оферти.",
     desktopTitle: "Реални обяви за внос",
     faqDescription: "Най-важното за заявката и доставката до България.",
     faqTitle: "Често задавани въпроси",
@@ -165,6 +168,8 @@ const pageCopy = {
     deliveryPrefix: "Import and delivery to ",
     desktopDescription:
       "Browse current offers from connected sources or paste a vehicle listing you have already found.",
+    desktopFormDescription:
+      "Already found a car? Paste its link, or choose a country to browse offers.",
     desktopTitle: "Real vehicles available for import",
     faqDescription: "The essentials about requests and delivery to Bulgaria.",
     faqTitle: "Frequently asked questions",
@@ -301,10 +306,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           imageClassName="object-center"
           imageSrc="/images/services/import-shipping-yellow-v1.png"
           locale={normalizedLocale}
+          title={text.mobileTitle}
           tone="import"
         >
           <div className="h-full">
-            <h1 className="sr-only">{text.mobileTitle}</h1>
             <MobileImportSourceSearch
               actionHref={`${localize(path)}#import-request`}
               defaultOrigin={formOrigin}
@@ -342,66 +347,87 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           </section>
         </div>
 
-        <DealerDesktopHero title={text.mobileTitle} variant="service">
+        <DealerDesktopHero
+          description={text.desktopDescription}
+          locale={normalizedLocale}
+          title={text.mobileTitle}
+          variant="service"
+        >
           <div className={cn(desktopStyles.content, desktopStyles.heroContent)}>
             <section className="hidden lg:block">
               <DesktopActionPanel
                 className={desktopStyles.importPanel}
                 fitContent
               >
-                <h2>{text.sourceLabel}</h2>
-                <p className="mb-4 max-w-4xl text-muted-foreground text-sm leading-6">
-                  {text.desktopDescription}
-                </p>
-                <search className="block">
-                  <form
-                    action={`${localize(path)}#import-request`}
-                    className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4"
-                    method="get"
-                  >
-                    {formOrigin ? (
-                      <input name="origin" type="hidden" value={formOrigin} />
-                    ) : null}
-                    <Search
-                      aria-hidden="true"
-                      className="size-4 shrink-0 text-muted-foreground"
-                    />
-                    <label className="flex h-full min-w-0 flex-1 items-center">
-                      <span className="sr-only">{text.sourceLabel}</span>
-                      <input
-                        className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-                        defaultValue={defaultSourceUrl}
-                        inputMode="url"
-                        maxLength={500}
-                        name="sourceUrl"
-                        placeholder={text.sourcePlaceholderLong}
-                        required
-                        type="url"
+                <div className={desktopStyles.importStart}>
+                  <h2>{text.sourceLabel}</h2>
+                  <p className="mb-4 max-w-4xl text-muted-foreground text-sm leading-6">
+                    {text.desktopFormDescription}
+                  </p>
+                  <search className="block">
+                    <form
+                      action={`${localize(path)}#import-request`}
+                      className="flex h-12 items-center gap-2 rounded-xl bg-secondary p-1 pl-4"
+                      method="get"
+                    >
+                      {formOrigin ? (
+                        <input name="origin" type="hidden" value={formOrigin} />
+                      ) : null}
+                      <Search
+                        aria-hidden="true"
+                        className="size-4 shrink-0 text-muted-foreground"
                       />
-                    </label>
-                    <DesktopActionButton inset type="submit">
-                      {text.submitText}
-                      <ArrowRight aria-hidden="true" className="size-4" />
-                    </DesktopActionButton>
-                  </form>
-                </search>
-                <section
-                  aria-labelledby="desktop-import-routes-heading"
-                  className="hidden scroll-mt-24 lg:mt-5 lg:block"
-                  data-slot="desktop-import-routes"
-                >
-                  <h2 className="sr-only" id="desktop-import-routes-heading">
-                    {text.routesTitle}
-                  </h2>
-                  <nav
-                    aria-label={text.routesLabel}
-                    className="no-scrollbar overflow-x-auto"
+                      <label className="flex h-full min-w-0 flex-1 items-center">
+                        <span className="sr-only">{text.sourceLabel}</span>
+                        <input
+                          className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+                          defaultValue={defaultSourceUrl}
+                          inputMode="url"
+                          maxLength={500}
+                          name="sourceUrl"
+                          placeholder={text.sourcePlaceholderLong}
+                          required
+                          type="url"
+                        />
+                      </label>
+                      <DesktopActionButton inset type="submit">
+                        {text.submitText}
+                        <ArrowRight aria-hidden="true" className="size-4" />
+                      </DesktopActionButton>
+                    </form>
+                  </search>
+                  <section
+                    aria-labelledby="desktop-import-routes-heading"
+                    className="hidden scroll-mt-24 lg:mt-5 lg:block"
+                    data-slot="desktop-import-routes"
                   >
-                    <div className="flex min-w-max gap-2">
-                      {renderImportRouteLinks()}
-                    </div>
-                  </nav>
-                </section>
+                    <h2 className="sr-only" id="desktop-import-routes-heading">
+                      {text.routesTitle}
+                    </h2>
+                    <nav
+                      aria-label={text.routesLabel}
+                      className="no-scrollbar overflow-x-auto"
+                    >
+                      <div className="flex min-w-max gap-2">
+                        {renderImportRouteLinks()}
+                      </div>
+                    </nav>
+                  </section>
+                </div>
+                <div
+                  className={desktopStyles.serviceArtwork}
+                  data-slot="import-desktop-artwork"
+                >
+                  <Image
+                    alt=""
+                    fill
+                    sizes="180px"
+                    src={
+                      publicSite.artwork.desktopServices?.imports ??
+                      publicSite.artwork.importHero
+                    }
+                  />
+                </div>
               </DesktopActionPanel>
             </section>
           </div>

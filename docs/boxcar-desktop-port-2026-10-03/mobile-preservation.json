@@ -1,0 +1,246 @@
+{
+  "baseline": "before-chromium",
+  "final": "parity-complete-chromium",
+  "runtime": "Same Next development cache, Node 22.23.2, static demo, reduced motion and loaded fonts/images",
+  "routes": "Home, Cars, vehicle detail, Contact, Imports, Sell, Lease and Blog at 320/390; Home at 1023",
+  "comparisons": [
+    {
+      "name": "bg-home-320",
+      "before": [
+        320,
+        2136
+      ],
+      "after": [
+        320,
+        2136
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-home-390",
+      "before": [
+        390,
+        2384
+      ],
+      "after": [
+        390,
+        2384
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-cars-320",
+      "before": [
+        320,
+        2136
+      ],
+      "after": [
+        320,
+        2136
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-cars-390",
+      "before": [
+        390,
+        2384
+      ],
+      "after": [
+        390,
+        2384
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+      "before": [
+        320,
+        1772
+      ],
+      "after": [
+        320,
+        1772
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+      "before": [
+        390,
+        1845
+      ],
+      "after": [
+        390,
+        1845
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-contact-320",
+      "before": [
+        320,
+        1000
+      ],
+      "after": [
+        320,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-contact-390",
+      "before": [
+        390,
+        1000
+      ],
+      "after": [
+        390,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-imports-320",
+      "before": [
+        320,
+        1000
+      ],
+      "after": [
+        320,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-imports-390",
+      "before": [
+        390,
+        1000
+      ],
+      "after": [
+        390,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-sell-320",
+      "before": [
+        320,
+        1000
+      ],
+      "after": [
+        320,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-sell-390",
+      "before": [
+        390,
+        1000
+      ],
+      "after": [
+        390,
+        1000
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-lease-320",
+      "before": [
+        320,
+        2148
+      ],
+      "after": [
+        320,
+        2148
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-lease-390",
+      "before": [
+        390,
+        2396
+      ],
+      "after": [
+        390,
+        2396
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-blog-320",
+      "before": [
+        320,
+        1233
+      ],
+      "after": [
+        320,
+        1233
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-blog-390",
+      "before": [
+        390,
+        1292
+      ],
+      "after": [
+        390,
+        1292
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    },
+    {
+      "name": "bg-home-1023",
+      "before": [
+        1023,
+        1624
+      ],
+      "after": [
+        1023,
+        1624
+      ],
+      "changedPixels": 0,
+      "maxChannelDelta": 0,
+      "sameGeometry": true
+    }
+  ]
+}

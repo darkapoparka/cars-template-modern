@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "family": "modern",
+  "consumerRoots": [
+    "apps/web/app",
+    "apps/web/components",
+    "apps/web/lib",
+    "packages"
+  ],
+  "consumerFiles": [
+    "apps/web/proxy.ts",
+    "apps/web/next.config.ts",
+    "apps/web/public-runtime.ts"
+  ],
+  "candidates": [
+    {
+      "path": "images/categories/day-night-category-car-v1.png",
+      "sha256": "7e1bdd0a30a6e906d3043882f456aa7f08d9a39c1a132b69d81a9e2c93788720",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/abstract-graphite-v1.png",
+      "sha256": "afde6649d4660fcef0fd8d3f3020a2bbce9e09c782ade32296361a23e25c8be5",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/inventory-forecourt-v2.png",
+      "sha256": "16511b8518b5e69be7ebd22a4f4292109316143e092a2d518bd64e3e5ff4c5f7",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/inventory-showroom-v1.png",
+      "sha256": "1903b3690a8040b19166c4d471fe4e720ba84dd8603e0e9d38027bda9cc1f1d2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/service-forecourt-v2.png",
+      "sha256": "e0039e09fc8aec945772f17fafc33e480af2697077d53a3c85b412f6d5eba3cf",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/service-showroom-v1.png",
+      "sha256": "f774642543c08020cfafa08fb2fd81f48fa3340f0e6e4a4aa3ee36ab5b411109",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/showroom-calm-v3.png",
+      "sha256": "d2663c239693082345e9380103f4c9a01e5d7cdf098e35d2cccd3b5b5d657042",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/desktop/studio-vehicles-v2.png",
+      "sha256": "58ff9ad58d6bb554579f3bc92902f91e62b5bec3b906c1588b71c4e5108a8938",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/import/day-night-mobile-premium-suv-banner-v1.png",
+      "sha256": "5b2ad092c4cc35b38ef098fb4b553108e03c409e007e2259c841c98e890992eb",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/import/day-night-mobile-premium-suv-banner-v1.prompt.md",
+      "sha256": "cb35610cb162264058502b71b5cc2f81738a7cc178a5d230d865e4fd3b68d8a4",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/import/day-night-mobile-v2.prompt.md",
+      "sha256": "d7d324e9dada48394bb8cb6118f6203013969e09df02d14235c058cad34b2e7c",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/lease/day-night-financing-hero-v1.webp",
+      "sha256": "13ba7a0815ad12a32439594521998c832c73173dc6c5af8f2ef7c37e98274f6d",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/lease/day-night-mobile-black-suv-banner-v1.png",
+      "sha256": "be788404085a89eba88ca833ea2295fcbf874eb3e795b465f47bc1719e878669",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/lease/day-night-mobile-black-suv-banner-v1.prompt.md",
+      "sha256": "50296bb9cb3e8ea57aa1db619cedb567b0f27c3f2bf66aa963a26d9abd53e4f2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/lease/day-night-mobile-v2.prompt.md",
+      "sha256": "92ab1055a821d08656b26a8530a5cf9da1ae88ef4c2134ed889951403b827fda",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/mobile/day-night-import-hero-v2.webp",
+      "sha256": "4b1dccd819d987bb09c268f03a4a1a3ebcb9a07e988070a799d7561de285edf1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/mobile/day-night-lease-hero-v2.webp",
+      "sha256": "6f6264e24ba5a6a78903a256ec378d88d750363ef8cc69630936b12ffaacefab",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/sell/day-night-mobile-studio-v1.prompt.md",
+      "sha256": "f153925af2da5b52605f8dfa5c7204c35d579627ea8978f35be398fb33c7aa4f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/sell/day-night-sell-centered-hero-v2.webp",
+      "sha256": "650b6c072553ef4a9e9d1f74b627a60ce449bfd3f92b7c0b8fa7b87300d3a1e5",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/services/header-phone-v2.png",
+      "sha256": "77df2513d5c6aa302f79a8bac88a26ef52f217bd8c5c4b7410805df673288391",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/services/header-phone-v3.png",
+      "sha256": "d86cd4e0d7fab78ad1473583a09578032f0882b7ad7c23ae62bde9853bc28da1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/services/leasing-keys-red-v1.png",
+      "sha256": "ccfb3797c86b8d6fb4f42b2e88e687c556608f325e655b9f02eacf9f175d50ba",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/services/leasing-keys-red-v1.webp",
+      "sha256": "f2da13bce837e9d4edb5a458e45204a1b4d41c3f0b14c465f41557b19418dff1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "images/services/leasing-red-suv-v2.prompt.md",
+      "sha256": "ae8d19afc9df114511cf0b2e711deb51f0de80d823b44e245a4c3dbfd9c2d580",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-left-v2.webp",
+      "sha256": "8c8b4ae74061718019120bc59eda032925d04ee420fcfe2346ce89688cc474e7",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-left-v3.webp",
+      "sha256": "b8f06631993f781b5e7d95d1141e609a3efa4281096dc634ea50a246b00f2af2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-left.webp",
+      "sha256": "770169640837990a7fec0ed2e3bcf009321faa5788a6072c405bfb9bd9fc53ea",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-right-v2.webp",
+      "sha256": "783bf6e5e5a36bebcddd04ab939831c200f5a958dc11909b222a2beb5bc64f3f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-right-v3.webp",
+      "sha256": "1d0447a8c0c462068cf0e5166ec628d031412a790380a067b3ab7032eb54a4ef",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-right-v4.webp",
+      "sha256": "e5be8e0ae378e397c79db07d2992c984b1e29fd7043d5018453643e6b3a74747",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-right.webp",
+      "sha256": "b2bdbcb7192b9152b6ea1ec21eaca0ab266e94d3c939dd313caf55a3d42fd317",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-showroom-scene-v1.webp",
+      "sha256": "7346f8c9882b2869b21d0853b1d226a75b5394f30e0fa4b7eb06a65a1c0acdd0",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-car-showroom-scene-v2.webp",
+      "sha256": "d293862a151049c66c04ad70b3d36e32fa6932ab078dd0f2a9714a9b30bfd6b8",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-finance-v1.png",
+      "sha256": "95a0e33024f9c1a15cb009a1f22907508966a6572c263af797b298b5e849a154",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v1.png",
+      "sha256": "17840b5a4e4b58b375c7170dd5b7353e250377e900fd70d023a249df2e4f82d2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v2.png",
+      "sha256": "31cd7bbf3f235bfff199c234cee0885975caa54214860abbf5c9e4e93bcaeae0",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v3.png",
+      "sha256": "8b75eee57465a71dc4bbe39e7a3da5a57b9e495da7615bad2b2a913f4837e7d5",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v4.png",
+      "sha256": "36f66d8aec848b204dd108485216a1dcb318bb594ee2c61f20fd8c37601cdb72",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v5.png",
+      "sha256": "5f7720c0c9502752706dd50fb1ff6d630f1a800b8115a7e9ceb9e7295d5bbbe1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v6-source.png",
+      "sha256": "48fd57e66c4d0926ff5f260dd93f2ad05f89c721c541e3ebfc67408fe37d43f3",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-import-v6.png",
+      "sha256": "42c1332de87ff5d5a0fca2c215fbd9841aeec130e6dfe359c730bd3ce91617eb",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v2.png",
+      "sha256": "15b5024deac14f53eeccd76d1a66af268aceadc2af3e0ea0cca52cfd64103391",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v3.png",
+      "sha256": "d0740a21951faef14730663f71a50ddd53aac2f07ad820bffc7f93f3fa8c15c8",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v4.png",
+      "sha256": "bf7f64a4c861c744844c13a3fe6523c785795f9409a9fb05dd0376b23733cde2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v5.png",
+      "sha256": "474fb9fe5f3929968f43bf5fe0b2392b8a9664713f2db78a0f4a86470371a24a",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v6-source.png",
+      "sha256": "98a810f2571a2e712b400592050491cb3698678f6b9208761d6e230a21675c15",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-inventory-v6.png",
+      "sha256": "73ec9e8864a2f7560b5f166fddf092600a34abae5c13da0883b562969221e1f1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v1.png",
+      "sha256": "5985edc29bef9540f78bc23260d365a434ced4716047e5049128961fcd702424",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v2.png",
+      "sha256": "3c1eba2a874a85a3f735d377ee03428d1de895e1079e57893929356b216a6857",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v3.png",
+      "sha256": "d91a57c0d2fafa3d1b83322a487fe4701db13612af048805e0091f1716958d85",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v4.png",
+      "sha256": "32278069278ff08d033bc7c81154596304f1d9b945d416e3f202fba8afcb7422",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v5.png",
+      "sha256": "ee124b3bb7f4760a14f170421c10084b98af16c0f4488f2c6a549c331b625906",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v6-source.png",
+      "sha256": "517bdac118496fc9ccaac37ce402ff22a1ba2412e942c9c09690943b26000d4f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "lead-nav-sell-v6.png",
+      "sha256": "28347e79cce3fa96cebccbb65e52ab5f7436327aee5014ad77bd61f372c03e1c",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    }
+  ],
+  "keepPrefixes": []
+}

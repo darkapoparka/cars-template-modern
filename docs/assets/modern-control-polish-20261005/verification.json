@@ -1,0 +1,417 @@
+{
+  "scope": "Modern desktop inventory secondary-control polish",
+  "verifiedAt": "2026-10-04T21:59:46.259Z",
+  "canonical": {
+    "base": "http://127.0.0.1:6482",
+    "buildId": "VZknur44y3s7ATC3XuC3g",
+    "records": [
+      {
+        "locale": "bg",
+        "status": 200,
+        "centeredBannerControls": true,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Изглед в решетка",
+          "Списъчен изглед",
+          "Бързи филтри",
+          "Страничен панел"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "status": 200,
+        "centeredBannerControls": true,
+        "searchWidth": 1140,
+        "viewMenuChoices": [
+          "Grid view",
+          "List view",
+          "Quick filters",
+          "Sidebar"
+        ],
+        "countHidden": true,
+        "focusRestored": true,
+        "overflow": false,
+        "errors": []
+      }
+    ]
+  },
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "webTypecheck": "passed",
+    "scopedBiome": "passed",
+    "refactorAndReleaseContractTests": 94,
+    "releasePreflightContracts": "passed"
+  },
+  "browser": {
+    "acceptedCases": 8,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "firstRun": {
+      "startTime": "2026-10-04T21:45:52.993Z",
+      "duration": 310526.205,
+      "expected": 7,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "targetedRecheck": {
+      "startTime": "2026-10-04T21:52:55.969Z",
+      "duration": 47258.888,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "recheckReason": "The 21-overlay WebKit BG case reached the 45-second total budget while independent checks were running. Its isolated recheck uses 90 seconds; no geometry assertion failed in the first attempt."
+  },
+  "review": {
+    "base": "http://127.0.0.1:6499",
+    "records": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "filterFocus": {
+          "outline": "solid",
+          "width": "2px",
+          "shadow": "rgb(64, 95, 242) 0px 0px 0px 2px"
+        },
+        "sortFocus": {
+          "outline": "solid",
+          "width": "2px",
+          "shadow": "rgb(64, 95, 242) 0px 0px 0px 2px"
+        },
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "labelChecks": [
+          {
+            "text": "Препоръчани",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нови",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена нагоре",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Цена надолу",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нисък пробег",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Най-нова година",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "labelChecks": [
+          {
+            "text": "Recommended",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price low",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Price high",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Lowest km",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          },
+          {
+            "text": "Newest year",
+            "clipped": false,
+            "width": 256,
+            "height": 40
+          }
+        ],
+        "accessibilityScans": 2,
+        "violations": 0,
+        "errors": []
+      }
+    ]
+  },
+  "captures": {
+    "base": "http://127.0.0.1:6499",
+    "errors": [],
+    "captures": [
+      {
+        "locale": "bg",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 320,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 390,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1023,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "overflow": false
+      }
+    ]
+  },
+  "preservation": {
+    "comparisons": [
+      {
+        "name": "bg-cars-320",
+        "changedPixels": 81,
+        "maximumChannelDifference": 8,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-cars-390",
+        "changedPixels": 0,
+        "maximumChannelDifference": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-cars-1023",
+        "changedPixels": 21,
+        "maximumChannelDifference": 5,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "bg-home-1440",
+        "changedPixels": 74,
+        "maximumChannelDifference": 2,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-320",
+        "changedPixels": 0,
+        "maximumChannelDifference": 0,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-390",
+        "changedPixels": 3,
+        "maximumChannelDifference": 5,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-cars-1023",
+        "changedPixels": 17,
+        "maximumChannelDifference": 5,
+        "dimensionsMatch": true
+      },
+      {
+        "name": "en-home-1440",
+        "changedPixels": 0,
+        "maximumChannelDifference": 0,
+        "dimensionsMatch": true
+      }
+    ],
+    "interpretation": "Three pixel-identical comparisons and five small raster variations of 3-81 edge pixels, with maximum channel difference 8/255. No mobile or Home layout/content change."
+  },
+  "sourceSha256": {
+    "packages/marketplace-ui/components/dealer-inventory.module.css": "0d611d4992d60fd4cd0081ffb64b5b4cad523502c4c48d395be2dfe116c71a5b",
+    "packages/marketplace-ui/components/dealer-desktop-toolbar.module.css": "c2e4e9bd05145989eb95bebd4c58005ce4fb34e326ce728ce90f32fd37931dd5"
+  },
+  "preserved": [
+    "Unrelated staged/unstaged Cars work",
+    "Modern recovery note",
+    "next-env.d.ts preimage",
+    "Current mobile and Home layout",
+    "Filter/modal/presentation state behavior"
+  ],
+  "boundary": "Reusable source and local preview; no template promotion or dealer publication"
+}

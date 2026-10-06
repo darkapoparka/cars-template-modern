@@ -1,165 +1,355 @@
 .hero {
   display: none;
 }
-
 .hero[data-variant="service"] {
   display: block;
 }
-.scene,
 .copy {
+  display: none;
+}
+.breadcrumb {
   display: none;
 }
 
 @media (min-width: 1024px) {
   .hero,
   .hero[data-variant="service"] {
-    --desktop-action-panel-min-height: 20rem;
-    --desktop-hero-height: calc(var(--desktop-action-panel-min-height) + 7rem);
+    --desktop-action-panel-min-height: 0;
     position: relative;
-    z-index: 20;
+    z-index: var(--desktop-layer-hero);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
     align-items: center;
-    width: 100%;
-    height: auto;
-    min-height: var(--desktop-hero-height);
-    padding: 1.5rem 0;
-    color: var(--inverse-foreground);
-    background: var(--inverse);
+    padding: calc(var(--spacing) * 11) 0 calc(var(--spacing) * 11);
+    color: var(--foreground);
+    background: var(--desktop-surface);
     isolation: isolate;
-  }
-  .scene {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: block;
-    height: var(--desktop-hero-height);
-    overflow: hidden;
-    pointer-events: none;
-  }
-  .scene > img {
-    object-fit: cover;
-    object-position: center;
-  }
-  .scene::after {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background: linear-gradient(180deg, var(--inverse), transparent 35%);
   }
   .copy {
     position: relative;
     z-index: 1;
     display: block;
-    width: min(calc(100% - 2 * var(--layout-gutter)), 56rem);
-    text-align: center;
+    width: var(--desktop-content-width);
+    text-align: left;
   }
-  .hero[data-variant="landing"],
-  .hero[data-variant="service"] {
-    height: auto;
-    min-height: var(--desktop-hero-height);
-    background: var(--inverse);
+  .breadcrumb {
+    display: flex;
+    gap: calc(var(--spacing) * 2.5);
+    align-items: center;
+    width: var(--desktop-content-width);
+    min-height: calc(var(--spacing) * 8);
+    margin: 0 auto calc(var(--spacing) * 5);
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
   }
-  .hero[data-scene-tone="quiet"] {
-    gap: 1rem;
-    min-height: 0;
-    padding-block: 1.25rem 1.75rem;
-    background: var(--inverse);
-  }
-  .hero[data-scene-tone="quiet"] .scene {
-    height: 100%;
-    opacity: 0.62;
-  }
-  .hero[data-variant="landing"] .copy,
-  .hero[data-variant="service"] .copy {
-    min-height: 3rem;
+  .breadcrumb a {
+    color: var(--brand-text);
   }
   .copy h1 {
     margin: 0;
-    font-size: clamp(2rem, 2.5vw, 2.5rem);
-    font-weight: var(--font-weight-semibold);
-    line-height: 1.15;
-    letter-spacing: -0.035em;
+    font-size: var(--text-desktop-hero);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--desktop-leading-tight);
+    letter-spacing: calc(var(--spacing) * -0.3);
     text-wrap: balance;
   }
   .description {
-    max-width: 38rem;
-    margin: 0.625rem auto 0;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--inverse-muted);
+    max-width: calc(var(--spacing) * 168);
+    margin: calc(var(--spacing) * 4) 0 0;
+    font-size: var(--text-desktop-lead);
+    line-height: var(--desktop-leading-prose);
+    color: var(--muted-foreground);
     text-wrap: pretty;
   }
   .eyebrow {
-    margin: 0 0 0.625rem;
-    font-size: var(--text-micro);
-    color: var(--inverse-muted);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-label);
+    margin: 0 0 calc(var(--spacing) * 4);
+    font-size: var(--text-meta);
+    line-height: var(--desktop-leading-copy);
+    color: var(--muted-foreground);
   }
-  .hero[data-variant="page"],
-  .hero[data-variant="compact"] {
-    justify-content: flex-start;
-    height: var(--desktop-hero-height);
+  .hero[data-variant="landing"] {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0;
+    height: var(--desktop-home-hero-height);
+    min-height: var(--desktop-home-hero-height);
+  }
+  .hero[data-variant="landing"] .copy {
+    grid-row: 1;
+    align-self: end;
+    justify-self: center;
+    width: min(100% - calc(var(--spacing) * 12), calc(var(--spacing) * 285));
+    padding-bottom: calc(var(--spacing) * 6);
+    text-align: center;
+  }
+  .hero[data-variant="landing"] h1 {
+    font-size: clamp(
+      calc(var(--spacing) * 10),
+      4.2vw,
+      calc(var(--spacing) * 13)
+    );
+    line-height: var(--desktop-leading-display);
+    letter-spacing: var(--desktop-heading-tracking);
+  }
+  .hero[data-variant="landing"] .description {
+    max-width: none;
+    margin-top: calc(var(--spacing) * 5);
+    color: var(--inverse-foreground);
+  }
+  .hero[data-variant="landing"] .eyebrow {
+    margin-bottom: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--inverse-foreground);
+  }
+  .hero[data-variant="page"] .copy {
+    text-align: center;
+  }
+  .hero[data-variant="page"] .description {
+    max-width: calc(var(--spacing) * 160);
+    margin: calc(var(--spacing) * 4) auto 0;
+    font-size: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .serviceContent {
     position: relative;
     z-index: 1;
-    flex: none;
     width: 100%;
-    height: auto;
-    max-height: none;
-    overflow: visible;
     color: var(--foreground);
+  }
+  .hero[data-variant="service"] .serviceContent {
+    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 14);
+    margin-top: calc(var(--spacing) * 9);
+    background: var(--desktop-service-canvas);
+  }
+  .hero[data-variant="service"] {
+    padding-bottom: 0;
+    background: var(--desktop-surface);
+  }
+  .hero[data-variant="service"] .copy {
+    text-align: center;
+  }
+  .hero[data-variant="service"] .description {
+    max-width: calc(var(--spacing) * 160);
+    margin: calc(var(--spacing) * 4) auto 0;
+    font-size: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .loadingPanelFrame {
     position: relative;
     z-index: 1;
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    width: var(--desktop-content-width);
+  }
+  .loadingPanelFrame [data-desktop-action-panel] {
+    min-height: calc(var(--spacing) * 51.5);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
   .copy .loadingTitle {
-    max-width: 24rem;
-    margin-inline: auto;
+    max-width: calc(var(--spacing) * 96);
     color: transparent;
-    background: var(--inverse-control);
+    background: var(--control);
     border-radius: var(--radius-sm);
   }
   .loadingFields {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.75rem;
+    gap: calc(var(--spacing) * 3);
   }
   .loadingFields > div {
-    height: 3rem;
+    height: calc(var(--spacing) * 14);
     background: var(--control);
-    border-radius: 0.75rem;
+    border-radius: calc(var(--spacing) * 2);
   }
 }
-@media (min-width: 1280px) {
-  .hero,
-  .hero[data-variant="service"] {
-    --desktop-action-panel-min-height: 17.5rem;
+
+/* The curated Boxcar banner is desktop only; mobile retains its existing chrome. */
+@media (min-width: 1024px) {
+  .hero:not([data-variant="landing"], [data-variant="inventory"]) {
+    padding: 0;
+    background: var(--desktop-surface);
   }
-}
-/* On narrower desktops, keep the complete vehicles alongside the heading
-   instead of letting the form cover them. Wide screens have room beside it. */
-@media (min-width: 1024px) and (max-width: 1855px) {
-  .scene {
-    inset: 0 7.5% auto;
-    height: 7rem;
-    mask-image:
-      linear-gradient(to bottom, var(--inverse) 88%, transparent),
+  .banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(var(--spacing) * 45);
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
+    overflow: hidden;
+    background: linear-gradient(
+      110deg,
+      var(--desktop-banner-start) 0%,
+      var(--desktop-banner-center) 55%,
+      var(--desktop-banner-end) 100%
+    );
+    isolation: isolate;
+  }
+  .banner::before {
+    position: absolute;
+    top: calc(var(--spacing) * -51.25);
+    left: max(
+      calc(var(--spacing) * -30),
+      calc(
+        (100% - var(--desktop-showroom-max)) /
+        2 -
+        calc(var(--spacing) * 42.5)
+      )
+    );
+    width: calc(var(--spacing) * 110);
+    height: calc(var(--spacing) * 110);
+    pointer-events: none;
+    content: "";
+    background: var(--desktop-banner-orbit);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 calc(var(--spacing) * 14) var(--desktop-banner-orbit-middle),
+      0 0 0 calc(var(--spacing) * 28) var(--desktop-banner-orbit-outer);
+  }
+  .banner::after {
+    position: absolute;
+    top: 0;
+    right: max(
+      calc(var(--spacing) * 10),
+      calc((100% - var(--desktop-showroom-max)) / 2)
+    );
+    left: max(
+      calc(var(--spacing) * 10),
+      calc((100% - var(--desktop-showroom-max)) / 2)
+    );
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    background-image:
+      var(--desktop-page-car-left), var(--desktop-page-car-right);
+    background-repeat: no-repeat;
+    background-position:
+      left calc(var(--spacing) * -2) bottom calc(var(--spacing) * 2),
+      right calc(var(--spacing) * -2) bottom calc(var(--spacing) * 2);
+    background-size: calc(var(--spacing) * 75) auto;
+  }
+  .hero:not([data-variant="landing"]) .breadcrumb {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(var(--spacing) * 6);
+    padding: 0;
+    margin: 0 0 calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.25);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--desktop-breadcrumb-text);
+  }
+  .hero:not([data-variant="landing"]) .copy {
+    width: min(100%, calc(var(--spacing) * 125));
+    min-height: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .hero:not([data-variant="landing"]) .copy h1 {
+    font-size: calc(var(--spacing) * 10);
+    line-height: calc(var(--spacing) * 12.5);
+    letter-spacing: calc(var(--spacing) * -0.3);
+  }
+  .hero:not([data-variant="landing"]) .description {
+    max-width: calc(var(--spacing) * 125);
+    margin: calc(var(--spacing) * 2.5) auto 0;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+    color: var(--desktop-description-text);
+  }
+  .hero[data-variant="service"] .serviceContent {
+    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
+    margin: 0;
+    background: var(--desktop-surface);
+  }
+  .hero:is([data-variant="landing"], [data-variant="inventory"]),
+  .hero[data-appearance="photo"] .banner {
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    padding: 0;
+    margin-inline: auto;
+    color: var(--inverse-foreground);
+    background-color: var(--inverse);
+    background-image:
       linear-gradient(
-        to right,
-        transparent,
-        var(--inverse) 5%,
-        var(--inverse) 95%,
-        transparent
-      );
-    mask-composite: intersect;
+        180deg,
+        var(--desktop-hero-overlay-top) 0%,
+        var(--desktop-hero-overlay-middle) 55%,
+        var(--desktop-hero-overlay-bottom) 100%
+      ),
+      var(--desktop-hero-scene, none);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius-desktop-frame);
   }
-  .scene > img {
-    object-position: center 47%;
+  .hero[data-appearance="photo"] .banner {
+    min-height: calc(var(--spacing) * 56);
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+  }
+  .hero[data-variant="landing"] {
+    background-position: center 95%;
+  }
+  .hero[data-variant="inventory"] {
+    gap: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+  }
+  .hero[data-variant="inventory"] .banner {
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .hero[data-variant="inventory"],
+  .hero[data-appearance="photo"] .banner {
+    background-position: center 95%;
+  }
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .banner::before,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .banner::after {
+    display: none;
+  }
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .copy {
+    width: min(100%, calc(var(--spacing) * 225));
+  }
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb a,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .description {
+    color: var(--inverse-foreground);
+  }
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .breadcrumb
+    a:hover {
+    text-decoration: underline;
+    text-underline-offset: var(--spacing);
+  }
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .breadcrumb
+    a:focus-visible {
+    outline: var(--desktop-focus-width) solid currentcolor;
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: var(--radius-sm);
+  }
+  .hero[data-appearance="photo"][data-variant="service"] .serviceContent {
+    padding-top: 0;
+    margin-top: calc(var(--spacing) * 10);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .banner::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .loadingPanelFrame [data-desktop-action-panel] {
+    min-height: calc(var(--spacing) * 31.5);
   }
 }

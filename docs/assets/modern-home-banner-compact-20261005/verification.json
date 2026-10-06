@@ -1,0 +1,472 @@
+{
+  "scope": "Modern desktop Home compact banner",
+  "verifiedAt": "2026-10-05T00:08:36.590Z",
+  "toolchain": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0"
+  },
+  "canonical": {
+    "base": "http://127.0.0.1:6482",
+    "buildId": "zi9C1pTCD_RIxCsSNIa1I",
+    "records": [
+      {
+        "locale": "bg",
+        "status": 200,
+        "heroHeight": 427.5,
+        "headlineSize": 52,
+        "searchHeight": 76,
+        "firstCardY": 755.5,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "status": 200,
+        "heroHeight": 427.5,
+        "headlineSize": 52,
+        "searchHeight": 76,
+        "firstCardY": 755.5,
+        "errors": []
+      }
+    ]
+  },
+  "checks": {
+    "productionBuild": "passed",
+    "webTypecheck": "passed",
+    "scopedBiome": "passed",
+    "refactorAndReleaseContractTests": 94,
+    "releasePreflightContracts": "passed"
+  },
+  "browser": {
+    "acceptedCases": 14,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "initial": {
+      "startTime": "2026-10-05T00:03:22.964Z",
+      "duration": 120929.3,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 4,
+      "flaky": 0
+    },
+    "affectedCasesAfterAssertionUpdate": {
+      "startTime": "2026-10-05T00:06:44.893Z",
+      "duration": 40784.484,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "note": "The four 1440 px frame cases were rerun after replacing the old inline View-toolbar offset assertion with sidebar/card alignment. Ten unaffected cases passed in the initial run."
+  },
+  "captureBefore": {
+    "base": "http://127.0.0.1:6482",
+    "phase": "before",
+    "errors": [],
+    "records": [
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 320,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 390,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1023,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1024,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 929,
+          "height": 460
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1280,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1185,
+          "height": 480.6875
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1440,
+        "hero": {
+          "x": 52.5,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1920,
+        "hero": {
+          "x": 292.5,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "cars",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "lease",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 320,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 390,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1023,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1024,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 929,
+          "height": 460
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1280,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1185,
+          "height": 480.6875
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1440,
+        "hero": {
+          "x": 52.5,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1920,
+        "hero": {
+          "x": 292.5,
+          "y": 90,
+          "width": 1320,
+          "height": 520
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "cars",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "lease",
+        "width": 1440,
+        "overflow": false
+      }
+    ]
+  },
+  "captureAfter": {
+    "base": "http://127.0.0.1:6499",
+    "phase": "after",
+    "errors": [],
+    "records": [
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 320,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 390,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1023,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1024,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 929,
+          "height": 400
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1280,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1185,
+          "height": 400
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1440,
+        "hero": {
+          "x": 52.5,
+          "y": 90,
+          "width": 1320,
+          "height": 427.5
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "home",
+        "width": 1920,
+        "hero": {
+          "x": 292.5,
+          "y": 90,
+          "width": 1320,
+          "height": 440
+        },
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "cars",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "bg",
+        "route": "lease",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 320,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 390,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1023,
+        "hero": null,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1024,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 929,
+          "height": 400
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1280,
+        "hero": {
+          "x": 40,
+          "y": 90,
+          "width": 1185,
+          "height": 400
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1440,
+        "hero": {
+          "x": 52.5,
+          "y": 90,
+          "width": 1320,
+          "height": 427.5
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "home",
+        "width": 1920,
+        "hero": {
+          "x": 292.5,
+          "y": 90,
+          "width": 1320,
+          "height": 440
+        },
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "cars",
+        "width": 1440,
+        "overflow": false
+      },
+      {
+        "locale": "en",
+        "route": "lease",
+        "width": 1440,
+        "overflow": false
+      }
+    ]
+  },
+  "preservation": [
+    {
+      "name": "bg-home-320",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-home-390",
+      "changedPixels": 21,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-home-1023",
+      "changedPixels": 7,
+      "maximumChannelDifference": 5,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-cars-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "bg-lease-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-home-320",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-home-390",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-home-1023",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-cars-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    },
+    {
+      "name": "en-lease-1440",
+      "changedPixels": 0,
+      "maximumChannelDifference": 0,
+      "dimensionsMatch": true
+    }
+  ],
+  "sourceHashes": {
+    "packages/design-system/styles/desktop-tokens.css": "59fb5250be779e744e49ac3d2ab2db403cc6fdb14a9462208b9730f880f7a8e0",
+    "packages/marketplace-ui/components/dealer-desktop-hero.module.css": "826764d9f486ab42cb5d56e7208259a03b9d6d3325121730bf1d6f1a4d95d497",
+    "apps/e2e/specs/desktop-panel-flows.spec.ts": "0b5e14c34807317ba8409905de6ee0a56464e23eecfd06bf124ed3655bebed53"
+  }
+}

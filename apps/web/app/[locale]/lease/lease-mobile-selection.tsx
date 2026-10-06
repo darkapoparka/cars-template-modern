@@ -197,6 +197,8 @@ export const LeaseMobileSelection = ({
         imageClassName="object-center"
         imageSrc={publicSite.artwork.financeHero}
         locale={locale}
+        title={locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
+        titleId="lease-mobile-title"
         tone="leasing"
       >
         <div className="h-full">
@@ -212,9 +214,6 @@ export const LeaseMobileSelection = ({
         className={`${mobileDealerContentClassName} pb-6`}
         data-slot="mobile-dealer-content"
       >
-        <h1 className="sr-only" id="lease-mobile-title" tabIndex={-1}>
-          {locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
-        </h1>
         {
           <LeaseQuickFilterRail
             filters={filters}

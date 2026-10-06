@@ -1,0 +1,1652 @@
+{
+  "scope": "Modern reusable master; local desktop inventory filter controls",
+  "date": "2026-10-04",
+  "build": "WEJu161wL4yhsr__st2x3",
+  "canonical": [
+    {
+      "locale": "bg",
+      "origin": "http://127.0.0.1:6482",
+      "build": "WEJu161wL4yhsr__st2x3",
+      "status": 200,
+      "errors": [],
+      "modal": "opens, cancels and restores focus"
+    },
+    {
+      "locale": "en",
+      "origin": "http://127.0.0.1:6482",
+      "build": "WEJu161wL4yhsr__st2x3",
+      "status": 200,
+      "errors": [],
+      "modal": "opens, cancels and restores focus"
+    }
+  ],
+  "browser": {
+    "qualifiedCases": 48,
+    "projects": {
+      "chromium": 24,
+      "webkit": 24
+    },
+    "batchStats": {
+      "startTime": "2026-10-04T06:30:38.687Z",
+      "duration": 428784.68,
+      "expected": 47,
+      "skipped": 0,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "isolatedRecheckStats": {
+      "startTime": "2026-10-04T06:39:31.574Z",
+      "duration": 9109.919,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "automaticRetries": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "key": "desktop-category-navigation.spec.ts::desktop category drafts preserve filters and browser Back context::search-chromium",
+        "title": "desktop category drafts preserve filters and browser Back context",
+        "file": "desktop-category-navigation.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 7665
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-category-navigation.spec.ts::desktop category drafts preserve filters and browser Back context::search-webkit",
+        "title": "desktop category drafts preserve filters and browser Back context",
+        "file": "desktop-category-navigation.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 62596
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop search keeps one control surface and cancels make/model drafts (bg)::search-chromium",
+        "title": "desktop search keeps one control surface and cancels make/model drafts (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 5687
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop make/model rail supports keyboard stages and resets dependent selections (bg)::search-chromium",
+        "title": "desktop make/model rail supports keyboard stages and resets dependent selections (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 3928
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop unified filters keep one draft across vehicle and all options (bg)::search-chromium",
+        "title": "desktop unified filters keep one draft across vehicle and all options (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 7204
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory layout preserves results, sorting and sidebar drafts (bg)::search-chromium",
+        "title": "desktop inventory layout preserves results, sorting and sidebar drafts (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 5764
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop quick filters share URL state and accessible dialogs (bg)::search-chromium",
+        "title": "desktop quick filters share URL state and accessible dialogs (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 7403
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop search keeps one control surface and cancels make/model drafts (en)::search-chromium",
+        "title": "desktop search keeps one control surface and cancels make/model drafts (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 5306
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop make/model rail supports keyboard stages and resets dependent selections (en)::search-chromium",
+        "title": "desktop make/model rail supports keyboard stages and resets dependent selections (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 7724
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop unified filters keep one draft across vehicle and all options (en)::search-chromium",
+        "title": "desktop unified filters keep one draft across vehicle and all options (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 15083
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory layout preserves results, sorting and sidebar drafts (en)::search-chromium",
+        "title": "desktop inventory layout preserves results, sorting and sidebar drafts (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 6349
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop quick filters share URL state and accessible dialogs (en)::search-chromium",
+        "title": "desktop quick filters share URL state and accessible dialogs (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 11144
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory ignores invalid presentation preferences::search-chromium",
+        "title": "desktop inventory ignores invalid presentation preferences",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 5079
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory remains usable when preference storage is blocked::search-chromium",
+        "title": "desktop inventory remains usable when preference storage is blocked",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 6769
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop search keeps one control surface and cancels make/model drafts (bg)::search-webkit",
+        "title": "desktop search keeps one control surface and cancels make/model drafts (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 53023
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop make/model rail supports keyboard stages and resets dependent selections (bg)::search-webkit",
+        "title": "desktop make/model rail supports keyboard stages and resets dependent selections (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "failed",
+        "results": [
+          {
+            "status": "failed",
+            "retry": 0,
+            "duration": 35028,
+            "error": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-slot=\"desktop-focused-filter-dialog\"]').getByRole('button', { name: 'Покажи обявите', exact: true })\u001b[22m\n\u001b[2m    - locator resolved to <button data-slot=\"button\" class=\"inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium outline-none transition-[background-color,border-color,color,box-shadow,opacity] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/35 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-45 aria-invalid:border-destructive aria-invalid:ring-destructive/20 da…>Покажи обявите</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+          }
+        ],
+        "qualifiedStatus": "passed",
+        "isolatedRecheck": {
+          "key": "desktop-inventory-layouts.spec.ts::desktop make/model rail supports keyboard stages and resets dependent selections (bg)::search-webkit",
+          "title": "desktop make/model rail supports keyboard stages and resets dependent selections (bg)",
+          "file": "desktop-inventory-layouts.spec.ts",
+          "project": "search-webkit",
+          "status": "passed",
+          "results": [
+            {
+              "status": "passed",
+              "retry": 0,
+              "duration": 7141
+            }
+          ]
+        }
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop unified filters keep one draft across vehicle and all options (bg)::search-webkit",
+        "title": "desktop unified filters keep one draft across vehicle and all options (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 34547
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory layout preserves results, sorting and sidebar drafts (bg)::search-webkit",
+        "title": "desktop inventory layout preserves results, sorting and sidebar drafts (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 13821
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop quick filters share URL state and accessible dialogs (bg)::search-webkit",
+        "title": "desktop quick filters share URL state and accessible dialogs (bg)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 16688
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop search keeps one control surface and cancels make/model drafts (en)::search-webkit",
+        "title": "desktop search keeps one control surface and cancels make/model drafts (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 18442
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop make/model rail supports keyboard stages and resets dependent selections (en)::search-webkit",
+        "title": "desktop make/model rail supports keyboard stages and resets dependent selections (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 18253
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop unified filters keep one draft across vehicle and all options (en)::search-webkit",
+        "title": "desktop unified filters keep one draft across vehicle and all options (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 42131
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory layout preserves results, sorting and sidebar drafts (en)::search-webkit",
+        "title": "desktop inventory layout preserves results, sorting and sidebar drafts (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 12880
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop quick filters share URL state and accessible dialogs (en)::search-webkit",
+        "title": "desktop quick filters share URL state and accessible dialogs (en)",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 13981
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory ignores invalid presentation preferences::search-webkit",
+        "title": "desktop inventory ignores invalid presentation preferences",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 3801
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-layouts.spec.ts::desktop inventory remains usable when preference storage is blocked::search-webkit",
+        "title": "desktop inventory remains usable when preference storage is blocked",
+        "file": "desktop-inventory-layouts.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 8787
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory controls center Filters and Sort and keep preview choices secondary (bg)::search-chromium",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 5420
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)::search-chromium",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 3164
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory search box shares filters, cancels drafts and restores focus (bg)::search-chromium",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 3428
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory controls center Filters and Sort and keep preview choices secondary (en)::search-chromium",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 6100
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)::search-chromium",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 3653
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory search box shares filters, cancels drafts and restores focus (en)::search-chromium",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 6549
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory controls center Filters and Sort and keep preview choices secondary (bg)::search-webkit",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 27186
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)::search-webkit",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 12811
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory search box shares filters, cancels drafts and restores focus (bg)::search-webkit",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (bg)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 11604
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory controls center Filters and Sort and keep preview choices secondary (en)::search-webkit",
+        "title": "inventory controls center Filters and Sort and keep preview choices secondary (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 15987
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)::search-webkit",
+        "title": "focused Model and Price dialogs preserve unrelated filters when applying and clearing (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 11011
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-inventory-search.spec.ts::inventory search box shares filters, cancels drafts and restores focus (en)::search-webkit",
+        "title": "inventory search box shares filters, cancels drafts and restores focus (en)",
+        "file": "desktop-inventory-search.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 10777
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)::search-chromium",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 20271
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)::search-chromium",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 15216
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop navigation keeps the header stable through loading::search-chromium",
+        "title": "desktop navigation keeps the header stable through loading",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 17479
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::home search and inventory sidebar apply drafts without losing filters::search-chromium",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 23805
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop listing keeps the gallery, information and phone handoff usable::search-chromium",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-chromium",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 15324
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)::search-webkit",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (en, 1440px)",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 29291
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)::search-webkit",
+        "title": "desktop keeps the Home 10 frame and stock visible below its search (bg, 1440px)",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 32906
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop navigation keeps the header stable through loading::search-webkit",
+        "title": "desktop navigation keeps the header stable through loading",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 27189
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::home search and inventory sidebar apply drafts without losing filters::search-webkit",
+        "title": "home search and inventory sidebar apply drafts without losing filters",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 36910
+          }
+        ],
+        "qualifiedStatus": "passed"
+      },
+      {
+        "key": "desktop-panel-flows.spec.ts::desktop listing keeps the gallery, information and phone handoff usable::search-webkit",
+        "title": "desktop listing keeps the gallery, information and phone handoff usable",
+        "file": "desktop-panel-flows.spec.ts",
+        "project": "search-webkit",
+        "status": "passed",
+        "results": [
+          {
+            "status": "passed",
+            "retry": 0,
+            "duration": 18115
+          }
+        ],
+        "qualifiedStatus": "passed"
+      }
+    ]
+  },
+  "units": {
+    "marketplaceUI": {
+      "files": 20,
+      "tests": 95
+    },
+    "web": {
+      "files": 36,
+      "tests": 186
+    },
+    "refactorContracts": 7,
+    "releaseHarness": 87
+  },
+  "checks": [
+    "Scoped Biome (18 source/test files)",
+    "Explicit web typecheck",
+    "Next 16.3.8 production webpack build",
+    "Release preflight contracts"
+  ],
+  "captureMatrix": {
+    "before": [
+      {
+        "name": "bg-cars-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "content": 1008
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1024",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1024,
+          "content": 1024
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1280",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1280,
+          "content": 1280
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1920",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1920,
+          "content": 1920
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1023",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1023,
+          "content": 1008
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1024",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1024,
+          "content": 1024
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1280",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1280,
+          "content": 1280
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1920",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1920,
+          "content": 1920
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "en-320",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "en-390",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "en-1440",
+        "origin": "http://127.0.0.1:6482",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      }
+    ],
+    "after": [
+      {
+        "name": "bg-cars-320",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-390",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1023",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1023,
+          "content": 1008
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1024",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1024,
+          "content": 1024
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1280",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1280,
+          "content": 1280
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1440",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-cars-1920",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1920,
+          "content": 1920
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-320",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-390",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1023",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1023,
+          "content": 1008
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1024",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1024,
+          "content": 1024
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1280",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1280,
+          "content": 1280
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1440",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "en-cars-1920",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1920,
+          "content": 1920
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-320",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-390",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "bg-1440",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      },
+      {
+        "name": "en-320",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 320,
+          "content": 305
+        },
+        "errors": []
+      },
+      {
+        "name": "en-390",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 390,
+          "content": 375
+        },
+        "errors": []
+      },
+      {
+        "name": "en-1440",
+        "origin": "http://127.0.0.1:6492",
+        "metrics": {
+          "viewport": 1440,
+          "content": 1440
+        },
+        "errors": []
+      }
+    ]
+  },
+  "preservation": [
+    {
+      "name": "bg-320",
+      "width": 320,
+      "height": 2136,
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-390",
+      "width": 390,
+      "height": 2384,
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-1440",
+      "width": 1440,
+      "height": 4084,
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-320",
+      "width": 320,
+      "height": 2136,
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-390",
+      "width": 390,
+      "height": 2384,
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1023",
+      "width": 1023,
+      "height": 1624,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-320",
+      "width": 320,
+      "height": 2136,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-390",
+      "width": 390,
+      "height": 2384,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-1440",
+      "width": 1440,
+      "height": 3992,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-320",
+      "width": 320,
+      "height": 2136,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-390",
+      "width": 390,
+      "height": 2384,
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1023",
+      "width": 1023,
+      "height": 1624,
+      "changedPixels": 0
+    }
+  ],
+  "accessibility": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "origin": "http://127.0.0.1:6492",
+      "groups": [
+        "Автомобил",
+        "Цена и година",
+        "Характеристики",
+        "Местоположение"
+      ],
+      "short": [
+        {
+          "group": 0,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 1,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 2,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 3,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "inventory",
+          "violations": []
+        },
+        {
+          "state": "filters-0",
+          "violations": []
+        },
+        {
+          "state": "filters-1",
+          "violations": []
+        },
+        {
+          "state": "filters-2",
+          "violations": []
+        },
+        {
+          "state": "filters-3",
+          "violations": []
+        },
+        {
+          "state": "make",
+          "violations": []
+        },
+        {
+          "state": "price",
+          "violations": []
+        },
+        {
+          "state": "search",
+          "violations": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "origin": "http://127.0.0.1:6492",
+      "groups": [
+        "Vehicle",
+        "Price and year",
+        "Specifications",
+        "Location"
+      ],
+      "short": [
+        {
+          "group": 0,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 1,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 2,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 3,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "inventory",
+          "violations": []
+        },
+        {
+          "state": "filters-0",
+          "violations": []
+        },
+        {
+          "state": "filters-1",
+          "violations": []
+        },
+        {
+          "state": "filters-2",
+          "violations": []
+        },
+        {
+          "state": "filters-3",
+          "violations": []
+        },
+        {
+          "state": "make",
+          "violations": []
+        },
+        {
+          "state": "price",
+          "violations": []
+        },
+        {
+          "state": "search",
+          "violations": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "origin": "http://127.0.0.1:6492",
+      "groups": [
+        "Автомобил",
+        "Цена и година",
+        "Характеристики",
+        "Местоположение"
+      ],
+      "short": [
+        {
+          "group": 0,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 1,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 2,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 3,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "inventory",
+          "violations": []
+        },
+        {
+          "state": "filters-0",
+          "violations": []
+        },
+        {
+          "state": "filters-1",
+          "violations": []
+        },
+        {
+          "state": "filters-2",
+          "violations": []
+        },
+        {
+          "state": "filters-3",
+          "violations": []
+        },
+        {
+          "state": "make",
+          "violations": []
+        },
+        {
+          "state": "price",
+          "violations": []
+        },
+        {
+          "state": "search",
+          "violations": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "origin": "http://127.0.0.1:6492",
+      "groups": [
+        "Vehicle",
+        "Price and year",
+        "Specifications",
+        "Location"
+      ],
+      "short": [
+        {
+          "group": 0,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 1,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 2,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        },
+        {
+          "group": 3,
+          "footer": {
+            "x": 951,
+            "y": 507,
+            "width": 224,
+            "height": 44
+          },
+          "overflow": false
+        }
+      ],
+      "axe": [
+        {
+          "state": "inventory",
+          "violations": []
+        },
+        {
+          "state": "filters-0",
+          "violations": []
+        },
+        {
+          "state": "filters-1",
+          "violations": []
+        },
+        {
+          "state": "filters-2",
+          "violations": []
+        },
+        {
+          "state": "filters-3",
+          "violations": []
+        },
+        {
+          "state": "make",
+          "violations": []
+        },
+        {
+          "state": "price",
+          "violations": []
+        },
+        {
+          "state": "search",
+          "violations": []
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-desktop-toolbar.tsx",
+      "sha256": "9965C075856D2E54C2EEC887DC25F6AD23087C2F8466249E3214C0132DD222E2"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-filters.tsx",
+      "sha256": "DAFD4529FD9A9D26C2C61BEC66CC7004166FB5DD30F8E688F4FC2B4386395352"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-search.module.css",
+      "sha256": "38FD1C8C80C623757EEDF6534D0EB4008583F6A38333244FC52F123E2525D908"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-search.tsx",
+      "sha256": "CB655220B8A3645EAFEF25D2B734BB8925CD8BAE1EC51342137A525D33328B80"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory-summary.tsx",
+      "sha256": "E51EBB536DFE72623BA1D2FD456A552D304827DC1911F5E4947022B492C62223"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/dealer-inventory.module.css",
+      "sha256": "95852AEF9A67676CF055B3F137B7B2E035EFF35AB1C0F0E5EDE9880613D07DDF"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-discovery-bar.tsx",
+      "sha256": "331DCA67A178093DE44664974EE1AC6F6DA96136F1E84E943A8332B9C3DB4627"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-full-filter-content.tsx",
+      "sha256": "3B44D54515CAF496AFCB271CB57F9BE4D14BC575794A5EB30BB30C1F3B440AFC"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-full-filter-dialog.module.css",
+      "sha256": "68FDE80FFFB7A0F9012FEF676A94DE82A01FEBE59371976595C18C8838CB2FEA"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-full-filter-dialog.tsx",
+      "sha256": "9E7944C986FA7CA1C1421F6C5A4C970E6CFD5961DD6BC57539D0EBAC2117C588"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/marketplace-results.tsx",
+      "sha256": "EBD8F3F0D6D9437CC6DCCAEFB20586B707FC39B66C4F2A0EA44B84AC70894950"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/lib/desktop-full-filter-policy.ts",
+      "sha256": "FD0D4C046547E9CF20E207427C965D074499841F6A3F76A791AE505B7EECEE59"
+    },
+    {
+      "path": "templates/modern/packages/marketplace-ui/components/desktop-full-filter-group.tsx",
+      "sha256": "BE480C4D78DF518997A2D45C667B3C78076B0F8866FA5360FDEA3955A3920B4C"
+    }
+  ],
+  "boundary": "Local master verification; no template promotion or dealer deployment."
+}

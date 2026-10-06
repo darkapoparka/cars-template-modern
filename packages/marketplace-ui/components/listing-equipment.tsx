@@ -1,9 +1,17 @@
 import type { VehicleListing } from "@repo/marketplace";
-import { AirVent, Camera, CheckCircle2, MonitorUp, Sun } from "lucide-react";
+import {
+  AirVent,
+  Camera,
+  Check,
+  CheckCircle2,
+  MonitorUp,
+  Sun,
+} from "lucide-react";
 
 interface ListingEquipmentProps {
   readonly listing: VehicleListing;
   readonly locale?: string;
+  readonly variant?: "default" | "mobile";
 }
 
 const cameraFeaturePattern = /360|камер|camera/;
@@ -36,10 +44,46 @@ const getFeatureIcon = (label: string) => {
 export const ListingEquipment = ({
   listing,
   locale,
+  variant = "default",
 }: ListingEquipmentProps) => {
   const features = listing.features ?? [];
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const heading = isBg ? "Екстри" : "Extras";
+
+  if (variant === "mobile") {
+    if (features.length === 0) {
+      return null;
+    }
+
+    return (
+      <section
+        aria-label={heading}
+        className="scroll-mt-24 rounded-2xl border border-zinc-200 bg-white p-3"
+        data-slot="listing-equipment"
+      >
+        <h2 className="mb-3 font-semibold text-card-title tracking-heading">
+          {heading}
+        </h2>
+        <ul className="grid gap-2 min-[360px]:grid-cols-2">
+          {features.map((feature) => (
+            <li
+              className="flex min-w-0 items-start gap-2 rounded-xl bg-zinc-100 px-3 py-2.5 text-meta leading-5"
+              key={`${feature.bg}-${feature.en}`}
+            >
+              <Check
+                aria-hidden="true"
+                className="mt-0.5 size-4 shrink-0 text-zinc-500"
+                strokeWidth={2}
+              />
+              <span className="min-w-0 break-words">
+                {isBg ? feature.bg : feature.en}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
+  }
 
   return (
     <section

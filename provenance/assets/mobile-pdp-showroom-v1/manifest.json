@@ -1,0 +1,19 @@
+{
+  "generated": "2026-10-06",
+  "reference": "reference.webp",
+  "referenceSha256": "3ee0a6fab26d580b5ac2f18cb2c9d6a4c5aa16ae2459a5e17c2fe4ef8ac80360",
+  "source": "source.png",
+  "sourceDimensions": [
+    1536,
+    1024
+  ],
+  "sourceSha256": "6ad55ab3b107ada3aebd2a05f57d6174767a1b85f08769a06433132fa4f50afc",
+  "deliveryPath": "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
+  "deliveryDimensions": [
+    1080,
+    720
+  ],
+  "deliverySha256": "5db71679750689ae623a721f7de8a4e004943414e627d75c9fc8da124e00212c",
+  "bytes": 180456,
+  "preparation": "Resize to 1080px and encode WebP. No further crop, repainting or semantic edits."
+}

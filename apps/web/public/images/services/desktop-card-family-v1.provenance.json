@@ -1,0 +1,125 @@
+{
+  "generatedAt": "2026-10-06",
+  "generator": "Built-in image_gen.imagegen",
+  "original": "C:/Users/radev/.codex/generated_images/01a10d2b-1256-78c1-b649-1e562630c714/exec-14ba9ab5-63c1-4dc8-8df0-5be1a26ba1ca.png",
+  "references": [
+    "L:/CODEX/cars/templates/modern/apps/web/public/desktop-boxcars/service-browse.webp",
+    "L:/CODEX/cars/templates/modern/apps/web/public/desktop-boxcars/service-finance.webp",
+    "L:/CODEX/cars/templates/modern/apps/web/public/desktop-boxcars/service-sell.webp"
+  ],
+  "prompt": "Create a coordinated set of FOUR premium photorealistic automotive service cutout illustrations, using the attached existing website assets as style references. Deliver ONE landscape transparent-alpha sprite sheet arranged in a precise 2 by 2 grid of equal cells. Each cell contains one complete isolated composition with generous transparent space separating all four cells; no frames, no divider lines, no labels, no background. Top left: BROWSE, a pearl-white sporty European estate dominant in the foreground, with a restrained graphite-blue compact SUV behind it. Top right: IMPORT, a pearl-white contemporary SUV in front of one charcoal grey corrugated shipping container, with a few restrained freight crates beside the container. Bottom left: FINANCE, a pearl-white sporty sedan with a small charcoal-black calculator and two tidy low stacks of muted metallic coins by the front wheel. Bottom right: SELL, a pearl-white compact estate or hatchback with one small realistic charcoal-black remote car key lying near the front wheel. ALL vehicles must use exactly the same photographic style, neutral pearl-white paint, charcoal tinted windows, realistic silver wheels, tyres, understated softbox lighting and camera elevation. ALL lead cars face towards the RIGHT in the SAME front three-quarter angle, showing the same side, with their nose nearest the right edge. Match the mild three-quarter angle of the attached Sell/Finance car, not a head-on angle. All lead cars have the SAME apparent size and tire baseline within their own equal cell; car body width about 72 percent of cell width, car body height about 48 percent of cell height. The secondary Browse SUV and the small props must not increase the overall composition's width beyond about 86 percent of the cell. The shipping container sits behind the Import car, its top only slightly above the car roof; the car stays clearly dominant and fully visible. No giant calculator, coins, key, container or crates. Every composition has the same overall occupied height and optical weight; leave at least 9 percent clear margin around every group within each cell, including each bumper, mirror, key and prop. The four groups must stay completely separate with transparent gutters. Sharp commercially realistic automotive cutout photography, NOT illustration, NOT toy cars, NOT plastic 3D icons. True transparent alpha everywhere around and between objects, with only a delicate short tyre-contact shadow. No opaque ground plane, no rectangle, no backdrop, no halo, no reflection slab, no people or hands, no ropes, no ship, no arrows, no text, no logos, no badges or readable number plates. Preserve the good taste and materials of the existing service artwork, while unifying direction, scale and finish into one reusable family.",
+  "transparentBackground": true,
+  "scope": "Home desktop cards and the Services catalogue at all widths; original service roles retained for individual service landing pages.",
+  "mobileCatalogueEnabledOn": "2026-10-06",
+  "decorative": true,
+  "originalSha256": "9d4ee36267ef4d8e618726a44df5bb75c8f2afefd949799ccb94565f31e9be70",
+  "sheet": {
+    "width": 1672,
+    "height": 941,
+    "splitX": 841,
+    "splitY": 491
+  },
+  "derivative": "Transparent cell extraction, visible alpha >8 bounds plus 6 source px, proportional fit inside 692 x 377, centred on 720 x 405 with 14 px bottom margin; WebP quality 90 / alpha 100. No subject or colour edits.",
+  "assets": [
+    {
+      "role": "browse",
+      "path": "/images/services/desktop-browse-v1.webp",
+      "width": 720,
+      "height": 405,
+      "sourceCell": {
+        "left": 0,
+        "top": 0,
+        "width": 841,
+        "height": 491
+      },
+      "sourceAlphaBounds": {
+        "left": 33,
+        "top": 157,
+        "width": 795,
+        "height": 304
+      },
+      "exportForeground": "692x265",
+      "placement": {
+        "left": 14,
+        "top": 126
+      },
+      "bytes": 51968,
+      "sha256": "ae38859a452c932458ba69fa218823960905dadb644ead21e6a99eb69130c0bb"
+    },
+    {
+      "role": "imports",
+      "path": "/images/services/desktop-imports-v1.webp",
+      "width": 720,
+      "height": 405,
+      "sourceCell": {
+        "left": 841,
+        "top": 0,
+        "width": 831,
+        "height": 491
+      },
+      "sourceAlphaBounds": {
+        "left": 865,
+        "top": 70,
+        "width": 779,
+        "height": 409
+      },
+      "exportForeground": "692x363",
+      "placement": {
+        "left": 14,
+        "top": 28
+      },
+      "bytes": 61162,
+      "sha256": "65df02203e2937a2870cefa484bb7058c25aa61719e830934336c6831df7679c"
+    },
+    {
+      "role": "finance",
+      "path": "/images/services/desktop-finance-v1.webp",
+      "width": 720,
+      "height": 405,
+      "sourceCell": {
+        "left": 0,
+        "top": 491,
+        "width": 841,
+        "height": 450
+      },
+      "sourceAlphaBounds": {
+        "left": 38,
+        "top": 551,
+        "width": 803,
+        "height": 342
+      },
+      "exportForeground": "692x295",
+      "placement": {
+        "left": 14,
+        "top": 96
+      },
+      "bytes": 56952,
+      "sha256": "b378c233752231fa75cbee4ce877a563f3034a04cefae893e25341fc7ca0a7f6"
+    },
+    {
+      "role": "sell",
+      "path": "/images/services/desktop-sell-v1.webp",
+      "width": 720,
+      "height": 405,
+      "sourceCell": {
+        "left": 841,
+        "top": 491,
+        "width": 831,
+        "height": 450
+      },
+      "sourceAlphaBounds": {
+        "left": 869,
+        "top": 538,
+        "width": 758,
+        "height": 373
+      },
+      "exportForeground": "692x341",
+      "placement": {
+        "left": 14,
+        "top": 50
+      },
+      "bytes": 61768,
+      "sha256": "16457ec6cbbdd6d4161cb8dff82f2f79299876895bebc13e6bf27ccfb2bfa274"
+    }
+  ]
+}

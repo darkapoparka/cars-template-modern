@@ -4,7 +4,7 @@ import { settleModernPage } from "../fixtures/modern-visual-health";
 
 const mapEmbedPattern = /google\.com\/maps/;
 const contactHandoffPattern = /\/contact\?/;
-const manualEntryPattern = /Без VIN/;
+const manualEntryPattern = /Нямате VIN/;
 const sellRoutePattern = /\/sell$/;
 const listingTopicPattern = /topic=listings/;
 const importTopicPattern = /topic=import/;
@@ -61,12 +61,21 @@ for (const size of sizes) {
       page.getByRole("tab", { name: "Детайли", exact: true })
     ).toHaveAttribute("aria-selected", "true");
     await expectNoOverflow(page);
-    await page.getByRole("tab", { name: "Описание", exact: true }).click();
+    await page.getByRole("tab", { name: "Снимки", exact: true }).click();
+    const photos = page.getByRole("tabpanel", { name: "Снимки", exact: true });
+    await expect(photos).toBeVisible();
+    const photo = photos.getByRole("button").first();
+    await photo.click();
     await expect(
-      page.getByRole("tabpanel", { name: "Описание", exact: true })
+      page.locator('[data-slot="listing-gallery-lightbox"]')
     ).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(photo).toBeFocused();
     await expectNoOverflow(page);
     await page.getByRole("tab", { name: "Детайли", exact: true }).click();
+    await expect(
+      page.locator('[data-slot="listing-mobile-description"]')
+    ).toBeVisible();
     await expectNoOverflow(page);
     const map = page.locator('[data-slot="listing-location"]');
     await map.scrollIntoViewIfNeeded();
@@ -202,7 +211,9 @@ test("landscape content filters reach the last option and restore focus", async 
 });
 
 test("article back returns to the searched category", async ({ page }) => {
-  await page.goto("/guides?topic=import&q=Внос");
+  await page.goto("/guides?topic=import&q=Внос", {
+    waitUntil: "domcontentloaded",
+  });
   await expect(page.getByRole("searchbox")).toHaveValue("Внос");
   await page.locator('a[href*="/guides/import-costs-and-timing"]').click();
   await page.getByRole("link", { name: "Всички материали" }).click();
@@ -324,7 +335,8 @@ test("leasing selection survives reopening with an honest phone handoff", async 
   await expect
     .poll(() => new URL(page.url()).searchParams.has("vehicle"))
     .toBe(false);
-  await page.reload();
+  // Check reset state without waiting for unrelated image loads.
+  await page.reload({ waitUntil: "domcontentloaded" });
   await expect(
     page.getByRole("button", { name: "Изберете автомобил", exact: true })
   ).toBeVisible();

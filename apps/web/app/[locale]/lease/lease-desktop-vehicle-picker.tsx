@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@repo/design-system/components/ui/dialog";
+import { publicSite } from "@repo/marketplace/site-config";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { ArrowRight, Plus, Search, X } from "lucide-react";
 import { useRef, useState } from "react";
@@ -61,20 +62,28 @@ export function LeaseDesktopVehiclePicker({
       }}
       open={open}
     >
-      <div className={styles.picker}>
+      <div className={styles.picker} data-slot="lease-desktop-picker">
         {selectedVehicle ? (
           <div
             className={styles.selectedCard}
             data-slot="lease-desktop-selected-card"
           >
             <div className={styles.cardHeader}>
-              <strong
-                className={styles.title}
-                data-slot="lease-desktop-selected-title"
-                title={selectedVehicle.title}
-              >
-                {selectedVehicle.title}
-              </strong>
+              <div className={styles.cardHeading}>
+                <strong
+                  className={styles.title}
+                  data-slot="lease-desktop-selected-title"
+                  title={selectedVehicle.title}
+                >
+                  {selectedVehicle.title}
+                </strong>
+                <p className={styles.selectedMeta}>
+                  {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
+                </p>
+                <p className={styles.vehiclePrice}>
+                  {selectedVehicle.priceLabel}
+                </p>
+              </div>
               <Button
                 aria-label={copy.clearSelection}
                 className={styles.clear}
@@ -96,7 +105,7 @@ export function LeaseDesktopVehiclePicker({
                 alt={selectedVehicle.imageAlt}
                 className={styles.image}
                 fill
-                sizes="(min-width: 1280px) 325px, 270px"
+                sizes="160px"
                 src={selectedVehicle.imageUrl}
               />
             </div>
@@ -124,11 +133,26 @@ export function LeaseDesktopVehiclePicker({
               ref={triggerRef}
               type="button"
             >
-              <span className={styles.plus}>
-                <Plus aria-hidden="true" size={28} strokeWidth={1.5} />
+              <span className={styles.preview}>
+                <Image
+                  alt=""
+                  className={styles.emptyImage}
+                  fill
+                  sizes="160px"
+                  src={
+                    publicSite.artwork.desktopServices?.finance ??
+                    publicSite.artwork.desktopFinanceHero ??
+                    publicSite.artwork.financeHero
+                  }
+                />
               </span>
-              <strong>{copy.vehicleLabel}</strong>
-              <span className={styles.hint}>{text.browse}</span>
+              <span className={styles.triggerCopy}>
+                <strong>{copy.vehicleLabel}</strong>
+                <span className={styles.hint}>{text.browse}</span>
+              </span>
+              <span className={styles.plus}>
+                <Plus aria-hidden="true" size={24} strokeWidth={1.5} />
+              </span>
             </button>
           </DialogTrigger>
         )}

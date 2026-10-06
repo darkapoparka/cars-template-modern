@@ -16,7 +16,7 @@ import { cn } from "@repo/design-system/lib/utils";
 import { withBasePath } from "@repo/internationalization/paths";
 import { leadSite } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import {
   ArrowUpRight,
   Banknote,
@@ -41,6 +41,7 @@ import {
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopLocaleMenu } from "./dealer-desktop-locale-menu";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import Image from "./public-image";
 
 export type MarketplaceMode = "buy" | "sell" | "lease" | "imports";
@@ -117,6 +118,16 @@ export const LeadSiteMark = ({
   sizes?: string;
 }) => {
   if (isDealershipSite) {
+    if (publicSite.identity.desktopPreview) {
+      return (
+        <DealerDesktopLogo
+          className={cn(
+            "inline-flex h-[62px] w-[236px] shrink-0 items-center",
+            className
+          )}
+        />
+      );
+    }
     return (
       <span
         className={cn(

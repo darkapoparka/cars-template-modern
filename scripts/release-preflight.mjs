@@ -108,6 +108,7 @@ export const hasPlainOptionalResendFromSchema = (source) => {
 
 export const environmentDeclarationContracts = {
   web: [
+    "AUTOMARKET_DEALER_ORG_ID",
     "AUTOMARKET_PUBLIC_DATA_MODE",
     "ARCJET_KEY",
     "BASEHUB_TOKEN",
@@ -134,6 +135,7 @@ export const environmentDeclarationContracts = {
     "UPSTASH_REDIS_REST_URL",
   ],
   app: [
+    "AUTOMARKET_AI_LISTING_TRIAL_LIMIT",
     "AUTOMARKET_ENABLE_BILLING",
     "BETTERSTACK_API_KEY",
     "BETTERSTACK_URL",
@@ -168,8 +170,10 @@ export const environmentDeclarationContracts = {
     "SENTRY_PROJECT",
   ],
   api: [
+    "AUTO_DEV_API_KEY",
     "AUTOMARKET_ENABLE_AUTH_RECOVERY",
     "AUTOMARKET_ENABLE_BILLING",
+    "AUTOMARKET_ENABLE_EXTERNAL_INVENTORY",
     "AUTOMARKET_ENABLE_KYB_RETENTION",
     "AUTOMARKET_ENABLE_PRIVATE_IMPORTS",
     "AUTOMARKET_INVENTORY_EXAMPLE_TOKEN",
@@ -286,6 +290,7 @@ const environmentIsolatedNames = {
     "SENTRY_PROJECT",
   ],
   api: [
+    "AUTO_DEV_API_KEY",
     "BETTERSTACK_API_KEY",
     "BETTER_STACK_SOURCE_TOKEN",
     "BLOB_READ_WRITE_TOKEN",

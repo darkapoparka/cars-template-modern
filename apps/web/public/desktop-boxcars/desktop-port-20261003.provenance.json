@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-03",
+  "reference": "templates/boxcar-updated",
+  "purpose": "Modern desktop composition at min-width 1024px",
+  "scope": "Unchanged copies of existing owner reference assets. Existing source licenses, ownership and provenance apply. No new rights determination.",
+  "assets": [
+    {
+      "file": "viewing.jpg",
+      "source": "templates/boxcar-updated/public/media/background/child.jpg",
+      "sha256": "8612fc28c9bb16bed254a0e5184f5420d8031c571db2ac40bda4021de74f0570",
+      "bytes": 65571
+    },
+    {
+      "file": "journal-1.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/blog-1.jpg",
+      "sha256": "d99527c88a9347f3642b2ea8313dd1b7e21fe20ec1396045238347be3420a1af",
+      "bytes": 23744
+    },
+    {
+      "file": "journal-2.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/blog-2.jpg",
+      "sha256": "e1d85cee7744332f7bbe0009d28fbc72a62e675bf6a9bd8e1c65012405e5f424",
+      "bytes": 191433
+    },
+    {
+      "file": "journal-3.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/blog-3.jpg",
+      "sha256": "ac04314e14cc1c08db3d2cb47cc0104ead3f9094b0cd2a3de248cab1d4dab8b3",
+      "bytes": 46067
+    },
+    {
+      "file": "about-1.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/about-inner1-1.jpg",
+      "sha256": "8dc56f989c86b60598ba733ed9f9a53a2ba4d0518710efb74d0b26578beab9fa",
+      "bytes": 10414
+    },
+    {
+      "file": "about-2.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/about-inner1-2.jpg",
+      "sha256": "edef93c3bded0015a9117bd9a4ca86cb9ffff406455dc944920870a46cdb97ad",
+      "bytes": 389421
+    },
+    {
+      "file": "about-3.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/about-inner1-3.jpg",
+      "sha256": "fca9c589aaba8c116f36f5507812d125c9b1702c52d7f743374b4aa360d3be96",
+      "bytes": 252405
+    },
+    {
+      "file": "about-4.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/about-inner1-4.jpg",
+      "sha256": "b4bc085cbebee152058b788905cb86088eee7038daa8fd818c5a6c36822509dd",
+      "bytes": 79342
+    },
+    {
+      "file": "about-5.jpg",
+      "source": "templates/boxcar-updated/public/media/resource/about-inner1-5.jpg",
+      "sha256": "1de7c47facab4a7343f492e5d0e5feb5036aae357216ed2018d88aa423828ec0",
+      "bytes": 99255
+    },
+    {
+      "file": "about-choice.svg",
+      "source": "templates/boxcar-updated/public/media/resource/boxcar-choice.svg",
+      "sha256": "9d90ac9bf93a6dd8447157204481da0b238496cf593e9de49fbf904ef8e6dba8",
+      "bytes": 2383
+    },
+    {
+      "file": "about-pricing.svg",
+      "source": "templates/boxcar-updated/public/media/resource/boxcar-pricing.svg",
+      "sha256": "d207933185937d7f8aa5c7df24bed72d8869b77f40daa5524c37e7817a0ecd6a",
+      "bytes": 2294
+    },
+    {
+      "file": "about-finance.svg",
+      "source": "templates/boxcar-updated/public/media/resource/boxcar-finance.svg",
+      "sha256": "91fa795cd229c09f7c01e7f9acad20636233193b0de4fde03d61864f7b35067e",
+      "bytes": 2078
+    },
+    {
+      "file": "about-care.svg",
+      "source": "templates/boxcar-updated/public/media/resource/boxcar-care.svg",
+      "sha256": "cc8a7dca1f7ad305bbca73d5496dbed4330710fa540adab257ddb83d27232e30",
+      "bytes": 1751
+    },
+    {
+      "file": "banner-estate-right.webp",
+      "source": "templates/boxcar-updated/public/media/banners/boxcar-estate-right-v1.webp",
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+      "bytes": 58860
+    },
+    {
+      "file": "banner-suv-left.webp",
+      "source": "templates/boxcar-updated/public/media/banners/boxcar-suv-left-v1.webp",
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+      "bytes": 65004
+    }
+  ]
+}

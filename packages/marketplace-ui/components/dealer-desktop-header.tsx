@@ -1,19 +1,23 @@
+"use client";
+
 import { cn } from "@repo/design-system/lib/utils";
-import { withBasePath } from "@repo/internationalization/paths";
+import { withoutBasePath } from "@repo/internationalization/paths";
 import {
   isPublicSitePathEnabled,
   type PublicSiteConfig,
   publicSite,
 } from "@repo/marketplace/site-config";
-import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
-import { DealerDesktopLocaleMenu } from "./dealer-desktop-locale-menu";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import { DealerNavigationLink } from "./dealer-navigation-link";
+import { DesktopSavedCars } from "./desktop-saved-cars";
 import type { MarketplaceMode } from "./marketplace-masthead";
-import Image from "./public-image";
+
+export { DesktopSavedCars } from "./desktop-saved-cars";
 
 /** Desktop-only dealership navigation, shared by inventory and service routes. */
 export const DealerDesktopHeader = ({
@@ -31,13 +35,13 @@ export const DealerDesktopHeader = ({
   site?: PublicSiteConfig;
   layout?: "default" | "showroom";
 }) => {
+  const pathname = withoutBasePath(usePathname());
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const destinations = [
     { id: "home", path: "/", label: isBg ? "Начало" : "Home" },
-    { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Inventory" },
-    { id: "sell", path: "/sell", label: isBg ? "Продай" : "Sell" },
-    { id: "imports", path: "/imports", label: isBg ? "Внос" : "Import" },
-    { id: "lease", path: "/lease", label: isBg ? "Лизинг" : "Financing" },
+    { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Cars" },
+    { id: "about", path: "/about", label: isBg ? "За нас" : "About us" },
+    { id: "contact", path: "/contact", label: isBg ? "Контакти" : "Contact" },
   ];
 
   return (
@@ -50,18 +54,11 @@ export const DealerDesktopHeader = ({
       >
         <div className={cn(styles.nav, "dealer-desktop-nav")}>
           <Link
-            aria-label={isBg ? "Начало" : "Home"}
+            aria-label={`${site.identity.desktopPreview?.name ?? site.identity.name} ${isBg ? "начало" : "home"}`}
             className={cn(styles.brand, "dealer-desktop-brand relative")}
             href={homeHref ?? getLocalizedPublicPath(locale, "/")}
           >
-            <Image
-              alt=""
-              className="object-contain object-left"
-              fill
-              priority
-              sizes="220px"
-              src={site.identity.inverseLogo}
-            />
+            <DealerDesktopLogo className={styles.logo} site={site} />
           </Link>
           <nav
             aria-label={
@@ -76,7 +73,11 @@ export const DealerDesktopHeader = ({
               .map((destination) => (
                 <DealerNavigationLink
                   aria-current={
-                    activeMode === destination.id ? "page" : undefined
+                    pathname ===
+                      getLocalizedPublicPath(locale, destination.path) ||
+                    (destination.id === "buy" && activeMode === "buy")
+                      ? "page"
+                      : undefined
                   }
                   data-marketplace-mode={destination.id}
                   data-slot="marketplace-mode-action"
@@ -88,32 +89,13 @@ export const DealerDesktopHeader = ({
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
-            <DealerDesktopLocaleMenu locale={locale} />
-            <a
-              aria-label={
-                isBg
-                  ? `Обадете се на ${site.contact.phoneDisplay}`
-                  : `Call ${site.contact.phoneDisplay}`
-              }
-              href={withBasePath(site.contact.phoneHref)}
+            <DesktopSavedCars locale={locale} />
+            <Link
+              className={styles.phone}
+              href={getLocalizedPublicPath(locale, "/contact")}
             >
-              <Phone aria-hidden="true" size={18} strokeWidth={1.8} />
-              <span>{site.contact.phoneDisplay}</span>
-            </a>
-            <a
-              aria-label={
-                isBg
-                  ? `Шоурум: ${site.contact.address}`
-                  : `Showroom: ${site.contact.address}`
-              }
-              className={cn(styles.showroom, "dealer-desktop-showroom")}
-              href={withBasePath(site.contact.mapsUrl)}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <MapPin aria-hidden="true" size={18} strokeWidth={1.8} />
-              <span>{isBg ? "Шоурум" : "Showroom"}</span>
-            </a>
+              {isBg ? "Свържете се" : "Contact us"}
+            </Link>
           </div>
         </div>
       </header>

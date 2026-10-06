@@ -24,12 +24,19 @@ const getStaticDemoDeploymentOrigin = (): string | undefined => {
 
 if (isStaticPublicPreview()) {
   const deploymentOrigin = getStaticDemoDeploymentOrigin();
-  process.env.NEXT_PUBLIC_APP_URL ??=
-    deploymentOrigin ?? "http://localhost:3000";
-  process.env.NEXT_PUBLIC_WEB_URL ??=
-    deploymentOrigin ?? "http://localhost:3001";
-  process.env.NEXT_PUBLIC_API_URL ??=
-    deploymentOrigin ?? "http://localhost:3002";
+  // Next inlines public environment references. Reflection keeps default writes
+  // valid in compiled bundles while retaining explicitly configured origins.
+  for (const [key, fallback] of Object.entries({
+    NEXT_PUBLIC_APP_URL: "http://localhost:3000",
+    NEXT_PUBLIC_WEB_URL: "http://localhost:3001",
+    NEXT_PUBLIC_API_URL: "http://localhost:3002",
+  })) {
+    Reflect.set(
+      process.env,
+      key,
+      Reflect.get(process.env, key) ?? deploymentOrigin ?? fallback
+    );
+  }
 }
 
 export const env = createEnv({

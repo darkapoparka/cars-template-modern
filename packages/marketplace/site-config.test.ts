@@ -7,6 +7,55 @@ const dealer = (overrides: Partial<typeof leadSite> = {}) =>
   createPublicSiteConfig({ ...leadSite, ...overrides });
 
 describe("public dealership configuration", () => {
+  it("supports a dealer-specific desktop filter layout and rejects unknown layouts", () => {
+    expect(dealer().inventory?.desktopFilterLayout).toBe("quick");
+    expect(
+      dealer({ desktopInventoryFilterLayout: "sidebar" }).inventory
+        ?.desktopFilterLayout
+    ).toBe("sidebar");
+    expect(() =>
+      publicSiteSchema.parse({
+        ...dealer(),
+        inventory: { desktopFilterLayout: "unknown" },
+      })
+    ).toThrow();
+  });
+  it("keeps the desktop master wordmark separate from mobile and dealer identities", () => {
+    const master = dealer();
+    expect(master.identity.name).toBe(leadSite.name);
+    expect(master.identity.logo).toBe(leadSite.logoPath);
+    expect(master.identity.desktopPreview?.name).toBe("Modern");
+    expect(
+      dealer({ slug: "client-motors" }).identity.desktopPreview
+    ).toBeUndefined();
+    expect(
+      dealer({ staticDemoMode: false }).identity.desktopPreview
+    ).toBeUndefined();
+  });
+
+  it("allows desktop context artwork to be adapted without changing mobile artwork", () => {
+    const source = dealer();
+    const adapted = dealer({
+      artwork: {
+        desktopPageBanner: {
+          left: "/dealer/left.webp",
+          right: "/dealer/right.webp",
+        },
+      },
+    });
+    expect(adapted.artwork.desktopPageBanner?.left).toBe("/dealer/left.webp");
+    expect(adapted.artwork.heroScene).toBe(source.artwork.heroScene);
+    expect(() =>
+      dealer({
+        artwork: {
+          desktopPageBanner: {
+            left: "//external.test/a.webp",
+            right: "/right.webp",
+          },
+        },
+      })
+    ).toThrow();
+  });
   it.each([
     true,
     false,

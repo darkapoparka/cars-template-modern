@@ -182,7 +182,11 @@ export const ListingSpecs = ({
   return (
     <section
       aria-label={heading}
-      className="scroll-mt-24"
+      className={
+        variant === "combined"
+          ? "scroll-mt-24 rounded-2xl border border-zinc-200 bg-white p-3"
+          : "scroll-mt-24"
+      }
       data-slot={sectionSlot}
     >
       <h2

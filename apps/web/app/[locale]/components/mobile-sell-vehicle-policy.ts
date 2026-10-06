@@ -47,7 +47,7 @@ export const mobileSellVehicleCopy = {
       {
         description:
           "VIN или марка, модел, година и пробег са достатъчни за начало.",
-        title: "Подгответе основните данни",
+        title: "Подгответе данните",
       },
       {
         description:
@@ -66,9 +66,10 @@ export const mobileSellVehicleCopy = {
     mileage: "Пробег",
     model: "Модел",
     noVin: "Нямате VIN? Въведете данните",
+    noVinLabel: "Нямате VIN?",
     openForm: "Отворете формата за оценка",
     submit: "Преглед преди обаждане",
-    title: "Продайте автомобила си",
+    title: "Продайте автомобил",
     vin: "VIN номер",
     vinOptional: "VIN номер (по желание)",
     year: "Година",
@@ -117,6 +118,7 @@ export const mobileSellVehicleCopy = {
     mileage: "Mileage",
     model: "Model",
     noVin: "No VIN? Enter the details",
+    noVinLabel: "No VIN?",
     openForm: "Open appraisal form",
     submit: "Review before calling",
     title: "Sell your vehicle",

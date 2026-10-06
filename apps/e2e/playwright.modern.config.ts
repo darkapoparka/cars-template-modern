@@ -4,6 +4,7 @@ import { modernMobileStatePath } from "./fixtures/modern-session.setup";
 export default defineConfig({
   testDir: "./specs",
   testMatch: [
+    "mobile-chrome.spec.ts",
     "modern-mobile.spec.ts",
     "modern-mobile-architecture.spec.ts",
     "modern-mobile-completion.spec.ts",

@@ -1,6 +1,7 @@
 import { withCMS } from "@repo/cms/next-config";
 import { withToolbar } from "@repo/feature-flags/lib/toolbar";
 import { publicBasePath } from "@repo/internationalization/paths";
+import { publicImageRemotePatterns } from "@repo/marketplace/public-images";
 import { config } from "@repo/next-config";
 import { withLogging, withSentry } from "@repo/observability/next-config";
 import type { NextConfig } from "next";
@@ -40,6 +41,15 @@ if (publicE2E) {
 
 nextConfig.basePath = publicBasePath;
 
+if (process.platform === "win32") {
+  // Bound Windows encoder work and avoid libvips operation-cache stalls.
+  nextConfig.experimental = {
+    ...nextConfig.experimental,
+    imgOptConcurrency: 1,
+    imgOptOperationCache: false,
+  };
+}
+
 nextConfig.images = nextConfig.images ?? {};
 // Vercel's mounted multi-app service does not expose Next's image optimizer at
 // the nested base path. Keep standalone optimization, but serve committed
@@ -49,18 +59,7 @@ if (publicBasePath) {
 }
 nextConfig.images.remotePatterns = [
   ...(nextConfig.images.remotePatterns ?? []),
-  {
-    protocol: "https",
-    hostname: "assets.basehub.com",
-  },
-  {
-    protocol: "https",
-    hostname: "images.unsplash.com",
-  },
-  {
-    protocol: "https",
-    hostname: "*.public.blob.vercel-storage.com",
-  },
+  ...publicImageRemotePatterns,
 ];
 
 nextConfig.redirects = async () => [

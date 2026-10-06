@@ -594,6 +594,25 @@ test("every scheduled cron maps to an existing GET route", () => {
   assert.ok(cronChecks.every(({ status }) => status === "pass"));
 });
 
+test("app environment declarations, schemas, direct reads and cache inputs agree", () => {
+  const report = evaluateContracts();
+  for (const app of ["web", "app", "api"]) {
+    for (const contract of [
+      "environment_declarations",
+      "environment_schema_alignment",
+      "environment_direct_reads",
+    ]) {
+      const id = `${app}.${contract}`;
+      const check = report.checks.find((entry) => entry.id === id);
+      assert.equal(check?.status, "pass", `${id}: ${check?.message}`);
+    }
+  }
+  const cache = report.checks.find(
+    (entry) => entry.id === "environment.turbo_global_env"
+  );
+  assert.equal(cache?.status, "pass", cache?.message);
+});
+
 test("every durable worker route has a complete delivery contract", () => {
   const report = evaluateContracts();
   const expectedIds = [

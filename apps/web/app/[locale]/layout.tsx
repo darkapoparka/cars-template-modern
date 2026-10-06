@@ -48,6 +48,11 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
   }
   const normalizedLocale = normalizeLocale(locale);
   const preferences = await getRequestPreferences(normalizedLocale);
+  const desktopBrandTheme = Object.fromEntries(
+    Object.entries(
+      createBrandTheme(leadSite.desktopAccent ?? publicSite.theme.accent)
+    ).map(([key, value]) => [key.replace("--brand", "--desktop-brand"), value])
+  );
 
   return (
     <html
@@ -56,7 +61,10 @@ const RootLayout = async ({ children, params }: RootLayoutProperties) => {
       data-site-kind={publicSite.kind}
       dir="ltr"
       lang={normalizedLocale}
-      style={createBrandTheme(publicSite.theme.accent)}
+      style={{
+        ...createBrandTheme(publicSite.theme.accent),
+        ...desktopBrandTheme,
+      }}
       suppressHydrationWarning
     >
       <head>

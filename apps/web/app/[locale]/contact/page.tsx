@@ -6,10 +6,11 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
-import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { DealerDesktopLogo } from "@repo/marketplace-ui/components/dealer-desktop-logo";
+import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
+import { normalizeSeoLocale } from "@repo/seo/metadata";
+import { ArrowUpRight, CarFront, Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import {
   createPublicLocalizedMetadata,
@@ -18,12 +19,14 @@ import {
 import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { parseSellVehicleDraft } from "@/lib/sell-vehicle-draft";
+import desktopStyles from "../components/boxcar-desktop-pages.module.css";
+import { DesktopContactPhoneCard } from "../components/desktop-contact-phone-card";
+import { DesktopContactPreviewForm } from "../components/desktop-contact-preview-form";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import {
   buildFinancingContactMessage,
   parseFinancingRequestHref,
 } from "../components/mobile-financing-policy";
-import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicEnquiryForm } from "../components/public-enquiry-form";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { pageCopy } from "./copy";
@@ -64,6 +67,189 @@ export const generateMetadata = async ({
   });
 };
 
+function DesktopContact({
+  initialMessage,
+  intent,
+  locale,
+  submissionAvailable,
+  subject,
+}: {
+  initialMessage: string;
+  intent: "finance" | "general";
+  locale: "bg" | "en";
+  submissionAvailable: boolean;
+  subject?: "viewing";
+}) {
+  const bg = locale === "bg";
+  const text = (bulgarian: string, english: string) =>
+    bg ? bulgarian : english;
+  return (
+    <DealerDesktopHero
+      appearance="photo"
+      artwork={
+        publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+      }
+      description={text(
+        "Въпроси за автомобил или оглед? Нека поговорим.",
+        "Questions about a car or a viewing? Let’s talk."
+      )}
+      locale={locale}
+      title={text("Свържете се с нас", "Contact us")}
+      variant="service"
+    >
+      <div className={desktopStyles.content}>
+        <section
+          aria-label={text("Карта на автосалона", "Showroom map")}
+          className={desktopStyles.map}
+        >
+          <iframe
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src={leadSite.mapsEmbedUrl}
+            title={text("Местоположение на автосалона", "Showroom location")}
+          />
+          <a
+            className={desktopStyles.directions}
+            href={withBasePath(leadSite.mapsUrl)}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {text("Как да ни намерите", "Get directions")}
+            <ArrowUpRight aria-hidden size={20} />
+          </a>
+        </section>
+        <div
+          className={desktopStyles.contact}
+          data-slot="desktop-contact-panel"
+        >
+          <section
+            aria-labelledby="desktop-contact-form-title"
+            className={desktopStyles.contactForm}
+            data-slot="desktop-contact-form-panel"
+          >
+            <DealerDesktopLogo className={desktopStyles.contactLogo} />
+            <h2 id="desktop-contact-form-title">
+              {text("Нека поговорим", "Get in touch")}
+            </h2>
+            <p className={desktopStyles.intro}>
+              {text(
+                "Въпрос за автомобил, оглед или следващата стъпка? Започнете разговора тук.",
+                "A question about a car, a viewing or your next step? Start the conversation here."
+              )}
+            </p>
+            {submissionAvailable ? (
+              <PublicEnquiryForm
+                initialMessage={initialMessage}
+                intent={intent}
+                locale={locale}
+              />
+            ) : (
+              <DesktopContactPreviewForm
+                initialMessage={initialMessage}
+                intent={intent}
+                locale={locale}
+                subject={subject}
+              />
+            )}
+          </section>
+          <aside
+            aria-labelledby="desktop-contact-details-title"
+            className={desktopStyles.details}
+            data-slot="desktop-contact-details"
+          >
+            <h2 id="desktop-contact-details-title">
+              {text("Данни за контакт", "Contact details")}
+            </h2>
+            <p className={desktopStyles.intro}>
+              {text(
+                "Открийте любимия си автомобил онлайн и го разгледайте на място.",
+                "Find your favourite car online, then take a closer look in person."
+              )}
+            </p>
+            <a
+              className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+              data-slot="desktop-contact-showroom-card"
+              href={withBasePath(leadSite.mapsUrl)}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <MapPin aria-hidden size={26} />
+              <div>
+                <h3>{text("Автосалон", "Showroom")}</h3>
+                <p>
+                  {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
+                </p>
+              </div>
+              <ArrowUpRight
+                aria-hidden
+                className={desktopStyles.cardArrow}
+                size={18}
+              />
+            </a>
+            <DesktopContactPhoneCard
+              locale={locale}
+              phoneDisplay={leadSite.phoneDisplay}
+              phoneHref={withBasePath(leadSite.phoneHref)}
+            />
+            {leadSite.email && (
+              <a
+                className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+                data-slot="desktop-contact-email-card"
+                href={`mailto:${leadSite.email}`}
+              >
+                <Mail aria-hidden size={26} />
+                <div>
+                  <h3>{text("Имейл", "Email")}</h3>
+                  <p>{leadSite.email}</p>
+                </div>
+                <ArrowUpRight
+                  aria-hidden
+                  className={desktopStyles.cardArrow}
+                  size={18}
+                />
+              </a>
+            )}
+            <a
+              className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+              data-slot="desktop-contact-viewing-card"
+              href={withBasePath(leadSite.phoneHref)}
+            >
+              <CarFront aria-hidden size={26} />
+              <div>
+                <h3>{text("Уговорете оглед", "Arrange a viewing")}</h3>
+                <p>
+                  {text("Обадете се за удобен час.", "Call to book a viewing.")}
+                </p>
+              </div>
+              <ArrowUpRight
+                aria-hidden
+                className={desktopStyles.cardArrow}
+                size={18}
+              />
+            </a>
+            {Object.values(publicSite.contact.socialLinks).some(Boolean) && (
+              <div className={desktopStyles.social}>
+                <h3>{text("Последвайте ни", "Follow us")}</h3>
+                <p>
+                  {text(
+                    "Нови автомобили и новини от автосалона.",
+                    "New arrivals and showroom updates."
+                  )}
+                </p>
+                <DealerSocialLinks
+                  isBg={bg}
+                  links={publicSite.contact.socialLinks}
+                />
+              </div>
+            )}
+          </aside>
+        </div>
+      </div>
+    </DealerDesktopHero>
+  );
+}
+
 export default async function ContactPage({
   params,
   searchParams,
@@ -94,7 +280,6 @@ export default async function ContactPage({
         request: financeContext,
       })
     : "";
-  const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const sellContext =
     getQueryValue(query, "intent") === "sell" ||
     getQueryValue(query, "topic") === "trade-in"
@@ -119,83 +304,20 @@ export default async function ContactPage({
     >
       <main className="bg-background text-zinc-950">
         <MobileAboutContact locale={normalizedLocale} services={services} />
-        <DealerDesktopHero
-          title={
-            normalizedLocale === "bg"
-              ? "За нас и контакти"
-              : "About and contact"
+        <DesktopContact
+          initialMessage={initialMessage}
+          intent={financeContext ? "finance" : "general"}
+          locale={normalizedLocale}
+          subject={
+            getQueryValue(query, "intent") === "viewing" ? "viewing" : undefined
           }
-          variant="service"
-        >
-          <div className="hidden lg:block">
-            <div
-              className={`${desktopStyles.content} ${desktopStyles.heroContent}`}
-            >
-              <section
-                aria-label={copy.contactTitle}
-                className={desktopStyles.panel}
-              >
-                <div className={desktopStyles.contactGrid}>
-                  <a
-                    className={desktopStyles.contactCard}
-                    href={withBasePath(leadSite.phoneHref)}
-                  >
-                    <Phone aria-hidden="true" size={28} strokeWidth={1.5} />
-                    <span>
-                      <small>
-                        {normalizedLocale === "bg" ? "Телефон" : "Phone"}
-                      </small>
-                      <strong>{leadSite.phoneDisplay}</strong>
-                    </span>
-                  </a>
-                  <a
-                    aria-label={copy.mapAction}
-                    className={desktopStyles.contactCard}
-                    href={withBasePath(leadSite.mapsUrl)}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <MapPin aria-hidden="true" size={28} strokeWidth={1.5} />
-                    <span>
-                      <small>{copy.locationLabel}</small>
-                      <strong>
-                        {getLeadCopy(locale).address},{" "}
-                        {getLeadCopy(locale).city}
-                      </strong>
-                    </span>
-                    <ArrowUpRight aria-hidden="true" size={18} />
-                  </a>
-                </div>
-                <h2 className={desktopStyles.sectionTitle}>
-                  {copy.servicesTitle}
-                </h2>
-                <div className={desktopStyles.serviceGrid}>
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <Link
-                        className={desktopStyles.serviceCard}
-                        href={localize(service.href)}
-                        key={service.href}
-                      >
-                        <Icon aria-hidden="true" size={26} strokeWidth={1.5} />
-                        <span>
-                          <strong>
-                            {service.title}
-                            <ArrowUpRight aria-hidden="true" size={17} />
-                          </strong>
-                          <p>{service.description}</p>
-                        </span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </section>
-            </div>
-          </div>
-        </DealerDesktopHero>
+          submissionAvailable={submissionAvailable}
+        />
         {submissionAvailable && (
-          <div className="mx-auto max-w-2xl px-4 py-8" id="contact-form">
+          <div
+            className="mx-auto max-w-2xl px-4 py-8 lg:hidden"
+            id="contact-form"
+          >
             <PublicEnquiryForm
               initialMessage={initialMessage}
               intent={financeContext ? "finance" : "general"}

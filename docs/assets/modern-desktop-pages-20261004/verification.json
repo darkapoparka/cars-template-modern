@@ -1,0 +1,1165 @@
+{
+  "date": "2026-10-04",
+  "scope": "Modern About and Contact desktop extension",
+  "baselineCommit": "6861dad21711ef36b0954df33eccc456e094ba3d",
+  "baselineModernCommit": "2fa502e3d0f41be38924ef995e818a7fcbfdce9b",
+  "buildId": "8pAC4ReE7eV6i2F8mJuo4",
+  "runtime": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8",
+    "origin": "http://127.0.0.1:6482"
+  },
+  "source": [
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.tsx",
+      "sha256": "b74cee1e005fcb78125f4cb363d05bc2f757c880f03e6dbc1e85aedaefd46f47"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+      "sha256": "9d1a6d01dda73ed1c69994efce1f7de9145fe1e12dadf649ce3b0bb69baa66d5"
+    },
+    {
+      "path": "apps/web/app/[locale]/about/page.tsx",
+      "sha256": "fb0aea7b0d59c321f1373f5eb7cef751c9edfbdbb90a66420f9a0b298912f22d"
+    },
+    {
+      "path": "apps/web/app/[locale]/contact/page.tsx",
+      "sha256": "d82e04fab6bd1f3d003e5e2c5c66d19bb5dbc4ff9530a9a6d09968d5480a2ae5"
+    },
+    {
+      "path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "sha256": "2169d6f5144e61ef711a2d4c411a05b7b28a0e36d2960238aab53b1aaacfc5aa"
+    },
+    {
+      "path": "apps/e2e/specs/desktop-panel-flows.spec.ts",
+      "sha256": "373f8507474116210052f0204bcf4d9c6598c2f11d249e9e2f13dba212932ce5"
+    },
+    {
+      "path": "apps/e2e/specs/boxcar-desktop-actions.spec.ts",
+      "sha256": "822bb7a2bc955f96f58dbd0986efc33bd1c0f1b4588aceef0b90d3f40a74550d"
+    },
+    {
+      "path": "TEMPLATE.md",
+      "sha256": "06c3ab553a9631c330904e24f9a7530fdd3baf0c6f7db25456adc054e9052d61"
+    }
+  ],
+  "checks": {
+    "webTests": 186,
+    "uiTests": 95,
+    "refactorTests": 7,
+    "preflightTests": 87,
+    "browser": {
+      "startTime": "2026-10-03T21:43:53.322Z",
+      "duration": 178470.63999999998,
+      "expected": 10,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "desktop": [
+      {
+        "locale": "bg",
+        "width": 1024,
+        "path": "about",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 944,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1024,
+        "path": "contact",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 944,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "path": "about",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 1200,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1280,
+        "path": "contact",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 1200,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "path": "about",
+        "box": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 60,
+          "y": 354,
+          "width": 1320,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1440,
+        "path": "contact",
+        "box": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 60,
+          "y": 354,
+          "width": 1320,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "path": "about",
+        "box": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 300,
+          "y": 354,
+          "width": 1320,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "bg",
+        "width": 1920,
+        "path": "contact",
+        "box": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 300,
+          "y": 354,
+          "width": 1320,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "path": "about",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 944,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1024,
+        "path": "contact",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 944,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 944,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "path": "about",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 1200,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1280,
+        "path": "contact",
+        "box": {
+          "x": 40,
+          "y": 90,
+          "width": 1200,
+          "height": 224
+        },
+        "body": {
+          "x": 40,
+          "y": 354,
+          "width": 1200,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "path": "about",
+        "box": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 60,
+          "y": 354,
+          "width": 1320,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1440,
+        "path": "contact",
+        "box": {
+          "x": 60,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 60,
+          "y": 354,
+          "width": 1320,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "path": "about",
+        "box": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 300,
+          "y": 354,
+          "width": 1320,
+          "height": 440
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      },
+      {
+        "locale": "en",
+        "width": 1920,
+        "path": "contact",
+        "box": {
+          "x": 300,
+          "y": 90,
+          "width": 1320,
+          "height": 224
+        },
+        "body": {
+          "x": 300,
+          "y": 354,
+          "width": 1320,
+          "height": 360
+        },
+        "styles": {
+          "radius": "20px",
+          "background": "linear-gradient(rgba(5, 11, 32, 0.4) 0px, rgba(5, 11, 32, 0.28) 55%, rgba(5, 11, 32, 0.16) 100%), url(\"http://127.0.0.1:6482/desktop-boxcars/hero.jpg\")",
+          "escapedText": false,
+          "before": "none",
+          "after": "none"
+        },
+        "focus": {
+          "visible": true,
+          "width": "2px",
+          "color": "rgb(255, 255, 255)",
+          "style": "solid"
+        }
+      }
+    ],
+    "accessibility": [
+      {
+        "locale": "bg",
+        "path": "about",
+        "violations": []
+      },
+      {
+        "locale": "bg",
+        "path": "contact",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "path": "about",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "path": "contact",
+        "violations": []
+      }
+    ],
+    "mobile": [
+      {
+        "name": "bg-about-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-about-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-about-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-contact-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-contact-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-contact-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-about-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-about-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-about-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-contact-320",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-contact-390",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-contact-1023",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      }
+    ],
+    "captures": [
+      {
+        "name": "bg-about-1024",
+        "route": "/bg/about",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-1280",
+        "route": "/bg/about",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-1440",
+        "route": "/bg/about",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-1920",
+        "route": "/bg/about",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-320",
+        "route": "/bg/about",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-390",
+        "route": "/bg/about",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-about-1023",
+        "route": "/bg/about",
+        "width": 1023,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-1024",
+        "route": "/bg/contact",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-1280",
+        "route": "/bg/contact",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-1440",
+        "route": "/bg/contact",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-1920",
+        "route": "/bg/contact",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-320",
+        "route": "/bg/contact",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-390",
+        "route": "/bg/contact",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-contact-1023",
+        "route": "/bg/contact",
+        "width": 1023,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-1024",
+        "route": "/en/about",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-1280",
+        "route": "/en/about",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-1440",
+        "route": "/en/about",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-1920",
+        "route": "/en/about",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-320",
+        "route": "/en/about",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-390",
+        "route": "/en/about",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-about-1023",
+        "route": "/en/about",
+        "width": 1023,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-1024",
+        "route": "/en/contact",
+        "width": 1024,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-1280",
+        "route": "/en/contact",
+        "width": 1280,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-1440",
+        "route": "/en/contact",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-1920",
+        "route": "/en/contact",
+        "width": 1920,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-320",
+        "route": "/en/contact",
+        "width": 320,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-390",
+        "route": "/en/contact",
+        "width": 390,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-contact-1023",
+        "route": "/en/contact",
+        "width": 1023,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-1440",
+        "route": "/bg",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "bg-cars-1440",
+        "route": "/bg/cars",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      },
+      {
+        "name": "en-1440",
+        "route": "/en",
+        "width": 1440,
+        "status": 200,
+        "errors": [],
+        "consoleErrors": [],
+        "overflow": false,
+        "brokenImages": [],
+        "emptyButtons": [],
+        "duplicateIds": []
+      }
+    ],
+    "homeCarsRegression": [
+      {
+        "name": "bg-1440",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "bg-cars-1440",
+        "sameDimensions": true,
+        "changedPixels": 0,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": true
+      },
+      {
+        "name": "en-1440",
+        "sameDimensions": true,
+        "changedPixels": 58,
+        "sameGeometry": true,
+        "sameHeadings": true,
+        "sameLinks": true,
+        "exact": false
+      }
+    ],
+    "homeCarsNote": "BG Home and Cars are pixel-identical. EN Home has 58 photo-edge pixels differing by at most 2 RGB levels. Visible geometry, headings and links match in all three frames after excluding the added banner audit attribute."
+  },
+  "screenshots": [
+    {
+      "path": "about-before.png",
+      "rawPath": "L:/CODEX/cars/runtime/modern-about-contact-20261004/before-bg-chromium/bg-about-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "d73f8dc5bf31cb18c81a5dfbf83c52782f2e2b34fa7fe8bb3101a64e4d15dcaf"
+    },
+    {
+      "path": "about-after.png",
+      "rawPath": "L:/CODEX/cars/runtime/modern-about-contact-20261004/final-bg-chromium/bg-about-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "d8572eb933fedcb0ae24699836cc85ea8630baa4945132db01ce06ee8779a60c"
+    },
+    {
+      "path": "contact-before.png",
+      "rawPath": "L:/CODEX/cars/runtime/modern-about-contact-20261004/before-bg-chromium/bg-contact-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "fb4fd73a0359e902feada833effd660698480b96efb7a5ac9b333e0978a084ef"
+    },
+    {
+      "path": "contact-after.png",
+      "rawPath": "L:/CODEX/cars/runtime/modern-about-contact-20261004/final-bg-chromium/bg-contact-1440.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "a0a2057603ae49a4dd7c25ab29aa902c7907e25460291c5ce1e02416e8cf8306"
+    }
+  ],
+  "logs": [
+    {
+      "path": "biome.log",
+      "sha256": "b2edc13015c0357173d764dc2565a12c08402b0adf6c6afc8c071fa0b0252dd8"
+    },
+    {
+      "path": "ui-typecheck.log",
+      "sha256": "4f01cc6f73230e8fbf3b08e0b2f280eb703602fbc6fd1cbb5e2e584c792f1d5e"
+    },
+    {
+      "path": "web-typecheck.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "e2e-typecheck.log",
+      "sha256": "4f01cc6f73230e8fbf3b08e0b2f280eb703602fbc6fd1cbb5e2e584c792f1d5e"
+    },
+    {
+      "path": "web-tests.log",
+      "sha256": "2eabbefc546c9066620978dc1c1953e01799eac7998c2d9ff6d8845d2451f4e2"
+    },
+    {
+      "path": "ui-tests.log",
+      "sha256": "4a97566e23eb1e7ccf73d8d51e2f5704c802ec78199006ac62f528e04f058a6c"
+    },
+    {
+      "path": "refactor-contracts.log",
+      "sha256": "6e1a761dfa4c4246aca894802e8da2dcb727646564e0d748c91c9409c475ff1b"
+    },
+    {
+      "path": "preflight-contracts.log",
+      "sha256": "701cba74823a619335009b47e8d8313506adf627e28b76a6c894583993a85e6c"
+    },
+    {
+      "path": "preflight-tests.log",
+      "sha256": "4495f2628789a92e2f764d6d02f86d8b647d8135217307639a4e5521d7e3929b"
+    },
+    {
+      "path": "build-final.log",
+      "sha256": "8eddeadc1b266523fef2d879231739047d30da59a3fc95d2f5644709d9e09ad8"
+    },
+    {
+      "path": "browser-final.log",
+      "sha256": "a8db0782c6d0e13ffb31422cd10afcf864ced787c11b00b9479bfb15cef777c1"
+    },
+    {
+      "path": "geometry-verified.log",
+      "sha256": "f09e3279bb8bbef2b2efb36cd30a0a77bf769cb4cc60fd070609ef519f31339e"
+    }
+  ],
+  "rawArtifacts": "L:/CODEX/cars/runtime/modern-about-contact-20261004",
+  "limits": [
+    "Local production preview using the retained image cache; cold PNG optimizer remains unqualified.",
+    "Existing braces advisory remains a release hold.",
+    "No dealer deployment, template-lock promotion, provider integration or mounted/hosted acceptance."
+  ]
+}

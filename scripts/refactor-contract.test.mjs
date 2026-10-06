@@ -20,6 +20,21 @@ const files = [
 ].filter((file) => existsSync(resolve(root, file)));
 const literalColorPattern = /#[0-9a-f]{3,8}\b/i;
 const cascadeOverridePattern = /!important|:global|nth-child/;
+const desktopWebStylePattern =
+  /apps\/web\/app\/\[locale\]\/.*desktop.*\.module\.css$/;
+const desktopComponentPattern =
+  /\/components\/(?:desktop-|dealer-desktop-).*\.tsx$/;
+const mediaConditionPattern = /@media[^{}]+\{/g;
+const desktopPalettePattern =
+  /#[0-9a-f]{3,8}\b|\b(?:rgb|rgba|hsl|oklch|color-mix)\(/i;
+const desktopDimensionPattern = /(?:^|[\s:(])\d*\.?\d+(?:px|rem|em|ms)\b/;
+const desktopTypographyPattern =
+  /font-weight:\s*\d|(?:line-height|letter-spacing):\s*-?\d*\.?\d+[;\s]/;
+const desktopUtilityPalettePattern =
+  /(?:^|\s|:)(?:bg|text|border)-(?:white|black|zinc-|gray-|slate-)/;
+const desktopUtilityValuePattern =
+  /(?:^|\s|:)(?:rounded|shadow|w|h|min-w|max-w|min-h|max-h|size|grid-cols|grid-rows)-\[([^\]]+)\]/g;
+const desktopUtilityLiteralPattern = /\d(?:px|rem)|rgba?\(/;
 const codePattern = /\.tsx?$/;
 const publicCode = files.filter(
   (file) =>
@@ -65,7 +80,14 @@ test("desktop collection composition enters the shell through a server-created s
     "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx"
   );
   assert.ok(!content.includes('"use client"'));
-  assert.ok(content.includes("<VehicleCard"));
+  assert.ok(content.includes("<DealerDesktopStock"));
+  const stock = read(
+    "packages/marketplace-ui/components/dealer-desktop-stock.tsx"
+  );
+  assert.ok(stock.startsWith('"use client";'));
+  assert.ok(stock.includes("<VehicleCard"));
+  assert.ok(!stock.includes("process.env."));
+  assert.ok(!stock.includes("@repo/database"));
   assert.ok(
     !files.includes(
       "packages/marketplace-ui/components/desktop-landing-vehicle-card.tsx"
@@ -84,6 +106,70 @@ test("desktop component styles use shared tokens, not a new literal palette or d
     const css = read(file);
     assert.doesNotMatch(css, literalColorPattern, file);
     assert.doesNotMatch(css, cascadeOverridePattern, file);
+  }
+});
+
+test("desktop presentation values stay in the design system", () => {
+  const desktopStyles = files.filter(
+    (file) =>
+      file.endsWith(".module.css") &&
+      ((file.startsWith("packages/marketplace-ui/components/") &&
+        (file.includes("desktop") ||
+          file.endsWith("dealer-hero-search.module.css") ||
+          file.endsWith("dealer-inventory.module.css"))) ||
+        desktopWebStylePattern.test(file))
+  );
+  for (const file of desktopStyles) {
+    // Breakpoints and structural grid proportions are layout conditions.
+    const declarations = read(file).replace(mediaConditionPattern, "{");
+    assert.doesNotMatch(
+      declarations,
+      desktopPalettePattern,
+      `Local desktop palette or colour mix in ${file}`
+    );
+    assert.doesNotMatch(
+      declarations,
+      desktopDimensionPattern,
+      `Local desktop dimension or timing in ${file}`
+    );
+    assert.doesNotMatch(
+      declarations,
+      desktopTypographyPattern,
+      `Local desktop typography in ${file}`
+    );
+  }
+  const desktopComponents = publicCode.filter((file) =>
+    desktopComponentPattern.test(file)
+  );
+  for (const file of desktopComponents) {
+    const source = ts.createSourceFile(
+      file,
+      read(file),
+      ts.ScriptTarget.Latest,
+      true
+    );
+    const visit = (node) => {
+      if (
+        ts.isStringLiteral(node) ||
+        ts.isNoSubstitutionTemplateLiteral(node)
+      ) {
+        // Vector flag artwork and intrinsic image dimensions are asset data.
+        assert.doesNotMatch(
+          node.text,
+          desktopUtilityPalettePattern,
+          `Local desktop utility palette in ${file}`
+        );
+        for (const match of node.text.matchAll(desktopUtilityValuePattern)) {
+          assert.ok(
+            match[1].includes("var(") ||
+              !desktopUtilityLiteralPattern.test(match[1]),
+            `Local desktop utility dimension in ${file}: ${match[0]}`
+          );
+        }
+      }
+      ts.forEachChild(node, visit);
+    };
+    visit(source);
   }
 });
 

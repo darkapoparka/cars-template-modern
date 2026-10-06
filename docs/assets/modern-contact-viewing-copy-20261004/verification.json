@@ -1,0 +1,312 @@
+{
+  "verifiedAt": "2026-10-04T08:56:08.6165111Z",
+  "baselineBuild": "Top3hISwH_fKUeHPHrTgo",
+  "buildId": "zuE4JJ621vsZNIGa584j4",
+  "checks": {
+    "biome": "passed",
+    "releasePreflightTests": "87/87 passed",
+    "workspaceDoctor": "--fetch completed",
+    "releasePreflightContracts": "passed",
+    "refactorContracts": "7/7 passed",
+    "webTypecheck": "passed",
+    "productionWebpackBuild": "passed"
+  },
+  "viewing": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        741.6875,
+        741.6875
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1280,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1920,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1280,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1920,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        725,
+        725
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        741.6875,
+        741.6875
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1280,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1920,
+      "text": "Обадете се за удобен час.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1280,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1920,
+      "text": "Call to book a viewing.",
+      "lines": 1,
+      "clipped": false,
+      "columnHeights": [
+        731,
+        731
+      ],
+      "errors": []
+    }
+  ],
+  "mobile": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "changedPixels": 0
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "changedPixels": 0
+    },
+    {
+      "locale": "bg",
+      "width": 1023,
+      "changedPixels": 0
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "changedPixels": 0
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "changedPixels": 0
+    },
+    {
+      "locale": "en",
+      "width": 1023,
+      "changedPixels": 0
+    }
+  ],
+  "accessibility": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "result": "No WCAG A/AA violations"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "result": "No WCAG A/AA violations"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "result": "No WCAG A/AA violations"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "result": "No WCAG A/AA violations"
+    }
+  ],
+  "canonical": {
+    "origin": "http://127.0.0.1:6482",
+    "buildId": "zuE4JJ621vsZNIGa584j4",
+    "records": [
+      {
+        "locale": "bg",
+        "contactStatus": 200,
+        "contactMatchesQualifiedPixels": true,
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      },
+      {
+        "locale": "en",
+        "contactStatus": 200,
+        "contactMatchesQualifiedPixels": true,
+        "carsStatus": 200,
+        "makeDialogPageShiftPx": 0,
+        "escapeRestoresFocus": true,
+        "errors": []
+      }
+    ]
+  },
+  "sourceHashes": [
+    {
+      "Path": "apps/web/app/[locale]/contact/page.tsx",
+      "Hash": "A78B3C58ECC96E14A370CE97D498B8AE12C55FF96D5CBA83CC4039DB1F39F982"
+    },
+    {
+      "Path": "apps/web/app/[locale]/components/boxcar-desktop-pages.module.css",
+      "Hash": "25F55CC26B4470EDE66EA34ADF46375937D68AF96A80808820FF449A232298AF"
+    }
+  ]
+}

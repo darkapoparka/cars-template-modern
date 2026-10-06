@@ -20,6 +20,8 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
+import { DealerDesktopFooter } from "./dealer-desktop-footer";
+import desktopStyles from "./public-desktop-layout.module.css";
 
 interface FooterProps {
   readonly locale: string;
@@ -174,6 +176,9 @@ export const Footer = ({ locale }: FooterProps) => {
   const isBg = normalizedLocale === "bg";
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const currentYear = new Date().getFullYear();
+  if (isDealershipSite) {
+    return <DealerDesktopFooter locale={locale} />;
+  }
 
   const groups = getFooterGroups(isBg, localize)
     .map((group) => ({
@@ -192,7 +197,9 @@ export const Footer = ({ locale }: FooterProps) => {
       }`}
       data-slot="public-marketplace-footer"
     >
-      <div className={marketplaceContentFrameClassName}>
+      <div
+        className={`${marketplaceContentFrameClassName} ${desktopStyles.footerFrame}`}
+      >
         <div className="grid gap-8 py-9 md:grid-cols-[minmax(13rem,1.15fr)_minmax(0,2.5fr)] md:gap-12 lg:py-11">
           <div className="max-w-sm">
             <Link

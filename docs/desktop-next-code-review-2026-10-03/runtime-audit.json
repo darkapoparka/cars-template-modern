@@ -1,0 +1,373 @@
+{
+  "media": [
+    {
+      "width": 390,
+      "status": 200,
+      "htmlBytes": 447318,
+      "errors": [],
+      "preload": [
+        {
+          "href": "/desktop-boxcars/hero.jpg",
+          "media": "(min-width: 1024px)",
+          "priority": "high",
+          "inHead": true
+        }
+      ],
+      "heroRequests": [],
+      "cardImages": [
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+          "width": 0
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=384&q=75",
+          "width": 0
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=384&q=75",
+          "width": 0
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=384&q=75",
+          "width": 0
+        }
+      ],
+      "banner": [
+        {
+          "sizes": "(min-width: 1400px) 1320px, calc(100vw - 80px)",
+          "width": 0
+        }
+      ],
+      "journal": [
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "",
+          "width": 0
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "",
+          "width": 0
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "",
+          "width": 0
+        }
+      ],
+      "scripts": 13,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "status": 200,
+      "htmlBytes": 447318,
+      "errors": [],
+      "preload": [
+        {
+          "href": "/desktop-boxcars/hero.jpg",
+          "media": "(min-width: 1024px)",
+          "priority": "high",
+          "inHead": true
+        }
+      ],
+      "heroRequests": [
+        {
+          "initiator": "link",
+          "start": 179.20000000298023,
+          "duration": 10.099999994039536,
+          "transfer": 133428
+        }
+      ],
+      "cardImages": [
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 278
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 278
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 278
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 278
+        }
+      ],
+      "banner": [
+        {
+          "sizes": "(min-width: 1400px) 1320px, calc(100vw - 80px)",
+          "width": 944
+        }
+      ],
+      "journal": [
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-1.jpg&w=384&q=75",
+          "width": 294.65625
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-2.jpg&w=384&q=75",
+          "width": 294.671875
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-3.jpg&w=384&q=75",
+          "width": 294.65625
+        }
+      ],
+      "scripts": 13,
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "status": 200,
+      "htmlBytes": 447318,
+      "errors": [],
+      "preload": [
+        {
+          "href": "/desktop-boxcars/hero.jpg",
+          "media": "(min-width: 1024px)",
+          "priority": "high",
+          "inHead": true
+        }
+      ],
+      "heroRequests": [
+        {
+          "initiator": "link",
+          "start": 297.09999999403954,
+          "duration": 11.200000002980232,
+          "transfer": 133428
+        }
+      ],
+      "cardImages": [
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 264
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 264
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 264
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 264
+        }
+      ],
+      "banner": [
+        {
+          "sizes": "(min-width: 1400px) 1320px, calc(100vw - 80px)",
+          "width": 1200
+        }
+      ],
+      "journal": [
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-1.jpg&w=384&q=75",
+          "width": 380
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-2.jpg&w=384&q=75",
+          "width": 380
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-3.jpg&w=384&q=75",
+          "width": 380
+        }
+      ],
+      "scripts": 15,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "status": 200,
+      "htmlBytes": 447318,
+      "errors": [],
+      "preload": [
+        {
+          "href": "/desktop-boxcars/hero.jpg",
+          "media": "(min-width: 1024px)",
+          "priority": "high",
+          "inHead": true
+        }
+      ],
+      "heroRequests": [
+        {
+          "initiator": "link",
+          "start": 173.29999999701977,
+          "duration": 9.700000002980232,
+          "transfer": 133428
+        }
+      ],
+      "cardImages": [
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 294
+        }
+      ],
+      "banner": [
+        {
+          "sizes": "(min-width: 1400px) 1320px, calc(100vw - 80px)",
+          "width": 1320
+        }
+      ],
+      "journal": [
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-1.jpg&w=640&q=75",
+          "width": 420
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-2.jpg&w=640&q=75",
+          "width": 420
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-3.jpg&w=640&q=75",
+          "width": 420
+        }
+      ],
+      "scripts": 19,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "status": 200,
+      "htmlBytes": 447318,
+      "errors": [],
+      "preload": [
+        {
+          "href": "/desktop-boxcars/hero.jpg",
+          "media": "(min-width: 1024px)",
+          "priority": "high",
+          "inHead": true
+        }
+      ],
+      "heroRequests": [
+        {
+          "initiator": "link",
+          "start": 340.3999999910593,
+          "duration": 15.400000005960464,
+          "transfer": 133428
+        }
+      ],
+      "cardImages": [
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1635990215241-4d2805d729bb%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1669023161435-b3b8ad71f8f7%3Fw%3D1200%26q%3D82%26auto%3Dformat%26fit%3Dcrop&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617531653332-bd46c24f2068%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 294
+        },
+        {
+          "sizes": "(max-width: 1023px) 46vw, (max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px",
+          "source": "http://127.0.0.1:6494/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1555215695-3004980ad54e%3Fw%3D1200%26q%3D80&w=640&q=75",
+          "width": 294
+        }
+      ],
+      "banner": [
+        {
+          "sizes": "(min-width: 1400px) 1320px, calc(100vw - 80px)",
+          "width": 1320
+        }
+      ],
+      "journal": [
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-1.jpg&w=640&q=75",
+          "width": 420
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-2.jpg&w=640&q=75",
+          "width": 420
+        },
+        {
+          "sizes": "(min-width: 1400px) 420px, calc((100vw - 140px) / 3)",
+          "source": "http://127.0.0.1:6494/_next/image?url=%2Fdesktop-boxcars%2Fjournal-3.jpg&w=640&q=75",
+          "width": 420
+        }
+      ],
+      "scripts": 12,
+      "overflow": false
+    }
+  ],
+  "savedBoundary": {
+    "beforeKeys": [
+      "id",
+      "slug",
+      "category",
+      "dealerOrgId",
+      "status",
+      "title",
+      "description",
+      "price",
+      "priceType",
+      "monthlyEstimate",
+      "images",
+      "badges",
+      "location",
+      "features",
+      "spec",
+      "seller",
+      "publishedAt",
+      "promoted"
+    ],
+    "afterKeys": [
+      "href",
+      "id",
+      "image",
+      "price",
+      "title"
+    ],
+    "beforePropBytes": 1483,
+    "afterPropBytes": 254
+  }
+}

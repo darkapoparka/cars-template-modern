@@ -41,10 +41,34 @@ import {
   getDesktopQuickFilterClassName,
 } from "./desktop-filter-controls";
 import { DesktopFilterRailRanges } from "./desktop-filter-rail-ranges";
+import type { DesktopFullFilterSection } from "./desktop-full-filter-dialog";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
 import styles from "./desktop-quick-filters.module.css";
 
 type ApplyFilters = (filters: Partial<MarketplaceSearchParams>) => void;
+type OpenFilterSection =
+  | ((section: DesktopFullFilterSection) => void)
+  | undefined;
+const getFilterSectionOpener = (
+  open: OpenFilterSection,
+  section: DesktopFullFilterSection
+) => (open ? () => open(section) : undefined);
+function getSupplementaryFilterOpener(
+  id: string,
+  open: OpenFilterSection,
+  fallback: () => void
+) {
+  if (!open) {
+    return fallback;
+  }
+  if (id === "q") {
+    return () => open("search");
+  }
+  if (id === "body" || id === "transmission") {
+    return () => open(id);
+  }
+  return fallback;
+}
 
 const filterLayoutStyles = {
   toolbar: {
@@ -89,7 +113,7 @@ const DesktopQuickSort = ({
     <DesktopQuickFilterDialog
       active={filters.sort !== "recommended"}
       anyLabel={localizeMarketplace(isBg, "Препоръчани", "Recommended")}
-      className="w-auto min-w-28 shrink-0 gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]"
+      className="w-auto min-w-28 shrink-0 gap-2 desktop-ultra:px-[var(--desktop-control-compact-padding)] px-4 desktop-ultra:has-[>svg]:px-[var(--desktop-control-compact-padding)] has-[>svg]:px-4"
       dataSlot="desktop-sort-trigger"
       elevated={elevated}
       isBg={isBg}
@@ -120,6 +144,7 @@ export const DesktopQuickFilters = ({
   appearance = "default",
   elevated = false,
   showAdditionalFilters = false,
+  showSearchChip = false,
   showSort = true,
   filterCount,
   filters,
@@ -130,12 +155,14 @@ export const DesktopQuickFilters = ({
   onOpenFilters,
   onOpenMake,
   onOpenModel,
+  onOpenSection,
 }: {
   compact: boolean;
   layout?: "rail" | "toolbar" | "hero";
   appearance?: "default" | "inverse";
   elevated?: boolean;
   showAdditionalFilters?: boolean;
+  showSearchChip?: boolean;
   showSort?: boolean;
   filterCount: number;
   filters: MarketplaceSearchParams;
@@ -146,6 +173,7 @@ export const DesktopQuickFilters = ({
   onOpenFilters: () => void;
   onOpenMake: () => void;
   onOpenModel: () => void;
+  onOpenSection?: (section: DesktopFullFilterSection) => void;
 }) => {
   const labels = getDesktopQuickFilterLabels(filters, isBg, numberFormatter);
   const priceLabel = getDesktopPriceQuickFilterLabel(
@@ -157,7 +185,8 @@ export const DesktopQuickFilters = ({
   const supplementaryActiveFilterChips = activeFilterChips.filter(
     (chip) =>
       !(
-        representedDesktopFilterChipIds.has(chip.id) ||
+        (representedDesktopFilterChipIds.has(chip.id) &&
+          !(showSearchChip && chip.id === "q")) ||
         (showAdditionalFilters &&
           (chip.id === "body" || chip.id === "transmission"))
       )
@@ -166,7 +195,9 @@ export const DesktopQuickFilters = ({
   return (
     <div
       className={cn(
-        compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5",
+        compact
+          ? "py-2.5"
+          : "mx-auto mt-7 max-w-[var(--layout-wide-max)] py-0.5",
         layout !== "rail" && "p-0",
         appearance === "inverse" && styles.inverse
       )}
@@ -178,7 +209,7 @@ export const DesktopQuickFilters = ({
         </legend>
         <div
           className={cn(
-            "mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2",
+            "mx-auto flex w-full max-w-[var(--layout-wide-max)] flex-nowrap items-center justify-center gap-2",
             layout !== "rail" && "justify-start",
             filterLayoutStyles[layout].row
           )}
@@ -282,6 +313,7 @@ export const DesktopQuickFilters = ({
                     priceMin: undefined,
                   })
                 }
+                onOpen={getFilterSectionOpener(onOpenSection, "price")}
                 presets={marketplacePricePresets.map((value) => ({
                   label: `${localizeMarketplace(
                     isBg,
@@ -339,6 +371,7 @@ export const DesktopQuickFilters = ({
                     onClear={() =>
                       onApply({ yearMax: undefined, yearMin: undefined })
                     }
+                    onOpen={getFilterSectionOpener(onOpenSection, "year")}
                     presets={marketplaceYearPresets.map((value) => ({
                       label: `${localizeMarketplace(isBg, "От", "From")} ${value}`,
                       value: [value, marketplaceYearRange[1]],
@@ -370,7 +403,7 @@ export const DesktopQuickFilters = ({
                     active={Boolean(filters.mileageMax)}
                     className={cn(
                       desktopQuickFilterRailItemClassName,
-                      "hidden min-[85rem]:inline-flex"
+                      "desktop-expanded:inline-flex hidden"
                     )}
                     dataSlot="desktop-quick-filter"
                     description={localizeMarketplace(
@@ -398,6 +431,7 @@ export const DesktopQuickFilters = ({
                     )}
                     onApply={({ maximum }) => onApply({ mileageMax: maximum })}
                     onClear={() => onApply({ mileageMax: undefined })}
+                    onOpen={getFilterSectionOpener(onOpenSection, "mileage")}
                     presets={marketplaceMileagePresets.map((value) => ({
                       label: `${localizeMarketplace(
                         isBg,
@@ -437,13 +471,14 @@ export const DesktopQuickFilters = ({
                     )}
                     className={cn(
                       desktopQuickFilterRailItemClassName,
-                      "hidden min-[85rem]:inline-flex"
+                      "desktop-expanded:inline-flex hidden"
                     )}
                     dataSlot="desktop-quick-filter"
                     elevated={elevated}
                     isBg={isBg}
                     label={labels.fuel}
                     onClear={() => onApply({ fuel: undefined })}
+                    onOpen={getFilterSectionOpener(onOpenSection, "fuel")}
                     onSelect={(fuel) =>
                       onApply({ fuel: fuel as FuelType | undefined })
                     }
@@ -467,13 +502,17 @@ export const DesktopQuickFilters = ({
                         )}
                         className={cn(
                           desktopQuickFilterRailItemClassName,
-                          "hidden min-[96rem]:inline-flex"
+                          "desktop-full:inline-flex hidden"
                         )}
                         dataSlot="desktop-quick-filter"
                         elevated={elevated}
                         isBg={isBg}
                         label={labels.transmission}
                         onClear={() => onApply({ transmission: undefined })}
+                        onOpen={getFilterSectionOpener(
+                          onOpenSection,
+                          "transmission"
+                        )}
                         onSelect={(transmission) =>
                           onApply({
                             transmission: transmission as
@@ -505,13 +544,14 @@ export const DesktopQuickFilters = ({
                         )}
                         className={cn(
                           desktopQuickFilterRailItemClassName,
-                          "hidden min-[96rem]:inline-flex"
+                          "desktop-full:inline-flex hidden"
                         )}
                         dataSlot="desktop-quick-filter"
                         elevated={elevated}
                         isBg={isBg}
                         label={labels.body}
                         onClear={() => onApply({ body: undefined })}
+                        onOpen={getFilterSectionOpener(onOpenSection, "body")}
                         onSelect={(body) =>
                           onApply({
                             body: body as
@@ -552,7 +592,11 @@ export const DesktopQuickFilters = ({
                   key={chip.id}
                   label={chip.label}
                   onClear={() => onApply(chip.updates)}
-                  onOpen={onOpenFilters}
+                  onOpen={getSupplementaryFilterOpener(
+                    chip.id,
+                    onOpenSection,
+                    onOpenFilters
+                  )}
                 />
               ))}
             </div>
@@ -573,12 +617,19 @@ export const DesktopQuickFilters = ({
                   : "relative w-auto shrink-0 gap-2 border-primary bg-primary px-4 text-primary-foreground hover:border-primary/90 hover:bg-primary/90 hover:text-primary-foreground has-[>svg]:px-4"
               )}
               data-slot="desktop-primary-control"
-              onClick={onOpenFilters}
+              onClick={(event) => {
+                // Safari does not focus clicked buttons; give the dialog a return target.
+                event.currentTarget.focus({ preventScroll: true });
+                onOpenFilters();
+              }}
               title={localizeMarketplace(isBg, "Филтри", "Filters")}
               type="button"
               variant="secondary"
             >
-              <SlidersHorizontal aria-hidden="true" className="size-[18px]" />
+              <SlidersHorizontal
+                aria-hidden="true"
+                className="size-[var(--desktop-icon-size)]"
+              />
               <span>{localizeMarketplace(isBg, "Филтри", "Filters")}</span>
               {filterCount > 0 ? (
                 <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-panel px-1.5 font-semibold text-foreground text-micro ring-2 ring-primary">

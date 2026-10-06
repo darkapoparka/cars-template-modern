@@ -1,0 +1,2191 @@
+{
+  "buildId": "tqNfUiJmJmglKlIDEuKxW",
+  "origin": "http://127.0.0.1:6482",
+  "productChanges": [
+    "packages/marketplace-ui/components/desktop-full-filter-dialog.module.css"
+  ],
+  "sourceHash": "1AD3C8825AB14F035A066CB92B6391AE32C77A342C61A20CEDB567B2AD675C51",
+  "checks": {
+    "build": "passed",
+    "typecheck": "passed",
+    "biome": "passed",
+    "refactorCases": 7,
+    "releaseContracts": "passed",
+    "releasePreflightCases": 87,
+    "browserCases": {
+      "startTime": "2026-10-04T11:30:48.584Z",
+      "duration": 318707.721,
+      "expected": 32,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "modalSurfaces": 24,
+    "accessibilityScans": 20,
+    "unchangedPageCaptures": 20
+  },
+  "browserProjects": [
+    "filters-chromium",
+    "filters-webkit"
+  ],
+  "preservation": [
+    {
+      "name": "bg-cars-320",
+      "locale": "bg",
+      "route": "cars",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-390",
+      "locale": "bg",
+      "route": "cars",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1023",
+      "locale": "bg",
+      "route": "cars",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1024",
+      "locale": "bg",
+      "route": "cars",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1280",
+      "locale": "bg",
+      "route": "cars",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1440",
+      "locale": "bg",
+      "route": "cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-cars-1920",
+      "locale": "bg",
+      "route": "cars",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-home-320",
+      "locale": "bg",
+      "route": "home",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-home-390",
+      "locale": "bg",
+      "route": "home",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "bg-home-1440",
+      "locale": "bg",
+      "route": "home",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-320",
+      "locale": "en",
+      "route": "cars",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-390",
+      "locale": "en",
+      "route": "cars",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1023",
+      "locale": "en",
+      "route": "cars",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1024",
+      "locale": "en",
+      "route": "cars",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1280",
+      "locale": "en",
+      "route": "cars",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1440",
+      "locale": "en",
+      "route": "cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-cars-1920",
+      "locale": "en",
+      "route": "cars",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-home-320",
+      "locale": "en",
+      "route": "home",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-home-390",
+      "locale": "en",
+      "route": "home",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    },
+    {
+      "name": "en-home-1440",
+      "locale": "en",
+      "route": "home",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "changedPixels": 0
+    }
+  ],
+  "modalMatrix": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "height": 1000,
+      "box": {
+        "x": 32,
+        "y": 130,
+        "width": 945,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1280,
+      "height": 1000,
+      "box": {
+        "x": 152.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "box": {
+        "x": 232.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1920,
+      "height": 1000,
+      "box": {
+        "x": 472.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "height": 600,
+      "box": {
+        "x": 32,
+        "y": 32,
+        "width": 945,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "height": 600,
+      "box": {
+        "x": 232.5,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "height": 1000,
+      "box": {
+        "x": 32,
+        "y": 130,
+        "width": 945,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1280,
+      "height": 1000,
+      "box": {
+        "x": 152.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "box": {
+        "x": 232.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1920,
+      "height": 1000,
+      "box": {
+        "x": 472.5,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "height": 600,
+      "box": {
+        "x": 32,
+        "y": 32,
+        "width": 945,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "height": 600,
+      "box": {
+        "x": 232.5,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "height": 1000,
+      "box": {
+        "x": 32,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1280,
+      "height": 1000,
+      "box": {
+        "x": 160,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "box": {
+        "x": 240,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1920,
+      "height": 1000,
+      "box": {
+        "x": 480,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "height": 600,
+      "box": {
+        "x": 32,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "height": 600,
+      "box": {
+        "x": 240,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "height": 1000,
+      "box": {
+        "x": 32,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1280,
+      "height": 1000,
+      "box": {
+        "x": 160,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "box": {
+        "x": 240,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false,
+          "accessibility": "No WCAG A/AA violations"
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1920,
+      "height": 1000,
+      "box": {
+        "x": 480,
+        "y": 130,
+        "width": 960,
+        "height": 740
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "height": 600,
+      "box": {
+        "x": 32,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "height": 600,
+      "box": {
+        "x": 240,
+        "y": 32,
+        "width": 960,
+        "height": 536
+      },
+      "sections": [
+        "category",
+        "vehicle",
+        "price",
+        "year",
+        "mileage",
+        "body",
+        "fuel",
+        "transmission",
+        "location",
+        "origin",
+        "deliver-to",
+        "seller",
+        "search"
+      ],
+      "states": [
+        {
+          "id": "category",
+          "sections": [
+            "category"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "vehicle",
+          "sections": [
+            "vehicle"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "budget",
+          "sections": [
+            "price",
+            "year",
+            "mileage"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "details",
+          "sections": [
+            "body",
+            "fuel",
+            "transmission"
+          ],
+          "footerStable": true,
+          "clipped": false
+        },
+        {
+          "id": "location",
+          "sections": [
+            "location",
+            "origin",
+            "deliver-to",
+            "seller",
+            "search"
+          ],
+          "footerStable": true,
+          "clipped": false
+        }
+      ],
+      "escapeRestoresFocus": true,
+      "errors": []
+    }
+  ],
+  "canonical": [
+    {
+      "locale": "bg",
+      "status": 200,
+      "qualifiedBuildServed": true,
+      "width": 960,
+      "rangeCards": [
+        {
+          "id": "price",
+          "x": 257.5,
+          "y": 304,
+          "width": 292.65625
+        },
+        {
+          "id": "year",
+          "x": 566.15625,
+          "y": 304,
+          "width": 292.671875
+        },
+        {
+          "id": "mileage",
+          "x": 874.828125,
+          "y": 304,
+          "width": 292.65625
+        }
+      ],
+      "overlayPageShiftPx": 0,
+      "escapeRestoresFocus": true,
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "status": 200,
+      "qualifiedBuildServed": true,
+      "width": 960,
+      "rangeCards": [
+        {
+          "id": "price",
+          "x": 257.5,
+          "y": 304,
+          "width": 292.65625
+        },
+        {
+          "id": "year",
+          "x": 566.15625,
+          "y": 304,
+          "width": 292.671875
+        },
+        {
+          "id": "mileage",
+          "x": 874.828125,
+          "y": 304,
+          "width": 292.65625
+        }
+      ],
+      "overlayPageShiftPx": 0,
+      "escapeRestoresFocus": true,
+      "errors": []
+    }
+  ]
+}

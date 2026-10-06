@@ -1,0 +1,74 @@
+[
+  {
+    "name": "bg-home-grid-320",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-cars-grid-320",
+    "dimensionsMatch": true,
+    "changedPixels": 8,
+    "maximumChannelDifference": 5
+  },
+  {
+    "name": "bg-listing-grid-320",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-home-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-cars-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-listing-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-home-grid-1023",
+    "dimensionsMatch": true,
+    "changedPixels": 15,
+    "maximumChannelDifference": 5
+  },
+  {
+    "name": "bg-cars-grid-1023",
+    "dimensionsMatch": true,
+    "changedPixels": 30,
+    "maximumChannelDifference": 5
+  },
+  {
+    "name": "bg-listing-grid-1023",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-home-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-cars-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-listing-grid-390",
+    "dimensionsMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  }
+]

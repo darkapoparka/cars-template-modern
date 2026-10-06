@@ -2,28 +2,26 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@repo/design-system/components/ui/dialog";
-import { ScrollArea } from "@repo/design-system/components/ui/scroll-area";
-import {
   defaultVehicleCategory,
   type MarketplaceSearchParams,
+  type VehicleCategory,
   type VehicleTaxonomyMakeOption,
   withCategory,
 } from "@repo/marketplace";
-import { ChevronLeft, RotateCcw, X } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
+import { canUseDesktopFilterModelCounts } from "../lib/desktop-full-filter-policy";
 import {
   getMarketplaceControlCopy,
   isBulgarianMarketplaceLocale,
 } from "../lib/marketplace-control-copy";
+import { marketplaceSearchCurrency } from "../lib/marketplace-filter-config";
+import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options";
+import {
+  DesktopFullFilterDialog,
+  type DesktopFullFilterEntry,
+} from "./desktop-full-filter-dialog";
 import {
   DiscoveryFilterBody,
   type DiscoveryFilterView,
@@ -41,21 +39,29 @@ import {
 export const MarketplaceFullFilterOverlay = ({
   applyLabel,
   filters,
+  initialDesktopEntry = "vehicle",
   locale,
+  modelCounts,
   onApply,
   onDesktopApply,
   onOpenChange,
   open,
   taxonomy,
+  taxonomyByCategory,
 }: {
   applyLabel?: string;
   filters: MarketplaceSearchParams;
+  initialDesktopEntry?: DesktopFullFilterEntry;
   locale?: string;
+  modelCounts?: MarketplaceModelInventoryCount[];
   onApply: (filters: Partial<MarketplaceSearchParams>) => void;
   onDesktopApply?: (filters: Partial<MarketplaceSearchParams>) => void;
   onOpenChange: (open: boolean) => void;
   open: boolean;
   taxonomy: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
+  >;
 }) => {
   const isDesktop = useDesktopMarketplaceViewport();
   const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
@@ -136,77 +142,40 @@ export const MarketplaceFullFilterOverlay = ({
       view={view}
     />
   );
-  const filterBody = isDesktop ? (
-    <ScrollArea className="min-h-0 flex-1">{filterContent}</ScrollArea>
-  ) : (
-    filterContent
-  );
+  const filterBody = filterContent;
 
   if (isDesktop) {
-    return (
-      <Dialog onOpenChange={onOpenChange} open={open}>
-        <DialogContent
-          className="flex h-[min(46rem,calc(100dvh-2rem))] w-[calc(100%-2rem)] max-w-xl flex-col gap-0 overflow-hidden rounded-2xl border-border bg-card p-0 shadow-2xl"
-          data-slot="desktop-full-filter-dialog"
-          showCloseButton={false}
-        >
-          <DialogHeader className="p-0 text-left">
-            <div className="grid min-h-16 grid-cols-[2.5rem_1fr_2.5rem] items-center gap-3 px-4 py-3">
-              <Button
-                aria-label={
-                  view === "main" ? copy.actions.reset : copy.actions.back
-                }
-                className="size-10 rounded-full p-0 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
-                data-slot={
-                  view === "main"
-                    ? "desktop-full-filter-reset"
-                    : "desktop-full-filter-back"
-                }
-                onClick={() =>
-                  view === "main" ? resetDraft() : goToPreviousView()
-                }
-                size="icon"
-                title={view === "main" ? copy.actions.reset : copy.actions.back}
-                variant="ghost"
-              >
-                {view === "main" ? (
-                  <RotateCcw aria-hidden="true" className="size-[18px]" />
-                ) : (
-                  <ChevronLeft aria-hidden="true" className="size-5" />
-                )}
-              </Button>
-              <DialogTitle className="text-center text-lg capitalize leading-7">
-                {overlayTitle}
-              </DialogTitle>
-              <DialogClose asChild>
-                <Button
-                  aria-label={copy.actions.close}
-                  className="size-10 rounded-full p-0 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-950"
-                  data-slot="desktop-full-filter-close"
-                  size="icon"
-                  title={copy.actions.close}
-                  variant="ghost"
-                >
-                  <X aria-hidden="true" className="size-[18px]" />
-                </Button>
-              </DialogClose>
-            </div>
-            <DialogDescription className="sr-only">
-              {copy.fullFilterDescription}
-            </DialogDescription>
-          </DialogHeader>
-          {filterBody}
-          <DialogFooter className="mt-auto block bg-card p-4">
-            <Button
-              className="h-12 w-full rounded-xl bg-brand text-brand-foreground hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
-              onClick={applyAndClose}
-            >
-              {applyLabel ?? copy.actions.showResults}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    );
+    return open ? (
+      <DesktopFullFilterDialog
+        applyLabel={applyLabel}
+        draft={draft}
+        initialEntry={initialDesktopEntry}
+        locale={locale}
+        modelCounts={
+          canUseDesktopFilterModelCounts(filters, draft)
+            ? modelCounts
+            : undefined
+        }
+        onApply={applyAndClose}
+        onChange={(nextDraft) =>
+          setNormalizedDraft({
+            ...nextDraft,
+            currency:
+              nextDraft.priceMin !== undefined ||
+              nextDraft.priceMax !== undefined
+                ? (nextDraft.currency ?? marketplaceSearchCurrency)
+                : undefined,
+          })
+        }
+        onOpenChange={onOpenChange}
+        onReset={() => {
+          resetDraft();
+          setDraft((current) => ({ ...current, currency: undefined }));
+        }}
+        open={open}
+        taxonomy={taxonomyByCategory?.[draft.category] ?? taxonomy}
+      />
+    ) : null;
   }
 
   return (

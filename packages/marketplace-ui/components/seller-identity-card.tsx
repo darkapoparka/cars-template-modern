@@ -33,6 +33,7 @@ import {
   getSellerPanelCopy,
   getSellerPanelDisplayName,
 } from "../lib/seller-contact-policy";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import Image from "./public-image";
 
 const sellerRoleIcons = {
@@ -58,13 +59,7 @@ export const LeadSiteListingIdentityCard = ({
       className="rounded-xl border border-border bg-card p-5"
       data-slot="listing-dealership-card"
     >
-      <Image
-        alt={leadSite.name}
-        className="h-12 w-auto max-w-full object-contain object-left"
-        height={48}
-        src={leadSite.logoPath}
-        width={220}
-      />
+      <DealerDesktopLogo className="h-12 w-auto max-w-full object-contain object-left" />
 
       <a
         className="group mt-4 flex items-center justify-between gap-4 rounded-xl bg-control px-4 py-3 transition-colors hover:bg-control-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--lead-site-accent)]"
@@ -105,6 +100,7 @@ export const LeadSiteListingIdentityCard = ({
 
       <div className="mt-4 h-48 overflow-hidden rounded-lg bg-control">
         <iframe
+          allowFullScreen
           className="block h-full w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

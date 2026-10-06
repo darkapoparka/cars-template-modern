@@ -21,6 +21,7 @@ import Image from "./public-image";
 
 interface ListingGalleryProps {
   readonly badges?: readonly string[];
+  readonly desktopImageSizes?: string;
   readonly images: readonly VehicleListingImage[];
   readonly locale?: string;
   readonly title: string;
@@ -29,6 +30,7 @@ interface ListingGalleryProps {
 
 export const ListingGallery = ({
   badges = [],
+  desktopImageSizes,
   images,
   locale,
   title,
@@ -40,6 +42,13 @@ export const ListingGallery = ({
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedImage = images[selectedIndex];
   const imageCount = images.length;
+  const defaultImageSizes =
+    imageCount > 1
+      ? "(max-width: 1023px) 100vw, 66vw"
+      : "(max-width: 1023px) 100vw, 1000px";
+  const primaryImageSizes = desktopImageSizes
+    ? `(max-width: 1023px) 100vw, ${desktopImageSizes}`
+    : defaultImageSizes;
   const copy = getListingGalleryCopy(locale);
   const keyedImages = getKeyedListingGalleryImages(images);
   const secondaryImages = keyedImages
@@ -110,11 +119,7 @@ export const ListingGallery = ({
                   onError={() => markImageFailed(selectedImage.url)}
                   preload={selectedIndex === 0}
                   referrerPolicy="no-referrer"
-                  sizes={
-                    imageCount > 1
-                      ? "(max-width: 1023px) 100vw, 66vw"
-                      : "(max-width: 1023px) 100vw, 1000px"
-                  }
+                  sizes={primaryImageSizes}
                   src={selectedImage.url}
                   unoptimized={unoptimized}
                 />
@@ -122,6 +127,9 @@ export const ListingGallery = ({
               <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-micro shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
                 <Expand aria-hidden="true" className="size-4" />
                 <span className="hidden lg:inline">{copy.viewFullScreen}</span>
+                <span aria-hidden="true" className="hidden lg:inline">
+                  {selectedIndex + 1} / {imageCount}
+                </span>
                 <span className="lg:hidden">{imageCount}</span>
               </span>
             </button>

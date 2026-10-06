@@ -4,12 +4,14 @@
 @media (min-width: 1024px) {
   .toolbar {
     position: relative;
-    z-index: 42;
+    z-index: var(--desktop-layer-toolbar);
     display: block;
   }
   .content {
     position: relative;
-    z-index: 3;
-    width: min(calc(100% - 2 * var(--layout-gutter)), 72rem);
+    z-index: var(--desktop-layer-raised);
+    display: grid;
+    gap: calc(var(--spacing) * 3);
+    width: min(100%, calc(var(--spacing) * 285));
   }
 }

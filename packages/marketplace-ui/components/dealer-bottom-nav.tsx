@@ -64,6 +64,32 @@ const getLocaleSettingsHref = (locale?: string, returnTo?: string) =>
     )}`
   );
 
+const getSecondaryMenuItems = (locale?: string) => {
+  const isBg = locale?.startsWith("bg");
+  return [
+    {
+      href: getLocalizedPublicPath(locale, "/services"),
+      icon: Building2,
+      label: isBg ? "Всички услуги" : "All services",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/cars"),
+      icon: CarFront,
+      label: isBg ? "Всички автомобили" : "All vehicles",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/guides"),
+      icon: BookOpenText,
+      label: isBg ? "Съвети за покупка" : "Buying guides",
+    },
+    {
+      href: getLocalizedPublicPath(locale, "/contact"),
+      icon: Building2,
+      label: isBg ? "За нас и контакти" : "About and contact",
+    },
+  ];
+};
+
 export const DealerBottomNav = ({
   activeMode,
   locale,
@@ -116,23 +142,7 @@ export const DealerBottomNav = ({
     isPublicSitePathEnabled(item.href, publicSite)
   );
   const menuLabel = isBg ? "Меню" : "Menu";
-  const secondaryMenuItems = [
-    {
-      href: getLocalizedPublicPath(locale, "/cars"),
-      icon: CarFront,
-      label: isBg ? "Всички автомобили" : "All vehicles",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/guides"),
-      icon: BookOpenText,
-      label: isBg ? "Съвети за покупка" : "Buying guides",
-    },
-    {
-      href: getLocalizedPublicPath(locale, "/contact"),
-      icon: Building2,
-      label: isBg ? "За нас и контакти" : "About and contact",
-    },
-  ];
+  const secondaryMenuItems = getSecondaryMenuItems(locale);
 
   return (
     <>

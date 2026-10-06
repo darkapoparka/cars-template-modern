@@ -1,0 +1,18 @@
+[
+  {
+    "Path": "packages/design-system/styles/desktop-tokens.css",
+    "Hash": "761195996AE488360E8434EE897540EE7221051D3B04A0603B31AA489305702E"
+  },
+  {
+    "Path": "packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+    "Hash": "8D8D3EE80B8C5AF77A5FD1E8F7B0203DE53EA2AD37EFF2CE74099EA6FA7355D6"
+  },
+  {
+    "Path": "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+    "Hash": "9B1A5AEF9BD9739303F28ECA432C11D25E3B9C2069957957E15D7D72F6576B93"
+  },
+  {
+    "Path": "apps/e2e/specs/desktop-panel-flows.spec.ts",
+    "Hash": "D918E75AC78A4BADBF2D2646D2256214CAD2E5A494730948A32677723ABA57D3"
+  }
+]

@@ -34,6 +34,12 @@ export const env = createEnv({
     storage(),
   ],
   server: {
+    AUTOMARKET_AI_LISTING_TRIAL_LIMIT: z.coerce
+      .number()
+      .int()
+      .min(0)
+      .max(100)
+      .optional(),
     AUTOMARKET_ENABLE_BILLING: z.enum(["true", "false"]).optional(),
     CLERK_SECRET_KEY: clerkSecretKeySchema(),
   },
@@ -41,6 +47,8 @@ export const env = createEnv({
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: clerkPublishableKeySchema(),
   },
   runtimeEnv: {
+    AUTOMARKET_AI_LISTING_TRIAL_LIMIT:
+      process.env.AUTOMARKET_AI_LISTING_TRIAL_LIMIT,
     AUTOMARKET_ENABLE_BILLING: process.env.AUTOMARKET_ENABLE_BILLING,
     CLERK_SECRET_KEY: process.env.CLERK_SECRET_KEY,
     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY:

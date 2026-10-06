@@ -1,0 +1,124 @@
+.bookmark,
+.saved,
+.dialog {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .bookmark {
+    position: absolute;
+    top: calc(var(--spacing) * 5);
+    right: calc(var(--spacing) * 5);
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+    padding: 0;
+    color: var(--foreground);
+    cursor: pointer;
+    background: var(--desktop-surface);
+    border: 0;
+    border-radius: 50%;
+  }
+  .bookmark:hover,
+  .bookmark[aria-pressed="true"] {
+    color: var(--brand);
+  }
+  .bookmark[data-presentation="action"] {
+    position: static;
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    width: auto;
+    padding: 0 calc(var(--spacing) * 3.5);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-normal);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .saved {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    min-height: calc(var(--spacing) * 12);
+    padding: 0;
+    font-size: calc(var(--spacing) * 4);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .saved:hover {
+    color: var(--brand);
+  }
+  .dialog[open] {
+    display: block;
+    width: min(100% - calc(var(--spacing) * 20), calc(var(--spacing) * 260));
+    max-height: 80dvh;
+    padding: calc(var(--spacing) * 8);
+    margin: auto;
+    overflow: auto;
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 6);
+  }
+  .dialog::backdrop {
+    background: var(--desktop-dialog-backdrop);
+  }
+  .heading {
+    display: flex;
+    gap: calc(var(--spacing) * 6);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .heading h2 {
+    font-size: calc(var(--spacing) * 7.5);
+    font-weight: var(--font-weight-bold);
+  }
+  .heading button {
+    display: grid;
+    place-items: center;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+    cursor: pointer;
+    background: var(--control);
+    border-radius: 50%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 6);
+  }
+  .grid article {
+    overflow: hidden;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .grid img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  .grid h3,
+  .grid p {
+    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 4.5);
+    font-size: calc(var(--spacing) * 4.5);
+    overflow-wrap: anywhere;
+  }
+  .grid h3 {
+    font-weight: var(--font-weight-medium);
+  }
+  .grid button {
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 4.5);
+    color: var(--brand-text);
+    cursor: pointer;
+  }
+  .bookmark:focus-visible,
+  .saved:focus-visible,
+  .dialog :is(a, button):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--spacing) * 0.75);
+  }
+}

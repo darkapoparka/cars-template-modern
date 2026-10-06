@@ -20,7 +20,7 @@
 :global([data-filter-appearance="inverse"]) .clear:hover {
   color: var(--quick-filter-selected-foreground, var(--primary-foreground));
   background: var(--quick-filter-selected, var(--primary));
-  filter: brightness(0.95);
+  filter: brightness(var(--desktop-selected-hover-brightness));
 }
 :global([data-filter-appearance="inverse"]) .control[data-clearable="true"] {
   border-top-right-radius: 0;
@@ -32,6 +32,7 @@
 }
 :global([data-filter-appearance="inverse"]) .control:focus-visible,
 :global([data-filter-appearance="inverse"]) .clear:focus-visible {
-  outline: 2px solid var(--quick-filter-focus, var(--ring));
-  outline-offset: 3px;
+  outline: var(--desktop-focus-width) solid
+    var(--quick-filter-focus, var(--ring));
+  outline-offset: var(--desktop-focus-offset);
 }

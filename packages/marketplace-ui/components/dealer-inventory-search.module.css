@@ -1,0 +1,34 @@
+.controls {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .controls {
+    display: block;
+    min-width: 0;
+  }
+  .typeValue {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 1.5);
+    align-items: center;
+    min-width: 0;
+  }
+  .typeLabel {
+    flex-shrink: 0;
+    color: var(--muted-foreground);
+  }
+  .typeMenu {
+    z-index: var(--desktop-layer-popover);
+    min-width: calc(var(--spacing) * 56);
+    padding: var(--spacing);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: var(--elevation-overlay);
+  }
+  .typeOption {
+    min-height: calc(var(--spacing) * 10);
+    padding-left: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.5);
+    border-radius: calc(var(--spacing) * 2);
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-04",
+  "tool": "built-in imagegen",
+  "purpose": "Decorative blue 3D illustrations for Modern desktop About benefits; not inventory or business evidence.",
+  "assets": [
+    {
+      "key": "choice",
+      "prompt": "Use case: stylized-concept.\nAsset type: one transparent 3D illustration for an automotive website's About page, displayed at about 190px wide inside a light neutral card.\nStyle: premium, restrained studio 3D product render. Realistic rounded geometry with tactile satin cobalt-blue polymer, a few glossy blue highlights, frosted pale-blue glass, small brushed-silver details. Consistent palette: cobalt #405cf5, navy #1837a3, ice blue #c8dcff, soft white. No pink, purple, orange or gold. Clean commercial automotive visual, mature proportions, not a children's toy or emoji. Gentle elevated three-quarter camera, soft upper-left studio light, restrained realistic contact shadow.\nComposition: square canvas, centered complete object group occupying about 78 percent of the canvas. Every edge and object stays inside frame with breathing room. Genuine transparent alpha outside the object and its very soft contact shadow. No backdrop, floor rectangle, plinth, border, card, badge, words, numerals, lettering, logos, watermark or UI. Do not draw a checkerboard. Crisp enough to read as a small website asset.\nSubject: a single elegant modern crossover car in satin cobalt blue, front three-quarter view, facing left. Compact automotive studio model with realistic wheels, subtle dark windows and silver rim details. A small frosted pale-blue magnifying glass stands near the front wheel as the clear car-discovery cue. Generic unbranded vehicle; no manufacturer badge and no lettering on its plate. Balanced horizontal car silhouette in the middle of the square. Only the car and magnifying glass.",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10012-f99a-7673-875a-b17ba05099d3\\exec-74cdcf76-8356-45bc-884c-2b7e3c849a44.png",
+      "tool": "built-in imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-blue-v1/choice-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1146578,
+        "sha256": "b7c6b85075bc98a8b0ab27181bf7a9ab9e7eb2df0ea404edb50b83a4a7cdf46e"
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/blue-choice-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 29056,
+        "sha256": "a4eee66f297b96f989fda67d5c9bebf523eef4eb184bac5e301fdb528b9321c9",
+        "hasAlpha": true,
+        "transparentPixels": 86909,
+        "opaquePixels": 623
+      },
+      "processing": "Resize only to 384x384 with the original aspect ratio; WebP quality 90 with alpha quality 100. No cropping, recoloring, background replacement or creative edits."
+    },
+    {
+      "key": "details",
+      "prompt": "Use case: stylized-concept.\nAsset type: one transparent 3D illustration for an automotive website's About page, displayed at about 190px wide inside a light neutral card.\nStyle: premium, restrained studio 3D product render. Realistic rounded geometry with tactile satin cobalt-blue polymer, a few glossy blue highlights, frosted pale-blue glass, small brushed-silver details. Consistent palette: cobalt #405cf5, navy #1837a3, ice blue #c8dcff, soft white. No pink, purple, orange or gold. Clean commercial automotive visual, mature proportions, not a children's toy or emoji. Gentle elevated three-quarter camera, soft upper-left studio light, restrained realistic contact shadow.\nComposition: square canvas, centered complete object group occupying about 78 percent of the canvas. Every edge and object stays inside frame with breathing room. Genuine transparent alpha outside the object and its very soft contact shadow. No backdrop, floor rectangle, plinth, border, card, badge, words, numerals, lettering, logos, watermark or UI. Do not draw a checkerboard. Crisp enough to read as a small website asset.\nSubject: a gently upright rounded cobalt-blue vehicle-specification clipboard with a simple small embossed car silhouette near its top and three short raised silver lines below, with a single frosted pale-blue magnifying glass overlapping the lower right. The lines are abstract physical grooves, never letters or words. Render the board and lens as substantial premium 3D objects, not a flat graphic. Only the board and magnifying glass.",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10012-f99a-7673-875a-b17ba05099d3\\exec-2cb97042-9d39-4061-804b-e878ad6422b8.png",
+      "tool": "built-in imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-blue-v1/details-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1388251,
+        "sha256": "3cd87dd096be44f258e18e94a2d2aaf00f74da2311aebf37c76604dc3593ecb4"
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/blue-details-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 29274,
+        "sha256": "d90ce79fd817d307a17f139b44fd187a8b9e290b5566308018ada34455c3deb3",
+        "hasAlpha": true,
+        "transparentPixels": 70540,
+        "opaquePixels": 713
+      },
+      "processing": "Resize only to 384x384 with the original aspect ratio; WebP quality 90 with alpha quality 100. No cropping, recoloring, background replacement or creative edits."
+    },
+    {
+      "key": "budget",
+      "prompt": "Use case: stylized-concept.\nAsset type: one transparent 3D illustration for an automotive website's About page, displayed at about 190px wide inside a light neutral card.\nStyle: premium, restrained studio 3D product render. Realistic rounded geometry with tactile satin cobalt-blue polymer, a few glossy blue highlights, frosted pale-blue glass, small brushed-silver details. Consistent palette: cobalt #405cf5, navy #1837a3, ice blue #c8dcff, soft white. No pink, purple, orange or gold. Clean commercial automotive visual, mature proportions, not a children's toy or emoji. Gentle elevated three-quarter camera, soft upper-left studio light, restrained realistic contact shadow.\nComposition: square canvas, centered complete object group occupying about 78 percent of the canvas. Every edge and object stays inside frame with breathing room. Genuine transparent alpha outside the object and its very soft contact shadow. No backdrop, floor rectangle, plinth, border, card, badge, words, numerals, lettering, logos, watermark or UI. Do not draw a checkerboard. Crisp enough to read as a small website asset.\nSubject: one compact rounded cobalt-blue calculator angled in three-quarter view, with a small blank frosted pale-blue display and a clean regular grid of blank slightly raised silver-blue buttons. Two neat low stacks of silver and satin blue coins sit beside the calculator, conveying a car budget. All coin faces are blank with no currency symbols or words. Premium mature studio objects, not balloon-like toys. Only calculator and coins.",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10012-f99a-7673-875a-b17ba05099d3\\exec-b8006aeb-d4bd-4521-ad29-8bacd4713a2d.png",
+      "tool": "built-in imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-blue-v1/budget-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1214145,
+        "sha256": "8a45ee43ace883db192bcdec3c7ae4230854905a4050a239bfa593364f5115f1"
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/blue-budget-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 27502,
+        "sha256": "d4c846cb1886d562e9840df30f0cf83cfe4862d8528bce07a8db6779548ab0b3",
+        "hasAlpha": true,
+        "transparentPixels": 86128,
+        "opaquePixels": 630
+      },
+      "processing": "Resize only to 384x384 with the original aspect ratio; WebP quality 90 with alpha quality 100. No cropping, recoloring, background replacement or creative edits."
+    },
+    {
+      "key": "viewing",
+      "prompt": "Use case: stylized-concept.\nAsset type: one transparent 3D illustration for an automotive website's About page, displayed at about 190px wide inside a light neutral card.\nStyle: premium, restrained studio 3D product render. Realistic rounded geometry with tactile satin cobalt-blue polymer, a few glossy blue highlights, frosted pale-blue glass, small brushed-silver details. Consistent palette: cobalt #405cf5, navy #1837a3, ice blue #c8dcff, soft white. No pink, purple, orange or gold. Clean commercial automotive visual, mature proportions, not a children's toy or emoji. Gentle elevated three-quarter camera, soft upper-left studio light, restrained realistic contact shadow.\nComposition: square canvas, centered complete object group occupying about 78 percent of the canvas. Every edge and object stays inside frame with breathing room. Genuine transparent alpha outside the object and its very soft contact shadow. No backdrop, floor rectangle, plinth, border, card, badge, words, numerals, lettering, logos, watermark or UI. Do not draw a checkerboard. Crisp enough to read as a small website asset.\nSubject: a premium cobalt-blue car key fob with three subtle blank raised controls, a brushed-silver key blade and a small silver ring; beside it sits a compact frosted pale-blue appointment calendar tile with two silver binding loops and one raised blue checkmark. No date, letters, numbers or brand insignia. Coherent compact object group in the same gentle three-quarter studio viewpoint. Only key fob, blade, ring and appointment tile.",
+      "generatedPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10012-f99a-7673-875a-b17ba05099d3\\exec-29e452bb-1b91-4115-8e8b-1675bdbbabc5.png",
+      "tool": "built-in imagegen",
+      "transparentBackground": true,
+      "original": {
+        "path": "provenance/assets/about-blue-v1/viewing-source.png",
+        "width": 1254,
+        "height": 1254,
+        "bytes": 1352340,
+        "sha256": "36ee6f13a20ae6eb021d276d7cdbaf030ed930a965f3dafecd366382cc3c7790"
+      },
+      "runtime": {
+        "path": "apps/web/public/images/about/blue-viewing-v1.webp",
+        "width": 384,
+        "height": 384,
+        "bytes": 31864,
+        "sha256": "3b8a91e2ed0bacc0f88c77fb21d75445cc98ec8b3dad841017ec8f6c0bd28359",
+        "hasAlpha": true,
+        "transparentPixels": 81777,
+        "opaquePixels": 902
+      },
+      "processing": "Resize only to 384x384 with the original aspect ratio; WebP quality 90 with alpha quality 100. No cropping, recoloring, background replacement or creative edits."
+    }
+  ]
+}

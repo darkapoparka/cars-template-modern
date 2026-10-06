@@ -155,9 +155,7 @@ const DiscoveryFilterMainView = ({
         onChange={(event) =>
           setDraft({ ...draft, q: event.target.value || undefined })
         }
-        placeholder={
-          isBg ? "Марка, модел или ключова дума" : "Make, model or keyword"
-        }
+        placeholder={copy.search.makeModelPlaceholder}
         type="search"
         value={draft.q ?? ""}
       />

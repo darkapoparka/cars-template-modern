@@ -1,0 +1,1378 @@
+{
+  "schemaVersion": 1,
+  "approved": false,
+  "scope": "Modern desktop audit and source candidate",
+  "verifiedAt": "2026-10-03T07:07:03.689Z",
+  "repository": "darkapoparka/cars",
+  "branch": "main",
+  "sourcePath": "templates/modern",
+  "sourceParent": "6fde646bb479363585a60284accc2f3985f5d430",
+  "build": {
+    "artifact": ".next-public-e2e-boxcars-audit-acceptance-20261003-demo",
+    "id": "_sroVh1guSkSaAC0x1C10",
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8",
+    "react": "19.2.4",
+    "tailwind": "4.3.0",
+    "status": "passed"
+  },
+  "checks": {
+    "workspaceUnits": {
+      "passed": 1152
+    },
+    "workspaceTypecheck": {
+      "successfulTasks": 28
+    },
+    "styleCheck": {
+      "files": 1107,
+      "status": "passed"
+    },
+    "boundaries": {
+      "files": 1143,
+      "packages": 30,
+      "status": "passed"
+    },
+    "modernScriptTests": {
+      "passed": 98
+    },
+    "carsScriptTests": {
+      "passed": 315
+    },
+    "carsWorkflow": {
+      "status": "passed"
+    },
+    "desktopBrowsers": {
+      "startTime": "2026-10-03T06:29:53.320Z",
+      "duration": 222973.882,
+      "expected": 26,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "mobileBrowsers": {
+      "startTime": "2026-10-03T06:29:53.337Z",
+      "duration": 423431.736,
+      "expected": 148,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalPdpFollowup": {
+      "startTime": "2026-10-03T06:50:47.614Z",
+      "duration": 22667.098,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "desktopFrames": [
+    {
+      "route": "/bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/about",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/contact",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/imports",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/sell",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/lease",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/blog",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/guides",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/en/cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/en/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/contact",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/lease",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    }
+  ],
+  "mobileFrames": [
+    {
+      "route": "/bg",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/cars",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/about",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/about",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/contact",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/contact",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/imports",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/imports",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/sell",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/sell",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/lease",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/lease",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/blog",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/blog",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/guides",
+      "width": 320,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg/guides",
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "route": "/bg",
+      "width": 1023,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    }
+  ],
+  "mobilePreservation": {
+    "pixelIdentical": false,
+    "method": "Exact measured render geometry plus attribution of changed pixels to optimized images and the unchanged translucent dock.",
+    "frames": [
+      {
+        "name": "bg-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 83247,
+        "outsideImagePixels": 82,
+        "dockPixels": 82,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 147528,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-cars-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 83247,
+        "outsideImagePixels": 82,
+        "dockPixels": 82,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-cars-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 147528,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 103312,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 154130,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 1736,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-about-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 1736,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 1736,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-contact-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 1736,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-imports-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 20217,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-imports-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 29037,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-sell-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 706,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-sell-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 705,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-lease-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 84868,
+        "outsideImagePixels": 82,
+        "dockPixels": 82,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-lease-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 148463,
+        "outsideImagePixels": 0,
+        "dockPixels": 0,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-blog-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 53224,
+        "outsideImagePixels": 51,
+        "dockPixels": 51,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-blog-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 67798,
+        "outsideImagePixels": 71,
+        "dockPixels": 71,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-guides-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 53224,
+        "outsideImagePixels": 51,
+        "dockPixels": 51,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-guides-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 67798,
+        "outsideImagePixels": 71,
+        "dockPixels": 71,
+        "unexplainedPixels": 0,
+        "preserved": true
+      },
+      {
+        "name": "bg-1023",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "changedPixels": 294437,
+        "outsideImagePixels": 105,
+        "dockPixels": 105,
+        "unexplainedPixels": 0,
+        "preserved": true
+      }
+    ]
+  },
+  "desktopAccessibility": [
+    {
+      "route": "/bg",
+      "violations": []
+    },
+    {
+      "route": "/bg/cars",
+      "violations": []
+    },
+    {
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "violations": []
+    },
+    {
+      "route": "/bg/about",
+      "violations": []
+    },
+    {
+      "route": "/bg/contact",
+      "violations": []
+    },
+    {
+      "route": "/bg/imports",
+      "violations": []
+    },
+    {
+      "route": "/bg/sell",
+      "violations": []
+    },
+    {
+      "route": "/bg/lease",
+      "violations": []
+    },
+    {
+      "route": "/bg/blog",
+      "violations": []
+    },
+    {
+      "route": "/bg/guides",
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "violations": []
+    },
+    {
+      "route": "/en/cars",
+      "violations": []
+    },
+    {
+      "route": "/en/listing/bmw-x5-m50d-sofia-2020",
+      "violations": []
+    }
+  ],
+  "links": [
+    {
+      "path": "/bg",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg"
+    },
+    {
+      "path": "/bg/cars",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/cars"
+    },
+    {
+      "path": "/bg/about",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/about"
+    },
+    {
+      "path": "/bg/contact",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/contact"
+    },
+    {
+      "path": "/bg/cars?sort=newest",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/cars?sort=newest"
+    },
+    {
+      "path": "/bg/cars?currency=BGN&sort=price_asc",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/cars?currency=BGN&sort=price_asc"
+    },
+    {
+      "path": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/bmw-x5-m50d-sofia-2020"
+    },
+    {
+      "path": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021"
+    },
+    {
+      "path": "/bg/listing/bmw-m4-competition-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/bmw-m4-competition-sofia-2021"
+    },
+    {
+      "path": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024"
+    },
+    {
+      "path": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021"
+    },
+    {
+      "path": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020"
+    },
+    {
+      "path": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021"
+    },
+    {
+      "path": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021"
+    },
+    {
+      "path": "/bg/sell",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/sell"
+    },
+    {
+      "path": "/bg/imports",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports"
+    },
+    {
+      "path": "/bg/lease",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/lease"
+    },
+    {
+      "path": "/bg/contact?intent=viewing",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/contact?intent=viewing"
+    },
+    {
+      "path": "/bg/blog/premium-used-car-checklist",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/premium-used-car-checklist"
+    },
+    {
+      "path": "/bg/blog/import-costs-and-timing",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/import-costs-and-timing"
+    },
+    {
+      "path": "/bg/blog/financing-offer-questions",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/financing-offer-questions"
+    },
+    {
+      "path": "/bg/cars?sort=price_asc",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/cars?sort=price_asc"
+    },
+    {
+      "path": "/bg/blog",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides"
+    },
+    {
+      "path": "/bg/guides",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides"
+    },
+    {
+      "path": "/bg/legal/privacy",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/legal/privacy"
+    },
+    {
+      "path": "/bg/legal/terms",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/legal/terms"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg"
+    },
+    {
+      "path": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019"
+    },
+    {
+      "path": "/bg/listing/range-rover-sport-svr-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/range-rover-sport-svr-sofia-2021"
+    },
+    {
+      "path": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023"
+    },
+    {
+      "path": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/listing/bmw-x5-xdrive40d-berlin-2022"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fcars",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fcars"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Flisting%2Fbmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Flisting%2Fbmw-x5-m50d-sofia-2020"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fabout",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fabout"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fcontact",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fcontact"
+    },
+    {
+      "path": "/bg/imports?origin=ALL",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=ALL"
+    },
+    {
+      "path": "/bg/imports?origin=CN",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=CN"
+    },
+    {
+      "path": "/bg/imports?origin=DE",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=DE"
+    },
+    {
+      "path": "/bg/imports?origin=US",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=US"
+    },
+    {
+      "path": "/bg/imports?origin=JP",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=JP"
+    },
+    {
+      "path": "/bg/imports?origin=KR",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/imports?origin=KR"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fimports",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fimports"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fsell",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fsell"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Flease",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Flease"
+    },
+    {
+      "path": "/bg/guides/premium-used-car-checklist",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/premium-used-car-checklist"
+    },
+    {
+      "path": "/bg/guides/import-costs-and-timing",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/import-costs-and-timing"
+    },
+    {
+      "path": "/bg/guides/financing-offer-questions",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/financing-offer-questions"
+    },
+    {
+      "path": "/bg/guides/buying-used-car-bulgaria",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/buying-used-car-bulgaria"
+    },
+    {
+      "path": "/bg/guides/ev-hybrid-ownership-checklist",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/ev-hybrid-ownership-checklist"
+    },
+    {
+      "path": "/bg/guides/dealer-listing-transparency",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/guides/dealer-listing-transparency"
+    },
+    {
+      "path": "/bg/locale-settings?returnTo=%2Fbg%2Fguides",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/locale-settings?returnTo=%2Fbg%2Fguides"
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en"
+    },
+    {
+      "path": "/en/cars",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/cars"
+    },
+    {
+      "path": "/en/about",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/about"
+    },
+    {
+      "path": "/en/contact",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/contact"
+    },
+    {
+      "path": "/en/cars?sort=newest",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/cars?sort=newest"
+    },
+    {
+      "path": "/en/cars?currency=BGN&sort=price_asc",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/cars?currency=BGN&sort=price_asc"
+    },
+    {
+      "path": "/en/listing/bmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/bmw-x5-m50d-sofia-2020"
+    },
+    {
+      "path": "/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021"
+    },
+    {
+      "path": "/en/listing/bmw-m4-competition-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/bmw-m4-competition-sofia-2021"
+    },
+    {
+      "path": "/en/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/bmw-750e-xdrive-m-sport-sofia-2024"
+    },
+    {
+      "path": "/en/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/mercedes-benz-e-63-s-amg-sofia-2021"
+    },
+    {
+      "path": "/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020"
+    },
+    {
+      "path": "/en/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021"
+    },
+    {
+      "path": "/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021"
+    },
+    {
+      "path": "/en/sell",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/sell"
+    },
+    {
+      "path": "/en/imports",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/imports"
+    },
+    {
+      "path": "/en/lease",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/lease"
+    },
+    {
+      "path": "/en/contact?intent=viewing",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/contact?intent=viewing"
+    },
+    {
+      "path": "/en/blog/premium-used-car-checklist",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/guides/premium-used-car-checklist"
+    },
+    {
+      "path": "/en/blog/import-costs-and-timing",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/guides/import-costs-and-timing"
+    },
+    {
+      "path": "/en/blog/financing-offer-questions",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/guides/financing-offer-questions"
+    },
+    {
+      "path": "/en/cars?sort=price_asc",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/cars?sort=price_asc"
+    },
+    {
+      "path": "/en/blog",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/guides"
+    },
+    {
+      "path": "/en/guides",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/guides"
+    },
+    {
+      "path": "/en/legal/privacy",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/legal/privacy"
+    },
+    {
+      "path": "/en/legal/terms",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/legal/terms"
+    },
+    {
+      "path": "/en/locale-settings?returnTo=%2Fen",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/locale-settings?returnTo=%2Fen"
+    },
+    {
+      "path": "/en/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/mercedes-benz-s-350d-long-amg-sofia-2019"
+    },
+    {
+      "path": "/en/listing/range-rover-sport-svr-sofia-2021",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/range-rover-sport-svr-sofia-2021"
+    },
+    {
+      "path": "/en/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/bmw-430i-xdrive-gran-coupe-sofia-2023"
+    },
+    {
+      "path": "/en/listing/bmw-x5-xdrive40d-berlin-2022",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/listing/bmw-x5-xdrive40d-berlin-2022"
+    },
+    {
+      "path": "/en/locale-settings?returnTo=%2Fen%2Fcars",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/locale-settings?returnTo=%2Fen%2Fcars"
+    },
+    {
+      "path": "/en/locale-settings?returnTo=%2Fen%2Flisting%2Fbmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/en/locale-settings?returnTo=%2Fen%2Flisting%2Fbmw-x5-m50d-sofia-2020"
+    },
+    {
+      "path": "/bg/lease?vehicle=am-1001",
+      "status": 200,
+      "url": "http://127.0.0.1:6510/bg/lease?vehicle=am-1001"
+    }
+  ],
+  "shortlist": [
+    {
+      "name": "unsafe-path",
+      "errors": [],
+      "links": [],
+      "saved": "Saved"
+    },
+    {
+      "name": "unsupported-image",
+      "errors": [],
+      "links": [
+        {
+          "href": "/en/listing/bmw-x5-m50d-sofia-2020",
+          "origin": "http://127.0.0.1:6510"
+        },
+        {
+          "href": "/en/listing/bmw-x5-m50d-sofia-2020",
+          "origin": "http://127.0.0.1:6510"
+        }
+      ],
+      "saved": "Saved (1)"
+    },
+    {
+      "name": "duplicate-cars",
+      "errors": [],
+      "links": [
+        {
+          "href": "/en/listing/bmw-x5-m50d-sofia-2020",
+          "origin": "http://127.0.0.1:6510"
+        },
+        {
+          "href": "/en/listing/bmw-x5-m50d-sofia-2020",
+          "origin": "http://127.0.0.1:6510"
+        }
+      ],
+      "saved": "Saved (1)"
+    }
+  ],
+  "dependencyAudit": {
+    "status": "blocked",
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 3,
+      "high": 1,
+      "critical": 0
+    },
+    "remainingHigh": "GHSA-vfj7-8cjw-p6xm; braces via Vercel Toolbar; no published patched release"
+  },
+  "release": {
+    "selectedCommit": "b66693e3a475ef563ab45f51e4297e7073830ec1",
+    "lockChanged": false,
+    "nativeLocalization": "not-established",
+    "mounted": "not-established",
+    "publicDeployment": "not-established",
+    "ownerVisualAcceptance": "pending"
+  },
+  "screenshots": [
+    {
+      "name": "home-before.png",
+      "bytes": 2421777,
+      "sha256": "0d4e09c1c4e9b1a212b9a940468544dc0256652551dfaaa2ada69602a326433f"
+    },
+    {
+      "name": "home-after.png",
+      "bytes": 2384505,
+      "sha256": "37fceef72dbfd3d4c278942047b4e1d30307050147d75d4185c98b03ae07fabf"
+    },
+    {
+      "name": "pdp-before.png",
+      "bytes": 791846,
+      "sha256": "b36d79e5c1ec1bbc1afc3c8598c3f9ba2af8674e1baa0892e41954f56431bbfd"
+    },
+    {
+      "name": "pdp-after.png",
+      "bytes": 836419,
+      "sha256": "857e92e548e47bd059889b3b515abb657e0fd9a17d71a2a4b1718612fb9f2987"
+    }
+  ]
+}

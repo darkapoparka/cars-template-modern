@@ -8,15 +8,18 @@ import type {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
+import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
 import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
 } from "../lib/marketplace-layout";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery-hero";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
 import type { DesktopCategoryInventoryCount } from "./desktop-discovery-search";
+import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 import {
   DesktopLeadServiceSurface,
   DesktopServiceShortcuts,
@@ -42,6 +45,7 @@ interface DesktopMarketplaceBarProps {
   locale?: string;
   onApply: ApplyFilters;
   onClearFilters: () => void;
+  onOpenFilterSection: (section: DesktopFullFilterEntry) => void;
   onOpenFilters: () => void;
   onOpenMake: () => void;
   onOpenModel: () => void;
@@ -57,7 +61,7 @@ interface DesktopMarketplaceBarProps {
 }
 
 const leadSiteDiscoveryControlsBannerStyle = {
-  backgroundColor: "#030303",
+  backgroundColor: "var(--inverse)",
   backgroundImage:
     "radial-gradient(circle at 50% -75%, rgba(255, 255, 255, 0.12), transparent 58%)",
 } as const;
@@ -67,7 +71,7 @@ const getDiscoveryBandClassName = (
   transparentForLeadSite = false
 ) => {
   if (isDealershipSite) {
-    return transparentForLeadSite ? "bg-transparent" : "bg-black";
+    return transparentForLeadSite ? "bg-transparent" : "bg-inverse";
   }
   return isResults ? "bg-card" : "bg-control/70";
 };
@@ -84,6 +88,7 @@ export const DesktopMarketplaceBar = ({
   onApply,
   onClearFilters,
   onOpenFilters,
+  onOpenFilterSection,
   onOpenMake,
   onOpenModel,
   onViewModeChange,
@@ -94,6 +99,7 @@ export const DesktopMarketplaceBar = ({
   taxonomy,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
+  const pathname = usePathname();
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
   const isResults = variant === "results";
@@ -138,14 +144,24 @@ export const DesktopMarketplaceBar = ({
 
     return (
       <DealerDesktopHeader
-        activeMode={showDealerDesktopLanding ? "home" : "buy"}
+        activeMode={
+          pathname === getLocalizedPublicPath(locale, "/") ? "home" : "buy"
+        }
         layout="showroom"
         locale={locale}
       >
         {showDealerDesktopLanding ? (
           <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (
-          <DealerDesktopToolbar {...dealerToolbarProps} />
+          <DealerDesktopToolbar
+            filterCount={filterCount}
+            filters={filters}
+            locale={locale}
+            onApply={onApply}
+            onOpenFilters={() => onOpenFilterSection("vehicle")}
+            onOpenSection={onOpenFilterSection}
+            totalListings={totalListings}
+          />
         )}
       </DealerDesktopHeader>
     );

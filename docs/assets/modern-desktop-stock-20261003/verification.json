@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "approved": false,
+  "scope": "Local desktop home stock polish; retained-cache mobile preservation. No template promotion or dealer deployment.",
+  "verifiedAt": "2026-10-03T18:09:52.073Z",
+  "repository": "darkapoparka/cars",
+  "sourcePath": "templates/modern",
+  "beforeCommit": "f615f5d485908a22d3410525914b0dbd9a8acb31",
+  "sourceFiles": [
+    {
+      "path": "apps/e2e/specs/modern-desktop-reuse.spec.ts",
+      "sha256": "4101e7996610383a16fc35ee7bd326589aa5a1efd82e38f54dc308ea4f9c6e65"
+    },
+    {
+      "path": "packages/design-system/styles/desktop-tokens.css",
+      "sha256": "35d772960526e04f1ccac27d06adfa33f9075f6c94e480373dd992f6d5247cc3"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx",
+      "sha256": "4fcfadcb10a2ccf1146c48804e6620b5207d4dac870cdea2a57121f128367ea8"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+      "sha256": "974e5a0b9fceba7032911ef73275dbbc7a9d31628349ba7b861b252afb9ffc6f"
+    },
+    {
+      "path": "packages/marketplace-ui/components/dealer-desktop-stock.tsx",
+      "sha256": "6f7b77a362de49d14e64d9bee7bb560899f3c620b7e4d89f8b6ded3ebe7ad036"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-content.tsx",
+      "sha256": "ce229ef548c9f0b62ae4f5aa1d77e3367dfdad9667dc68e0a4c0d5c82e8c07a5"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card-desktop.module.css",
+      "sha256": "3f6440deb87f676246427fdd5ed25ca62fc9f60be31a45cbb6eb51ad29047bf7"
+    },
+    {
+      "path": "packages/marketplace-ui/components/vehicle-card.tsx",
+      "sha256": "05aebcb2ad7444c2ba9868f76e2d724bcc8858a48edb21bcf675138a6d14565e"
+    },
+    {
+      "path": "scripts/refactor-contract.test.mjs",
+      "sha256": "5c389ef5bdab2e26cf276102dbbf95605613449dd39358fdcba50bc112ec0999"
+    }
+  ],
+  "runtime": {
+    "node": "22.23.2",
+    "pnpm": "11.4.0",
+    "next": "16.3.8",
+    "react": "19.2.4",
+    "tailwind": "4.3.0",
+    "mode": "demo",
+    "artifact": ".next-public-e2e-desktop-stock-final-20261003-demo",
+    "buildId": "EDsRT5-OvIdlVApiICEW2"
+  },
+  "checks": {
+    "lint": {
+      "files": 1108,
+      "passed": true
+    },
+    "workspaceTypecheck": {
+      "tasks": 28,
+      "passed": true,
+      "finalCardApiRechecked": true
+    },
+    "uiUnit": {
+      "files": 20,
+      "tests": 95,
+      "passed": true
+    },
+    "modernContracts": {
+      "tests": 98,
+      "passed": true
+    },
+    "boundaries": {
+      "files": 1144,
+      "packages": 30,
+      "passed": true
+    },
+    "finalProductionBuild": {
+      "passed": true
+    },
+    "initialDesktopBrowser": {
+      "startTime": "2026-10-03T17:02:19.333Z",
+      "duration": 492466.239,
+      "expected": 28,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "finalBuildRerun": false
+    },
+    "finalFocusedDesktopBrowser": {
+      "startTime": "2026-10-03T17:51:55.518Z",
+      "duration": 82648.591,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "engines": [
+        "chromium",
+        "webkit"
+      ]
+    },
+    "accessibility": [
+      {
+        "locale": "bg",
+        "state": "Всички\n12",
+        "violations": []
+      },
+      {
+        "locale": "bg",
+        "state": "Препоръчани\n3",
+        "violations": []
+      },
+      {
+        "locale": "bg",
+        "state": "Последно добавени\n8",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "All\n12",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "Recommended\n3",
+        "violations": []
+      },
+      {
+        "locale": "en",
+        "state": "Recently added\n8",
+        "violations": []
+      }
+    ]
+  },
+  "desktopFrames": [
+    {
+      "name": "bg-1440",
+      "route": "/bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1440",
+      "route": "/en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-cars-1440",
+      "route": "/bg/cars",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-listing-bmw-x5-m50d-sofia-2020-1440",
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-1024",
+      "route": "/bg",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-1280",
+      "route": "/bg",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-1440",
+      "route": "/bg",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "bg-1920",
+      "route": "/bg",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1024",
+      "route": "/en",
+      "width": 1024,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1280",
+      "route": "/en",
+      "width": 1280,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1440",
+      "route": "/en",
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    },
+    {
+      "name": "en-1920",
+      "route": "/en",
+      "width": 1920,
+      "status": 200,
+      "errors": [],
+      "consoleErrors": [],
+      "overflow": false,
+      "brokenImages": [],
+      "emptyButtons": [],
+      "duplicateIds": []
+    }
+  ],
+  "cardGeometry": [
+    {
+      "locale": "bg",
+      "width": 1440,
+      "beforeHeights": [
+        445,
+        445,
+        445,
+        445,
+        417,
+        417,
+        417,
+        417
+      ],
+      "afterHeights": [
+        393,
+        393,
+        393,
+        393,
+        393,
+        393,
+        393,
+        393
+      ]
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "beforeHeights": [
+        417,
+        417,
+        417,
+        417,
+        417,
+        417,
+        417,
+        417
+      ],
+      "afterHeights": [
+        393,
+        393,
+        393,
+        393,
+        393,
+        393,
+        393,
+        393
+      ]
+    }
+  ],
+  "mobilePreservation": {
+    "sourceChanges": false,
+    "comparisons": [
+      {
+        "name": "bg-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-cars-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-cars-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-320",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-listing-bmw-x5-m50d-sofia-2020-390",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      },
+      {
+        "name": "bg-1023",
+        "sameDimensions": true,
+        "sameGeometry": true,
+        "sameTextContent": true,
+        "changedPixels": 0,
+        "maxChannelDifference": 0,
+        "exact": true
+      }
+    ],
+    "optimizedImageCacheRetained": true,
+    "coldOptimizerAcceptance": false
+  },
+  "imageCachePreservation": {
+    "copiedMissingEntries": 72,
+    "overwrittenEntries": 0,
+    "sha256Verified": true,
+    "originalPreserved": true,
+    "receipt": "runtime/desktop-stock-polish-20261003/image-cache-preservation.json"
+  },
+  "screenshots": [
+    {
+      "file": "stock-before.png",
+      "sha256": "ed7b19508c7415b5a527622c2e86856a60770dbb32849fcb81ac4f898935f67a",
+      "width": 1320,
+      "height": 1186,
+      "capture": {
+        "engine": "chromium",
+        "pageWidth": 1440,
+        "locale": "bg",
+        "allCardImagesDecoded": true,
+        "loadingSkeletons": 0
+      }
+    },
+    {
+      "file": "stock-after.png",
+      "sha256": "a87d2776b39a3bf37a5213c78d5cb7d3eb55f3c54adbd52d6b52901847a243ed",
+      "width": 1320,
+      "height": 1120,
+      "capture": {
+        "engine": "chromium",
+        "pageWidth": 1440,
+        "locale": "bg",
+        "allCardImagesDecoded": true,
+        "loadingSkeletons": 0
+      }
+    }
+  ],
+  "limits": [
+    "Not an immutable template release approval.",
+    "No native, mounted or hosted deployment acceptance.",
+    "Cold Windows transparent-PNG optimization stalled; mobile visual qualification uses retained optimized-image cache.",
+    "Previous dependency advisory remains outside this UI polish."
+  ]
+}

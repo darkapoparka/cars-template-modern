@@ -1,0 +1,488 @@
+.content,
+.aboutContent {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .aboutPage {
+    background: var(--desktop-surface);
+  }
+  .content,
+  .aboutContent {
+    display: block;
+    width: min(
+      var(--desktop-showroom-max),
+      calc(100% - calc(var(--spacing) * 20))
+    );
+    margin-inline: auto;
+  }
+  .map {
+    position: relative;
+    height: calc(var(--spacing) * 90);
+    overflow: hidden;
+    background: var(--desktop-surface-subtle);
+    border: var(--desktop-border-width) solid var(--desktop-control-border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .directions {
+    position: absolute;
+    top: calc(var(--spacing) * 5);
+    left: calc(var(--spacing) * 5);
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2.5);
+    align-items: center;
+    min-height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    background: var(--desktop-surface);
+    border: var(--desktop-border-width) solid var(--desktop-control-border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: 0 calc(var(--spacing) * 1) calc(var(--spacing) * 5)
+      var(--desktop-direction-shadow-color);
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: 0;
+    margin-top: calc(var(--spacing) * 9);
+    overflow: hidden;
+    background: var(--desktop-surface);
+    border: var(--desktop-border-width) solid var(--desktop-panel-border);
+    border-radius: calc(var(--spacing) * 6);
+  }
+  .contact > * {
+    min-width: 0;
+    padding: calc(var(--spacing) * 10);
+  }
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactLogo {
+    --text-desktop-wordmark: calc(var(--spacing) * 5);
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: calc(var(--spacing) * 36);
+    height: calc(var(--spacing) * 7);
+    margin-bottom: calc(var(--spacing) * 6);
+    object-fit: contain;
+    object-position: left center;
+  }
+  .contact h2 {
+    margin: 0 0 calc(var(--spacing) * 3.5);
+    font-size: calc(var(--spacing) * 7.5);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--desktop-leading-section);
+    letter-spacing: calc(var(--spacing) * -0.2);
+  }
+  .intro {
+    max-width: calc(var(--spacing) * 135);
+    margin: 0 0 calc(var(--spacing) * 6.5);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    color: var(--brand-foreground);
+    background: var(--brand);
+  }
+  .details h2 {
+    margin-bottom: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 6);
+  }
+  .details .intro {
+    margin-bottom: calc(var(--spacing) * 7.5);
+  }
+  .contactCard {
+    position: relative;
+    display: flex;
+    gap: calc(var(--spacing) * 4.5);
+    align-items: flex-start;
+    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 4);
+    box-shadow: var(--desktop-surface-shadow);
+    transition: box-shadow var(--duration-interaction);
+  }
+  .contactCard > svg,
+  .contactCardMain > svg {
+    flex: none;
+    margin-top: calc(var(--spacing) * 0.5);
+    color: var(--brand);
+  }
+  .contactCard h3 {
+    margin: 0 0 calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+  }
+  .contactCard p {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  .contactCard > div,
+  .contactCardMain > div {
+    min-width: 0;
+  }
+  .contactCardLink,
+  .contactCardMain {
+    text-decoration: none;
+  }
+  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) {
+    box-shadow: var(--desktop-surface-hover-shadow);
+  }
+  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) h3 {
+    color: var(--brand-text);
+  }
+  .contactCard > .cardArrow {
+    position: absolute;
+    top: calc(var(--spacing) * 5);
+    right: calc(var(--spacing) * 5);
+    margin: 0;
+  }
+  .phoneCard {
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+  }
+  .contactCardMain {
+    display: flex;
+    flex: 1;
+    gap: calc(var(--spacing) * 4.5);
+    align-items: flex-start;
+    min-width: 0;
+    border-radius: inherit;
+  }
+  .contactCardMain::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border-radius: inherit;
+  }
+  .copyPhone {
+    position: relative;
+    z-index: var(--desktop-layer-raised);
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--desktop-icon-target);
+    height: var(--desktop-icon-target);
+    padding: 0;
+    color: var(--brand);
+    cursor: pointer;
+    background: var(--desktop-support-surface);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .copyPhone:is(:hover, :focus-visible) {
+    background: var(--desktop-accent-soft);
+  }
+  .social {
+    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
+    margin-top: auto;
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .social h3 {
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+  }
+  .social p {
+    margin: calc(var(--spacing) * 1) 0 calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--muted-foreground);
+  }
+  .form {
+    display: grid;
+    gap: calc(var(--spacing) * 5);
+  }
+  .contactForm .form {
+    flex: 1;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+  }
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 5);
+  }
+  .form label {
+    display: grid;
+    gap: calc(var(--spacing) * 1.5);
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4);
+    border: var(--desktop-border-width) solid var(--desktop-control-border);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .form label:focus-within {
+    outline: var(--desktop-focus-width) solid var(--desktop-form-focus-ring);
+    border-color: var(--brand);
+  }
+  .form label > span {
+    font-size: calc(var(--spacing) * 3.25);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--muted-foreground);
+  }
+  .form :is(input, select, textarea) {
+    width: 100%;
+    min-width: 0;
+    font: inherit;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--foreground);
+    outline: 0;
+    background: var(--desktop-surface);
+    border: 0;
+  }
+  .form input {
+    min-height: calc(var(--spacing) * 6);
+  }
+  .form textarea {
+    height: 100%;
+    min-height: calc(var(--spacing) * 37.5);
+    resize: vertical;
+  }
+  .form .message {
+    grid-template-rows: auto minmax(calc(var(--spacing) * 37.5), 1fr);
+    padding-block: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4);
+  }
+  .submit,
+  .contactAction {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--spacing) * 13.5);
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 6.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--desktop-surface);
+    cursor: pointer;
+    background: var(--brand);
+    border: var(--desktop-border-width) solid var(--brand);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .submit:hover,
+  .contactAction:hover {
+    background: var(--lead-site-accent-hover);
+  }
+  .previewResult {
+    padding: calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+    background: var(--desktop-preview-surface);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .previewResult a {
+    color: var(--brand);
+    text-decoration: underline;
+  }
+  .contact :global([data-slot="public-enquiry-form"]) {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+  .contact :global([data-slot="public-enquiry-form"]) > :is(h2, p) {
+    display: none;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 6);
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .gallery figure {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    aspect-ratio: 3 / 2;
+    margin: 0;
+    overflow: hidden;
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery .galleryPortrait {
+    object-position: center 28%;
+  }
+  .benefits {
+    padding: calc(var(--spacing) * 16) 0;
+  }
+  .benefits > h2 {
+    margin-bottom: calc(var(--spacing) * 8);
+    font-size: calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--desktop-leading-section);
+    text-align: center;
+    letter-spacing: calc(var(--spacing) * -0.2);
+  }
+  .benefitGrid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: calc(var(--spacing) * 4);
+    column-gap: calc(var(--spacing) * 6);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .benefitGrid > li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    min-width: 0;
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 5);
+    text-align: center;
+    background: var(--desktop-support-surface);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .benefitGrid img {
+    width: 100%;
+    height: calc(var(--spacing) * 36);
+    margin: 0;
+    object-fit: contain;
+  }
+  .benefitGrid h3 {
+    margin: 0;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .benefitGrid p {
+    margin: 0;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+    color: var(--muted-foreground);
+    text-wrap: balance;
+  }
+  .aboutAction {
+    padding: calc(var(--spacing) * 12) calc(var(--spacing) * 7);
+    color: var(--desktop-surface);
+    text-align: center;
+    background: var(--brand);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .aboutAction h2 {
+    margin-bottom: calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-bold);
+  }
+  .aboutAction p {
+    margin-bottom: calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+  }
+  .aboutActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 3.5);
+    justify-content: center;
+  }
+  .secondaryAction {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(var(--spacing) * 13.5);
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 6.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border: var(--desktop-border-width) solid var(--foreground);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .aboutActions :is(.contactAction, .secondaryAction) {
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-color: var(--desktop-surface);
+  }
+  .aboutActions :is(.contactAction, .secondaryAction):hover {
+    background: var(--desktop-surface-subtle);
+  }
+  .aboutFaq {
+    max-width: calc(var(--spacing) * 205);
+    padding-bottom: calc(var(--spacing) * 22.5);
+    margin: calc(var(--spacing) * 19.5) auto 0;
+  }
+  .aboutFaq h2 {
+    margin: 0 0 calc(var(--spacing) * 7.5);
+    font-size: calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--desktop-leading-section);
+    text-align: center;
+    letter-spacing: calc(var(--spacing) * -0.2);
+  }
+  .aboutFaq details {
+    padding: calc(var(--spacing) * 5) 0;
+    border-bottom: var(--desktop-border-width) solid
+      var(--desktop-control-border);
+  }
+  .aboutFaq summary {
+    display: flex;
+    gap: calc(var(--spacing) * 5);
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6.5);
+    cursor: pointer;
+    list-style: none;
+  }
+  .aboutFaq summary::-webkit-details-marker {
+    display: none;
+  }
+  .aboutFaq details[open] summary svg {
+    transform: rotate(45deg);
+  }
+  .aboutFaq p {
+    margin: calc(var(--spacing) * 4) 0 0;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
+  }
+  .aboutContent a:focus-visible,
+  .aboutFaq summary:focus-visible,
+  .content :is(a, button):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--spacing) * 1);
+  }
+  .aboutAction a:focus-visible {
+    outline-color: var(--desktop-surface);
+  }
+  .details a:focus-visible {
+    outline-color: var(--ring);
+  }
+  .details .contactCardLink:focus-visible {
+    outline-color: var(--brand-foreground);
+  }
+  .details .copyPhone:focus-visible {
+    outline-color: var(--brand);
+  }
+  .details .contactCardMain:focus-visible {
+    outline: 0;
+  }
+  .contactCardMain:focus-visible::after {
+    outline: var(--desktop-focus-width) solid var(--brand-foreground);
+    outline-offset: calc(var(--spacing) * 1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contactCard {
+    transition: none;
+  }
+}
