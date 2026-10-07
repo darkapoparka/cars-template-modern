@@ -294,6 +294,16 @@
   --desktop-panel-border: #e4e4e4;
   --desktop-support-surface: #f3f3f3;
   --desktop-about-surface: #f1f1f1;
+  --desktop-location-badge-background: color-mix(
+    in srgb,
+    var(--panel) 75%,
+    transparent
+  );
+  --desktop-location-badge-border: color-mix(
+    in srgb,
+    var(--foreground) 7%,
+    transparent
+  );
   --desktop-hero-overlay-top: rgb(32 32 32 / 40%);
   --desktop-hero-overlay-middle: rgb(32 32 32 / 28%);
   --desktop-hero-overlay-bottom: rgb(32 32 32 / 16%);

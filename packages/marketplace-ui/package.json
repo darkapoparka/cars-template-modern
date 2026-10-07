@@ -21,6 +21,7 @@
     "./components/mobile-pill-rail": "./components/mobile-pill-rail.tsx",
     "./components/vehicle-category-artwork": "./components/vehicle-category-artwork.tsx",
     "./lib/mobile-header-icon-action": "./lib/mobile-header-icon-action.ts",
+    "./lib/mobile-dealer-title": "./lib/mobile-dealer-title.ts",
     "./lib/mobile-vehicle-card-layout": "./lib/mobile-vehicle-card-layout.ts",
     "./lib/vehicle-card-policy": "./lib/vehicle-card-policy.ts",
     "./components/dealer-desktop-discovery-content": "./components/dealer-desktop-discovery-content.tsx",

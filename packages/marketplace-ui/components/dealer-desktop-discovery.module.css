@@ -222,7 +222,11 @@
   }
   .visitBanner h2 {
     margin: 0;
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(
+      var(--text-desktop-section),
+      3vw,
+      var(--text-desktop-hero)
+    );
     font-weight: var(--font-weight-semibold);
     line-height: var(--text-desktop-callout--line-height);
     letter-spacing: var(--desktop-heading-tracking);

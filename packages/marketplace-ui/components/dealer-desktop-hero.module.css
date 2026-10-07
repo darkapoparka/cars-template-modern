@@ -203,9 +203,9 @@
     line-height: var(--text-desktop-support--line-height);
     color: var(--desktop-muted-text);
     text-wrap: balance;
-    background: color-mix(in srgb, var(--panel) 75%, transparent);
+    background: var(--desktop-location-badge-background);
     border: var(--desktop-border-width) solid
-      color-mix(in srgb, var(--foreground) 7%, transparent);
+      var(--desktop-location-badge-border);
     border-radius: calc(var(--spacing) * 2);
   }
 
