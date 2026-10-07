@@ -306,8 +306,8 @@
     width: calc(var(--spacing) * 9);
     height: calc(var(--spacing) * 9);
     padding: 0;
-    color: var(--desktop-muted-text);
-    background: transparent;
+    color: var(--foreground);
+    background: var(--control);
     border-radius: calc(var(--spacing) * 2);
     transition:
       color var(--duration-interaction),
@@ -320,7 +320,7 @@
     )
     [data-slot="showroom-vehicle-open"] {
     color: var(--foreground);
-    background: var(--control);
+    background: var(--control-hover);
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media-badges"] {
     top: calc(var(--spacing) * 3.5);

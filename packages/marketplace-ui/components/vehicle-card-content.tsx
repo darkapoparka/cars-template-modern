@@ -663,7 +663,7 @@ const ShowroomVehicleCardContent = ({
           variant="comparison"
         />
         <span aria-hidden="true" data-slot="showroom-vehicle-open">
-          <ArrowRight size={18} />
+          <ArrowRight size={20} />
         </span>
       </div>
     </Link>

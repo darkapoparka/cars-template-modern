@@ -1,6 +1,6 @@
 # Modern automotive template
 
-**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+**Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
 
 Canonical standalone master: **`darkapoparka/cars-template-modern`**. This repository is a reusable dealership design, not a dealer-specific project and not evidence that any sample business data is current.
 
