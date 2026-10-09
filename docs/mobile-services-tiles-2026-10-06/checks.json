@@ -1,0 +1,1400 @@
+[
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 115.5,
+          "right": 133.5,
+          "top": 209,
+          "width": 18,
+          "x": 115.5,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 133.5,
+          "top": 209,
+          "width": 104.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 16,
+          "right": 146.5,
+          "top": 196,
+          "width": 130.5,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 29,
+          "right": 133.5,
+          "top": 321,
+          "width": 104.5,
+          "x": 29,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "text": "Наличности"
+      },
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 258,
+          "right": 276,
+          "top": 209,
+          "width": 18,
+          "x": 258,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 171.5,
+          "right": 276,
+          "top": 209,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 158.5,
+          "right": 289,
+          "top": 196,
+          "width": 130.5,
+          "x": 158.5,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 171.5,
+          "right": 276,
+          "top": 321,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "text": "Внос по заявка"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 115.5,
+          "right": 133.5,
+          "top": 401,
+          "width": 18,
+          "x": 115.5,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 29,
+          "right": 133.5,
+          "top": 401,
+          "width": 104.5,
+          "x": 29,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 16,
+          "right": 146.5,
+          "top": 388,
+          "width": 130.5,
+          "x": 16,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 29,
+          "right": 133.5,
+          "top": 513,
+          "width": 104.5,
+          "x": 29,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "text": "Лизинг"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 258,
+          "right": 276,
+          "top": 401,
+          "width": 18,
+          "x": 258,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 171.5,
+          "right": 276,
+          "top": 401,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 158.5,
+          "right": 289,
+          "top": 388,
+          "width": 130.5,
+          "x": 158.5,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 171.5,
+          "right": 276,
+          "top": 513,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "text": "Продай автомобил"
+      }
+    ],
+    "columns": "130.5px 130.5px",
+    "height": 844,
+    "locale": "bg",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 150.5,
+          "right": 168.5,
+          "top": 209,
+          "width": 18,
+          "x": 150.5,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 168.5,
+          "top": 209,
+          "width": 139.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 16,
+          "right": 181.5,
+          "top": 196,
+          "width": 165.5,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 29,
+          "right": 168.5,
+          "top": 321,
+          "width": 139.5,
+          "x": 29,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "text": "Наличности"
+      },
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 328,
+          "right": 346,
+          "top": 209,
+          "width": 18,
+          "x": 328,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 206.5,
+          "right": 346,
+          "top": 209,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 193.5,
+          "right": 359,
+          "top": 196,
+          "width": 165.5,
+          "x": 193.5,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 206.5,
+          "right": 346,
+          "top": 321,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "text": "Внос по заявка"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 150.5,
+          "right": 168.5,
+          "top": 401,
+          "width": 18,
+          "x": 150.5,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 29,
+          "right": 168.5,
+          "top": 401,
+          "width": 139.5,
+          "x": 29,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 16,
+          "right": 181.5,
+          "top": 388,
+          "width": 165.5,
+          "x": 16,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 29,
+          "right": 168.5,
+          "top": 513,
+          "width": 139.5,
+          "x": 29,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "text": "Лизинг"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 328,
+          "right": 346,
+          "top": 401,
+          "width": 18,
+          "x": 328,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 206.5,
+          "right": 346,
+          "top": 401,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 193.5,
+          "right": 359,
+          "top": 388,
+          "width": 165.5,
+          "x": 193.5,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 206.5,
+          "right": 346,
+          "top": 513,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "text": "Продай автомобил"
+      }
+    ],
+    "columns": "165.5px 165.5px",
+    "height": 844,
+    "locale": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 77.5,
+          "right": 227.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 77.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 69.5,
+          "right": 347.5,
+          "top": 467,
+          "width": 278,
+          "x": 69.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 52.5,
+          "right": 364.5,
+          "top": 450,
+          "width": 312,
+          "x": 52.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 715,
+          "width": 262,
+          "x": 77.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 675,
+          "width": 262,
+          "x": 77.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "text": "Автомобили в наличност\n\nРазгледайте предложенията и планирайте оглед.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 413.5,
+          "right": 563.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 413.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 405.5,
+          "right": 683.5,
+          "top": 467,
+          "width": 278,
+          "x": 405.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 388.5,
+          "right": 700.5,
+          "top": 450,
+          "width": 312,
+          "x": 388.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 715,
+          "width": 262,
+          "x": 413.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 675,
+          "width": 262,
+          "x": 413.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "text": "Внос по заявка\n\nКажете какво търсите и започнете разговор.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 749.5,
+          "right": 899.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 749.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 741.5,
+          "right": 1019.5,
+          "top": 467,
+          "width": 278,
+          "x": 741.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 724.5,
+          "right": 1036.5,
+          "top": 450,
+          "width": 312,
+          "x": 724.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 715,
+          "width": 262,
+          "x": 749.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 675,
+          "width": 262,
+          "x": 749.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "text": "Собствен лизинг\n\nОбсъдете вариант според автомобила и бюджета ви.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 1085.5,
+          "right": 1235.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 1085.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 1077.5,
+          "right": 1355.5,
+          "top": 467,
+          "width": 278,
+          "x": 1077.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 1060.5,
+          "right": 1372.5,
+          "top": 450,
+          "width": 312,
+          "x": 1060.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 715,
+          "width": 262,
+          "x": 1085.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 675,
+          "width": 262,
+          "x": 1085.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "text": "Продайте автомобила си\n\nИзпратете данни за автомобила и заявете оценка.\n\nРазгледайте"
+      }
+    ],
+    "columns": "312px 312px 312px 312px",
+    "height": 844,
+    "locale": "bg",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 115.5,
+          "right": 133.5,
+          "top": 209,
+          "width": 18,
+          "x": 115.5,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 133.5,
+          "top": 209,
+          "width": 104.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 16,
+          "right": 146.5,
+          "top": 196,
+          "width": 130.5,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 29,
+          "right": 133.5,
+          "top": 321,
+          "width": 104.5,
+          "x": 29,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "text": "In stock"
+      },
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 258,
+          "right": 276,
+          "top": 209,
+          "width": 18,
+          "x": 258,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 171.5,
+          "right": 276,
+          "top": 209,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 158.5,
+          "right": 289,
+          "top": 196,
+          "width": 130.5,
+          "x": 158.5,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 171.5,
+          "right": 276,
+          "top": 321,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "text": "Import on request"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 115.5,
+          "right": 133.5,
+          "top": 401,
+          "width": 18,
+          "x": 115.5,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 29,
+          "right": 133.5,
+          "top": 401,
+          "width": 104.5,
+          "x": 29,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 16,
+          "right": 146.5,
+          "top": 388,
+          "width": 130.5,
+          "x": 16,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 29,
+          "right": 133.5,
+          "top": 513,
+          "width": 104.5,
+          "x": 29,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "text": "Leasing"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 258,
+          "right": 276,
+          "top": 401,
+          "width": 18,
+          "x": 258,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 171.5,
+          "right": 276,
+          "top": 401,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 158.5,
+          "right": 289,
+          "top": 388,
+          "width": 130.5,
+          "x": 158.5,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 171.5,
+          "right": 276,
+          "top": 513,
+          "width": 104.5,
+          "x": 171.5,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "text": "Sell your car"
+      }
+    ],
+    "columns": "130.5px 130.5px",
+    "height": 844,
+    "locale": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 150.5,
+          "right": 168.5,
+          "top": 209,
+          "width": 18,
+          "x": 150.5,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 168.5,
+          "top": 209,
+          "width": 139.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 16,
+          "right": 181.5,
+          "top": 196,
+          "width": 165.5,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 29,
+          "right": 168.5,
+          "top": 321,
+          "width": 139.5,
+          "x": 29,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "text": "In stock"
+      },
+      {
+        "action": {
+          "bottom": 227,
+          "height": 18,
+          "left": 328,
+          "right": 346,
+          "top": 209,
+          "width": 18,
+          "x": 328,
+          "y": 209
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 206.5,
+          "right": 346,
+          "top": 209,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 209
+        },
+        "card": {
+          "bottom": 376,
+          "height": 180,
+          "left": 193.5,
+          "right": 359,
+          "top": 196,
+          "width": 165.5,
+          "x": 193.5,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 363,
+          "height": 42,
+          "left": 206.5,
+          "right": 346,
+          "top": 321,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 321
+        },
+        "headingClipped": false,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "text": "Import on request"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 150.5,
+          "right": 168.5,
+          "top": 401,
+          "width": 18,
+          "x": 150.5,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 29,
+          "right": 168.5,
+          "top": 401,
+          "width": 139.5,
+          "x": 29,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 16,
+          "right": 181.5,
+          "top": 388,
+          "width": 165.5,
+          "x": 16,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 29,
+          "right": 168.5,
+          "top": 513,
+          "width": 139.5,
+          "x": 29,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "text": "Leasing"
+      },
+      {
+        "action": {
+          "bottom": 419,
+          "height": 18,
+          "left": 328,
+          "right": 346,
+          "top": 401,
+          "width": 18,
+          "x": 328,
+          "y": 401
+        },
+        "artwork": {
+          "bottom": 505,
+          "height": 104,
+          "left": 206.5,
+          "right": 346,
+          "top": 401,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 401
+        },
+        "card": {
+          "bottom": 568,
+          "height": 180,
+          "left": 193.5,
+          "right": 359,
+          "top": 388,
+          "width": 165.5,
+          "x": 193.5,
+          "y": 388
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 555,
+          "height": 42,
+          "left": 206.5,
+          "right": 346,
+          "top": 513,
+          "width": 139.5,
+          "x": 206.5,
+          "y": 513
+        },
+        "headingClipped": false,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "text": "Sell your car"
+      }
+    ],
+    "columns": "165.5px 165.5px",
+    "height": 844,
+    "locale": "en",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 77.5,
+          "right": 189.34375,
+          "top": 779,
+          "width": 111.84375,
+          "x": 77.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 69.5,
+          "right": 347.5,
+          "top": 467,
+          "width": 278,
+          "x": 69.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 52.5,
+          "right": 364.5,
+          "top": 450,
+          "width": 312,
+          "x": 52.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 715,
+          "width": 262,
+          "x": 77.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 675,
+          "width": 262,
+          "x": 77.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "text": "Vehicles in stock\n\nBrowse the offers and plan an inspection.\n\nExplore"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 413.5,
+          "right": 525.34375,
+          "top": 779,
+          "width": 111.84375,
+          "x": 413.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 405.5,
+          "right": 683.5,
+          "top": 467,
+          "width": 278,
+          "x": 405.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 388.5,
+          "right": 700.5,
+          "top": 450,
+          "width": 312,
+          "x": 388.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 715,
+          "width": 262,
+          "x": 413.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 675,
+          "width": 262,
+          "x": 413.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "text": "Import on request\n\nTell us what you are looking for and start a conversation.\n\nExplore"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 749.5,
+          "right": 861.34375,
+          "top": 779,
+          "width": 111.84375,
+          "x": 749.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 741.5,
+          "right": 1019.5,
+          "top": 467,
+          "width": 278,
+          "x": 741.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 724.5,
+          "right": 1036.5,
+          "top": 450,
+          "width": 312,
+          "x": 724.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 715,
+          "width": 262,
+          "x": 749.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 675,
+          "width": 262,
+          "x": 749.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "text": "In-house leasing\n\nDiscuss an option for the vehicle and your budget.\n\nExplore"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 1085.5,
+          "right": 1197.34375,
+          "top": 779,
+          "width": 111.84375,
+          "x": 1085.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 1077.5,
+          "right": 1355.5,
+          "top": 467,
+          "width": 278,
+          "x": 1077.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 1060.5,
+          "right": 1372.5,
+          "top": 450,
+          "width": 312,
+          "x": 1060.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 715,
+          "width": 262,
+          "x": 1085.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 675,
+          "width": 262,
+          "x": 1085.5,
+          "y": 675
+        },
+        "headingClipped": false,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "text": "Sell your car\n\nShare your vehicle details and request an appraisal.\n\nExplore"
+      }
+    ],
+    "columns": "312px 312px 312px 312px",
+    "height": 844,
+    "locale": "en",
+    "overflow": false,
+    "width": 1440
+  }
+]

@@ -112,7 +112,7 @@ export const MobileFinancingInterceptor = ({
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.close} />
         }
-        title={submissionAvailable ? copy.title : copy.callTitle}
+        title={locale === "bg" ? "Лизинг" : "Financing"}
       />
 
       {request && !submissionAvailable ? (

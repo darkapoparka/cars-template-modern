@@ -37,10 +37,6 @@ export default async function GuidesPage({ params, searchParams }: PageProps) {
 
   return (
     <PublicMarketplaceFrame
-      desktopIntro={{
-        title:
-          normalizedLocale === "bg" ? "Съвети и статии" : "Guides and articles",
-      }}
       locale={normalizedLocale}
       showMobileDealerHeader={false}
       showMobileFooter={false}

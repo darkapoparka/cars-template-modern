@@ -614,7 +614,7 @@ export const DesktopQuickFilters = ({
                 getDesktopQuickFilterClassName(false, elevated),
                 layout === "hero"
                   ? "border-border bg-panel text-muted-foreground shadow-none hover:bg-control hover:text-foreground"
-                  : "relative w-auto shrink-0 gap-2 border-primary bg-primary px-4 text-primary-foreground hover:border-primary/90 hover:bg-primary/90 hover:text-primary-foreground has-[>svg]:px-4"
+                  : "relative w-auto shrink-0 gap-2 border-primary bg-primary px-4 text-primary-foreground hover:border-[var(--primary-hover)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:border-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)] has-[>svg]:px-4"
               )}
               data-slot="desktop-primary-control"
               onClick={(event) => {

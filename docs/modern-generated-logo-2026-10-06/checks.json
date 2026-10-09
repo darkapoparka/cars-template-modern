@@ -1,0 +1,601 @@
+[
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/services",
+    "width": 320
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/services",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 196.5,
+          "top": 21,
+          "width": 144,
+          "x": 52.5,
+          "y": 21
+        },
+        "color": "rgb(35, 35, 35)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 212.5,
+          "top": 21,
+          "width": 160,
+          "x": 52.5,
+          "y": 21
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      },
+      {
+        "artwork": {
+          "bottom": 1030,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 998,
+          "width": 132,
+          "x": 52.5,
+          "y": 998
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 1030,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 998,
+          "width": 132,
+          "x": 52.5,
+          "y": 998
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/services",
+    "width": 1440
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/services",
+    "width": 320
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/services",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 196.5,
+          "top": 21,
+          "width": 144,
+          "x": 52.5,
+          "y": 21
+        },
+        "color": "rgb(35, 35, 35)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 212.5,
+          "top": 21,
+          "width": 160,
+          "x": 52.5,
+          "y": 21
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      },
+      {
+        "artwork": {
+          "bottom": 1030,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 998,
+          "width": 132,
+          "x": 52.5,
+          "y": 998
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 1030,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 998,
+          "width": 132,
+          "x": 52.5,
+          "y": 998
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/services",
+    "width": 1440
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 320
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 80.5,
+          "right": 224.5,
+          "top": 12,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/sell",
+    "width": 320
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/lease",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 56,
+          "height": 44,
+          "left": 115.5,
+          "right": 259.5,
+          "top": 12,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/about",
+    "width": 390
+  },
+  {
+    "logos": [
+      {
+        "artwork": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 196.5,
+          "top": 21,
+          "width": 144,
+          "x": 52.5,
+          "y": 21
+        },
+        "color": "rgb(35, 35, 35)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 69,
+          "height": 48,
+          "left": 52.5,
+          "right": 212.5,
+          "top": 21,
+          "width": 160,
+          "x": 52.5,
+          "y": 21
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      },
+      {
+        "artwork": {
+          "bottom": 915,
+          "height": 28,
+          "left": 93.5,
+          "right": 237.5,
+          "top": 887,
+          "width": 144,
+          "x": 93.5,
+          "y": 887
+        },
+        "color": "rgb(35, 35, 35)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 915,
+          "height": 28,
+          "left": 93.5,
+          "right": 237.5,
+          "top": 887,
+          "width": 144,
+          "x": 93.5,
+          "y": 887
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      },
+      {
+        "artwork": {
+          "bottom": 1752,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 1720,
+          "width": 132,
+          "x": 52.5,
+          "y": 1720
+        },
+        "color": "rgb(255, 255, 255)",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v1.webp\")",
+        "name": "Modern",
+        "rect": {
+          "bottom": 1752,
+          "height": 32,
+          "left": 52.5,
+          "right": 184.5,
+          "top": 1720,
+          "width": 132,
+          "x": 52.5,
+          "y": 1720
+        },
+        "source": "/images/brand/modern-logo-v1.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 1440
+  }
+]

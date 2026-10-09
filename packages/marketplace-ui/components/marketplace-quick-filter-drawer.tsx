@@ -56,8 +56,8 @@ export const MarketplaceQuickFilterDrawer = ({
       isMarketplaceQuickFilterActive(activeFilter, filters)
   );
   const quickFilterTitle = activeFilter
-    ? copy.chips[activeFilter]
-    : copy.filters.main;
+    ? copy.mobileTitles[activeFilter]
+    : copy.mobileTitles.main;
 
   useEffect(() => {
     if (activeFilter) {

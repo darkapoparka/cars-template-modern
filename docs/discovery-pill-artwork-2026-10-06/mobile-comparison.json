@@ -1,0 +1,50 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "sameSize": true,
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      64,
+      145,
+      728
+    ]
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "sameSize": true,
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      191,
+      177,
+      816
+    ]
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "sameSize": true,
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      191,
+      145,
+      728
+    ]
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "sameSize": true,
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      191,
+      177,
+      816
+    ]
+  }
+]

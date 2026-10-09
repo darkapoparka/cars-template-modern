@@ -55,7 +55,6 @@ export const LeaseDesktopControls = ({
   phoneHref,
   selectedVehicle,
   term,
-  title,
   vehicles,
 }: {
   deposit: string;
@@ -66,7 +65,6 @@ export const LeaseDesktopControls = ({
   phoneHref: string;
   selectedVehicle?: FinancingVehicleOption;
   term: string;
-  title: string;
   vehicles: FinancingVehicleOption[];
 }) => {
   const copy = leaseSelectorCopy[locale];
@@ -79,7 +77,6 @@ export const LeaseDesktopControls = ({
           chooseDeposit: "По договаряне",
           monthly: "Месечна вноска",
           tailored: "По индивидуална оферта",
-          note: "Изберете предпочитанията си. Месечната вноска, лихвата и таксите се потвърждават в офертата.",
           beforeCosts: "Преди лихва и такси",
         }
       : {
@@ -89,7 +86,6 @@ export const LeaseDesktopControls = ({
           chooseDeposit: "To be agreed",
           monthly: "Monthly payment",
           tailored: "Personalised offer",
-          note: "Choose your preferences. Monthly payment, interest and fees are confirmed in your offer.",
           beforeCosts: "Before interest and fees",
         };
   const principal = selectedVehicle
@@ -113,7 +109,6 @@ export const LeaseDesktopControls = ({
         vehicles={vehicles}
       />
       <div className={styles.preferences}>
-        <h2 className={styles.heading}>{title}</h2>
         <PreferenceChoices
           label={copy.depositShortLabel}
           name="desktop-finance-deposit"
@@ -134,9 +129,6 @@ export const LeaseDesktopControls = ({
           }))}
           value={term}
         />
-        <p className={styles.note} data-slot="finance-note">
-          {text.note}
-        </p>
       </div>
 
       <div className={styles.summary} data-slot="finance-summary">

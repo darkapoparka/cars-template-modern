@@ -1,0 +1,10 @@
+Browser tab: 1, Title: "Съвети и статии | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/guides".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+~					22 search text field (settable) Търси съвети и статии
+~						25 checkbox Всички, Value: 1
+~						26 checkbox Покупка, Value: 0
+~						27 checkbox Внос, Value: 0
+~						28 checkbox Финансиране, Value: 0
+~						29 checkbox EV и хибрид, Value: 0
+~						30 checkbox Обяви, Value: 0
+The focused UI element is 1 AXWebArea Съвети и статии | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/guides

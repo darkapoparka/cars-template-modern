@@ -1,0 +1,30 @@
+[
+  {
+    "ellipsis": false,
+    "height": 44,
+    "icons": [
+      {
+        "height": 18,
+        "stroke": "2px",
+        "width": 18
+      }
+    ],
+    "label": "Филтри",
+    "title": null,
+    "width": 144
+  },
+  {
+    "ellipsis": true,
+    "height": 44,
+    "icons": [
+      {
+        "height": 18,
+        "stroke": "2px",
+        "width": 18
+      }
+    ],
+    "label": "Най-нисък пробег",
+    "title": "Най-нисък пробег",
+    "width": 144
+  }
+]

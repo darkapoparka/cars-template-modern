@@ -1,0 +1,57 @@
+{
+  "desktop": [
+    {
+      "name": "home",
+      "frameWidth": 1400,
+      "heroWidth": 1400,
+      "heroHeight": 352,
+      "horizontalOverflow": false
+    },
+    {
+      "name": "cars",
+      "frameWidth": 1400,
+      "heroWidth": 1400,
+      "heroHeight": 352,
+      "horizontalOverflow": false
+    },
+    {
+      "name": "pdp",
+      "frameWidth": 1400,
+      "horizontalOverflow": false
+    }
+  ],
+  "mobile": [
+    {
+      "name": "cars",
+      "width": 320,
+      "samePixels": false,
+      "samePageSize": true,
+      "sameHeadings": true,
+      "sameFrameToken": true
+    },
+    {
+      "name": "pdp",
+      "width": 320,
+      "samePixels": false,
+      "samePageSize": true,
+      "sameHeadings": true,
+      "sameFrameToken": true
+    },
+    {
+      "name": "cars",
+      "width": 390,
+      "samePixels": false,
+      "samePageSize": true,
+      "sameHeadings": true,
+      "sameFrameToken": true
+    },
+    {
+      "name": "pdp",
+      "width": 390,
+      "samePixels": false,
+      "samePageSize": true,
+      "sameHeadings": true,
+      "sameFrameToken": true
+    }
+  ]
+}

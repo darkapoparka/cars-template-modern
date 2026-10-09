@@ -1,0 +1,200 @@
+[
+  {
+    "locale": "bg",
+    "width": 1440,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "buttonHeights": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "buttonColors": [
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)"
+    ],
+    "buttonTextColors": [
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)"
+    ],
+    "bottoms": [
+      823,
+      823,
+      823,
+      823
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "buttonHeights": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "buttonColors": [
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)"
+    ],
+    "buttonTextColors": [
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)"
+    ],
+    "bottoms": [
+      823,
+      823,
+      823,
+      823
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "bg",
+    "width": 1024,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "buttonHeights": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "buttonColors": [
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)"
+    ],
+    "buttonTextColors": [
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)"
+    ],
+    "bottoms": [
+      797,
+      797,
+      1219,
+      1219
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "buttonHeights": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "buttonColors": [
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)",
+      "rgb(48, 52, 59)"
+    ],
+    "buttonTextColors": [
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)",
+      "rgb(255, 255, 255)"
+    ],
+    "bottoms": [
+      823,
+      823,
+      1219,
+      1219
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "bg",
+    "width": 1023,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 1023,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noNestedControls": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "cardGeometryEqual": true,
+    "bodyHeightEqual": true
+  }
+]

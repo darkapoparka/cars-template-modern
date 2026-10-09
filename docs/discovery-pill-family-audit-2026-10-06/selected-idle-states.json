@@ -1,0 +1,62 @@
+[
+  {
+    "category": "car",
+    "url": "http://127.0.0.1:6482/bg",
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(35, 35, 35)",
+    "hovered": false,
+    "loaded": true,
+    "rect": {
+      "height": 36,
+      "width": 167.671875,
+      "x": 405.140625,
+      "y": 312
+    },
+    "screenshot": "bg-home-selected-car-idle-1440.jpg"
+  },
+  {
+    "category": "motorbike",
+    "url": "http://127.0.0.1:6482/bg",
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(35, 35, 35)",
+    "hovered": false,
+    "loaded": true,
+    "rect": {
+      "height": 36,
+      "width": 135.234375,
+      "x": 584.8125,
+      "y": 312
+    },
+    "screenshot": "bg-home-selected-motorbike-idle-1440.jpg"
+  },
+  {
+    "category": "van",
+    "url": "http://127.0.0.1:6482/bg",
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(35, 35, 35)",
+    "hovered": false,
+    "loaded": true,
+    "rect": {
+      "height": 36,
+      "width": 131.5625,
+      "x": 732.046875,
+      "y": 312
+    },
+    "screenshot": "bg-home-selected-van-idle-1440.jpg"
+  },
+  {
+    "category": "truck",
+    "url": "http://127.0.0.1:6482/bg",
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(35, 35, 35)",
+    "hovered": false,
+    "loaded": true,
+    "rect": {
+      "height": 36,
+      "width": 144.25,
+      "x": 875.609375,
+      "y": 312
+    },
+    "screenshot": "bg-home-selected-truck-idle-1440.jpg"
+  }
+]

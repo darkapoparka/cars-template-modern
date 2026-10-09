@@ -1,0 +1,23 @@
+{
+  "errorOverlay": false,
+  "images": [
+    {
+      "loaded": true,
+      "src": "/images/services/header-system-info-v3.webp"
+    },
+    {
+      "loaded": true,
+      "src": "/images/services/header-system-phone-v3.webp"
+    }
+  ],
+  "overflow": false,
+  "title": [
+    {
+      "font": "18px",
+      "text": "Внос на автомобил"
+    }
+  ],
+  "url": "/bg/imports",
+  "width": 390,
+  "newErrors": []
+}

@@ -1,0 +1,324 @@
+[
+  {
+    "name": "home",
+    "width": 320,
+    "before": {
+      "format": "raw",
+      "width": 320,
+      "height": 2176,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2785280
+    },
+    "after": {
+      "format": "raw",
+      "width": 320,
+      "height": 2176,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2785280
+    },
+    "changedPixels": 564,
+    "bbox": {
+      "minX": 1,
+      "minY": 248,
+      "maxX": 143,
+      "maxY": 2037
+    }
+  },
+  {
+    "name": "about",
+    "width": 320,
+    "before": {
+      "format": "raw",
+      "width": 320,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1280000
+    },
+    "after": {
+      "format": "raw",
+      "width": 320,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1280000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "contact",
+    "width": 320,
+    "before": {
+      "format": "raw",
+      "width": 320,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1280000
+    },
+    "after": {
+      "format": "raw",
+      "width": 320,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1280000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "pdp",
+    "width": 320,
+    "before": {
+      "format": "raw",
+      "width": 320,
+      "height": 1688,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2160640
+    },
+    "after": {
+      "format": "raw",
+      "width": 320,
+      "height": 1688,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2160640
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "before": {
+      "format": "raw",
+      "width": 390,
+      "height": 2424,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 3781440
+    },
+    "after": {
+      "format": "raw",
+      "width": 390,
+      "height": 2424,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 3781440
+    },
+    "changedPixels": 561,
+    "bbox": {
+      "minX": 10,
+      "minY": 248,
+      "maxX": 184,
+      "maxY": 2285
+    }
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "before": {
+      "format": "raw",
+      "width": 390,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1560000
+    },
+    "after": {
+      "format": "raw",
+      "width": 390,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1560000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "contact",
+    "width": 390,
+    "before": {
+      "format": "raw",
+      "width": 390,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1560000
+    },
+    "after": {
+      "format": "raw",
+      "width": 390,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 1560000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "pdp",
+    "width": 390,
+    "before": {
+      "format": "raw",
+      "width": 390,
+      "height": 1741,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2715960
+    },
+    "after": {
+      "format": "raw",
+      "width": 390,
+      "height": 1741,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 2715960
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "home",
+    "width": 1023,
+    "before": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1505,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 6158460
+    },
+    "after": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1505,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 6158460
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "about",
+    "width": 1023,
+    "before": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 4092000
+    },
+    "after": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 4092000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "contact",
+    "width": 1023,
+    "before": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 4092000
+    },
+    "after": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1000,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 4092000
+    },
+    "changedPixels": 0,
+    "bbox": null
+  },
+  {
+    "name": "pdp",
+    "width": 1023,
+    "before": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1999,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 8179908
+    },
+    "after": {
+      "format": "raw",
+      "width": 1023,
+      "height": 1999,
+      "channels": 4,
+      "depth": "uchar",
+      "premultiplied": false,
+      "hasAlpha": true,
+      "size": 8179908
+    },
+    "changedPixels": 0,
+    "bbox": null
+  }
+]

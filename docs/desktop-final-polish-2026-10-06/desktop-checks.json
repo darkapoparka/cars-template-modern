@@ -1,0 +1,481 @@
+{
+  "records": [
+    {
+      "locale": "bg",
+      "width": 1024,
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "title": "Намерете своя автомобил",
+      "titleLines": 1,
+      "articles": 4,
+      "bannerHeight": 320,
+      "bannerLines": 1,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "route": "/cars",
+      "status": 200,
+      "overflow": false,
+      "title": "Автомобили за продажба",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "title": "За Modern",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Нашите автомобили",
+          "width": 200.625,
+          "height": 48,
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Нашите услуги",
+          "width": 200.625,
+          "height": 48,
+          "href": "/bg/services"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "title": "Свържете се с нас",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Обадете се",
+          "width": 197.234375,
+          "height": 48,
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Как да ни намерите",
+          "width": 197.234375,
+          "height": 48,
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1024,
+      "route": "/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "overflow": false,
+      "title": "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
+      "titleLines": 0.9993668440934066,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": "rgb(245, 245, 245)",
+      "detailSections": [
+        "Данни за автомобила",
+        "Описание"
+      ],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "title": "Намерете своя автомобил",
+      "titleLines": 1,
+      "articles": 4,
+      "bannerHeight": 320,
+      "bannerLines": 1,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "route": "/cars",
+      "status": 200,
+      "overflow": false,
+      "title": "Автомобили за продажба",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "title": "За Modern",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Нашите автомобили",
+          "width": 200.625,
+          "height": 48,
+          "href": "/bg/cars"
+        },
+        {
+          "text": "Нашите услуги",
+          "width": 200.625,
+          "height": 48,
+          "href": "/bg/services"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "title": "Свържете се с нас",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Обадете се",
+          "width": 197.234375,
+          "height": 48,
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Как да ни намерите",
+          "width": 197.234375,
+          "height": 48,
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "route": "/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "overflow": false,
+      "title": "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
+      "titleLines": 0.9997424450549451,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": "rgb(245, 245, 245)",
+      "detailSections": [
+        "Данни за автомобила",
+        "Описание"
+      ],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "title": "Find Your Perfect Car",
+      "titleLines": 1,
+      "articles": 4,
+      "bannerHeight": 320,
+      "bannerLines": 1,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "route": "/cars",
+      "status": 200,
+      "overflow": false,
+      "title": "Cars for sale",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "title": "About Modern",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Our cars",
+          "width": 141.203125,
+          "height": 48,
+          "href": "/en/cars"
+        },
+        {
+          "text": "Our services",
+          "width": 141.203125,
+          "height": 48,
+          "href": "/en/services"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "title": "Contact us",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Call us",
+          "width": 150.21875,
+          "height": 48,
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Get directions",
+          "width": 150.21875,
+          "height": 48,
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "route": "/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "overflow": false,
+      "title": "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
+      "titleLines": 0.9993668440934066,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": "rgb(245, 245, 245)",
+      "detailSections": [
+        "Vehicle information",
+        "Description"
+      ],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "overflow": false,
+      "title": "Find Your Perfect Car",
+      "titleLines": 1,
+      "articles": 4,
+      "bannerHeight": 320,
+      "bannerLines": 1,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/cars",
+      "status": 200,
+      "overflow": false,
+      "title": "Cars for sale",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/about",
+      "status": 200,
+      "overflow": false,
+      "title": "About Modern",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Our cars",
+          "width": 141.203125,
+          "height": 48,
+          "href": "/en/cars"
+        },
+        {
+          "text": "Our services",
+          "width": 141.203125,
+          "height": 48,
+          "href": "/en/services"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "overflow": false,
+      "title": "Contact us",
+      "titleLines": 1,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [
+        {
+          "text": "Call us",
+          "width": 150.21875,
+          "height": 48,
+          "href": "tel:+359877733110"
+        },
+        {
+          "text": "Get directions",
+          "width": 150.21875,
+          "height": 48,
+          "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F"
+        }
+      ],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": null,
+      "detailSections": [],
+      "brokenImages": []
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "route": "/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+      "status": 200,
+      "overflow": false,
+      "title": "2021 Mercedes-Benz GLS 400d 4MATIC AMG",
+      "titleLines": 0.9997424450549451,
+      "articles": null,
+      "bannerHeight": null,
+      "bannerLines": null,
+      "heroActions": [],
+      "decorativeContactIcons": 0,
+      "detailFrames": 0,
+      "referenceBackground": "rgb(245, 245, 245)",
+      "detailSections": [
+        "Vehicle information",
+        "Description"
+      ],
+      "brokenImages": []
+    }
+  ],
+  "errors": []
+}

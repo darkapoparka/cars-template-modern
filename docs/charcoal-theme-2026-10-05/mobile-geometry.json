@@ -1,0 +1,74 @@
+[
+  {
+    "path": "/bg",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/about",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/contact",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/imports",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/sell",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/lease",
+    "width": 320,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/about",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/contact",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/imports",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/sell",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/lease",
+    "width": 390,
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  }
+]

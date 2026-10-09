@@ -1,4 +1,5 @@
 import { expect, type Page, test } from "@playwright/test";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
 
 const categoryNames = {
   bg: { bike: /^Мотоциклети/, truck: /^Камиони/, van: /^Бусове/ },
@@ -9,28 +10,13 @@ test.use({ launchOptions: { ignoreDefaultArgs: ["--hide-scrollbars"] } });
 test.beforeEach(async ({ baseURL, context, page }) => {
   // biome-ignore lint/suspicious/noSkippedTests: Full filter columns are desktop only.
   test.skip((page.viewportSize()?.width ?? 0) < 1024, "Desktop filter logic");
-  if (!baseURL) {
-    throw new Error("Filter checks require a preview origin");
-  }
-  expect(
-    (
-      await context.request.post("/api/preferences", {
-        headers: { origin: new URL(baseURL).origin },
-        data: {
-          action: "dismiss",
-          locale: "bg",
-          country: "BG",
-          returnTo: "/cars",
-        },
-      })
-    ).status()
-  ).toBe(200);
+  await dismissModernWelcome(context.request, baseURL);
 });
 
 async function openFilters(page: Page, locale: string, query: string) {
   await page.goto(`/${locale}/cars?${query}`);
   const trigger = page.locator(
-    '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
+    '[data-slot="dealer-desktop-inventory-hero"] [data-slot="desktop-primary-control"]'
   );
   await trigger.click();
   const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');

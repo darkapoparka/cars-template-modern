@@ -17,14 +17,16 @@ export const brandContrastRatio = (first: string, second: string): number => {
   const values = [luminance(first), luminance(second)].sort((a, b) => b - a);
   return (values[0] + 0.05) / (values[1] + 0.05);
 };
-const darken = (color: string, factor = 0.82) =>
+const blendWithShade = (color: string, factor: number, shade: 0 | 1) =>
   `#${channels(color)
     .map((channel) =>
-      Math.round(channel * 255 * factor)
+      Math.round(channel * 255 * factor + shade * 255 * (1 - factor))
         .toString(16)
         .padStart(2, "0")
     )
     .join("")}`;
+const darken = (color: string, factor = 0.82) =>
+  blendWithShade(color, factor, 0);
 
 const readableForeground = (color: string) => {
   const whiteContrast = brandContrastRatio(color, "#ffffff");
@@ -45,6 +47,8 @@ export const createBrandTheme = (
     throw new Error("Brand accent must be a six-digit hexadecimal color");
   }
   const foreground = readableForeground(accent);
+  const hover = darken(accent);
+  const active = darken(accent, 0.68);
   let text = accent;
   while (brandContrastRatio(text, "#ffffff") < 4.5) {
     text = darken(text);
@@ -52,8 +56,15 @@ export const createBrandTheme = (
   return {
     "--brand": accent,
     "--brand-foreground": foreground,
+    "--brand-hover": hover,
+    "--brand-active": active,
+    "--brand-gradient-end": blendWithShade(
+      accent,
+      0.7,
+      foreground === "#ffffff" ? 0 : 1
+    ),
     "--brand-text": text,
-    "--brand-hover-foreground": readableForeground(darken(accent)),
-    "--brand-active-foreground": readableForeground(darken(accent, 0.68)),
+    "--brand-hover-foreground": readableForeground(hover),
+    "--brand-active-foreground": readableForeground(active),
   };
 };

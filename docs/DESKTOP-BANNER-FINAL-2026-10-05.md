@@ -1,0 +1,28 @@
+# Shared desktop banners — 5 October 2026
+
+The owner requested more breathing room for Home's search and type pills, consistent masthead sizing across pages, and a quieter stock action. The shared Modern desktop banner now uses a 320 px minimum height, the common 1320 px maximum frame and 20 px rounding. This applies to Home, Cars, Sell, Leasing, Imports, About, Contact, Guides and Terms through the existing hero component. Long content can grow rather than clip. Home's title stays centered, with 24 px before search and 20 px between search and the four type pills. Existing search/category behavior, artwork, card badges and blue Details actions remain in use.
+
+Home's stock heading and segmented tabs remain centered. The four-car preview is followed by a centered View all cars text link with a small arrow. The link no longer sits beside the heading or uses a button surface. The preview remains four columns from 1200 px and two columns at narrower desktop widths. Services, the showroom and the journal continue below it.
+
+The coordinated mileage cleanup removes the redundant Selected value label from headed desktop range cards. The shared mobile default retains that label, and range inputs and presets retain their behavior. The cooperating filter chat stays read-only while this task owns source and build writes.
+
+## Evidence and verification
+
+The before captures come from the preceding verified production build on canonical local port 6482. The after captures come from the new production build on that same port at the same viewports, with fresh browser contexts, the OS scrollbar, settled content, loaded fonts and decoded visible images.
+
+- Home at 1440 × 1100: [BG before](desktop-banner-final-2026-10-05/bg-home-1440-before.png), [BG after](desktop-banner-final-2026-10-05/bg-home-1440-after.png), [EN before](desktop-banner-final-2026-10-05/en-home-1440-before.png), [EN after](desktop-banner-final-2026-10-05/en-home-1440-after.png).
+- Cars: [before](desktop-banner-final-2026-10-05/bg-cars-1440-before.png), [after](desktop-banner-final-2026-10-05/bg-cars-1440-after.png). Leasing: [before](desktop-banner-final-2026-10-05/bg-lease-1440-before.png), [after](desktop-banner-final-2026-10-05/bg-lease-1440-after.png). About: [before](desktop-banner-final-2026-10-05/bg-about-1440-before.png), [after](desktop-banner-final-2026-10-05/bg-about-1440-after.png).
+- Full Home: [before](desktop-banner-final-2026-10-05/home-full-before.png), [after](desktop-banner-final-2026-10-05/home-full-after.png). Mobile Home at 390 px: [before](desktop-banner-final-2026-10-05/bg-home-390-before.png), [after](desktop-banner-final-2026-10-05/bg-home-390-after.png).
+- [Capture receipt](desktop-banner-final-2026-10-05/after-receipt.json), [mobile comparison](desktop-banner-final-2026-10-05/preservation.json), [verification summary](desktop-banner-final-2026-10-05/verification.json) and [independent mileage checks](desktop-banner-final-2026-10-05/mileage-verification.json).
+
+The 54 captures per phase cover BG/EN Home at 320, 390, 1023, 1024, 1280, 1440 and 1920 px; Cars, Leasing, About and Contact at all three mobile/boundary widths; and all nine mastheads at 1440 px. There are no page/console errors or horizontal overflow. Every desktop capture measures a 320 px masthead aligned with the navigation frame. Home retains a 64 px search bar, 20 px before type pills, and 64 px below them. The stock link is centered below the cards.
+
+The production build, Web typecheck and scoped Biome check (14 files) pass using Node 22.23.2 and pnpm 11.4.0. Marketplace UI has 101 passing unit tests; Web has 188. Refactor contracts have seven passes; release preflight contracts pass and the preflight/architecture suite has 87 passes. All 18 shared-frame, Home search/sidebar, stock keyboard and reduced-motion browser cases pass across Chromium and WebKit. The frame checks exercise all nine routes in BG/EN at 1024, 1440 and 1920 px. Keyboard focus and Enter on the moved View all link open `/bg/cars` in the live preview.
+
+All 30 mobile comparisons preserve screenshot dimensions and page heights. Eighteen are pixel-identical. Eight differ by at most 90 pixels around rendered icons; four Home/Cars captures at 1023 px differ within the M4 photograph. The strict pixel threshold flags those differences; visual review confirms preserved layout. The independent mileage review also records four pixel-identical Cars captures at 320/390 px, eight Chromium/WebKit range-input states including 1024 × 600, four passing modal accessibility scans and final BG/EN verification on live 6482. Numeric edits, keyboard slider controls, presets, Apply/URL persistence, Reset and focus return pass.
+
+The generated `next-env.d.ts` preimage is restored byte for byte. Canonical 6482 runs build `VHXEz-qqEblwFNhrVN6rL` under the verified process receipt; the secondary 6499 process is stopped. The previous production output is preserved. Logs, raw comparisons and the source handoff are in `runtime/desktop-banner-final-20261005/`.
+
+This is local template implementation and review. It does not select a template release or change dealer deployments. Existing unrelated Cars changes and the shared unknown Git lock are preserved.
+
+Source commit/push remains pending on the pre-existing zero-byte `L:/CODEX/cars/.git/index.lock`, created at 05:43:04 Sofia time. The authorized coordinating chats report no active Git write and do not claim the lock. The canonical source remains on `main` at `08c89d63f9e11939acd5b135ece4278252b80f43`, with an empty shared index. The task-owned source and evidence remain in the canonical checkout; the saved diff and hash manifest allow scoped integration once the lock's owner releases it.

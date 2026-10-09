@@ -1,89 +1,22 @@
 "use client";
 
 import { cn } from "@repo/design-system/lib/utils";
-import { publicBasePath } from "@repo/internationalization/paths";
-import { publicSite } from "@repo/marketplace/site-config";
 import { Bookmark, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useId, useRef, useSyncExternalStore } from "react";
-import {
-  type DesktopSavedCar,
-  getDesktopSavedCarsStorageKey,
-  legacyDesktopSavedCarsStorageKey,
-  parseDesktopSavedCars,
-} from "../lib/desktop-saved-car";
+import type { DesktopSavedCar } from "../lib/desktop-saved-car";
+import { desktopSavedCarsStore } from "../lib/desktop-saved-cars-store";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { formatVehicleCardMoney } from "../lib/vehicle-card-policy";
 import styles from "./desktop-saved-cars.module.css";
 import Image from "./public-image";
 
-const storageKey = getDesktopSavedCarsStorageKey(publicSite.identity.slug);
-const canReadLegacyStorage =
-  Boolean(publicSite.identity.desktopPreview) && !publicBasePath;
-const empty: DesktopSavedCar[] = [];
-let snapshot = empty;
-let initialized = false;
-const listeners = new Set<() => void>();
-function readSavedCars() {
-  try {
-    const serialized = localStorage.getItem(storageKey);
-    return parseDesktopSavedCars(
-      serialized ??
-        (canReadLegacyStorage
-          ? localStorage.getItem(legacyDesktopSavedCarsStorageKey)
-          : null)
-    );
-  } catch {
-    return empty;
-  }
-}
-function getSnapshot() {
-  if (!initialized && typeof window !== "undefined") {
-    snapshot = readSavedCars();
-    initialized = true;
-  }
-  return snapshot;
-}
-function onStorage(event: StorageEvent) {
-  if (
-    event.key === storageKey ||
-    event.key === null ||
-    (canReadLegacyStorage && event.key === legacyDesktopSavedCarsStorageKey)
-  ) {
-    snapshot = readSavedCars();
-    for (const listener of listeners) {
-      listener();
-    }
-  }
-}
-function subscribe(listener: () => void) {
-  if (listeners.size === 0) {
-    window.addEventListener("storage", onStorage);
-  }
-  listeners.add(listener);
-  return () => {
-    listeners.delete(listener);
-    if (listeners.size === 0) {
-      window.removeEventListener("storage", onStorage);
-    }
-  };
-}
-function toggleCar(car: DesktopSavedCar) {
-  const current = getSnapshot();
-  snapshot = current.some((item) => item.id === car.id)
-    ? current.filter((item) => item.id !== car.id)
-    : [...current, car].slice(-100);
-  try {
-    localStorage.setItem(storageKey, JSON.stringify(snapshot));
-  } catch {
-    /* The shortlist remains available for this visit. */
-  }
-  for (const listener of listeners) {
-    listener();
-  }
-}
 function useSavedCars() {
-  return useSyncExternalStore(subscribe, getSnapshot, () => empty);
+  return useSyncExternalStore(
+    desktopSavedCarsStore.subscribe,
+    desktopSavedCarsStore.getSnapshot,
+    desktopSavedCarsStore.getServerSnapshot
+  );
 }
 
 /** Boxcar's bookmark action, isolated from the existing mobile card and account routes. */
@@ -91,24 +24,28 @@ export function DesktopSaveCarButton({
   car,
   locale,
   presentation = "bookmark",
+  showTooltip = false,
 }: {
   car: DesktopSavedCar;
   locale?: string;
   presentation?: "bookmark" | "action";
+  showTooltip?: boolean;
 }) {
   const saved = useSavedCars().some((savedCar) => savedCar.id === car.id);
   const isBg = locale?.startsWith("bg");
   const saveLabel = isBg ? "Запази" : "Save";
   const removeLabel = isBg ? "Премахни" : "Unsave";
   const savedLabel = isBg ? "Запазен" : "Saved";
+  const actionLabel = saved ? removeLabel : saveLabel;
   return (
     <button
-      aria-label={`${saved ? removeLabel : saveLabel} ${car.title}`}
+      aria-label={`${actionLabel} ${car.title}`}
       aria-pressed={saved}
       className={styles.bookmark}
       data-presentation={presentation}
       data-slot="desktop-save-car"
-      onClick={() => toggleCar(car)}
+      onClick={() => desktopSavedCarsStore.toggleCar(car)}
+      title={showTooltip ? actionLabel : undefined}
       type="button"
     >
       <Bookmark aria-hidden fill={saved ? "currentColor" : "none"} size={18} />
@@ -222,7 +159,10 @@ export function DesktopSavedCars({
                       : car.price}
                   </p>
                 </Link>
-                <button onClick={() => toggleCar(car)} type="button">
+                <button
+                  onClick={() => desktopSavedCarsStore.toggleCar(car)}
+                  type="button"
+                >
                   {isBg ? "Премахни" : "Remove"}
                 </button>
               </article>

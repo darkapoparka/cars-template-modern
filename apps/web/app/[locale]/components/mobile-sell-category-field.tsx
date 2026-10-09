@@ -36,8 +36,9 @@ export function MobileSellCategoryField({
   const triggerRef = useRef<HTMLButtonElement>(null);
   const selected =
     options.find((option) => option.value === value) ?? options[0];
-  const title =
+  const description =
     locale === "bg" ? "Изберете тип автомобил" : "Choose vehicle type";
+  const title = locale === "bg" ? "Тип" : "Type";
   return (
     <div className="grid gap-1.5">
       <Label className="font-medium text-meta" htmlFor="mobile-sell-category">
@@ -57,7 +58,7 @@ export function MobileSellCategoryField({
       </button>
       <MobileMarketplaceOverlay
         contentDataSlot="mobile-sell-category-picker"
-        description={title}
+        description={description}
         leftAction={
           <MobileMarketplaceOverlayBackAction
             ariaLabel={locale === "bg" ? "Назад към формата" : "Back to form"}

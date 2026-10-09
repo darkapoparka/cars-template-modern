@@ -2,6 +2,7 @@ import type { Locale } from "./config";
 
 export const en = {
   "locale.title": "Country and language",
+  "locale.mobileTitle": "Preferences",
   "locale.welcome": "Welcome to {dealer}",
   "locale.description":
     "Choose your browsing preferences. You can change them at any time.",
@@ -10,6 +11,8 @@ export const en = {
   "locale.suggested": "Suggested",
   "locale.suggestion": "Suggested region: {country}",
   "locale.save": "Save preferences",
+  "locale.confirm": "Save",
+  "locale.cancel": "Cancel",
   "locale.dismiss": "Not now",
   "locale.close": "Close country and language preferences",
   "locale.saving": "Saving…",
@@ -30,6 +33,7 @@ export const en = {
 export type PreferenceMessages = { readonly [K in keyof typeof en]: string };
 export const bg = {
   "locale.title": "Държава и език",
+  "locale.mobileTitle": "Настройки",
   "locale.welcome": "Добре дошли в {dealer}",
   "locale.description":
     "Изберете предпочитанията си за разглеждане. Можете да ги промените по всяко време.",
@@ -38,6 +42,8 @@ export const bg = {
   "locale.suggested": "Предложение",
   "locale.suggestion": "Предложен регион: {country}",
   "locale.save": "Запазете предпочитанията",
+  "locale.confirm": "Запази",
+  "locale.cancel": "Отказ",
   "locale.dismiss": "Не сега",
   "locale.close": "Затворете избора на държава и език",
   "locale.saving": "Запазване…",

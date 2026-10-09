@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-06T11:30:56Z",
+  "preview": {
+    "errorOverlay": false,
+    "font": "18px",
+    "heading": "Открийте автомобил",
+    "loadedHeaderImages": [
+      {
+        "loaded": true
+      },
+      {
+        "loaded": true
+      }
+    ],
+    "overflow": false,
+    "path": "/bg/cars",
+    "searchHeight": 48,
+    "width": 319
+  },
+  "errors": []
+}

@@ -1,0 +1,31 @@
+{
+  "attributes": [
+    [
+      "class",
+      "inter_39fb71af-module__UYZD7W__className inter_39fb71af-module__UYZD7W__variable desktop_67cf045d-module__y8whKq__variable geist_mono_cc07c356-module__q_Rk8q__variable touch-manipulation font-sans antialiased scroll-smooth light"
+    ],
+    [
+      "data-scroll-behavior",
+      "smooth"
+    ],
+    [
+      "data-site-kind",
+      "dealership"
+    ],
+    [
+      "dir",
+      "ltr"
+    ],
+    [
+      "lang",
+      "bg"
+    ],
+    [
+      "style",
+      "--brand: #30343b; --brand-foreground: #ffffff; --brand-text: #30343b; --brand-hover-foreground: #ffffff; --brand-active-foreground: #ffffff; --desktop-brand: #30343b; --desktop-brand-foreground: #ffffff; --desktop-brand-text: #30343b; --desktop-brand-hover-foreground: #ffffff; --desktop-brand-active-foreground: #ffffff; color-scheme: light;"
+    ]
+  ],
+  "background": "rgb(245, 245, 245)",
+  "brand": "#30343b",
+  "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif"
+}

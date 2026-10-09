@@ -1,0 +1,1472 @@
+[
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Разгледайте предложенията и планирайте оглед.",
+        "href": "/bg/cars",
+        "rect": {
+          "bottom": 360.78125,
+          "height": 164.78125,
+          "left": 16,
+          "right": 289,
+          "top": 196,
+          "width": 273,
+          "x": 16,
+          "y": 196
+        },
+        "title": "Автомобили в наличност"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Кажете какво търсите и започнете разговор.",
+        "href": "/bg/imports",
+        "rect": {
+          "bottom": 498.78125,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 368.78125,
+          "width": 273,
+          "x": 16,
+          "y": 368.78125
+        },
+        "title": "Внос по заявка"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Обсъдете вариант според автомобила и бюджета ви.",
+        "href": "/bg/lease",
+        "rect": {
+          "bottom": 650.765625,
+          "height": 143.984375,
+          "left": 16,
+          "right": 289,
+          "top": 506.78125,
+          "width": 273,
+          "x": 16,
+          "y": 506.78125
+        },
+        "title": "Собствен лизинг"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Изпратете данни за автомобила и заявете оценка.",
+        "href": "/bg/sell",
+        "rect": {
+          "bottom": 823.546875,
+          "height": 164.78125,
+          "left": 16,
+          "right": 289,
+          "top": 658.765625,
+          "width": 273,
+          "x": 16,
+          "y": 658.765625
+        },
+        "title": "Продайте автомобила си"
+      }
+    ],
+    "clientWidth": 305,
+    "header": {
+      "bottom": 140,
+      "height": 140,
+      "left": 0,
+      "right": 305,
+      "top": 0,
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 6,
+          "right": 64.59375,
+          "top": 792,
+          "width": 58.59375,
+          "x": 6,
+          "y": 792
+        },
+        "text": "Коли"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 64.59375,
+          "right": 123.1875,
+          "top": 792,
+          "width": 58.59375,
+          "x": 64.59375,
+          "y": 792
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 123.1875,
+          "right": 181.796875,
+          "top": 792,
+          "width": 58.609375,
+          "x": 123.1875,
+          "y": 792
+        },
+        "text": "Продай"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 181.796875,
+          "right": 240.390625,
+          "top": 792,
+          "width": 58.59375,
+          "x": 181.796875,
+          "y": 792
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 240.390625,
+          "right": 298.984375,
+          "top": 792,
+          "width": 58.59375,
+          "x": 240.390625,
+          "y": 792
+        },
+        "text": "Меню"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 16,
+          "right": 100.4375,
+          "top": 140,
+          "width": 84.4375,
+          "x": 16,
+          "y": 140
+        },
+        "text": "Всички"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 108.4375,
+          "right": 227.84375,
+          "top": 140,
+          "width": 119.40625,
+          "x": 108.4375,
+          "y": 140
+        },
+        "text": "Наличности"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 235.84375,
+          "right": 302.40625,
+          "top": 140,
+          "width": 66.5625,
+          "x": 235.84375,
+          "y": 140
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 310.40625,
+          "right": 392.828125,
+          "top": 140,
+          "width": 82.421875,
+          "x": 310.40625,
+          "y": 140
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 400.828125,
+          "right": 508.21875,
+          "top": 140,
+          "width": 107.390625,
+          "x": 400.828125,
+          "y": 140
+        },
+        "text": "Продажба"
+      }
+    ],
+    "rail": {
+      "bottom": 184,
+      "height": 44,
+      "left": 16,
+      "right": 289,
+      "top": 140,
+      "width": 273,
+      "x": 16,
+      "y": 140
+    },
+    "scrollWidth": 305,
+    "searches": [
+      {
+        "placeholder": "Търсене на услуги",
+        "rect": {
+          "bottom": 114,
+          "height": 44,
+          "left": 59,
+          "right": 272,
+          "top": 70,
+          "width": 213,
+          "x": 59,
+          "y": 70
+        }
+      }
+    ],
+    "width": 320,
+    "locale": "bg"
+  },
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Разгледайте предложенията и планирайте оглед.",
+        "href": "/bg/cars",
+        "rect": {
+          "bottom": 340.484375,
+          "height": 144.484375,
+          "left": 16,
+          "right": 359,
+          "top": 196,
+          "width": 343,
+          "x": 16,
+          "y": 196
+        },
+        "title": "Автомобили в наличност"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Кажете какво търсите и започнете разговор.",
+        "href": "/bg/imports",
+        "rect": {
+          "bottom": 478.484375,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 348.484375,
+          "width": 343,
+          "x": 16,
+          "y": 348.484375
+        },
+        "title": "Внос по заявка"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Обсъдете вариант според автомобила и бюджета ви.",
+        "href": "/bg/lease",
+        "rect": {
+          "bottom": 616.484375,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 486.484375,
+          "width": 343,
+          "x": 16,
+          "y": 486.484375
+        },
+        "title": "Собствен лизинг"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Изпратете данни за автомобила и заявете оценка.",
+        "href": "/bg/sell",
+        "rect": {
+          "bottom": 789.265625,
+          "height": 164.78125,
+          "left": 16,
+          "right": 359,
+          "top": 624.484375,
+          "width": 343,
+          "x": 16,
+          "y": 624.484375
+        },
+        "title": "Продайте автомобила си"
+      }
+    ],
+    "clientWidth": 375,
+    "header": {
+      "bottom": 140,
+      "height": 140,
+      "left": 0,
+      "right": 375,
+      "top": 0,
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 6,
+          "right": 78.59375,
+          "top": 792,
+          "width": 72.59375,
+          "x": 6,
+          "y": 792
+        },
+        "text": "Коли"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 78.59375,
+          "right": 151.1875,
+          "top": 792,
+          "width": 72.59375,
+          "x": 78.59375,
+          "y": 792
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 151.1875,
+          "right": 223.796875,
+          "top": 792,
+          "width": 72.609375,
+          "x": 151.1875,
+          "y": 792
+        },
+        "text": "Продай"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 223.796875,
+          "right": 296.390625,
+          "top": 792,
+          "width": 72.59375,
+          "x": 223.796875,
+          "y": 792
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 296.390625,
+          "right": 368.984375,
+          "top": 792,
+          "width": 72.59375,
+          "x": 296.390625,
+          "y": 792
+        },
+        "text": "Меню"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 16,
+          "right": 100.4375,
+          "top": 140,
+          "width": 84.4375,
+          "x": 16,
+          "y": 140
+        },
+        "text": "Всички"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 108.4375,
+          "right": 227.84375,
+          "top": 140,
+          "width": 119.40625,
+          "x": 108.4375,
+          "y": 140
+        },
+        "text": "Наличности"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 235.84375,
+          "right": 302.40625,
+          "top": 140,
+          "width": 66.5625,
+          "x": 235.84375,
+          "y": 140
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 310.40625,
+          "right": 392.828125,
+          "top": 140,
+          "width": 82.421875,
+          "x": 310.40625,
+          "y": 140
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 400.828125,
+          "right": 508.21875,
+          "top": 140,
+          "width": 107.390625,
+          "x": 400.828125,
+          "y": 140
+        },
+        "text": "Продажба"
+      }
+    ],
+    "rail": {
+      "bottom": 184,
+      "height": 44,
+      "left": 16,
+      "right": 359,
+      "top": 140,
+      "width": 343,
+      "x": 16,
+      "y": 140
+    },
+    "scrollWidth": 375,
+    "searches": [
+      {
+        "placeholder": "Търсене на услуги",
+        "rect": {
+          "bottom": 114,
+          "height": 44,
+          "left": 59,
+          "right": 342,
+          "top": 70,
+          "width": 283,
+          "x": 59,
+          "y": 70
+        }
+      }
+    ],
+    "width": 390,
+    "locale": "bg"
+  },
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Browse the offers and plan an inspection.",
+        "href": "/en/cars",
+        "rect": {
+          "bottom": 326,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 196,
+          "width": 273,
+          "x": 16,
+          "y": 196
+        },
+        "title": "Vehicles in stock"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Tell us what you are looking for and start a conversation.",
+        "href": "/en/imports",
+        "rect": {
+          "bottom": 477.984375,
+          "height": 143.984375,
+          "left": 16,
+          "right": 289,
+          "top": 334,
+          "width": 273,
+          "x": 16,
+          "y": 334
+        },
+        "title": "Import on request"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Discuss an option for the vehicle and your budget.",
+        "href": "/en/lease",
+        "rect": {
+          "bottom": 629.96875,
+          "height": 143.984375,
+          "left": 16,
+          "right": 289,
+          "top": 485.984375,
+          "width": 273,
+          "x": 16,
+          "y": 485.984375
+        },
+        "title": "In-house leasing"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Share your vehicle details and request an appraisal.",
+        "href": "/en/sell",
+        "rect": {
+          "bottom": 781.953125,
+          "height": 143.984375,
+          "left": 16,
+          "right": 289,
+          "top": 637.96875,
+          "width": 273,
+          "x": 16,
+          "y": 637.96875
+        },
+        "title": "Sell your car"
+      }
+    ],
+    "clientWidth": 305,
+    "header": {
+      "bottom": 140,
+      "height": 140,
+      "left": 0,
+      "right": 305,
+      "top": 0,
+      "width": 305,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 6,
+          "right": 64.59375,
+          "top": 792,
+          "width": 58.59375,
+          "x": 6,
+          "y": 792
+        },
+        "text": "Cars"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 64.59375,
+          "right": 123.1875,
+          "top": 792,
+          "width": 58.59375,
+          "x": 64.59375,
+          "y": 792
+        },
+        "text": "Import"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 123.1875,
+          "right": 181.796875,
+          "top": 792,
+          "width": 58.609375,
+          "x": 123.1875,
+          "y": 792
+        },
+        "text": "Sell"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 181.796875,
+          "right": 240.390625,
+          "top": 792,
+          "width": 58.59375,
+          "x": 181.796875,
+          "y": 792
+        },
+        "text": "Lease"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 240.390625,
+          "right": 298.984375,
+          "top": 792,
+          "width": 58.59375,
+          "x": 240.390625,
+          "y": 792
+        },
+        "text": "Menu"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 16,
+          "right": 64.765625,
+          "top": 140,
+          "width": 48.765625,
+          "x": 16,
+          "y": 140
+        },
+        "text": "All"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 72.765625,
+          "right": 159.015625,
+          "top": 140,
+          "width": 86.25,
+          "x": 72.765625,
+          "y": 140
+        },
+        "text": "In stock"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 167.015625,
+          "right": 243.921875,
+          "top": 140,
+          "width": 76.90625,
+          "x": 167.015625,
+          "y": 140
+        },
+        "text": "Import"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 251.921875,
+          "right": 338.0625,
+          "top": 140,
+          "width": 86.140625,
+          "x": 251.921875,
+          "y": 140
+        },
+        "text": "Leasing"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 346.0625,
+          "right": 424.234375,
+          "top": 140,
+          "width": 78.171875,
+          "x": 346.0625,
+          "y": 140
+        },
+        "text": "Selling"
+      }
+    ],
+    "rail": {
+      "bottom": 184,
+      "height": 44,
+      "left": 16,
+      "right": 289,
+      "top": 140,
+      "width": 273,
+      "x": 16,
+      "y": 140
+    },
+    "scrollWidth": 305,
+    "searches": [
+      {
+        "placeholder": "Search services",
+        "rect": {
+          "bottom": 114,
+          "height": 44,
+          "left": 59,
+          "right": 272,
+          "top": 70,
+          "width": 213,
+          "x": 59,
+          "y": 70
+        }
+      }
+    ],
+    "width": 320,
+    "locale": "en"
+  },
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Browse the offers and plan an inspection.",
+        "href": "/en/cars",
+        "rect": {
+          "bottom": 326,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 196,
+          "width": 343,
+          "x": 16,
+          "y": 196
+        },
+        "title": "Vehicles in stock"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Tell us what you are looking for and start a conversation.",
+        "href": "/en/imports",
+        "rect": {
+          "bottom": 464,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 334,
+          "width": 343,
+          "x": 16,
+          "y": 334
+        },
+        "title": "Import on request"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Discuss an option for the vehicle and your budget.",
+        "href": "/en/lease",
+        "rect": {
+          "bottom": 602,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 472,
+          "width": 343,
+          "x": 16,
+          "y": 472
+        },
+        "title": "In-house leasing"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Share your vehicle details and request an appraisal.",
+        "href": "/en/sell",
+        "rect": {
+          "bottom": 740,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 610,
+          "width": 343,
+          "x": 16,
+          "y": 610
+        },
+        "title": "Sell your car"
+      }
+    ],
+    "clientWidth": 390,
+    "header": {
+      "bottom": 140,
+      "height": 140,
+      "left": 0,
+      "right": 375,
+      "top": 0,
+      "width": 375,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 6,
+          "right": 78.59375,
+          "top": 792,
+          "width": 72.59375,
+          "x": 6,
+          "y": 792
+        },
+        "text": "Cars"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 78.59375,
+          "right": 151.1875,
+          "top": 792,
+          "width": 72.59375,
+          "x": 78.59375,
+          "y": 792
+        },
+        "text": "Import"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 151.1875,
+          "right": 223.796875,
+          "top": 792,
+          "width": 72.609375,
+          "x": 151.1875,
+          "y": 792
+        },
+        "text": "Sell"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 223.796875,
+          "right": 296.390625,
+          "top": 792,
+          "width": 72.59375,
+          "x": 223.796875,
+          "y": 792
+        },
+        "text": "Lease"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 296.390625,
+          "right": 368.984375,
+          "top": 792,
+          "width": 72.59375,
+          "x": 296.390625,
+          "y": 792
+        },
+        "text": "Menu"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 16,
+          "right": 64.765625,
+          "top": 140,
+          "width": 48.765625,
+          "x": 16,
+          "y": 140
+        },
+        "text": "All"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 72.765625,
+          "right": 159.015625,
+          "top": 140,
+          "width": 86.25,
+          "x": 72.765625,
+          "y": 140
+        },
+        "text": "In stock"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 167.015625,
+          "right": 243.921875,
+          "top": 140,
+          "width": 76.90625,
+          "x": 167.015625,
+          "y": 140
+        },
+        "text": "Import"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 251.921875,
+          "right": 338.0625,
+          "top": 140,
+          "width": 86.140625,
+          "x": 251.921875,
+          "y": 140
+        },
+        "text": "Leasing"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 346.0625,
+          "right": 424.234375,
+          "top": 140,
+          "width": 78.171875,
+          "x": 346.0625,
+          "y": 140
+        },
+        "text": "Selling"
+      }
+    ],
+    "rail": {
+      "bottom": 184,
+      "height": 44,
+      "left": 16,
+      "right": 359,
+      "top": 140,
+      "width": 343,
+      "x": 16,
+      "y": 140
+    },
+    "scrollWidth": 375,
+    "searches": [
+      {
+        "placeholder": "Search services",
+        "rect": {
+          "bottom": 114,
+          "height": 44,
+          "left": 59,
+          "right": 342,
+          "top": 70,
+          "width": 283,
+          "x": 59,
+          "y": 70
+        }
+      }
+    ],
+    "width": 390,
+    "locale": "en"
+  },
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Разгледайте предложенията и планирайте оглед.",
+        "href": "/bg/cars",
+        "rect": {
+          "bottom": 326,
+          "height": 130,
+          "left": 120.5,
+          "right": 632.5,
+          "top": 196,
+          "width": 512,
+          "x": 120.5,
+          "y": 196
+        },
+        "title": "Автомобили в наличност"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Кажете какво търсите и започнете разговор.",
+        "href": "/bg/imports",
+        "rect": {
+          "bottom": 464,
+          "height": 130,
+          "left": 120.5,
+          "right": 632.5,
+          "top": 334,
+          "width": 512,
+          "x": 120.5,
+          "y": 334
+        },
+        "title": "Внос по заявка"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Обсъдете вариант според автомобила и бюджета ви.",
+        "href": "/bg/lease",
+        "rect": {
+          "bottom": 602,
+          "height": 130,
+          "left": 120.5,
+          "right": 632.5,
+          "top": 472,
+          "width": 512,
+          "x": 120.5,
+          "y": 472
+        },
+        "title": "Собствен лизинг"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Изпратете данни за автомобила и заявете оценка.",
+        "href": "/bg/sell",
+        "rect": {
+          "bottom": 740,
+          "height": 130,
+          "left": 120.5,
+          "right": 632.5,
+          "top": 610,
+          "width": 512,
+          "x": 120.5,
+          "y": 610
+        },
+        "title": "Продайте автомобила си"
+      }
+    ],
+    "clientWidth": 768,
+    "header": {
+      "bottom": 140,
+      "height": 140,
+      "left": 0,
+      "right": 753,
+      "top": 0,
+      "width": 753,
+      "x": 0,
+      "y": 0
+    },
+    "height": 844,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 126.5,
+          "right": 226.5,
+          "top": 792,
+          "width": 100,
+          "x": 126.5,
+          "y": 792
+        },
+        "text": "Коли"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 226.5,
+          "right": 326.5,
+          "top": 792,
+          "width": 100,
+          "x": 226.5,
+          "y": 792
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 326.5,
+          "right": 426.5,
+          "top": 792,
+          "width": 100,
+          "x": 326.5,
+          "y": 792
+        },
+        "text": "Продай"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 426.5,
+          "right": 526.5,
+          "top": 792,
+          "width": 100,
+          "x": 426.5,
+          "y": 792
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 844,
+          "height": 52,
+          "left": 526.5,
+          "right": 626.5,
+          "top": 792,
+          "width": 100,
+          "x": 526.5,
+          "y": 792
+        },
+        "text": "Меню"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 16,
+          "right": 100.4375,
+          "top": 140,
+          "width": 84.4375,
+          "x": 16,
+          "y": 140
+        },
+        "text": "Всички"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 108.4375,
+          "right": 227.84375,
+          "top": 140,
+          "width": 119.40625,
+          "x": 108.4375,
+          "y": 140
+        },
+        "text": "Наличности"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 235.84375,
+          "right": 302.40625,
+          "top": 140,
+          "width": 66.5625,
+          "x": 235.84375,
+          "y": 140
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 310.40625,
+          "right": 392.828125,
+          "top": 140,
+          "width": 82.421875,
+          "x": 310.40625,
+          "y": 140
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 44,
+          "left": 400.828125,
+          "right": 508.21875,
+          "top": 140,
+          "width": 107.390625,
+          "x": 400.828125,
+          "y": 140
+        },
+        "text": "Продажба"
+      }
+    ],
+    "rail": {
+      "bottom": 184,
+      "height": 44,
+      "left": 16,
+      "right": 737,
+      "top": 140,
+      "width": 721,
+      "x": 16,
+      "y": 140
+    },
+    "scrollWidth": 753,
+    "searches": [
+      {
+        "placeholder": "Търсене на услуги",
+        "rect": {
+          "bottom": 114,
+          "height": 44,
+          "left": 59,
+          "right": 720,
+          "top": 70,
+          "width": 661,
+          "x": 59,
+          "y": 70
+        }
+      }
+    ],
+    "width": 768,
+    "locale": "bg"
+  },
+  {
+    "brokenImages": [],
+    "cards": [
+      {
+        "artworkPosition": "relative",
+        "description": "Разгледайте предложенията и планирайте оглед.",
+        "href": "/bg/cars",
+        "rect": {
+          "bottom": 844,
+          "height": 394,
+          "left": 52.5,
+          "right": 364.5,
+          "top": 450,
+          "width": 312,
+          "x": 52.5,
+          "y": 450
+        },
+        "title": "Автомобили в наличност"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Кажете какво търсите и започнете разговор.",
+        "href": "/bg/imports",
+        "rect": {
+          "bottom": 844,
+          "height": 394,
+          "left": 388.5,
+          "right": 700.5,
+          "top": 450,
+          "width": 312,
+          "x": 388.5,
+          "y": 450
+        },
+        "title": "Внос по заявка"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Обсъдете вариант според автомобила и бюджета ви.",
+        "href": "/bg/lease",
+        "rect": {
+          "bottom": 844,
+          "height": 394,
+          "left": 724.5,
+          "right": 1036.5,
+          "top": 450,
+          "width": 312,
+          "x": 724.5,
+          "y": 450
+        },
+        "title": "Собствен лизинг"
+      },
+      {
+        "artworkPosition": "relative",
+        "description": "Изпратете данни за автомобила и заявете оценка.",
+        "href": "/bg/sell",
+        "rect": {
+          "bottom": 844,
+          "height": 394,
+          "left": 1060.5,
+          "right": 1372.5,
+          "top": 450,
+          "width": 312,
+          "x": 1060.5,
+          "y": 450
+        },
+        "title": "Продайте автомобила си"
+      }
+    ],
+    "clientWidth": 1425,
+    "header": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "height": 1000,
+    "logoImages": 0,
+    "nav": [
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Коли"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Продай"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Меню"
+      }
+    ],
+    "pendingImages": 0,
+    "pills": [
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Всички"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Наличности"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Внос"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Лизинг"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Продажба"
+      }
+    ],
+    "rail": {
+      "bottom": 0,
+      "height": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollWidth": 1425,
+    "searches": [
+      {
+        "placeholder": "Как можем да помогнем?",
+        "rect": {
+          "bottom": 276,
+          "height": 44,
+          "left": 247.5,
+          "right": 1211.5,
+          "top": 232,
+          "width": 964,
+          "x": 247.5,
+          "y": 232
+        }
+      }
+    ],
+    "width": 1440,
+    "locale": "bg"
+  }
+]

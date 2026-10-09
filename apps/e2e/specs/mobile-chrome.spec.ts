@@ -2,10 +2,10 @@ import { expect, type Page, test } from "@playwright/test";
 
 const defaultLocalePrefix = /^\/bg(?=\/)/;
 const serviceTitles: Record<string, string> = {
-  Коли: "Открийте автомобил",
+  Коли: "Открий автомобил",
   Лизинг: "Лизинг на автомобил",
   Внос: "Внос на автомобил",
-  Продай: "Продайте автомобил",
+  Продай: "Продай автомобил",
 };
 
 const primaryControlSlots: Record<string, string> = {
@@ -129,7 +129,7 @@ for (const width of [320, 360, 390, 430, 844]) {
         '[data-slot="mobile-dealer-content"]:visible'
       );
       const title = chrome.locator('[data-slot="mobile-dealer-title"]');
-      const expectedTitle = label ? serviceTitles[label] : "Открийте автомобил";
+      const expectedTitle = label ? serviceTitles[label] : "Открий автомобил";
       await expect(title).toHaveText(expectedTitle);
       await expect(page.getByRole("heading", { level: 1 })).toHaveCount(1);
       const titleBox = await title.boundingBox();

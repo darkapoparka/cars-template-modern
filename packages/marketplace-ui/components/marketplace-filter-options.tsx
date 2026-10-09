@@ -226,7 +226,7 @@ const MileageFilterSubview = ({
         `${numberFormatter.format(nextValue)} ${isBg ? "км" : "km"}`
       }
       label={showSummaryLabel ? summaryLabel : ""}
-      maximumLabel={copy.options.maximumMileage}
+      maximumLabel={copy.options.maximum}
       maximumOnly
       maximumPrefix={isBg ? "До" : "Up to"}
       minimumLabel={copy.options.minimum}

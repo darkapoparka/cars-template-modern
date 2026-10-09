@@ -86,7 +86,7 @@ export function BlankImportRequestLink({
             ariaLabel={isBg ? "Затвори заявката" : "Close request"}
           />
         }
-        title={label}
+        title={isBg ? "Данни" : "Details"}
       >
         <ImportRequestForm
           defaultOrigin={defaultOrigin === "ALL" ? "" : defaultOrigin}

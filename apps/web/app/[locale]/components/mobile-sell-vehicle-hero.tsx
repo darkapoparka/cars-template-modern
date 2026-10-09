@@ -51,9 +51,7 @@ export const MobileSellVehicleHero = ({
         <div className="h-full">
           <button
             aria-haspopup="dialog"
-            aria-label={
-              locale === "bg" ? "Въведете VIN номер" : "Enter VIN number"
-            }
+            aria-label={content.vinEntry}
             className={`${mobileSearchTriggerClassName} bg-white ring-black/5 focus-visible:outline-ring active:bg-zinc-100`}
             data-slot="mobile-sell-vin-entry"
             disabled={!ready}
@@ -66,8 +64,7 @@ export const MobileSellVehicleHero = ({
               strokeWidth={1.75}
             />
             <span className={mobileSearchTriggerLabelClassName}>
-              {vin ||
-                (locale === "bg" ? "Въведете VIN номер" : "Enter VIN number")}
+              {vin || content.vinEntry}
             </span>
             <DealerUiIcon
               className={mobileSearchIconClassName}

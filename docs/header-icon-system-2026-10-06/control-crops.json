@@ -1,0 +1,281 @@
+[
+  {
+    "artwork": [
+      24,
+      18,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "category",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "car",
+    "src": "/images/services/header-system-car-v3.webp",
+    "file": "bg-cars-after-390.jpg"
+  },
+  {
+    "artwork": [
+      323,
+      20,
+      28,
+      28
+    ],
+    "control": [
+      315,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      319,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "filters",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "filters",
+    "src": "/images/services/header-system-filters-v3.webp",
+    "file": "bg-cars-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      18,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "category",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "bike",
+    "src": "/images/services/header-system-bike-v3.webp",
+    "file": "bg-motorbikes-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      18,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "category",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "truck",
+    "src": "/images/services/header-system-truck-v3.webp",
+    "file": "bg-trucks-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      18,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "category",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "van",
+    "src": "/images/services/header-system-van-v3.webp",
+    "file": "bg-vans-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      20,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": "/bg/guides",
+    "kind": "guides",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "guides",
+    "src": "/images/services/header-system-guides-v3.webp",
+    "file": "bg-guides-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      20,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "kind": "location",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "location",
+    "src": "/images/services/header-system-location-v3.webp",
+    "file": "bg-services-after-390.jpg"
+  },
+  {
+    "artwork": [
+      323,
+      20,
+      28,
+      28
+    ],
+    "control": [
+      315,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      319,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": "tel:+359877733110",
+    "kind": "phone",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "phone",
+    "src": "/images/services/header-system-phone-v3.webp",
+    "file": "bg-services-after-390.jpg"
+  },
+  {
+    "artwork": [
+      24,
+      20,
+      28,
+      28
+    ],
+    "control": [
+      16,
+      12,
+      44,
+      44
+    ],
+    "frame": [
+      20,
+      16,
+      36,
+      36
+    ],
+    "horizontalCenterOffset": 0,
+    "href": null,
+    "kind": "info",
+    "loaded": true,
+    "natural": [
+      112,
+      112
+    ],
+    "role": "info",
+    "src": "/images/services/header-system-info-v3.webp",
+    "file": "bg-imports-after-390.jpg"
+  }
+]

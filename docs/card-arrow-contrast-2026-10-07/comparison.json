@@ -1,0 +1,37 @@
+{
+  "desktop": {
+    "width": 1440,
+    "arrows": [
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)",
+      "rgb(35, 35, 35)"
+    ],
+    "sameGeometry": true
+  },
+  "mobile": [
+    {
+      "width": 320,
+      "samePixels": false,
+      "sameGeometry": true
+    },
+    {
+      "width": 390,
+      "samePixels": false,
+      "sameGeometry": true
+    },
+    {
+      "width": 1023,
+      "samePixels": false,
+      "sameGeometry": true
+    }
+  ]
+}

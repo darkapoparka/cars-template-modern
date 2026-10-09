@@ -40,8 +40,29 @@
   --desktop-frame-max: 78rem;
   --desktop-showroom-max: 1320px;
   --desktop-banner-height: calc(var(--spacing) * 88);
+  --desktop-page-sheet-overlap: calc(var(--spacing) * 8);
+  --desktop-page-sheet-radius: calc(var(--spacing) * 8);
+  --desktop-page-content-gap: calc(var(--spacing) * 8);
+  --desktop-page-content-offset: max(
+    0px,
+    calc(var(--desktop-page-content-gap) - var(--desktop-page-sheet-overlap))
+  );
+  --desktop-page-grid-gap: calc(var(--spacing) * 6);
+  --desktop-hero-heading-gap: calc(var(--spacing) * 6);
+  --desktop-hero-pills-gap: calc(var(--spacing) * 4);
+  --desktop-hero-pill-gap: calc(var(--spacing) * 2);
+  --desktop-hero-pill-height: calc(var(--spacing) * 11);
+  --desktop-hero-pill-padding: calc(var(--spacing) * 4);
   --desktop-discovery-search-width: calc(var(--spacing) * 225);
+  --desktop-discovery-search-flanked-width: clamp(
+    calc(var(--spacing) * 160),
+    60vw,
+    calc(var(--spacing) * 185)
+  );
   --desktop-discovery-vehicle-span: calc(var(--spacing) * 260);
+  --desktop-discovery-vehicle-baseline: calc(var(--spacing) * 53.5);
+  --desktop-discovery-vehicle-gap: calc(var(--spacing) * 6);
+  --desktop-discovery-vehicle-left-scale: 1;
   --desktop-content-max: 82.5rem;
   --desktop-content-width: min(calc(100% - 5rem), var(--desktop-content-max));
   --desktop-frame-width: var(--desktop-content-width);
@@ -115,17 +136,17 @@
   --desktop-accent-soft: color-mix(in srgb, var(--brand) 8%, var(--panel));
   --desktop-filter-selected-background: color-mix(
     in srgb,
-    var(--brand) 10%,
+    var(--desktop-brand, var(--brand)) 10%,
     var(--panel)
   );
   --desktop-filter-selected-border: color-mix(
     in srgb,
-    var(--brand) 25%,
+    var(--desktop-brand, var(--brand)) 25%,
     var(--border)
   );
   --desktop-filter-selected-text: color-mix(
     in srgb,
-    var(--brand-text) 85%,
+    var(--desktop-brand-text, var(--brand-text)) 85%,
     var(--foreground)
   );
   --desktop-picker-hover: color-mix(in srgb, var(--brand) 3%, var(--panel));
@@ -234,15 +255,19 @@
   --desktop-banner-start: #ededed;
   --desktop-banner-center: #f5f5f5;
   --desktop-banner-end: #efefef;
-  --desktop-banner-orbit: color-mix(in srgb, var(--brand) 4%, transparent);
+  --desktop-banner-orbit: color-mix(
+    in srgb,
+    var(--desktop-brand, var(--brand)) 4%,
+    transparent
+  );
   --desktop-banner-orbit-middle: color-mix(
     in srgb,
-    var(--brand) 2%,
+    var(--desktop-brand, var(--brand)) 2%,
     transparent
   );
   --desktop-banner-orbit-outer: color-mix(
     in srgb,
-    var(--brand) 1%,
+    var(--desktop-brand, var(--brand)) 1%,
     transparent
   );
   --desktop-body-text: #232323;
@@ -250,8 +275,11 @@
   --desktop-breadcrumb-text: var(--desktop-muted-text);
   --desktop-description-text: #595959;
   --desktop-discovery-surface: #ededed;
-  --desktop-discovery-dark-surface: #191d24;
-  --desktop-discovery-dark-foreground: #f7f8fa;
+  --desktop-discovery-dark-surface: var(--desktop-brand, var(--brand));
+  --desktop-discovery-dark-foreground: var(
+    --desktop-brand-foreground,
+    var(--brand-foreground)
+  );
   --desktop-discovery-dark-description: #b9bec6;
   --desktop-discovery-glass-background: color-mix(
     in srgb,
@@ -265,11 +293,17 @@
     white 32%,
     transparent
   );
-  --desktop-discovery-selected-hover: #e9edf2;
-  --desktop-discovery-dark-background:
-    radial-gradient(ellipse at 12% 32%, #6b748066 0%, transparent 36%),
-    radial-gradient(ellipse at 87% 32%, #3b465466 0%, transparent 38%),
-    linear-gradient(135deg, #2b3038 0%, #191d24 55%, #12161c 100%);
+  --desktop-discovery-selected-hover: color-mix(
+    in srgb,
+    var(--desktop-brand, var(--brand)) 8%,
+    var(--desktop-surface)
+  );
+  --desktop-discovery-dark-background: linear-gradient(
+    110deg,
+    var(--desktop-brand, var(--brand)) 0%,
+    var(--desktop-brand-gradient-end, var(--brand)) 50%,
+    var(--desktop-brand, var(--brand)) 100%
+  );
   --desktop-context-artwork-edge: color-mix(
     in srgb,
     var(--desktop-discovery-surface) 0%,
@@ -281,7 +315,11 @@
     transparent
   );
   --desktop-discovery-description-text: #626262;
-  --desktop-discovery-vehicle-width: clamp(210px, 18vw, 240px);
+  --desktop-discovery-vehicle-width: clamp(
+    calc(var(--spacing) * 75),
+    24vw,
+    calc(var(--spacing) * 85)
+  );
   --desktop-surface-subtle: #fafafa;
   --desktop-preview-surface: #f1f1f1;
   --desktop-prose-text: #454545;
@@ -307,6 +345,26 @@
   --desktop-hero-overlay-top: rgb(32 32 32 / 40%);
   --desktop-hero-overlay-middle: rgb(32 32 32 / 28%);
   --desktop-hero-overlay-bottom: rgb(32 32 32 / 16%);
+  --desktop-editorial-overlay-edge: color-mix(
+    in srgb,
+    var(--inverse) 12%,
+    transparent
+  );
+  --desktop-editorial-overlay-center: color-mix(
+    in srgb,
+    var(--inverse) 32%,
+    transparent
+  );
+  --desktop-editorial-control-background: color-mix(
+    in srgb,
+    var(--inverse) 72%,
+    transparent
+  );
+  --desktop-editorial-control-hover: color-mix(
+    in srgb,
+    var(--inverse) 84%,
+    transparent
+  );
   --desktop-heading-tracking: -0.02em;
   --desktop-wordmark-tracking: 0.08em;
   --desktop-artwork-overlay: rgb(32 32 32 / 70%);

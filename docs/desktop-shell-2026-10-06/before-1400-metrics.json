@@ -1,0 +1,1521 @@
+[
+  {
+    "phase": "before-1400",
+    "name": "home",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 168
+        },
+        "text": "Намерете своя автомобил"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 494
+        },
+        "text": "Разгледайте автомобилите"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 1178.65625
+        },
+        "text": "По-лесен път към следващия ви автомобил"
+      },
+      {
+        "font": "40px",
+        "rect": {
+          "height": 52,
+          "width": 1376,
+          "x": 264.5,
+          "y": 1770.65625
+        },
+        "text": "Следващият ви автомобил ви очаква."
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 2116.65625
+        },
+        "text": "Съвети за пътя напред"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 2793.3125
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 2793.3125
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 2793.3125
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 416.5,
+          "y": 111.90625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 1248.5,
+          "y": 123.1875
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 660.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 839.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 987.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 1130.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 233.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 599.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 965.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 1331.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 256.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 622.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 988.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 1354.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 320,
+          "width": 1440,
+          "x": 232.5,
+          "y": 1706.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 233.5,
+          "y": 2191.65625
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      3216
+    ],
+    "search": {
+      "height": 64,
+      "width": 900,
+      "x": 502.5,
+      "y": 240
+    },
+    "stock": {
+      "height": 614.65625,
+      "width": 1440,
+      "x": 232.5,
+      "y": 474
+    },
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "cars",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 168
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 1997.96875
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 1997.96875
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 1997.96875
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 416.5,
+          "y": 111.90625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 1248.5,
+          "y": 123.1875
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 660.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 839.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 987.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 1130.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 963.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 1328.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 963.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 1328.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 1428.3125
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 1428.3125
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      2421
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "pdp",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "28px",
+        "rect": {
+          "height": 36.390625,
+          "width": 621.171875,
+          "x": 256.5,
+          "y": 214
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 1020,
+          "x": 256.5,
+          "y": 1000.328125
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 1020,
+          "x": 256.5,
+          "y": 1453.328125
+        },
+        "text": "Описание"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 331.796875,
+          "x": 232.5,
+          "y": 1651.328125
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 2369.984375
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 2369.984375
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 2369.984375
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 631.9375,
+          "width": 1068,
+          "x": 232.5,
+          "y": 328.390625
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 1710.328125
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 1710.328125
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 963.5,
+          "y": 1710.328125
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      2793
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "cars",
+    "width": 320,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "font": "18px",
+        "rect": {
+          "height": 28,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 268
+        },
+        "text": "X5 M50d"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 423
+        },
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 578
+        },
+        "text": "M4 Competition"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 733
+        },
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 888
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1043
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1198
+        },
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1353
+        },
+        "text": "GLE 400d Coupe"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 24,
+          "y": 18
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 253,
+          "y": 20
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 248
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 403
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 558
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 713
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 868
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1023
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1178
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1333
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1488
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1643
+        }
+      },
+      {
+        "alt": "BMW 4 Series",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1798
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV в градска среда",
+        "loaded": true,
+        "rect": {
+          "height": 85.171875,
+          "width": 113.578125,
+          "x": 28,
+          "y": 1953
+        }
+      }
+    ],
+    "nav": null,
+    "page": [
+      305,
+      2176
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      320,
+      844
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "pdp",
+    "width": 320,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "font": "22px",
+        "rect": {
+          "height": 56,
+          "width": 273,
+          "x": 16,
+          "y": 277.75
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 28,
+          "y": 425.75
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "font": "36px",
+        "rect": {
+          "height": 40,
+          "width": 123.203125,
+          "x": 90.890625,
+          "y": 885.75
+        },
+        "text": "Лизинг"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 24,
+          "width": 186.640625,
+          "x": 16,
+          "y": 1105.75
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 144.109375,
+          "y": 1187.75
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 429.109375,
+          "y": 1187.75
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 714.109375,
+          "y": 1187.75
+        },
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 24,
+          "width": 241,
+          "x": 32,
+          "y": 1358.75
+        },
+        "text": "Посетете шоурума"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.75,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 208,
+          "width": 273,
+          "x": 16,
+          "y": 855.75
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 81.078125,
+          "width": 108.109375,
+          "x": 28,
+          "y": 1167.75
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 81.078125,
+          "width": 108.109375,
+          "x": 313,
+          "y": 1167.75
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 81.078125,
+          "width": 108.109375,
+          "x": 598,
+          "y": 1167.75
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 176,
+          "width": 273,
+          "x": 16,
+          "y": 1330.75
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 249,
+          "y": 788
+        }
+      }
+    ],
+    "nav": null,
+    "page": [
+      305,
+      1624
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      320,
+      844
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "cars",
+    "width": 390,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "font": "18px",
+        "rect": {
+          "height": 28,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 278.15625
+        },
+        "text": "X5 M50d"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 453.46875
+        },
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 628.78125
+        },
+        "text": "M4 Competition"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 804.09375
+        },
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 979.40625
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1154.71875
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1330.03125
+        },
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1505.34375
+        },
+        "text": "GLE 400d Coupe"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 24,
+          "y": 18
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 323,
+          "y": 20
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 248
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 423.3125
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 598.625
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 773.9375
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 949.25
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 1124.5625
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 1299.875
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 1475.1875
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 1650.5
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 1825.8125
+        }
+      },
+      {
+        "alt": "BMW 4 Series",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 2001.125
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV в градска среда",
+        "loaded": true,
+        "rect": {
+          "height": 109.3125,
+          "width": 145.765625,
+          "x": 28,
+          "y": 2176.4375
+        }
+      }
+    ],
+    "nav": null,
+    "page": [
+      375,
+      2424
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "phase": "before-1400",
+    "name": "pdp",
+    "width": 390,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "font": "22px",
+        "rect": {
+          "height": 56,
+          "width": 343,
+          "x": 16,
+          "y": 330.25
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 28,
+          "y": 478.25
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "font": "36px",
+        "rect": {
+          "height": 40,
+          "width": 123.203125,
+          "x": 125.890625,
+          "y": 914.25
+        },
+        "text": "Лизинг"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 24,
+          "width": 186.640625,
+          "x": 16,
+          "y": 1134.25
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 153.796875,
+          "y": 1216.25
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 460.796875,
+          "y": 1216.25
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "font": "16px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 767.796875,
+          "y": 1216.25
+        },
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 24,
+          "width": 311,
+          "x": 32,
+          "y": 1387.25
+        },
+        "text": "Посетете шоурума"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 281.25,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 208,
+          "width": 343,
+          "x": 16,
+          "y": 884.25
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 88.34375,
+          "width": 117.796875,
+          "x": 28,
+          "y": 1196.25
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 88.34375,
+          "width": 117.796875,
+          "x": 335,
+          "y": 1196.25
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 88.34375,
+          "width": 117.796875,
+          "x": 642,
+          "y": 1196.25
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 176,
+          "width": 343,
+          "x": 16,
+          "y": 1359.25
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 319,
+          "y": 788
+        }
+      }
+    ],
+    "nav": null,
+    "page": [
+      375,
+      1652
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      390,
+      844
+    ]
+  }
+]

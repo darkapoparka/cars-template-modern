@@ -17,7 +17,7 @@
   }
   .map {
     position: relative;
-    height: calc(var(--spacing) * 90);
+    height: calc(var(--spacing) * 60);
     overflow: hidden;
     background: var(--desktop-surface-subtle);
     border: var(--desktop-border-width) solid var(--desktop-control-border);
@@ -268,7 +268,7 @@
     cursor: pointer;
     background: var(--brand);
     border: var(--desktop-border-width) solid var(--brand);
-    border-radius: calc(var(--spacing) * 3);
+    border-radius: var(--radius-pill);
   }
   .submit:hover,
   .contactAction:hover {
@@ -296,8 +296,8 @@
   .gallery {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 6);
-    margin-top: calc(var(--spacing) * 10);
+    gap: var(--desktop-page-grid-gap);
+    margin-top: var(--desktop-page-content-offset);
   }
   .gallery figure {
     position: relative;
@@ -407,7 +407,7 @@
     color: var(--foreground);
     background: var(--desktop-surface);
     border: var(--desktop-border-width) solid var(--foreground);
-    border-radius: calc(var(--spacing) * 3);
+    border-radius: var(--radius-pill);
   }
   .aboutActions :is(.contactAction, .secondaryAction) {
     min-height: calc(var(--spacing) * 12);

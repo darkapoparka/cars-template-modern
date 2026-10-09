@@ -1,0 +1,580 @@
+[
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Продайте автомобила си"
+    },
+    "url": "/bg/sell",
+    "width": 390
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Внос на автомобил"
+    },
+    "url": "/bg/imports",
+    "width": 390
+  },
+  {
+    "content": {
+      "bottom": 2355.75,
+      "height": 2187.75,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Лизинг на автомобил"
+    },
+    "url": "/bg/lease",
+    "width": 390
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Продайте автомобила си"
+    },
+    "url": "/bg/sell",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Внос на автомобил"
+    },
+    "url": "/bg/imports",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 2108.171875,
+      "height": 1940.171875,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Лизинг на автомобил"
+    },
+    "url": "/bg/lease",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Sell your vehicle"
+    },
+    "url": "/en/sell",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Import a vehicle"
+    },
+    "url": "/en/imports",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 2380,
+      "height": 2212,
+      "left": 0,
+      "right": 305,
+      "top": 168,
+      "width": 305,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 289,
+      "top": 108,
+      "width": 273,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 273,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 289,
+        "top": 68,
+        "width": 273,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 273,
+      "text": "Vehicle financing"
+    },
+    "url": "/en/lease",
+    "width": 320
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Sell your vehicle"
+    },
+    "url": "/en/sell",
+    "width": 390
+  },
+  {
+    "content": {
+      "bottom": 236,
+      "height": 68,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Import a vehicle"
+    },
+    "url": "/en/imports",
+    "width": 390
+  },
+  {
+    "content": {
+      "bottom": 2355.75,
+      "height": 2187.75,
+      "left": 0,
+      "right": 375,
+      "top": 168,
+      "width": 375,
+      "x": 0,
+      "y": 168
+    },
+    "field": {
+      "bottom": 156,
+      "height": 48,
+      "left": 16,
+      "right": 359,
+      "top": 108,
+      "width": 343,
+      "x": 16,
+      "y": 108
+    },
+    "heroBackground": "rgb(48, 52, 59)",
+    "overflow": false,
+    "title": {
+      "clientWidth": 343,
+      "color": "rgb(255, 255, 255)",
+      "font": "22px",
+      "lineHeight": "28px",
+      "rect": {
+        "bottom": 96,
+        "height": 28,
+        "left": 16,
+        "right": 359,
+        "top": 68,
+        "width": 343,
+        "x": 16,
+        "y": 68
+      },
+      "scrollWidth": 343,
+      "text": "Vehicle financing"
+    },
+    "url": "/en/lease",
+    "width": 390
+  },
+  {
+    "contentY": 128,
+    "controlY": 68,
+    "overflow": false,
+    "titleCount": 0,
+    "url": "/bg",
+    "width": 390
+  },
+  {
+    "contentY": 128,
+    "controlY": 68,
+    "overflow": false,
+    "titleCount": 0,
+    "url": "/bg/cars",
+    "width": 390
+  },
+  {
+    "controlY": 68,
+    "overflow": false,
+    "titleCount": 0,
+    "url": "/bg/services",
+    "width": 390
+  },
+  {
+    "mobileHeroVisible": false,
+    "overflow": false,
+    "url": "/bg/sell",
+    "visibleHeadings": [
+      "Продайте ни автомобила си"
+    ],
+    "width": 1440
+  },
+  {
+    "mobileHeroVisible": false,
+    "overflow": false,
+    "url": "/bg/imports",
+    "visibleHeadings": [
+      "Внос на автомобил"
+    ],
+    "width": 1440
+  },
+  {
+    "mobileHeroVisible": false,
+    "overflow": false,
+    "url": "/bg/lease",
+    "visibleHeadings": [
+      "Финансиране на автомобил"
+    ],
+    "width": 1440
+  }
+]

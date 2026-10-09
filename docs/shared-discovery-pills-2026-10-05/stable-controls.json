@@ -1,0 +1,47 @@
+[
+  {
+    "chips": {
+      "height": 56,
+      "left": 64,
+      "top": 530,
+      "width": 881
+    },
+    "controls": {
+      "height": 44,
+      "left": 332.5,
+      "top": 474,
+      "width": 344
+    },
+    "grid": {
+      "height": 1614.234375,
+      "left": 64,
+      "top": 610,
+      "width": 881
+    }
+  },
+  {
+    "chips": {
+      "height": 56,
+      "left": 64,
+      "top": 530,
+      "width": 881
+    },
+    "controls": {
+      "height": 44,
+      "left": 332.5,
+      "top": 474,
+      "width": 344
+    },
+    "grid": {
+      "height": 813.109375,
+      "left": 64,
+      "top": 610,
+      "width": 881
+    }
+  },
+  {
+    "grid": {
+      "top": 610
+    }
+  }
+]

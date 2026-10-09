@@ -1,0 +1,12 @@
+{
+  "overflow": false,
+  "title": [
+    {
+      "font": "40px",
+      "lineHeight": "48px",
+      "text": "Автомобили за продажба"
+    }
+  ],
+  "visibleMobileTitles": 0,
+  "width": 1440
+}

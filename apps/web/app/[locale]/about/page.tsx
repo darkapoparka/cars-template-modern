@@ -115,14 +115,17 @@ export default async function AboutPage({ params }: AboutProps) {
           ].filter((action) =>
             isPublicSitePathEnabled(action.href, publicSite)
           )}
-          appearance="neutral"
+          appearance="photo"
           artwork={
-            publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+            publicSite.artwork.desktopPageHeroes?.about ??
+            publicSite.artwork.desktopHeroScene ??
+            publicSite.artwork.heroScene
           }
           eyebrow={[copy.city, leadSite.district[normalized]]
             .filter(Boolean)
             .join(" · ")}
           locale={normalized}
+          sceneTone="editorial"
           title={text(
             `За ${desktopIdentity.shortName}`,
             `About ${desktopIdentity.shortName}`

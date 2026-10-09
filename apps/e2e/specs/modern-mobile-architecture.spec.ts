@@ -67,10 +67,31 @@ for (const width of [390, 1440]) {
         .first()
         .tap();
     } else {
+      // Desktop now uses the shared model dialog, not the retired header combobox.
+      const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
+      await hero.getByRole("button", { name: "Модел", exact: true }).click();
+      const dialog = page.locator(
+        '[data-slot="desktop-focused-filter-dialog"]'
+      );
+      await dialog.getByRole("searchbox").fill("M4");
+      await dialog
+        .locator('[data-slot="model-option"]')
+        .filter({ hasText: "M4" })
+        .first()
+        .click();
+      await dialog
+        .getByRole("button", { name: "Покажи обявите", exact: true })
+        .click();
+      await expect
+        .poll(() => new URL(page.url()).searchParams.get("model"))
+        .toBe("M4");
+      expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
       await page
-        .getByRole("combobox", { name: "Търсене на автомобили", exact: true })
-        .fill("M4");
-      await page.getByText("BMW M4 Competition", { exact: true }).click();
+        .locator(
+          '[data-slot="marketplace-listing-grid"] a[href*="/listing/"]:visible'
+        )
+        .first()
+        .click();
     }
     await expect(page).toHaveURL(listingRoutePattern);
     await expect(page.locator("h1").first()).toContainText(

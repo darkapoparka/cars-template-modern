@@ -451,9 +451,10 @@ test("desktop inventory remains usable when preference storage is blocked", asyn
   await page.addInitScript(() => {
     Object.defineProperty(window, "cookieStore", {
       configurable: true,
-      value: {
+      // Cookie Store is an EventTarget; Next also subscribes to its changes.
+      value: Object.assign(new EventTarget(), {
         set: () => Promise.reject(new Error("Preference storage blocked")),
-      },
+      }),
     });
   });
   const errors: string[] = [];

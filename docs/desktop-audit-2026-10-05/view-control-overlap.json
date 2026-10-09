@@ -1,0 +1,23 @@
+{
+  "width": 1024,
+  "height": 900,
+  "view": {
+    "height": 48,
+    "width": 104.8125,
+    "x": 880.1875,
+    "y": 828
+  },
+  "intersections": [
+    {
+      "details": "Детайли",
+      "box": {
+        "height": 36,
+        "width": 102.3125,
+        "x": 849.6875,
+        "y": 815.71875
+      },
+      "overlapArea": 1703.302734375,
+      "percentageOfDetails": 46.244559407452655
+    }
+  ]
+}

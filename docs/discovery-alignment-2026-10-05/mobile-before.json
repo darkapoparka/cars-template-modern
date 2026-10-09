@@ -1,0 +1,932 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "measured": {
+      "bodyHeight": 2136,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 351
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 506
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 661
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 816
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 971
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1126
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1281
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1436
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1591
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1746
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 143.17,
+            "width": 273,
+            "x": 16,
+            "y": 1901
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 320
+    }
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "measured": {
+      "bodyHeight": 2136,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 351
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 506
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 661
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 816
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 971
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1126
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1281
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1436
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1591
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 147,
+            "width": 273,
+            "x": 16,
+            "y": 1746
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 143.17,
+            "width": 273,
+            "x": 16,
+            "y": 1901
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 320
+    }
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "measured": {
+      "bodyHeight": 2384,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 371.31
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 546.63
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 721.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 897.25
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1072.56
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1247.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1423.19
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1598.5
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1773.81
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1949.13
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 2124.44
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 390
+    }
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "measured": {
+      "bodyHeight": 2384,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 371.31
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 546.63
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 721.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 897.25
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1072.56
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1247.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1423.19
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1598.5
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1773.81
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 1949.13
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 167.31,
+            "width": 343,
+            "x": 16,
+            "y": 2124.44
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 390
+    }
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "measured": {
+      "bodyHeight": 1624,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 419.97
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 419.97
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 643.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 643.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 867.91
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 867.91
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 1091.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 1091.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 1315.84
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 1315.84
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 1023
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "measured": {
+      "bodyHeight": 1624,
+      "boxes": [
+        {
+          "rect": {
+            "height": 1,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 419.97
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 419.97
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 643.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 643.94
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 867.91
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 867.91
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 1091.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 1091.88
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 16,
+            "y": 1315.84
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        },
+        {
+          "rect": {
+            "height": 215.97,
+            "width": 484,
+            "x": 508,
+            "y": 1315.84
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE",
+          "text": null
+        }
+      ],
+      "height": 900,
+      "overflow": false,
+      "width": 1023
+    }
+  }
+]

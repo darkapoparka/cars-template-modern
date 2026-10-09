@@ -1,0 +1,16 @@
+{
+  "source": "Unmodified CUA screenshots of the rendered headers",
+  "family": "Exact 44px control crops enlarged 2x; labels added outside the controls",
+  "comparison": "Matched 390x168 header crops from 390x844 screenshots",
+  "roles": [
+    "car",
+    "bike",
+    "truck",
+    "van",
+    "guides",
+    "filters",
+    "info",
+    "location",
+    "phone"
+  ]
+}

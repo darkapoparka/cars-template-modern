@@ -1,0 +1,238 @@
+{
+  "states": [
+    {
+      "category": "car",
+      "buttons": [
+        {
+          "background": "rgb(233, 237, 242)",
+          "category": "car",
+          "color": "rgb(35, 35, 35)",
+          "loaded": true,
+          "selected": true,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "motorbike",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "van",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "truck",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        }
+      ],
+      "row": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 312
+      },
+      "url": "http://127.0.0.1:6482/bg",
+      "screenshot": "bg-home-selected-car-1440.jpg"
+    },
+    {
+      "category": "motorbike",
+      "buttons": [
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "car",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgb(233, 237, 242)",
+          "category": "motorbike",
+          "color": "rgb(35, 35, 35)",
+          "loaded": true,
+          "selected": true,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "van",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "truck",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        }
+      ],
+      "row": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 312
+      },
+      "url": "http://127.0.0.1:6482/bg",
+      "screenshot": "bg-home-selected-motorbike-1440.jpg"
+    },
+    {
+      "category": "van",
+      "buttons": [
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "car",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "motorbike",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgb(233, 237, 242)",
+          "category": "van",
+          "color": "rgb(35, 35, 35)",
+          "loaded": true,
+          "selected": true,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "truck",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        }
+      ],
+      "row": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 312
+      },
+      "url": "http://127.0.0.1:6482/bg",
+      "screenshot": "bg-home-selected-van-1440.jpg"
+    },
+    {
+      "category": "truck",
+      "buttons": [
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "car",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "motorbike",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "category": "van",
+          "color": "rgb(247, 248, 250)",
+          "loaded": true,
+          "selected": false,
+          "size": [
+            44,
+            24
+          ]
+        },
+        {
+          "background": "rgb(233, 237, 242)",
+          "category": "truck",
+          "color": "rgb(35, 35, 35)",
+          "loaded": true,
+          "selected": true,
+          "size": [
+            44,
+            24
+          ]
+        }
+      ],
+      "row": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 312
+      },
+      "url": "http://127.0.0.1:6482/bg",
+      "screenshot": "bg-home-selected-truck-1440.jpg"
+    }
+  ],
+  "focus": {
+    "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px, oklab(0.323953 -0.00194573 -0.0134637 / 0.35) 0px 0px 0px 5px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+    "focusVisible": true,
+    "focused": true,
+    "outline": "rgb(247, 248, 250) solid 2px"
+  }
+}

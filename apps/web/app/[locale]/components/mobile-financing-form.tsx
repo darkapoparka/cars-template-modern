@@ -156,7 +156,7 @@ export const FinancingRequestForm = ({
 
       <fieldset className="mt-5" data-slot="financing-term-options">
         <legend className="font-medium text-meta text-zinc-800">
-          {locale === "bg" ? "Предпочитан срок" : "Preferred term"}
+          {copy.term}
         </legend>
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto overscroll-x-contain">
           {financingTermOptions.map((value) => (
@@ -177,7 +177,7 @@ export const FinancingRequestForm = ({
 
       <fieldset className="mt-5" data-slot="financing-deposit-options">
         <legend className="font-medium text-meta text-zinc-800">
-          {copy.deposit}
+          {copy.depositShortLabel}
         </legend>
         <div className="no-scrollbar mt-2 flex gap-2 overflow-x-auto overscroll-x-contain">
           {financingDepositOptions.map((value) => {

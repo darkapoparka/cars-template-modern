@@ -1,0 +1,2424 @@
+[
+  {
+    "phase": "before",
+    "name": "cars",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "name": "lease",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "name": "sell",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "name": "guides",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "before",
+    "name": "cars",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "before",
+    "name": "lease",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "before",
+    "name": "sell",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "before",
+    "name": "guides",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "after",
+    "name": "cars",
+    "articles": [],
+    "cash": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "h1": [
+      {
+        "clipped": true,
+        "font": "16px",
+        "text": "Автомобили за продажба"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "name": "lease",
+    "articles": [],
+    "cash": [
+      {
+        "font": "13px",
+        "text": "89 379 лв.",
+        "y": 289.15625
+      },
+      {
+        "font": "13px",
+        "text": "122 629 лв.",
+        "y": 464.46875
+      }
+    ],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "h1": [
+      {
+        "clipped": true,
+        "font": "16px",
+        "text": "Лизинг на автомобил"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1360 лв./мес.",
+        "width": 165,
+        "y": 263.15625
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1870 лв./мес.",
+        "width": 165,
+        "y": 438.46875
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "name": "sell",
+    "articles": [],
+    "cash": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "h1": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "text": "Продайте автомобила си"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "name": "guides",
+    "articles": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineClamp": "",
+        "text": "Какво да проверите преди покупка на премиум автомобил"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineClamp": "",
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineClamp": "",
+        "text": "5 въпроса преди да приемете оферта за финансиране"
+      }
+    ],
+    "cash": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "guides",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "inset": "2px",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "h1": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "text": "Съвети и статии"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after",
+    "name": "home",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMG"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "cars",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMG"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "services",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Автомобили в наличностНаличности"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Внос по заявкаВнос"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Собствен лизингЛизинг"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Продайте автомобила сиПродай"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "imports",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Внос по ваша заявка"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "sell",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Продайте автомобила си"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "lease",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50dBMW X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMGMercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 CompetitionBMW M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M SportBMW 750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMGMercedes-Benz E 63 S AMG"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1360 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1870 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1960 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 2680 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 2530 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1125 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1515 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1900 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1275 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1635 лв./мес.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "от 1245 лв./мес.",
+        "width": 127
+      }
+    ],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "about",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "28px",
+        "lineHeight": "34px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "contact",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "28px",
+        "lineHeight": "34px",
+        "text": "За нас и контакти"
+      },
+      {
+        "clipped": false,
+        "font": "18px",
+        "lineHeight": "24px",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "guides",
+    "articles": [
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Какво да проверите преди покупка на премиум автомобил"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "5 въпроса преди да приемете оферта за финансиране"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Покупка на употребяван автомобил в България"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Проверки при електромобил или хибрид"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Как да оцените дилърска обява"
+      }
+    ],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "guides",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Съвети и статии"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Какво да проверите преди покупка на премиум автомобил"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "5 въпроса преди да приемете оферта за финансиране"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Покупка на употребяван автомобил в България"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "cars-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMG"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "services-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Vehicles in stockIn stock"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Import on requestImport"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "In-house leasingLeasing"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Sell your carSell"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "imports-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Import a vehicle of your choice"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "sell-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Sell your vehicle"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "lease-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50dBMW X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMGMercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 CompetitionBMW M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M SportBMW 750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMGMercedes-Benz E 63 S AMG"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,360/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,870/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,960/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 2,680/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 2,530/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,125/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,515/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,900/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,275/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,635/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 150,
+        "text": "from BGN 1,245/mo.",
+        "width": 127
+      }
+    ],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after",
+    "name": "guides-en",
+    "articles": [
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "What to check before buying a premium used car"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Importing a car: the costs and timelines people often miss"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "5 questions before accepting a vehicle finance offer"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Buying a used car in Bulgaria"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "EV and hybrid ownership checklist"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "How to assess a dealer listing"
+      }
+    ],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "guides",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Guides and articles"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "What to check before buying a premium used car"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Importing a car: the costs and timelines people often miss"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "5 questions before accepting a vehicle finance offer"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Buying a used car in Bulgaria"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after-final",
+    "name": "lease-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50dBMW X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMGMercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 CompetitionBMW M4 Competition"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M SportBMW 750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMGMercedes-Benz E 63 S AMG"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,360/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,870/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,960/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 2,680/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 2,530/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,125/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,515/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,900/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,275/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,635/mo.",
+        "width": 127
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 127,
+        "text": "from BGN 1,245/mo.",
+        "width": 127
+      }
+    ],
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "phase": "after-final",
+    "name": "home",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 Competition"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMG"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "cars",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "category",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 Competition"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMG"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "services",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Автомобили в наличностНаличности"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Внос по заявкаВнос"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Собствен лизингЛизинг"
+      },
+      {
+        "clipped": false,
+        "font": "14px",
+        "lineHeight": "19.6px",
+        "text": "Продайте автомобила сиПродай"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "imports",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Внос по ваша заявка"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "sell",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Продайте автомобила си"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "lease",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50dBMW X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMGMercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 CompetitionBMW M4 Competition"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M SportBMW 750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMGMercedes-Benz E 63 S AMG"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1360 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1870 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1960 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 2680 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 2530 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1125 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1515 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1900 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1275 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1635 лв./мес.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "от 1245 лв./мес.",
+        "width": 165
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "about",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "28px",
+        "lineHeight": "34px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "contact",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "location",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "28px",
+        "lineHeight": "34px",
+        "text": "За нас и контакти"
+      },
+      {
+        "clipped": false,
+        "font": "18px",
+        "lineHeight": "24px",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "guides",
+    "articles": [
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Какво да проверите преди покупка на премиум автомобил"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "5 въпроса преди да приемете оферта за финансиране"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Покупка на употребяван автомобил в България"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Проверки при електромобил или хибрид"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Как да оцените дилърска обява"
+      }
+    ],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "guides",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Съвети и статии"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Какво да проверите преди покупка на премиум автомобил"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "5 въпроса преди да приемете оферта за финансиране"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Покупка на употребяван автомобил в България"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "lease-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "X5 M50dBMW X5 M50d"
+      },
+      {
+        "clipped": true,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "GLS 400d 4MATIC AMGMercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "M4 CompetitionBMW M4 Competition"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "750e xDrive M SportBMW 750e xDrive M Sport"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "E 63 S AMGMercedes-Benz E 63 S AMG"
+      }
+    ],
+    "monthly": [
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,360/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,870/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,960/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 2,680/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 2,530/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,125/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,515/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,900/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,275/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,635/mo.",
+        "width": 165
+      },
+      {
+        "font": "20px",
+        "scrollWidth": 165,
+        "text": "from BGN 1,245/mo.",
+        "width": 165
+      }
+    ],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "sell-en",
+    "articles": [],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "info",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "phone",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Sell your vehicle"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "guides-en",
+    "articles": [
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "What to check before buying a premium used car"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Importing a car: the costs and timelines people often miss"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "5 questions before accepting a vehicle finance offer"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "Buying a used car in Bulgaria"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "EV and hybrid ownership checklist"
+      },
+      {
+        "clipped": false,
+        "lineClamp": "",
+        "text": "How to assess a dealer listing"
+      }
+    ],
+    "corners": [
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "guides",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "art": [
+          28,
+          28
+        ],
+        "circleWidth": "40px",
+        "fill": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+        "kind": "filters",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "headerFill": "rgb(48, 52, 59)",
+    "headings": [
+      {
+        "clipped": false,
+        "font": "22px",
+        "lineHeight": "28px",
+        "text": "Guides and articles"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "What to check before buying a premium used car"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Importing a car: the costs and timelines people often miss"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "5 questions before accepting a vehicle finance offer"
+      },
+      {
+        "clipped": false,
+        "font": "16px",
+        "lineHeight": "21px",
+        "text": "Buying a used car in Bulgaria"
+      }
+    ],
+    "monthly": [],
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "phase": "after-final",
+    "name": "cars",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "after-final",
+    "name": "lease",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "after-final",
+    "name": "sell",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "phase": "after-final",
+    "name": "guides",
+    "scrollWidth": 1425,
+    "width": 1440
+  }
+]

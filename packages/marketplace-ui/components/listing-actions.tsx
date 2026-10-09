@@ -14,6 +14,7 @@ import {
 interface ListingActionsProps {
   readonly compactLabel?: boolean;
   readonly floating?: boolean;
+  readonly iconOnly?: boolean;
   readonly listingTitle: string;
   readonly listingUrl: string;
   readonly locale?: string;
@@ -24,6 +25,7 @@ interface ListingActionsProps {
 export const ListingActions = ({
   floating = false,
   compactLabel = false,
+  iconOnly = false,
   listingTitle,
   listingUrl,
   locale,
@@ -96,6 +98,7 @@ export const ListingActions = ({
         disabled={sharePending}
         onClick={handleShare}
         size="icon"
+        title={iconOnly ? copy.share : undefined}
         type="button"
         variant="secondary"
       >
@@ -107,7 +110,7 @@ export const ListingActions = ({
         ) : (
           <Share2 aria-hidden="true" className="size-4" />
         )}
-        {floating ? null : (
+        {floating || iconOnly ? null : (
           <span className="hidden lg:inline">
             {compactLabel ? shortShareLabel : copy.share}
           </span>

@@ -14,7 +14,7 @@ import type { InventorySearchListing } from "@repo/marketplace/inventory-search"
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useEffect } from "react";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
-import { readInventoryReturn } from "../lib/inventory-return";
+import { takeInventoryReturnScrollY } from "../lib/inventory-return";
 import {
   getMarketplaceListingGridClassName,
   getMarketplaceResultsSectionClassName,
@@ -85,13 +85,12 @@ export const MarketplaceResults = ({
   const singularLabel = isBg ? "автомобил" : "vehicle";
   const pluralLabel = isBg ? "автомобила" : "vehicles";
   useEffect(() => {
-    const saved = readInventoryReturn();
-    if (saved?.href !== location.pathname + location.search) {
-      return;
-    }
-    const frame = requestAnimationFrame(() =>
-      window.scrollTo(0, saved.scrollY)
-    );
+    const frame = requestAnimationFrame(() => {
+      const scrollY = takeInventoryReturnScrollY();
+      if (scrollY !== null) {
+        window.scrollTo(0, scrollY);
+      }
+    });
     return () => cancelAnimationFrame(frame);
   }, []);
   const useDiscoveryInventoryGrid =
@@ -115,14 +114,12 @@ export const MarketplaceResults = ({
     >
       {isDealershipSite && !hideDesktop ? (
         <DealerInventoryFilters
-          filterCount={activeFilterCount}
           filters={filters}
           layout={desktopFilterLayout}
           locale={locale}
           onApply={onApply}
           onClearFilters={onClearFilters}
           onLayoutChange={onDesktopFilterLayoutChange}
-          onOpenFilters={onOpenFilters}
           onViewModeChange={onViewModeChange}
           totalListings={totalListings}
           viewMode={viewMode}

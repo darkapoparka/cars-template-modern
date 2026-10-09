@@ -1,0 +1,659 @@
+[
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 295.9375,
+          "height": 20.296875,
+          "left": 199.5,
+          "right": 346,
+          "top": 275.640625,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 275.640625
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 187.5,
+          "top": 209,
+          "width": 158.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 326,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 196,
+          "width": 343,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 267.640625,
+          "height": 41.59375,
+          "left": 199.5,
+          "right": 346,
+          "top": 226.046875,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 226.046875
+        },
+        "text": "Автомобили в наличност\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 423.546875,
+          "height": 20.296875,
+          "left": 199.5,
+          "right": 346,
+          "top": 403.25,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 403.25
+        },
+        "artwork": {
+          "bottom": 451,
+          "height": 104,
+          "left": 29,
+          "right": 187.5,
+          "top": 347,
+          "width": 158.5,
+          "x": 29,
+          "y": 347
+        },
+        "card": {
+          "bottom": 464,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 334,
+          "width": 343,
+          "x": 16,
+          "y": 334
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 395.25,
+          "height": 20.796875,
+          "left": 199.5,
+          "right": 346,
+          "top": 374.453125,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 374.453125
+        },
+        "text": "Внос по заявка\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 561.546875,
+          "height": 20.296875,
+          "left": 199.5,
+          "right": 346,
+          "top": 541.25,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 541.25
+        },
+        "artwork": {
+          "bottom": 589,
+          "height": 104,
+          "left": 29,
+          "right": 187.5,
+          "top": 485,
+          "width": 158.5,
+          "x": 29,
+          "y": 485
+        },
+        "card": {
+          "bottom": 602,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 472,
+          "width": 343,
+          "x": 16,
+          "y": 472
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 533.25,
+          "height": 20.796875,
+          "left": 199.5,
+          "right": 346,
+          "top": 512.453125,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 512.453125
+        },
+        "text": "Собствен лизинг\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 709.9375,
+          "height": 20.296875,
+          "left": 199.5,
+          "right": 346,
+          "top": 689.640625,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 689.640625
+        },
+        "artwork": {
+          "bottom": 727,
+          "height": 104,
+          "left": 29,
+          "right": 187.5,
+          "top": 623,
+          "width": 158.5,
+          "x": 29,
+          "y": 623
+        },
+        "card": {
+          "bottom": 740,
+          "height": 130,
+          "left": 16,
+          "right": 359,
+          "top": 610,
+          "width": 343,
+          "x": 16,
+          "y": 610
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 681.640625,
+          "height": 41.59375,
+          "left": 199.5,
+          "right": 346,
+          "top": 640.046875,
+          "width": 146.5,
+          "x": 199.5,
+          "y": 640.046875
+        },
+        "text": "Продайте автомобила си\nРазгледайте"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 295.9375,
+          "height": 20.296875,
+          "left": 164.5,
+          "right": 276,
+          "top": 275.640625,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 275.640625
+        },
+        "artwork": {
+          "bottom": 313,
+          "height": 104,
+          "left": 29,
+          "right": 152.5,
+          "top": 209,
+          "width": 123.5,
+          "x": 29,
+          "y": 209
+        },
+        "card": {
+          "bottom": 326,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 196,
+          "width": 273,
+          "x": 16,
+          "y": 196
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 267.640625,
+          "height": 41.59375,
+          "left": 164.5,
+          "right": 276,
+          "top": 226.046875,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 226.046875
+        },
+        "text": "Автомобили в наличност\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 433.9375,
+          "height": 20.296875,
+          "left": 164.5,
+          "right": 276,
+          "top": 413.640625,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 413.640625
+        },
+        "artwork": {
+          "bottom": 451,
+          "height": 104,
+          "left": 29,
+          "right": 152.5,
+          "top": 347,
+          "width": 123.5,
+          "x": 29,
+          "y": 347
+        },
+        "card": {
+          "bottom": 464,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 334,
+          "width": 273,
+          "x": 16,
+          "y": 334
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 405.640625,
+          "height": 41.59375,
+          "left": 164.5,
+          "right": 276,
+          "top": 364.046875,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 364.046875
+        },
+        "text": "Внос по заявка\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 571.9375,
+          "height": 20.296875,
+          "left": 164.5,
+          "right": 276,
+          "top": 551.640625,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 551.640625
+        },
+        "artwork": {
+          "bottom": 589,
+          "height": 104,
+          "left": 29,
+          "right": 152.5,
+          "top": 485,
+          "width": 123.5,
+          "x": 29,
+          "y": 485
+        },
+        "card": {
+          "bottom": 602,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 472,
+          "width": 273,
+          "x": 16,
+          "y": 472
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 543.640625,
+          "height": 41.59375,
+          "left": 164.5,
+          "right": 276,
+          "top": 502.046875,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 502.046875
+        },
+        "text": "Собствен лизинг\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 720.34375,
+          "height": 20.296875,
+          "left": 164.5,
+          "right": 276,
+          "top": 700.046875,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 700.046875
+        },
+        "artwork": {
+          "bottom": 727,
+          "height": 104,
+          "left": 29,
+          "right": 152.5,
+          "top": 623,
+          "width": 123.5,
+          "x": 29,
+          "y": 623
+        },
+        "card": {
+          "bottom": 740,
+          "height": 130,
+          "left": 16,
+          "right": 289,
+          "top": 610,
+          "width": 273,
+          "x": 16,
+          "y": 610
+        },
+        "description": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "heading": {
+          "bottom": 692.046875,
+          "height": 62.390625,
+          "left": 164.5,
+          "right": 276,
+          "top": 629.65625,
+          "width": 111.5,
+          "x": 164.5,
+          "y": 629.65625
+        },
+        "text": "Продайте автомобила си\nРазгледайте"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 77.5,
+          "right": 227.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 77.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 69.5,
+          "right": 347.5,
+          "top": 467,
+          "width": 278,
+          "x": 69.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 52.5,
+          "right": 364.5,
+          "top": 450,
+          "width": 312,
+          "x": 52.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 715,
+          "width": 262,
+          "x": 77.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 77.5,
+          "right": 339.5,
+          "top": 675,
+          "width": 262,
+          "x": 77.5,
+          "y": 675
+        },
+        "text": "Автомобили в наличност\n\nРазгледайте предложенията и планирайте оглед.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 413.5,
+          "right": 563.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 413.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 405.5,
+          "right": 683.5,
+          "top": 467,
+          "width": 278,
+          "x": 405.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 388.5,
+          "right": 700.5,
+          "top": 450,
+          "width": 312,
+          "x": 388.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 715,
+          "width": 262,
+          "x": 413.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 413.5,
+          "right": 675.5,
+          "top": 675,
+          "width": 262,
+          "x": 413.5,
+          "y": 675
+        },
+        "text": "Внос по заявка\n\nКажете какво търсите и започнете разговор.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 749.5,
+          "right": 899.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 749.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 741.5,
+          "right": 1019.5,
+          "top": 467,
+          "width": 278,
+          "x": 741.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 724.5,
+          "right": 1036.5,
+          "top": 450,
+          "width": 312,
+          "x": 724.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 715,
+          "width": 262,
+          "x": 749.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 749.5,
+          "right": 1011.5,
+          "top": 675,
+          "width": 262,
+          "x": 749.5,
+          "y": 675
+        },
+        "text": "Собствен лизинг\n\nОбсъдете вариант според автомобила и бюджета ви.\n\nРазгледайте"
+      },
+      {
+        "action": {
+          "bottom": 819,
+          "height": 40,
+          "left": 1085.5,
+          "right": 1235.796875,
+          "top": 779,
+          "width": 150.296875,
+          "x": 1085.5,
+          "y": 779
+        },
+        "artwork": {
+          "bottom": 635,
+          "height": 168,
+          "left": 1077.5,
+          "right": 1355.5,
+          "top": 467,
+          "width": 278,
+          "x": 1077.5,
+          "y": 467
+        },
+        "card": {
+          "bottom": 844,
+          "height": 394,
+          "left": 1060.5,
+          "right": 1372.5,
+          "top": 450,
+          "width": 312,
+          "x": 1060.5,
+          "y": 450
+        },
+        "description": {
+          "bottom": 767,
+          "height": 52,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 715,
+          "width": 262,
+          "x": 1085.5,
+          "y": 715
+        },
+        "heading": {
+          "bottom": 703,
+          "height": 28,
+          "left": 1085.5,
+          "right": 1347.5,
+          "top": 675,
+          "width": 262,
+          "x": 1085.5,
+          "y": 675
+        },
+        "text": "Продайте автомобила си\n\nИзпратете данни за автомобила и заявете оценка.\n\nРазгледайте"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 1440
+  }
+]

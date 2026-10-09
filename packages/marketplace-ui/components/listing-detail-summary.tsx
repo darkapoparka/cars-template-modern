@@ -55,6 +55,12 @@ export const DesktopListingSummaryHeader = ({
             <ArrowLeft aria-hidden size={18} />
             {copy.backToSearch}
           </ListingBackLink>
+        </div>
+        <header data-slot="listing-title-panel">
+          <div>
+            <h1>{listing.title}</h1>
+            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
+          </div>
           <div data-slot="listing-title-actions">
             <DesktopSaveCarButton
               car={createDesktopSavedCar(
@@ -63,21 +69,15 @@ export const DesktopListingSummaryHeader = ({
                 locale
               )}
               locale={locale}
-              presentation="action"
+              showTooltip
             />
             <ListingActions
-              compactLabel
+              iconOnly
               listingTitle={listing.title}
               listingUrl={listingUrl}
               locale={locale}
               showPrint={false}
             />
-          </div>
-        </div>
-        <header data-slot="listing-title-panel">
-          <div>
-            <h1>{listing.title}</h1>
-            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
           </div>
         </header>
       </div>

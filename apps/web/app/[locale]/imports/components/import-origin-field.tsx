@@ -35,7 +35,7 @@ export const ImportOriginField = ({
     (option) => option.code === origin
   );
   const selectedLabel = selectedOrigin ? selectedOrigin[locale] : placeholder;
-  const drawerTitle = locale === "bg" ? "Изберете държава" : "Choose a country";
+  const drawerTitle = locale === "bg" ? "Държава" : "Country";
   const drawerDescription =
     locale === "bg"
       ? "Изберете откъде да внесем автомобила."

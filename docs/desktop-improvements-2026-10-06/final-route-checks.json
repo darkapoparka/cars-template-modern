@@ -1,0 +1,150 @@
+[
+  {
+    "path": "/bg/cars",
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Автомобили за продажба",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/en/cars",
+    "url": "http://127.0.0.1:6482/en/cars",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Cars for sale",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "url": "http://127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "42px",
+      "size": "32px",
+      "text": "2020 BMW X5 M50d",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/about",
+    "url": "http://127.0.0.1:6482/bg/about",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "За Modern",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/contact",
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Свържете се с нас",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/services",
+    "url": "http://127.0.0.1:6482/bg/services",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Нашите услуги",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/imports",
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Внос на автомобил",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/sell",
+    "verified": false,
+    "limitation": "Browser blocked navigation with ERR_BLOCKED_BY_CLIENT."
+  },
+  {
+    "path": "/bg/lease",
+    "url": "http://127.0.0.1:6482/bg/lease",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Финансиране на автомобил",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/guides",
+    "url": "http://127.0.0.1:6482/bg/guides",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Съвети и статии",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/legal/privacy",
+    "url": "http://127.0.0.1:6482/bg/legal/privacy",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Политика за поверителност",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  },
+  {
+    "path": "/bg/collections/chinese-ev-hybrids",
+    "url": "http://127.0.0.1:6482/bg/collections/chinese-ev-hybrids",
+    "heading": {
+      "font": "Inter, \"Inter Fallback\", Arial, sans-serif",
+      "line": "48px",
+      "size": "40px",
+      "text": "Китайски електромобили и хибриди",
+      "weight": "600"
+    },
+    "overflow": false,
+    "brokenImages": []
+  }
+]

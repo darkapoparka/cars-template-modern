@@ -1,0 +1,38 @@
+[
+  {
+    "arrow": true,
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "height": 48,
+    "href": "/bg/cars",
+    "lineHeight": "21px",
+    "padding": "12px 24px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Виж всички автомобили",
+    "width": 240.9375,
+    "x": 592.03125,
+    "y": 1019
+  },
+  {
+    "arrow": true,
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "height": 48,
+    "href": "/bg/blog",
+    "lineHeight": "21px",
+    "padding": "12px 24px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Виж всички статии",
+    "width": 203.6875,
+    "x": 610.65625,
+    "y": 2894.09375
+  }
+]

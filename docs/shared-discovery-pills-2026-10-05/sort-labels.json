@@ -1,0 +1,38 @@
+[
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Сортирай",
+    "width": 192
+  },
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Най-нови",
+    "width": 192
+  },
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Цена нагоре",
+    "width": 192
+  },
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Цена надолу",
+    "width": 192
+  },
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Най-нисък пробег",
+    "width": 192
+  },
+  {
+    "clientWidth": 190,
+    "scrollWidth": 190,
+    "text": "Най-нова година",
+    "width": 192
+  }
+]

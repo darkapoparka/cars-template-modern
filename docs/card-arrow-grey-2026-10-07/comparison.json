@@ -1,0 +1,758 @@
+[
+  {
+    "width": 1440,
+    "samePage": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "arrows": [
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgb(245, 245, 245)",
+        "glyph": {
+          "height": 20,
+          "width": 20,
+          "x": 313.25,
+          "y": 930.828125
+        },
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "radius": "8px",
+        "rect": {
+          "height": 36,
+          "width": 36,
+          "x": 305.25,
+          "y": 922.828125
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgb(245, 245, 245)",
+        "glyph": {
+          "height": 20,
+          "width": 20,
+          "x": 655.5,
+          "y": 930.828125
+        },
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "radius": "8px",
+        "rect": {
+          "height": 36,
+          "width": 36,
+          "x": 647.5,
+          "y": 922.828125
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgb(245, 245, 245)",
+        "glyph": {
+          "height": 20,
+          "width": 20,
+          "x": 997.75,
+          "y": 930.828125
+        },
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "radius": "8px",
+        "rect": {
+          "height": 36,
+          "width": 36,
+          "x": 989.75,
+          "y": 922.828125
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgb(245, 245, 245)",
+        "glyph": {
+          "height": 20,
+          "width": 20,
+          "x": 1340,
+          "y": 930.828125
+        },
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "radius": "8px",
+        "rect": {
+          "height": 36,
+          "width": 36,
+          "x": 1332,
+          "y": 922.828125
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 320,
+    "samePage": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "arrows": [
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "samePage": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "arrows": [
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "width": 1023,
+    "samePage": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "arrows": [
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "color": "rgb(35, 35, 35)",
+        "fill": "rgba(0, 0, 0, 0)",
+        "glyph": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "radius": "0px",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "overflow": false
+  }
+]

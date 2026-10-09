@@ -1,0 +1,178 @@
+[
+  {
+    "locale": "bg",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1024
+  },
+  {
+    "locale": "bg",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1280
+  },
+  {
+    "locale": "bg",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1440
+  },
+  {
+    "locale": "bg",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1920
+  },
+  {
+    "locale": "bg",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1024
+  },
+  {
+    "locale": "bg",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1280
+  },
+  {
+    "locale": "bg",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1440
+  },
+  {
+    "locale": "bg",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1920
+  },
+  {
+    "locale": "en",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1024
+  },
+  {
+    "locale": "en",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1440
+  },
+  {
+    "locale": "en",
+    "route": "about",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1920
+  },
+  {
+    "locale": "en",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1024
+  },
+  {
+    "locale": "en",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1440
+  },
+  {
+    "locale": "en",
+    "route": "contact",
+    "artwork": "linear-gradient(90deg, color(srgb 0.929412 0.929412 0.929412 / 0.12) 0%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 32%, color(srgb 0.929412 0.929412 0.929412 / 0.8) 68%, color(srgb 0.929412 0.929412 0.929412 / 0.12) 100%), url(\"http://127.0.0.1:6482/images/desktop/showroom-editorial-v1.webp\")",
+    "contentGap": 40,
+    "height": 320,
+    "overflow": false,
+    "surface": "rgb(237, 237, 237)",
+    "titleColor": "rgb(35, 35, 35)",
+    "width": 1920
+  }
+]

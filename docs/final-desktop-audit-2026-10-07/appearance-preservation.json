@@ -1,0 +1,2612 @@
+[
+  {
+    "name": "home",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "/bg",
+        "rect": {
+          "height": 48,
+          "width": 54.828125,
+          "x": 492,
+          "y": 21
+        },
+        "role": null,
+        "text": "Начало"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 48,
+          "width": 91.78125,
+          "x": 578.828125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 48,
+          "width": 50.109375,
+          "x": 702.609375,
+          "y": 21
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 48,
+          "width": 48.09375,
+          "x": 784.71875,
+          "y": 21
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 68.1875,
+          "x": 864.8125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Контакти"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1101,
+          "y": 23
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1249,
+          "y": 23
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 277.328125,
+          "x": 272.5,
+          "y": 248
+        },
+        "role": null,
+        "text": "Всички марки"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 277.34375,
+          "x": 549.828125,
+          "y": 248
+        },
+        "role": null,
+        "text": "Всички модели"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 277.328125,
+          "x": 827.171875,
+          "y": 248
+        },
+        "role": null,
+        "text": "Всяка цена"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 167.671875,
+          "x": 405.140625,
+          "y": 328
+        },
+        "role": null,
+        "text": "Автомобили"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 135.234375,
+          "x": 584.8125,
+          "y": 328
+        },
+        "role": null,
+        "text": "Мотори"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 131.5625,
+          "x": 732.046875,
+          "y": 328
+        },
+        "role": null,
+        "text": "Бусове"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 144.25,
+          "x": 875.609375,
+          "y": 328
+        },
+        "role": null,
+        "text": "Камиони"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "rect": {
+          "height": 204,
+          "width": 316.25,
+          "x": 41,
+          "y": 779.828125
+        },
+        "role": null,
+        "text": "BMW X5\n2020\nM50d\nSUV\n167 000 км\nДизел\nАвтоматик\n\n89 379 лв.\n\nот 1360 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "rect": {
+          "height": 204,
+          "width": 316.25,
+          "x": 383.25,
+          "y": 779.828125
+        },
+        "role": null,
+        "text": "Mercedes-Benz GLS\n2021\n400d 4MATIC AMG\nSUV\n166 000 км\nДизел\nАвтоматик\n\n122 629 лв.\n\nот 1870 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "rect": {
+          "height": 204,
+          "width": 316.25,
+          "x": 725.5,
+          "y": 779.828125
+        },
+        "role": null,
+        "text": "BMW M4\n2021\nCompetition\nКупе\n165 000 км\nБензин\nАвтоматик\n\n128 496 лв.\n\nот 1960 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "rect": {
+          "height": 204,
+          "width": 316.25,
+          "x": 1067.75,
+          "y": 779.828125
+        },
+        "role": null,
+        "text": "BMW 7 Series\n2024\n750e xDrive M Sport\nСедан\n40 000 км\nPHEV\nАвтоматик\n\n175 436 лв.\n\nот 2680 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 44,
+          "width": 245.296875,
+          "x": 589.84375,
+          "y": 1008.828125
+        },
+        "role": null,
+        "text": "Виж всички автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=newest",
+        "rect": {
+          "height": 364,
+          "width": 318.25,
+          "x": 40,
+          "y": 1236.828125
+        },
+        "role": null,
+        "text": "Разгледайте автомобили\nОткрийте автомобил за вашия бюджет и начин на живот.\nВиж автомобилите"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 364,
+          "width": 318.25,
+          "x": 382.25,
+          "y": 1236.828125
+        },
+        "role": null,
+        "text": "Продайте автомобила си\nОбсъдете продажба или замяна с нашия екип.\nСвържете се с нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 364,
+          "width": 318.25,
+          "x": 724.5,
+          "y": 1236.828125
+        },
+        "role": null,
+        "text": "Внос на автомобил\nНамерете и внесете автомобил по ваш избор.\nРазгледай вноса"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 364,
+          "width": 318.25,
+          "x": 1066.75,
+          "y": 1236.828125
+        },
+        "role": null,
+        "text": "Планирайте бюджета си\nИзчислете ориентировъчна месечна вноска.\nИзчисли вноската"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact?intent=viewing",
+        "rect": {
+          "height": 48,
+          "width": 202.4375,
+          "x": 611.28125,
+          "y": 1898.828125
+        },
+        "role": null,
+        "text": "Уговорете оглед"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog/premium-used-car-checklist",
+        "rect": {
+          "height": 382.828125,
+          "width": 318.25,
+          "x": 40,
+          "y": 2174.828125
+        },
+        "role": null,
+        "text": "Покупка\n\n5 мин четене\n\nКакво да проверите преди покупка\nПрочетете"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog/import-costs-and-timing",
+        "rect": {
+          "height": 382.828125,
+          "width": 318.25,
+          "x": 382.25,
+          "y": 2174.828125
+        },
+        "role": null,
+        "text": "Внос\n\n4 мин четене\n\nВнос на автомобил: разходи и срокове\nПрочетете"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog/financing-offer-questions",
+        "rect": {
+          "height": 382.828125,
+          "width": 318.25,
+          "x": 724.5,
+          "y": 2174.828125
+        },
+        "role": null,
+        "text": "Финансиране\n\n4 мин четене\n\n5 въпроса преди офертата за финансиране\nПрочетете"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides/buying-used-car-bulgaria",
+        "rect": {
+          "height": 382.828125,
+          "width": 318.25,
+          "x": 1066.75,
+          "y": 2174.828125
+        },
+        "role": null,
+        "text": "Покупка\n\nРъководство\n\nПокупка на употребяван автомобил\nПрочетете"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides",
+        "rect": {
+          "height": 44,
+          "width": 174.671875,
+          "x": 625.15625,
+          "y": 2581.65625
+        },
+        "role": null,
+        "text": "Всички съвети"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 32,
+          "width": 145.59375,
+          "x": 423.15625,
+          "y": 2811.65625
+        },
+        "role": null,
+        "text": "Всички автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=newest",
+        "rect": {
+          "height": 32,
+          "width": 163.171875,
+          "x": 423.15625,
+          "y": 2847.65625
+        },
+        "role": null,
+        "text": "Най-нови автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=price_asc",
+        "rect": {
+          "height": 32,
+          "width": 59.09375,
+          "x": 423.15625,
+          "y": 2883.65625
+        },
+        "role": null,
+        "text": "По цена"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 32,
+          "width": 100.140625,
+          "x": 423.15625,
+          "y": 2919.65625
+        },
+        "role": null,
+        "text": "Финансиране"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 32,
+          "width": 68.796875,
+          "x": 423.15625,
+          "y": 2955.65625
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 32,
+          "width": 47.734375,
+          "x": 750.453125,
+          "y": 2811.65625
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 32,
+          "width": 49.34375,
+          "x": 750.453125,
+          "y": 2847.65625
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog",
+        "rect": {
+          "height": 32,
+          "width": 137.9375,
+          "x": 750.453125,
+          "y": 2883.65625
+        },
+        "role": null,
+        "text": "Съвети за покупка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides",
+        "rect": {
+          "height": 32,
+          "width": 95.15625,
+          "x": 750.453125,
+          "y": 2919.65625
+        },
+        "role": null,
+        "text": "Ръководства"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 32,
+          "width": 141.46875,
+          "x": 750.453125,
+          "y": 2955.65625
+        },
+        "role": null,
+        "text": "Внос на автомобил"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 32,
+          "width": 185.1875,
+          "x": 750.453125,
+          "y": 2991.65625
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 168.421875,
+          "x": 1077.765625,
+          "y": 2887.65625
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact?intent=viewing",
+        "rect": {
+          "height": 32,
+          "width": 121.125,
+          "x": 1077.765625,
+          "y": 2947.65625
+        },
+        "role": null,
+        "text": "Уговорете оглед"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 32,
+          "width": 92.890625,
+          "x": 1077.765625,
+          "y": 2983.65625
+        },
+        "role": null,
+        "text": "0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/privacy",
+        "rect": {
+          "height": 24,
+          "width": 105.390625,
+          "x": 1127.75,
+          "y": 3100.65625
+        },
+        "role": null,
+        "text": "Поверителност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/terms",
+        "rect": {
+          "height": 24,
+          "width": 56.125,
+          "x": 1257.140625,
+          "y": 3100.65625
+        },
+        "role": null,
+        "text": "Условия"
+      },
+      {
+        "clip": false,
+        "href": "/bg/locale-settings?returnTo=%2Fbg",
+        "rect": {
+          "height": 24,
+          "width": 47.734375,
+          "x": 1337.265625,
+          "y": 3100.65625
+        },
+        "role": null,
+        "text": "English"
+      }
+    ],
+    "bodyWidth": 1425,
+    "cards": [
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 305.25,
+          "y": 922.828125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 40,
+          "y": 568
+        },
+        "text": "Препоръчана\nBMW X5\n2020\nM50d\nSUV\n167 000 км\nДизел\nАвтоматик\n\n89 379 лв.\n\nот 1360 лв./мес."
+      },
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 647.5,
+          "y": 922.828125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 382.25,
+          "y": 568
+        },
+        "text": "Препоръчана\nMercedes-Benz GLS\n2021\n400d 4MATIC AMG\nSUV\n166 000 км\nДизел\nАвтоматик\n\n122 629 лв.\n\nот 1870 лв./мес."
+      },
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 989.75,
+          "y": 922.828125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 724.5,
+          "y": 568
+        },
+        "text": "Препоръчана\nBMW M4\n2021\nCompetition\nКупе\n165 000 км\nБензин\nАвтоматик\n\n128 496 лв.\n\nот 1960 лв./мес."
+      },
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 1332,
+          "y": 922.828125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 1066.75,
+          "y": 568
+        },
+        "text": "BMW 7 Series\n2024\n750e xDrive M Sport\nСедан\n40 000 км\nPHEV\nАвтоматик\n\n175 436 лв.\n\nот 2680 лв./мес."
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "87.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(247, 248, 250)",
+        "font": "40px",
+        "lineHeight": "48px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 262.5,
+          "y": 168
+        },
+        "tag": "H1",
+        "text": "Намерете своя автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 494
+        },
+        "tag": "H2",
+        "text": "Разгледайте автомобилите"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 284.25,
+          "x": 57,
+          "y": 795.828125
+        },
+        "tag": "H3",
+        "text": "BMW X5"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 284.25,
+          "x": 399.25,
+          "y": 795.828125
+        },
+        "tag": "H3",
+        "text": "Mercedes-Benz GLS"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 284.25,
+          "x": 741.5,
+          "y": 795.828125
+        },
+        "tag": "H3",
+        "text": "BMW M4"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 284.25,
+          "x": 1083.75,
+          "y": 795.828125
+        },
+        "tag": "H3",
+        "text": "BMW 7 Series"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 1162.828125
+        },
+        "tag": "H2",
+        "text": "По-лесен път към следващия ви автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "40px",
+        "lineHeight": "52px",
+        "rect": {
+          "height": 52,
+          "width": 1281,
+          "x": 72,
+          "y": 1754.828125
+        },
+        "tag": "H2",
+        "text": "Следващият ви автомобил ви очаква."
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 2100.828125
+        },
+        "tag": "H2",
+        "text": "Съвети за пътя напред"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 52,
+          "width": 284.25,
+          "x": 57,
+          "y": 2432.65625
+        },
+        "tag": "H3",
+        "text": "Какво да проверите преди покупка"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 52,
+          "width": 284.25,
+          "x": 399.25,
+          "y": 2432.65625
+        },
+        "tag": "H3",
+        "text": "Внос на автомобил: разходи и срокове"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 52,
+          "width": 284.25,
+          "x": 741.5,
+          "y": 2432.65625
+        },
+        "tag": "H3",
+        "text": "5 въпроса преди офертата за финансиране"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 52,
+          "width": 284.25,
+          "x": 1083.75,
+          "y": 2432.65625
+        },
+        "tag": "H3",
+        "text": "Покупка на употребяван автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 2761.65625
+        },
+        "tag": "H2",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 2761.65625
+        },
+        "tag": "H2",
+        "text": "Разгледайте"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 2761.65625
+        },
+        "tag": "H2",
+        "text": "Посетете автосалона"
+      }
+    ],
+    "height": 1000,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1425,
+      3185
+    ],
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 1440
+  },
+  {
+    "name": "pdp",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "/bg",
+        "rect": {
+          "height": 48,
+          "width": 54.828125,
+          "x": 492,
+          "y": 21
+        },
+        "role": null,
+        "text": "Начало"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 48,
+          "width": 91.78125,
+          "x": 578.828125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 48,
+          "width": 50.109375,
+          "x": 702.609375,
+          "y": 21
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 48,
+          "width": 48.09375,
+          "x": 784.71875,
+          "y": 21
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 68.1875,
+          "x": 864.8125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Контакти"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1101,
+          "y": 23
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1249,
+          "y": 23
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 44,
+          "width": 206.453125,
+          "x": 40,
+          "y": 130
+        },
+        "role": null,
+        "text": "Назад към търсенето"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 101.796875,
+          "x": 791.46875,
+          "y": 130
+        },
+        "role": null,
+        "text": "Запази"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 111.734375,
+          "x": 901.265625,
+          "y": 130
+        },
+        "role": null,
+        "text": "Сподели"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 575.734375,
+          "width": 973,
+          "x": 40,
+          "y": 328.390625
+        },
+        "role": null,
+        "text": "Отвори галерията\n1 / 1"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 204,
+          "width": 319.25,
+          "x": 41,
+          "y": 1866.953125
+        },
+        "role": null,
+        "text": "Mercedes-Benz E-Class\n2021\nE 63 S AMG\nСедан\n96 000 км\nБензин\nАвтоматик\n\n165 657 лв.\n\nот 2530 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 204,
+          "width": 319.25,
+          "x": 382.25,
+          "y": 1866.953125
+        },
+        "role": null,
+        "text": "Mercedes-Benz CLS\n2020\n400d 4MATIC\nКупе\n171 000 км\nДизел\nАвтоматик\n\n73 733 лв.\n\nПо договаряне"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 204,
+          "width": 319.25,
+          "x": 723.5,
+          "y": 1866.953125
+        },
+        "role": null,
+        "text": "Mercedes-Benz GLE\n2021\n400d Coupe\nSUV\n166 000 км\nДизел\nАвтоматик\n\n124 584 лв.\n\nот 1900 лв./мес."
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 142,
+          "x": 1073,
+          "y": 218
+        },
+        "role": "tab",
+        "text": "Покупка"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 36,
+          "width": 142,
+          "x": 1215,
+          "y": 218
+        },
+        "role": "tab",
+        "text": "Финансиране"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 48,
+          "width": 292,
+          "x": 1069,
+          "y": 422
+        },
+        "role": null,
+        "text": "Обадете се"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 62,
+          "width": 292,
+          "x": 1069,
+          "y": 558
+        },
+        "role": null,
+        "text": "София\nул. „Атанас Манчев“ 18, Студентски град, България"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 48,
+          "width": 292,
+          "x": 1069,
+          "y": 745
+        },
+        "role": null,
+        "text": "Как да ни намерите"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 32,
+          "width": 145.59375,
+          "x": 423.15625,
+          "y": 2347.953125
+        },
+        "role": null,
+        "text": "Всички автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=newest",
+        "rect": {
+          "height": 32,
+          "width": 163.171875,
+          "x": 423.15625,
+          "y": 2383.953125
+        },
+        "role": null,
+        "text": "Най-нови автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=price_asc",
+        "rect": {
+          "height": 32,
+          "width": 59.09375,
+          "x": 423.15625,
+          "y": 2419.953125
+        },
+        "role": null,
+        "text": "По цена"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 32,
+          "width": 100.140625,
+          "x": 423.15625,
+          "y": 2455.953125
+        },
+        "role": null,
+        "text": "Финансиране"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 32,
+          "width": 68.796875,
+          "x": 423.15625,
+          "y": 2491.953125
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 32,
+          "width": 47.734375,
+          "x": 750.453125,
+          "y": 2347.953125
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 32,
+          "width": 49.34375,
+          "x": 750.453125,
+          "y": 2383.953125
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog",
+        "rect": {
+          "height": 32,
+          "width": 137.9375,
+          "x": 750.453125,
+          "y": 2419.953125
+        },
+        "role": null,
+        "text": "Съвети за покупка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides",
+        "rect": {
+          "height": 32,
+          "width": 95.15625,
+          "x": 750.453125,
+          "y": 2455.953125
+        },
+        "role": null,
+        "text": "Ръководства"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 32,
+          "width": 141.46875,
+          "x": 750.453125,
+          "y": 2491.953125
+        },
+        "role": null,
+        "text": "Внос на автомобил"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 32,
+          "width": 185.1875,
+          "x": 750.453125,
+          "y": 2527.953125
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 168.421875,
+          "x": 1077.765625,
+          "y": 2423.953125
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact?intent=viewing",
+        "rect": {
+          "height": 32,
+          "width": 121.125,
+          "x": 1077.765625,
+          "y": 2483.953125
+        },
+        "role": null,
+        "text": "Уговорете оглед"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 32,
+          "width": 92.890625,
+          "x": 1077.765625,
+          "y": 2519.953125
+        },
+        "role": null,
+        "text": "0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/privacy",
+        "rect": {
+          "height": 24,
+          "width": 105.390625,
+          "x": 1127.75,
+          "y": 2636.953125
+        },
+        "role": null,
+        "text": "Поверителност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/terms",
+        "rect": {
+          "height": 24,
+          "width": 56.125,
+          "x": 1257.140625,
+          "y": 2636.953125
+        },
+        "role": null,
+        "text": "Условия"
+      },
+      {
+        "clip": false,
+        "href": "/bg/locale-settings?returnTo=%2Fbg%2Flisting%2Fmercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "rect": {
+          "height": 24,
+          "width": 47.734375,
+          "x": 1337.265625,
+          "y": 2636.953125
+        },
+        "role": null,
+        "text": "English"
+      }
+    ],
+    "bodyWidth": 1425,
+    "cards": [
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 308.25,
+          "y": 2009.953125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 40,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz E-Class\n2021\nE 63 S AMG\nСедан\n96 000 км\nБензин\nАвтоматик\n\n165 657 лв.\n\nот 2530 лв./мес."
+      },
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 649.5,
+          "y": 2009.953125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 381.25,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz CLS\n2020\n400d 4MATIC\nКупе\n171 000 км\nДизел\nАвтоматик\n\n73 733 лв.\n\nПо договаряне"
+      },
+      {
+        "arrow": {
+          "height": 36,
+          "width": 36,
+          "x": 990.75,
+          "y": 2009.953125
+        },
+        "overlap": false,
+        "price": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 722.5,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz GLE\n2021\n400d Coupe\nSUV\n166 000 км\nДизел\nАвтоматик\n\n124 584 лв.\n\nот 1900 лв./мес."
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "87.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "28px",
+        "lineHeight": "36.4px",
+        "rect": {
+          "height": 36.390625,
+          "width": 621.171875,
+          "x": 64,
+          "y": 214
+        },
+        "tag": "H1",
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "24px",
+        "lineHeight": "32px",
+        "rect": {
+          "height": 32,
+          "width": 925,
+          "x": 64,
+          "y": 944.125
+        },
+        "tag": "H2",
+        "text": "Данни за автомобила"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "24px",
+        "lineHeight": "32px",
+        "rect": {
+          "height": 32,
+          "width": 925,
+          "x": 64,
+          "y": 1397.125
+        },
+        "tag": "H2",
+        "text": "Описание"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 331.796875,
+          "x": 40,
+          "y": 1595.125
+        },
+        "tag": "H2",
+        "text": "Подобни автомобили"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 287.25,
+          "x": 57,
+          "y": 1882.953125
+        },
+        "tag": "H3",
+        "text": "Mercedes-Benz E-Class"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 287.25,
+          "x": 398.25,
+          "y": 1882.953125
+        },
+        "tag": "H3",
+        "text": "Mercedes-Benz CLS"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 287.25,
+          "x": 739.5,
+          "y": 1882.953125
+        },
+        "tag": "H3",
+        "text": "Mercedes-Benz GLE"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 2297.953125
+        },
+        "tag": "H2",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 2297.953125
+        },
+        "tag": "H2",
+        "text": "Разгледайте"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 2297.953125
+        },
+        "tag": "H2",
+        "text": "Посетете автосалона"
+      }
+    ],
+    "height": 1000,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1425,
+      2721
+    ],
+    "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 1440
+  },
+  {
+    "name": "about",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "/bg",
+        "rect": {
+          "height": 48,
+          "width": 54.828125,
+          "x": 492,
+          "y": 21
+        },
+        "role": null,
+        "text": "Начало"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 48,
+          "width": 91.78125,
+          "x": 578.828125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 48,
+          "width": 50.109375,
+          "x": 702.609375,
+          "y": 21
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 48,
+          "width": 48.09375,
+          "x": 784.71875,
+          "y": 21
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 68.1875,
+          "x": 864.8125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Контакти"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1101,
+          "y": 23
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1249,
+          "y": 23
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 48,
+          "width": 200.625,
+          "x": 505.875,
+          "y": 298
+        },
+        "role": null,
+        "text": "Нашите автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 48,
+          "width": 200.625,
+          "x": 718.5,
+          "y": 298
+        },
+        "role": null,
+        "text": "Нашите услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 50,
+          "width": 204.625,
+          "x": 500.875,
+          "y": 914.15625
+        },
+        "role": null,
+        "text": "Нашите автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 50,
+          "width": 204.625,
+          "x": 719.5,
+          "y": 914.15625
+        },
+        "role": null,
+        "text": "Свържете се с нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 32,
+          "width": 145.59375,
+          "x": 423.15625,
+          "y": 1662.15625
+        },
+        "role": null,
+        "text": "Всички автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=newest",
+        "rect": {
+          "height": 32,
+          "width": 163.171875,
+          "x": 423.15625,
+          "y": 1698.15625
+        },
+        "role": null,
+        "text": "Най-нови автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=price_asc",
+        "rect": {
+          "height": 32,
+          "width": 59.09375,
+          "x": 423.15625,
+          "y": 1734.15625
+        },
+        "role": null,
+        "text": "По цена"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 32,
+          "width": 100.140625,
+          "x": 423.15625,
+          "y": 1770.15625
+        },
+        "role": null,
+        "text": "Финансиране"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 32,
+          "width": 68.796875,
+          "x": 423.15625,
+          "y": 1806.15625
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 32,
+          "width": 47.734375,
+          "x": 750.453125,
+          "y": 1662.15625
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 32,
+          "width": 49.34375,
+          "x": 750.453125,
+          "y": 1698.15625
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog",
+        "rect": {
+          "height": 32,
+          "width": 137.9375,
+          "x": 750.453125,
+          "y": 1734.15625
+        },
+        "role": null,
+        "text": "Съвети за покупка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides",
+        "rect": {
+          "height": 32,
+          "width": 95.15625,
+          "x": 750.453125,
+          "y": 1770.15625
+        },
+        "role": null,
+        "text": "Ръководства"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 32,
+          "width": 141.46875,
+          "x": 750.453125,
+          "y": 1806.15625
+        },
+        "role": null,
+        "text": "Внос на автомобил"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 32,
+          "width": 185.1875,
+          "x": 750.453125,
+          "y": 1842.15625
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 168.421875,
+          "x": 1077.765625,
+          "y": 1738.15625
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact?intent=viewing",
+        "rect": {
+          "height": 32,
+          "width": 121.125,
+          "x": 1077.765625,
+          "y": 1798.15625
+        },
+        "role": null,
+        "text": "Уговорете оглед"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 32,
+          "width": 92.890625,
+          "x": 1077.765625,
+          "y": 1834.15625
+        },
+        "role": null,
+        "text": "0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/privacy",
+        "rect": {
+          "height": 24,
+          "width": 105.390625,
+          "x": 1127.75,
+          "y": 1951.15625
+        },
+        "role": null,
+        "text": "Поверителност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/terms",
+        "rect": {
+          "height": 24,
+          "width": 56.125,
+          "x": 1257.140625,
+          "y": 1951.15625
+        },
+        "role": null,
+        "text": "Условия"
+      },
+      {
+        "clip": false,
+        "href": "/bg/locale-settings?returnTo=%2Fbg%2Fabout",
+        "rect": {
+          "height": 24,
+          "width": 47.734375,
+          "x": 1337.265625,
+          "y": 1951.15625
+        },
+        "role": null,
+        "text": "English"
+      }
+    ],
+    "bodyWidth": 1425,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "87.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "40px",
+        "lineHeight": "48px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 262.5,
+          "y": 226
+        },
+        "tag": "H1",
+        "text": "За Modern"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 1289,
+          "x": 68,
+          "y": 806.15625
+        },
+        "tag": "H2",
+        "text": "Нека открием следващия ви автомобил."
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "32px",
+        "lineHeight": "42px",
+        "rect": {
+          "height": 42,
+          "width": 1249,
+          "x": 88,
+          "y": 1124.15625
+        },
+        "tag": "H2",
+        "text": "Няколко полезни отговора"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 1612.15625
+        },
+        "tag": "H2",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 1612.15625
+        },
+        "tag": "H2",
+        "text": "Разгледайте"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 1612.15625
+        },
+        "tag": "H2",
+        "text": "Посетете автосалона"
+      }
+    ],
+    "height": 1000,
+    "hero": [
+      {
+        "height": 352,
+        "width": 1345,
+        "x": 40,
+        "y": 90
+      }
+    ],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1425,
+      2035
+    ],
+    "url": "http://127.0.0.1:6482/bg/about",
+    "width": 1440
+  },
+  {
+    "name": "contact",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "/bg",
+        "rect": {
+          "height": 48,
+          "width": 54.828125,
+          "x": 492,
+          "y": 21
+        },
+        "role": null,
+        "text": "Начало"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 48,
+          "width": 91.78125,
+          "x": 578.828125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 48,
+          "width": 50.109375,
+          "x": 702.609375,
+          "y": 21
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 48,
+          "width": 48.09375,
+          "x": 784.71875,
+          "y": 21
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 68.1875,
+          "x": 864.8125,
+          "y": 21
+        },
+        "role": null,
+        "text": "Контакти"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1101,
+          "y": 23
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 44,
+          "width": 136,
+          "x": 1249,
+          "y": 23
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 48,
+          "width": 197.234375,
+          "x": 509.265625,
+          "y": 298
+        },
+        "role": null,
+        "text": "Обадете се"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 48,
+          "width": 197.234375,
+          "x": 718.5,
+          "y": 298
+        },
+        "role": null,
+        "text": "Как да ни намерите"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 48.5,
+          "width": 219.234375,
+          "x": 61,
+          "y": 503
+        },
+        "role": null,
+        "text": "Как да ни намерите"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 54,
+          "width": 691.5,
+          "x": 81,
+          "y": 1503
+        },
+        "role": null,
+        "text": "Преглед на запитването"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 90,
+          "width": 491.5,
+          "x": 852.5,
+          "y": 1045
+        },
+        "role": null,
+        "text": "Автосалон\n\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 54,
+          "width": 395.5,
+          "x": 872.5,
+          "y": 1165
+        },
+        "role": null,
+        "text": "Телефон\n\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 90,
+          "width": 491.5,
+          "x": 852.5,
+          "y": 1249
+        },
+        "role": null,
+        "text": "Уговорете оглед\n\nОбадете се за удобен час."
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 145.15625,
+          "x": 872.5,
+          "y": 1461
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 145.171875,
+          "x": 1025.65625,
+          "y": 1461
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 145.171875,
+          "x": 1178.828125,
+          "y": 1461
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 32,
+          "width": 145.59375,
+          "x": 423.15625,
+          "y": 1802
+        },
+        "role": null,
+        "text": "Всички автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=newest",
+        "rect": {
+          "height": 32,
+          "width": 163.171875,
+          "x": 423.15625,
+          "y": 1838
+        },
+        "role": null,
+        "text": "Най-нови автомобили"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars?sort=price_asc",
+        "rect": {
+          "height": 32,
+          "width": 59.09375,
+          "x": 423.15625,
+          "y": 1874
+        },
+        "role": null,
+        "text": "По цена"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 32,
+          "width": 100.140625,
+          "x": 423.15625,
+          "y": 1910
+        },
+        "role": null,
+        "text": "Финансиране"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 32,
+          "width": 68.796875,
+          "x": 423.15625,
+          "y": 1946
+        },
+        "role": null,
+        "text": "Запазени"
+      },
+      {
+        "clip": false,
+        "href": "/bg/about",
+        "rect": {
+          "height": 32,
+          "width": 47.734375,
+          "x": 750.453125,
+          "y": 1802
+        },
+        "role": null,
+        "text": "За нас"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 32,
+          "width": 49.34375,
+          "x": 750.453125,
+          "y": 1838
+        },
+        "role": null,
+        "text": "Услуги"
+      },
+      {
+        "clip": false,
+        "href": "/bg/blog",
+        "rect": {
+          "height": 32,
+          "width": 137.9375,
+          "x": 750.453125,
+          "y": 1874
+        },
+        "role": null,
+        "text": "Съвети за покупка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/guides",
+        "rect": {
+          "height": 32,
+          "width": 95.15625,
+          "x": 750.453125,
+          "y": 1910
+        },
+        "role": null,
+        "text": "Ръководства"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 32,
+          "width": 141.46875,
+          "x": 750.453125,
+          "y": 1946
+        },
+        "role": null,
+        "text": "Внос на автомобил"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 32,
+          "width": 185.1875,
+          "x": 750.453125,
+          "y": 1982
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact",
+        "rect": {
+          "height": 48,
+          "width": 168.421875,
+          "x": 1077.765625,
+          "y": 1878
+        },
+        "role": null,
+        "text": "Свържете се"
+      },
+      {
+        "clip": false,
+        "href": "/bg/contact?intent=viewing",
+        "rect": {
+          "height": 32,
+          "width": 121.125,
+          "x": 1077.765625,
+          "y": 1938
+        },
+        "role": null,
+        "text": "Уговорете оглед"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 32,
+          "width": 92.890625,
+          "x": 1077.765625,
+          "y": 1974
+        },
+        "role": null,
+        "text": "0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/privacy",
+        "rect": {
+          "height": 24,
+          "width": 105.390625,
+          "x": 1127.75,
+          "y": 2091
+        },
+        "role": null,
+        "text": "Поверителност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/legal/terms",
+        "rect": {
+          "height": 24,
+          "width": 56.125,
+          "x": 1257.140625,
+          "y": 2091
+        },
+        "role": null,
+        "text": "Условия"
+      },
+      {
+        "clip": false,
+        "href": "/bg/locale-settings?returnTo=%2Fbg%2Fcontact",
+        "rect": {
+          "height": 24,
+          "width": 47.734375,
+          "x": 1337.265625,
+          "y": 2091
+        },
+        "role": null,
+        "text": "English"
+      }
+    ],
+    "bodyWidth": 1425,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "87.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "40px",
+        "lineHeight": "48px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 262.5,
+          "y": 226
+        },
+        "tag": "H1",
+        "text": "Свържете се с нас"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "24px",
+        "lineHeight": "32px",
+        "rect": {
+          "height": 32,
+          "width": 691.5,
+          "x": 81,
+          "y": 971
+        },
+        "tag": "H2",
+        "text": "Нека поговорим"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "24px",
+        "lineHeight": "32px",
+        "rect": {
+          "height": 32,
+          "width": 491.5,
+          "x": 852.5,
+          "y": 919
+        },
+        "tag": "H2",
+        "text": "Данни за контакт"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "15px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 356.5625,
+          "x": 872.5,
+          "y": 1063
+        },
+        "tag": "H3",
+        "text": "Автосалон"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "15px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 92.890625,
+          "x": 872.5,
+          "y": 1165
+        },
+        "tag": "H3",
+        "text": "Телефон"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "15px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 194.21875,
+          "x": 872.5,
+          "y": 1267
+        },
+        "tag": "H3",
+        "text": "Уговорете оглед"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "15px",
+        "lineHeight": "22.5px",
+        "rect": {
+          "height": 22.5,
+          "width": 451.5,
+          "x": 872.5,
+          "y": 1394.5
+        },
+        "tag": "H3",
+        "text": "Последвайте ни"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 1752
+        },
+        "tag": "H2",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 1752
+        },
+        "tag": "H2",
+        "text": "Разгледайте"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "26px",
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 1752
+        },
+        "tag": "H2",
+        "text": "Посетете автосалона"
+      }
+    ],
+    "height": 1000,
+    "hero": [
+      {
+        "height": 352,
+        "width": 1345,
+        "x": 40,
+        "y": 90
+      }
+    ],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1425,
+      2175
+    ],
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 1440
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "bg390": {
+    "buttonHeight": 44,
+    "card": {
+      "height": 208,
+      "width": 343,
+      "x": 16,
+      "y": 884.25
+    },
+    "heading": "Лизинг",
+    "href": "/bg/lease?vehicle=am-1010",
+    "marketing": "Твоят следващ автомобил. На месечни вноски.",
+    "overflow": false,
+    "viewport": 390
+  },
+  "bg320": {
+    "button": {
+      "height": 44,
+      "width": 161.578125
+    },
+    "card": {
+      "height": 208,
+      "width": 273
+    },
+    "copyHeight": 40,
+    "href": "/bg/lease?vehicle=am-1010",
+    "overflow": false,
+    "viewport": 320
+  },
+  "en320": {
+    "buttonHeight": 44,
+    "cardHeight": 208,
+    "copyHeight": 40,
+    "heading": "Leasing",
+    "href": "/en/lease?vehicle=am-1010",
+    "marketing": "Your next car. With monthly payments.",
+    "overflow": false,
+    "viewport": 320
+  },
+  "desktop": {
+    "cardHeight": 0,
+    "overflow": false,
+    "viewport": 1440
+  },
+  "action": {
+    "url": "http://127.0.0.1:6482/bg/lease?vehicle=am-1010",
+    "selectedVehicle": "GLS 400d 4MATIC AMG"
+  },
+  "errors": []
+}

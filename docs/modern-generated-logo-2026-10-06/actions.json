@@ -1,0 +1,10 @@
+[
+  {
+    "action": "Menu closes with focus restored",
+    "focus": "Menu"
+  },
+  {
+    "action": "Generated desktop logo navigates home",
+    "url": "http://127.0.0.1:6482/bg"
+  }
+]

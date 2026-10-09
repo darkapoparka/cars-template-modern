@@ -1,0 +1,127 @@
+{
+  "desktop": [
+    {
+      "name": "after-bg-services-1440",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-bg-services-1024",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-bg-1024",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-en-services-1024",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-en-1024",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-bg-1440",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-en-services-1440",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    },
+    {
+      "name": "after-en-1440",
+      "loaded": true,
+      "overflow": false,
+      "cards": 4
+    }
+  ],
+  "desktopGeometryIdenticalAt1440": true,
+  "mobile": [
+    {
+      "route": "bg",
+      "width": 320,
+      "geometryIdentical": true,
+      "artworkIdentical": false,
+      "differentPixels": 38164,
+      "differenceBounds": [
+        15,
+        191,
+        144,
+        727
+      ]
+    },
+    {
+      "route": "bg-services",
+      "width": 320,
+      "geometryIdentical": true,
+      "artworkIdentical": true,
+      "differentPixels": 0,
+      "differenceBounds": null
+    },
+    {
+      "route": "bg",
+      "width": 390,
+      "geometryIdentical": true,
+      "artworkIdentical": false,
+      "differentPixels": 65503,
+      "differenceBounds": [
+        15,
+        136,
+        351,
+        880
+      ]
+    },
+    {
+      "route": "bg-services",
+      "width": 390,
+      "geometryIdentical": true,
+      "artworkIdentical": true,
+      "differentPixels": 0,
+      "differenceBounds": null
+    },
+    {
+      "route": "bg",
+      "width": 1023,
+      "geometryIdentical": true,
+      "artworkIdentical": false,
+      "differentPixels": 64,
+      "differenceBounds": [
+        952,
+        8,
+        959,
+        15
+      ]
+    },
+    {
+      "route": "bg-services",
+      "width": 1023,
+      "geometryIdentical": true,
+      "artworkIdentical": true,
+      "differentPixels": 0,
+      "differenceBounds": null
+    }
+  ],
+  "preserved": [
+    "apps/web/app/[locale]/services/services.module.css",
+    "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+    "apps/web/next-env.d.ts",
+    "apps/web/public/desktop-boxcars/service-browse.webp",
+    "apps/web/public/desktop-boxcars/service-sell.webp",
+    "apps/web/public/desktop-boxcars/service-finance.webp",
+    "apps/web/public/desktop-boxcars/service-imports.webp"
+  ]
+}

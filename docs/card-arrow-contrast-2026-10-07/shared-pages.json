@@ -1,0 +1,322 @@
+[
+  {
+    "route": "home",
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 305.25,
+              "y": 922.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 40,
+          "y": 568
+        },
+        "text": "Препоръчана\nBMW X5\n2020\nM50d\nSUV\n167 000 км\nДизел\nАвтоматик\n\n89 379 лв.\n\nот 1360 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 647.5,
+              "y": 922.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 382.25,
+          "y": 568
+        },
+        "text": "Препоръчана\nMercedes-Benz GLS\n2021\n400d 4MATIC AMG\nSUV\n166 000 км\nДизел\nАвтоматик\n\n122 629 лв.\n\nот 1870 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 989.75,
+              "y": 922.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 724.5,
+          "y": 568
+        },
+        "text": "Препоръчана\nBMW M4\n2021\nCompetition\nКупе\n165 000 км\nБензин\nАвтоматик\n\n128 496 лв.\n\nот 1960 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 1332,
+              "y": 922.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 416.828125,
+          "width": 318.25,
+          "x": 1066.75,
+          "y": 568
+        },
+        "text": "BMW 7 Series\n2024\n750e xDrive M Sport\nСедан\n40 000 км\nPHEV\nАвтоматик\n\n175 436 лв.\n\nот 2680 лв./мес."
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 262.5,
+          "y": 168
+        },
+        "text": "Намерете своя автомобил"
+      },
+      {
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 494
+        },
+        "text": "Разгледайте автомобилите"
+      },
+      {
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 1162.828125
+        },
+        "text": "По-лесен път към следващия ви автомобил"
+      },
+      {
+        "rect": {
+          "height": 52,
+          "width": 1281,
+          "x": 72,
+          "y": 1754.828125
+        },
+        "text": "Следващият ви автомобил ви очаква."
+      },
+      {
+        "rect": {
+          "height": 42,
+          "width": 1345,
+          "x": 40,
+          "y": 2100.828125
+        },
+        "text": "Съвети за пътя напред"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 2761.65625
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 2761.65625
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 2761.65625
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "page": [
+      1425,
+      3185
+    ],
+    "width": 1440
+  },
+  {
+    "route": "pdp",
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 308.25,
+              "y": 2009.953125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 40,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz E-Class\n2021\nE 63 S AMG\nСедан\n96 000 км\nБензин\nАвтоматик\n\n165 657 лв.\n\nот 2530 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 649.5,
+              "y": 2009.953125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 381.25,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz CLS\n2020\n400d 4MATIC\nКупе\n171 000 км\nДизел\nАвтоматик\n\n73 733 лв.\n\nПо договаряне"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 990.75,
+              "y": 2009.953125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 722.5,
+          "y": 1653.125
+        },
+        "text": "Mercedes-Benz GLE\n2021\n400d Coupe\nSUV\n166 000 км\nДизел\nАвтоматик\n\n124 584 лв.\n\nот 1900 лв./мес."
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 36.390625,
+          "width": 621.171875,
+          "x": 64,
+          "y": 214
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "rect": {
+          "height": 32,
+          "width": 925,
+          "x": 64,
+          "y": 944.125
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "rect": {
+          "height": 32,
+          "width": 925,
+          "x": 64,
+          "y": 1397.125
+        },
+        "text": "Описание"
+      },
+      {
+        "rect": {
+          "height": 42,
+          "width": 331.796875,
+          "x": 40,
+          "y": 1595.125
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 2297.953125
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 2297.953125
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 2297.953125
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "page": [
+      1425,
+      2721
+    ],
+    "width": 1440
+  }
+]

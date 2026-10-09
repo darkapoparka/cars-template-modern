@@ -1,0 +1,12 @@
+{
+  "chipKeyboard": {
+    "focus": "Изчисти всички",
+    "fullyVisible": true,
+    "gridTop": 486,
+    "scrollLeft": 762
+  },
+  "afterClear": {
+    "chips": 0,
+    "gridTop": 486
+  }
+}

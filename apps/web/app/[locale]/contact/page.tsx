@@ -97,14 +97,17 @@ function DesktopContact({
           external: true,
         },
       ]}
-      appearance="neutral"
+      appearance="photo"
       artwork={
-        publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+        publicSite.artwork.desktopPageHeroes?.contact ??
+        publicSite.artwork.desktopHeroScene ??
+        publicSite.artwork.heroScene
       }
       eyebrow={[getLeadCopy(locale).city, leadSite.district[locale]]
         .filter(Boolean)
         .join(" · ")}
       locale={locale}
+      sceneTone="editorial"
       title={text("Свържете се с нас", "Contact us")}
       variant="service"
     >

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "cars",
+    "differentChannels": 0,
+    "channels": 3569625,
+    "maximumChannelDelta": 0,
+    "identical": true
+  },
+  {
+    "name": "lease",
+    "differentChannels": 0,
+    "channels": 3569625,
+    "maximumChannelDelta": 0,
+    "identical": true
+  },
+  {
+    "name": "sell",
+    "differentChannels": 0,
+    "channels": 3569625,
+    "maximumChannelDelta": 0,
+    "identical": true
+  },
+  {
+    "name": "guides",
+    "differentChannels": 66288,
+    "channels": 3569625,
+    "maximumChannelDelta": 10,
+    "identical": false
+  }
+]

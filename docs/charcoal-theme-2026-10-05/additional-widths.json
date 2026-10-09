@@ -1,0 +1,512 @@
+[
+  {
+    "blueControls": [],
+    "brand": "#30343b",
+    "brokenImages": [],
+    "headings": [
+      {
+        "height": 48,
+        "text": "Намерете своя автомобил",
+        "width": 1121,
+        "x": 72,
+        "y": 154
+      },
+      {
+        "height": 36,
+        "text": "Разгледайте автомобилите",
+        "width": 1121,
+        "x": 72,
+        "y": 478
+      },
+      {
+        "height": 24,
+        "text": "BMW X5",
+        "width": 228.25,
+        "x": 89,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "Mercedes-Benz GLS",
+        "width": 228.25,
+        "x": 375.25,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "BMW M4",
+        "width": 228.25,
+        "x": 661.5,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "BMW 7 Series",
+        "width": 228.25,
+        "x": 947.75,
+        "y": 794.5
+      },
+      {
+        "height": 44,
+        "text": "По-лесен път към следващия ви автомобил",
+        "width": 1185,
+        "x": 40,
+        "y": 1190.5
+      },
+      {
+        "height": 119.59375,
+        "text": "Следващият ви автомобил. По-лесно.",
+        "width": 760,
+        "x": 252.5,
+        "y": 1928.5
+      },
+      {
+        "height": 44,
+        "text": "Съвети за пътя напред",
+        "width": 1185,
+        "x": 40,
+        "y": 2394.09375
+      },
+      {
+        "height": 56,
+        "text": "Какво да проверите преди покупка на премиум автомобил",
+        "width": 375,
+        "x": 40,
+        "y": 2789.59375
+      },
+      {
+        "height": 56,
+        "text": "Внос на автомобил: кои разходи и срокове често се пропускат",
+        "width": 375,
+        "x": 445,
+        "y": 2789.59375
+      },
+      {
+        "height": 56,
+        "text": "5 въпроса преди да приемете оферта за финансиране",
+        "width": 375,
+        "x": 850,
+        "y": 2789.59375
+      },
+      {
+        "height": 26,
+        "text": "Открийте автомобил",
+        "width": 242.09375,
+        "x": 378.5,
+        "y": 3049.59375
+      },
+      {
+        "height": 26,
+        "text": "Разгледайте",
+        "width": 242.09375,
+        "x": 668.59375,
+        "y": 3049.59375
+      },
+      {
+        "height": 26,
+        "text": "Посетете автосалона",
+        "width": 266.3125,
+        "x": 958.6875,
+        "y": 3049.59375
+      }
+    ],
+    "height": 3465,
+    "overflow": false,
+    "path": "/bg",
+    "width": 1280
+  },
+  {
+    "blueControls": [],
+    "brand": "#30343b",
+    "brokenImages": [],
+    "headings": [
+      {
+        "height": 48,
+        "text": "Find Your Perfect Car",
+        "width": 1121,
+        "x": 72,
+        "y": 154
+      },
+      {
+        "height": 36,
+        "text": "Explore our cars",
+        "width": 1121,
+        "x": 72,
+        "y": 478
+      },
+      {
+        "height": 24,
+        "text": "BMW X5",
+        "width": 228.25,
+        "x": 89,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "Mercedes-Benz GLS",
+        "width": 228.25,
+        "x": 375.25,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "BMW M4",
+        "width": 228.25,
+        "x": 661.5,
+        "y": 794.5
+      },
+      {
+        "height": 24,
+        "text": "BMW 7 Series",
+        "width": 228.25,
+        "x": 947.75,
+        "y": 794.5
+      },
+      {
+        "height": 44,
+        "text": "A Better Way To Find Your Next Car",
+        "width": 1185,
+        "x": 40,
+        "y": 1190.5
+      },
+      {
+        "height": 59.796875,
+        "text": "Your Next Car, Made Simple",
+        "width": 760,
+        "x": 252.5,
+        "y": 1896.5
+      },
+      {
+        "height": 44,
+        "text": "Advice For The Road Ahead",
+        "width": 1185,
+        "x": 40,
+        "y": 2302.296875
+      },
+      {
+        "height": 56,
+        "text": "What to check before buying a premium used car",
+        "width": 375,
+        "x": 40,
+        "y": 2697.796875
+      },
+      {
+        "height": 56,
+        "text": "Importing a car: the costs and timelines people often miss",
+        "width": 375,
+        "x": 445,
+        "y": 2697.796875
+      },
+      {
+        "height": 56,
+        "text": "5 questions before accepting a vehicle finance offer",
+        "width": 375,
+        "x": 850,
+        "y": 2697.796875
+      },
+      {
+        "height": 26,
+        "text": "Find a car",
+        "width": 242.09375,
+        "x": 378.5,
+        "y": 2957.796875
+      },
+      {
+        "height": 26,
+        "text": "Explore",
+        "width": 242.09375,
+        "x": 668.59375,
+        "y": 2957.796875
+      },
+      {
+        "height": 26,
+        "text": "Visit the showroom",
+        "width": 266.3125,
+        "x": 958.6875,
+        "y": 2957.796875
+      }
+    ],
+    "height": 3373,
+    "overflow": false,
+    "path": "/en",
+    "width": 1280
+  },
+  {
+    "blueControls": [],
+    "brand": "#30343b",
+    "brokenImages": [],
+    "headings": [
+      {
+        "height": 50,
+        "text": "За Modern",
+        "width": 900,
+        "x": 182.5,
+        "y": 210
+      },
+      {
+        "height": 41.59375,
+        "text": "По-лесен път към следващия ви автомобил",
+        "width": 1185,
+        "x": 40,
+        "y": 699.5
+      },
+      {
+        "height": 56,
+        "text": "Открийте своя автомобил",
+        "width": 238.25,
+        "x": 60,
+        "y": 957.09375
+      },
+      {
+        "height": 56,
+        "text": "Вижте детайлите",
+        "width": 238.25,
+        "x": 362.25,
+        "y": 957.09375
+      },
+      {
+        "height": 56,
+        "text": "Планирайте бюджета си",
+        "width": 238.25,
+        "x": 664.5,
+        "y": 957.09375
+      },
+      {
+        "height": 56,
+        "text": "Направете следващата стъпка",
+        "width": 238.25,
+        "x": 966.75,
+        "y": 957.09375
+      },
+      {
+        "height": 48,
+        "text": "Нека открием следващия ви автомобил.",
+        "width": 1129,
+        "x": 68,
+        "y": 1243.09375
+      },
+      {
+        "height": 41.59375,
+        "text": "Няколко полезни отговора",
+        "width": 820,
+        "x": 222.5,
+        "y": 1537.09375
+      },
+      {
+        "height": 26,
+        "text": "Открийте автомобил",
+        "width": 242.09375,
+        "x": 378.5,
+        "y": 1963.6875
+      },
+      {
+        "height": 26,
+        "text": "Разгледайте",
+        "width": 242.09375,
+        "x": 668.59375,
+        "y": 1963.6875
+      },
+      {
+        "height": 26,
+        "text": "Посетете автосалона",
+        "width": 266.3125,
+        "x": 958.6875,
+        "y": 1963.6875
+      }
+    ],
+    "height": 2379,
+    "overflow": false,
+    "path": "/bg/about",
+    "width": 1280
+  },
+  {
+    "blueControls": [],
+    "brand": "#30343b",
+    "brokenImages": [],
+    "headings": [
+      {
+        "height": 50,
+        "text": "About Modern",
+        "width": 900,
+        "x": 182.5,
+        "y": 223
+      },
+      {
+        "height": 41.59375,
+        "text": "A simpler way to find your next car",
+        "width": 1185,
+        "x": 40,
+        "y": 699.5
+      },
+      {
+        "height": 28,
+        "text": "Find your fit",
+        "width": 238.25,
+        "x": 60,
+        "y": 957.09375
+      },
+      {
+        "height": 28,
+        "text": "See the details",
+        "width": 238.25,
+        "x": 362.25,
+        "y": 957.09375
+      },
+      {
+        "height": 28,
+        "text": "Plan your budget",
+        "width": 238.25,
+        "x": 664.5,
+        "y": 957.09375
+      },
+      {
+        "height": 28,
+        "text": "Take the next step",
+        "width": 238.25,
+        "x": 966.75,
+        "y": 957.09375
+      },
+      {
+        "height": 48,
+        "text": "Let’s find your next car.",
+        "width": 1129,
+        "x": 68,
+        "y": 1189.09375
+      },
+      {
+        "height": 41.59375,
+        "text": "A few things you might want to know",
+        "width": 820,
+        "x": 222.5,
+        "y": 1483.09375
+      },
+      {
+        "height": 26,
+        "text": "Find a car",
+        "width": 242.09375,
+        "x": 378.5,
+        "y": 1909.6875
+      },
+      {
+        "height": 26,
+        "text": "Explore",
+        "width": 242.09375,
+        "x": 668.59375,
+        "y": 1909.6875
+      },
+      {
+        "height": 26,
+        "text": "Visit the showroom",
+        "width": 266.3125,
+        "x": 958.6875,
+        "y": 1909.6875
+      }
+    ],
+    "height": 2325,
+    "overflow": false,
+    "path": "/en/about",
+    "width": 1280
+  },
+  {
+    "blueControls": [],
+    "brand": "#30343b",
+    "brokenImages": [],
+    "headings": [
+      {
+        "height": 1,
+        "text": "Автомобили за продажба",
+        "width": 1,
+        "x": 15,
+        "y": 195
+      },
+      {
+        "height": 21,
+        "text": "X5 M50d",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 262.484375
+      },
+      {
+        "height": 21,
+        "text": "GLS 400d 4MATIC AMG",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 262.484375
+      },
+      {
+        "height": 21,
+        "text": "M4 Competition",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 486.453125
+      },
+      {
+        "height": 21,
+        "text": "750e xDrive M Sport",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 486.453125
+      },
+      {
+        "height": 21,
+        "text": "E 63 S AMG",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 710.421875
+      },
+      {
+        "height": 21,
+        "text": "CLS 400d 4MATIC",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 710.421875
+      },
+      {
+        "height": 21,
+        "text": "Q8 50 TDI quattro S line",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 934.390625
+      },
+      {
+        "height": 21,
+        "text": "GLE 400d Coupe",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 934.390625
+      },
+      {
+        "height": 21,
+        "text": "S 350d Long AMG",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 1158.359375
+      },
+      {
+        "height": 21,
+        "text": "Range Rover Sport SVR",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 1158.359375
+      },
+      {
+        "height": 21,
+        "text": "430i xDrive Gran Coupe",
+        "width": 241.375,
+        "x": 246.625,
+        "y": 1382.328125
+      },
+      {
+        "height": 21,
+        "text": "X5 xDrive40d",
+        "width": 241.375,
+        "x": 738.625,
+        "y": 1392.328125
+      }
+    ],
+    "height": 1624,
+    "overflow": false,
+    "path": "/bg",
+    "width": 1023
+  }
+]

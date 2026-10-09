@@ -10,9 +10,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@repo/design-system/components/ui/dialog";
-import { publicSite } from "@repo/marketplace/site-config";
+import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
 import Image from "@repo/marketplace-ui/components/public-image";
-import { ArrowRight, Plus, Search, X } from "lucide-react";
+import { getDealerVehicleTypeArtwork } from "@repo/marketplace-ui/lib/dealer-vehicle-types";
+import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
+import { ChevronRight, RefreshCw, Search, Trash2, X } from "lucide-react";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import styles from "./lease-desktop-vehicle-picker.module.css";
 import {
@@ -41,13 +44,19 @@ export function LeaseDesktopVehiclePicker({
   const text =
     locale === "bg"
       ? {
-          browse: "Разгледайте наличните автомобили",
+          change: "Променете",
+          remove: "Премахнете",
+          chooseHint: "Потърсете марка или модел",
+          specifications: "Характеристики",
           empty: "Няма намерени автомобили. Опитайте друга марка или модел.",
           description:
             "Потърсете марка или модел и изберете автомобил за лизинг.",
         }
       : {
-          browse: "Browse available vehicles",
+          change: "Change",
+          remove: "Clear",
+          chooseHint: "Search by make or model",
+          specifications: "Specifications",
           empty: "No vehicles found. Try another make or model.",
           description:
             "Search by make or model, then choose a vehicle to finance.",
@@ -68,60 +77,79 @@ export function LeaseDesktopVehiclePicker({
             className={styles.selectedCard}
             data-slot="lease-desktop-selected-card"
           >
-            <div className={styles.cardHeader}>
-              <div className={styles.cardHeading}>
-                <strong
-                  className={styles.title}
-                  data-slot="lease-desktop-selected-title"
-                  title={selectedVehicle.title}
-                >
-                  {selectedVehicle.title}
-                </strong>
-                <p className={styles.selectedMeta}>
-                  {selectedVehicle.yearLabel} · {selectedVehicle.mileageLabel}
-                </p>
-                <p className={styles.vehiclePrice}>
-                  {selectedVehicle.priceLabel}
-                </p>
-              </div>
-              <Button
-                aria-label={copy.clearSelection}
-                className={styles.clear}
-                onClick={() => {
-                  onSelect("");
-                  requestAnimationFrame(() =>
-                    triggerRef.current?.focus({ preventScroll: true })
-                  );
-                }}
-                size="icon-sm"
-                type="button"
-                variant="ghost"
-              >
-                <X aria-hidden="true" size={16} />
-              </Button>
-            </div>
             <div className={styles.media}>
               <Image
                 alt={selectedVehicle.imageAlt}
                 className={styles.image}
                 fill
-                sizes="160px"
+                sizes="200px"
                 src={selectedVehicle.imageUrl}
               />
             </div>
-            <DialogTrigger asChild>
-              <Button
-                className={styles.change}
-                data-selected="true"
-                data-slot="lease-desktop-vehicle-trigger"
-                ref={triggerRef}
-                type="button"
-                variant="outline"
-              >
-                {copy.changeVehicle}
-                <ArrowRight aria-hidden="true" size={14} />
-              </Button>
-            </DialogTrigger>
+            <div className={styles.cardBody}>
+              <div className={styles.cardHeader}>
+                <div
+                  className={styles.headingActions}
+                  data-slot="lease-desktop-vehicle-actions"
+                >
+                  <Link
+                    aria-label={`${copy.detailAction}: ${selectedVehicle.title}`}
+                    className={styles.title}
+                    data-slot="lease-desktop-selected-title"
+                    href={selectedVehicle.detailHref}
+                  >
+                    {selectedVehicle.title}
+                  </Link>
+                  <DialogTrigger asChild>
+                    <Button
+                      aria-label={copy.changeVehicle}
+                      className={styles.change}
+                      data-selected="true"
+                      data-slot="lease-desktop-vehicle-trigger"
+                      ref={triggerRef}
+                      type="button"
+                      variant="outline"
+                    >
+                      <span className={styles.changeSurface}>
+                        <RefreshCw
+                          aria-hidden="true"
+                          className="size-3.5"
+                          size={14}
+                        />
+                        {text.change}
+                      </span>
+                    </Button>
+                  </DialogTrigger>
+                </div>
+                <Button
+                  aria-label={copy.clearSelection}
+                  className={styles.clear}
+                  onClick={() => {
+                    onSelect("");
+                    requestAnimationFrame(() =>
+                      triggerRef.current?.focus({ preventScroll: true })
+                    );
+                  }}
+                  type="button"
+                  variant="ghost"
+                >
+                  <Trash2 aria-hidden="true" size={16} />
+                  {text.remove}
+                </Button>
+              </div>
+              <div className={styles.facts}>
+                <DealerVehicleFacts
+                  facts={getVehicleCardSpecFacts(
+                    selectedVehicle.filterData,
+                    locale
+                  )}
+                  label={text.specifications}
+                />
+              </div>
+              <p className={styles.vehiclePrice}>
+                {selectedVehicle.priceLabel}
+              </p>
+            </div>
           </div>
         ) : (
           <DialogTrigger asChild>
@@ -133,25 +161,24 @@ export function LeaseDesktopVehiclePicker({
               ref={triggerRef}
               type="button"
             >
-              <span className={styles.preview}>
+              <span aria-hidden="true" className={styles.triggerIcon}>
                 <Image
                   alt=""
-                  className={styles.emptyImage}
-                  fill
-                  sizes="160px"
-                  src={
-                    publicSite.artwork.desktopServices?.finance ??
-                    publicSite.artwork.desktopFinanceHero ??
-                    publicSite.artwork.financeHero
-                  }
+                  draggable={false}
+                  height={72}
+                  src={getDealerVehicleTypeArtwork("car")}
+                  unoptimized
+                  width={132}
                 />
               </span>
               <span className={styles.triggerCopy}>
-                <strong>{copy.vehicleLabel}</strong>
-                <span className={styles.hint}>{text.browse}</span>
+                <strong data-slot="lease-desktop-empty-title">
+                  {copy.vehicleLabel}
+                </strong>
+                <span className={styles.triggerHint}>{text.chooseHint}</span>
               </span>
-              <span className={styles.plus}>
-                <Plus aria-hidden="true" size={24} strokeWidth={1.5} />
+              <span aria-hidden="true" className={styles.caret}>
+                <ChevronRight size={20} />
               </span>
             </button>
           </DialogTrigger>

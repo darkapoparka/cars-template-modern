@@ -1,0 +1,42 @@
+[
+  {
+    "locale": "bg",
+    "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "focus": {
+      "arrowFill": "rgb(245, 245, 245)",
+      "keyboardFocus": true,
+      "outline": "2px",
+      "slot": "vehicle-card-content"
+    },
+    "keyboardUrl": "http://127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020",
+    "arrowUrl": "http://127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020",
+    "allUrl": "http://127.0.0.1:6482/bg/cars",
+    "cta": {
+      "color": "rgb(255, 255, 255)",
+      "fill": "rgb(48, 52, 59)"
+    },
+    "keyboardPassed": true,
+    "arrowPassed": true,
+    "allPassed": true
+  },
+  {
+    "locale": "en",
+    "href": "/en/listing/bmw-x5-m50d-sofia-2020",
+    "focus": {
+      "arrowFill": "rgb(245, 245, 245)",
+      "keyboardFocus": true,
+      "outline": "2px",
+      "slot": "vehicle-card-content"
+    },
+    "keyboardUrl": "http://127.0.0.1:6482/en/listing/bmw-x5-m50d-sofia-2020",
+    "arrowUrl": "http://127.0.0.1:6482/en/listing/bmw-x5-m50d-sofia-2020",
+    "allUrl": "http://127.0.0.1:6482/en/cars",
+    "cta": {
+      "color": "rgb(255, 255, 255)",
+      "fill": "rgb(48, 52, 59)"
+    },
+    "keyboardPassed": true,
+    "arrowPassed": true,
+    "allPassed": true
+  }
+]

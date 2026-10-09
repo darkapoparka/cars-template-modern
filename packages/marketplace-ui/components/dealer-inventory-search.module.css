@@ -7,6 +7,35 @@
     display: block;
     min-width: 0;
   }
+  .controls .search {
+    gap: 0;
+  }
+  .refinements {
+    display: flex;
+    gap: var(--desktop-hero-pill-gap);
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    width: max-content;
+    min-width: 0;
+    max-width: min(
+      var(--desktop-discovery-search-width),
+      calc(100vw - var(--spacing) * 20)
+    );
+    padding: 0;
+    margin: var(--desktop-hero-pills-gap) 0 0;
+    border: 0;
+  }
+  .refinement > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .refinements .refinement {
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: calc(var(--spacing) * 42);
+  }
   .typeValue {
     display: inline-flex;
     gap: calc(var(--spacing) * 1.5);
@@ -27,7 +56,7 @@
   }
   .typeOption {
     min-height: calc(var(--spacing) * 10);
-    padding-left: calc(var(--spacing) * 3);
+    padding-left: calc(var(--spacing) * 8);
     font-size: calc(var(--spacing) * 3.5);
     border-radius: calc(var(--spacing) * 2);
   }

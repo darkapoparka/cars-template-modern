@@ -23,6 +23,7 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   type ReactNode,
   useEffect,
+  useMemo,
   useRef,
   useState,
   useTransition,
@@ -216,7 +217,10 @@ export const MarketplaceShell = ({
   };
 
   const appUrl = isDealershipSite ? "" : cleanMarketplaceBaseUrl(appBaseUrl);
-  const activeFilterChips = getActiveFilterChips(filters, locale);
+  const activeFilterChips = useMemo(
+    () => getActiveFilterChips(filters, locale),
+    [filters, locale]
+  );
   const showDealerDesktopLanding =
     Boolean(desktopDiscoverySlot) &&
     isDealershipSite &&
@@ -273,9 +277,9 @@ export const MarketplaceShell = ({
     });
   };
 
-  const appliedSearchLabel = getCanonicalAppliedSearchLabel(
-    filters.q,
-    taxonomy
+  const appliedSearchLabel = useMemo(
+    () => getCanonicalAppliedSearchLabel(filters.q, taxonomy),
+    [filters.q, taxonomy]
   );
   const mobileConditionQuickFilterItems = (
     ["price", "year", "mileage", "fuel", "transmission"] as const

@@ -320,3 +320,10 @@ packages/database/generated
 !/docs/implementation/2026-09-12-mobile/*.md
 /docs/implementation/2026-09-12-mobile-continuation/*
 !/docs/implementation/2026-09-12-mobile-continuation/*.md
+
+# Transient QA output; intentional specs/*-snapshots baselines remain tracked
+/runtime/
+/apps/e2e/*.png
+/apps/e2e/*.jpg
+/apps/e2e/*.jpeg
+/apps/e2e/*.webp

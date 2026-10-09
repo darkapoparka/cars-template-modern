@@ -157,6 +157,7 @@
   --text-hero: clamp(2.75rem, 4vw, 4rem);
   --text-hero--line-height: 1.05;
   --tracking-heading: -0.02em;
+  --tracking-mobile-heading: -0.01em;
   --tracking-label: 0.08em;
   --text-micro: 0.75rem;
   --text-micro--line-height: 1rem;

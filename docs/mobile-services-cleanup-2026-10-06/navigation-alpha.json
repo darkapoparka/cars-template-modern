@@ -1,0 +1,46 @@
+{
+  "dimensions": {
+    "format": "raw",
+    "width": 600,
+    "height": 200,
+    "channels": 4,
+    "depth": "uchar",
+    "premultiplied": false,
+    "hasAlpha": true,
+    "size": 480000
+  },
+  "cornerAlpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cells": [
+    {
+      "cell": 0,
+      "transparent": 18021,
+      "opaque": 154
+    },
+    {
+      "cell": 1,
+      "transparent": 17403,
+      "opaque": 197
+    },
+    {
+      "cell": 2,
+      "transparent": 19124,
+      "opaque": 191
+    },
+    {
+      "cell": 3,
+      "transparent": 17871,
+      "opaque": 156
+    },
+    {
+      "cell": 4,
+      "transparent": 17344,
+      "opaque": 356
+    }
+  ],
+  "bytes": 21990
+}

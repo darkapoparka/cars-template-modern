@@ -1,0 +1,15 @@
+{
+  "overflow": false,
+  "phone": [
+    {
+      "href": "tel:+359877733110",
+      "label": "Обадете се",
+      "loaded": true,
+      "src": "/images/services/header-silver-phone-v2.webp",
+      "target": [
+        52,
+        52
+      ]
+    }
+  ]
+}

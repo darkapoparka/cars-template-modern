@@ -1,0 +1,114 @@
+[
+  {
+    "width": 1024,
+    "locale": "bg",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        0,
+        0
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1024,
+    "locale": "en",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        0,
+        0
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1280,
+    "locale": "bg",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98475,
+        253.9865625
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1280,
+    "locale": "en",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98475,
+        253.9865625
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98625,
+        253.9875
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98625,
+        253.9875
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1920,
+    "locale": "bg",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98625,
+        253.9875
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  },
+  {
+    "width": 1920,
+    "locale": "en",
+    "geometry": {
+      "bannerCenter": 250,
+      "baselines": [
+        253.98625,
+        253.9875
+      ],
+      "groupCenter": 250,
+      "overflow": false,
+      "searchY": 254
+    }
+  }
+]

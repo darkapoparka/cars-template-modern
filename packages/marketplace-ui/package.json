@@ -33,6 +33,7 @@
     "./components/desktop-saved-cars": "./components/desktop-saved-cars.tsx",
     "./components/dealer-desktop-toolbar": "./components/dealer-desktop-toolbar.tsx",
     "./components/locale-preferences": "./components/locale-preferences.tsx",
+    "./components/language-select": "./components/language-select.tsx",
     "./components/public-image": "./components/public-image.tsx"
   },
   "scripts": {

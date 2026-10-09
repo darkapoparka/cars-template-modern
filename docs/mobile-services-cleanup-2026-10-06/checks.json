@@ -1,0 +1,789 @@
+[
+  {
+    "cards": [
+      {
+        "height": 141.59375,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Наличности",
+        "titleHeight": 19.59375,
+        "width": 130.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Внос",
+        "titleHeight": 19.59375,
+        "width": 130.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Лизинг",
+        "titleHeight": 19.59375,
+        "width": 130.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Продай",
+        "titleHeight": 19.59375,
+        "width": 130.5
+      }
+    ],
+    "headerVisible": true,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "height": 141.59375,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Наличности",
+        "titleHeight": 19.59375,
+        "width": 165.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Внос",
+        "titleHeight": 19.59375,
+        "width": 165.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Лизинг",
+        "titleHeight": 19.59375,
+        "width": 165.5
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Продай",
+        "titleHeight": 19.59375,
+        "width": 165.5
+      }
+    ],
+    "headerVisible": true,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "height": 141.59375,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Наличности",
+        "titleHeight": 19.59375,
+        "width": 250
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Внос",
+        "titleHeight": 19.59375,
+        "width": 250
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Лизинг",
+        "titleHeight": 19.59375,
+        "width": 250
+      },
+      {
+        "height": 141.59375,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Продай",
+        "titleHeight": 19.59375,
+        "width": 250
+      }
+    ],
+    "headerVisible": true,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 1023
+  },
+  {
+    "cards": [
+      {
+        "height": 368,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Автомобили в наличност",
+        "titleHeight": 28,
+        "width": 452.5
+      },
+      {
+        "height": 368,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Внос по заявка",
+        "titleHeight": 28,
+        "width": 452.5
+      },
+      {
+        "height": 394,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Собствен лизинг",
+        "titleHeight": 28,
+        "width": 452.5
+      },
+      {
+        "height": 394,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Продайте автомобила си",
+        "titleHeight": 28,
+        "width": 452.5
+      }
+    ],
+    "headerVisible": false,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "cards": [
+      {
+        "height": 394,
+        "href": "/bg/cars",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Автомобили в наличност",
+        "titleHeight": 28,
+        "width": 312
+      },
+      {
+        "height": 394,
+        "href": "/bg/imports",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Внос по заявка",
+        "titleHeight": 28,
+        "width": 312
+      },
+      {
+        "height": 394,
+        "href": "/bg/lease",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Собствен лизинг",
+        "titleHeight": 28,
+        "width": 312
+      },
+      {
+        "height": 394,
+        "href": "/bg/sell",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Продайте автомобила си",
+        "titleHeight": 28,
+        "width": 312
+      }
+    ],
+    "headerVisible": false,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "cards": [
+      {
+        "height": 141.59375,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "In stock",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Import",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Leasing",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Sell",
+        "titleHeight": 19.59375
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "height": 141.59375,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "In stock",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Import",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Leasing",
+        "titleHeight": 19.59375
+      },
+      {
+        "height": 141.59375,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "lineHeight": "19.6px",
+        "title": "Sell",
+        "titleHeight": 19.59375
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "height": 394,
+        "href": "/en/cars",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Vehicles in stock",
+        "titleHeight": 28
+      },
+      {
+        "height": 394,
+        "href": "/en/imports",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Import on request",
+        "titleHeight": 28
+      },
+      {
+        "height": 394,
+        "href": "/en/lease",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "In-house leasing",
+        "titleHeight": 28
+      },
+      {
+        "height": 394,
+        "href": "/en/sell",
+        "imageLoaded": true,
+        "lineHeight": "28px",
+        "title": "Sell your car",
+        "titleHeight": 28
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "route": "bg/imports",
+    "width": 390,
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "brand": "/bg",
+      "calls": [
+        {
+          "color": "rgb(255, 255, 255)",
+          "href": "tel:+359877733110"
+        }
+      ]
+    }
+  },
+  {
+    "route": "bg/sell",
+    "width": 390,
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "callColor": "rgb(255, 255, 255)"
+    }
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 0,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/sell",
+    "width": 320
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 3,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "width": 320
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 3,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/imports",
+    "width": 320
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 2,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/imports",
+    "width": 390
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 0,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/sell",
+    "width": 390
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 0,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/en/sell",
+    "width": 320
+  },
+  {
+    "hero": {
+      "background": "rgb(48, 52, 59)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 1,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/lease",
+    "width": 390
+  },
+  {
+    "hero": null,
+    "icons": [
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "car"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "import"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "sell"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v3-transparent-600w.webp\")",
+        "name": "lease"
+      },
+      {
+        "blend": "normal",
+        "image": "url(\"http://127.0.0.1:6482/images/services/navigation-assets-v1-600w.webp\")",
+        "name": "menu"
+      }
+    ],
+    "imagesMissing": 1,
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 390
+  }
+]

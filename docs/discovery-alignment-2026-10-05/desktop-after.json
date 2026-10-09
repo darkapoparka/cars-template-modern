@@ -1,0 +1,1554 @@
+[
+  {
+    "route": "home",
+    "width": 1024,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 865,
+            "x": 72,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Намерете своя автомобил"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 144.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Разгледайте наличните автомобили и уговорете оглед."
+        },
+        {
+          "aria": "Търсене на автомобили",
+          "rect": {
+            "height": 64,
+            "width": 865,
+            "x": 72,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Търсене на автомобилиКлючова думаТърсенеКатегорияАвтомобилиМаркаВсички маркиМоделВсички моделиЦенаВсяка ценаГодинаГодинаПробегПробегОще филтриСкоростна кутияТип купеГоривоПродавачМощностЕкстриМестоположениеТърси"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 879,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Търси"
+        },
+        {
+          "aria": "Тип превозно средство",
+          "rect": {
+            "height": 36,
+            "width": 865,
+            "x": 72,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "АвтомобилиМоториБусовеКамиони"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 929,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg",
+      "width": 1024
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1024,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": "Навигация",
+          "rect": {
+            "height": 20,
+            "width": 865,
+            "x": 72,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Начало/Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 865,
+            "x": 72,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 144.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Открийте автомобил. Запазете и сравнете избора си."
+        },
+        {
+          "aria": "Търсене на превозни средства",
+          "rect": {
+            "height": 64,
+            "width": 865,
+            "x": 72,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Тип:АвтомобилиВсички маркиВсички моделиВсяка цена"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 879,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 929,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg/cars",
+      "width": 1024
+    }
+  },
+  {
+    "route": "home",
+    "width": 1280,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 60,
+            "y": 90.02
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 939.36,
+            "y": 102.5
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 182.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Намерете своя автомобил"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 272.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Разгледайте наличните автомобили и уговорете оглед."
+        },
+        {
+          "aria": "Търсене на автомобили",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 112.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Търсене на автомобилиКлючова думаТърсенеКатегорияАвтомобилиМаркаВсички маркиМоделВсички моделиЦенаВсяка ценаГодинаГодинаПробегПробегОще филтриСкоростна кутияТип купеГоривоПродавачМощностЕкстриМестоположениеТърси"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1094.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Търси"
+        },
+        {
+          "aria": "Тип превозно средство",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 112.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "АвтомобилиМоториБусовеКамиони"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1185,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg",
+      "width": 1280
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1280,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 60,
+            "y": 90.02
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 939.36,
+            "y": 102.5
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Навигация",
+          "rect": {
+            "height": 20,
+            "width": 1121,
+            "x": 72,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Начало/Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 182.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 272.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Открийте автомобил. Запазете и сравнете избора си."
+        },
+        {
+          "aria": "Търсене на превозни средства",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 112.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Тип:АвтомобилиВсички маркиВсички моделиВсяка цена"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1094.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1185,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg/cars",
+      "width": 1280
+    }
+  },
+  {
+    "route": "home",
+    "width": 1440,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 72.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1067.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 262.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Намерете своя автомобил"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 352.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Разгледайте наличните автомобили и уговорете оглед."
+        },
+        {
+          "aria": "Търсене на автомобили",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 192.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Търсене на автомобилиКлючова думаТърсенеКатегорияАвтомобилиМаркаВсички маркиМоделВсички моделиЦенаВсяка ценаГодинаГодинаПробегПробегОще филтриСкоростна кутияТип купеГоривоПродавачМощностЕкстриМестоположениеТърси"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1174.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Търси"
+        },
+        {
+          "aria": "Тип превозно средство",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 192.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "АвтомобилиМоториБусовеКамиони"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg",
+      "width": 1440
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1440,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 72.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1067.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Навигация",
+          "rect": {
+            "height": 20,
+            "width": 1256,
+            "x": 84.5,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Начало/Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 262.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 352.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Открийте автомобил. Запазете и сравнете избора си."
+        },
+        {
+          "aria": "Търсене на превозни средства",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 192.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Тип:АвтомобилиВсички маркиВсички моделиВсяка цена"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1174.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg/cars",
+      "width": 1440
+    }
+  },
+  {
+    "route": "home",
+    "width": 1920,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 312.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1307.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 502.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Намерете своя автомобил"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 592.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Разгледайте наличните автомобили и уговорете оглед."
+        },
+        {
+          "aria": "Търсене на автомобили",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 432.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Търсене на автомобилиКлючова думаТърсенеКатегорияАвтомобилиМаркаВсички маркиМоделВсички моделиЦенаВсяка ценаГодинаГодинаПробегПробегОще филтриСкоростна кутияТип купеГоривоПродавачМощностЕкстриМестоположениеТърси"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1414.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Търси"
+        },
+        {
+          "aria": "Тип превозно средство",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 432.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "АвтомобилиМоториБусовеКамиони"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 292.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg",
+      "width": 1920
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1920,
+    "locale": "bg",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 312.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1307.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Навигация",
+          "rect": {
+            "height": 20,
+            "width": 1256,
+            "x": 324.5,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Начало/Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 502.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Автомобили за продажба"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 592.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Открийте автомобил. Запазете и сравнете избора си."
+        },
+        {
+          "aria": "Търсене на превозни средства",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 432.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Тип:АвтомобилиВсички маркиВсички моделиВсяка цена"
+        },
+        {
+          "aria": "Търси",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1414.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 292.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/bg/cars",
+      "width": 1920
+    }
+  },
+  {
+    "route": "home",
+    "width": 1024,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 865,
+            "x": 72,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Find Your Perfect Car"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 144.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Browse available cars and arrange a viewing."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 865,
+            "x": 72,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Search carsKeywordSearchVehicle typeAll CarsMakeAll MakesModelAll ModelsPriceAny PriceYearYearMileageMileageMore filtersTransmissionBody typeFuelSeller typePowerExtrasLocationSearch"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 879,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Search"
+        },
+        {
+          "aria": "Vehicle type",
+          "rect": {
+            "height": 36,
+            "width": 865,
+            "x": 72,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "CarsMotorbikesVansTrucks"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 929,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en",
+      "width": 1024
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1024,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": "Breadcrumb",
+          "rect": {
+            "height": 20,
+            "width": 865,
+            "x": 72,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Home/Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 865,
+            "x": 72,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 144.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Find your next car. Save your favourites and compare the details."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 865,
+            "x": 72,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Type:CarsAll MakesAll ModelsAny Price"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 879,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 929,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en/cars",
+      "width": 1024
+    }
+  },
+  {
+    "route": "home",
+    "width": 1280,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 60,
+            "y": 90.02
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 939.36,
+            "y": 102.5
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 182.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Find Your Perfect Car"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 272.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Browse available cars and arrange a viewing."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 112.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Search carsKeywordSearchVehicle typeAll CarsMakeAll MakesModelAll ModelsPriceAny PriceYearYearMileageMileageMore filtersTransmissionBody typeFuelSeller typePowerExtrasLocationSearch"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1094.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Search"
+        },
+        {
+          "aria": "Vehicle type",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 112.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "CarsMotorbikesVansTrucks"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1185,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en",
+      "width": 1280
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1280,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 60,
+            "y": 90.02
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 177.17,
+            "width": 265.64,
+            "x": 939.36,
+            "y": 102.5
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Breadcrumb",
+          "rect": {
+            "height": 20,
+            "width": 1121,
+            "x": 72,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Home/Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 182.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 272.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Find your next car. Save your favourites and compare the details."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 112.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Type:CarsAll MakesAll ModelsAny Price"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1094.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1185,
+        "x": 40,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en/cars",
+      "width": 1280
+    }
+  },
+  {
+    "route": "home",
+    "width": 1440,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 72.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1067.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 262.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Find Your Perfect Car"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 352.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Browse available cars and arrange a viewing."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 192.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Search carsKeywordSearchVehicle typeAll CarsMakeAll MakesModelAll ModelsPriceAny PriceYearYearMileageMileageMore filtersTransmissionBody typeFuelSeller typePowerExtrasLocationSearch"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1174.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Search"
+        },
+        {
+          "aria": "Vehicle type",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 192.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "CarsMotorbikesVansTrucks"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en",
+      "width": 1440
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1440,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 72.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1067.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Breadcrumb",
+          "rect": {
+            "height": 20,
+            "width": 1256,
+            "x": 84.5,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Home/Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 262.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 352.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Find your next car. Save your favourites and compare the details."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 192.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Type:CarsAll MakesAll ModelsAny Price"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1174.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en/cars",
+      "width": 1440
+    }
+  },
+  {
+    "route": "home",
+    "width": 1920,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 312.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1307.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 502.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Find Your Perfect Car"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 592.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Browse available cars and arrange a viewing."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 432.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FORM",
+          "text": "Search carsKeywordSearchVehicle typeAll CarsMakeAll MakesModelAll ModelsPriceAny PriceYearYearMileageMileageMore filtersTransmissionBody typeFuelSeller typePowerExtrasLocationSearch"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1414.5,
+            "y": 248
+          },
+          "slot": "desktop-hero-submit",
+          "tag": "BUTTON",
+          "text": "Search"
+        },
+        {
+          "aria": "Vehicle type",
+          "rect": {
+            "height": 36,
+            "width": 1040,
+            "x": 432.5,
+            "y": 324
+          },
+          "slot": "desktop-home-types",
+          "tag": "FIELDSET",
+          "text": "CarsMotorbikesVansTrucks"
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 292.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en",
+      "width": 1920
+    }
+  },
+  {
+    "route": "cars",
+    "width": 1920,
+    "locale": "en",
+    "measured": {
+      "elements": [
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 312.5,
+            "y": 79.53
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 190.09,
+            "width": 285,
+            "x": 1307.5,
+            "y": 92.92
+          },
+          "slot": null,
+          "tag": "PICTURE",
+          "text": ""
+        },
+        {
+          "aria": "Breadcrumb",
+          "rect": {
+            "height": 20,
+            "width": 1256,
+            "x": 324.5,
+            "y": 110
+          },
+          "slot": null,
+          "tag": "NAV",
+          "text": "Home/Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 48,
+            "width": 900,
+            "x": 502.5,
+            "y": 140
+          },
+          "slot": null,
+          "tag": "H1",
+          "text": "Cars for sale"
+        },
+        {
+          "aria": null,
+          "rect": {
+            "height": 24,
+            "width": 720,
+            "x": 592.5,
+            "y": 196
+          },
+          "slot": null,
+          "tag": "P",
+          "text": "Find your next car. Save your favourites and compare the details."
+        },
+        {
+          "aria": "Vehicle search",
+          "rect": {
+            "height": 64,
+            "width": 1040,
+            "x": 432.5,
+            "y": 240
+          },
+          "slot": null,
+          "tag": "FIELDSET",
+          "text": "Type:CarsAll MakesAll ModelsAny Price"
+        },
+        {
+          "aria": "Search",
+          "rect": {
+            "height": 48,
+            "width": 48,
+            "x": 1414.5,
+            "y": 248
+          },
+          "slot": "dealer-inventory-search-open",
+          "tag": "BUTTON",
+          "text": ""
+        }
+      ],
+      "height": 1000,
+      "hero": {
+        "height": 320,
+        "width": 1320,
+        "x": 292.5,
+        "y": 90
+      },
+      "overflow": false,
+      "url": "http://127.0.0.1:6482/en/cars",
+      "width": 1920
+    }
+  }
+]

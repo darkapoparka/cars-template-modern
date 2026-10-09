@@ -1,0 +1,3 @@
+Browser tab: 1, Title: "Автомобили от Day & Night Auto Group | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg".
+There has been no change in the accessibility tree.
+The focused UI element is 0 AXWebArea Автомобили от Day & Night Auto Group | Day & Night Auto Group, URL: 127.0.0.1:6482/bg

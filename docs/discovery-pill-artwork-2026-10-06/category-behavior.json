@@ -1,0 +1,10 @@
+{
+  "homeDraft": {
+    "url": "http://127.0.0.1:6482/bg",
+    "selected": "true"
+  },
+  "inventoryCategory": {
+    "url": "http://127.0.0.1:6482/bg/trucks?category=truck",
+    "selected": "true"
+  }
+}

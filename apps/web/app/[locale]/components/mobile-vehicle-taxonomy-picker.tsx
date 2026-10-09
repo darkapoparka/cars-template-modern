@@ -62,7 +62,7 @@ export const MobileVehicleTaxonomyPicker = ({
   const selectedValue = kind === "make" ? make : model;
   const trimmedQuery = query.trim();
   const canUseCustomValue = canUseCustomVehicleTaxonomyValue(query, options);
-  const pickerTitle = kind === "make" ? text.makeTitle : make;
+  const pickerTitle = kind === "make" ? text.makeTitle : text.modelTitle;
   const pickerDescription =
     kind === "make" ? text.makeDescription : text.modelDescription;
   const searchPlaceholder =

@@ -1,0 +1,25 @@
+{
+  "homeDraft": {
+    "buttons": [
+      {
+        "category": "car",
+        "selected": "false"
+      },
+      {
+        "category": "motorbike",
+        "selected": "true"
+      },
+      {
+        "category": "van",
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "selected": "false"
+      }
+    ],
+    "carLoaded": true,
+    "url": "http://127.0.0.1:6482/bg"
+  },
+  "freshErrors": []
+}

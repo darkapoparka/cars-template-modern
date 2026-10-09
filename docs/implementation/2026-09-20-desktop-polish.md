@@ -87,3 +87,7 @@ Web typecheck, scoped Biome and the navigation regression passed. Inspected the 
 Extended the overlay-inspired rounded surfaces across shared home/inventory category tabs, header selected navigation and showroom action, sort/view controls and home carousel actions. Cards now share rounded shells, readable secondary text, soft spec surfaces, a separated price area and dark open actions. Plain icon search and black filters remain. Changes are in five existing desktop CSS modules; no mobile rules changed.
 
 Scoped Biome passed. Browser checks covered home plus BG/EN inventory at 1024/1440/1920/390 without horizontal overflow, card detail and Back, no page errors, list view and sorting. The header/category navigation regression also passed. Visually inspected home, BG inventory and list screenshots. An initial verification script left its viewport mobile between routes; corrected the harness and reran successfully. Screenshots: apps/e2e/desktop-coherent--bg.png, desktop-coherent--bg-cars.png, desktop-coherent-list.png. No build/typecheck rerun for CSS-only changes, no baseline refresh or publication.
+
+## Raw capture retention — 7 October 2026
+
+The loose E2E screenshots named above were retired during architectural cleanup, not promoted to current visual baselines. Their original bytes remain in Cars commit ca8aca86c0f13f06fdb3506fe00299a36a3fa07b under templates/modern/apps/e2e/. This retention note does not change the historical findings or establish new acceptance.

@@ -1,0 +1,413 @@
+{
+  "records": [
+    {
+      "browser": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "cards": [
+        {
+          "top": 3283.3125,
+          "bottom": 3755.640625,
+          "buttonY": 3698.640625,
+          "buttonBottom": 3738.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 3283.3125,
+          "bottom": 3755.640625,
+          "buttonY": 3698.640625,
+          "buttonBottom": 3738.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/import-costs-and-timing"
+        },
+        {
+          "top": 3779.640625,
+          "bottom": 4251.96875,
+          "buttonY": 4194.96875,
+          "buttonBottom": 4234.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/financing-offer-questions"
+        },
+        {
+          "top": 3779.640625,
+          "bottom": 4251.96875,
+          "buttonY": 4194.96875,
+          "buttonBottom": 4234.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "cards": [
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/import-costs-and-timing"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/financing-offer-questions"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "cards": [
+        {
+          "top": 3283.3125,
+          "bottom": 3755.640625,
+          "buttonY": 3698.640625,
+          "buttonBottom": 3738.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 3283.3125,
+          "bottom": 3755.640625,
+          "buttonY": 3698.640625,
+          "buttonBottom": 3738.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/import-costs-and-timing"
+        },
+        {
+          "top": 3779.640625,
+          "bottom": 4251.96875,
+          "buttonY": 4194.96875,
+          "buttonBottom": 4234.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/financing-offer-questions"
+        },
+        {
+          "top": 3779.640625,
+          "bottom": 4251.96875,
+          "buttonY": 4194.96875,
+          "buttonBottom": 4234.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "cards": [
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/import-costs-and-timing"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/financing-offer-questions"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "cards": [
+        {
+          "top": 3293.3125,
+          "bottom": 3770.640625,
+          "buttonY": 3713.640625,
+          "buttonBottom": 3753.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 3293.3125,
+          "bottom": 3770.640625,
+          "buttonY": 3713.640625,
+          "buttonBottom": 3753.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/import-costs-and-timing"
+        },
+        {
+          "top": 3794.640625,
+          "bottom": 4271.96875,
+          "buttonY": 4214.96875,
+          "buttonBottom": 4254.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/financing-offer-questions"
+        },
+        {
+          "top": 3794.640625,
+          "bottom": 4271.96875,
+          "buttonY": 4214.96875,
+          "buttonBottom": 4254.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "cards": [
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/import-costs-and-timing"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/blog/financing-offer-questions"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2677.3125,
+          "buttonY": 2620.3125,
+          "buttonBottom": 2660.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/bg/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "cards": [
+        {
+          "top": 3293.3125,
+          "bottom": 3770.640625,
+          "buttonY": 3713.640625,
+          "buttonBottom": 3753.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 3293.3125,
+          "bottom": 3770.640625,
+          "buttonY": 3713.640625,
+          "buttonBottom": 3753.640625,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/import-costs-and-timing"
+        },
+        {
+          "top": 3794.640625,
+          "bottom": 4271.96875,
+          "buttonY": 4214.96875,
+          "buttonBottom": 4254.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/financing-offer-questions"
+        },
+        {
+          "top": 3794.640625,
+          "bottom": 4271.96875,
+          "buttonY": 4214.96875,
+          "buttonBottom": 4254.96875,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/guides/buying-used-car-bulgaria"
+        }
+      ]
+    },
+    {
+      "browser": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "cards": [
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/premium-used-car-checklist"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/import-costs-and-timing"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/blog/financing-offer-questions"
+        },
+        {
+          "top": 2272.65625,
+          "bottom": 2651.3125,
+          "buttonY": 2594.3125,
+          "buttonBottom": 2634.3125,
+          "buttonHeight": 40,
+          "buttonRadius": "8px",
+          "border": "1px",
+          "nestedLinks": 0,
+          "href": "/en/guides/buying-used-car-bulgaria"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

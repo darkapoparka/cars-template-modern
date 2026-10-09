@@ -1,0 +1,16 @@
+{
+  "cards": [
+    {
+      "height": 0,
+      "slot": "listing-financing-card",
+      "width": 0
+    },
+    {
+      "height": 0,
+      "slot": "listing-showroom-card",
+      "width": 0
+    }
+  ],
+  "overflow": false,
+  "viewport": 1440
+}

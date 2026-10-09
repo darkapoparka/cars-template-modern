@@ -59,9 +59,7 @@ export const generateMetadata = async ({
     locale,
     path: "/",
     robots: getPublicInventoryRobots(query),
-    title: isBg
-      ? `Автомобили от ${leadSite.name}`
-      : `Vehicles for sale at ${leadSite.name}`,
+    title: isBg ? "Автомобили" : "Vehicles for sale",
   });
 };
 
@@ -113,16 +111,13 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
               <DealerDesktopDiscoveryContent
                 articles={getPublicContentCards(normalizeSeoLocale(locale))
                   .slice(0, 4)
-                  .map((item, index) => ({
+                  .map((item) => ({
                     category: item.category,
                     href: getLocalizedPath(
                       normalizeSeoLocale(locale),
                       `/${item.type === "article" ? "blog" : "guides"}/${item.slug}`
                     ),
-                    image:
-                      index < 3
-                        ? `/desktop-boxcars/journal-${index + 1}.jpg`
-                        : item.image,
+                    image: item.desktopImage ?? item.image,
                     meta: item.meta,
                     shortTitle: getDesktopContentCardTitle(
                       item,

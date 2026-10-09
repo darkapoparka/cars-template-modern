@@ -1,0 +1,272 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 19888,
+    "totalPixels": 261690,
+    "capturedImageDimensions": [
+      305,
+      858
+    ],
+    "changedBounds": [
+      9,
+      88,
+      145,
+      728
+    ],
+    "meanAbsoluteChannelDifference": 0.3566599156763091,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 19854,
+    "totalPixels": 261690,
+    "capturedImageDimensions": [
+      305,
+      858
+    ],
+    "changedBounds": [
+      15,
+      479,
+      145,
+      728
+    ],
+    "meanAbsoluteChannelDifference": 0.3565261696409237,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "listing",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 261690,
+    "capturedImageDimensions": [
+      305,
+      858
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "contact",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 261690,
+    "capturedImageDimensions": [
+      305,
+      858
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "lease",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 19905,
+    "totalPixels": 261690,
+    "capturedImageDimensions": [
+      305,
+      858
+    ],
+    "changedBounds": [
+      15,
+      479,
+      145,
+      728
+    ],
+    "meanAbsoluteChannelDifference": 0.379800527341511,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 31138,
+    "totalPixels": 324375,
+    "capturedImageDimensions": [
+      375,
+      865
+    ],
+    "changedBounds": [
+      15,
+      527,
+      177,
+      816
+    ],
+    "meanAbsoluteChannelDifference": 0.46484572896596016,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 31138,
+    "totalPixels": 324375,
+    "capturedImageDimensions": [
+      375,
+      865
+    ],
+    "changedBounds": [
+      15,
+      527,
+      177,
+      816
+    ],
+    "meanAbsoluteChannelDifference": 0.46484572896596016,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "listing",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 324375,
+    "capturedImageDimensions": [
+      375,
+      865
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "contact",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 351000,
+    "capturedImageDimensions": [
+      390,
+      900
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "lease",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 31944,
+    "totalPixels": 324375,
+    "capturedImageDimensions": [
+      375,
+      865
+    ],
+    "changedBounds": [
+      15,
+      527,
+      177,
+      816
+    ],
+    "meanAbsoluteChannelDifference": 0.48494489402697494,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 894096,
+    "capturedImageDimensions": [
+      1008,
+      887
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 894096,
+    "capturedImageDimensions": [
+      1008,
+      887
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "listing",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 894096,
+    "capturedImageDimensions": [
+      1008,
+      887
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "contact",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 920700,
+    "capturedImageDimensions": [
+      1023,
+      900
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "route": "lease",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "totalPixels": 894096,
+    "capturedImageDimensions": [
+      1008,
+      887
+    ],
+    "changedBounds": null,
+    "meanAbsoluteChannelDifference": 0.0,
+    "measurementDifferences": [],
+    "horizontalOverflow": false,
+    "brokenImages": []
+  }
+]

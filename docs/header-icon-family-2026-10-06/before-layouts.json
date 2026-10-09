@@ -1,0 +1,89 @@
+[
+  {
+    "route": "services",
+    "bodyWidth": 375,
+    "icons": [
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 24,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "location",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-location-v1.png&w=3840&q=75"
+      },
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 323,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "phone",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=3840&q=75"
+      }
+    ],
+    "width": 390
+  },
+  {
+    "route": "sell",
+    "bodyWidth": 375,
+    "icons": [
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 24,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "info",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-info-v1.png&w=3840&q=75"
+      },
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 323,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "phone",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-phone-v4.png&w=3840&q=75"
+      }
+    ],
+    "width": 390
+  },
+  {
+    "route": "guides",
+    "bodyWidth": 375,
+    "icons": [
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 24,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "guides",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-guides-v1.png&w=3840&q=75"
+      },
+      {
+        "box": {
+          "height": 28,
+          "width": 28,
+          "x": 323,
+          "y": 20
+        },
+        "complete": true,
+        "kind": "filters",
+        "src": "/_next/image?url=%2Fimages%2Fservices%2Fheader-filters-v1.png&w=3840&q=75"
+      }
+    ],
+    "width": 390
+  }
+]

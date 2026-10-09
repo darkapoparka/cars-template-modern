@@ -1,0 +1,73 @@
+Browser tab: 1, Title: "За нас | Day & Night | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/about".
+1 AXWebArea За нас | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/about
+	2 container
+		3 link Description: Към основното съдържание, Value: 127.0.0.1:6482/bg/about#main-content
+		4 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		5 container Основни действия
+			6 link Description: Начало, Value: 127.0.0.1:6482/bg
+			7 link Description: Автомобили, Value: 127.0.0.1:6482/bg/cars
+			8 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			9 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			10 link Description: Контакти, Value: 127.0.0.1:6482/bg/contact
+		11 pop up button Запазени
+		12 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		13 container
+			14 container За Modern
+				15 container
+					16 heading За Modern, Value: 1, ID: desktop-page-title
+						17 text За Modern
+					18 link Description: Разгледайте автомобилите, Value: 127.0.0.1:6482/bg/cars
+					19 link Description: Нашите услуги, Value: 127.0.0.1:6482/bg/services
+			20 container Илюстративна галерия на автосалон
+				21 image Предаване на ключ за автомобил
+				22 image Консултант в автосалон
+				23 image Автомобили в светъл автосалон
+				24 image Ръкостискане при предаване на автомобил
+			25 heading Нека открием следващия ви автомобил., Value: 2
+				26 text Нека открием следващия ви автомобил.
+			27 text Започнете с автомобилите. Ние ще помогнем за следващата стъпка.
+			28 link Description: Разгледайте автомобилите, Value: 127.0.0.1:6482/bg/cars
+			29 link Description: Свържете се с нас, Value: 127.0.0.1:6482/bg/contact
+			30 container Няколко полезни отговора
+				31 heading Няколко полезни отговора, Value: 2, ID: about-faq-title
+					32 text Няколко полезни отговора
+				33 button (collapsed) Мога ли да запазя автомобили за по-късно?, Secondary Actions: Expand
+					34 text Мога ли да запазя автомобили за по-късно?
+				35 button (collapsed) Къде мога да разгледам детайлите?, Secondary Actions: Expand
+					36 text Къде мога да разгледам детайлите?
+				37 button (collapsed) Как да уговоря оглед?, Secondary Actions: Expand
+					38 text Как да уговоря оглед?
+		39 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		40 text Открийте следващия си автомобил.
+		41 container Открийте автомобил
+			42 heading Открийте автомобил, Value: 2
+				43 text Открийте автомобил
+			44 link Description: Всички автомобили, Value: 127.0.0.1:6482/bg/cars
+			45 link Description: Най-нови автомобили, Value: 127.0.0.1:6482/bg/cars?sort=newest
+			46 link Description: По цена, Value: 127.0.0.1:6482/bg/cars?sort=price_asc
+			47 link Description: Финансиране, Value: 127.0.0.1:6482/bg/lease
+			48 pop up button Запазени
+		49 container Разгледайте
+			50 heading Разгледайте, Value: 2
+				51 text Разгледайте
+			52 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			53 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			54 link Description: Съвети за покупка, Value: 127.0.0.1:6482/bg/blog
+			55 link Description: Ръководства, Value: 127.0.0.1:6482/bg/guides
+			56 link Description: Внос на автомобил, Value: 127.0.0.1:6482/bg/imports
+			57 link Description: Продайте автомобила си, Value: 127.0.0.1:6482/bg/sell
+		58 heading Посетете автосалона, Value: 2
+			59 text Посетете автосалона
+		60 container
+			61 text ул. „Атанас Манчев“ 18, Студентски град ,  София
+		62 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		63 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+		64 link Description: 0877 733 110, Value: tel:+359877733110
+		65 text ©  2026 Modern . Всички права запазени.
+		66 link Description: Поверителност, Value: 127.0.0.1:6482/bg/legal/privacy
+		67 link Description: Условия, Value: 127.0.0.1:6482/bg/legal/terms
+		68 link Description: Държава и език, Value: 127.0.0.1:6482/bg/locale-settings?returnTo=%2Fbg%2Fabout
+		69 text Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.
+		70 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea За нас | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/about

@@ -1,0 +1,212 @@
+[
+  {
+    "name": "bg-home-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 31,
+    "maximumChannelDifference": 13
+  },
+  {
+    "name": "bg-cars-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 8,
+    "maximumChannelDifference": 5
+  },
+  {
+    "name": "bg-lease-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 42,
+    "maximumChannelDifference": 9
+  },
+  {
+    "name": "bg-about-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-contact-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 36,
+    "maximumChannelDifference": 55
+  },
+  {
+    "name": "bg-home-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-cars-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-lease-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-about-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-contact-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-home-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 31368,
+    "maximumChannelDifference": 36
+  },
+  {
+    "name": "bg-cars-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 31314,
+    "maximumChannelDifference": 36
+  },
+  {
+    "name": "bg-lease-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 46,
+    "maximumChannelDifference": 9
+  },
+  {
+    "name": "bg-about-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "bg-contact-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-home-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-cars-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-lease-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-about-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-contact-320",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-home-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 13,
+    "maximumChannelDifference": 8
+  },
+  {
+    "name": "en-cars-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-lease-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 90,
+    "maximumChannelDifference": 14
+  },
+  {
+    "name": "en-about-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-contact-390",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-home-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 31827,
+    "maximumChannelDifference": 36
+  },
+  {
+    "name": "en-cars-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 31826,
+    "maximumChannelDifference": 36
+  },
+  {
+    "name": "en-lease-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 39,
+    "maximumChannelDifference": 9
+  },
+  {
+    "name": "en-about-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  },
+  {
+    "name": "en-contact-1023",
+    "dimensionsMatch": true,
+    "pageHeightMatch": true,
+    "changedPixels": 0,
+    "maximumChannelDifference": 0
+  }
+]

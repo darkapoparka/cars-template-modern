@@ -48,13 +48,27 @@ const publicDesktopVehicleArtworkSchema = z
     path: ["baseline"],
   });
 
+const publicDesktopVehiclePairArtworkSchema = z.object({
+  left: publicDesktopVehicleArtworkSchema,
+  right: publicDesktopVehicleArtworkSchema,
+});
+
 export const publicArtworkSchema = z.object({
   heroScene: publicAssetPathSchema.optional(),
   desktopHeroScene: publicAssetPathSchema.optional(),
-  desktopDiscoveryVehicles: z
+  desktopPageHeroes: z
     .object({
-      left: publicDesktopVehicleArtworkSchema,
-      right: publicDesktopVehicleArtworkSchema,
+      services: publicAssetPathSchema.optional(),
+      about: publicAssetPathSchema.optional(),
+      contact: publicAssetPathSchema.optional(),
+    })
+    .optional(),
+  desktopDiscoveryVehicles: publicDesktopVehiclePairArtworkSchema.optional(),
+  desktopInventoryVehicles: publicDesktopVehiclePairArtworkSchema.optional(),
+  desktopPageVehicles: z
+    .object({
+      guides: publicDesktopVehiclePairArtworkSchema.optional(),
+      services: publicDesktopVehiclePairArtworkSchema.optional(),
     })
     .optional(),
   desktopPageBanner: z

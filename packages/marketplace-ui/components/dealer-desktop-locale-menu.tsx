@@ -2,6 +2,7 @@
 
 import { MoreHorizontal } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { LanguageFlag } from "./language-flag";
 import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
 
 export function DealerDesktopLocaleMenu({
@@ -75,10 +76,11 @@ export function DealerDesktopLocaleMenu({
               trigger.current?.focus({ preventScroll: true });
               setOpen(false);
             }}
-            className="flex min-h-11 items-center rounded-lg px-3 font-medium text-sm hover:bg-control focus-visible:outline-2 focus-visible:outline-ring"
+            className="flex min-h-11 items-center gap-2 rounded-lg px-3 font-medium text-sm hover:bg-control focus-visible:outline-2 focus-visible:outline-ring"
             label={localeLabel}
             locale={locale}
           >
+            <LanguageFlag locale={isBg ? "bg" : "en"} />
             {localeLabel}
           </MarketplaceLocaleSwitchLink>
         </fieldset>

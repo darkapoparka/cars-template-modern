@@ -1,0 +1,44 @@
+[
+  {
+    "route": "cars",
+    "width": 390,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  },
+  {
+    "route": "home",
+    "width": 320,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "geometryEqual": true,
+    "overflow": false,
+    "sourceFallback": true
+  }
+]

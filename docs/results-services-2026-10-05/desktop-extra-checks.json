@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1024,
+    "route": "cars",
+    "overflow": false
+  },
+  {
+    "width": 1024,
+    "route": "services",
+    "overflow": false
+  },
+  {
+    "width": 1280,
+    "route": "cars",
+    "overflow": false
+  },
+  {
+    "width": 1280,
+    "route": "services",
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "route": "cars",
+    "overflow": false
+  },
+  {
+    "width": 1920,
+    "route": "services",
+    "overflow": false
+  }
+]

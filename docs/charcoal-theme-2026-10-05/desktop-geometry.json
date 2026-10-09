@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/bg",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/cars",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/about",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/contact",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/imports",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/sell",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/lease",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  },
+  {
+    "path": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "heightDelta": 0,
+    "headingGeometryMatches": true
+  }
+]

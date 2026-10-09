@@ -1,0 +1,18 @@
+{
+  "viewport": {
+    "width": 1024,
+    "height": 600
+  },
+  "viewMenu": {
+    "allChoicesVisible": true,
+    "y": 330,
+    "height": 267,
+    "bottom": 597
+  },
+  "listGridSidebarQuickSwitches": "passed",
+  "filterEscapeFocus": {
+    "aria": null,
+    "dialogOpen": false,
+    "focused": "Филтри"
+  }
+}

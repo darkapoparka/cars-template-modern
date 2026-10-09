@@ -1,0 +1,158 @@
+Browser tab: 1, Title: "2020 BMW X5 M50d | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020".
+1 AXWebArea 2020 BMW X5 M50d | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020
+	2 container
+		149 container
+			150 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+			151 container Основни действия
+				152 link Description: Начало, Value: 127.0.0.1:6482/bg
+				153 link Description: Автомобили, Value: 127.0.0.1:6482/bg/cars
+				154 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+				155 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+				156 link Description: Контакти, Value: 127.0.0.1:6482/bg/contact
+			157 pop up button Запазени
+			158 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		159 link Description: Назад към търсенето, Value: 127.0.0.1:6482/bg/cars
+		160 container
+			161 heading 2020 BMW X5 M50d, Value: 1
+				162 text 2020 BMW X5 M50d
+			163 text M50d · SUV
+			164 checkbox Description: Запази 2020 BMW X5, Value: 0
+			165 button Печат / PDF
+			166 button Сподели обявата
+		167 container 2020 BMW X5 M50d снимки
+			168 container
+				169 pop up button (collapsed) Description: Отвори снимка 1 от 1 на цял екран, Secondary Actions: Expand
+					170 image Черен BMW X5 SUV
+					171 text Отвори галерията
+				172 text Препоръчана
+		173 container
+			174 container Данни за автомобила
+				175 heading Данни за автомобила, Value: 2
+					176 text Данни за автомобила
+				177 definition list
+					178 container Година
+						179 text Година
+					180 text 2020
+					181 container Пробег
+						182 text Пробег
+					183 text 167 000 км
+					184 container Гориво
+						185 text Гориво
+					186 text Дизел
+					187 container Купе
+						188 text Купе
+					189 text SUV
+					190 container Скорости
+						191 text Скорости
+					192 text Автоматик
+					193 container Мощност
+						194 text Мощност
+					195 text 400 к.с.
+			196 container Описание
+				197 heading Описание, Value: 2
+					198 text Описание
+				199 text Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.
+			200 container Характеристики
+				201 heading Характеристики, Value: 2
+					202 text Характеристики
+				203 definition list
+					204 container Марка
+						205 text Марка
+					206 text BMW
+					207 container Модел
+						208 text Модел
+					209 text X5
+					210 container Версия
+						211 text Версия
+					212 text M50d
+					213 container Цвят
+						214 text Цвят
+					215 text Не е посочен
+			216 container Екстри
+				217 heading Екстри, Value: 2
+					218 text Екстри
+				219 content list
+					220 text 360° камери
+					221 text Панорамен покрив
+					222 text Head-up display
+					223 text Обдухване на седалките
+			224 container Подобни автомобили
+				225 heading Подобни автомобили, Value: 2, ID: similar-heading
+					226 text Подобни автомобили
+				227 link Description: Виж всички, Value: 127.0.0.1:6482/bg/cars
+				228 container
+					229 link Description: Виж 2021 BMW M4 Competition, Value: 127.0.0.1:6482/bg/listing/bmw-m4-competition-sofia-2021
+					230 text Препоръчана
+					231 checkbox Description: Запази 2021 BMW M4, Value: 0
+					232 link Description: BMW M4 Основни характеристики 128 496 лв. от 1960 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-m4-competition-sofia-2021
+				233 container
+					234 link Description: Виж 2024 BMW 750e xDrive M Sport, Value: 127.0.0.1:6482/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024
+					235 checkbox Description: Запази 2024 BMW 7 Series, Value: 0
+					236 link Description: BMW 7 Series Основни характеристики 175 436 лв. от 2680 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024
+				237 container
+					238 link Description: Виж 2023 BMW 430i xDrive Gran Coupe, Value: 127.0.0.1:6482/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023
+					239 checkbox Description: Запази 2023 BMW 4 Series, Value: 0
+					240 link Description: BMW 4 Series Основни характеристики 81 556 лв. от 1245 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023
+		241 container
+			242 text Покупка
+			243 text 89 379 лв.
+			244 container
+				245 text Фиксирана цена  · ~1360 лв./мес.
+			246 link Description: Обадете се, Value: tel:+359877733110
+			247 link Description: Виж финансиране, Value: 127.0.0.1:6482/bg/lease
+			248 container Информация за дилъра
+				249 text MODERN
+				250 link Description: София ул. „Атанас Манчев“ 18, Студентски град, България, Value: google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F
+				251 definition list
+					252 container Реф. номер
+						253 text Реф. номер
+					254 text AM-1001
+					255 container Публикуван
+						256 text Публикуван
+					257 text 28.07.2026 г.
+				258 container Карта на шоурума
+					259 AXWebArea google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s
+						260 link Description: Maps (opens in new tab), Value: maps.google.com/maps?ll=42.649331,23.344329&z=14&t=m&hl=en&gl=US&mapclient=embed
+						261 container
+							262 button Keyboard shortcuts
+							263 container Map
+							264 image Google
+							265 container
+								266 button Keyboard shortcuts
+								267 text Map data ©2026
+								268 link Description: Terms (opens in new tab), Value: google.com/intl/en_US/help/terms_maps.html
+								269 link Description: Report a map error (opens in new tab), Help: Report errors in the road map or imagery to Google, Value: google.com/maps/@42.649331,23.3443286,14z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+		270 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		271 text Открийте следващия си автомобил.
+		272 container Открийте автомобил
+			273 heading Открийте автомобил, Value: 2
+				274 text Открийте автомобил
+			275 link Description: Всички автомобили, Value: 127.0.0.1:6482/bg/cars
+			276 link Description: Най-нови автомобили, Value: 127.0.0.1:6482/bg/cars?sort=newest
+			277 link Description: По цена, Value: 127.0.0.1:6482/bg/cars?sort=price_asc
+			278 link Description: Финансиране, Value: 127.0.0.1:6482/bg/lease
+			279 pop up button Запазени
+		280 container Разгледайте
+			281 heading Разгледайте, Value: 2
+				282 text Разгледайте
+			283 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			284 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			285 link Description: Съвети за покупка, Value: 127.0.0.1:6482/bg/blog
+			286 link Description: Ръководства, Value: 127.0.0.1:6482/bg/guides
+			287 link Description: Внос на автомобил, Value: 127.0.0.1:6482/bg/imports
+			288 link Description: Продайте автомобила си, Value: 127.0.0.1:6482/bg/sell
+		289 heading Посетете автосалона, Value: 2
+			290 text Посетете автосалона
+		291 container
+			292 text ул. „Атанас Манчев“ 18, Студентски град ,  София
+		293 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		294 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+		295 link Description: 0877 733 110, Value: tel:+359877733110
+		296 text ©  2026 Modern . Всички права запазени.
+		297 link Description: Поверителност, Value: 127.0.0.1:6482/bg/legal/privacy
+		298 link Description: Условия, Value: 127.0.0.1:6482/bg/legal/terms
+		299 link Description: Държава и език, Value: 127.0.0.1:6482/bg/locale-settings?returnTo=%2Fbg%2Flisting%2Fbmw-x5-m50d-sofia-2020
+		300 text Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.
+		148 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea 2020 BMW X5 M50d | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020

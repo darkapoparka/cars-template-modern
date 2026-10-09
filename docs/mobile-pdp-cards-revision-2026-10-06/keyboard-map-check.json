@@ -1,0 +1,18 @@
+{
+  "financeFocusCheck": {
+    "outlineColor": "rgb(255, 255, 255)",
+    "outlineOffset": "-4px",
+    "outlineWidth": "2px",
+    "slot": "listing-financing-card"
+  },
+  "mapFocusCheck": {
+    "outlineColor": "rgb(255, 255, 255)",
+    "tag": "SUMMARY"
+  },
+  "mapOpenCheck": {
+    "iframeHeight": 320,
+    "open": true,
+    "overflow": false
+  },
+  "closed": true
+}

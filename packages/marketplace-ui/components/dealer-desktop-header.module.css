@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
   }
-  .segments a {
+  .segments :is(a, .moreTrigger) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -54,20 +54,47 @@
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 6);
-    color: var(--foreground);
+    color: var(--muted-foreground);
     white-space: nowrap;
-    transition:
-      color var(--duration-interaction),
-      background-color var(--duration-interaction);
+    transition: color var(--duration-interaction);
   }
-  .segments a:hover,
-  .segments a[aria-current="page"] {
+  .segments :is(a, .moreTrigger):hover,
+  .segments a[aria-current="page"],
+  .moreTrigger[data-current="true"] {
+    color: var(--foreground);
+  }
+  .moreTrigger {
+    gap: calc(var(--spacing) * 1.5);
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+  .moreMenu {
+    min-width: calc(var(--spacing) * 40);
+    padding: calc(var(--spacing) * 1.5);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .moreItem {
+    gap: calc(var(--spacing) * 3);
+    min-height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 3);
+    font-size: var(--text-desktop-control);
+    color: var(--foreground);
+    cursor: pointer;
+    border-radius: calc(var(--spacing) * 1.5);
+  }
+  .moreItem[data-highlighted],
+  .moreItem[aria-current="page"] {
     color: var(--brand-text);
+    background: var(--control);
   }
-  .segments a[aria-current="page"] {
-    text-decoration: underline;
-    text-decoration-thickness: calc(var(--spacing) * 0.5);
-    text-underline-offset: calc(var(--spacing) * 2);
+  .moreTrigger:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
   .contact {
     display: grid;
@@ -95,7 +122,7 @@
     cursor: pointer;
     background: var(--control);
     border: 0;
-    border-radius: calc(var(--spacing) * 2);
+    border-radius: var(--radius-pill);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction);
@@ -109,8 +136,12 @@
     background: var(--brand);
   }
   .contact .primaryAction:hover {
-    color: var(--brand-foreground);
+    color: var(--brand-hover-foreground);
     background: var(--lead-site-accent-hover);
+  }
+  .contact .primaryAction:active {
+    color: var(--brand-active-foreground);
+    background: var(--lead-site-accent-active);
   }
   .header a:focus-visible,
   .contact .action:focus-visible {
@@ -129,7 +160,7 @@
   .segments {
     gap: calc(var(--spacing) * 6);
   }
-  .segments a {
+  .segments :is(a, .moreTrigger) {
     padding-inline: 0;
   }
   .contact {

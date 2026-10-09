@@ -1,0 +1,92 @@
+[
+  {
+    "headers": [
+      {
+        "background": "rgb(48, 52, 59)",
+        "box": {
+          "height": 140,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "brand": "#30343b",
+        "slot": "mobile-service-hero"
+      }
+    ],
+    "height": 844,
+    "importTrigger": [],
+    "logoSources": [
+      "/images/brand/modern-logo-v2.webp"
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg/sell",
+    "width": 390
+  },
+  {
+    "headers": [
+      {
+        "background": "rgb(48, 52, 59)",
+        "box": {
+          "height": 140,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "brand": "#30343b",
+        "slot": "mobile-service-hero"
+      }
+    ],
+    "height": 844,
+    "importTrigger": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "icons": [
+          "size-[18px] shrink-0 text-zinc-500",
+          "size-[18px] shrink-0 text-zinc-500"
+        ],
+        "text": "Поставете линк към обявата"
+      }
+    ],
+    "logoSources": [
+      "/images/brand/modern-logo-v2.webp"
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "width": 390
+  },
+  {
+    "headers": [
+      {
+        "background": "lab(2.51107 0.242703 -0.886115)",
+        "box": {
+          "height": 140,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "brand": "#30343b",
+        "slot": null
+      }
+    ],
+    "height": 844,
+    "importTrigger": [],
+    "logoSources": [
+      "/images/brand/modern-logo-v2.webp"
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 390
+  },
+  {
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 1280,
+    "height": 720,
+    "scrollWidth": 1265,
+    "headers": [],
+    "importTrigger": [],
+    "logoSources": [
+      "/images/brand/modern-logo-v2.webp",
+      "/images/brand/modern-logo-v2.webp"
+    ]
+  }
+]

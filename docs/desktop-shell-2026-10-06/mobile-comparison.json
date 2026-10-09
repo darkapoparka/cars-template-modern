@@ -1,0 +1,83 @@
+[
+  {
+    "name": "home",
+    "width": 320,
+    "sameSize": true,
+    "changedPixels": 21273,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "cars",
+    "width": 320,
+    "sameSize": true,
+    "changedPixels": 21273,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "pdp",
+    "width": 320,
+    "sameSize": true,
+    "changedPixels": 7255,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "sameSize": true,
+    "changedPixels": 34756,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "cars",
+    "width": 390,
+    "sameSize": true,
+    "changedPixels": 34972,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "pdp",
+    "width": 390,
+    "sameSize": true,
+    "changedPixels": 134563,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "home",
+    "width": 1023,
+    "sameSize": true,
+    "changedPixels": 69362,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "cars",
+    "width": 1023,
+    "sameSize": true,
+    "changedPixels": 70087,
+    "matchingGeometry": true,
+    "matchingPageSize": true,
+    "matchingToken": true
+  },
+  {
+    "name": "pdp",
+    "width": 1023,
+    "sameSize": true,
+    "changedPixels": 0,
+    "matchingGeometry": false,
+    "matchingPageSize": false,
+    "matchingToken": true
+  }
+]

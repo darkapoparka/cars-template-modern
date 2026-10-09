@@ -1,0 +1,880 @@
+[
+  {
+    "brokenImages": [],
+    "clientWidth": 1265,
+    "details": [
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 201.9375,
+          "y": 805.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 503.1875,
+          "y": 805.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 804.4375,
+          "y": 805.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1105.6875,
+          "y": 805.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 201.9375,
+          "y": 1206.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 503.1875,
+          "y": 1206.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 804.4375,
+          "y": 1206.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1105.6875,
+          "y": 1206.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 201.9375,
+          "y": 1639.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 503.1875,
+          "y": 1639.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 804.4375,
+          "y": 1639.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1105.6875,
+          "y": 1639.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      }
+    ],
+    "headings": [
+      {
+        "box": {
+          "height": 48,
+          "width": 900,
+          "x": 182.5,
+          "y": 154
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "48px",
+        "size": "40px",
+        "text": "Автомобили за продажба",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 378.5,
+          "y": 1837.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Открийте автомобил",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 668.59375,
+          "y": 1837.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Разгледайте",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 266.3125,
+          "x": 958.6875,
+          "y": 1837.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Посетете автосалона",
+        "weight": "500"
+      }
+    ],
+    "height": 900,
+    "scrollWidth": 1265,
+    "view": [
+      {
+        "box": {
+          "height": 48,
+          "width": 104.8125,
+          "x": 1136.1875,
+          "y": 828
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "21px",
+        "size": "14px",
+        "text": "Изглед",
+        "weight": "500"
+      }
+    ],
+    "width": 1280,
+    "label": "cars-bg-1280-viewport",
+    "url": "http://127.0.0.1:6482/bg/cars"
+  },
+  {
+    "brokenImages": [],
+    "clientWidth": 1905,
+    "details": [
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 488.1875,
+          "y": 828.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 823.1875,
+          "y": 828.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1158.1875,
+          "y": 828.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1493.1875,
+          "y": 828.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 488.1875,
+          "y": 1251.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 823.1875,
+          "y": 1251.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1158.1875,
+          "y": 1251.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1493.1875,
+          "y": 1251.8125
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 488.1875,
+          "y": 1675.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 823.1875,
+          "y": 1675.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1158.1875,
+          "y": 1675.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1493.1875,
+          "y": 1675.46875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      }
+    ],
+    "headings": [
+      {
+        "box": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 154
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "48px",
+        "size": "40px",
+        "text": "Автомобили за продажба",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 273.5,
+          "x": 668.671875,
+          "y": 1872.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Открийте автомобил",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 273.484375,
+          "x": 990.171875,
+          "y": 1872.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Разгледайте",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 300.84375,
+          "x": 1311.65625,
+          "y": 1872.96875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Посетете автосалона",
+        "weight": "500"
+      }
+    ],
+    "height": 1080,
+    "scrollWidth": 1905,
+    "view": [
+      {
+        "box": {
+          "height": 48,
+          "width": 104.8125,
+          "x": 1776.1875,
+          "y": 1008
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "21px",
+        "size": "14px",
+        "text": "Изглед",
+        "weight": "500"
+      }
+    ],
+    "width": 1920,
+    "label": "cars-bg-1920-viewport",
+    "url": "http://127.0.0.1:6482/bg/cars"
+  },
+  {
+    "brokenImages": [],
+    "clientWidth": 1905,
+    "details": [
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 485.1875,
+          "y": 944.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 821.1875,
+          "y": 944.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1157.1875,
+          "y": 944.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 1493.1875,
+          "y": 944.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      }
+    ],
+    "headings": [
+      {
+        "box": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 154
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "48px",
+        "size": "40px",
+        "text": "Намерете своя автомобил",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 1320,
+          "x": 292.5,
+          "y": 478
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "36px",
+        "size": "28px",
+        "text": "Разгледайте автомобилите",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 44,
+          "width": 1320,
+          "x": 292.5,
+          "y": 1191.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "44px",
+        "size": "36px",
+        "text": "По-лесен път към следващия ви автомобил",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 119.59375,
+          "width": 760,
+          "x": 572.5,
+          "y": 1929.65625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "59.8px",
+        "size": "52px",
+        "text": "Следващият ви автомобил. По-лесно.",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 44,
+          "width": 1320,
+          "x": 292.5,
+          "y": 2395.25
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "44px",
+        "size": "36px",
+        "text": "Съвети за пътя напред",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 273.5,
+          "x": 668.671875,
+          "y": 3080.75
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Открийте автомобил",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 273.484375,
+          "x": 990.171875,
+          "y": 3080.75
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Разгледайте",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 300.84375,
+          "x": 1311.65625,
+          "y": 3080.75
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Посетете автосалона",
+        "weight": "500"
+      }
+    ],
+    "height": 1080,
+    "scrollWidth": 1905,
+    "view": [],
+    "width": 1920,
+    "label": "home-bg-1920-viewport",
+    "url": "http://127.0.0.1:6482/bg"
+  },
+  {
+    "brokenImages": [],
+    "clientWidth": 1009,
+    "details": [
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 217.015625,
+          "y": 815.71875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 533.34375,
+          "y": 815.71875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 849.6875,
+          "y": 815.71875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 217.015625,
+          "y": 1226.9375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 533.34375,
+          "y": 1226.9375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 849.6875,
+          "y": 1226.9375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 217.015625,
+          "y": 1638.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 533.34375,
+          "y": 1638.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 849.6875,
+          "y": 1638.15625
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 217.015625,
+          "y": 2049.375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 533.34375,
+          "y": 2049.375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 36,
+          "width": 102.3125,
+          "x": 849.6875,
+          "y": 2049.375
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "19.5px",
+        "size": "13px",
+        "text": "Детайли",
+        "weight": "500"
+      }
+    ],
+    "headings": [
+      {
+        "box": {
+          "height": 48,
+          "width": 865,
+          "x": 72,
+          "y": 154
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "48px",
+        "size": "40px",
+        "text": "Автомобили за продажба",
+        "weight": "700"
+      },
+      {
+        "box": {
+          "height": 52,
+          "width": 182.5625,
+          "x": 307.0625,
+          "y": 2246.875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Открийте автомобил",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 182.546875,
+          "x": 537.625,
+          "y": 2246.875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Разгледайте",
+        "weight": "500"
+      },
+      {
+        "box": {
+          "height": 26,
+          "width": 200.828125,
+          "x": 768.171875,
+          "y": 2246.875
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "26px",
+        "size": "18px",
+        "text": "Посетете автосалона",
+        "weight": "500"
+      }
+    ],
+    "height": 900,
+    "scrollWidth": 1009,
+    "view": [
+      {
+        "box": {
+          "height": 48,
+          "width": 104.8125,
+          "x": 880.1875,
+          "y": 828
+        },
+        "font": "desktop, Inter, \"Inter Fallback\", Arial, sans-serif",
+        "lineHeight": "21px",
+        "size": "14px",
+        "text": "Изглед",
+        "weight": "500"
+      }
+    ],
+    "width": 1024,
+    "label": "cars-bg-1024-resumed-viewport",
+    "url": "http://127.0.0.1:6482/bg/cars"
+  }
+]

@@ -1,0 +1,260 @@
+[
+  {
+    "cards": [
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Vehicles in stock",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Import on request",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "In-house leasing",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Sell your car",
+        "titleClipped": false
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Vehicles in stock",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Import on request",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "In-house leasing",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Sell your car",
+        "titleClipped": false
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "columns": "255px 255px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 243,
+        "title": "Vehicles in stock",
+        "titleClipped": false
+      },
+      {
+        "columns": "255px 255px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 243,
+        "title": "Import on request",
+        "titleClipped": false
+      },
+      {
+        "columns": "255px 255px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 243,
+        "title": "In-house leasing",
+        "titleClipped": false
+      },
+      {
+        "columns": "255px 255px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 243,
+        "title": "Sell your car",
+        "titleClipped": false
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "cards": [
+      {
+        "columns": "310px",
+        "descriptionDisplay": "block",
+        "height": 394,
+        "imageComplete": true,
+        "imageWidth": 278,
+        "title": "Vehicles in stock",
+        "titleClipped": false
+      },
+      {
+        "columns": "310px",
+        "descriptionDisplay": "block",
+        "height": 394,
+        "imageComplete": true,
+        "imageWidth": 278,
+        "title": "Import on request",
+        "titleClipped": false
+      },
+      {
+        "columns": "310px",
+        "descriptionDisplay": "block",
+        "height": 394,
+        "imageComplete": true,
+        "imageWidth": 278,
+        "title": "In-house leasing",
+        "titleClipped": false
+      },
+      {
+        "columns": "310px",
+        "descriptionDisplay": "block",
+        "height": 394,
+        "imageComplete": true,
+        "imageWidth": 278,
+        "title": "Sell your car",
+        "titleClipped": false
+      }
+    ],
+    "locale": "en",
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "cards": [
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Автомобили в наличност",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Внос по заявка",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Собствен лизинг",
+        "titleClipped": false
+      },
+      {
+        "columns": "170.5px 170.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 158.5,
+        "title": "Продайте автомобила си",
+        "titleClipped": false
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Автомобили в наличност",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Внос по заявка",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Собствен лизинг",
+        "titleClipped": false
+      },
+      {
+        "columns": "135.5px 135.5px",
+        "descriptionDisplay": "none",
+        "height": 130,
+        "imageComplete": true,
+        "imageWidth": 123.5,
+        "title": "Продайте автомобила си",
+        "titleClipped": false
+      }
+    ],
+    "locale": "bg",
+    "overflow": false,
+    "width": 320
+  }
+]

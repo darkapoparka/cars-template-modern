@@ -1,0 +1,75 @@
+[
+  {
+    "name": "home",
+    "width": 320,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "cars",
+    "width": 320,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "pdp",
+    "width": 320,
+    "samePageSize": false,
+    "sameHeadings": false,
+    "sameCardGeometry": false,
+    "horizontalOverflow": false,
+    "captureVariation": "Content below the gallery is uniformly 11.25px higher; heading and card sizes remain unchanged. No mobile source rule was changed in this task."
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "cars",
+    "width": 390,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "pdp",
+    "width": 390,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "home",
+    "width": 1023,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "cars",
+    "width": 1023,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  },
+  {
+    "name": "pdp",
+    "width": 1023,
+    "samePageSize": true,
+    "sameHeadings": true,
+    "sameCardGeometry": true,
+    "horizontalOverflow": false
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "icons": [
+      {
+        "loaded": true,
+        "natural": [
+          136,
+          136
+        ],
+        "size": [
+          34,
+          34
+        ],
+        "src": "/images/services/header-silver-bike-v2.webp"
+      }
+    ],
+    "overflow": false,
+    "title": "Открийте мотоциклет"
+  },
+  {
+    "icons": [
+      {
+        "loaded": true,
+        "natural": [
+          136,
+          136
+        ],
+        "size": [
+          34,
+          34
+        ],
+        "src": "/images/services/header-silver-truck-v2.webp"
+      }
+    ],
+    "overflow": false,
+    "title": "Открийте камион"
+  },
+  {
+    "icons": [
+      {
+        "loaded": true,
+        "natural": [
+          136,
+          136
+        ],
+        "size": [
+          34,
+          34
+        ],
+        "src": "/images/services/header-silver-van-v2.webp"
+      }
+    ],
+    "overflow": false,
+    "title": "Открийте бус"
+  },
+  {
+    "icons": [
+      {
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "size": [
+          28,
+          28
+        ],
+        "src": "/images/services/header-silver-car-v2.webp"
+      }
+    ],
+    "overflow": false,
+    "title": "Открийте автомобил"
+  }
+]

@@ -1,0 +1,1564 @@
+[
+  {
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 308.25,
+              "y": 874.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 40,
+          "y": 518
+        },
+        "text": "Препоръчана\nBMW X5\n2020\nM50d\nSUV\n167 000 км\nДизел\nАвтоматик\n\n89 379 лв.\n\nот 1360 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 649.5,
+              "y": 874.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 381.25,
+          "y": 518
+        },
+        "text": "Препоръчана\nMercedes-Benz GLS\n2021\n400d 4MATIC AMG\nSUV\n166 000 км\nДизел\nАвтоматик\n\n122 629 лв.\n\nот 1870 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 990.75,
+              "y": 874.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 722.5,
+          "y": 518
+        },
+        "text": "Препоръчана\nBMW M4\n2021\nCompetition\nКупе\n165 000 км\nБензин\nАвтоматик\n\n128 496 лв.\n\nот 1960 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 1332,
+              "y": 874.828125
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 1063.75,
+          "y": 518
+        },
+        "text": "BMW 7 Series\n2024\n750e xDrive M Sport\nСедан\n40 000 км\nPHEV\nАвтоматик\n\n175 436 лв.\n\nот 2680 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 308.25,
+              "y": 1313.65625
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 40,
+          "y": 956.828125
+        },
+        "text": "Mercedes-Benz E-Class\n2021\nE 63 S AMG\nСедан\n96 000 км\nБензин\nАвтоматик\n\n165 657 лв.\n\nот 2530 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 649.5,
+              "y": 1313.65625
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 381.25,
+          "y": 956.828125
+        },
+        "text": "Mercedes-Benz CLS\n2020\n400d 4MATIC\nКупе\n171 000 км\nДизел\nАвтоматик\n\n73 733 лв.\n\nПо договаряне"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 990.75,
+              "y": 1313.65625
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 722.5,
+          "y": 956.828125
+        },
+        "text": "Audi Q8\n2021\n50 TDI quattro S line\nSUV\n163 000 км\nДизел\nАвтоматик\n\n99 159 лв.\n\nот 1515 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 1332,
+              "y": 1313.65625
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 1063.75,
+          "y": 956.828125
+        },
+        "text": "Mercedes-Benz GLE\n2021\n400d Coupe\nSUV\n166 000 км\nДизел\nАвтоматик\n\n124 584 лв.\n\nот 1900 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 308.25,
+              "y": 1752.484375
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 40,
+          "y": 1395.65625
+        },
+        "text": "Mercedes-Benz S-Class\n2019\nS 350d Long AMG\nСедан\n145 000 км\nДизел\nАвтоматик\n\n83 512 лв.\n\nот 1275 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 649.5,
+              "y": 1752.484375
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 381.25,
+          "y": 1395.65625
+        },
+        "text": "Land Rover Range Rover Sport\n2021\nRange Rover Sport SVR\nSUV\n155 000 км\nБензин\nАвтоматик\n\n106 982 лв.\n\nПо договаряне"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 990.75,
+              "y": 1752.484375
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 722.5,
+          "y": 1395.65625
+        },
+        "text": "BMW 4 Series\n2023\n430i xDrive Gran Coupe\nКупе\n35 000 км\nБензин\nАвтоматик\n\n81 556 лв.\n\nот 1245 лв./мес."
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+            "rect": {
+              "height": 36,
+              "width": 36,
+              "x": 1332,
+              "y": 1752.984375
+            }
+          }
+        ],
+        "rect": {
+          "height": 418.828125,
+          "width": 321.25,
+          "x": 1063.75,
+          "y": 1395.65625
+        },
+        "text": "Внос\nBMW X5\n2022\nxDrive40d\nSUV\n28 531 км\nДизел\nАвтоматик\n\n112 456 лв."
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 262.5,
+          "y": 168
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.296875,
+          "x": 423.15625,
+          "y": 1950.484375
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 279.3125,
+          "x": 750.453125,
+          "y": 1950.484375
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "rect": {
+          "height": 26,
+          "width": 307.21875,
+          "x": 1077.765625,
+          "y": 1950.484375
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "page": [
+      1425,
+      2373
+    ],
+    "width": 1440
+  },
+  {
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 391
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 546
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 701
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 856
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1011
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1166
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1321
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1476
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1631
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1786
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 143.171875,
+          "width": 273,
+          "x": 16,
+          "y": 1941
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 28,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 268
+        },
+        "text": "X5 M50d"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 423
+        },
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 578
+        },
+        "text": "M4 Competition"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 733
+        },
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 888
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1043
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1198
+        },
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1353
+        },
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1508
+        },
+        "text": "S 350d Long AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1663
+        },
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1818
+        },
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1981.078125
+        },
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "page": [
+      305,
+      2176
+    ],
+    "width": 320
+  },
+  {
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 411.3125
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 586.625
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 761.9375
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 937.25
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1112.5625
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1287.875
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1463.1875
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1638.5
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1813.8125
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1989.125
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 2164.4375
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 28,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 278.15625
+        },
+        "text": "X5 M50d"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 453.46875
+        },
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 628.78125
+        },
+        "text": "M4 Competition"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 804.09375
+        },
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 979.40625
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1154.71875
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1330.03125
+        },
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1505.34375
+        },
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1680.65625
+        },
+        "text": "S 350d Long AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1855.96875
+        },
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2031.28125
+        },
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2216.59375
+        },
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "page": [
+      375,
+      2424
+    ],
+    "width": 390
+  },
+  {
+    "cards": [
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 459.96875
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 459.96875
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 683.9375
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 683.9375
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 907.90625
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 907.90625
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1131.875
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1131.875
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1355.84375
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": [
+          {
+            "color": "rgb(35, 35, 35)",
+            "fill": "rgba(0, 0, 0, 0)",
+            "hidden": "true",
+            "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+            "rect": {
+              "height": 0,
+              "width": 0,
+              "x": 0,
+              "y": 0
+            }
+          }
+        ],
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1355.84375
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "headings": [
+      {
+        "rect": {
+          "height": 28,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 302.484375
+        },
+        "text": "X5 M50d"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 302.484375
+        },
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 526.453125
+        },
+        "text": "M4 Competition"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 526.453125
+        },
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 750.421875
+        },
+        "text": "E 63 S AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 750.421875
+        },
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 974.390625
+        },
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 974.390625
+        },
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1198.359375
+        },
+        "text": "S 350d Long AMG"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1198.359375
+        },
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1422.328125
+        },
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1432.328125
+        },
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "page": [
+      1008,
+      1664
+    ],
+    "width": 1023
+  }
+]

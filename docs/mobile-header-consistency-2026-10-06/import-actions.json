@@ -1,0 +1,32 @@
+[
+  {
+    "action": "Import close",
+    "focusedSlot": "mobile-import-search-trigger",
+    "value": "https://example.com/car"
+  },
+  {
+    "action": "Import continue",
+    "source": [
+      "https://example.com/car",
+      "https://example.com/car"
+    ],
+    "url": "http://127.0.0.1:6482/bg/imports?sourceUrl=https%3A%2F%2Fexample.com%2Fcar#import-request"
+  },
+  {
+    "action": "Keyboard focus on dark header",
+    "outlineColor": "rgb(255, 255, 255)",
+    "outlineStyle": "solid",
+    "outlineWidth": "2px",
+    "slot": "mobile-service-call"
+  },
+  {
+    "action": "Scrolled inventory header",
+    "headers": [
+      {
+        "background": "rgb(48, 52, 59)",
+        "focusColor": "white"
+      }
+    ],
+    "scrollY": 1508
+  }
+]

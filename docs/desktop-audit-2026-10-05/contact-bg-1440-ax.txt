@@ -1,0 +1,99 @@
+Browser tab: 1, Title: "За нас и контакти | Day & Night | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/contact".
+1 AXWebArea За нас и контакти | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/contact
+	2 container
+		3 link Description: Към основното съдържание, Value: 127.0.0.1:6482/bg/contact#main-content
+		4 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		5 container Основни действия
+			6 link Description: Начало, Value: 127.0.0.1:6482/bg
+			7 link Description: Автомобили, Value: 127.0.0.1:6482/bg/cars
+			8 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			9 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			10 link Description: Контакти, Value: 127.0.0.1:6482/bg/contact
+		11 pop up button Запазени
+		12 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		13 container Свържете се с нас
+			14 container
+				15 heading Свържете се с нас, Value: 1, ID: desktop-page-title
+					16 text Свържете се с нас
+				17 link Description: Обадете се, Value: tel:+359877733110
+				18 link Description: Как да ни намерите, Value: google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F
+			19 container
+				20 container Карта на автосалона
+					21 container Местоположение на автосалона
+						22 AXWebArea google.com/maps/embed?pb=!1m14!1m12!1m3!1d7302.453092836291!2d23.3443286!3d42.649331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1627293157601!5m2!1sen!2s
+							23 link Description: Open in Maps (opens in new tab), Value: google.com/maps/undefined
+							24 container
+								25 container Map
+					26 link Description: Как да ни намерите, Value: google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F
+				27 container Нека поговорим
+					28 text MODERN
+					29 heading Нека поговорим, Value: 2, ID: desktop-contact-form-title
+						30 text Нека поговорим
+					31 text Въпрос за автомобил, оглед или следващата стъпка? Започнете разговора тук.
+					32 container
+						33 text Име и фамилия
+						34 text field (settable) Име и фамилия
+						35 text Имейл адрес
+						36 text field (settable) Имейл адрес
+						37 text Телефон (по желание)
+						38 text field (settable) Телефон (по желание)
+						39 text Интересувам се от
+						40 pop up button (collapsed, settable) Интересувам се от, Value: Покупка на автомобил, Secondary Actions: Expand
+							41 menu
+								42 (selected) Покупка на автомобил
+								43 Оглед на автомобил
+								44 Финансиране
+								45 Продажба на автомобил
+						46 text Вашето съобщение
+						47 text entry area (settable) Вашето съобщение
+						48 button Преглед на запитването
+				49 container Данни за контакт
+					50 heading Данни за контакт, Value: 2, ID: desktop-contact-details-title
+						51 text Данни за контакт
+					52 text Открийте любимия си автомобил онлайн и го разгледайте на място.
+					53 link Description: Автосалон ул. „Атанас Манчев“ 18, Студентски град, София, Value: google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F
+					54 container
+						55 link Description: Телефон 0877 733 110, Value: tel:+359877733110
+						56 button Копирайте номера
+					57 link Description: Уговорете оглед Обадете се за удобен час., Value: tel:+359877733110
+					58 heading Последвайте ни, Value: 3
+						59 text Последвайте ни
+					60 text Нови автомобили и новини от автосалона.
+					61 container Социални мрежи
+						62 link Description: Instagram — отваря нов раздел, Value: instagram.com/dayandnight_autogroup/
+						63 link Description: YouTube — отваря нов раздел, Value: youtube.com/@kristiankirilov1355/
+						64 link Description: Facebook — отваря нов раздел, Value: facebook.com/deninoshtautogroup/
+		65 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		66 text Открийте следващия си автомобил.
+		67 container Открийте автомобил
+			68 heading Открийте автомобил, Value: 2
+				69 text Открийте автомобил
+			70 link Description: Всички автомобили, Value: 127.0.0.1:6482/bg/cars
+			71 link Description: Най-нови автомобили, Value: 127.0.0.1:6482/bg/cars?sort=newest
+			72 link Description: По цена, Value: 127.0.0.1:6482/bg/cars?sort=price_asc
+			73 link Description: Финансиране, Value: 127.0.0.1:6482/bg/lease
+			74 pop up button Запазени
+		75 container Разгледайте
+			76 heading Разгледайте, Value: 2
+				77 text Разгледайте
+			78 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			79 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			80 link Description: Съвети за покупка, Value: 127.0.0.1:6482/bg/blog
+			81 link Description: Ръководства, Value: 127.0.0.1:6482/bg/guides
+			82 link Description: Внос на автомобил, Value: 127.0.0.1:6482/bg/imports
+			83 link Description: Продайте автомобила си, Value: 127.0.0.1:6482/bg/sell
+		84 heading Посетете автосалона, Value: 2
+			85 text Посетете автосалона
+		86 container
+			87 text ул. „Атанас Манчев“ 18, Студентски град ,  София
+		88 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		89 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+		90 link Description: 0877 733 110, Value: tel:+359877733110
+		91 text ©  2026 Modern . Всички права запазени.
+		92 link Description: Поверителност, Value: 127.0.0.1:6482/bg/legal/privacy
+		93 link Description: Условия, Value: 127.0.0.1:6482/bg/legal/terms
+		94 link Description: Държава и език, Value: 127.0.0.1:6482/bg/locale-settings?returnTo=%2Fbg%2Fcontact
+		95 text Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.
+		96 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea За нас и контакти | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/contact

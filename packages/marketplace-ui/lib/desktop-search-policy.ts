@@ -6,6 +6,10 @@ import {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
+import {
+  readLocalPreference,
+  writeLocalPreference,
+} from "./browser-preferences";
 import { getLocalizedPublicPath } from "./public-path";
 
 export type DesktopSearchScope = "organizations" | "vehicles";
@@ -99,7 +103,7 @@ export const readRecentMarketplaceSearches = (scope: DesktopSearchScope) => {
   }
 
   try {
-    const stored = window.localStorage.getItem(recentSearchStorageKey(scope));
+    const stored = readLocalPreference(recentSearchStorageKey(scope));
     if (!stored) {
       return [];
     }
@@ -131,14 +135,10 @@ export const rememberMarketplaceSearchQuery = (
     ),
   ].slice(0, 3);
 
-  try {
-    window.localStorage.setItem(
-      recentSearchStorageKey(scope),
-      JSON.stringify(nextRecentSearches)
-    );
-  } catch {
-    return nextRecentSearches;
-  }
+  writeLocalPreference(
+    recentSearchStorageKey(scope),
+    JSON.stringify(nextRecentSearches)
+  );
 
   return nextRecentSearches;
 };

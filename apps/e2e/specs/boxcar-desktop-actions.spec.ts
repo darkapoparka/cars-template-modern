@@ -1,4 +1,10 @@
 import { expect, test } from "@playwright/test";
+import { publicSite } from "@repo/marketplace/site-config";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
+
+test.beforeEach(async ({ context, baseURL }) => {
+  await dismissModernWelcome(context.request, baseURL, "en");
+});
 
 test("desktop shortlist persists, updates across tabs and closes below its breakpoint", async ({
   page,
@@ -31,8 +37,9 @@ test("desktop shortlist persists, updates across tabs and closes below its break
   await second.close();
   await page.goto("/en/listing/bmw-x5-m50d-sofia-2020");
   const detailBookmark = page.locator(
-    '[data-slot="desktop-save-car"][data-presentation="action"]:visible'
+    '[data-slot="desktop-save-car"][aria-label$="2020 BMW X5"]:visible'
   );
+  await expect(detailBookmark).toHaveAccessibleName("Save 2020 BMW X5");
   await expect(detailBookmark).toHaveAttribute("aria-pressed", "false");
   await detailBookmark.click();
   await expect(detailBookmark).toHaveAttribute("aria-pressed", "true");
@@ -59,15 +66,47 @@ test("desktop shortlist persists, updates across tabs and closes below its break
 });
 
 test("the desktop hero preloads only at desktop widths", async ({ page }) => {
+  // This matrix visits four routes at seven widths, including cold dev routes.
+  test.setTimeout(120_000);
+  const photo = (kind: "about" | "contact") => {
+    const artwork =
+      publicSite.artwork.desktopPageHeroes?.[kind] ??
+      publicSite.artwork.desktopHeroScene ??
+      publicSite.artwork.heroScene;
+    if (!artwork) {
+      throw new Error(`The ${kind} photo hero requires configured artwork.`);
+    }
+    return artwork;
+  };
+  const routes = [
+    {
+      path: "/en",
+      assets: Object.values(
+        publicSite.artwork.desktopDiscoveryVehicles ?? {}
+      ).map(({ src }) => src),
+      minWidth: 1200,
+    },
+    {
+      path: "/en/cars",
+      assets: Object.values(
+        publicSite.artwork.desktopInventoryVehicles ?? {}
+      ).map(({ src }) => src),
+      minWidth: 1200,
+    },
+    { path: "/en/about", assets: [photo("about")], minWidth: 1024 },
+    { path: "/en/contact", assets: [photo("contact")], minWidth: 1024 },
+  ];
+  const assetPaths = new Set(routes.flatMap(({ assets }) => assets));
   const heroRequests: string[] = [];
   page.on("request", (request) => {
-    if (request.url().includes("/desktop-boxcars/hero.jpg")) {
-      heroRequests.push(request.url());
+    const path = new URL(request.url()).pathname;
+    if ([...assetPaths].some((asset) => path.endsWith(asset))) {
+      heroRequests.push(path);
     }
   });
   for (const width of [320, 390, 1023]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const path of ["/en", "/en/cars", "/en/about", "/en/contact"]) {
+    for (const { path, assets, minWidth } of routes) {
       await page.goto(path, { waitUntil: "domcontentloaded" });
       await expect(
         page.locator('[data-slot="public-route-loading-content"]')
@@ -77,29 +116,63 @@ test("the desktop hero preloads only at desktop widths", async ({ page }) => {
           '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"][data-variant="inventory"], [data-slot="dealer-desktop-context-hero"][data-appearance="photo"] h1'
         )
       ).toBeHidden();
-      await expect(
-        page.locator(
-          'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
-        )
-      ).toHaveAttribute("media", "(min-width: 1024px)");
+      for (const asset of new Set(assets)) {
+        await expect(
+          page.locator(`head link[rel="preload"][as="image"][href$="${asset}"]`)
+        ).toHaveAttribute("media", `(min-width: ${minWidth}px)`);
+      }
     }
   }
   expect(heroRequests).toEqual([]);
   for (const width of [1024, 1280, 1440, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const path of ["/en", "/en/cars", "/en/about", "/en/contact"]) {
+    for (const { path, assets, minWidth } of routes) {
       await page.goto(path, { waitUntil: "domcontentloaded" });
       await expect(
         page.locator(
           '[data-slot="dealer-desktop-home-hero"]:visible, [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]:visible, [data-slot="dealer-desktop-context-hero"][data-appearance="photo"] h1:visible'
         )
       ).toBeVisible();
-      await expect.poll(() => heroRequests.length).toBeGreaterThan(0);
-      const preload = page.locator(
-        'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
-      );
-      await expect(preload).toHaveCount(1);
-      await expect(preload).toHaveAttribute("fetchpriority", "high");
+      for (const asset of new Set(assets)) {
+        const preload = page.locator(
+          `head link[rel="preload"][as="image"][href$="${asset}"]`
+        );
+        await expect(preload).toHaveCount(1);
+        await expect(preload).toHaveAttribute("fetchpriority", "high");
+        if (width >= minWidth) {
+          await expect
+            .poll(() => heroRequests.some((request) => request.endsWith(asset)))
+            .toBe(true);
+        }
+      }
+      if (minWidth === 1200) {
+        const scene = page.locator(
+          '[data-slot="dealer-desktop-hero-vehicles"]'
+        );
+        await expect(scene.locator("source").first()).toHaveAttribute(
+          "media",
+          "(min-width: 1200px)"
+        );
+        await expect
+          .poll(() =>
+            scene.locator("img").evaluateAll(
+              (images, expected) =>
+                images.length === 2 &&
+                images.every((image) => {
+                  const img = image as HTMLImageElement;
+                  return expected.width < 1200
+                    ? img.currentSrc.startsWith("data:image/gif")
+                    : img.complete &&
+                        img.naturalWidth > 1 &&
+                        expected.assets.some((asset) =>
+                          new URL(img.currentSrc).pathname.endsWith(asset)
+                        );
+                }),
+              { width, assets }
+            )
+          )
+          .toBe(true);
+      }
     }
   }
 });
@@ -137,11 +210,8 @@ test("desktop enquiry previews locally, preserves viewing intent and clears stal
     .getByLabel("Your message", { exact: true })
     .fill("A different viewing question.");
   await expect(form.locator("output")).toHaveCount(0);
-  const action = page.locator('footer a[data-slot="button"]');
-  expect(
-    await action.evaluate((element) => {
-      const style = getComputedStyle(element);
-      return style.color !== style.backgroundColor;
-    })
-  ).toBe(true);
+  const action = page
+    .getByRole("contentinfo")
+    .getByRole("link", { name: "Get in touch", exact: true });
+  await expect(action).toHaveAttribute("href", "/en/contact");
 });

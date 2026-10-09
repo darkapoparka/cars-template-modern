@@ -86,7 +86,7 @@ export function LeaseCarSelector({
             }
           />
         }
-        title={copy.searchTitle}
+        title={locale === "bg" ? "Избери" : "Choose"}
       >
         <div
           className={`sticky top-0 z-10 ${mobileMarketplaceOverlayFieldRowClassName}`}

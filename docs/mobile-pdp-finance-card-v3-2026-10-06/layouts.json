@@ -1,0 +1,110 @@
+[
+  {
+    "locale": "bg",
+    "width": 320,
+    "actionHeight": 44,
+    "amount": "~1870 лв.\nна месец",
+    "amountOverflow": false,
+    "artwork": {
+      "aboveFooter": true,
+      "complete": true,
+      "height": 88,
+      "naturalHeight": 283,
+      "naturalWidth": 640,
+      "objectFit": "contain",
+      "width": 156.671875
+    },
+    "card": {
+      "height": 176,
+      "width": 273,
+      "y": 855.75
+    },
+    "headingOverflow": false,
+    "href": "/bg/lease?vehicle=am-1010",
+    "pageOverflow": false,
+    "priceFont": "22px",
+    "showroomHeight": 176,
+    "viewport": 320
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "actionHeight": 44,
+    "amount": "~1870 лв.\nна месец",
+    "amountOverflow": false,
+    "artwork": {
+      "aboveFooter": true,
+      "complete": true,
+      "height": 88,
+      "naturalHeight": 283,
+      "naturalWidth": 640,
+      "objectFit": "contain",
+      "width": 203.34375
+    },
+    "card": {
+      "height": 176,
+      "width": 343,
+      "y": 884.25
+    },
+    "headingOverflow": false,
+    "href": "/bg/lease?vehicle=am-1010",
+    "pageOverflow": false,
+    "priceFont": "22px",
+    "showroomHeight": 176,
+    "viewport": 390
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "actionHeight": 44,
+    "amount": "~BGN 1,870\nper month",
+    "amountOverflow": false,
+    "artwork": {
+      "aboveFooter": true,
+      "complete": true,
+      "height": 88,
+      "naturalHeight": 283,
+      "naturalWidth": 640,
+      "objectFit": "contain",
+      "width": 203.34375
+    },
+    "card": {
+      "height": 176,
+      "width": 343,
+      "y": 884.25
+    },
+    "headingOverflow": false,
+    "href": "/en/lease?vehicle=am-1010",
+    "pageOverflow": false,
+    "priceFont": "22px",
+    "showroomHeight": 176,
+    "viewport": 390
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "actionHeight": 44,
+    "amount": "~BGN 1,870\nper month",
+    "amountOverflow": false,
+    "artwork": {
+      "aboveFooter": true,
+      "complete": true,
+      "height": 88,
+      "naturalHeight": 283,
+      "naturalWidth": 640,
+      "objectFit": "contain",
+      "width": 156.671875
+    },
+    "card": {
+      "height": 176,
+      "width": 273,
+      "y": 855.75
+    },
+    "headingOverflow": false,
+    "href": "/en/lease?vehicle=am-1010",
+    "pageOverflow": false,
+    "priceFont": "22px",
+    "showroomHeight": 176,
+    "viewport": 320
+  }
+]

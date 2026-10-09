@@ -1,5 +1,6 @@
 "use client";
 
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   DealerMobileBrandBar,
   getMobileQuickPillClassName,
@@ -200,8 +201,14 @@ export function ServiceCatalogue({
   return (
     <>
       <DealerDesktopHero
-        appearance="neutral"
-        artwork={artwork}
+        appearance={
+          publicSite.artwork.desktopPageVehicles?.services
+            ? "vehicles"
+            : "photo"
+        }
+        artwork={
+          publicSite.artwork.desktopPageVehicles?.services ? undefined : artwork
+        }
         controls={
           <div className={styles.discovery}>
             <ServiceSearch {...searchProps} />
@@ -209,7 +216,9 @@ export function ServiceCatalogue({
           </div>
         }
         locale={locale}
+        sceneTone="editorial"
         title={title}
+        vehicleArtwork={publicSite.artwork.desktopPageVehicles?.services}
       />
       <header
         className={styles.mobileHeader}

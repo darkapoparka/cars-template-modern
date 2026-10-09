@@ -1,0 +1,1238 @@
+[
+  {
+    "width": 320,
+    "route": "home",
+    "geometry": {
+      "bodyHeight": 2136.171875,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 305,
+            "top": 0,
+            "width": 305,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 343,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 196,
+            "width": 273,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 498,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 351,
+            "width": 273,
+            "x": 16,
+            "y": 351
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 653,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 506,
+            "width": 273,
+            "x": 16,
+            "y": 506
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 808,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 661,
+            "width": 273,
+            "x": 16,
+            "y": 661
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 963,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 816,
+            "width": 273,
+            "x": 16,
+            "y": 816
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1118,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 971,
+            "width": 273,
+            "x": 16,
+            "y": 971
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1273,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1126,
+            "width": 273,
+            "x": 16,
+            "y": 1126
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1428,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1281,
+            "width": 273,
+            "x": 16,
+            "y": 1281
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1583,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1436,
+            "width": 273,
+            "x": 16,
+            "y": 1436
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1738,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1591,
+            "width": 273,
+            "x": 16,
+            "y": 1591
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1893,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1746,
+            "width": 273,
+            "x": 16,
+            "y": 1746
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2044.171875,
+            "height": 143.171875,
+            "left": 16,
+            "right": 289,
+            "top": 1901,
+            "width": 273,
+            "x": 16,
+            "y": 1901
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 320,
+    "route": "cars",
+    "geometry": {
+      "bodyHeight": 2136.171875,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 305,
+            "top": 0,
+            "width": 305,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 343,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 196,
+            "width": 273,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 498,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 351,
+            "width": 273,
+            "x": 16,
+            "y": 351
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 653,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 506,
+            "width": 273,
+            "x": 16,
+            "y": 506
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 808,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 661,
+            "width": 273,
+            "x": 16,
+            "y": 661
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 963,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 816,
+            "width": 273,
+            "x": 16,
+            "y": 816
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1118,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 971,
+            "width": 273,
+            "x": 16,
+            "y": 971
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1273,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1126,
+            "width": 273,
+            "x": 16,
+            "y": 1126
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1428,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1281,
+            "width": 273,
+            "x": 16,
+            "y": 1281
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1583,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1436,
+            "width": 273,
+            "x": 16,
+            "y": 1436
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1738,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1591,
+            "width": 273,
+            "x": 16,
+            "y": 1591
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1893,
+            "height": 147,
+            "left": 16,
+            "right": 289,
+            "top": 1746,
+            "width": 273,
+            "x": 16,
+            "y": 1746
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2044.171875,
+            "height": 143.171875,
+            "left": 16,
+            "right": 289,
+            "top": 1901,
+            "width": 273,
+            "x": 16,
+            "y": 1901
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "route": "home",
+    "geometry": {
+      "bodyHeight": 2383.75,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 375,
+            "top": 0,
+            "width": 375,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 363.3125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 196,
+            "width": 343,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 538.625,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 371.3125,
+            "width": 343,
+            "x": 16,
+            "y": 371.3125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 713.9375,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 546.625,
+            "width": 343,
+            "x": 16,
+            "y": 546.625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 889.25,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 721.9375,
+            "width": 343,
+            "x": 16,
+            "y": 721.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1064.5625,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 897.25,
+            "width": 343,
+            "x": 16,
+            "y": 897.25
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1239.875,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1072.5625,
+            "width": 343,
+            "x": 16,
+            "y": 1072.5625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1415.1875,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1247.875,
+            "width": 343,
+            "x": 16,
+            "y": 1247.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1590.5,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1423.1875,
+            "width": 343,
+            "x": 16,
+            "y": 1423.1875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1765.8125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1598.5,
+            "width": 343,
+            "x": 16,
+            "y": 1598.5
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1941.125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1773.8125,
+            "width": 343,
+            "x": 16,
+            "y": 1773.8125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2116.4375,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1949.125,
+            "width": 343,
+            "x": 16,
+            "y": 1949.125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2291.75,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 2124.4375,
+            "width": 343,
+            "x": 16,
+            "y": 2124.4375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "route": "cars",
+    "geometry": {
+      "bodyHeight": 2383.75,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 375,
+            "top": 0,
+            "width": 375,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 363.3125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 196,
+            "width": 343,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 538.625,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 371.3125,
+            "width": 343,
+            "x": 16,
+            "y": 371.3125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 713.9375,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 546.625,
+            "width": 343,
+            "x": 16,
+            "y": 546.625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 889.25,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 721.9375,
+            "width": 343,
+            "x": 16,
+            "y": 721.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1064.5625,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 897.25,
+            "width": 343,
+            "x": 16,
+            "y": 897.25
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1239.875,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1072.5625,
+            "width": 343,
+            "x": 16,
+            "y": 1072.5625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1415.1875,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1247.875,
+            "width": 343,
+            "x": 16,
+            "y": 1247.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1590.5,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1423.1875,
+            "width": 343,
+            "x": 16,
+            "y": 1423.1875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1765.8125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1598.5,
+            "width": 343,
+            "x": 16,
+            "y": 1598.5
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1941.125,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1773.8125,
+            "width": 343,
+            "x": 16,
+            "y": 1773.8125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2116.4375,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 1949.125,
+            "width": 343,
+            "x": 16,
+            "y": 1949.125
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 2291.75,
+            "height": 167.3125,
+            "left": 16,
+            "right": 359,
+            "top": 2124.4375,
+            "width": 343,
+            "x": 16,
+            "y": 2124.4375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 1023,
+    "route": "home",
+    "geometry": {
+      "bodyHeight": 1623.8125,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 1008,
+            "top": 0,
+            "width": 1008,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 411.96875,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 196,
+            "width": 484,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 411.96875,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 196,
+            "width": 484,
+            "x": 508,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 635.9375,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 419.96875,
+            "width": 484,
+            "x": 16,
+            "y": 419.96875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 635.9375,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 419.96875,
+            "width": 484,
+            "x": 508,
+            "y": 419.96875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 859.90625,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 643.9375,
+            "width": 484,
+            "x": 16,
+            "y": 643.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 859.90625,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 643.9375,
+            "width": 484,
+            "x": 508,
+            "y": 643.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1083.875,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 867.90625,
+            "width": 484,
+            "x": 16,
+            "y": 867.90625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1083.875,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 867.90625,
+            "width": 484,
+            "x": 508,
+            "y": 867.90625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1307.84375,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 1091.875,
+            "width": 484,
+            "x": 16,
+            "y": 1091.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1307.84375,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 1091.875,
+            "width": 484,
+            "x": 508,
+            "y": 1091.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1531.8125,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 1315.84375,
+            "width": 484,
+            "x": 16,
+            "y": 1315.84375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1531.8125,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 1315.84375,
+            "width": 484,
+            "x": 508,
+            "y": 1315.84375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 1023,
+    "route": "cars",
+    "geometry": {
+      "bodyHeight": 1623.8125,
+      "boxes": [
+        {
+          "box": {
+            "bottom": 140,
+            "height": 140,
+            "left": 0,
+            "right": 1008,
+            "top": 0,
+            "width": 1008,
+            "x": 0,
+            "y": 0
+          },
+          "slot": "mobile-dealer-chrome",
+          "tag": "DIV"
+        },
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "slot": "marketplace-results-heading",
+          "tag": "H1"
+        },
+        {
+          "box": {
+            "bottom": 411.96875,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 196,
+            "width": 484,
+            "x": 16,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 411.96875,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 196,
+            "width": 484,
+            "x": 508,
+            "y": 196
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 635.9375,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 419.96875,
+            "width": 484,
+            "x": 16,
+            "y": 419.96875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 635.9375,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 419.96875,
+            "width": 484,
+            "x": 508,
+            "y": 419.96875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 859.90625,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 643.9375,
+            "width": 484,
+            "x": 16,
+            "y": 643.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 859.90625,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 643.9375,
+            "width": 484,
+            "x": 508,
+            "y": 643.9375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1083.875,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 867.90625,
+            "width": 484,
+            "x": 16,
+            "y": 867.90625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1083.875,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 867.90625,
+            "width": 484,
+            "x": 508,
+            "y": 867.90625
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1307.84375,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 1091.875,
+            "width": 484,
+            "x": 16,
+            "y": 1091.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1307.84375,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 1091.875,
+            "width": 484,
+            "x": 508,
+            "y": 1091.875
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1531.8125,
+            "height": 215.96875,
+            "left": 16,
+            "right": 500,
+            "top": 1315.84375,
+            "width": 484,
+            "x": 16,
+            "y": 1315.84375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        },
+        {
+          "box": {
+            "bottom": 1531.8125,
+            "height": 215.96875,
+            "left": 508,
+            "right": 992,
+            "top": 1315.84375,
+            "width": 484,
+            "x": 508,
+            "y": 1315.84375
+          },
+          "slot": "vehicle-card",
+          "tag": "ARTICLE"
+        }
+      ],
+      "overflow": false
+    }
+  }
+]

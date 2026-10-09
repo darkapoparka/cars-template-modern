@@ -40,7 +40,6 @@ const leadingYearPattern = /^\d{4}\s+/;
 const pageCopy = {
   bg: {
     badge: `Финансиране от ${leadSite.shortName}`,
-    formTitle: "Условия на лизинга",
     faqTitle: "Често задавани въпроси",
     faqs: [
       {
@@ -67,7 +66,6 @@ const pageCopy = {
   },
   en: {
     badge: `Financing from ${leadSite.shortName}`,
-    formTitle: "Financing preferences",
     faqTitle: "Frequently asked questions",
     faqs: [
       {
@@ -209,7 +207,6 @@ export default async function LeasePage({
                   )}
                   <LeaseVehicleSelector
                     contactHref={localize("/contact")}
-                    desktopTitle={copy.formTitle}
                     faqs={copy.faqs}
                     key={initialVehicleId}
                     locale={normalizedLocale}

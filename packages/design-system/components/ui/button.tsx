@@ -11,7 +11,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default:
+          "bg-primary text-primary-foreground hover:bg-[var(--primary-hover,color-mix(in_oklab,var(--primary)_90%,transparent))] hover:text-[var(--primary-hover-foreground,var(--primary-foreground))] lg:active:bg-[var(--primary-active,color-mix(in_oklab,var(--primary)_90%,transparent))] lg:active:text-[var(--primary-active-foreground,var(--primary-foreground))]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 focus-visible:ring-destructive/25 dark:text-destructive-surface dark:focus-visible:ring-destructive/40",
         success:

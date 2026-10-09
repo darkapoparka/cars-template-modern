@@ -1,4 +1,9 @@
 @media (min-width: 1024px) {
+  :root[data-site-kind="dealership"] [data-slot="button"] {
+    border-radius: var(--radius-pill);
+  }
+}
+@media (min-width: 1024px) {
   :root[data-site-kind="dealership"] {
     scrollbar-gutter: stable;
   }
@@ -7,14 +12,22 @@
     --brand: var(--desktop-brand);
     --brand-foreground: var(--desktop-brand-foreground);
     --brand-text: var(--desktop-brand-text);
+    --brand-hover: var(--desktop-brand-hover);
+    --brand-active: var(--desktop-brand-active);
     --brand-hover-foreground: var(--desktop-brand-hover-foreground);
     --brand-active-foreground: var(--desktop-brand-active-foreground);
     --lead-site-accent: var(--brand);
-    --lead-site-accent-hover: color-mix(in srgb, var(--brand) 82%, black);
+    --lead-site-accent-active: var(--brand-active);
+    --lead-site-accent-hover: var(--brand-hover);
     --lead-site-accent-bright: color-mix(in srgb, var(--brand) 82%, white);
     --lead-site-accent-ring: color-mix(in srgb, var(--brand) 55%, transparent);
+    --lead-site-accent-soft: color-mix(in srgb, var(--brand) 9%, var(--panel));
     --primary: var(--brand);
     --primary-foreground: var(--brand-foreground);
+    --primary-hover: var(--brand-hover);
+    --primary-hover-foreground: var(--brand-hover-foreground);
+    --primary-active: var(--brand-active);
+    --primary-active-foreground: var(--brand-active-foreground);
     --ring: var(--brand);
     --foreground: var(--desktop-body-text);
     --background: var(--desktop-canvas);
@@ -48,9 +61,9 @@
   }
 
   :root[data-site-kind="dealership"]
-    [data-slot="marketplace-main"]:has(
+    #main-content:has(
       [data-slot="dealer-desktop-home-hero"],
-      [data-slot="dealer-desktop-inventory-hero"]
+      [data-slot="dealer-desktop-context-hero"]
     ) {
     --background: var(--desktop-surface);
     background: var(--background);
@@ -65,7 +78,7 @@
     [data-slot="button"] {
     color: var(--brand-text);
     background: #ffffff;
-    border-radius: 12px;
+    border-radius: var(--radius-pill);
   }
 
   :root[data-site-kind="dealership"]
@@ -155,7 +168,7 @@
     [data-slot="button"] {
     min-height: 54px;
     padding-inline: 28px;
-    border-radius: 12px;
+    border-radius: var(--radius-pill);
   }
 }
 @media (min-width: 1024px) {

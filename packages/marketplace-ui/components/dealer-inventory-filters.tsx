@@ -15,12 +15,12 @@ import type { PublicInventoryFilterLayout } from "@repo/marketplace/inventory-pr
 import { publicSite } from "@repo/marketplace/site-config";
 import {
   LayoutGrid,
-  LayoutTemplate,
   List,
   PanelLeft,
   SlidersHorizontal,
   X,
 } from "lucide-react";
+import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
 import { DealerInventorySummary } from "./dealer-inventory-summary";
@@ -28,42 +28,38 @@ import { DealerInventorySummary } from "./dealer-inventory-summary";
 /** Applied filters and display preferences remain separate from banner search. */
 export function DealerInventoryFilters({
   filters,
-  filterCount,
   locale,
   layout,
   onLayoutChange,
   onApply,
   onClearFilters,
-  onOpenFilters,
   onViewModeChange,
   viewMode,
   totalListings,
 }: {
   filters: MarketplaceSearchParams;
-  filterCount: number;
   totalListings: number;
   locale?: string;
   layout: PublicInventoryFilterLayout;
   onLayoutChange: (layout: PublicInventoryFilterLayout) => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
-  onOpenFilters: () => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   viewMode: ListingViewMode;
 }) {
+  const isDesktop = useDesktopMarketplaceViewport();
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <div
       className={styles.filterBar}
       data-filter-layout={layout}
       data-slot="dealer-inventory-filters"
+      key={isDesktop ? "desktop" : "mobile"}
     >
       <DealerInventorySummary
-        filterCount={filterCount}
         filters={filters}
         locale={locale}
         onApply={onApply}
-        onOpenFilters={onOpenFilters}
         totalListings={totalListings}
       />
       <div className={styles.displayControls}>
@@ -75,10 +71,14 @@ export function DealerInventoryFilters({
               }
               className={styles.previewTrigger}
               data-slot="dealer-inventory-preview"
+              title={isBg ? "Изглед" : "View"}
               type="button"
             >
-              <LayoutTemplate aria-hidden="true" size={18} />
-              <span>{isBg ? "Изглед" : "View"}</span>
+              {viewMode === "list" ? (
+                <List aria-hidden="true" size={18} />
+              ) : (
+                <LayoutGrid aria-hidden="true" size={18} />
+              )}
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -164,10 +164,10 @@ function DealerInventoryAppliedFilters({
   const chips = getActiveFilterChips(filters, locale);
   return (
     <fieldset
-      aria-hidden={chips.length === 0 || undefined}
       aria-label={isBg ? "Приложени филтри" : "Applied filters"}
       className={styles.activeFilters}
       data-slot="dealer-inventory-applied-filters"
+      hidden={chips.length === 0}
     >
       <div
         className={styles.activeFilterList}

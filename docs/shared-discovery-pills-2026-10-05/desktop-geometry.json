@@ -1,0 +1,346 @@
+[
+  {
+    "width": 1024,
+    "route": "/bg",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 865,
+        "x": 72,
+        "y": 310
+      },
+      "scrollWidth": 1009,
+      "search": {
+        "height": 64,
+        "width": 865,
+        "x": 72,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 865,
+        "x": 72,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1024,
+    "route": "/bg/cars",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 865,
+        "x": 72,
+        "y": 310
+      },
+      "scrollWidth": 1009,
+      "search": {
+        "height": 64,
+        "width": 865,
+        "x": 72,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 865,
+        "x": 72,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1024,
+    "route": "/en",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 865,
+        "x": 72,
+        "y": 310
+      },
+      "scrollWidth": 1009,
+      "search": {
+        "height": 64,
+        "width": 865,
+        "x": 72,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 865,
+        "x": 72,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1024,
+    "route": "/en/cars",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 865,
+        "x": 72,
+        "y": 310
+      },
+      "scrollWidth": 1009,
+      "search": {
+        "height": 64,
+        "width": 865,
+        "x": 72,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 865,
+        "x": 72,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "route": "/bg",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 310
+      },
+      "scrollWidth": 1425,
+      "search": {
+        "height": 64,
+        "width": 1040,
+        "x": 192.5,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 900,
+        "x": 262.5,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "route": "/bg/cars",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 310
+      },
+      "scrollWidth": 1425,
+      "search": {
+        "height": 64,
+        "width": 1040,
+        "x": 192.5,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 900,
+        "x": 262.5,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "route": "/en",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 310
+      },
+      "scrollWidth": 1425,
+      "search": {
+        "height": 64,
+        "width": 1040,
+        "x": 192.5,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 900,
+        "x": 262.5,
+        "y": 154
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "route": "/en/cars",
+    "geometry": {
+      "colors": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "selected": "true"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        },
+        {
+          "background": "rgba(255, 255, 255, 0.08)",
+          "selected": "false"
+        }
+      ],
+      "pills": {
+        "height": 36,
+        "width": 1040,
+        "x": 192.5,
+        "y": 310
+      },
+      "scrollWidth": 1425,
+      "search": {
+        "height": 64,
+        "width": 1040,
+        "x": 192.5,
+        "y": 226
+      },
+      "title": {
+        "height": 48,
+        "width": 900,
+        "x": 262.5,
+        "y": 154
+      }
+    }
+  }
+]

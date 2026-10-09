@@ -1,0 +1,15 @@
+{
+  "overflow": false,
+  "title": [
+    {
+      "font": "40px",
+      "lineHeight": "48px",
+      "text": "Нашите услуги"
+    }
+  ],
+  "viewport": [
+    1440,
+    990
+  ],
+  "visibleHeaderIcons": 0
+}

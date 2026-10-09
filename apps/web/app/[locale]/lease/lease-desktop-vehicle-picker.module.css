@@ -30,11 +30,7 @@
   outline: var(--desktop-focus-width) solid var(--brand);
   outline-offset: var(--desktop-focus-offset);
 }
-.trigger > strong {
-  font-size: var(--text-compact-control);
-  font-weight: var(--font-weight-semibold);
-}
-.plus {
+.triggerIcon {
   display: grid;
   place-items: center;
   width: calc(var(--spacing) * 12);
@@ -43,10 +39,6 @@
   background: var(--panel);
   border: var(--desktop-border-width) solid var(--border);
   border-radius: 50%;
-}
-.hint {
-  font-size: var(--text-micro);
-  color: var(--muted-foreground);
 }
 .selectedCard {
   position: relative;
@@ -206,134 +198,206 @@
 
 @media (min-width: 1024px) {
   .picker {
+    --picker-height: calc(var(--spacing) * 44);
+    --picker-width: calc(var(--spacing) * 240);
+
     position: relative;
+    align-items: center;
     min-height: 0;
   }
   .trigger {
     position: relative;
     display: grid;
-    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) auto;
+    flex: none;
+    grid-template-columns: calc(var(--spacing) * 50) minmax(0, 1fr) calc(
+        var(--spacing) *
+        50
+      );
     gap: calc(var(--spacing) * 6);
-    height: calc(var(--spacing) * 38);
+    width: min(100%, var(--picker-width));
+    height: var(--picker-height);
     min-height: 0;
-    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 6)
-      calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 4);
+    margin-inline: auto;
     overflow: hidden;
     color: var(--foreground);
-    text-align: left;
+    text-align: center;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
   }
-  .preview {
-    position: relative;
-    width: calc(var(--spacing) * 40);
-    height: calc(var(--spacing) * 29.5);
-  }
-  .emptyImage {
-    object-fit: contain;
-  }
   .triggerCopy {
     display: grid;
-    gap: calc(var(--spacing) * 2.5);
+    gap: calc(var(--spacing) * 1);
+    justify-items: center;
     min-width: 0;
   }
   .trigger:hover {
     background: var(--desktop-picker-hover);
   }
   .triggerCopy > strong {
-    font-size: calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 5);
     font-weight: var(--font-weight-semibold);
-    line-height: calc(var(--spacing) * 8);
+    line-height: calc(var(--spacing) * 7);
   }
-  .plus {
-    width: calc(var(--spacing) * 11);
-    height: calc(var(--spacing) * 11);
-    color: var(--desktop-surface);
-    background: var(--brand);
+  .triggerHint {
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 5.5);
+    color: var(--muted-foreground);
+  }
+  .triggerIcon {
+    width: calc(var(--spacing) * 50);
+    height: calc(var(--spacing) * 35.5);
+    color: var(--foreground);
+    background: var(--control);
     border: 0;
     border-radius: calc(var(--spacing) * 3);
   }
-  .hint {
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--muted-foreground);
+  .triggerIcon img {
+    width: calc(var(--spacing) * 33);
+    height: calc(var(--spacing) * 18);
+    object-fit: contain;
+  }
+  .caret {
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    width: calc(var(--spacing) * 14);
+    height: calc(var(--spacing) * 14);
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-radius: var(--radius-pill);
+    transition: background-color var(--duration-interaction);
+  }
+  .trigger:hover .caret {
+    background: var(--lead-site-accent-hover);
   }
   .selectedCard {
     display: grid;
-    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) calc(
-        var(--spacing) *
-        56
-      );
+    flex: none;
+    grid-template-columns: calc(var(--spacing) * 50) minmax(0, 1fr);
     gap: calc(var(--spacing) * 6);
-    align-items: center;
-    min-height: calc(var(--spacing) * 38);
+    align-items: stretch;
+    width: min(100%, var(--picker-width));
+    min-height: var(--picker-height);
     padding: calc(var(--spacing) * 4);
+    margin-inline: auto;
     overflow: hidden;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
   }
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    justify-content: space-between;
+    min-width: 0;
+  }
   .cardHeader {
-    grid-row: 1;
-    grid-column: 2;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: calc(var(--spacing) * 4);
+    align-items: start;
     padding: 0;
   }
-  .cardHeading {
+  .headingActions {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
     min-width: 0;
   }
   .title {
     display: block;
+    min-width: 0;
     font-size: calc(var(--spacing) * 5);
     font-weight: var(--font-weight-semibold);
-    line-height: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 6);
+    overflow-wrap: anywhere;
+    white-space: normal;
   }
-  .selectedMeta {
-    margin: calc(var(--spacing) * 1.5) 0 0;
-    font-size: calc(var(--spacing) * 3.5);
-    line-height: calc(var(--spacing) * 5.5);
-    color: var(--muted-foreground);
+  .title:hover {
+    text-decoration: underline;
+    text-underline-offset: calc(var(--spacing) * 1);
+  }
+  .title:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: calc(var(--spacing) * 1);
   }
   .vehiclePrice {
-    margin: calc(var(--spacing) * 2) 0 0;
+    display: flex;
+    align-items: center;
+    min-height: calc(var(--spacing) * 11);
+    margin: 0;
     font-size: calc(var(--spacing) * 5);
     font-weight: var(--font-weight-semibold);
     line-height: calc(var(--spacing) * 7);
+    white-space: nowrap;
+  }
+  .facts [data-slot="vehicle-card-spec-pills"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 2);
+  }
+  .facts [data-slot="vehicle-card-spec"] {
+    min-height: calc(var(--spacing) * 7);
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2.5);
+    font-size: calc(var(--spacing) * 3.25);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--foreground);
+    background: var(--control);
+    border: 0;
   }
   .media {
-    grid-row: 1;
-    grid-column: 1;
-    height: calc(var(--spacing) * 29.5);
-    min-height: 0;
+    width: 100%;
+    min-height: calc(var(--spacing) * 32);
     background: var(--control);
-    border-radius: calc(var(--spacing) * 2.5);
+    border-radius: calc(var(--spacing) * 3);
   }
   .image {
     object-fit: cover;
   }
   .selectedCard .clear {
-    width: calc(var(--spacing) * 8);
-    height: calc(var(--spacing) * 8);
-    color: var(--foreground);
+    width: auto;
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 0;
+    border-radius: calc(var(--spacing) * 2.5);
   }
   .selectedCard .clear:hover {
-    background: var(--border);
+    color: var(--foreground);
+    background: var(--control);
   }
   .selectedCard .change {
-    width: 100%;
-    height: calc(var(--spacing) * 13);
-    padding-inline: calc(var(--spacing) * 4);
+    width: auto;
+    height: calc(var(--spacing) * 11);
+    padding: 0;
     margin: 0;
-    font-size: calc(var(--spacing) * 3.5);
-    color: var(--desktop-surface);
-    background: var(--brand);
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--foreground);
+    background: transparent;
     border: 0;
-    border-radius: calc(var(--spacing) * 3);
+    border-radius: var(--radius-pill);
   }
   .selectedCard .change:hover {
-    color: var(--desktop-surface);
-    background: var(--lead-site-accent-hover);
+    background: transparent;
+  }
+  .changeSurface {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 1.5);
+    align-items: center;
+    height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 3);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-pill);
+  }
+  .selectedCard .change:hover .changeSurface {
+    background: var(--control);
   }
   .results article:has([data-vehicle-selected="true"]) {
     border-color: var(--brand);

@@ -1,0 +1,44 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.0030010062796948043,
+    "meanChannelDifference": 0.22245659622708802
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.0030010062796948043,
+    "meanChannelDifference": 0.22213942705745984
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.0024292870905587667,
+    "meanChannelDifference": 0.18136518946692357
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.0024292870905587667,
+    "meanChannelDifference": 0.18136518946692357
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.07600190583561496,
+    "meanChannelDifference": 11.499699510268846
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "dimensionsMatch": true,
+    "changedChannelFraction": 0.004829459029008071,
+    "meanChannelDifference": 0.3138827747057736
+  }
+]

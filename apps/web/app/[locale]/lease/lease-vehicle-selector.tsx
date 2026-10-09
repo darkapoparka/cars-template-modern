@@ -17,7 +17,6 @@ export type { FinancingVehicleOption } from "./lease-finance-policy";
 
 interface LeaseVehicleSelectorProps {
   contactHref: string;
-  desktopTitle: string;
   faqs: readonly { question: string; answer: string }[];
   locale: "bg" | "en";
   phoneHref: string;
@@ -29,7 +28,6 @@ export const LeaseVehicleSelector = ({
   faqs,
   locale,
   phoneHref,
-  desktopTitle,
   vehicles,
 }: LeaseVehicleSelectorProps) => {
   const copy = leaseSelectorCopy[locale];
@@ -124,7 +122,6 @@ export const LeaseVehicleSelector = ({
         phoneHref={phoneHref}
         selectedVehicle={mobileSelectedVehicle}
         term={searchParams.has("term") ? term : "48"}
-        title={desktopTitle}
         vehicles={vehicles}
       />
     </div>

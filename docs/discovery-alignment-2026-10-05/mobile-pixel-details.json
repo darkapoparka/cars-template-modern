@@ -1,0 +1,54 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "pixelsChanged": 44234,
+    "pixelsChangedAbove10": 6268,
+    "fraction": 0.16903206083533953,
+    "bounds": {
+      "minX": 0,
+      "minY": 191,
+      "maxX": 159,
+      "maxY": 857
+    }
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "pixelsChanged": 62743,
+    "pixelsChangedAbove10": 10096,
+    "fraction": 0.19342736030828517,
+    "bounds": {
+      "minX": 15,
+      "minY": 191,
+      "maxX": 176,
+      "maxY": 815
+    }
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "pixelsChanged": 44234,
+    "pixelsChangedAbove10": 6268,
+    "fraction": 0.16903206083533953,
+    "bounds": {
+      "minX": 0,
+      "minY": 191,
+      "maxX": 159,
+      "maxY": 857
+    }
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "pixelsChanged": 62743,
+    "pixelsChangedAbove10": 10096,
+    "fraction": 0.19342736030828517,
+    "bounds": {
+      "minX": 15,
+      "minY": 191,
+      "maxX": 176,
+      "maxY": 815
+    }
+  }
+]

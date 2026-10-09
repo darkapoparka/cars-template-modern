@@ -218,3 +218,11 @@ test("trusted dealer binding is retained and hashed by strict-mode web tasks", (
     )
   );
 });
+
+const looseQaCapturePattern = /^apps\/e2e\/[^/]+\.(?:png|jpe?g|webp)$/;
+
+test("transient QA captures stay outside the E2E source root", () => {
+  for (const file of files) {
+    assert.doesNotMatch(file, looseQaCapturePattern, file);
+  }
+});

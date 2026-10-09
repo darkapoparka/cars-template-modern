@@ -1,24 +1,26 @@
 @media (min-width: 1024px) {
   .detail .content {
+    --listing-purchase-column-width: calc(var(--spacing) * 85);
+    --listing-column-gap: calc(var(--spacing) * 8);
     width: min(
       calc(100% - calc(var(--spacing) * 20)),
       var(--desktop-showroom-max)
     );
     max-width: none;
-    padding: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 22.5);
+    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 22.5);
     margin-inline: auto;
   }
 
   .detail .columns {
-    grid-template-columns: minmax(0, 1fr) calc(var(--spacing) * 85);
-    gap: calc(var(--spacing) * 8);
+    grid-template-columns: minmax(0, 1fr) var(--listing-purchase-column-width);
+    gap: var(--listing-column-gap);
   }
 
   .detail :global([data-slot="listing-summary-header"]) {
     display: block;
     min-height: 0;
     padding: 0;
-    margin-bottom: calc(var(--spacing) * 6);
+    margin-bottom: calc(var(--spacing) * 4);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -286,15 +288,16 @@
   .detail :global([data-slot="listing-title-panel"]) {
     display: flex;
     gap: calc(var(--spacing) * 5);
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     min-width: 0;
-    padding: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
     background: var(--desktop-surface);
     border-radius: calc(var(--spacing) * 4);
     box-shadow: var(--desktop-surface-shadow);
   }
   .detail :global([data-slot="listing-title-panel"]) > div:first-child {
+    flex: 1;
     min-width: 0;
   }
   .detail :global([data-slot="listing-title-panel"]) p {
@@ -306,22 +309,40 @@
   }
   .detail :global([data-slot="listing-title-actions"]) {
     display: flex;
+    flex: none;
     flex-wrap: nowrap;
     gap: calc(var(--spacing) * 2);
     align-items: center;
   }
   .detail
-    :global([data-slot="listing-summary-header"])
+    :global([data-slot="listing-title-actions"])
+    :global([data-slot="desktop-save-car"]),
+  .detail
+    :global([data-slot="listing-title-actions"])
     :global([data-slot="listing-actions"])
     button {
-    width: auto;
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--spacing) * 11);
     height: calc(var(--spacing) * 11);
-    padding: 0 calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-normal);
+    padding: 0;
     background: var(--control);
     border: 0;
-    border-radius: var(--radius-pill);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .detail :global([data-slot="listing-title-actions"]) svg {
+    width: calc(var(--spacing) * 4.5);
+    height: calc(var(--spacing) * 4.5);
+  }
+  .detail :global([data-slot="listing-title-actions"]) button:hover {
+    background: var(--desktop-control-neutral-hover);
+  }
+  .detail :global([data-slot="listing-title-actions"]) button:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) {
     display: grid;
@@ -378,9 +399,9 @@
   .detail
     :global([data-slot="listing-vehicle-facts"])
     :global([data-slot="listing-specifications"]) {
-    padding-top: calc(var(--spacing) * 4);
-    margin-top: calc(var(--spacing) * 4);
-    border-top: var(--desktop-border-width) solid var(--border);
+    padding-top: 0;
+    margin-top: calc(var(--spacing) * 3);
+    border-top: 0;
   }
   .detail
     :global([data-slot="listing-vehicle-facts"])
@@ -434,11 +455,13 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .detail :global([data-slot="listing-title-panel"]) {
-    flex-wrap: wrap;
-  }
   .detail :global([data-slot="listing-details-sections-desktop"]) dl {
     gap: calc(var(--spacing) * 5);
+  }
+  .detail
+    :global([data-slot="listing-vehicle-facts"])
+    :global([data-slot="listing-specifications"]) {
+    margin-top: calc(var(--spacing) * 5);
   }
   .detail :global([data-slot="listing-equipment"]) ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));

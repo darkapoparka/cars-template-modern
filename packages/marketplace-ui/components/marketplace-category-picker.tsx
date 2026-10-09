@@ -38,7 +38,7 @@ export const MarketplaceCategoryPicker = ({
       rightAction={
         <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
       }
-      title={copy.categoryDrawer.title}
+      title={copy.mobileTitles.category}
     >
       <MarketplaceCategoryOptions
         locale={locale}

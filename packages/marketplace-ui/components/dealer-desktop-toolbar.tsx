@@ -34,10 +34,10 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
       <div data-slot="dealer-desktop-inventory-hero">
         <DealerDesktopHero
           appearance={
-            publicSite.artwork.desktopDiscoveryVehicles ? "vehicles" : undefined
+            publicSite.artwork.desktopInventoryVehicles ? "vehicles" : undefined
           }
           artwork={
-            publicSite.artwork.desktopDiscoveryVehicles
+            publicSite.artwork.desktopInventoryVehicles
               ? undefined
               : (publicSite.artwork.desktopHeroScene ??
                 publicSite.artwork.heroScene)
@@ -49,9 +49,13 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
           <div className={styles.content}>
             <DealerInventorySearch
               disabled={props.loading}
+              filterCount={props.loading ? 0 : props.filterCount}
               filters={filters}
               locale={locale}
               onApply={props.loading ? undefined : props.onApply}
+              onOpenFilters={
+                props.loading ? () => undefined : props.onOpenFilters
+              }
               onOpenSection={openSection}
             />
           </div>

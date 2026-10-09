@@ -1,0 +1,42 @@
+{
+  "desktopViewsPassed": 8,
+  "mobilePairs": [
+    {
+      "route": "cars",
+      "width": 320,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "route": "cars",
+      "width": 390,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "route": "cars",
+      "width": 1023,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "route": "home",
+      "width": 320,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "route": "home",
+      "width": 390,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "route": "home",
+      "width": 1023,
+      "layoutMatches": true,
+      "desktopArtworkHidden": true
+    }
+  ],
+  "totalAssetBytes": 19956
+}

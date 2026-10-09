@@ -1,0 +1,97 @@
+{
+  "matched": [
+    {
+      "before": "before-bg-services-320",
+      "after": "after-bg-services-320",
+      "geometryIdentical": true
+    },
+    {
+      "before": "before-bg-services-390",
+      "after": "after-bg-services-390",
+      "geometryIdentical": true
+    },
+    {
+      "before": "before-bg-services-1023",
+      "after": "after-bg-services-1023",
+      "geometryIdentical": true
+    },
+    {
+      "before": "before-bg-services-1440",
+      "after": "after-bg-services-1440",
+      "geometryIdentical": true
+    },
+    {
+      "before": "before-en-services-390",
+      "after": "after-en-services-390",
+      "geometryIdentical": true
+    },
+    {
+      "before": "before-en-services-1440",
+      "after": "after-en-services-1440",
+      "geometryIdentical": true
+    }
+  ],
+  "views": [
+    {
+      "name": "after-bg-services-320",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-bg-services-390",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-bg-services-768",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-bg-services-1023",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-bg-services-1440",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-en-services-320",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-en-services-390",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-en-services-1023",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    },
+    {
+      "name": "after-en-services-1440",
+      "imagesLoaded": true,
+      "correctArtwork": true,
+      "overflow": false
+    }
+  ],
+  "preservedStylesheet": "apps/web/app/[locale]/services/services.module.css",
+  "reusedAssets": [
+    "/images/services/desktop-browse-v1.webp",
+    "/images/services/desktop-imports-v1.webp",
+    "/images/services/desktop-finance-v1.webp",
+    "/images/services/desktop-sell-v1.webp"
+  ]
+}

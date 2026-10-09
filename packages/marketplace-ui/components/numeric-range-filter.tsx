@@ -21,7 +21,6 @@ const rangesMatch = (left: NumericRangeValue, right: NumericRangeValue) =>
 
 interface NumericRangeFieldProps {
   ariaLabel: string;
-  compact: boolean;
   fieldId: string;
   formattedValue: string;
   label: string;
@@ -35,7 +34,6 @@ interface NumericRangeFieldProps {
 
 const NumericRangeField = ({
   ariaLabel,
-  compact,
   fieldId,
   formattedValue,
   label,
@@ -47,26 +45,15 @@ const NumericRangeField = ({
   value,
 }: NumericRangeFieldProps) => (
   <label
-    className={cn(
-      "group relative font-medium text-meta text-zinc-600",
-      compact ? "block" : "space-y-1.5"
-    )}
+    className="group relative block font-medium text-meta text-zinc-600"
     htmlFor={fieldId}
   >
-    <span
-      className={cn(
-        compact &&
-          "pointer-events-none absolute top-2 left-4 z-10 text-meta text-zinc-500"
-      )}
-    >
+    <span className="pointer-events-none absolute top-2 left-3 z-10 font-normal text-xs text-zinc-600">
       {label}
     </span>
     <Input
       aria-label={ariaLabel}
-      className={cn(
-        "h-12 rounded-xl border-transparent bg-zinc-100 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-[var(--lead-site-accent-ring)] group-focus-within:text-zinc-950 md:text-base",
-        compact && "h-14 pt-5 pb-1"
-      )}
+      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-2 focus-visible:ring-ring/15 focus-visible:ring-offset-0 group-focus-within:text-zinc-950 md:text-base"
       id={fieldId}
       inputMode="numeric"
       max={maximum}
@@ -79,10 +66,7 @@ const NumericRangeField = ({
     />
     <span
       aria-hidden="true"
-      className={cn(
-        "pointer-events-none absolute right-3 bottom-0 left-3 flex h-12 items-center text-base text-zinc-950 tabular-nums group-focus-within:hidden",
-        compact && "h-14 items-end pb-1.5"
-      )}
+      className="pointer-events-none absolute right-3 bottom-0 left-3 flex h-14 items-end pb-1.5 text-base text-zinc-950 tabular-nums group-focus-within:hidden"
     >
       {formattedValue}
     </span>
@@ -221,7 +205,6 @@ export const NumericRangeFilter = ({
         {maximumOnly ? null : (
           <NumericRangeField
             ariaLabel={thumbLabels[0]}
-            compact={compact}
             fieldId={`${inputId}-minimum`}
             formattedValue={formatValue(minimum)}
             label={minimumLabel}
@@ -235,7 +218,6 @@ export const NumericRangeFilter = ({
         )}
         <NumericRangeField
           ariaLabel={thumbLabels[1]}
-          compact={compact}
           fieldId={`${inputId}-maximum`}
           formattedValue={formatValue(maximum)}
           label={maximumLabel}

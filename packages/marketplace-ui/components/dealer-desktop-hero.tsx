@@ -21,9 +21,10 @@ export interface DealerDesktopHeroProps {
   eyebrow?: string;
   loading?: boolean;
   locale?: string;
-  sceneTone?: "standard" | "quiet";
+  sceneTone?: "standard" | "quiet" | "editorial";
   title: string;
   variant?: "landing" | "inventory" | "page" | "compact" | "service";
+  vehicleArtwork?: typeof publicSite.artwork.desktopDiscoveryVehicles;
 }
 
 function DesktopHeroActions({
@@ -132,6 +133,15 @@ function DesktopHeroContent({
   return children;
 }
 
+const getDesktopHeroVehicles = (
+  variant: DealerDesktopHeroProps["variant"],
+  override: DealerDesktopHeroProps["vehicleArtwork"]
+) =>
+  override ??
+  (variant === "inventory"
+    ? publicSite.artwork.desktopInventoryVehicles
+    : publicSite.artwork.desktopDiscoveryVehicles);
+
 /** One desktop masthead surface. Pages supply context; mobile keeps its own chrome. */
 export function DealerDesktopHero({
   actions,
@@ -144,11 +154,12 @@ export function DealerDesktopHero({
   loading = false,
   sceneTone = "standard",
   variant = "page",
+  vehicleArtwork,
   children,
 }: DealerDesktopHeroProps) {
   const vehicles =
     appearance === "vehicles"
-      ? publicSite.artwork.desktopDiscoveryVehicles
+      ? getDesktopHeroVehicles(variant, vehicleArtwork)
       : undefined;
   if (artwork) {
     preload(withBasePath(artwork), {
@@ -160,6 +171,13 @@ export function DealerDesktopHero({
   const isLanding = variant === "landing";
   const isDiscovery = isLanding || variant === "inventory";
   const titleId = isLanding ? "desktop-home-title" : "desktop-page-title";
+  const sheetEdge = (
+    <div
+      aria-hidden="true"
+      className={styles.sheetEdge}
+      data-slot="dealer-desktop-page-sheet"
+    />
+  );
   const heading = (
     <div className={styles.copy}>
       {eyebrow ? (
@@ -212,6 +230,7 @@ export function DealerDesktopHero({
             (controls ?? (
               <DesktopHeroActions actions={actions} locale={locale} />
             ))}
+          {!isDiscovery && sheetEdge}
         </div>
       )}
       {loading ? (
@@ -228,6 +247,7 @@ export function DealerDesktopHero({
       ) : (
         <DesktopHeroContent variant={variant}>{children}</DesktopHeroContent>
       )}
+      {isDiscovery && sheetEdge}
     </section>
   );
 }

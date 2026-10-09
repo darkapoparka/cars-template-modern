@@ -228,7 +228,8 @@ test("empty article search offers a complete reset and keeps search focus", asyn
     .click();
   await expect(page.getByRole("searchbox")).toHaveValue("");
   await expect(page.getByRole("searchbox")).toBeFocused();
-  await expect(page.getByRole("status")).toHaveText("6 материала");
+  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(6);
+  await expect(page.getByRole("status")).toHaveText("(6)");
   expect(new URL(page.url()).search).toBe("");
   await expect(page.getByText("Няма материали с тези критерии")).toBeHidden();
 });
@@ -405,7 +406,7 @@ test("Sell overlay resolves semantic type and primary-action contrast", async ({
   await page.evaluate(() => document.fonts.ready);
 
   const title = dialog.getByRole("heading", {
-    name: "Данни за автомобила",
+    name: "Данни",
     exact: true,
   });
   const titleMetrics = await title.evaluate((element) => ({

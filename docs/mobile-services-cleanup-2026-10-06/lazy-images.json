@@ -1,0 +1,94 @@
+[
+  {
+    "pendingImages": [
+      {
+        "loading": "lazy",
+        "rect": {
+          "bottom": 169,
+          "height": 14,
+          "left": 391.8125,
+          "right": 412.8125,
+          "top": 155,
+          "width": 21,
+          "x": 391.8125,
+          "y": 155
+        },
+        "src": "/images/flags/us.svg",
+        "withinViewport": false
+      },
+      {
+        "loading": "lazy",
+        "rect": {
+          "bottom": 169,
+          "height": 14,
+          "left": 492.921875,
+          "right": 513.921875,
+          "top": 155,
+          "width": 21,
+          "x": 492.921875,
+          "y": 155
+        },
+        "src": "/images/flags/jp.svg",
+        "withinViewport": false
+      },
+      {
+        "loading": "lazy",
+        "rect": {
+          "bottom": 169,
+          "height": 14,
+          "left": 612.09375,
+          "right": 633.09375,
+          "top": 155,
+          "width": 21,
+          "x": 612.09375,
+          "y": 155
+        },
+        "src": "/images/flags/kr.svg",
+        "withinViewport": false
+      }
+    ],
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "width": 320
+  },
+  {
+    "pendingImages": [
+      {
+        "loading": "lazy",
+        "rect": {
+          "bottom": 169,
+          "height": 14,
+          "left": 507.59375,
+          "right": 528.59375,
+          "top": 155,
+          "width": 21,
+          "x": 507.59375,
+          "y": 155
+        },
+        "src": "/images/flags/jp.svg",
+        "withinViewport": false
+      },
+      {
+        "loading": "lazy",
+        "rect": {
+          "bottom": 169,
+          "height": 14,
+          "left": 616.703125,
+          "right": 637.703125,
+          "top": 155,
+          "width": 21,
+          "x": 616.703125,
+          "y": 155
+        },
+        "src": "/images/flags/kr.svg",
+        "withinViewport": false
+      }
+    ],
+    "url": "http://127.0.0.1:6482/en/imports",
+    "width": 390
+  },
+  {
+    "pendingImages": [],
+    "url": "http://127.0.0.1:6482/bg/lease",
+    "width": 390
+  }
+]

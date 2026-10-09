@@ -1,0 +1,111 @@
+{
+  "headerChecks": [
+    {
+      "locale": "bg",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 649,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 673,
+      "savedWidth": 144,
+      "width": 1024
+    },
+    {
+      "locale": "bg",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 811.859375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 925,
+      "savedWidth": 144,
+      "width": 1280
+    },
+    {
+      "locale": "bg",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 891.859375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 1072.5,
+      "savedWidth": 144,
+      "width": 1440
+    },
+    {
+      "locale": "bg",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 1131.859375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 1312.5,
+      "savedWidth": 144,
+      "width": 1920
+    },
+    {
+      "locale": "en",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 638.375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 673,
+      "savedWidth": 144,
+      "width": 1024
+    },
+    {
+      "locale": "en",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 778.375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 925,
+      "savedWidth": 144,
+      "width": 1280
+    },
+    {
+      "locale": "en",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 858.375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 1072.5,
+      "savedWidth": 144,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "contactWidth": 144,
+      "equalDimensions": true,
+      "height": 48,
+      "navRight": 1098.375,
+      "overflow": false,
+      "overlap": false,
+      "savedLeft": 1312.5,
+      "savedWidth": 144,
+      "width": 1920
+    }
+  ],
+  "countCheck": {
+    "contactWidth": 155.96875,
+    "equalDimensions": true,
+    "height": 48,
+    "navRight": 625.0625,
+    "overflow": false,
+    "overlap": false,
+    "savedLeft": 649.0625,
+    "savedWidth": 155.96875,
+    "width": 1024
+  }
+}

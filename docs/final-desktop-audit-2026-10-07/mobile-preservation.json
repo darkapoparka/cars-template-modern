@@ -1,0 +1,4463 @@
+[
+  {
+    "name": "home",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 273,
+          "x": 16,
+          "y": 108
+        },
+        "role": null,
+        "text": "Търси 12 автомобила"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 85.375,
+          "x": 16,
+          "y": 180
+        },
+        "role": null,
+        "text": "Цена"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.5625,
+          "x": 109.375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Година"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 101.921875,
+          "x": 217.9375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Пробег"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.484375,
+          "x": 327.859375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Гориво"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 119.484375,
+          "x": 436.34375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Скорости"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 236
+        },
+        "role": null,
+        "text": "BMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 391
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 546
+        },
+        "role": null,
+        "text": "BMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 701
+        },
+        "role": null,
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 856
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1011
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1166
+        },
+        "role": null,
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1321
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1476
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1631
+        },
+        "role": null,
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1786
+        },
+        "role": null,
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "rect": {
+          "height": 143.171875,
+          "width": 273,
+          "x": 16,
+          "y": 1941
+        },
+        "role": null,
+        "text": "BMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 64.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 58.609375,
+          "x": 123.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 181.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 240.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 305,
+    "cards": [
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 293
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 448
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 391
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 603
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 546
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 758
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 701
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 913
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 856
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1068
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1011
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1223
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1166
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1378
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1321
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1533
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1476
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1688
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1631
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1843
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1786
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 2006.078125
+        },
+        "rect": {
+          "height": 143.171875,
+          "width": 273,
+          "x": 16,
+          "y": 1941
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "tag": "H2",
+        "text": "Автомобили за продажба"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 268
+        },
+        "tag": "H2",
+        "text": "X5 M50d"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 423
+        },
+        "tag": "H2",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 578
+        },
+        "tag": "H2",
+        "text": "M4 Competition"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 733
+        },
+        "tag": "H2",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 888
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1043
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1198
+        },
+        "tag": "H2",
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1353
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1508
+        },
+        "tag": "H2",
+        "text": "S 350d Long AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1663
+        },
+        "tag": "H2",
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1818
+        },
+        "tag": "H2",
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 127.421875,
+          "x": 149.578125,
+          "y": 1981.078125
+        },
+        "tag": "H2",
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      305,
+      2176
+    ],
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 320
+  },
+  {
+    "name": "about",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 273,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 97,
+          "width": 273,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 273,
+          "x": 16,
+          "y": 329
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 85.65625,
+          "x": 16,
+          "y": 397
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 85.671875,
+          "x": 109.65625,
+          "y": 397
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 85.65625,
+          "x": 203.328125,
+          "y": 397
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 64.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 58.609375,
+          "x": 123.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 181.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 240.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 305,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      305,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/about",
+    "width": 320
+  },
+  {
+    "name": "contact",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 273,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 97,
+          "width": 273,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 72,
+          "width": 273,
+          "x": 16,
+          "y": 365
+        },
+        "role": null,
+        "text": "Автомобили в наличност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 54,
+          "width": 273,
+          "x": 16,
+          "y": 445
+        },
+        "role": null,
+        "text": "Внос по заявка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 54,
+          "width": 273,
+          "x": 16,
+          "y": 507
+        },
+        "role": null,
+        "text": "Собствен лизинг"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 72,
+          "width": 273,
+          "x": 16,
+          "y": 569
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 273,
+          "x": 16,
+          "y": 661
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 85.65625,
+          "x": 16,
+          "y": 729
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 85.671875,
+          "x": 109.65625,
+          "y": 729
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 85.65625,
+          "x": 203.328125,
+          "y": 729
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 64.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 58.609375,
+          "x": 123.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 181.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 58.59375,
+          "x": 240.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 305,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 273,
+          "x": 16,
+          "y": 329
+        },
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      305,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 320
+  },
+  {
+    "name": "pdp",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 228.75,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "role": null,
+        "text": "1"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 134.5,
+          "x": 18,
+          "y": 355.75
+        },
+        "role": "tab",
+        "text": "Детайли"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 134.5,
+          "x": 152.5,
+          "y": 355.75
+        },
+        "role": "tab",
+        "text": "Снимки"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease?vehicle=am-1010",
+        "rect": {
+          "height": 208,
+          "width": 273,
+          "x": 16,
+          "y": 855.75
+        },
+        "role": null,
+        "text": "Лизинг\n\nТвоят следващ автомобил.\nНа месечни вноски.\n\nВиж условията"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1155.75
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 301,
+          "y": 1155.75
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 586,
+          "y": 1155.75
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 176,
+          "width": 273,
+          "x": 16,
+          "y": 1330.75
+        },
+        "role": null,
+        "text": "Посетете шоурума\n\nул. „Атанас Манчев“ 18, Студентски град, София\n\nУпътвания\n— отваря се в нов раздел"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 52,
+          "width": 52,
+          "x": 237,
+          "y": 832
+        },
+        "role": null,
+        "text": "Обадете се"
+      }
+    ],
+    "bodyWidth": 305,
+    "cards": [
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 132.890625,
+          "x": 144.109375,
+          "y": 1212.75
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 16,
+          "y": 1155.75
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 132.890625,
+          "x": 429.109375,
+          "y": 1212.75
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 301,
+          "y": 1155.75
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 132.890625,
+          "x": 714.109375,
+          "y": 1212.75
+        },
+        "rect": {
+          "height": 147,
+          "width": 273,
+          "x": 586,
+          "y": 1155.75
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "22px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 56,
+          "width": 273,
+          "x": 16,
+          "y": 277.75
+        },
+        "tag": "H1",
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 28,
+          "y": 425.75
+        },
+        "tag": "H2",
+        "text": "Данни за автомобила"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "36px",
+        "lineHeight": "40px",
+        "rect": {
+          "height": 40,
+          "width": 123.203125,
+          "x": 90.890625,
+          "y": 885.75
+        },
+        "tag": "H2",
+        "text": "Лизинг"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 186.640625,
+          "x": 16,
+          "y": 1105.75
+        },
+        "tag": "H2",
+        "text": "Подобни автомобили"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 144.109375,
+          "y": 1187.75
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 429.109375,
+          "y": 1187.75
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 132.890625,
+          "x": 714.109375,
+          "y": 1187.75
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 241,
+          "x": 32,
+          "y": 1358.75
+        },
+        "tag": "H2",
+        "text": "Посетете шоурума"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      305,
+      1624
+    ],
+    "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 320
+  },
+  {
+    "name": "home",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 343,
+          "x": 16,
+          "y": 108
+        },
+        "role": null,
+        "text": "Търси 12 автомобила"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 85.375,
+          "x": 16,
+          "y": 180
+        },
+        "role": null,
+        "text": "Цена"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.5625,
+          "x": 109.375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Година"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 101.921875,
+          "x": 217.9375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Пробег"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.484375,
+          "x": 327.859375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Гориво"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 119.484375,
+          "x": 436.34375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Скорости"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 236
+        },
+        "role": null,
+        "text": "BMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 411.3125
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 586.625
+        },
+        "role": null,
+        "text": "BMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 761.9375
+        },
+        "role": null,
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 937.25
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1112.5625
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1287.875
+        },
+        "role": null,
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1463.1875
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1638.5
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1813.8125
+        },
+        "role": null,
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1989.125
+        },
+        "role": null,
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 2164.4375
+        },
+        "role": null,
+        "text": "BMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 78.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 72.609375,
+          "x": 151.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 223.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 296.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 375,
+    "cards": [
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 303.15625
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 478.46875
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 411.3125
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 653.78125
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 586.625
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 829.09375
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 761.9375
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1004.40625
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 937.25
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1179.71875
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1112.5625
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1355.03125
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1287.875
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1530.34375
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1463.1875
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1705.65625
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1638.5
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1880.96875
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1813.8125
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2056.28125
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 1989.125
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2241.59375
+        },
+        "rect": {
+          "height": 167.3125,
+          "width": 343,
+          "x": 16,
+          "y": 2164.4375
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "tag": "H2",
+        "text": "Автомобили за продажба"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 278.15625
+        },
+        "tag": "H2",
+        "text": "X5 M50d"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 453.46875
+        },
+        "tag": "H2",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 628.78125
+        },
+        "tag": "H2",
+        "text": "M4 Competition"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 804.09375
+        },
+        "tag": "H2",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 979.40625
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1154.71875
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1330.03125
+        },
+        "tag": "H2",
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1505.34375
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1680.65625
+        },
+        "tag": "H2",
+        "text": "S 350d Long AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 1855.96875
+        },
+        "tag": "H2",
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2031.28125
+        },
+        "tag": "H2",
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 165.234375,
+          "x": 181.765625,
+          "y": 2216.59375
+        },
+        "tag": "H2",
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      375,
+      2424
+    ],
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 390
+  },
+  {
+    "name": "pdp",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 281.25,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "role": null,
+        "text": "1"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 169.5,
+          "x": 18,
+          "y": 408.25
+        },
+        "role": "tab",
+        "text": "Детайли"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 169.5,
+          "x": 187.5,
+          "y": 408.25
+        },
+        "role": "tab",
+        "text": "Снимки"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease?vehicle=am-1010",
+        "rect": {
+          "height": 208,
+          "width": 343,
+          "x": 16,
+          "y": 884.25
+        },
+        "role": null,
+        "text": "Лизинг\n\nТвоят следващ автомобил.\nНа месечни вноски.\n\nВиж условията"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 16,
+          "y": 1184.25
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 323,
+          "y": 1184.25
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 630,
+          "y": 1184.25
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 176,
+          "width": 343,
+          "x": 16,
+          "y": 1359.25
+        },
+        "role": null,
+        "text": "Посетете шоурума\n\nул. „Атанас Манчев“ 18, Студентски град, София\n\nУпътвания\n— отваря се в нов раздел"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 52,
+          "width": 52,
+          "x": 307,
+          "y": 832
+        },
+        "role": null,
+        "text": "Обадете се"
+      }
+    ],
+    "bodyWidth": 375,
+    "cards": [
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 145.203125,
+          "x": 153.796875,
+          "y": 1241.25
+        },
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 16,
+          "y": 1184.25
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 145.203125,
+          "x": 460.796875,
+          "y": 1241.25
+        },
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 323,
+          "y": 1184.25
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 145.203125,
+          "x": 767.796875,
+          "y": 1241.25
+        },
+        "rect": {
+          "height": 147,
+          "width": 295,
+          "x": 630,
+          "y": 1184.25
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "22px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 56,
+          "width": 343,
+          "x": 16,
+          "y": 330.25
+        },
+        "tag": "H1",
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 28,
+          "y": 478.25
+        },
+        "tag": "H2",
+        "text": "Данни за автомобила"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "36px",
+        "lineHeight": "40px",
+        "rect": {
+          "height": 40,
+          "width": 123.203125,
+          "x": 125.890625,
+          "y": 914.25
+        },
+        "tag": "H2",
+        "text": "Лизинг"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 186.640625,
+          "x": 16,
+          "y": 1134.25
+        },
+        "tag": "H2",
+        "text": "Подобни автомобили"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 153.796875,
+          "y": 1216.25
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 460.796875,
+          "y": 1216.25
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 145.203125,
+          "x": 767.796875,
+          "y": 1216.25
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 311,
+          "x": 32,
+          "y": 1387.25
+        },
+        "tag": "H2",
+        "text": "Посетете шоурума"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      375,
+      1652
+    ],
+    "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 390
+  },
+  {
+    "name": "about",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 343,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 97,
+          "width": 343,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 343,
+          "x": 16,
+          "y": 329
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 16,
+          "y": 397
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 133,
+          "y": 397
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 250,
+          "y": 397
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 78.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 72.609375,
+          "x": 151.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 223.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 296.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 375,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      375,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/about",
+    "width": 390
+  },
+  {
+    "name": "contact",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 343,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 97,
+          "width": 343,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 54,
+          "width": 343,
+          "x": 16,
+          "y": 365
+        },
+        "role": null,
+        "text": "Автомобили в наличност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 54,
+          "width": 343,
+          "x": 16,
+          "y": 427
+        },
+        "role": null,
+        "text": "Внос по заявка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 54,
+          "width": 343,
+          "x": 16,
+          "y": 489
+        },
+        "role": null,
+        "text": "Собствен лизинг"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 54,
+          "width": 343,
+          "x": 16,
+          "y": 551
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 343,
+          "x": 16,
+          "y": 625
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 16,
+          "y": 693
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 133,
+          "y": 693
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 109,
+          "x": 250,
+          "y": 693
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 6,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 78.59375,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 72.609375,
+          "x": 151.1875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 223.796875,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 72.59375,
+          "x": 296.390625,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 375,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 343,
+          "x": 16,
+          "y": 329
+        },
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      375,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 390
+  },
+  {
+    "name": "home",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 48,
+          "width": 976,
+          "x": 16,
+          "y": 108
+        },
+        "role": null,
+        "text": "Търси 12 автомобила"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 85.375,
+          "x": 16,
+          "y": 180
+        },
+        "role": null,
+        "text": "Цена"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.5625,
+          "x": 109.375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Година"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 101.921875,
+          "x": 217.9375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Пробег"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 100.484375,
+          "x": 327.859375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Гориво"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 44,
+          "width": 119.484375,
+          "x": 436.34375,
+          "y": 180
+        },
+        "role": null,
+        "text": "Скорости"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 236
+        },
+        "role": null,
+        "text": "BMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 236
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-m4-competition-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 459.96875
+        },
+        "role": null,
+        "text": "BMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 459.96875
+        },
+        "role": null,
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 683.9375
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 683.9375
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 907.90625
+        },
+        "role": null,
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 907.90625
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-s-350d-long-amg-sofia-2019",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1131.875
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/range-rover-sport-svr-sofia-2021",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1131.875
+        },
+        "role": null,
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-430i-xdrive-gran-coupe-sofia-2023",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1355.84375
+        },
+        "role": null,
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/bmw-x5-xdrive40d-berlin-2022",
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1355.84375
+        },
+        "role": null,
+        "text": "BMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 254,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 354,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 454,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 554,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 654,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 1008,
+    "cards": [
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 327.484375
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n167 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 327.484375
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 236
+        },
+        "text": "Препоръчана\n\nMercedes-Benz\n\nGLS 400d 4MATIC AMG\n\n122 629 лв.\n\nот 1870 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 551.453125
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 459.96875
+        },
+        "text": "Препоръчана\n\nBMW\n\nM4 Competition\n\n128 496 лв.\n\nот 1960 лв./мес.\n\n2021\n165 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 551.453125
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 459.96875
+        },
+        "text": "BMW\n\n750e xDrive M Sport\n\n175 436 лв.\n\nот 2680 лв./мес.\n\n2024\n40 000 км\nPHEV\nПлъгин хибрид\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 775.421875
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 683.9375
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 775.421875
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 683.9375
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 999.390625
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 907.90625
+        },
+        "text": "Audi\n\nQ8 50 TDI quattro S line\n\n99 159 лв.\n\nот 1515 лв./мес.\n\n2021\n163 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 999.390625
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 907.90625
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1223.359375
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1131.875
+        },
+        "text": "Mercedes-Benz\n\nS 350d Long AMG\n\n83 512 лв.\n\nот 1275 лв./мес.\n\n2019\n145 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1223.359375
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1131.875
+        },
+        "text": "Land Rover\n\nRange Rover Sport SVR\n\n106 982 лв.\n\nПо договаряне\n\n2021\n155 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1447.328125
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 16,
+          "y": 1355.84375
+        },
+        "text": "BMW\n\n430i xDrive Gran Coupe\n\n81 556 лв.\n\nот 1245 лв./мес.\n\n2023\n35 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1457.328125
+        },
+        "rect": {
+          "height": 215.96875,
+          "width": 484,
+          "x": 508,
+          "y": 1355.84375
+        },
+        "text": "Внос\n\nBMW\n\nX5 xDrive40d\n\n112 456 лв.\n\n2022\n28 531 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "Открийте автомобил"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 15,
+          "y": 235
+        },
+        "tag": "H2",
+        "text": "Автомобили за продажба"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 302.484375
+        },
+        "tag": "H2",
+        "text": "X5 M50d"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 302.484375
+        },
+        "tag": "H2",
+        "text": "GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 526.453125
+        },
+        "tag": "H2",
+        "text": "M4 Competition"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 526.453125
+        },
+        "tag": "H2",
+        "text": "750e xDrive M Sport"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 750.421875
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 750.421875
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 974.390625
+        },
+        "tag": "H2",
+        "text": "Q8 50 TDI quattro S line"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 974.390625
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1198.359375
+        },
+        "tag": "H2",
+        "text": "S 350d Long AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1198.359375
+        },
+        "tag": "H2",
+        "text": "Range Rover Sport SVR"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 246.625,
+          "y": 1422.328125
+        },
+        "tag": "H2",
+        "text": "430i xDrive Gran Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 241.375,
+          "x": 738.625,
+          "y": 1432.328125
+        },
+        "tag": "H2",
+        "text": "X5 xDrive40d"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1008,
+      1664
+    ],
+    "url": "http://127.0.0.1:6482/bg",
+    "width": 1023
+  },
+  {
+    "name": "pdp",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 360,
+          "width": 1008,
+          "x": 0,
+          "y": 0
+        },
+        "role": null,
+        "text": "1"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 486,
+          "x": 18,
+          "y": 459
+        },
+        "role": "tab",
+        "text": "Детайли"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 40,
+          "width": 486,
+          "x": 504,
+          "y": 459
+        },
+        "role": "tab",
+        "text": "Снимки"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease?vehicle=am-1010",
+        "rect": {
+          "height": 208,
+          "width": 976,
+          "x": 16,
+          "y": 887
+        },
+        "role": null,
+        "text": "Лизинг\n\nТвоят следващ автомобил.\nНа месечни вноски.\n\nВиж условията"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 16,
+          "y": 1187
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 956,
+          "y": 1187
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 1896,
+          "y": 1187
+        },
+        "role": null,
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 176,
+          "width": 976,
+          "x": 16,
+          "y": 1570.234375
+        },
+        "role": null,
+        "text": "Посетете шоурума\n\nул. „Атанас Манчев“ 18, Студентски град, София\n\nУпътвания\n— отваря се в нов раздел"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 52,
+          "width": 52,
+          "x": 940,
+          "y": 832
+        },
+        "role": null,
+        "text": "Обадете се"
+      }
+    ],
+    "bodyWidth": 1008,
+    "cards": [
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 499.6875,
+          "x": 432.3125,
+          "y": 1348.109375
+        },
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 16,
+          "y": 1187
+        },
+        "text": "Mercedes-Benz\n\nE 63 S AMG\n\n165 657 лв.\n\nот 2530 лв./мес.\n\n2021\n96 000 км\nБензин\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 499.6875,
+          "x": 1372.3125,
+          "y": 1348.109375
+        },
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 956,
+          "y": 1187
+        },
+        "text": "Mercedes-Benz\n\nCLS 400d 4MATIC\n\n73 733 лв.\n\nПо договаряне\n\n2020\n171 000 км\nДизел\nАвтом.\nАвтоматик"
+      },
+      {
+        "arrow": null,
+        "overlap": false,
+        "price": {
+          "height": 24,
+          "width": 499.6875,
+          "x": 2312.3125,
+          "y": 1348.109375
+        },
+        "rect": {
+          "height": 355.234375,
+          "width": 928,
+          "x": 1896,
+          "y": 1187
+        },
+        "text": "Mercedes-Benz\n\nGLE 400d Coupe\n\n124 584 лв.\n\nот 1900 лв./мес.\n\n2021\n166 000 км\nДизел\nАвтом.\nАвтоматик"
+      }
+    ],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "22px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 976,
+          "x": 16,
+          "y": 409
+        },
+        "tag": "H1",
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 1,
+          "width": 1,
+          "x": 28,
+          "y": 529
+        },
+        "tag": "H2",
+        "text": "Данни за автомобила"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "36px",
+        "lineHeight": "40px",
+        "rect": {
+          "height": 40,
+          "width": 123.203125,
+          "x": 442.390625,
+          "y": 917
+        },
+        "tag": "H2",
+        "text": "Лизинг"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 186.640625,
+          "x": 16,
+          "y": 1137
+        },
+        "tag": "H2",
+        "text": "Подобни автомобили"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 499.6875,
+          "x": 432.3125,
+          "y": 1323.109375
+        },
+        "tag": "H2",
+        "text": "E 63 S AMG"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 499.6875,
+          "x": 1372.3125,
+          "y": 1323.109375
+        },
+        "tag": "H2",
+        "text": "CLS 400d 4MATIC"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(35, 35, 35)",
+        "font": "16px",
+        "lineHeight": "21px",
+        "rect": {
+          "height": 21,
+          "width": 499.6875,
+          "x": 2312.3125,
+          "y": 1323.109375
+        },
+        "tag": "H2",
+        "text": "GLE 400d Coupe"
+      },
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 332.796875,
+          "x": 32,
+          "y": 1618.234375
+        },
+        "tag": "H2",
+        "text": "Посетете шоурума"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1008,
+      1863
+    ],
+    "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 1023
+  },
+  {
+    "name": "about",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 976,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 77,
+          "width": 976,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 976,
+          "x": 16,
+          "y": 309
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 16,
+          "y": 377
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 344,
+          "y": 377
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 672,
+          "y": 377
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 254,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 354,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 454,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 554,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 654,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 1008,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1008,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/about",
+    "width": 1023
+  },
+  {
+    "name": "contact",
+    "locale": "bg",
+    "actions": [
+      {
+        "clip": false,
+        "href": "#main-content",
+        "rect": {
+          "height": 48,
+          "width": 261.203125,
+          "x": 12,
+          "y": -84
+        },
+        "role": null,
+        "text": "Към основното съдържание"
+      },
+      {
+        "clip": false,
+        "href": "tel:+359877733110",
+        "rect": {
+          "height": 80,
+          "width": 976,
+          "x": 16,
+          "y": 124
+        },
+        "role": null,
+        "text": "Обадете ни се\n0877 733 110"
+      },
+      {
+        "clip": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "rect": {
+          "height": 77,
+          "width": 976,
+          "x": 16,
+          "y": 212
+        },
+        "role": null,
+        "text": "Посетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 54,
+          "width": 976,
+          "x": 16,
+          "y": 345
+        },
+        "role": null,
+        "text": "Автомобили в наличност"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 54,
+          "width": 976,
+          "x": 16,
+          "y": 407
+        },
+        "role": null,
+        "text": "Внос по заявка"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 54,
+          "width": 976,
+          "x": 16,
+          "y": 469
+        },
+        "role": null,
+        "text": "Собствен лизинг"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 54,
+          "width": 976,
+          "x": 16,
+          "y": 531
+        },
+        "role": null,
+        "text": "Продайте автомобила си"
+      },
+      {
+        "clip": false,
+        "href": "/bg/services",
+        "rect": {
+          "height": 52,
+          "width": 976,
+          "x": 16,
+          "y": 605
+        },
+        "role": null,
+        "text": "Всички услуги"
+      },
+      {
+        "clip": false,
+        "href": "https://www.instagram.com/dayandnight_autogroup/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 16,
+          "y": 673
+        },
+        "role": null,
+        "text": "Instagram"
+      },
+      {
+        "clip": false,
+        "href": "https://www.youtube.com/@kristiankirilov1355/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 344,
+          "y": 673
+        },
+        "role": null,
+        "text": "YouTube"
+      },
+      {
+        "clip": false,
+        "href": "https://www.facebook.com/deninoshtautogroup/",
+        "rect": {
+          "height": 78,
+          "width": 320,
+          "x": 672,
+          "y": 673
+        },
+        "role": null,
+        "text": "Facebook"
+      },
+      {
+        "clip": false,
+        "href": "/bg/cars",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 254,
+          "y": 848
+        },
+        "role": null,
+        "text": "Коли"
+      },
+      {
+        "clip": false,
+        "href": "/bg/imports",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 354,
+          "y": 848
+        },
+        "role": null,
+        "text": "Внос"
+      },
+      {
+        "clip": false,
+        "href": "/bg/sell",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 454,
+          "y": 848
+        },
+        "role": null,
+        "text": "Продай"
+      },
+      {
+        "clip": false,
+        "href": "/bg/lease",
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 554,
+          "y": 848
+        },
+        "role": null,
+        "text": "Лизинг"
+      },
+      {
+        "clip": false,
+        "href": null,
+        "rect": {
+          "height": 52,
+          "width": 100,
+          "x": 654,
+          "y": 848
+        },
+        "role": null,
+        "text": "Меню"
+      }
+    ],
+    "bodyWidth": 1008,
+    "cards": [],
+    "errorOverlay": false,
+    "frameMax": "82.5rem",
+    "headings": [
+      {
+        "clamp": "",
+        "color": "rgb(255, 255, 255)",
+        "font": "18px",
+        "lineHeight": "28px",
+        "rect": {
+          "height": 28,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "clamp": "",
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "font": "18px",
+        "lineHeight": "24px",
+        "rect": {
+          "height": 24,
+          "width": 976,
+          "x": 16,
+          "y": 309
+        },
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 900,
+    "hero": [],
+    "imageIssues": [],
+    "overflow": false,
+    "page": [
+      1008,
+      900
+    ],
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 1023
+  }
+]

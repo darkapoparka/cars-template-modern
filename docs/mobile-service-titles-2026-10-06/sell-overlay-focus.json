@@ -1,0 +1,16 @@
+[
+  {
+    "activeSlot": "mobile-sell-manual-entry",
+    "entry": "manual",
+    "openDialogs": 0
+  },
+  {
+    "activeName": "vin",
+    "entry": "vin"
+  },
+  {
+    "activeSlot": "mobile-sell-vin-entry",
+    "entry": "vin-return",
+    "openDialogs": 0
+  }
+]

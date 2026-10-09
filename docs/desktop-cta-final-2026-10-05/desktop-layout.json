@@ -1,0 +1,98 @@
+[
+  {
+    "locale": "bg",
+    "contactLeft": 831.15625,
+    "contactRight": 969,
+    "navRight": 671.859375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 700.0625,
+    "savedRight": 823.15625,
+    "scrollWidth": 1009,
+    "width": 1024
+  },
+  {
+    "locale": "bg",
+    "contactLeft": 1087.15625,
+    "contactRight": 1225,
+    "navRight": 811.859375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 936.0625,
+    "savedRight": 1059.15625,
+    "scrollWidth": 1265,
+    "width": 1280
+  },
+  {
+    "locale": "bg",
+    "contactLeft": 1234.65625,
+    "contactRight": 1372.5,
+    "navRight": 891.859375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 1083.5625,
+    "savedRight": 1206.65625,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "locale": "bg",
+    "contactLeft": 1474.65625,
+    "contactRight": 1612.5,
+    "navRight": 1131.859375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 1323.5625,
+    "savedRight": 1446.65625,
+    "scrollWidth": 1905,
+    "width": 1920
+  },
+  {
+    "locale": "en",
+    "contactLeft": 848.15625,
+    "contactRight": 969,
+    "navRight": 638.375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 742.171875,
+    "savedRight": 840.15625,
+    "scrollWidth": 1009,
+    "width": 1024
+  },
+  {
+    "locale": "en",
+    "contactLeft": 1104.15625,
+    "contactRight": 1225,
+    "navRight": 778.375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 978.171875,
+    "savedRight": 1076.15625,
+    "scrollWidth": 1265,
+    "width": 1280
+  },
+  {
+    "locale": "en",
+    "contactLeft": 1251.65625,
+    "contactRight": 1372.5,
+    "navRight": 858.375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 1125.671875,
+    "savedRight": 1223.65625,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "locale": "en",
+    "contactLeft": 1491.65625,
+    "contactRight": 1612.5,
+    "navRight": 1098.375,
+    "overlap": false,
+    "savedHeight": 48,
+    "savedLeft": 1365.671875,
+    "savedRight": 1463.65625,
+    "scrollWidth": 1905,
+    "width": 1920
+  }
+]

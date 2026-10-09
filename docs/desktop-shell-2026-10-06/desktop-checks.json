@@ -1,0 +1,2218 @@
+[
+  {
+    "name": "home",
+    "width": 1024,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 865,
+          "x": 72,
+          "y": 168
+        },
+        "text": "Намерете своя автомобил"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 929,
+          "x": 40,
+          "y": 494
+        },
+        "text": "Разгледайте автомобилите"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 929,
+          "x": 40,
+          "y": 1781.3125
+        },
+        "text": "По-лесен път към следващия ви автомобил"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 52,
+          "width": 881,
+          "x": 64,
+          "y": 2761.3125
+        },
+        "text": "Следващият ви автомобил ви очаква."
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 929,
+          "x": 40,
+          "y": 3107.3125
+        },
+        "text": "Съвети за пътя напред"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 52,
+          "width": 182.5625,
+          "x": 307.0625,
+          "y": 4353.96875
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 182.546875,
+          "x": 537.625,
+          "y": 4353.96875
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 200.828125,
+          "x": 768.171875,
+          "y": 4353.96875
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 929,
+      "x": 40,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 212.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 391.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 682.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 301.65625,
+          "width": 452.5,
+          "x": 41,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 301.65625,
+          "width": 452.5,
+          "x": 515.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 301.65625,
+          "width": 452.5,
+          "x": 41,
+          "y": 1096.65625
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 301.65625,
+          "width": 452.5,
+          "x": 515.5,
+          "y": 1096.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 404.5,
+          "x": 64,
+          "y": 1879.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 404.5,
+          "x": 540.5,
+          "y": 1879.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 144,
+          "width": 404.5,
+          "x": 64,
+          "y": 2267.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 144,
+          "width": 404.5,
+          "x": 540.5,
+          "y": 2267.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 320,
+          "width": 929,
+          "x": 40,
+          "y": 2697.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 300.328125,
+          "width": 450.5,
+          "x": 41,
+          "y": 3182.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 300.328125,
+          "width": 450.5,
+          "x": 517.5,
+          "y": 3182.3125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": false,
+        "rect": {
+          "height": 300.328125,
+          "width": 450.5,
+          "x": 41,
+          "y": 3678.640625
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 929,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1009,
+      4793
+    ],
+    "search": {
+      "height": 64,
+      "width": 865,
+      "x": 72,
+      "y": 240
+    },
+    "stock": {
+      "height": 1217.3125,
+      "width": 929,
+      "x": 40,
+      "y": 474
+    },
+    "viewport": [
+      1024,
+      1000
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 1024,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 865,
+          "x": 72,
+          "y": 168
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 52,
+          "width": 182.5625,
+          "x": 307.0625,
+          "y": 2420.875
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 182.546875,
+          "x": 537.625,
+          "y": 2420.875
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 200.828125,
+          "x": 768.171875,
+          "y": 2420.875
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 929,
+      "x": 40,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 212.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 391.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 682.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 41,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 357.328125,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.34375,
+          "x": 673.65625,
+          "y": 519
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 41,
+          "y": 941.21875
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 357.328125,
+          "y": 941.21875
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.34375,
+          "x": 673.65625,
+          "y": 941.21875
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 41,
+          "y": 1399.4375
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 357.328125,
+          "y": 1399.4375
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class седан",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.34375,
+          "x": 673.65625,
+          "y": 1399.4375
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 41,
+          "y": 1821.65625
+        }
+      },
+      {
+        "alt": "BMW 4 Series",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 357.328125,
+          "y": 1821.65625
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV в градска среда",
+        "loaded": false,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.34375,
+          "x": 673.65625,
+          "y": 1821.65625
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 929,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1009,
+      2860
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1024,
+      1000
+    ]
+  },
+  {
+    "name": "pdp",
+    "width": 1024,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "21.189px",
+        "rect": {
+          "height": 27.53125,
+          "width": 469.875,
+          "x": 64,
+          "y": 214
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 509,
+          "x": 64,
+          "y": 689.109375
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 509,
+          "x": 64,
+          "y": 1194.109375
+        },
+        "text": "Описание"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 331.796875,
+          "x": 40,
+          "y": 1392.109375
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 52,
+          "width": 182.5625,
+          "x": 307.0625,
+          "y": 2078.328125
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 182.546875,
+          "x": 537.625,
+          "y": 2078.328125
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 200.828125,
+          "x": 768.171875,
+          "y": 2078.328125
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 329.578125,
+          "width": 557,
+          "x": 40,
+          "y": 319.53125
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 41,
+          "y": 1451.109375
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.328125,
+          "x": 357.328125,
+          "y": 1451.109375
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 196.21875,
+          "width": 294.34375,
+          "x": 673.65625,
+          "y": 1451.109375
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 929,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1009,
+      2517
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1024,
+      1000
+    ]
+  },
+  {
+    "name": "home",
+    "width": 1280,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 182.5,
+          "y": 168
+        },
+        "text": "Намерете своя автомобил"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1185,
+          "x": 40,
+          "y": 494
+        },
+        "text": "Разгледайте автомобилите"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1185,
+          "x": 40,
+          "y": 1172.15625
+        },
+        "text": "По-лесен път към следващия ви автомобил"
+      },
+      {
+        "font": "37.95px",
+        "rect": {
+          "height": 52,
+          "width": 1121,
+          "x": 72,
+          "y": 1818.15625
+        },
+        "text": "Следващият ви автомобил ви очаква."
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1185,
+          "x": 40,
+          "y": 2164.15625
+        },
+        "text": "Съвети за пътя напред"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 378.5,
+          "y": 2798.3125
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 668.59375,
+          "y": 2798.3125
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 266.3125,
+          "x": 958.6875,
+          "y": 2798.3125
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1185,
+      "x": 40,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 151.859375,
+          "width": 227.6875,
+          "x": 96.5,
+          "y": 118.578125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 151.859375,
+          "width": 227.6875,
+          "x": 940.8125,
+          "y": 129.28125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 340.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 519.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 667.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 810.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 184.15625,
+          "width": 276.25,
+          "x": 41,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 184.15625,
+          "width": 276.25,
+          "x": 343.25,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 184.15625,
+          "width": 276.25,
+          "x": 645.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 184.15625,
+          "width": 276.25,
+          "x": 947.75,
+          "y": 569
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 230.25,
+          "x": 64,
+          "y": 1270.15625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 230.25,
+          "x": 366.25,
+          "y": 1270.15625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 230.25,
+          "x": 668.5,
+          "y": 1270.15625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 230.25,
+          "x": 970.75,
+          "y": 1270.15625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 320,
+          "width": 1185,
+          "x": 40,
+          "y": 1754.15625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 184.15625,
+          "width": 276.25,
+          "x": 41,
+          "y": 2239.15625
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1185,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1265,
+      3221
+    ],
+    "search": {
+      "height": 64,
+      "width": 900,
+      "x": 182.5,
+      "y": 240
+    },
+    "stock": {
+      "height": 608.15625,
+      "width": 1185,
+      "x": 40,
+      "y": 474
+    },
+    "viewport": [
+      1280,
+      1000
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 1280,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 182.5,
+          "y": 168
+        },
+        "text": "Автомобили за продажба"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 378.5,
+          "y": 2004.46875
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 668.59375,
+          "y": 2004.46875
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 266.3125,
+          "x": 958.6875,
+          "y": 2004.46875
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1185,
+      "x": 40,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 151.859375,
+          "width": 227.6875,
+          "x": 96.5,
+          "y": 118.578125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 151.859375,
+          "width": 227.6875,
+          "x": 940.8125,
+          "y": 129.28125
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 340.140625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 519.8125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 667.046875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 810.609375,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Черен BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 41,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 342.25,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Червено BMW M4 Competition пред модерен шоурум",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 643.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 944.75,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 41,
+          "y": 967.15625
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 342.25,
+          "y": 967.15625
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 643.5,
+          "y": 967.15625
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 944.75,
+          "y": 967.15625
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 41,
+          "y": 1415.3125
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 342.25,
+          "y": 1415.3125
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1185,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1265,
+      2427
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1280,
+      1000
+    ]
+  },
+  {
+    "name": "pdp",
+    "width": 1280,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "26.565px",
+        "rect": {
+          "height": 34.53125,
+          "width": 589.234375,
+          "x": 64,
+          "y": 214
+        },
+        "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 765,
+          "x": 64,
+          "y": 847.59375
+        },
+        "text": "Данни за автомобила"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 765,
+          "x": 64,
+          "y": 1300.59375
+        },
+        "text": "Описание"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 331.796875,
+          "x": 40,
+          "y": 1498.59375
+        },
+        "text": "Подобни автомобили"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 378.5,
+          "y": 2210.75
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 242.09375,
+          "x": 668.59375,
+          "y": 2210.75
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 266.3125,
+          "x": 958.6875,
+          "y": 2210.75
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": null,
+    "images": [
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 481.0625,
+          "width": 813,
+          "x": 40,
+          "y": 326.53125
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class седан",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 41,
+          "y": 1557.59375
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 342.25,
+          "y": 1557.59375
+        }
+      },
+      {
+        "alt": "Черен Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 186.15625,
+          "width": 279.25,
+          "x": 643.5,
+          "y": 1557.59375
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1185,
+      "x": 40,
+      "y": 0
+    },
+    "page": [
+      1265,
+      2634
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1280,
+      1000
+    ]
+  },
+  {
+    "name": "about",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 226
+        },
+        "text": "За Modern"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1384,
+          "x": 260.5,
+          "y": 822
+        },
+        "text": "Нека открием следващия ви автомобил."
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1344,
+          "x": 280.5,
+          "y": 1140
+        },
+        "text": "Няколко полезни отговора"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 1628
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 1628
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 1628
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1905,
+      "x": 0,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "Предаване на ключ за автомобил",
+        "loaded": true,
+        "rect": {
+          "height": 228,
+          "width": 342,
+          "x": 232.5,
+          "y": 482
+        }
+      },
+      {
+        "alt": "Консултант в автосалон",
+        "loaded": false,
+        "rect": {
+          "height": 228,
+          "width": 342,
+          "x": 598.5,
+          "y": 482
+        }
+      },
+      {
+        "alt": "Автомобили в светъл автосалон",
+        "loaded": true,
+        "rect": {
+          "height": 228,
+          "width": 342,
+          "x": 964.5,
+          "y": 482
+        }
+      },
+      {
+        "alt": "Ръкостискане при предаване на автомобил",
+        "loaded": true,
+        "rect": {
+          "height": 228,
+          "width": 342,
+          "x": 1330.5,
+          "y": 482
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      2051
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "name": "contact",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 226
+        },
+        "text": "Свържете се с нас"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 746.078125,
+          "x": 273.5,
+          "y": 971
+        },
+        "text": "Нека поговорим"
+      },
+      {
+        "font": "24px",
+        "rect": {
+          "height": 32,
+          "width": 531.921875,
+          "x": 1099.578125,
+          "y": 919
+        },
+        "text": "Данни за контакт"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 1752
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 1752
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 1752
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 1598,
+      "width": 1905,
+      "x": 0,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 19,
+          "width": 19,
+          "x": 1189.390625,
+          "y": 1477.5
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 36,
+          "width": 42,
+          "x": 1344.53125,
+          "y": 1469
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 28,
+          "width": 28,
+          "x": 1518.171875,
+          "y": 1473
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      2175
+    ],
+    "search": {
+      "height": 462,
+      "width": 746.078125,
+      "x": 273.5,
+      "y": 1095
+    },
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "name": "services",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 166
+        },
+        "text": "Нашите услуги"
+      },
+      {
+        "font": "20px",
+        "rect": {
+          "height": 28,
+          "width": 292,
+          "x": 257.5,
+          "y": 663
+        },
+        "text": "Автомобили в наличностНаличности"
+      },
+      {
+        "font": "20px",
+        "rect": {
+          "height": 28,
+          "width": 292,
+          "x": 623.5,
+          "y": 663
+        },
+        "text": "Внос по заявкаВнос"
+      },
+      {
+        "font": "20px",
+        "rect": {
+          "height": 28,
+          "width": 292,
+          "x": 989.5,
+          "y": 663
+        },
+        "text": "Собствен лизингЛизинг"
+      },
+      {
+        "font": "20px",
+        "rect": {
+          "height": 28,
+          "width": 292,
+          "x": 1355.5,
+          "y": 663
+        },
+        "text": "Продайте автомобила сиПродай"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 986
+        },
+        "text": "Открийте автомобил"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 986
+        },
+        "text": "Разгледайте"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 986
+        },
+        "text": "Посетете автосалона"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1905,
+      "x": 0,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 292,
+          "x": 257.5,
+          "y": 507
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 292,
+          "x": 623.5,
+          "y": 507
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 292,
+          "x": 989.5,
+          "y": 507
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 292,
+          "x": 1355.5,
+          "y": 507
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      1409
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "name": "home-en",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 168
+        },
+        "text": "Find Your Perfect Car"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 494
+        },
+        "text": "Explore our cars"
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 1178.65625
+        },
+        "text": "A Better Way To Find Your Next Car"
+      },
+      {
+        "font": "40px",
+        "rect": {
+          "height": 52,
+          "width": 1376,
+          "x": 264.5,
+          "y": 1770.65625
+        },
+        "text": "Your next car is waiting."
+      },
+      {
+        "font": "32px",
+        "rect": {
+          "height": 42,
+          "width": 1440,
+          "x": 232.5,
+          "y": 2116.65625
+        },
+        "text": "Advice For The Road Ahead"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 2793.3125
+        },
+        "text": "Find a car"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 2793.3125
+        },
+        "text": "Explore"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 2793.3125
+        },
+        "text": "Visit the showroom"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 416.5,
+          "y": 111.90625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 1248.5,
+          "y": 123.1875
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 692.828125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 818,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 987.421875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 1114.515625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Black BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 233.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 599.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "Red BMW M4 Competition in front of a modern showroom",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 965.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 1331.5,
+          "y": 569
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 256.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 622.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 988.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 144,
+          "width": 294,
+          "x": 1354.5,
+          "y": 1276.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 320,
+          "width": 1440,
+          "x": 232.5,
+          "y": 1706.65625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 226.65625,
+          "width": 340,
+          "x": 233.5,
+          "y": 2191.65625
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      3216
+    ],
+    "search": {
+      "height": 64,
+      "width": 900,
+      "x": 502.5,
+      "y": 240
+    },
+    "stock": {
+      "height": 614.65625,
+      "width": 1440,
+      "x": 232.5,
+      "y": 474
+    },
+    "viewport": [
+      1920,
+      1000
+    ]
+  },
+  {
+    "name": "cars-en",
+    "width": 1920,
+    "frameMax": "90rem",
+    "headings": [
+      {
+        "font": "40px",
+        "rect": {
+          "height": 48,
+          "width": 900,
+          "x": 502.5,
+          "y": 168
+        },
+        "text": "Cars for sale"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 642.171875,
+          "y": 1997.96875
+        },
+        "text": "Find a car"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 301.390625,
+          "x": 991.5625,
+          "y": 1997.96875
+        },
+        "text": "Explore"
+      },
+      {
+        "font": "18px",
+        "rect": {
+          "height": 26,
+          "width": 331.53125,
+          "x": 1340.953125,
+          "y": 1997.96875
+        },
+        "text": "Visit the showroom"
+      }
+    ],
+    "hero": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "images": [
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 416.5,
+          "y": 111.90625
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 160.078125,
+          "width": 240,
+          "x": 1248.5,
+          "y": 123.1875
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 692.828125,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 818,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 987.421875,
+          "y": 334
+        }
+      },
+      {
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 1114.515625,
+          "y": 334
+        }
+      },
+      {
+        "alt": "Black BMW X5 SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz GLS 4MATIC AMG SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Red BMW M4 Competition in front of a modern showroom",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 963.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "BMW 7 Series",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 1328.5,
+          "y": 519
+        }
+      },
+      {
+        "alt": "Mercedes-Benz E-Class saloon",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Mercedes CLS",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Audi Q8",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 963.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Black Mercedes-Benz GLE SUV",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 1328.5,
+          "y": 973.65625
+        }
+      },
+      {
+        "alt": "Mercedes-Benz S-Class saloon",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 233.5,
+          "y": 1428.3125
+        }
+      },
+      {
+        "alt": "Range Rover Sport",
+        "loaded": true,
+        "rect": {
+          "height": 228.65625,
+          "width": 343,
+          "x": 598.5,
+          "y": 1428.3125
+        }
+      }
+    ],
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "page": [
+      1905,
+      2421
+    ],
+    "search": null,
+    "stock": null,
+    "viewport": [
+      1920,
+      1000
+    ]
+  }
+]

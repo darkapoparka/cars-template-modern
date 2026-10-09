@@ -1,0 +1,58 @@
+[
+  {
+    "route": "home",
+    "width": 1024,
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pillHeights": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "searchHeight": 64
+  },
+  {
+    "route": "cars",
+    "width": 1024,
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pillHeights": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "searchHeight": 64
+  },
+  {
+    "route": "home",
+    "width": 1440,
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pillHeights": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "searchHeight": 64
+  },
+  {
+    "route": "cars",
+    "width": 1440,
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pillHeights": [
+      36,
+      36,
+      36,
+      36
+    ],
+    "searchHeight": 64
+  }
+]

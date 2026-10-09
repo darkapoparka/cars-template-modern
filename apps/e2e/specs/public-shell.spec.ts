@@ -7,7 +7,7 @@ import {
 const categoryTriggerPattern = /категория/i;
 const clearFilterPattern = /^Премахни филтъра/;
 const truckCategoryPattern = /^Камиони/;
-const mobileSearchTriggerPattern = /Търси \d+ автомобил/;
+const mobileSearchTriggerPattern = /^Марка или модел$/;
 
 test("mobile import separates field clear from overlay close", async ({
   page,
@@ -241,7 +241,7 @@ test("public marketplace shell searches and opens structured filters", async ({
       .getByRole("button", { name: "Автомобил, Автомобили" })
       .click();
     await expect(
-      filterDialog.getByRole("heading", { exact: true, name: "Автомобил" })
+      filterDialog.getByRole("heading", { exact: true, name: "Тип" })
     ).toBeVisible();
     await expect(
       filterDialog.getByRole("button", { name: truckCategoryPattern })

@@ -1,0 +1,12 @@
+{
+  "status": "unavailable",
+  "reason": "The first screenshot retained the preceding mobile surface width during the viewport transition. It is not a matched desktop baseline.",
+  "beforeDimensions": [
+    375,
+    990
+  ],
+  "afterDimensions": [
+    1425,
+    990
+  ]
+}

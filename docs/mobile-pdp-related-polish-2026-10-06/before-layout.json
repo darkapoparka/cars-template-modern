@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "bg": "rgb(255, 255, 255)",
+      "border": "0px solid rgb(217, 219, 223)",
+      "classes": "vehicle-card-desktop-module__5MIBZG__card grid grid-cols-[46%_minmax(0,1fr)] group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-2 lg:flex lg:flex-col lg:gap-0",
+      "display": "grid",
+      "height": 166.640625,
+      "width": 341
+    },
+    {
+      "bg": "rgb(255, 255, 255)",
+      "border": "0px solid rgb(217, 219, 223)",
+      "classes": "vehicle-card-desktop-module__5MIBZG__card grid grid-cols-[46%_minmax(0,1fr)] group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-2 lg:flex lg:flex-col lg:gap-0",
+      "display": "grid",
+      "height": 166.640625,
+      "width": 341
+    },
+    {
+      "bg": "rgb(255, 255, 255)",
+      "border": "0px solid rgb(217, 219, 223)",
+      "classes": "vehicle-card-desktop-module__5MIBZG__card grid grid-cols-[46%_minmax(0,1fr)] group relative overflow-hidden rounded-xl border-0 bg-card p-0 lg:rounded-lg lg:border lg:border-border lg:**:data-[slot=vehicle-card-title]:line-clamp-2 lg:flex lg:flex-col lg:gap-0",
+      "display": "grid",
+      "height": 166.640625,
+      "width": 341
+    }
+  ],
+  "rail": {
+    "scrollWidth": 1053,
+    "width": 343
+  },
+  "section": {
+    "background": "rgba(0, 0, 0, 0)",
+    "height": 232.640625,
+    "width": 343,
+    "x": 16,
+    "y": 1135.5
+  },
+  "viewport": 390
+}

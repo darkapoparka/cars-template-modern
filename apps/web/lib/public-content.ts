@@ -11,6 +11,8 @@ export type ContentCategory = Exclude<ContentFilter, "all">;
 export interface PublicContentCard {
   readonly category: string;
   readonly description: string;
+  readonly desktopImage?: string;
+  readonly desktopTitle?: string;
   readonly filter: ContentCategory;
   readonly image: string;
   readonly meta: string;

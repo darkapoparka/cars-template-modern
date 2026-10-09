@@ -1,0 +1,68 @@
+[
+  {
+    "actions": [
+      {
+        "height": 48,
+        "href": "/bg/cars",
+        "label": "Разгледайте автомобилите"
+      },
+      {
+        "height": 48,
+        "href": "/bg/contact",
+        "label": "Свържете се с нас"
+      }
+    ],
+    "frame": {
+      "height": 320,
+      "y": 90
+    },
+    "overflow": false,
+    "path": "/bg/guides",
+    "title": "Съвети и статии",
+    "titleY": 154
+  },
+  {
+    "actions": [
+      {
+        "height": 48,
+        "href": "/bg/cars",
+        "label": "Разгледайте автомобилите"
+      },
+      {
+        "height": 48,
+        "href": "/bg/contact",
+        "label": "Свържете се с нас"
+      }
+    ],
+    "frame": {
+      "height": 320,
+      "y": 90
+    },
+    "overflow": false,
+    "path": "/bg/legal/privacy",
+    "title": "Политика за поверителност",
+    "titleY": 154
+  },
+  {
+    "actions": [
+      {
+        "height": 48,
+        "href": "/bg/cars",
+        "label": "Разгледайте автомобилите"
+      },
+      {
+        "height": 48,
+        "href": "/bg/contact",
+        "label": "Свържете се с нас"
+      }
+    ],
+    "frame": {
+      "height": 320,
+      "y": 90
+    },
+    "overflow": false,
+    "path": "/bg/legal/terms",
+    "title": "Условия за ползване",
+    "titleY": 154
+  }
+]

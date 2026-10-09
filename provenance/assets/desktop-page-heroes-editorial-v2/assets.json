@@ -1,0 +1,44 @@
+[
+  {
+    "role": "desktopPageHeroes.services",
+    "description": "Generated illustrative template artwork; not an actual dealer location.",
+    "generatedAt": "2026-10-08",
+    "source": "services/source.png",
+    "output": "/images/desktop/services-editorial-v2.webp",
+    "width": 2048,
+    "height": 768,
+    "sourceSha256": "04eabc699f16bfe6f01c5735f4c63a7165f1f3547ad90c6d4770033a11df0eee",
+    "outputSha256": "febcb946a2dc2bf5be52358a201fa5fc43d9bacd0c56d26890aba0c7084e08f2",
+    "sourceBytes": 2231104,
+    "outputBytes": 240888,
+    "processing": "WebP encoding only. Original dimensions and composition retained."
+  },
+  {
+    "role": "desktopPageHeroes.about",
+    "description": "Generated illustrative template artwork; not an actual dealer location.",
+    "generatedAt": "2026-10-08",
+    "source": "about/source.png",
+    "output": "/images/desktop/about-editorial-v2.webp",
+    "width": 2048,
+    "height": 768,
+    "sourceSha256": "c40b9cdf2f36243ed55eeec2b0743f232b0b751db37a38e2d7c9e3e672b41288",
+    "outputSha256": "be2ca60de89e2b115d09d4af2690ba58e26c48455efa7b93433ae2b4edceb4fe",
+    "sourceBytes": 2429128,
+    "outputBytes": 266804,
+    "processing": "WebP encoding only. Original dimensions and composition retained."
+  },
+  {
+    "role": "desktopPageHeroes.contact",
+    "description": "Generated illustrative template artwork; not an actual dealer location.",
+    "generatedAt": "2026-10-08",
+    "source": "contact/source.png",
+    "output": "/images/desktop/contact-editorial-v2.webp",
+    "width": 2020,
+    "height": 778,
+    "sourceSha256": "81fcaa671fba3330c2b0e11a345d298424585da29c75ed389b0b0e7ae2ccba40",
+    "outputSha256": "e1e9507a8961f3a084997dc34969b9a2d679cf672e229a5668e0129755cb662b",
+    "sourceBytes": 2690932,
+    "outputBytes": 375484,
+    "processing": "WebP encoding only. Original dimensions and composition retained."
+  }
+]

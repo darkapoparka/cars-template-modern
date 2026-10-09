@@ -1,0 +1,17 @@
+[
+  {
+    "brokenImages": 0,
+    "heroHeight": 320,
+    "overflow": false,
+    "pillGroupBackground": "rgba(0, 0, 0, 0)",
+    "view": "home",
+    "width": 1440
+  },
+  {
+    "brokenImages": 0,
+    "heroHeight": 320,
+    "overflow": false,
+    "view": "cars",
+    "width": 1440
+  }
+]

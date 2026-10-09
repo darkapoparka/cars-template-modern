@@ -1,0 +1,38 @@
+[
+  {
+    "page": "home",
+    "width": 1425,
+    "height": 990,
+    "differentPixels": 1237,
+    "strongDifferences": 0,
+    "meanChannelDifference": 0.0012766259082048555,
+    "identical": false
+  },
+  {
+    "page": "sell",
+    "width": 1425,
+    "height": 990,
+    "differentPixels": 10741,
+    "strongDifferences": 0,
+    "meanChannelDifference": 0.010120148856990962,
+    "identical": false
+  },
+  {
+    "page": "guides",
+    "width": 1425,
+    "height": 990,
+    "differentPixels": 4837,
+    "strongDifferences": 0,
+    "meanChannelDifference": 0.004258255065272609,
+    "identical": false
+  },
+  {
+    "page": "about",
+    "width": 1425,
+    "height": 990,
+    "differentPixels": 0,
+    "strongDifferences": 0,
+    "meanChannelDifference": 0,
+    "identical": true
+  }
+]

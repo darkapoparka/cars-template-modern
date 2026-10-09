@@ -28,8 +28,19 @@ const getDesktopPreviewIdentity = (
   };
 };
 
-const getDesktopDiscoveryVehicles = (artwork: LeadSiteConfig["artwork"]) => {
-  if (artwork && "desktopDiscoveryVehicles" in artwork) {
+const getDesktopVehicleArtwork = (
+  artwork: LeadSiteConfig["artwork"],
+  role: "desktopDiscoveryVehicles" | "desktopInventoryVehicles"
+) => {
+  if (artwork && role in artwork) {
+    return artwork[role];
+  }
+  // Existing dealer pairs continue to serve both discovery pages.
+  if (
+    role === "desktopInventoryVehicles" &&
+    artwork &&
+    "desktopDiscoveryVehicles" in artwork
+  ) {
     return artwork.desktopDiscoveryVehicles;
   }
   // Keep explicitly personalized photography and older cutouts authoritative.
@@ -41,13 +52,54 @@ const getDesktopDiscoveryVehicles = (artwork: LeadSiteConfig["artwork"]) => {
   ) {
     return undefined;
   }
-  return defaultSiteArtwork.desktopDiscoveryVehicles;
+  return defaultSiteArtwork[role];
 };
 
 const getDesktopServiceCards = (artwork: LeadSiteConfig["artwork"]) =>
   artwork?.desktopServiceCards ??
   artwork?.desktopServices ??
   defaultSiteArtwork.desktopServiceCards;
+
+const getDesktopPageHeroes = (artwork: LeadSiteConfig["artwork"]) => {
+  // A dealer's existing shared photo or cutouts remain the fallback for each page.
+  if (
+    artwork?.desktopHeroScene ||
+    artwork?.heroScene ||
+    artwork?.heroLeft ||
+    artwork?.heroRight
+  ) {
+    return artwork.desktopPageHeroes;
+  }
+  return {
+    ...defaultSiteArtwork.desktopPageHeroes,
+    ...artwork?.desktopPageHeroes,
+  };
+};
+
+const getDesktopPageVehicles = (artwork: LeadSiteConfig["artwork"]) => {
+  if (
+    artwork &&
+    "desktopPageVehicles" in artwork &&
+    artwork.desktopPageVehicles === undefined
+  ) {
+    return undefined;
+  }
+  // Retain shared dealer photography and cutouts unless a page pair is explicit.
+  if (
+    artwork?.desktopHeroScene ||
+    artwork?.heroScene ||
+    artwork?.heroLeft ||
+    artwork?.heroRight
+  ) {
+    return artwork.desktopPageVehicles;
+  }
+  return {
+    ...defaultSiteArtwork.desktopPageVehicles,
+    ...(artwork?.desktopPageHeroes?.services ? { services: undefined } : {}),
+    ...(artwork?.desktopPageBanner ? { guides: undefined } : {}),
+    ...artwork?.desktopPageVehicles,
+  };
+};
 
 /** Translate the existing Cars adaptation contract once, at the configuration boundary. */
 export const createPublicSiteConfig = (
@@ -117,7 +169,16 @@ export const createPublicSiteConfig = (
       ...config.artwork,
       // Older dealer service sets remain authoritative unless a card set is supplied.
       desktopServiceCards: getDesktopServiceCards(config.artwork),
-      desktopDiscoveryVehicles: getDesktopDiscoveryVehicles(config.artwork),
+      desktopPageHeroes: getDesktopPageHeroes(config.artwork),
+      desktopPageVehicles: getDesktopPageVehicles(config.artwork),
+      desktopDiscoveryVehicles: getDesktopVehicleArtwork(
+        config.artwork,
+        "desktopDiscoveryVehicles"
+      ),
+      desktopInventoryVehicles: getDesktopVehicleArtwork(
+        config.artwork,
+        "desktopInventoryVehicles"
+      ),
       // Explicit cutouts from older dealer copies must not be hidden by the master scene.
       heroScene:
         config.artwork?.heroScene ??

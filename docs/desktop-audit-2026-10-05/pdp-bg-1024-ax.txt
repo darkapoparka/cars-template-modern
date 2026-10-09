@@ -1,0 +1,3 @@
+Browser tab: 1, Title: "2020 BMW X5 M50d | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020".
+There has been no change in the accessibility tree.
+The focused UI element is 1 AXWebArea 2020 BMW X5 M50d | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020

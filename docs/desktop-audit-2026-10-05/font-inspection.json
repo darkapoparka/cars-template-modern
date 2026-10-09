@@ -1,0 +1,27 @@
+{
+  "names": {
+    "1": "DM Sans 9pt",
+    "2": "Regular"
+  },
+  "glyphCount": 222,
+  "hasCyrillicA": false,
+  "hasCyrillicSmallA": false,
+  "hasIWithGrave": false,
+  "cyrillicGlyphs": 0,
+  "hasVariableAxes": true,
+  "axes": [
+    {
+      "tag": "opsz",
+      "min": 9.0,
+      "default": 9.0,
+      "max": 40.0
+    },
+    {
+      "tag": "wght",
+      "min": 100.0,
+      "default": 400.0,
+      "max": 1000.0
+    }
+  ],
+  "weightClass": 400
+}

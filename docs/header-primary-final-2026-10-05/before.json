@@ -1,0 +1,36 @@
+[
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "fontSize": "15px",
+    "fontWeight": "500",
+    "height": 48,
+    "lineHeight": "24px",
+    "padding": "0px 20px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Запазени",
+    "textShadow": "none",
+    "width": 144,
+    "x": 1072.5,
+    "y": 21
+  },
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "fontSize": "15px",
+    "fontWeight": "500",
+    "height": 48,
+    "lineHeight": "24px",
+    "padding": "0px 20px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Свържете се",
+    "textShadow": "none",
+    "width": 144,
+    "x": 1228.5,
+    "y": 21
+  }
+]

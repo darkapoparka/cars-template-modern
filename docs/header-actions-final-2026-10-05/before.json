@@ -1,0 +1,28 @@
+[
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "fontSize": "14px",
+    "height": 48,
+    "lineHeight": "24px",
+    "padding": "0px 16px",
+    "radius": "12px",
+    "text": "Запазени",
+    "width": 123.09375,
+    "x": 1083.5625,
+    "y": 21
+  },
+  {
+    "background": "rgb(64, 95, 242)",
+    "color": "rgb(255, 255, 255)",
+    "fontSize": "14px",
+    "height": 48,
+    "lineHeight": "21px",
+    "padding": "0px 24px",
+    "radius": "10px",
+    "text": "Свържете се",
+    "width": 137.84375,
+    "x": 1234.65625,
+    "y": 21
+  }
+]

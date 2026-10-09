@@ -1,0 +1,74 @@
+[
+  {
+    "route": "home",
+    "field": 0,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "0",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всички марки"
+  },
+  {
+    "route": "home",
+    "field": 1,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "0",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всички модели"
+  },
+  {
+    "route": "home",
+    "field": 2,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "0",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всяка цена"
+  },
+  {
+    "route": "cars",
+    "field": 0,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "0",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всички марки"
+  },
+  {
+    "route": "cars",
+    "field": 1,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "0",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всички модели"
+  },
+  {
+    "route": "cars",
+    "field": 2,
+    "background": "color(srgb 0.927843 0.927843 0.927843)",
+    "dialogs": 0,
+    "focusVisible": false,
+    "hover": true,
+    "nextDivider": "1",
+    "ownDivider": "0",
+    "radius": "15984px",
+    "text": "Всяка цена"
+  }
+]

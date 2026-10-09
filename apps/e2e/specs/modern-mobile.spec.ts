@@ -4,7 +4,7 @@ import { settleModernPage } from "../fixtures/modern-visual-health";
 
 const mapEmbedPattern = /google\.com\/maps/;
 const contactHandoffPattern = /\/contact\?/;
-const manualEntryPattern = /Нямате VIN/;
+const manualEntryPattern = /Нямаш VIN/;
 const sellRoutePattern = /\/sell$/;
 const listingTopicPattern = /topic=listings/;
 const importTopicPattern = /topic=import/;
@@ -91,7 +91,7 @@ test("VIN-only continuation, edit and reload preserve the VIN", async ({
 }) => {
   await page.goto("/sell");
   await page
-    .getByRole("button", { name: "Въведете VIN номер", exact: true })
+    .getByRole("button", { name: "Въведи VIN номер", exact: true })
     .click();
   const dialog = page.getByRole("dialog");
   await dialog.locator('input[name="vin"]').fill(syntheticVin);
@@ -161,7 +161,7 @@ test("partial VIN and empty manual details cannot continue", async ({
 }) => {
   await page.goto("/sell");
   await page
-    .getByRole("button", { name: "Въведете VIN номер", exact: true })
+    .getByRole("button", { name: "Въведи VIN номер", exact: true })
     .click();
   const dialog = page.getByRole("dialog");
   await dialog.locator('input[name="vin"]').fill("SHORT");

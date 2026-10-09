@@ -1,0 +1,13 @@
+{
+  "importFilter": [
+    {
+      "href": "/bg/imports",
+      "image": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-imports-v1.webp&w=256&q=75"
+    }
+  ],
+  "financeSearch": [
+    "/bg/lease"
+  ],
+  "restored": 4,
+  "nestedControls": 0
+}

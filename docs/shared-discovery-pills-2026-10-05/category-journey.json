@@ -1,0 +1,37 @@
+{
+  "forward": [
+    {
+      "url": "http://127.0.0.1:6482/bg/motorbikes?category=motorbike&priceMax=100000&currency=BGN&yearMin=2010&sort=newest",
+      "selected": "Мотори"
+    },
+    {
+      "url": "http://127.0.0.1:6482/bg/vans?category=van&priceMax=100000&currency=BGN&yearMin=2010&sort=newest",
+      "selected": "Бусове",
+      "make": "Всички марки",
+      "sort": "Най-нови"
+    },
+    {
+      "url": "http://127.0.0.1:6482/bg/trucks?category=truck&priceMax=100000&currency=BGN&yearMin=2010&sort=newest",
+      "selected": "Камиони",
+      "make": "Всички марки",
+      "sort": "Най-нови"
+    }
+  ],
+  "back": [
+    {
+      "url": "http://127.0.0.1:6482/bg/vans?category=van&priceMax=100000&currency=BGN&yearMin=2010&sort=newest",
+      "category": "Бусове",
+      "make": "Всички марки"
+    },
+    {
+      "url": "http://127.0.0.1:6482/bg/motorbikes?category=motorbike&priceMax=100000&currency=BGN&yearMin=2010&sort=newest",
+      "category": "Мотори",
+      "make": "Всички марки"
+    },
+    {
+      "url": "http://127.0.0.1:6482/bg/cars?make=BMW&model=X5&priceMax=100000&yearMin=2010&sort=newest",
+      "category": "Автомобили",
+      "make": "BMW"
+    }
+  ]
+}

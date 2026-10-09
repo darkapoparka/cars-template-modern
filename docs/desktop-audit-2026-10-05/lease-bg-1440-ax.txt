@@ -1,0 +1,3 @@
+Browser tab: 1, Title: "Финансиране на автомобил | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/lease".
+There has been no change in the accessibility tree.
+The focused UI element is 1 AXWebArea Финансиране на автомобил | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/lease

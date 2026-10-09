@@ -25,21 +25,32 @@ export function LeaseMobilePreferences({
   const [kind, setKind] = useState<"term" | "deposit" | null>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
   const copy = leaseSelectorCopy[locale];
+  const depositLabel = locale === "bg" ? "Вноска" : "Deposit";
+  const termUnit = locale === "bg" ? "м" : "mo.";
   const options = kind === "term" ? copy.termOptions : copy.depositOptions;
   const value = kind === "term" ? term : deposit;
   return (
     <>
       {(["term", "deposit"] as const).map((key) => {
         const selected = key === "term" ? term : deposit;
-        const label =
-          key === "term" ? copy.termShortLabel : copy.depositShortLabel;
+        const label = key === "term" ? copy.termShortLabel : depositLabel;
         const choices = key === "term" ? copy.termOptions : copy.depositOptions;
         const summary = choices.find(
           (option) => option.value === selected
         )?.label;
+        const selectedLabel =
+          key === "term"
+            ? `${label}:${selected}${termUnit}`
+            : `${label}: ${summary}`;
+        const pillLabel = selected === "flexible" ? label : selectedLabel;
         return (
           <button
             aria-haspopup="dialog"
+            aria-label={
+              key === "term" && selected !== "flexible"
+                ? `${pillLabel}, ${summary}`
+                : undefined
+            }
             className={getMobileQuickPillClassName(selected !== "flexible")}
             key={key}
             onClick={(event) => {
@@ -48,7 +59,7 @@ export function LeaseMobilePreferences({
             }}
             type="button"
           >
-            {selected === "flexible" ? label : `${label}: ${summary}`}
+            {pillLabel}
             <DealerUiIcon className="size-3.5" name="chevronDown" />
           </button>
         );
@@ -75,7 +86,7 @@ export function LeaseMobilePreferences({
             ariaLabel={locale === "bg" ? "Затвори" : "Close"}
           />
         }
-        title={kind === "term" ? copy.termLabel : copy.depositLabel}
+        title={kind === "term" ? copy.termShortLabel : depositLabel}
       >
         <div className="grid gap-2 px-4 pb-4">
           {options.map((option) => (

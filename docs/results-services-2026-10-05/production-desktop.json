@@ -1,0 +1,242 @@
+[
+  {
+    "locale": "bg",
+    "route": "home",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 202,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 154,
+            "width": 900,
+            "x": 262.5,
+            "y": 154
+          },
+          "text": "Намерете своя автомобил"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "route": "cars",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 202,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 154,
+            "width": 900,
+            "x": 262.5,
+            "y": 154
+          },
+          "text": "Автомобили за продажба"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "route": "services",
+    "width": 1440,
+    "data": {
+      "cards": 4,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 198,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 150,
+            "width": 900,
+            "x": 262.5,
+            "y": 150
+          },
+          "text": "Нашите услуги"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "route": "about",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 238,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 190,
+            "width": 900,
+            "x": 262.5,
+            "y": 190
+          },
+          "text": "За Modern"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "bg",
+    "route": "contact",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 238,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 190,
+            "width": 900,
+            "x": 262.5,
+            "y": 190
+          },
+          "text": "Свържете се с нас"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "route": "home",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 202,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 154,
+            "width": 900,
+            "x": 262.5,
+            "y": 154
+          },
+          "text": "Find Your Perfect Car"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "route": "cars",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 202,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 154,
+            "width": 900,
+            "x": 262.5,
+            "y": 154
+          },
+          "text": "Cars for sale"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "route": "services",
+    "width": 1440,
+    "data": {
+      "cards": 4,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 198,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 150,
+            "width": 900,
+            "x": 262.5,
+            "y": 150
+          },
+          "text": "Our services"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "route": "about",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 238,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 190,
+            "width": 900,
+            "x": 262.5,
+            "y": 190
+          },
+          "text": "About Modern"
+        }
+      ]
+    }
+  },
+  {
+    "locale": "en",
+    "route": "contact",
+    "width": 1440,
+    "data": {
+      "cards": 0,
+      "overflow": false,
+      "title": [
+        {
+          "box": {
+            "bottom": 238,
+            "height": 48,
+            "left": 262.5,
+            "right": 1162.5,
+            "top": 190,
+            "width": 900,
+            "x": 262.5,
+            "y": 190
+          },
+          "text": "Contact us"
+        }
+      ]
+    }
+  }
+]

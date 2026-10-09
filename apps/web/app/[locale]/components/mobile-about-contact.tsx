@@ -93,7 +93,7 @@ export function MobileAboutContact({
         </div>
         {services.length > 0 && (
           <section className="mt-5">
-            <h2 className="mb-3 font-semibold text-card-title-lg tracking-heading">
+            <h2 className="mb-3 font-medium text-card-title-lg tracking-heading">
               {isBg ? "С какво можем да помогнем" : "How we can help"}
             </h2>
             <div className="grid gap-2">

@@ -1,0 +1,52 @@
+[
+  {
+    "since": "2026-10-06T09:16:22.287Z",
+    "images": [
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-browse-v1.webp&w=256&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-imports-v1.webp&w=256&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-finance-v1.webp&w=256&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-sell-v1.webp&w=256&q=75"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/services",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "since": "2026-10-06T09:16:23.882Z",
+    "images": [
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-browse-v1.webp&w=384&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-imports-v1.webp&w=384&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-finance-v1.webp&w=384&q=75"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Fservices%2Fdesktop-sell-v1.webp&w=384&q=75"
+      }
+    ],
+    "overflow": false,
+    "url": "http://127.0.0.1:6482/bg/services",
+    "width": 1440,
+    "errors": []
+  }
+]

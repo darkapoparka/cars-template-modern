@@ -1,0 +1,19 @@
+{
+  "mobileCards": [
+    {
+      "slot": "listing-financing-card",
+      "visible": false
+    },
+    {
+      "slot": "listing-showroom-card",
+      "visible": false
+    }
+  ],
+  "mobileTabs": [
+    "Покупка",
+    "Финансиране"
+  ],
+  "overflow": false,
+  "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+  "width": 1440
+}

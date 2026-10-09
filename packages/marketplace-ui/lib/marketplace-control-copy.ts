@@ -69,6 +69,17 @@ interface MarketplaceControlCopy {
     selectDerivative: string;
     selectMake: string;
   };
+  mobileTitles: Record<
+    | MarketplaceFilterView
+    | QuickFilterKey
+    | "category"
+    | "derivative"
+    | "make"
+    | "model"
+    | "more"
+    | "search",
+    string
+  >;
   options: {
     dealer: string;
     diesel: string;
@@ -187,6 +198,27 @@ const copyByLanguage = {
     },
     fullFilterDescription:
       "Разширени филтри за автомобил, цена, пробег и продавач.",
+    mobileTitles: {
+      main: "Филтри",
+      category: "Тип",
+      "make-model": "Марка",
+      make: "Марка",
+      model: "Модел",
+      derivative: "Вариант",
+      more: "Още",
+      body: "Купе",
+      "deliver-to": "Доставка",
+      origin: "Произход",
+      location: "Място",
+      price: "Цена",
+      year: "Година",
+      mileage: "Пробег",
+      fuel: "Гориво",
+      transmission: "Скорости",
+      seller: "Продавач",
+      search: "Търси",
+      sort: "Сортиране",
+    },
     makeModel: {
       anyDerivative: "Всички каросерии",
       anyDerivativeDescription: "Покажи всички обяви за този модел",
@@ -325,6 +357,27 @@ const copyByLanguage = {
     },
     fullFilterDescription:
       "Extended vehicle, price, mileage, and seller filters.",
+    mobileTitles: {
+      main: "Filters",
+      category: "Type",
+      "make-model": "Make",
+      make: "Make",
+      model: "Model",
+      derivative: "Variant",
+      more: "More",
+      body: "Body",
+      "deliver-to": "Delivery",
+      origin: "Origin",
+      location: "Location",
+      price: "Price",
+      year: "Year",
+      mileage: "Mileage",
+      fuel: "Fuel",
+      transmission: "Transmission",
+      seller: "Seller",
+      search: "Search",
+      sort: "Sort",
+    },
     makeModel: {
       anyDerivative: "All body styles",
       anyDerivativeDescription: "Show every listing for this model",

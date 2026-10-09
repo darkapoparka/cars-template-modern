@@ -1,0 +1,194 @@
+[
+  {
+    "page": "about",
+    "locale": "bg",
+    "width": 320,
+    "imageSize": [
+      320,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "bg",
+    "width": 320,
+    "imageSize": [
+      305,
+      858
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "about",
+    "locale": "en",
+    "width": 320,
+    "imageSize": [
+      320,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "en",
+    "width": 320,
+    "imageSize": [
+      320,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "about",
+    "locale": "bg",
+    "width": 390,
+    "imageSize": [
+      390,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "bg",
+    "width": 390,
+    "imageSize": [
+      390,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "about",
+    "locale": "en",
+    "width": 390,
+    "imageSize": [
+      390,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "en",
+    "width": 390,
+    "imageSize": [
+      390,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "about",
+    "locale": "bg",
+    "width": 1023,
+    "imageSize": [
+      1023,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "bg",
+    "width": 1023,
+    "imageSize": [
+      1023,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "about",
+    "locale": "en",
+    "width": 1023,
+    "imageSize": [
+      1023,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  },
+  {
+    "page": "contact",
+    "locale": "en",
+    "width": 1023,
+    "imageSize": [
+      1023,
+      900
+    ],
+    "pixelEqual": true,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "headingGeometryEqual": true,
+    "visibleTextEqual": true,
+    "bodyHeightEqual": true,
+    "desktopHeroHidden": true
+  }
+]

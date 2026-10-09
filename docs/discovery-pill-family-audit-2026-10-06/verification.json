@@ -1,0 +1,405 @@
+{
+  "desktopViews": 16,
+  "mobileViews": 6,
+  "checks": [
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 1440,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 712.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 1440,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 712.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "cars",
+      "width": 1440,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 712.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "home",
+      "width": 1440,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 712.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 1024,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 504.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 1024,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 504.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "home",
+      "width": 1024,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 504.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "cars",
+      "width": 1024,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 504.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 1280,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 632.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 1280,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 632.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "home",
+      "width": 1280,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 632.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "cars",
+      "width": 1280,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 632.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 1920,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 952.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 1920,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 952.5,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "home",
+      "width": 1920,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 952.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "en",
+      "route": "cars",
+      "width": 1920,
+      "pass": true,
+      "pillGaps": [
+        12.0,
+        12.0,
+        12.0
+      ],
+      "groupCentre": 952.4921875,
+      "slot": [
+        44,
+        24
+      ],
+      "imageInset": [
+        15,
+        6
+      ],
+      "labelGap": 8,
+      "searchGap": 24
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 320,
+      "pass": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 320,
+      "pass": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 390,
+      "pass": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 390,
+      "pass": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "locale": "bg",
+      "route": "home",
+      "width": 1023,
+      "pass": true,
+      "desktopArtworkHidden": true
+    },
+    {
+      "locale": "bg",
+      "route": "cars",
+      "width": 1023,
+      "pass": true,
+      "desktopArtworkHidden": true
+    }
+  ],
+  "allAssetHashesMatch": true,
+  "commonCanvasAspectRatio": "11:6",
+  "wheelBaselinePx": 23.333333333333332,
+  "maxHorizontalCentreRoundingPx": 0.16666666666666666,
+  "sourceArtworkUnchanged": true
+}

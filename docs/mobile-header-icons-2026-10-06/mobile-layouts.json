@@ -1,0 +1,434 @@
+[
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "category",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg",
+    "title": "Открийте автомобил",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "category",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/cars",
+    "title": "Открийте автомобил",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/services",
+    "title": "Нашите услуги",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/sell",
+    "title": "Продайте автомобил",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/imports",
+    "title": "Внос на автомобил",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/lease",
+    "title": "Лизинг на автомобил",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "guides",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/guides",
+    "title": "Съвети и статии",
+    "width": 320
+  },
+  {
+    "controlHeight": 28,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/about",
+    "title": "За нас и контакти",
+    "width": 320
+  },
+  {
+    "controlHeight": 28,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/contact",
+    "title": "За нас и контакти",
+    "width": 320
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "category",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg",
+    "title": "Открийте автомобил",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "category",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/cars",
+    "title": "Открийте автомобил",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/services",
+    "title": "Нашите услуги",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/sell",
+    "title": "Продайте автомобил",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/imports",
+    "title": "Внос на автомобил",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "info",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/lease",
+    "title": "Лизинг на автомобил",
+    "width": 390
+  },
+  {
+    "controlHeight": 88,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "guides",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "filters",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/guides",
+    "title": "Съвети и статии",
+    "width": 390
+  },
+  {
+    "controlHeight": 28,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/about",
+    "title": "За нас и контакти",
+    "width": 390
+  },
+  {
+    "controlHeight": 28,
+    "font": "18px",
+    "headerActions": [
+      {
+        "name": "location",
+        "tapHeight": 44,
+        "tapWidth": 44
+      },
+      {
+        "name": "phone",
+        "tapHeight": 44,
+        "tapWidth": 44
+      }
+    ],
+    "headingCount": 1,
+    "headingHeight": 28,
+    "headingY": 68,
+    "lineHeight": "28px",
+    "overflow": false,
+    "path": "/bg/contact",
+    "title": "За нас и контакти",
+    "width": 390
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "/bg/about",
+    "banner": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "overflow": false
+  },
+  {
+    "path": "/bg/contact",
+    "banner": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "overflow": false
+  },
+  {
+    "path": "/bg/services",
+    "banner": {
+      "height": 352,
+      "width": 1440,
+      "x": 232.5,
+      "y": 90
+    },
+    "nav": {
+      "height": 90,
+      "width": 1440,
+      "x": 232.5,
+      "y": 0
+    },
+    "overflow": false
+  }
+]

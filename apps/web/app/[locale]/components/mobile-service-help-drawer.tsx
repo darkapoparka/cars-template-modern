@@ -60,8 +60,8 @@ export function MobileServiceHelpDrawer({
         <DrawerHeader className={mobileMarketplaceDrawerHeaderClassName}>
           <div className="grid min-h-12 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-2">
             <span aria-hidden="true" />
-            <DrawerTitle className="text-center font-semibold text-card-title-lg text-zinc-950 tracking-heading">
-              {title}
+            <DrawerTitle className="text-center font-medium text-card-title-lg text-zinc-950 tracking-heading">
+              {locale === "bg" ? "Стъпки" : "Steps"}
             </DrawerTitle>
             <DrawerClose asChild>
               <Button

@@ -1,0 +1,34 @@
+{
+  "check": {
+    "headers": [
+      {
+        "background": "rgb(48, 52, 59)",
+        "box": {
+          "height": 140,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "brand": "#30343b",
+        "slot": "mobile-service-hero"
+      }
+    ],
+    "height": 844,
+    "importTrigger": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "icons": [
+          "lucide lucide-link2 lucide-link-2 size-[18px] shrink-0 text-zinc-500"
+        ],
+        "text": "Поставете линк към обявата"
+      }
+    ],
+    "logoSources": [
+      "/images/brand/modern-logo-v2.webp"
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg/imports",
+    "width": 390
+  },
+  "errors": []
+}

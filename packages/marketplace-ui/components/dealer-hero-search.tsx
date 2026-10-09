@@ -40,7 +40,7 @@ import {
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-hero-search.module.css";
-import { DealerVehicleTypePills } from "./dealer-vehicle-type-pills";
+import { DealerHomeSearch } from "./dealer-home-search";
 import { DesktopActionPanel } from "./desktop-action-panel";
 import {
   DesktopQuickFilterDialog,
@@ -164,6 +164,28 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     );
     setQuery("");
   };
+  if (surface === "hero") {
+    return (
+      <div
+        aria-busy={pending}
+        className={styles.desktopSearch}
+        data-search-context="hero"
+        data-surface="hero"
+      >
+        <DealerHomeSearch
+          disabled={pending}
+          filterCount={filterCount}
+          filters={filters}
+          key={String(isDesktop)}
+          locale={locale}
+          onApply={onApply}
+          onSearch={() => submit(query)}
+          taxonomy={taxonomy}
+          taxonomyByCategory={taxonomyByCategory}
+        />
+      </div>
+    );
+  }
   const currencyLabel = getMarketplaceCurrencyLabel(isBg);
   const labels = getDesktopQuickFilterLabels(filters, isBg, numberFormatter);
   const { locationOptions, equipmentOptions } = getSearchOptions(
@@ -606,16 +628,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
           />
         </form>
       </DesktopActionPanel>
-      {surface === "hero" && (
-        <DealerVehicleTypePills
-          category={filters.category}
-          disabled={pending}
-          isBg={isBg}
-          onSelect={(category) =>
-            setFilters((current) => withCategory(current, category))
-          }
-        />
-      )}
       <MarketplaceMakeModelPicker
         applyLabel={text("Приложи", "Apply")}
         filters={filters}

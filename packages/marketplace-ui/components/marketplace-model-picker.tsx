@@ -45,24 +45,6 @@ const getInitialMakeModelStep = (
   filters: MarketplaceSearchParams
 ): "make" | "model" => (filters.make ? "model" : "make");
 
-const getMakeModelDrawerTitle = (
-  step: "derivative" | "make" | "model",
-  make: string | undefined,
-  model: string | undefined,
-  locale?: string
-) => {
-  const copy = getMarketplaceControlCopy(locale);
-  if (step === "make") {
-    return copy.makeModel.selectMake;
-  }
-  if (step === "derivative") {
-    return (
-      [make, model].filter(Boolean).join(" ") || copy.makeModel.selectDerivative
-    );
-  }
-  return make;
-};
-
 const ModelDerivativeOption = ({
   item,
   isSelected,
@@ -633,10 +615,6 @@ export const MarketplaceMakeModelPicker = ({
   ) : (
     <div className="p-4">{pickerContent}</div>
   );
-  const title =
-    getMakeModelDrawerTitle(step, make, model, locale) ??
-    copy.makeModel.selectMake;
-
   if (isDesktop) {
     return (
       <DesktopMakeModelDialog
@@ -692,7 +670,7 @@ export const MarketplaceMakeModelPicker = ({
       rightAction={
         <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
       }
-      title={title}
+      title={copy.mobileTitles[step]}
     >
       {searchField ? <div className="px-4">{searchField}</div> : null}
       {pickerBody}

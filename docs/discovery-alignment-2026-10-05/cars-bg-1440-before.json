@@ -1,0 +1,98 @@
+{
+  "elements": [
+    {
+      "aria": null,
+      "rect": {
+        "height": 190.09,
+        "width": 285,
+        "x": 72.5,
+        "y": 123.52
+      },
+      "slot": null,
+      "tag": "PICTURE",
+      "text": ""
+    },
+    {
+      "aria": null,
+      "rect": {
+        "height": 190.09,
+        "width": 285,
+        "x": 1067.5,
+        "y": 136.92
+      },
+      "slot": null,
+      "tag": "PICTURE",
+      "text": ""
+    },
+    {
+      "aria": "Навигация",
+      "rect": {
+        "height": 24,
+        "width": 1272,
+        "x": 76.5,
+        "y": 147
+      },
+      "slot": null,
+      "tag": "NAV",
+      "text": "Начало/Автомобили за продажба"
+    },
+    {
+      "aria": null,
+      "rect": {
+        "height": 50,
+        "width": 900,
+        "x": 262.5,
+        "y": 179
+      },
+      "slot": null,
+      "tag": "H1",
+      "text": "Автомобили за продажба"
+    },
+    {
+      "aria": null,
+      "rect": {
+        "height": 26,
+        "width": 500,
+        "x": 462.5,
+        "y": 239
+      },
+      "slot": null,
+      "tag": "P",
+      "text": "Открийте автомобил. Запазете и сравнете избора си."
+    },
+    {
+      "aria": "Търсене на превозни средства",
+      "rect": {
+        "height": 64,
+        "width": 1140,
+        "x": 142.5,
+        "y": 289
+      },
+      "slot": null,
+      "tag": "FIELDSET",
+      "text": "Тип:АвтомобилиВсички маркиВсички моделиВсяка ценаТърси"
+    },
+    {
+      "aria": null,
+      "rect": {
+        "height": 48,
+        "width": 111.05,
+        "x": 1162.45,
+        "y": 297
+      },
+      "slot": "dealer-inventory-search-open",
+      "tag": "BUTTON",
+      "text": "Търси"
+    }
+  ],
+  "height": 1000,
+  "hero": {
+    "height": 320,
+    "width": 1320,
+    "x": 52.5,
+    "y": 90
+  },
+  "overflow": false,
+  "url": "http://127.0.0.1:6482/bg/cars",
+  "width": 1440
+}

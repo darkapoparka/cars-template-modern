@@ -13,12 +13,17 @@ export const defaultAboutArtwork: NonNullable<
 export const defaultSiteArtwork: PublicSiteArtwork = {
   heroScene: "/lead-car-showroom-scene-v3.webp",
   desktopHeroScene: "/images/desktop/showroom-editorial-v1.webp",
+  desktopPageHeroes: {
+    services: "/images/desktop/services-editorial-v2.webp",
+    about: "/images/desktop/about-editorial-v2.webp",
+    contact: "/images/desktop/contact-editorial-v2.webp",
+  },
   desktopDiscoveryVehicles: {
     left: {
-      src: "/images/desktop/desktop-hero-gclass-profile-v1.webp",
+      src: "/images/desktop/desktop-hero-urus-profile-v1.webp",
       width: 1000,
       height: 667,
-      baseline: 542,
+      baseline: 495,
       mirrored: true,
     },
     right: {
@@ -26,6 +31,53 @@ export const defaultSiteArtwork: PublicSiteArtwork = {
       width: 1000,
       height: 667,
       baseline: 495,
+    },
+  },
+  desktopInventoryVehicles: {
+    left: {
+      src: "/images/desktop/desktop-hero-purosangue-profile-v1.webp",
+      width: 1536,
+      height: 1024,
+      baseline: 773,
+      mirrored: true,
+    },
+    right: {
+      src: "/images/desktop/desktop-hero-purosangue-profile-v1.webp",
+      width: 1536,
+      height: 1024,
+      baseline: 773,
+    },
+  },
+  desktopPageVehicles: {
+    guides: {
+      left: {
+        src: "/images/desktop/cutout-m4-v1.webp",
+        width: 1000,
+        height: 667,
+        baseline: 484,
+        mirrored: true,
+      },
+      right: {
+        src: "/images/desktop/cutout-m4-v1.webp",
+        width: 1000,
+        height: 667,
+        baseline: 484,
+      },
+    },
+    services: {
+      left: {
+        src: "/images/desktop/desktop-hero-eclass-estate-profile-v1.webp",
+        width: 1536,
+        height: 1024,
+        baseline: 736,
+        mirrored: true,
+      },
+      right: {
+        src: "/images/desktop/desktop-hero-eclass-estate-profile-v1.webp",
+        width: 1536,
+        height: 1024,
+        baseline: 736,
+      },
     },
   },
   desktopPageBanner: {

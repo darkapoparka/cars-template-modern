@@ -1,0 +1,181 @@
+{
+  "operation": "Crop to visible vehicle bounds (alpha > 8) to exclude almost-transparent stray margins, then proportional resize. Original vehicle pixels inside the crop and source images are preserved.",
+  "canvas": [
+    132,
+    72
+  ],
+  "renderedSlot": [
+    44,
+    24
+  ],
+  "padding": 2,
+  "containBox": [
+    128,
+    68
+  ],
+  "alignment": "bottom centre",
+  "format": "WebP RGBA quality 92, method 6",
+  "totalBytes": 19002,
+  "files": [
+    {
+      "category": "car",
+      "source": "provenance/assets/discovery-pill-car-right-v2/generated-car-right-silver-v2.png",
+      "sourceSha256": "ff99149aed5dd67dcbaab552c96c3fa07f046b51db5643c670e4938ebeb41fe0",
+      "sourceSize": [
+        1586,
+        992
+      ],
+      "alphaBounds": [
+        0,
+        9,
+        1575,
+        950
+      ],
+      "visibleBoundsAtAlpha8": [
+        15,
+        187,
+        1571,
+        864
+      ],
+      "output": "/images/categories/discovery-pill-car-v3.webp",
+      "outputSize": [
+        132,
+        72
+      ],
+      "bytes": 4812,
+      "sha256": "0fc8954727590a8c9b5280e0e528c2e2631a6d9cbe935a66c7643f4c6185c1ed",
+      "visibleBoundsAtAlpha64": [
+        2,
+        14,
+        130,
+        70
+      ],
+      "renderedVisibleSize": [
+        42.666666666666664,
+        18.666666666666668
+      ],
+      "direction": "right",
+      "view": "front three-quarter"
+    },
+    {
+      "category": "motorbike",
+      "source": "/images/services/header-motorbike-silver-v1.png",
+      "sourceSha256": "d430a0bf5a82bb0c32d9c4750a2f61ceaa183fbe9db588fdf5b09406fbceb3eb",
+      "sourceSize": [
+        1586,
+        992
+      ],
+      "alphaBounds": [
+        79,
+        67,
+        1388,
+        992
+      ],
+      "visibleBoundsAtAlpha8": [
+        155,
+        70,
+        1314,
+        939
+      ],
+      "output": "/images/categories/discovery-pill-motorbike-v2.webp",
+      "outputSize": [
+        132,
+        72
+      ],
+      "bytes": 5214,
+      "sha256": "3a43a4efb5967a5b352b9d8b69d1c1589cb23d8a3004796027d4f4fa4b5e105f",
+      "visibleBoundsAtAlpha64": [
+        20,
+        2,
+        111,
+        70
+      ],
+      "renderedVisibleSize": [
+        30.333333333333332,
+        22.666666666666668
+      ],
+      "direction": "right",
+      "view": "front three-quarter"
+    },
+    {
+      "category": "van",
+      "source": "/images/services/header-van-silver-v1.png",
+      "sourceSha256": "5af18080ec56f05a53515e89b61c56b26b366a8e49be75287c4cf0336e0d0a43",
+      "sourceSize": [
+        1586,
+        992
+      ],
+      "alphaBounds": [
+        0,
+        17,
+        1576,
+        920
+      ],
+      "visibleBoundsAtAlpha8": [
+        152,
+        228,
+        1407,
+        805
+      ],
+      "output": "/images/categories/discovery-pill-van-v2.webp",
+      "outputSize": [
+        132,
+        72
+      ],
+      "bytes": 4648,
+      "sha256": "547b0959e6377d69f6e81d8d33cf97d99e122d5c7f1fc5b24ca9498a4d357eaf",
+      "visibleBoundsAtAlpha64": [
+        2,
+        11,
+        130,
+        70
+      ],
+      "renderedVisibleSize": [
+        42.666666666666664,
+        19.666666666666668
+      ],
+      "direction": "right",
+      "view": "front three-quarter"
+    },
+    {
+      "category": "truck",
+      "source": "/images/services/header-truck-silver-v1.png",
+      "sourceSha256": "1650856c93553058721679c1875783ff56334eaabdf351541e923ee26e3da3ea",
+      "sourceSize": [
+        1586,
+        992
+      ],
+      "alphaBounds": [
+        171,
+        33,
+        1390,
+        966
+      ],
+      "visibleBoundsAtAlpha8": [
+        257,
+        124,
+        1324,
+        863
+      ],
+      "output": "/images/categories/discovery-pill-truck-v2.webp",
+      "outputSize": [
+        132,
+        72
+      ],
+      "bytes": 4328,
+      "sha256": "20a22c79adbb3b0304c0c725d54aeafba9fd5c0c5237b46842122612f3bc00b1",
+      "visibleBoundsAtAlpha64": [
+        17,
+        2,
+        115,
+        70
+      ],
+      "renderedVisibleSize": [
+        32.666666666666664,
+        22.666666666666668
+      ],
+      "direction": "right",
+      "view": "front three-quarter"
+    }
+  ]
+}

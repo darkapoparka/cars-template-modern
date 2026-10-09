@@ -1,0 +1,2488 @@
+[
+  {
+    "phase": "before",
+    "route": "cars",
+    "width": 1440,
+    "locale": "bg",
+    "filename": "before-bg-cars-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 436.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 607.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 747.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 882.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 159.671875,
+          "x": 421.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 127.234375,
+          "x": 592.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 123.5625,
+          "x": 732.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 136.25,
+          "x": 867.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2365,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "before",
+    "route": "home",
+    "width": 1440,
+    "locale": "bg",
+    "filename": "before-bg-home-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 436.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 607.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 747.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 36,
+          "x": 882.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 159.671875,
+          "x": 421.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 127.234375,
+          "x": 592.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 123.5625,
+          "x": 732.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 136.25,
+          "x": 867.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 3444,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "before",
+    "route": "cars",
+    "width": 320,
+    "locale": "bg",
+    "filename": "before-bg-cars-320.jpg",
+    "artwork": [
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2136,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 320
+  },
+  {
+    "phase": "before",
+    "route": "cars",
+    "width": 390,
+    "locale": "bg",
+    "filename": "before-bg-cars-390.jpg",
+    "artwork": [
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2384,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 390
+  },
+  {
+    "phase": "before",
+    "route": "cars",
+    "width": 1023,
+    "locale": "bg",
+    "filename": "before-bg-cars-1023.jpg",
+    "artwork": [
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 1624,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 1023
+  },
+  {
+    "phase": "before",
+    "route": "home",
+    "width": 320,
+    "locale": "bg",
+    "filename": "before-bg-home-320.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2136,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 320
+  },
+  {
+    "phase": "before",
+    "route": "home",
+    "width": 390,
+    "locale": "bg",
+    "filename": "before-bg-home-390.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2384,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 390
+  },
+  {
+    "phase": "before",
+    "route": "home",
+    "width": 1023,
+    "locale": "bg",
+    "filename": "before-bg-home-1023.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v1.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v1.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 1624,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 1023
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 1440,
+    "locale": "bg",
+    "filename": "after-bg-cars-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 420.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 599.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 747.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 890.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 167.671875,
+          "x": 405.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 135.234375,
+          "x": 584.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 131.5625,
+          "x": 732.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 144.25,
+          "x": 875.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2365,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 1440,
+    "locale": "bg",
+    "filename": "after-bg-home-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 420.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 599.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 747.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 890.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 167.671875,
+          "x": 405.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 135.234375,
+          "x": 584.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 131.5625,
+          "x": 732.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 144.25,
+          "x": 875.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 3444,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 1024,
+    "locale": "bg",
+    "filename": "after-bg-cars-1024.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 212.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 391.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 682.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 167.671875,
+          "x": 197.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 135.234375,
+          "x": 376.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 131.5625,
+          "x": 524.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 144.25,
+          "x": 667.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2828,
+    "form": {
+      "height": 64,
+      "width": 865,
+      "x": 72,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 865,
+      "x": 72,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1024
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 1024,
+    "locale": "bg",
+    "filename": "after-bg-home-1024.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 212.140625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 391.8125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.046875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 682.609375,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 36,
+          "width": 167.671875,
+          "x": 197.140625,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 36,
+          "width": 135.234375,
+          "x": 376.8125,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 36,
+          "width": 131.5625,
+          "x": 524.046875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 36,
+          "width": 144.25,
+          "x": 667.609375,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 4443,
+    "form": {
+      "height": 64,
+      "width": 865,
+      "x": 72,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 865,
+      "x": 72,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1024
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 1440,
+    "locale": "en",
+    "filename": "after-en-cars-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 452.828125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 578,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 747.421875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 874.515625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Cars",
+        "rect": {
+          "height": 36,
+          "width": 113.171875,
+          "x": 437.828125,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Motorbikes",
+        "rect": {
+          "height": 36,
+          "width": 157.421875,
+          "x": 563,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Vans",
+        "rect": {
+          "height": 36,
+          "width": 115.09375,
+          "x": 732.421875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Trucks",
+        "rect": {
+          "height": 36,
+          "width": 127.640625,
+          "x": 859.515625,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2365,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 1440,
+    "locale": "en",
+    "filename": "after-en-home-1440.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 452.828125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 578,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 747.421875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 874.515625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Cars",
+        "rect": {
+          "height": 36,
+          "width": 113.171875,
+          "x": 437.828125,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Motorbikes",
+        "rect": {
+          "height": 36,
+          "width": 157.421875,
+          "x": 563,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Vans",
+        "rect": {
+          "height": 36,
+          "width": 115.09375,
+          "x": 732.421875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Trucks",
+        "rect": {
+          "height": 36,
+          "width": 127.640625,
+          "x": 859.515625,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 3392,
+    "form": {
+      "height": 64,
+      "width": 1040,
+      "x": 192.5,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 1040,
+      "x": 192.5,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1440
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 1024,
+    "locale": "en",
+    "filename": "after-en-cars-1024.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 244.828125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 370,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.421875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 666.515625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Cars",
+        "rect": {
+          "height": 36,
+          "width": 113.171875,
+          "x": 229.828125,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Motorbikes",
+        "rect": {
+          "height": 36,
+          "width": 157.421875,
+          "x": 355,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Vans",
+        "rect": {
+          "height": 36,
+          "width": 115.09375,
+          "x": 524.421875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Trucks",
+        "rect": {
+          "height": 36,
+          "width": 127.640625,
+          "x": 651.515625,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2812,
+    "form": {
+      "height": 64,
+      "width": 865,
+      "x": 72,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 865,
+      "x": 72,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1024
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 1024,
+    "locale": "en",
+    "filename": "after-en-home-1024.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 244.828125,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 370,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 539.421875,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 24,
+          "width": 44,
+          "x": 666.515625,
+          "y": 318
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Cars",
+        "rect": {
+          "height": 36,
+          "width": 113.171875,
+          "x": 229.828125,
+          "y": 312
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Motorbikes",
+        "rect": {
+          "height": 36,
+          "width": 157.421875,
+          "x": 355,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Vans",
+        "rect": {
+          "height": 36,
+          "width": 115.09375,
+          "x": 524.421875,
+          "y": 312
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Trucks",
+        "rect": {
+          "height": 36,
+          "width": 127.640625,
+          "x": 651.515625,
+          "y": 312
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 4347,
+    "form": {
+      "height": 64,
+      "width": 865,
+      "x": 72,
+      "y": 224
+    },
+    "gap": 24,
+    "overflow": false,
+    "pillGap": "12px",
+    "pills": {
+      "height": 36,
+      "width": 865,
+      "x": 72,
+      "y": 312
+    },
+    "scrollY": 0,
+    "viewport": 1024
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 320,
+    "locale": "bg",
+    "filename": "after-bg-cars-320.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2136,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 320
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 390,
+    "locale": "bg",
+    "filename": "after-bg-cars-390.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2384,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 390
+  },
+  {
+    "phase": "after",
+    "route": "cars",
+    "width": 1023,
+    "locale": "bg",
+    "filename": "after-bg-cars-1023.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 1624,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 1023
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 320,
+    "locale": "bg",
+    "filename": "after-bg-home-320.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2136,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 320
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 390,
+    "locale": "bg",
+    "filename": "after-bg-home-390.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 2384,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 390
+  },
+  {
+    "phase": "after",
+    "route": "home",
+    "width": 1023,
+    "locale": "bg",
+    "filename": "after-bg-home-1023.jpg",
+    "artwork": [
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-car-v3.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-motorbike-v2.webp"
+      },
+      {
+        "loaded": true,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-van-v2.webp"
+      },
+      {
+        "loaded": false,
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "src": "/images/categories/discovery-pill-truck-v2.webp"
+      }
+    ],
+    "buttons": [
+      {
+        "category": "car",
+        "label": "Автомобили",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "true"
+      },
+      {
+        "category": "motorbike",
+        "label": "Мотори",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "van",
+        "label": "Бусове",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      },
+      {
+        "category": "truck",
+        "label": "Камиони",
+        "rect": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "selected": "false"
+      }
+    ],
+    "documentHeight": 1624,
+    "form": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "gap": 0,
+    "overflow": false,
+    "pillGap": "normal",
+    "pills": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "scrollY": 0,
+    "viewport": 1023
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "width": 320,
+    "route": "home",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 320,
+    "route": "cars",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "route": "home",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "route": "cars",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 1023,
+    "route": "home",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  },
+  {
+    "width": 1023,
+    "route": "cars",
+    "geometry": {
+      "headings": [
+        {
+          "box": {
+            "bottom": 196,
+            "height": 1,
+            "left": 15,
+            "right": 16,
+            "top": 195,
+            "width": 1,
+            "x": 15,
+            "y": 195
+          },
+          "text": "Автомобили за продажба"
+        }
+      ],
+      "overflow": false
+    }
+  }
+]

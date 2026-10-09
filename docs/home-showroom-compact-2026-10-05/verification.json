@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-05",
+  "canonicalPreview": "http://127.0.0.1:6482/bg",
+  "beforeBuildId": "P2KgXOGNvJKvDWvKxcdG5",
+  "afterBuildId": "kC6pY4RpKLWjC-pRgrGo2",
+  "node": "22.23.2",
+  "pnpm": "11.4.0",
+  "productionBuild": "passed",
+  "webTypecheck": "passed",
+  "scopedBiomeFiles": 11,
+  "unitTests": {
+    "web": 188,
+    "marketplaceUI": 101
+  },
+  "refactorContracts": 7,
+  "preflightContracts": "passed",
+  "preflightTests": 87,
+  "browserChecks": {
+    "finalCategoryFailures": 0,
+    "layoutSearchStockPassed": 18,
+    "initialSetupFailuresPreserved": true,
+    "categoryDraftTaxonomyPassed": 4,
+    "uniqueCasesPassed": 22,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ]
+  },
+  "capturesPerPhase": 18,
+  "canonicalCaptureErrors": [],
+  "preservation": [
+    {
+      "name": "bg-home-320",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 29,
+      "maximumChannelDifference": 8
+    },
+    {
+      "name": "bg-home-390",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 0,
+      "maximumChannelDifference": 0
+    },
+    {
+      "name": "bg-home-1023",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 0,
+      "maximumChannelDifference": 0
+    },
+    {
+      "name": "bg-cars-1440",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 56,
+      "maximumChannelDifference": 1
+    },
+    {
+      "name": "bg-lease-1440",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 8,
+      "maximumChannelDifference": 2
+    },
+    {
+      "name": "en-home-320",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 0,
+      "maximumChannelDifference": 0
+    },
+    {
+      "name": "en-home-390",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 81,
+      "maximumChannelDifference": 8
+    },
+    {
+      "name": "en-home-1023",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 56,
+      "maximumChannelDifference": 5
+    },
+    {
+      "name": "en-cars-1440",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 14,
+      "maximumChannelDifference": 1
+    },
+    {
+      "name": "en-lease-1440",
+      "dimensionsMatch": true,
+      "pageHeightMatch": true,
+      "changedPixels": 0,
+      "maximumChannelDifference": 0
+    }
+  ],
+  "protectedNextEnvRestored": true,
+  "untrackedHeroCorrectionPreserved": true,
+  "dealerDeploymentChanged": false,
+  "sourceCommit": null,
+  "sourceCommitStatus": "Pending: existing shared index.lock has unknown ownership; both coordinating chats report no Git write"
+}

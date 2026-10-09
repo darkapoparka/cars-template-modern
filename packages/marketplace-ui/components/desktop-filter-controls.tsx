@@ -40,7 +40,7 @@ export const getDesktopQuickFilterClassName = (
   let surfaceClassName = "bg-control text-foreground hover:bg-control-hover";
   if (active) {
     surfaceClassName =
-      "border-primary bg-primary text-primary-foreground hover:border-primary/90 hover:bg-primary/90";
+      "border-primary bg-primary text-primary-foreground hover:border-[var(--primary-hover)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:border-[var(--primary-active)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)]";
   } else if (elevated) {
     surfaceClassName = "bg-panel text-foreground hover:bg-control";
   }
@@ -71,7 +71,7 @@ const ActiveQuickFilterClearButton = ({
     <Button
       aria-label={removeLabel}
       className={cn(
-        "h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-[var(--duration-interaction)] hover:bg-primary/90 hover:text-primary-foreground focus-visible:[outline-offset:var(--desktop-focus-width)] focus-visible:[outline:var(--desktop-focus-width)_solid_var(--ring)]",
+        "h-10 w-9 shrink-0 rounded-r-full rounded-l-none border-0 border-primary-foreground/25 border-l bg-primary px-0 text-primary-foreground shadow-none transition-colors duration-[var(--duration-interaction)] hover:bg-[var(--primary-hover)] hover:text-[var(--primary-hover-foreground)] active:bg-[var(--primary-active)] active:text-[var(--primary-active-foreground)] focus-visible:[outline-offset:var(--desktop-focus-width)] focus-visible:[outline:var(--desktop-focus-width)_solid_var(--ring)]",
         styles.clear
       )}
       data-slot="desktop-quick-filter-clear"

@@ -85,7 +85,9 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     >
       <ServiceCatalogue
         artwork={
-          publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+          publicSite.artwork.desktopPageHeroes?.services ??
+          publicSite.artwork.desktopHeroScene ??
+          publicSite.artwork.heroScene
         }
         locale={normalized}
         services={services.map((service) => {

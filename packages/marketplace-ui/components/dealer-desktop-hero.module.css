@@ -1,6 +1,7 @@
 .hero,
 .copy,
 .vehicleScene,
+.sheetEdge,
 .actions {
   display: none;
 }
@@ -25,10 +26,10 @@
   }
 
   .hero:is([data-variant="landing"], [data-variant="inventory"]) {
-    gap: calc(var(--spacing) * 6);
+    gap: var(--desktop-hero-heading-gap);
     justify-content: center;
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-showroom-max);
+    width: 100%;
+    max-width: none;
     min-height: var(--desktop-banner-height);
     padding: calc(var(--spacing) * 8);
     margin-inline: auto;
@@ -44,7 +45,7 @@
       var(--desktop-hero-scene, none);
     background-position: center 95%;
     background-size: cover;
-    border-radius: var(--radius-desktop-frame);
+    border-radius: 0;
   }
 
   .banner {
@@ -53,8 +54,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-showroom-max);
+    width: 100%;
+    max-width: none;
     min-height: var(--desktop-banner-height);
     padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
     margin-inline: auto;
@@ -65,8 +66,22 @@
       var(--desktop-banner-center) 55%,
       var(--desktop-banner-end) 100%
     );
-    border-radius: var(--radius-desktop-frame);
+    border-radius: 0;
     isolation: isolate;
+  }
+
+  .sheetEdge {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--desktop-layer-raised);
+    display: block;
+    height: var(--desktop-page-sheet-overlap);
+    pointer-events: none;
+    background: var(--desktop-surface);
+    border-radius: var(--desktop-page-sheet-radius)
+      var(--desktop-page-sheet-radius) 0 0;
   }
 
   .banner::before {
@@ -105,23 +120,23 @@
       var(--desktop-page-car-left), var(--desktop-page-car-right);
     background-repeat: no-repeat;
     background-position:
-      left calc(var(--spacing) * -2) bottom calc(var(--spacing) * 2),
-      right calc(var(--spacing) * -2) bottom calc(var(--spacing) * 2);
+      left calc(var(--spacing) * 2) bottom
+      calc(var(--desktop-page-sheet-overlap) + var(--spacing) * 2),
+      right calc(var(--spacing) * 2) bottom
+      calc(var(--desktop-page-sheet-overlap) + var(--spacing) * 2);
     background-size: calc(var(--spacing) * 75) auto;
   }
 
   .banner[data-has-actions="true"] {
-    gap: calc(var(--spacing) * 6);
+    gap: var(--desktop-hero-heading-gap);
     padding: calc(var(--spacing) * 8);
   }
 
   .hero[data-variant="inventory"] .banner {
-    width: 100%;
-    max-width: none;
     min-height: 0;
     padding: 0;
+    overflow: visible;
     background: transparent;
-    border-radius: 0;
   }
 
   .hero[data-appearance="photo"] .banner {
@@ -155,6 +170,20 @@
       var(--desktop-hero-scene, none);
     background-position: center;
     background-size: cover;
+  }
+
+  .hero[data-scene-tone="editorial"] .banner {
+    --desktop-hero-focus: var(--inverse-foreground);
+    background-image:
+      linear-gradient(
+        90deg,
+        var(--desktop-editorial-overlay-edge) 0%,
+        var(--desktop-editorial-overlay-center) 35%,
+        var(--desktop-editorial-overlay-center) 65%,
+        var(--desktop-editorial-overlay-edge) 100%
+      ),
+      var(--desktop-hero-scene, none);
+    background-position: center;
   }
 
   .hero[data-variant="inventory"] .banner::before,
@@ -206,7 +235,7 @@
     background: var(--desktop-location-badge-background);
     border: var(--desktop-border-width) solid
       var(--desktop-location-badge-border);
-    border-radius: calc(var(--spacing) * 2);
+    border-radius: var(--radius-pill);
   }
 
   .actions {
@@ -259,23 +288,45 @@
   }
 
   .action:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--brand);
+    outline: var(--desktop-focus-width) solid
+      var(--desktop-hero-focus, var(--brand));
     outline-offset: var(--desktop-focus-offset);
+  }
+
+  .hero[data-scene-tone="editorial"] .eyebrow {
+    color: var(--inverse-foreground);
+    background: var(--desktop-discovery-glass-background);
+    border-color: var(--desktop-inverse-divider);
+  }
+
+  .hero[data-scene-tone="editorial"] .action {
+    color: var(--brand-text);
+    background: var(--panel);
+    border-color: var(--panel);
+  }
+
+  .hero[data-scene-tone="editorial"] .action:hover {
+    background: var(--desktop-discovery-selected-hover);
+    border-color: var(--desktop-discovery-selected-hover);
+  }
+
+  .hero[data-scene-tone="editorial"] .action[data-secondary="true"] {
+    color: var(--inverse-foreground);
+    background: transparent;
+    border-color: var(--inverse-foreground);
+  }
+
+  .hero[data-scene-tone="editorial"] .action[data-secondary="true"]:hover {
+    background: var(--desktop-editorial-overlay-edge);
   }
 
   .serviceContent {
     position: relative;
     z-index: 1;
     width: 100%;
-    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
+    padding: var(--desktop-page-content-gap) 0 calc(var(--spacing) * 22.5);
     color: var(--foreground);
     background: var(--desktop-surface);
-  }
-
-  .hero:is([data-appearance="photo"], [data-appearance="neutral"])
-    .serviceContent {
-    padding-top: 0;
-    margin-top: calc(var(--spacing) * 10);
   }
 
   .discoveryControls,
@@ -352,7 +403,7 @@
     --desktop-hero-type-selected-hover-background: var(
       --desktop-discovery-selected-hover
     );
-    --desktop-hero-type-selected-foreground: var(--foreground);
+    --desktop-hero-type-selected-foreground: var(--brand-text);
     --desktop-hero-type-selected-artwork-filter: none;
     --desktop-hero-type-artwork-filter: brightness(0) invert(1);
     --desktop-hero-type-artwork-background: transparent;
@@ -363,10 +414,32 @@
     background-image: var(--desktop-discovery-dark-background);
   }
 
+  .hero[data-appearance="vehicles"][data-variant="page"] {
+    --desktop-hero-focus: var(--desktop-discovery-dark-foreground);
+  }
+
+  .hero[data-appearance="vehicles"] .banner {
+    color: inherit;
+    background: transparent;
+    isolation: auto;
+  }
+
+  .hero[data-appearance="vehicles"] .banner::before,
+  .hero[data-appearance="vehicles"] .banner::after {
+    display: none;
+  }
+
+  .hero[data-appearance="vehicles"][data-variant="page"]
+    .banner
+    > :not(.sheetEdge) {
+    width: min(100%, var(--desktop-discovery-search-width));
+  }
+
   .vehicleScene {
     position: absolute;
     inset: 0;
     z-index: 0;
+    container-type: inline-size;
     overflow: hidden;
     pointer-events: none;
   }
@@ -417,8 +490,65 @@
 }
 
 @media (min-width: 1200px) {
+  .hero[data-appearance="vehicles"][data-variant="page"] {
+    --desktop-vehicle-baseline: var(--desktop-discovery-vehicle-baseline);
+    --desktop-discovery-search-width: var(
+      --desktop-discovery-search-flanked-width
+    );
+  }
+
   .vehicleScene {
     display: block;
+  }
+
+  .hero[data-appearance="vehicles"]:is(
+      [data-variant="landing"],
+      [data-variant="inventory"]
+    ) {
+    --desktop-vehicle-baseline: var(--desktop-discovery-vehicle-baseline);
+    --desktop-discovery-field-padding: calc(var(--spacing) * 5);
+  }
+
+  .hero[data-appearance="vehicles"]:is(
+      [data-variant="landing"],
+      [data-variant="inventory"]
+    )
+    > :is(.discoveryHeading, .banner, .discoveryControls, .loadingPanelFrame) {
+    width: min(100%, var(--desktop-discovery-search-flanked-width));
+  }
+
+  .hero[data-appearance="vehicles"] .vehicle {
+    --desktop-vehicle-fit-width: min(
+      var(--desktop-discovery-vehicle-width),
+      calc(
+        (100cqw - var(--desktop-discovery-search-flanked-width)) /
+        2 -
+        var(--desktop-discovery-vehicle-gap)
+      )
+    );
+    --desktop-vehicle-width: var(--desktop-vehicle-fit-width);
+    --desktop-vehicle-inset: calc(
+      (100% - var(--desktop-discovery-search-flanked-width)) /
+      2 -
+      var(--desktop-vehicle-width) -
+      var(--desktop-discovery-vehicle-gap)
+    );
+  }
+
+  .hero[data-appearance="vehicles"] .vehicle[data-side="left"] {
+    --desktop-vehicle-width: calc(
+      var(--desktop-vehicle-fit-width) *
+      var(--desktop-discovery-vehicle-left-scale)
+    );
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1279px) {
+  .hero[data-appearance="vehicles"]:is(
+      [data-variant="landing"],
+      [data-variant="inventory"]
+    ) {
+    --desktop-discovery-field-padding: calc(var(--spacing) * 2);
   }
 }
 

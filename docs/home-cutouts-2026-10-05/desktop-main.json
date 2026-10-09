@@ -1,0 +1,36 @@
+[
+  {
+    "route": "cars",
+    "height": 1000,
+    "heroHeight": 320,
+    "overflow": false,
+    "vehicles": [
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/images/desktop/desktop-hero-gclass-profile-v1.webp"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/images/desktop/desktop-hero-urus-profile-v1.webp"
+      }
+    ],
+    "width": 1440
+  },
+  {
+    "route": "home",
+    "height": 1000,
+    "heroHeight": 320,
+    "overflow": false,
+    "vehicles": [
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/images/desktop/desktop-hero-gclass-profile-v1.webp"
+      },
+      {
+        "loaded": true,
+        "src": "http://127.0.0.1:6482/images/desktop/desktop-hero-urus-profile-v1.webp"
+      }
+    ],
+    "width": 1440
+  }
+]

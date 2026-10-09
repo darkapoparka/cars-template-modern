@@ -1,0 +1,517 @@
+[
+  {
+    "name": "Guides search",
+    "pass": true,
+    "evidence": {
+      "count": "(1)"
+    }
+  },
+  {
+    "name": "Guides category filter",
+    "pass": true,
+    "evidence": {
+      "count": "(1)"
+    }
+  },
+  {
+    "name": "PDP finance toggle",
+    "pass": true,
+    "evidence": {
+      "before": {
+        "height": 304,
+        "price": "122 629 лв."
+      },
+      "height": 304,
+      "href": "/bg/lease?vehicle=am-1010",
+      "text": "Покупка\nФинансиране\n\nОриентировъчна вноска\n\n~1870 лв./мес.\n\nСрокът и първоначалната вноска се уточняват с екипа.\n\nВижте възможностите"
+    }
+  },
+  {
+    "name": "PDP finance keyboard ArrowLeft",
+    "pass": true,
+    "evidence": {
+      "focused": true,
+      "selected": "true"
+    }
+  },
+  {
+    "name": "PDP finance keyboard End",
+    "pass": true,
+    "evidence": {
+      "focused": true,
+      "selected": "true"
+    }
+  },
+  {
+    "name": "PDP finance keyboard Home",
+    "pass": true,
+    "evidence": {
+      "focused": true,
+      "selected": "true"
+    }
+  },
+  {
+    "name": "PDP gallery opens",
+    "pass": true,
+    "evidence": {
+      "height": 1000,
+      "image": true,
+      "text": "2021 Mercedes-Benz GLS 400d 4MATIC AMG галерия\n\nСнимка 1 от 1. Използвайте стрелките наляво и надясно за навигация.\n\n1 / 1",
+      "width": 1425
+    }
+  },
+  {
+    "name": "PDP gallery Escape returns focus",
+    "pass": true,
+    "evidence": {
+      "focus": true
+    }
+  },
+  {
+    "name": "PDP finance opens selected vehicle calculator",
+    "pass": true,
+    "evidence": {
+      "url": "http://127.0.0.1:6482/bg/lease?vehicle=am-1010",
+      "vehicle": "Mercedes-Benz GLS 400d 4MATIC AMG\n\n2021 · 166 000 км\n\n122 629 лв.\n\nПроменете автомобила"
+    }
+  },
+  {
+    "name": "Cars list view",
+    "pass": true,
+    "evidence": {
+      "overflow": false,
+      "overlaps": 0,
+      "firstCard": {
+        "height": 186,
+        "width": 1345,
+        "x": 40,
+        "y": 518
+      }
+    }
+  },
+  {
+    "name": "Saved cars shows selected card",
+    "pass": true,
+    "evidence": {
+      "text": "Запазени автомобили\n2020 BMW X5\n\n89 379 лв.\n\nПремахни"
+    }
+  },
+  {
+    "name": "Saved cars remove restores baseline",
+    "pass": true,
+    "evidence": {
+      "text": "Запазени автомобили\n\nЗапазете автомобил с отметката върху снимката, за да го намерите тук."
+    }
+  },
+  {
+    "name": "Filters fit short desktop viewport",
+    "pass": true,
+    "evidence": {
+      "buttons": [
+        {
+          "bottom": 182,
+          "text": "Какво",
+          "width": 174.1875,
+          "y": 138
+        },
+        {
+          "bottom": 182,
+          "text": "Марка и модел",
+          "width": 174.203125,
+          "y": 138
+        },
+        {
+          "bottom": 182,
+          "text": "Цена и година",
+          "width": 174.203125,
+          "y": 138
+        },
+        {
+          "bottom": 182,
+          "text": "Характеристики",
+          "width": 174.203125,
+          "y": 138
+        },
+        {
+          "bottom": 182,
+          "text": "Още опции",
+          "width": 174.1875,
+          "y": 138
+        },
+        {
+          "bottom": 375,
+          "text": "Всички марки",
+          "width": 129.828125,
+          "y": 327
+        },
+        {
+          "bottom": 375,
+          "text": "Audi",
+          "width": 129.828125,
+          "y": 327
+        },
+        {
+          "bottom": 375,
+          "text": "BMW",
+          "width": 129.828125,
+          "y": 327
+        },
+        {
+          "bottom": 431,
+          "text": "Mercedes-Benz",
+          "width": 129.828125,
+          "y": 383
+        },
+        {
+          "bottom": 431,
+          "text": "Volkswagen",
+          "width": 129.828125,
+          "y": 383
+        },
+        {
+          "bottom": 431,
+          "text": "Skoda",
+          "width": 129.828125,
+          "y": 383
+        },
+        {
+          "bottom": 487,
+          "text": "Toyota",
+          "width": 129.828125,
+          "y": 439
+        },
+        {
+          "bottom": 487,
+          "text": "Ford",
+          "width": 129.828125,
+          "y": 439
+        },
+        {
+          "bottom": 487,
+          "text": "Opel",
+          "width": 129.828125,
+          "y": 439
+        },
+        {
+          "bottom": 543,
+          "text": "Peugeot",
+          "width": 129.828125,
+          "y": 495
+        },
+        {
+          "bottom": 543,
+          "text": "Renault",
+          "width": 129.828125,
+          "y": 495
+        },
+        {
+          "bottom": 543,
+          "text": "Citroen",
+          "width": 129.828125,
+          "y": 495
+        },
+        {
+          "bottom": 599,
+          "text": "Dacia",
+          "width": 129.828125,
+          "y": 551
+        },
+        {
+          "bottom": 599,
+          "text": "Hyundai",
+          "width": 129.828125,
+          "y": 551
+        },
+        {
+          "bottom": 599,
+          "text": "Kia",
+          "width": 129.828125,
+          "y": 551
+        },
+        {
+          "bottom": 655,
+          "text": "Nissan",
+          "width": 129.828125,
+          "y": 607
+        },
+        {
+          "bottom": 655,
+          "text": "Volvo",
+          "width": 129.828125,
+          "y": 607
+        },
+        {
+          "bottom": 655,
+          "text": "Mazda",
+          "width": 129.828125,
+          "y": 607
+        },
+        {
+          "bottom": 711,
+          "text": "Honda",
+          "width": 129.828125,
+          "y": 663
+        },
+        {
+          "bottom": 711,
+          "text": "Suzuki",
+          "width": 129.828125,
+          "y": 663
+        },
+        {
+          "bottom": 711,
+          "text": "Mitsubishi",
+          "width": 129.828125,
+          "y": 663
+        },
+        {
+          "bottom": 767,
+          "text": "Porsche",
+          "width": 129.828125,
+          "y": 719
+        },
+        {
+          "bottom": 767,
+          "text": "Lexus",
+          "width": 129.828125,
+          "y": 719
+        },
+        {
+          "bottom": 767,
+          "text": "Land Rover",
+          "width": 129.828125,
+          "y": 719
+        },
+        {
+          "bottom": 823,
+          "text": "Jaguar",
+          "width": 129.828125,
+          "y": 775
+        },
+        {
+          "bottom": 823,
+          "text": "SEAT",
+          "width": 129.828125,
+          "y": 775
+        },
+        {
+          "bottom": 823,
+          "text": "CUPRA",
+          "width": 129.828125,
+          "y": 775
+        },
+        {
+          "bottom": 879,
+          "text": "Alfa Romeo",
+          "width": 129.828125,
+          "y": 831
+        },
+        {
+          "bottom": 879,
+          "text": "Fiat",
+          "width": 129.828125,
+          "y": 831
+        },
+        {
+          "bottom": 879,
+          "text": "Tesla",
+          "width": 129.828125,
+          "y": 831
+        },
+        {
+          "bottom": 935,
+          "text": "MINI",
+          "width": 129.828125,
+          "y": 887
+        },
+        {
+          "bottom": 935,
+          "text": "Jeep",
+          "width": 129.828125,
+          "y": 887
+        },
+        {
+          "bottom": 935,
+          "text": "Subaru",
+          "width": 129.828125,
+          "y": 887
+        },
+        {
+          "bottom": 991,
+          "text": "Chevrolet",
+          "width": 129.828125,
+          "y": 943
+        },
+        {
+          "bottom": 991,
+          "text": "Smart",
+          "width": 129.828125,
+          "y": 943
+        },
+        {
+          "bottom": 991,
+          "text": "MG",
+          "width": 129.828125,
+          "y": 943
+        },
+        {
+          "bottom": 1047,
+          "text": "BYD",
+          "width": 129.828125,
+          "y": 999
+        },
+        {
+          "bottom": 1047,
+          "text": "Polestar",
+          "width": 129.828125,
+          "y": 999
+        },
+        {
+          "bottom": 1047,
+          "text": "DS Automobiles",
+          "width": 129.828125,
+          "y": 999
+        },
+        {
+          "bottom": 651,
+          "text": "Нулирай",
+          "width": 107.71875,
+          "y": 607
+        },
+        {
+          "bottom": 651,
+          "text": "Покажи обявите",
+          "width": 224,
+          "y": 607
+        }
+      ],
+      "rect": {
+        "height": 636,
+        "width": 945,
+        "x": 32,
+        "y": 32
+      },
+      "text": "л\nЦена и година\nХарактеристики\nОще опции\nМарка\nВсички марки\nAudi\nBMW\nMercedes-Benz\nVolkswagen\nSkoda\nToyota\nFord\nOpel\nPeugeot\nRenault\nCitroen\nDacia\nHyundai\nKia\nNissan\nVolvo\nMazda\nHonda\nSuzuki\nMitsubishi\nPorsche\nLexus\nLand Rover\nJaguar\nSEAT\nCUPRA\nAlfa Romeo\nFiat\nTesla\nMINI\nJeep\nSubaru\nChevrolet\nSmart\nMG\nBYD\nPolestar\nDS Automobiles\nМодел\n\nИзберете марка, за да видите моделите.\n\nНулирай\nПокажи обявите"
+    }
+  },
+  {
+    "name": "Make and model search applies",
+    "pass": true,
+    "evidence": {
+      "url": "http://127.0.0.1:6482/bg/cars?make=BMW&model=X5",
+      "cards": 2,
+      "initialObservation": "navigation pending; verified after result settled"
+    }
+  },
+  {
+    "name": "Sort price ascending",
+    "pass": true,
+    "evidence": {
+      "url": "http://127.0.0.1:6482/bg/cars?currency=BGN&sort=price_asc",
+      "first": "Mercedes-Benz CLS\n2020\n400d 4MATIC\nКупе\n171 000 км\nДизел\nАвтоматик\n\n73 733 лв.\n\nПо договаряне"
+    }
+  },
+  {
+    "name": "Services search",
+    "pass": true,
+    "evidence": {
+      "text": "Намерени услуги: 1"
+    }
+  },
+  {
+    "name": "Services category filter",
+    "pass": true,
+    "evidence": {
+      "text": "Намерени услуги: 1"
+    }
+  },
+  {
+    "name": "Home search Escape returns focus",
+    "pass": true,
+    "evidence": {
+      "focused": true
+    }
+  },
+  {
+    "name": "Appearance preserved: home",
+    "pass": true,
+    "evidence": {
+      "headingsEqual": true,
+      "actionsEqual": true,
+      "beforePage": [
+        1425,
+        3185
+      ],
+      "afterPage": [
+        1425,
+        3185
+      ]
+    }
+  },
+  {
+    "name": "Appearance preserved: pdp",
+    "pass": true,
+    "evidence": {
+      "headingsEqual": true,
+      "actionsEqual": true,
+      "beforePage": [
+        1425,
+        2721
+      ],
+      "afterPage": [
+        1425,
+        2721
+      ]
+    }
+  },
+  {
+    "name": "Appearance preserved: about",
+    "pass": true,
+    "evidence": {
+      "headingsEqual": true,
+      "actionsEqual": true,
+      "beforePage": [
+        1425,
+        2035
+      ],
+      "afterPage": [
+        1425,
+        2035
+      ]
+    }
+  },
+  {
+    "name": "Appearance preserved: contact",
+    "pass": true,
+    "evidence": {
+      "headingsEqual": true,
+      "actionsEqual": true,
+      "beforePage": [
+        1425,
+        2175
+      ],
+      "afterPage": [
+        1425,
+        2175
+      ]
+    }
+  },
+  {
+    "name": "Imports FAQ keyboard",
+    "pass": true,
+    "evidence": {
+      "expanded": "true",
+      "focused": true
+    }
+  },
+  {
+    "name": "Import request form opens",
+    "pass": true,
+    "evidence": {
+      "url": "http://127.0.0.1:6482/bg/imports?start=1#import-request",
+      "overflow": false,
+      "clipped": [],
+      "fields": 6
+    }
+  }
+]

@@ -1,0 +1,121 @@
+Browser tab: 1, Title: "Cars at Day & Night Auto Group | Day & Night Auto Group", URL: "http://127.0.0.1:6482/en/cars".
+1 AXWebArea Cars at Day & Night Auto Group | Day & Night Auto Group, URL: 127.0.0.1:6482/en/cars
+	2 container
+		3 link Description: Skip to main content, Value: 127.0.0.1:6482/en/cars#main-content
+		4 container main-content
+			5 container
+				6 link Description: Modern home, Value: 127.0.0.1:6482/en
+				7 container Primary dealership navigation
+					8 link Description: Home, Value: 127.0.0.1:6482/en
+					9 link Description: Cars, Value: 127.0.0.1:6482/en/cars
+					10 link Description: Services, Value: 127.0.0.1:6482/en/services
+					11 link Description: About us, Value: 127.0.0.1:6482/en/about
+					12 link Description: Contact, Value: 127.0.0.1:6482/en/contact
+				13 pop up button Saved
+				14 link Description: Contact us, Value: 127.0.0.1:6482/en/contact
+			15 container Cars for sale
+				16 heading Cars for sale, Value: 1, ID: desktop-page-title
+					17 text Cars for sale
+				18 container
+					19 container Vehicle search
+						20 checkbox Description: Make, Value: 0
+						21 checkbox Description: Model, Value: 0
+						22 checkbox Description: Price, Value: 0
+						23 pop up button Search
+					24 container Vehicle type
+						25 checkbox Cars, Value: 1
+						26 checkbox Motorbikes, Value: 0
+						27 checkbox Vans, Value: 0
+						28 checkbox Trucks, Value: 0
+			29 container
+				30 text 12 vehicles
+				31 pop up button Filters
+				32 combo box (collapsed) Description: Sort order, Value: Sort, Secondary Actions: Expand
+					33 text Sort
+				34 pop up button (collapsed) Description: Vehicle view options, ID: radix-_R_4nj5esndct9etb_, Secondary Actions: Expand
+				35 container
+					36 link Description: View 2020 BMW X5 M50d, Value: 127.0.0.1:6482/en/listing/bmw-x5-m50d-sofia-2020
+					37 text Featured
+					38 checkbox Description: Save 2020 BMW X5, Value: 0
+				39 link Description: BMW X5 Key specs BGN 89,379 from BGN 1,360/mo, Value: 127.0.0.1:6482/en/listing/bmw-x5-m50d-sofia-2020
+				40 container
+					41 link Description: View 2021 Mercedes-Benz GLS 400d 4MATIC AMG, Value: 127.0.0.1:6482/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021
+					42 text Featured
+					43 checkbox Description: Save 2021 Mercedes-Benz GLS, Value: 0
+				44 link Description: Mercedes-Benz GLS Key specs BGN 122,629 from BGN 1,870/mo, Value: 127.0.0.1:6482/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021
+				45 container
+					46 link Description: View 2021 BMW M4 Competition, Value: 127.0.0.1:6482/en/listing/bmw-m4-competition-sofia-2021
+					47 text Featured
+					48 checkbox Description: Save 2021 BMW M4, Value: 0
+				49 link Description: BMW M4 Key specs BGN 128,496 from BGN 1,960/mo, Value: 127.0.0.1:6482/en/listing/bmw-m4-competition-sofia-2021
+				50 container
+					51 link Description: View 2024 BMW 750e xDrive M Sport, Value: 127.0.0.1:6482/en/listing/bmw-750e-xdrive-m-sport-sofia-2024
+					52 checkbox Description: Save 2024 BMW 7 Series, Value: 0
+				53 link Description: BMW 7 Series Key specs BGN 175,436 from BGN 2,680/mo, Value: 127.0.0.1:6482/en/listing/bmw-750e-xdrive-m-sport-sofia-2024
+				54 container
+					55 link Description: View 2021 Mercedes-Benz E 63 S AMG, Value: 127.0.0.1:6482/en/listing/mercedes-benz-e-63-s-amg-sofia-2021
+					56 checkbox Description: Save 2021 Mercedes-Benz E-Class, Value: 0
+				57 link Description: Mercedes-Benz E-Class Key specs BGN 165,657 from BGN 2,530/mo, Value: 127.0.0.1:6482/en/listing/mercedes-benz-e-63-s-amg-sofia-2021
+				58 container
+					59 link Description: View 2020 Mercedes-Benz CLS 400d 4MATIC, Value: 127.0.0.1:6482/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020
+					60 checkbox Description: Save 2020 Mercedes-Benz CLS, Value: 0
+				61 link Description: Mercedes-Benz CLS Key specs BGN 73,733 Negotiable, Value: 127.0.0.1:6482/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020
+				62 container
+					63 link Description: View 2021 Audi Q8 50 TDI quattro S line, Value: 127.0.0.1:6482/en/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021
+					64 checkbox Description: Save 2021 Audi Q8, Value: 0
+				65 link Description: Audi Q8 Key specs BGN 99,159 from BGN 1,515/mo, Value: 127.0.0.1:6482/en/listing/audi-q8-50-tdi-quattro-s-line-sofia-2021
+				66 container
+					67 link Description: View 2021 Mercedes-Benz GLE 400d Coupe, Value: 127.0.0.1:6482/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021
+					68 checkbox Description: Save 2021 Mercedes-Benz GLE, Value: 0
+				69 link Description: Mercedes-Benz GLE Key specs BGN 124,584 from BGN 1,900/mo, Value: 127.0.0.1:6482/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021
+				70 container
+					71 link Description: View 2019 Mercedes-Benz S 350d Long AMG, Value: 127.0.0.1:6482/en/listing/mercedes-benz-s-350d-long-amg-sofia-2019
+					72 checkbox Description: Save 2019 Mercedes-Benz S-Class, Value: 0
+				73 link Description: Mercedes-Benz S-Class Key specs BGN 83,512 from BGN 1,275/mo, Value: 127.0.0.1:6482/en/listing/mercedes-benz-s-350d-long-amg-sofia-2019
+				74 container
+					75 link Description: View 2021 Range Rover Sport SVR, Value: 127.0.0.1:6482/en/listing/range-rover-sport-svr-sofia-2021
+					76 checkbox Description: Save 2021 Land Rover Range Rover Sport, Value: 0
+				77 link Description: Land Rover Range Rover Sport Key specs BGN 106,982 Negotiable, Value: 127.0.0.1:6482/en/listing/range-rover-sport-svr-sofia-2021
+				78 container
+					79 link Description: View 2023 BMW 430i xDrive Gran Coupe, Value: 127.0.0.1:6482/en/listing/bmw-430i-xdrive-gran-coupe-sofia-2023
+					80 checkbox Description: Save 2023 BMW 4 Series, Value: 0
+				81 link Description: BMW 4 Series Key specs BGN 81,556 from BGN 1,245/mo, Value: 127.0.0.1:6482/en/listing/bmw-430i-xdrive-gran-coupe-sofia-2023
+				82 container
+					83 link Description: View 2022 BMW X5 xDrive40d, Value: 127.0.0.1:6482/en/listing/bmw-x5-xdrive40d-berlin-2022
+					84 text Import
+					85 checkbox Description: Save 2022 BMW X5, Value: 0
+				86 link Description: BMW X5 Key specs BGN 112,456, Value: 127.0.0.1:6482/en/listing/bmw-x5-xdrive40d-berlin-2022
+		87 link Description: Modern home, Value: 127.0.0.1:6482/en
+		88 text Find your next car.
+		89 container Find a car
+			90 heading Find a car, Value: 2
+				91 text Find a car
+			92 link Description: Browse all cars, Value: 127.0.0.1:6482/en/cars
+			93 link Description: Latest arrivals, Value: 127.0.0.1:6482/en/cars?sort=newest
+			94 link Description: Browse by price, Value: 127.0.0.1:6482/en/cars?sort=price_asc
+			95 link Description: Vehicle financing, Value: 127.0.0.1:6482/en/lease
+			96 pop up button Saved
+		97 container Explore
+			98 heading Explore, Value: 2
+				99 text Explore
+			100 link Description: About us, Value: 127.0.0.1:6482/en/about
+			101 link Description: Services, Value: 127.0.0.1:6482/en/services
+			102 link Description: Buying advice, Value: 127.0.0.1:6482/en/blog
+			103 link Description: Buyer guides, Value: 127.0.0.1:6482/en/guides
+			104 link Description: Import a car, Value: 127.0.0.1:6482/en/imports
+			105 link Description: Sell your car, Value: 127.0.0.1:6482/en/sell
+		106 heading Visit the showroom, Value: 2
+			107 text Visit the showroom
+		108 container
+			109 text 18 Atanas Manchev Street, Studentski grad ,  Sofia
+		110 link Description: Get in touch, Value: 127.0.0.1:6482/en/contact
+		111 link Description: Arrange a viewing, Value: 127.0.0.1:6482/en/contact?intent=viewing
+		112 link Description: 0877 733 110, Value: tel:+359877733110
+		113 text ©  2026 Modern . All rights reserved.
+		114 link Description: Privacy, Value: 127.0.0.1:6482/en/legal/privacy
+		115 link Description: Terms, Value: 127.0.0.1:6482/en/legal/terms
+		116 link Description: Country and language, Value: 127.0.0.1:6482/en/locale-settings?returnTo=%2Fen%2Fcars
+		117 text Template preview · sample vehicles and contact details. Enquiries are local previews.
+		118 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea Cars at Day & Night Auto Group | Day & Night Auto Group, URL: 127.0.0.1:6482/en/cars

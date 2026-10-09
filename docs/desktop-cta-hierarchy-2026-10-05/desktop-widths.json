@@ -1,0 +1,62 @@
+[
+  {
+    "actions": [
+      {
+        "background": "rgb(245, 246, 248)",
+        "height": 44,
+        "text": "Запазени",
+        "width": 136
+      },
+      {
+        "background": "rgb(48, 52, 59)",
+        "height": 44,
+        "text": "Свържете се",
+        "width": 136
+      },
+      {
+        "background": "rgb(48, 52, 59)",
+        "height": 44,
+        "text": "Виж всички автомобили",
+        "width": 244.84375
+      },
+      {
+        "background": "rgb(245, 246, 248)",
+        "height": 44,
+        "text": "Виж всички статии",
+        "width": 205.34375
+      }
+    ],
+    "overflow": false,
+    "width": 1024
+  },
+  {
+    "actions": [
+      {
+        "background": "rgb(245, 246, 248)",
+        "height": 44,
+        "text": "Запазени",
+        "width": 136
+      },
+      {
+        "background": "rgb(48, 52, 59)",
+        "height": 44,
+        "text": "Свържете се",
+        "width": 136
+      },
+      {
+        "background": "rgb(48, 52, 59)",
+        "height": 44,
+        "text": "Виж всички автомобили",
+        "width": 244.84375
+      },
+      {
+        "background": "rgb(245, 246, 248)",
+        "height": 44,
+        "text": "Виж всички статии",
+        "width": 205.34375
+      }
+    ],
+    "overflow": false,
+    "width": 1920
+  }
+]

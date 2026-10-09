@@ -1,0 +1,142 @@
+[
+  {
+    "locale": "bg",
+    "width": 1440,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "heights": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "widthDifference": [
+      -8.0,
+      -8.0,
+      -8.0,
+      -8.0
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "heights": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "widthDifference": [
+      -8.0,
+      -8.0,
+      -8.0,
+      -8.0
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "bg",
+    "width": 1024,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "heights": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "widthDifference": [
+      -8.0,
+      -8.0,
+      -8.0,
+      -8.0
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "heights": [
+      40,
+      40,
+      40,
+      40
+    ],
+    "widthDifference": [
+      -8.0,
+      -8.0,
+      -8.0,
+      -8.0
+    ],
+    "rowAlignment": true
+  },
+  {
+    "locale": "bg",
+    "width": 320,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "bg",
+    "width": 1023,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  },
+  {
+    "locale": "en",
+    "width": 1023,
+    "textEqual": true,
+    "destinationsEqual": true,
+    "noOverflow": true,
+    "pixelEqual": true,
+    "geometryEqual": true,
+    "bodyHeightEqual": true
+  }
+]

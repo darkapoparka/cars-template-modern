@@ -1,0 +1,166 @@
+[
+  {
+    "locale": "bg",
+    "width": 320,
+    "cards": [
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "/bg/lease?vehicle=am-1010",
+        "imageLoaded": true,
+        "paragraphHeight": 20,
+        "rect": {
+          "height": 160,
+          "width": 273,
+          "x": 16,
+          "y": 867
+        },
+        "sideBySide": true,
+        "slot": "listing-financing-card"
+      },
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "imageLoaded": true,
+        "paragraphHeight": 40,
+        "rect": {
+          "height": 176,
+          "width": 273,
+          "x": 16,
+          "y": 1296
+        },
+        "sideBySide": false,
+        "slot": "listing-showroom-card"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 320
+    }
+  },
+  {
+    "locale": "bg",
+    "width": 390,
+    "cards": [
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "/bg/lease?vehicle=am-1010",
+        "imageLoaded": true,
+        "paragraphHeight": 20,
+        "rect": {
+          "height": 160,
+          "width": 343,
+          "x": 16,
+          "y": 884.25
+        },
+        "sideBySide": true,
+        "slot": "listing-financing-card"
+      },
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "imageLoaded": true,
+        "paragraphHeight": 40,
+        "rect": {
+          "height": 176,
+          "width": 343,
+          "x": 16,
+          "y": 1332.890625
+        },
+        "sideBySide": false,
+        "slot": "listing-showroom-card"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "locale": "en",
+    "width": 390,
+    "cards": [
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "/en/lease?vehicle=am-1010",
+        "imageLoaded": true,
+        "paragraphHeight": 20,
+        "rect": {
+          "height": 160,
+          "width": 343,
+          "x": 16,
+          "y": 884.25
+        },
+        "sideBySide": true,
+        "slot": "listing-financing-card"
+      },
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "imageLoaded": true,
+        "paragraphHeight": 40,
+        "rect": {
+          "height": 176,
+          "width": 343,
+          "x": 16,
+          "y": 1332.890625
+        },
+        "sideBySide": false,
+        "slot": "listing-showroom-card"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "locale": "en",
+    "width": 320,
+    "cards": [
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "/en/lease?vehicle=am-1010",
+        "imageLoaded": true,
+        "paragraphHeight": 20,
+        "rect": {
+          "height": 160,
+          "width": 273,
+          "x": 16,
+          "y": 855.75
+        },
+        "sideBySide": true,
+        "slot": "listing-financing-card"
+      },
+      {
+        "actionHeight": 44,
+        "copyOverflow": false,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "imageLoaded": true,
+        "paragraphHeight": 40,
+        "rect": {
+          "height": 176,
+          "width": 273,
+          "x": 16,
+          "y": 1284.75
+        },
+        "sideBySide": false,
+        "slot": "listing-showroom-card"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 320
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "font": "",
+    "fontWeight": "500",
+    "height": 48,
+    "padding": "0px 20px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Запазени",
+    "textShadow": "none",
+    "width": 144
+  },
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "filter": "none",
+    "font": "",
+    "fontWeight": "500",
+    "height": 48,
+    "padding": "0px 20px",
+    "radius": "12px",
+    "shadow": "none",
+    "text": "Свържете се",
+    "textShadow": "none",
+    "width": 144
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "cards": [
+    {
+      "card": {
+        "width": 417.328125
+      },
+      "lineClamp": "",
+      "loaded": true,
+      "media": {
+        "height": 244.578125,
+        "width": 391.328125
+      },
+      "titleFont": "21px"
+    },
+    {
+      "card": {
+        "width": 417.328125
+      },
+      "lineClamp": "",
+      "loaded": true,
+      "media": {
+        "height": 244.578125,
+        "width": 391.328125
+      },
+      "titleFont": "21px"
+    },
+    {
+      "card": {
+        "width": 417.34375
+      },
+      "lineClamp": "",
+      "loaded": true,
+      "media": {
+        "height": 244.578125,
+        "width": 391.34375
+      },
+      "titleFont": "21px"
+    }
+  ],
+  "width": 1440
+}

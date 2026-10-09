@@ -1,0 +1,134 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "beforeSize": [
+      305,
+      2136
+    ],
+    "afterSize": [
+      305,
+      2136
+    ],
+    "pixelIdentical": false,
+    "differenceBounds": [
+      8,
+      207,
+      177,
+      2001
+    ],
+    "outsideImageJpegBlocks": [
+      8,
+      207,
+      177,
+      1904
+    ],
+    "changedPixels": 89223
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "beforeSize": [
+      375,
+      2384
+    ],
+    "afterSize": [
+      375,
+      2384
+    ],
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      207,
+      177,
+      2248
+    ],
+    "outsideImageJpegBlocks": [
+      15,
+      207,
+      176,
+      2128
+    ],
+    "changedPixels": 152045
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "beforeSize": [
+      1008,
+      1624
+    ],
+    "afterSize": [
+      1008,
+      1624
+    ],
+    "pixelIdentical": true,
+    "differenceBounds": null
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "beforeSize": [
+      305,
+      2136
+    ],
+    "afterSize": [
+      305,
+      2136
+    ],
+    "pixelIdentical": false,
+    "differenceBounds": [
+      8,
+      207,
+      177,
+      2001
+    ],
+    "outsideImageJpegBlocks": [
+      8,
+      207,
+      177,
+      1904
+    ],
+    "changedPixels": 89223
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "beforeSize": [
+      375,
+      2384
+    ],
+    "afterSize": [
+      375,
+      2384
+    ],
+    "pixelIdentical": false,
+    "differenceBounds": [
+      15,
+      207,
+      177,
+      2248
+    ],
+    "outsideImageJpegBlocks": [
+      15,
+      207,
+      176,
+      2128
+    ],
+    "changedPixels": 152045
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "beforeSize": [
+      1008,
+      1624
+    ],
+    "afterSize": [
+      1008,
+      1624
+    ],
+    "pixelIdentical": true,
+    "differenceBounds": null
+  }
+]

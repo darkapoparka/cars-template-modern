@@ -15,38 +15,35 @@
     align-content: start;
     min-width: 0;
   }
-  .desktopControls .preferences .heading {
-    grid-column: 1 / -1;
-    margin: 0;
-    font-size: calc(var(--spacing) * 6);
-    font-weight: var(--font-weight-semibold);
-    line-height: calc(var(--spacing) * 8);
-    letter-spacing: calc(var(--spacing) * -0.1);
-  }
   .choiceField {
     min-width: 0;
-    padding: 0;
+    padding: calc(var(--spacing) * 3);
     margin: 0;
-    border: 0;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
   }
   .choiceField legend {
+    float: left;
+    width: 100%;
     padding: 0;
     margin-bottom: calc(var(--spacing) * 2.5);
     font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-normal);
   }
   .choices {
+    clear: both;
     display: flex;
     gap: calc(var(--spacing) * 2);
   }
   .choice {
     position: relative;
-    flex: 1;
-    min-width: 0;
+    flex: none;
+    min-width: calc(var(--spacing) * 14);
     cursor: pointer;
   }
   .choice:first-child {
-    flex: 1.5;
+    min-width: calc(var(--spacing) * 22);
   }
   .choice input {
     position: absolute;
@@ -62,9 +59,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(var(--spacing) * 13);
-    padding-inline: calc(var(--spacing) * 1);
-    font-size: calc(var(--spacing) * 3.5);
+    height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.25);
     font-weight: var(--font-weight-normal);
     color: var(--foreground);
     background: var(--control);
@@ -82,13 +79,6 @@
   .choice input:focus-visible + span {
     outline: var(--desktop-focus-width) solid var(--brand);
     outline-offset: calc(var(--spacing) * 0.5);
-  }
-  .note {
-    grid-column: 1 / -1;
-    margin: 0;
-    font-size: calc(var(--spacing) * 3.5);
-    line-height: calc(var(--spacing) * 6);
-    color: var(--muted-foreground);
   }
   .summary {
     display: grid;

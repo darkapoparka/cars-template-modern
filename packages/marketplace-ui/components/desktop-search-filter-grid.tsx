@@ -26,9 +26,10 @@ interface SelectOption {
 }
 
 const fieldClassName =
-  "grid min-w-0 content-start gap-1.5 font-medium text-muted-foreground text-xs leading-4";
+  "relative block min-w-0 font-normal text-muted-foreground text-xs leading-4";
+const labelClassName = "pointer-events-none absolute top-2 left-3.5 z-10";
 const controlClassName =
-  "h-11 w-full min-w-0 rounded-xl border border-border bg-control px-3.5 font-normal text-sm text-foreground leading-5 outline-none transition focus-visible:border-foreground/40 focus-visible:ring-2 focus-visible:ring-ring/30 disabled:cursor-not-allowed disabled:opacity-60";
+  "h-14 w-full min-w-0 rounded-xl border border-border bg-control px-3.5 pt-5 pb-1 font-normal text-sm text-foreground leading-5 outline-none transition focus-visible:border-foreground/40 focus-visible:ring-2 focus-visible:ring-ring/30 disabled:cursor-not-allowed disabled:opacity-60";
 
 const includeCurrentOption = (
   options: SelectOption[],
@@ -99,7 +100,7 @@ const SelectField = ({
   value: string;
 }) => (
   <label className={fieldClassName}>
-    <span>{label}</span>
+    <span className={labelClassName}>{label}</span>
     <span className="relative block min-w-0">
       <select
         className={`${controlClassName} appearance-none truncate pr-10`}
@@ -116,7 +117,7 @@ const SelectField = ({
       </select>
       <ChevronDown
         aria-hidden="true"
-        className={`pointer-events-none absolute top-1/2 right-3.5 size-4 -translate-y-1/2 text-muted-foreground ${disabled ? "opacity-60" : ""}`}
+        className={`pointer-events-none absolute top-1/2 right-3.5 mt-2 size-4 -translate-y-1/2 text-muted-foreground ${disabled ? "opacity-60" : ""}`}
         strokeWidth={1.75}
       />
     </span>
@@ -141,7 +142,7 @@ const NumberField = ({
   value: number | undefined;
 }) => (
   <label className={fieldClassName}>
-    <span>{label}</span>
+    <span className={labelClassName}>{label}</span>
     <input
       className={controlClassName}
       max={max}
@@ -169,7 +170,7 @@ const TextField = ({
   value: string;
 }) => (
   <label className={fieldClassName}>
-    <span>{label}</span>
+    <span className={labelClassName}>{label}</span>
     <input
       className={controlClassName}
       onChange={(event) => onChange(event.target.value)}

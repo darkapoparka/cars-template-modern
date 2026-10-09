@@ -1,0 +1,38 @@
+[
+  {
+    "route": "home",
+    "width": 320,
+    "height": 2176,
+    "changedPixels": 0
+  },
+  {
+    "route": "cars",
+    "width": 320,
+    "height": 2176,
+    "changedPixels": 0
+  },
+  {
+    "route": "home",
+    "width": 390,
+    "height": 2424,
+    "changedPixels": 0
+  },
+  {
+    "route": "cars",
+    "width": 390,
+    "height": 2424,
+    "changedPixels": 0
+  },
+  {
+    "route": "home",
+    "width": 1023,
+    "height": 1664,
+    "changedPixels": 0
+  },
+  {
+    "route": "cars",
+    "width": 1023,
+    "height": 1664,
+    "changedPixels": 0
+  }
+]

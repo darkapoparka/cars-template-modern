@@ -61,9 +61,9 @@ export const ListingGalleryLightbox = ({
       </DialogDescription>
       <DialogClose
         aria-label={copy.closeGallery}
-        className="absolute top-[calc(0.75rem+env(safe-area-inset-top))] right-3 z-20 grid size-11 place-items-center rounded-full bg-black/65 text-white transition-colors hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+        className="absolute top-[calc(0.75rem+env(safe-area-inset-top))] right-3 z-20 grid size-11 place-items-center rounded-full bg-black/65 text-white transition-colors hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black max-lg:bg-clip-content max-lg:p-1.5"
       >
-        <X aria-hidden="true" className="size-5" />
+        <X aria-hidden="true" className="size-4 lg:size-5" />
       </DialogClose>
       <div className="relative min-h-0 flex-1">
         {failedImageUrls.has(selectedImage.url) ? (

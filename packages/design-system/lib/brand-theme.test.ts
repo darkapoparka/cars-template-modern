@@ -4,6 +4,8 @@ import { brandContrastRatio, createBrandTheme } from "./brand-theme";
 describe("brand theme pairs", () => {
   it.each([
     "#c40101",
+    "#30343b",
+    "#4b5057",
     "#164e63",
     "#facc15",
     "#777777",
@@ -12,19 +14,47 @@ describe("brand theme pairs", () => {
     "#000000",
   ])("creates readable pairs for %s", (accent) => {
     const theme = createBrandTheme(accent);
+    for (const state of ["hover", "active"] as const) {
+      expect(
+        brandContrastRatio(
+          theme[`--brand-${state}`],
+          theme[`--brand-${state}-foreground`]
+        )
+      ).toBeGreaterThanOrEqual(4.5);
+    }
     expect(
       brandContrastRatio(accent, theme["--brand-foreground"])
     ).toBeGreaterThanOrEqual(4.5);
     expect(
       brandContrastRatio(theme["--brand-text"], "#ffffff")
     ).toBeGreaterThanOrEqual(4.5);
+    expect(
+      brandContrastRatio(
+        theme["--brand-gradient-end"],
+        theme["--brand-foreground"]
+      )
+    ).toBeGreaterThanOrEqual(4.5);
   });
   it("keeps every grayscale brand readable, including the mid-gray contrast gap", () => {
     for (let value = 0; value <= 255; value++) {
       const accent = `#${value.toString(16).padStart(2, "0").repeat(3)}`;
       const theme = createBrandTheme(accent);
+      for (const state of ["hover", "active"] as const) {
+        expect(
+          brandContrastRatio(
+            theme[`--brand-${state}`],
+            theme[`--brand-${state}-foreground`]
+          )
+        ).toBeGreaterThanOrEqual(4.5);
+      }
       expect(
         brandContrastRatio(accent, theme["--brand-foreground"])
+      ).toBeGreaterThanOrEqual(4.5);
+      expect(
+        brandContrastRatio(
+          theme["--brand-gradient-end"],
+          theme["--brand-foreground"]
+        )
       ).toBeGreaterThanOrEqual(4.5);
     }
   });

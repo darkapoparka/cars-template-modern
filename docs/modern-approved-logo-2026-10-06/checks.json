@@ -1,0 +1,180 @@
+[
+  {
+    "height": 1000,
+    "logos": [
+      {
+        "box": {
+          "height": 48,
+          "width": 160,
+          "x": 52.5,
+          "y": 21
+        },
+        "color": "rgb(35, 35, 35)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      },
+      {
+        "box": {
+          "height": 32,
+          "width": 132,
+          "x": 52.5,
+          "y": 1941.96875
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 1440
+  },
+  {
+    "height": 844,
+    "logos": [
+      {
+        "box": {
+          "height": 44,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "logos": [
+      {
+        "box": {
+          "height": 44,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      },
+      {
+        "box": {
+          "height": 44,
+          "width": 144,
+          "x": 115.5,
+          "y": 266
+        },
+        "color": "lab(2.51107 0.242703 -0.886115)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 390
+  },
+  {
+    "height": 844,
+    "logos": [
+      {
+        "box": {
+          "height": 44,
+          "width": 144,
+          "x": 80.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 305,
+    "url": "http://127.0.0.1:6482/bg/cars",
+    "width": 320
+  },
+  {
+    "height": 844,
+    "logos": [
+      {
+        "box": {
+          "height": 44,
+          "width": 144,
+          "x": 115.5,
+          "y": 12
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 375,
+    "url": "http://127.0.0.1:6482/en/services",
+    "width": 390
+  },
+  {
+    "height": 1000,
+    "logos": [
+      {
+        "box": {
+          "height": 48,
+          "width": 160,
+          "x": 52.5,
+          "y": 21
+        },
+        "color": "rgb(35, 35, 35)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      },
+      {
+        "box": {
+          "height": 28,
+          "width": 144,
+          "x": 93.5,
+          "y": 887
+        },
+        "color": "rgb(35, 35, 35)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      },
+      {
+        "box": {
+          "height": 32,
+          "width": 132,
+          "x": 52.5,
+          "y": 1720
+        },
+        "color": "rgb(255, 255, 255)",
+        "label": "Modern",
+        "mask": "url(\"http://127.0.0.1:6482/images/brand/modern-logo-v2.webp\")",
+        "maskSize": "contain",
+        "source": "/images/brand/modern-logo-v2.webp"
+      }
+    ],
+    "scrollWidth": 1425,
+    "url": "http://127.0.0.1:6482/bg/contact",
+    "width": 1440
+  }
+]

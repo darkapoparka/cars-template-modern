@@ -1,5 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
+
+test.beforeEach(async ({ context, baseURL }) => {
+  await dismissModernWelcome(context.request, baseURL);
+});
 
 test("desktop category drafts preserve filters and browser Back context", async ({
   page,

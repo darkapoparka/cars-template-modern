@@ -1,0 +1,22 @@
+{
+  "errorOverlay": false,
+  "headerImages": [
+    {
+      "loaded": true,
+      "src": "/images/services/header-silver-car-v2.webp"
+    },
+    {
+      "loaded": true,
+      "src": "/images/services/header-silver-filters-v2.webp"
+    }
+  ],
+  "overflow": false,
+  "titleSize": "18px",
+  "url": "http://127.0.0.1:6482/bg/cars",
+  "viewport": [
+    354,
+    884
+  ],
+  "reloadedAt": "2026-10-06T12:10:04.587Z",
+  "newConsoleErrors": []
+}

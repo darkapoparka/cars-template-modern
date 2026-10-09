@@ -1,0 +1,60 @@
+{
+  "sourceRepository": "L:/CODEX/cars",
+  "branch": "main",
+  "sourceHead": "08c89d63f9e11939acd5b135ece4278252b80f43",
+  "buildId": "VHXEz-qqEblwFNhrVN6rL",
+  "preview": "http://127.0.0.1:6482/bg",
+  "productionBuild": "passed",
+  "webTypecheck": "passed",
+  "biomeFiles": 14,
+  "refactorTests": 7,
+  "releaseContracts": "passed",
+  "preflightTests": 87,
+  "uiUnitTests": 101,
+  "webUnitTests": 188,
+  "browserTests": 18,
+  "browserEngines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "sharedBannerRoutes": [
+    "Home",
+    "Cars",
+    "Sell",
+    "Leasing",
+    "Imports",
+    "About",
+    "Contact",
+    "Guides",
+    "Terms"
+  ],
+  "desktopBannerHeight": 320,
+  "desktopBannerMaxWidth": 1320,
+  "desktopWidths": [
+    1024,
+    1280,
+    1440,
+    1920
+  ],
+  "browserFrameWidths": [
+    1024,
+    1440,
+    1920
+  ],
+  "captureLocales": [
+    "bg",
+    "en"
+  ],
+  "matchedCapturesPerPhase": 54,
+  "captureErrors": [],
+  "mobileGeometryComparisons": 30,
+  "mobileGeometry": "all dimensions and page heights match",
+  "mobilePixelComparison": "18 exact; eight small icon/render differences (at most 90 pixels); four 1023px Home/Cars captures differ within the M4 photograph. Strict pixel threshold failed and was visually reviewed; no mobile geometry change.",
+  "viewAllKeyboardNavigation": "focused and Enter opened /bg/cars on live 6482",
+  "mileageVerificationStates": 8,
+  "mileageAccessibilityScans": 4,
+  "mileageMobileComparisons": "four exact",
+  "nextEnvPreimageSha256": "20743ED54E297439DBED7F7B04CB24416E298AB74B5EE291164F32F78687DAE8",
+  "git": "commit/push pending: pre-existing zero-byte index.lock preserved",
+  "publication": "local master only"
+}

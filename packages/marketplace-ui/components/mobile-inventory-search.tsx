@@ -18,6 +18,7 @@ import {
 } from "../lib/inventory-search-suggestions";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { isSearchComposition } from "../lib/search-keyboard";
 import {
   MobileMarketplaceOverlayCloseAction,
   MobileMarketplaceOverlayField,
@@ -62,13 +63,15 @@ export const MobileInventorySearch = ({
 
   const groups = useMemo(
     () =>
-      getMobileInventorySearchGroups({
-        isBg,
-        listings,
-        locale,
-        query: draft,
-      }),
-    [draft, isBg, listings, locale]
+      open
+        ? getMobileInventorySearchGroups({
+            isBg,
+            listings,
+            locale,
+            query: draft,
+          })
+        : [],
+    [draft, isBg, listings, locale, open]
   );
 
   const commitItem = (item: MobileSearchItem) => {
@@ -118,7 +121,7 @@ export const MobileInventorySearch = ({
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
         }
-        title={isBg ? "Търсене" : "Search"}
+        title={copy.mobileTitles.search}
       />
 
       <div
@@ -143,7 +146,7 @@ export const MobileInventorySearch = ({
           name="q"
           onChange={(event) => setDraft(event.target.value)}
           onKeyDown={(event) => {
-            if (event.key === "Enter") {
+            if (event.key === "Enter" && !isSearchComposition(event)) {
               event.preventDefault();
               commitDraft();
             }

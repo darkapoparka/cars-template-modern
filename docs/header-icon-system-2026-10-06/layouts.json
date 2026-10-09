@@ -1,0 +1,2402 @@
+[
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/cars",
+    "width": 390,
+    "file": "bg-cars-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте мотоциклет"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "bike",
+        "src": "/images/services/header-system-bike-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/motorbikes",
+    "width": 390,
+    "file": "bg-motorbikes-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте камион"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "truck",
+        "src": "/images/services/header-system-truck-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/trucks",
+    "width": 390,
+    "file": "bg-trucks-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте бус"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "van",
+        "src": "/images/services/header-system-van-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/vans",
+    "width": 390,
+    "file": "bg-vans-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Съвети и статии"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "/bg/guides",
+        "kind": "guides",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "guides",
+        "src": "/images/services/header-system-guides-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/guides",
+    "width": 390,
+    "file": "bg-guides-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Нашите услуги"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/services",
+    "width": 390,
+    "file": "bg-services-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Внос на автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/imports",
+    "width": 390,
+    "file": "bg-imports-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/cars",
+    "width": 320,
+    "file": "bg-cars-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте мотоциклет"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "bike",
+        "src": "/images/services/header-system-bike-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/motorbikes",
+    "width": 320,
+    "file": "bg-motorbikes-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте камион"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "truck",
+        "src": "/images/services/header-system-truck-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/trucks",
+    "width": 320,
+    "file": "bg-trucks-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте бус"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "van",
+        "src": "/images/services/header-system-van-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/vans",
+    "width": 320,
+    "file": "bg-vans-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Съвети и статии"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "/bg/guides",
+        "kind": "guides",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "guides",
+        "src": "/images/services/header-system-guides-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/guides",
+    "width": 320,
+    "file": "bg-guides-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Нашите услуги"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/services",
+    "width": 320,
+    "file": "bg-services-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Внос на автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/imports",
+    "width": 320,
+    "file": "bg-imports-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Лизинг на автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/lease",
+    "width": 390,
+    "file": "bg-lease-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Продайте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/sell",
+    "width": 390,
+    "file": "bg-sell-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "За нас и контакти"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/about",
+    "width": 390,
+    "file": "bg-about-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "За нас и контакти"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/contact",
+    "width": 390,
+    "file": "bg-contact-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg",
+    "width": 390,
+    "file": "bg-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Лизинг на автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/lease",
+    "width": 320,
+    "file": "bg-lease-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Продайте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/sell",
+    "width": 320,
+    "file": "bg-sell-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "За нас и контакти"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/about",
+    "width": 320,
+    "file": "bg-about-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "За нас и контакти"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "location",
+        "src": "/images/services/header-system-location-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg/contact",
+    "width": 320,
+    "file": "bg-contact-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Открийте автомобил"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/bg",
+    "width": 320,
+    "file": "bg-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Find your next car"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/cars",
+    "width": 320,
+    "file": "en-cars-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Import a vehicle"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/imports",
+    "width": 320,
+    "file": "en-imports-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        273,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Guides and articles"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "/en/guides",
+        "kind": "guides",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "guides",
+        "src": "/images/services/header-system-guides-v3.webp"
+      },
+      {
+        "artwork": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          245,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          249,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/guides",
+    "width": 320,
+    "file": "en-guides-after-320.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Find your next car"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          18,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "car",
+        "src": "/images/services/header-system-car-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/cars",
+    "width": 390,
+    "file": "en-cars-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Import a vehicle"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "info",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "info",
+        "src": "/images/services/header-system-info-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "phone",
+        "src": "/images/services/header-system-phone-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/imports",
+    "width": 390,
+    "file": "en-imports-after-390.jpg"
+  },
+  {
+    "heading": {
+      "box": [
+        16,
+        68,
+        343,
+        28
+      ],
+      "font": "18px",
+      "line": "28px",
+      "text": "Guides and articles"
+    },
+    "height": 844,
+    "icons": [
+      {
+        "artwork": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          16,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          20,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": "/en/guides",
+        "kind": "guides",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "guides",
+        "src": "/images/services/header-system-guides-v3.webp"
+      },
+      {
+        "artwork": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "control": [
+          315,
+          12,
+          44,
+          44
+        ],
+        "frame": [
+          319,
+          16,
+          36,
+          36
+        ],
+        "horizontalCenterOffset": 0,
+        "href": null,
+        "kind": "filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "role": "filters",
+        "src": "/images/services/header-system-filters-v3.webp"
+      }
+    ],
+    "overflow": false,
+    "url": "/en/guides",
+    "width": 390,
+    "file": "en-guides-after-390.jpg"
+  }
+]

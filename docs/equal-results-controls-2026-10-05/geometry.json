@@ -1,0 +1,134 @@
+[
+  {
+    "locale": "bg",
+    "label": "Препоръчани",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Сортирай",
+      "gridTop": 486,
+      "hoverLabel": "Сортирай",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": false
+    }
+  },
+  {
+    "locale": "bg",
+    "label": "Най-нови",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Най-нови",
+      "gridTop": 486,
+      "hoverLabel": "Най-нови",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": false
+    }
+  },
+  {
+    "locale": "bg",
+    "label": "Цена нагоре",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Цена нагоре",
+      "gridTop": 486,
+      "hoverLabel": "Цена нагоре",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": false
+    }
+  },
+  {
+    "locale": "bg",
+    "label": "Цена надолу",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Цена надолу",
+      "gridTop": 486,
+      "hoverLabel": "Цена надолу",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": false
+    }
+  },
+  {
+    "locale": "bg",
+    "label": "Най-нисък пробег",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Най-нисък пробег",
+      "gridTop": 486,
+      "hoverLabel": "Най-нисък пробег",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": true
+    }
+  },
+  {
+    "locale": "bg",
+    "label": "Най-нова година",
+    "measure": {
+      "buttons": [
+        {
+          "height": 44,
+          "width": 144
+        },
+        {
+          "height": 44,
+          "width": 144
+        }
+      ],
+      "fullLabel": "Най-нова година",
+      "gridTop": 486,
+      "hoverLabel": "Най-нова година",
+      "pageOverflow": false,
+      "textOverflow": "ellipsis",
+      "truncated": true
+    }
+  }
+]

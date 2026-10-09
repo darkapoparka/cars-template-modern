@@ -1,0 +1,58 @@
+[
+  {
+    "action": "English search sell",
+    "count": 1,
+    "titles": [
+      "Sell your carSellShare your vehicle details and request an appraisal.Explore"
+    ]
+  },
+  {
+    "action": "English clear search",
+    "count": 4,
+    "focus": "search"
+  },
+  {
+    "action": "BG long sell query",
+    "count": 1,
+    "titles": [
+      "Продайте автомобила сиПродайИзпратете данни за автомобила и заявете оценка.Разгледайте"
+    ]
+  },
+  {
+    "action": "BG import quick pill",
+    "count": 1
+  },
+  {
+    "action": "Import card Enter activation",
+    "url": "http://127.0.0.1:6482/bg/imports"
+  },
+  {
+    "action": "Import header help opens",
+    "dialogCount": 1
+  },
+  {
+    "action": "Import help close restores focus",
+    "focus": "mobile-service-help"
+  },
+  {
+    "action": "Bottom nav Sell",
+    "url": "http://127.0.0.1:6482/bg/sell"
+  },
+  {
+    "action": "Sell VIN entry opens",
+    "dialogCount": 1
+  },
+  {
+    "action": "Sell VIN close restores focus",
+    "focus": "mobile-sell-vin-entry"
+  },
+  {
+    "action": "Mobile menu opens",
+    "visible": true
+  },
+  {
+    "action": "Mobile menu closes",
+    "visible": 0,
+    "focus": "Меню"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "state": "applied",
+    "geometry": {
+      "controlsDocumentTop": 474,
+      "gridDocumentTop": 610,
+      "scrollY": 0
+    }
+  },
+  {
+    "state": "cleared",
+    "geometry": {
+      "controlsDocumentTop": 474,
+      "gridDocumentTop": 610,
+      "scrollY": 73
+    }
+  }
+]

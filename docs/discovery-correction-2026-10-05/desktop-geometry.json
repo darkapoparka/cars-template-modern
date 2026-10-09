@@ -1,0 +1,306 @@
+[
+  {
+    "width": 1024,
+    "locale": "bg",
+    "filters": false,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 40,
+        "top": 90,
+        "width": 929
+      },
+      "chipOverflow": false,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 40,
+        "top": 426,
+        "width": 276.5
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 332.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 2110.875,
+        "height": 1624.875,
+        "left": 40,
+        "top": 486,
+        "width": 929
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1024,
+    "locale": "bg",
+    "filters": true,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 40,
+        "top": 90,
+        "width": 929
+      },
+      "chipOverflow": true,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 40,
+        "top": 426,
+        "width": 276.5
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 332.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 877.21875,
+        "height": 391.21875,
+        "left": 40,
+        "top": 486,
+        "width": 929
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1024,
+    "locale": "en",
+    "filters": false,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 40,
+        "top": 90,
+        "width": 929
+      },
+      "chipOverflow": false,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 40,
+        "top": 426,
+        "width": 276.5
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 332.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 2110.875,
+        "height": 1624.875,
+        "left": 40,
+        "top": 486,
+        "width": 929
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1024,
+    "locale": "en",
+    "filters": true,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 40,
+        "top": 90,
+        "width": 929
+      },
+      "chipOverflow": true,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 40,
+        "top": 426,
+        "width": 276.5
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 332.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 877.21875,
+        "height": 391.21875,
+        "left": 40,
+        "top": 486,
+        "width": 929
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "filters": false,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "top": 90,
+        "width": 1320
+      },
+      "chipOverflow": false,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 52.5,
+        "top": 426,
+        "width": 472
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 540.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 1736.96875,
+        "height": 1250.96875,
+        "left": 52.5,
+        "top": 486,
+        "width": 1320
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "filters": true,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "top": 90,
+        "width": 1320
+      },
+      "chipOverflow": true,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 52.5,
+        "top": 426,
+        "width": 472
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 540.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 889.65625,
+        "height": 403.65625,
+        "left": 52.5,
+        "top": 486,
+        "width": 1320
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "filters": false,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "top": 90,
+        "width": 1320
+      },
+      "chipOverflow": false,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 52.5,
+        "top": 426,
+        "width": 472
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 540.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 1736.96875,
+        "height": 1250.96875,
+        "left": 52.5,
+        "top": 486,
+        "width": 1320
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "filters": true,
+    "measure": {
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "top": 90,
+        "width": 1320
+      },
+      "chipOverflow": true,
+      "chips": {
+        "bottom": 470,
+        "height": 44,
+        "left": 52.5,
+        "top": 426,
+        "width": 472
+      },
+      "controls": {
+        "bottom": 470,
+        "height": 44,
+        "left": 540.5,
+        "top": 426,
+        "width": 344
+      },
+      "grid": {
+        "bottom": 889.65625,
+        "height": 403.65625,
+        "left": 52.5,
+        "top": 486,
+        "width": 1320
+      },
+      "icons": 4,
+      "pageOverflow": false
+    }
+  }
+]

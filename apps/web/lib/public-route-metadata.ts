@@ -49,8 +49,6 @@ export const createCategoryMetadata = ({
     locale,
     path: path ?? getVehicleCategory(category).path,
     robots: getPublicInventoryRobots(searchParams),
-    title: isBg
-      ? `${subject} от ${leadSite.name}`
-      : `${subject} at ${leadSite.name}`,
+    title: subject,
   });
 };

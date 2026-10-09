@@ -1,0 +1,56 @@
+[
+  {
+    "controlHeight": 88,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/services",
+    "title": "Нашите услуги"
+  },
+  {
+    "controlHeight": 88,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/sell",
+    "title": "Продайте автомобил"
+  },
+  {
+    "controlHeight": 88,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/imports",
+    "title": "Внос на автомобил"
+  },
+  {
+    "controlHeight": 88,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/lease",
+    "title": "Лизинг на автомобил"
+  },
+  {
+    "controlHeight": 88,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/guides",
+    "title": "Съвети и статии"
+  },
+  {
+    "controlHeight": 28,
+    "font": "22px",
+    "headingHeight": 28,
+    "headingY": 68,
+    "overflow": false,
+    "path": "/bg/about",
+    "title": "За нас и контакти"
+  }
+]

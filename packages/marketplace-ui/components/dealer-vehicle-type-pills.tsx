@@ -2,19 +2,10 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
+import { dealerVehicleTypes } from "../lib/dealer-vehicle-types";
 import { getLocalizedDesktopCategoryLabel } from "../lib/desktop-filter-policy";
 import styles from "./dealer-hero-search.module.css";
 import Image from "./public-image";
-
-const vehicleTypes = [
-  { id: "car", artwork: "/images/categories/discovery-pill-car-v4.webp" },
-  {
-    id: "motorbike",
-    artwork: "/images/categories/discovery-pill-motorbike-v2.webp",
-  },
-  { id: "van", artwork: "/images/categories/discovery-pill-van-v3.webp" },
-  { id: "truck", artwork: "/images/categories/discovery-pill-truck-v2.webp" },
-] as const;
 
 /** Shared discovery types; each page retains its existing search-state owner. */
 export function DealerVehicleTypePills({
@@ -37,7 +28,7 @@ export function DealerVehicleTypePills({
       className={styles.categoryPills}
       data-slot={slot}
     >
-      {vehicleTypes.map(({ id, artwork }) => (
+      {dealerVehicleTypes.map(({ id, artwork }) => (
         <Button
           aria-pressed={category === id}
           className={styles.categoryPill}

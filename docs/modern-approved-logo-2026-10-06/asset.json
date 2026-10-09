@@ -1,0 +1,28 @@
+{
+  "approvedAt": "2026-10-06",
+  "producer": "built-in image generation tool",
+  "selection": "Owner approved the first generated concept by attaching it.",
+  "source": "approved-source.png",
+  "sourceSha256": "1b862d137de45f959ede6536a4ef2cd664ebce49b1fad3aafa54e5bfd6a9e042",
+  "firstGeneratedOriginal": "C:/Users/radev/.codex/generated_images/01a10f82-0540-77f1-89c9-20786eeef440/exec-bb1dc6a3-3263-42a6-98b3-10ad700d8a8b.png",
+  "alphaDifferencesFromFirstGenerated": 0,
+  "maximumRgbDifferenceFromFirstGenerated": 1,
+  "derivative": "apps/web/public/images/brand/modern-logo-v2.webp",
+  "derivativeSha256": "0a5a47ce8a88dde68b6e0b86626445d5244351be4245b0f2c168c037521e9bee",
+  "width": 1843,
+  "height": 264,
+  "bytes": 148104,
+  "alpha": true,
+  "crop": {
+    "left": 82,
+    "top": 250,
+    "width": 1843,
+    "height": 264
+  },
+  "deliveryPreparation": "Remove transparent margins and isolated nearly invisible alpha noise outside the artwork; lossless WebP, no resizing or redrawing.",
+  "deliveryAlphaDifferences": 0,
+  "deliveryVisibleRgbDifferences": 0,
+  "promptRecord": "apps/web/public/images/brand/modern-logo-v2.provenance.md",
+  "configuration": "desktopPreviewIdentity.markArtwork",
+  "evidence": "docs/modern-approved-logo-2026-10-06/"
+}

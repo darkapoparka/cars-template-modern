@@ -1,0 +1,242 @@
+[
+  {
+    "name": "home",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      2176
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      2176
+    ]
+  },
+  {
+    "name": "about",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      900
+    ]
+  },
+  {
+    "name": "contact",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 60,
+    "dimensions": [
+      320,
+      900
+    ]
+  },
+  {
+    "name": "services",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      900
+    ]
+  },
+  {
+    "name": "lease",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      2188
+    ]
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      2424
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      2424
+    ]
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 33,
+    "dimensions": [
+      390,
+      900
+    ]
+  },
+  {
+    "name": "contact",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 76,
+    "dimensions": [
+      390,
+      900
+    ]
+  },
+  {
+    "name": "services",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      900
+    ]
+  },
+  {
+    "name": "lease",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      2436
+    ]
+  },
+  {
+    "name": "home",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      1664
+    ]
+  },
+  {
+    "name": "cars",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      1664
+    ]
+  },
+  {
+    "name": "about",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      900
+    ]
+  },
+  {
+    "name": "contact",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      900
+    ]
+  },
+  {
+    "name": "services",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 14,
+    "dimensions": [
+      1023,
+      900
+    ]
+  },
+  {
+    "name": "lease",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      4924
+    ]
+  },
+  {
+    "name": "imports",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      900
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 320,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      320,
+      900
+    ]
+  },
+  {
+    "name": "imports",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      900
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 390,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      390,
+      900
+    ]
+  },
+  {
+    "name": "imports",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 14,
+    "dimensions": [
+      1023,
+      900
+    ]
+  },
+  {
+    "name": "sell",
+    "width": 1023,
+    "layoutEqual": true,
+    "changedPixels": 0,
+    "dimensions": [
+      1023,
+      900
+    ]
+  }
+]

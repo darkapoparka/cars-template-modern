@@ -1,0 +1,56 @@
+[
+  {
+    "path": "apps/e2e/specs/desktop-banner-hierarchy.spec.ts",
+    "before": "09c3c39d9108dddc006a192dd9d6ffcf1e985ba392f14c8c54dc8672ceac76fc",
+    "after": "1429fd4df7ab1605935a4dcbd5247959f1676aba562f2b41ca34eab27615f840"
+  },
+  {
+    "path": "apps/e2e/specs/desktop-inventory-search.spec.ts",
+    "before": "f7d3b3a864db3e546590962f5d234d6981642c9e0097df843b1232dab1732b5a",
+    "after": "7e020a904c41f140a976346a0cd50e86f850d15d0c5760083c3c418780483d55"
+  },
+  {
+    "path": "apps/e2e/specs/desktop-overlay-scrollbar.spec.ts",
+    "before": "4029220630a794a4265ccef7ed6e33c6bfe9733d18d2677933975e88530fab2c",
+    "after": "7eb5c7933a2b321204990166a4b022aa7c4a115ee686986e23bb0e09da57c9b0"
+  },
+  {
+    "path": "packages/design-system/styles/desktop-tokens.css",
+    "before": "7cf734a590d27cf8d1fd9f498996d29e67385971efdf5bdc0be129a681b0da40",
+    "after": "1855b80742a098e7be9c546b4dcb6e1cafca02e8bd3527d7f238762711ec0da8"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-desktop-hero.module.css",
+    "before": "5cd658d47636f2c84e37cff3386f568e60d5a3c1948c4939babffefa3ba2f752",
+    "after": "44f9342a3d6dd854f2e599df582067fc719650fd9614dd70e1da76fd651f52ae"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-hero-search.module.css",
+    "before": "19eb19cc42666b5acdcee011f8761901f2d0df8bb53ae4184f76a710ed6665fe",
+    "after": "2273e2fc3363738d107e52204cc2a34fef23944e5415a7863c634c3af904e0cf"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-hero-search.tsx",
+    "before": "34c45fa13f60c2507acd5c0e5e5486cd23e66849679b5bb2e0b1c72e9d737598",
+    "after": "93c0676b4267f24af6c8b90144e8931f5e76492377756cc9f9fe479cc3292d2e"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-inventory-search.tsx",
+    "before": "66e9b33370a6f1946c56e07f3946ff9d8661bb3ba868dfff99d9ef5bec8bf525",
+    "after": "68b0f71b7a836a4f292dc3339a8e32d1bc0fb9037bf09680a3421220b696b5a4"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-inventory-summary.tsx",
+    "before": "e92023f17e7fdf843b7f6a5752fe443ba280d3c286994ee6d19b6331c7fde3d7",
+    "after": "2c8fbde2940f1b82b73df41f0c664ac3b794811dac196b3f6efa8a4f4ca2bcb3"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-inventory.module.css",
+    "before": "b4fa5db20b86b2e3204089c73c0b4a403ab964b10e441229b8f5877298eb83f9",
+    "after": "ce98e26296f7d4162e9c1dc51ce5dadd1e9613bb0bf46c8a82fe490edf651348"
+  },
+  {
+    "path": "packages/marketplace-ui/components/dealer-vehicle-type-pills.tsx",
+    "after": "ad31340cc2e077adc3485e2eda8f213fedec93c4e915ff457dc53ea3cf566b2d"
+  }
+]

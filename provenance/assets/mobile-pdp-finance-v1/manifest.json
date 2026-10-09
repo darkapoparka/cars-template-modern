@@ -1,16 +1,10 @@
 {
   "generated": "2026-10-06",
   "source": "source.png",
-  "sourceDimensions": [
-    1536,
-    1024
-  ],
+  "sourceDimensions": [1536, 1024],
   "sourceSha256": "752f160d00ad3312302d1e957de1a829ff0685f94a1bc2015c72e4a80c1996bb",
   "deliveryPath": "/images/lease/mobile-pdp-finance-silver-v1.webp",
-  "deliveryDimensions": [
-    720,
-    302
-  ],
+  "deliveryDimensions": [720, 302],
   "deliverySha256": "31b226f7a8564d2fbadc225179e937b73b39f36638990a711f8f95e5f92c887c",
   "bytes": 62516,
   "preparation": "Trim transparent outer padding; resize to 720px; encode WebP. No repainting or semantic edits."

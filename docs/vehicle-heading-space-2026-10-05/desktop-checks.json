@@ -1,0 +1,154 @@
+[
+  {
+    "width": 1200,
+    "locale": "bg",
+    "route": "home",
+    "geometry": {
+      "overflow": false,
+      "searchY": 226,
+      "vehicles": [
+        {
+          "baseline": 225.99753125,
+          "gap": 62.0625
+        },
+        {
+          "baseline": 225.988203125,
+          "gap": 62.078125
+        }
+      ]
+    }
+  },
+  {
+    "width": 1200,
+    "locale": "bg",
+    "route": "cars",
+    "geometry": {
+      "overflow": false,
+      "searchY": 254,
+      "vehicles": [
+        {
+          "baseline": 253.99753125,
+          "gap": 68.828125
+        },
+        {
+          "baseline": 253.988203125,
+          "gap": 68.84375
+        }
+      ]
+    }
+  },
+  {
+    "width": 1200,
+    "locale": "en",
+    "route": "home",
+    "geometry": {
+      "overflow": false,
+      "searchY": 226,
+      "vehicles": [
+        {
+          "baseline": 225.99753125,
+          "gap": 138.75
+        },
+        {
+          "baseline": 225.988203125,
+          "gap": 138.765625
+        }
+      ]
+    }
+  },
+  {
+    "width": 1200,
+    "locale": "en",
+    "route": "cars",
+    "geometry": {
+      "overflow": false,
+      "searchY": 254,
+      "vehicles": [
+        {
+          "baseline": 253.99753125,
+          "gap": 213.46875
+        },
+        {
+          "baseline": 253.988203125,
+          "gap": 213.484375
+        }
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "route": "home",
+    "geometry": {
+      "overflow": false,
+      "searchY": 226,
+      "vehicles": [
+        {
+          "baseline": 225.98625,
+          "gap": 38.859375
+        },
+        {
+          "baseline": 225.9875,
+          "gap": 38.875
+        }
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "route": "cars",
+    "geometry": {
+      "overflow": false,
+      "searchY": 254,
+      "vehicles": [
+        {
+          "baseline": 253.98625,
+          "gap": 45.625
+        },
+        {
+          "baseline": 253.9875,
+          "gap": 45.640625
+        }
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "route": "home",
+    "geometry": {
+      "overflow": false,
+      "searchY": 226,
+      "vehicles": [
+        {
+          "baseline": 225.98625,
+          "gap": 115.546875
+        },
+        {
+          "baseline": 225.9875,
+          "gap": 115.5625
+        }
+      ]
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "route": "cars",
+    "geometry": {
+      "overflow": false,
+      "searchY": 254,
+      "vehicles": [
+        {
+          "baseline": 253.98625,
+          "gap": 190.265625
+        },
+        {
+          "baseline": 253.9875,
+          "gap": 190.28125
+        }
+      ]
+    }
+  }
+]

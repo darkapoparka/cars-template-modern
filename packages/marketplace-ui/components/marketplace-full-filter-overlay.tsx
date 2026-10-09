@@ -114,7 +114,9 @@ export const MarketplaceFullFilterOverlay = ({
       yearMin: undefined,
     });
 
-  const overlayTitle = getDiscoveryOverlayTitle(view, draft, locale, isBg);
+  const overlayTitle = isDesktop
+    ? getDiscoveryOverlayTitle(view, draft, locale, isBg)
+    : copy.mobileTitles[view];
   const goToPreviousView = () => {
     if (view === "model") {
       setView("make");

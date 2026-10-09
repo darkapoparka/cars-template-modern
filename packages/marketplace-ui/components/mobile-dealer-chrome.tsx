@@ -29,7 +29,7 @@ export function MobileDealerChrome({
           {title ? (
             <h1
               className={cn(
-                "text-center font-semibold text-mobile-page-title tracking-heading",
+                "text-center font-medium text-mobile-page-title tracking-mobile-heading opacity-90",
                 children && "mb-3",
                 titleClassName
               )}

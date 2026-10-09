@@ -1,0 +1,2186 @@
+{
+  "comparison": [
+    {
+      "width": 320,
+      "route": "/bg",
+      "equal": true
+    },
+    {
+      "width": 320,
+      "route": "/bg/cars",
+      "equal": true
+    },
+    {
+      "width": 390,
+      "route": "/bg",
+      "equal": true
+    },
+    {
+      "width": 390,
+      "route": "/bg/cars",
+      "equal": true
+    },
+    {
+      "width": 1023,
+      "route": "/bg",
+      "equal": true
+    },
+    {
+      "width": 1023,
+      "route": "/bg/cars",
+      "equal": true
+    }
+  ],
+  "before": [
+    {
+      "width": 320,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 2136,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 249,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 228,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 228
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 404,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 383,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 383
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 559,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 538,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 538
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 714,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 693,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 693
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 869,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 848,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 848
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1024,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1003,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1003
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1179,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1158,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1158
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1334,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1313,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1313
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1489,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1468,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1468
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1644,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1623,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1623
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1799,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1778,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1778
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1962.078125,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1941.078125,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1941.078125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 305
+      }
+    },
+    {
+      "width": 320,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 2136,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 249,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 228,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 228
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 404,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 383,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 383
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 559,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 538,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 538
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 714,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 693,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 693
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 869,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 848,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 848
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1024,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1003,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1003
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1179,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1158,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1158
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1334,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1313,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1313
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1489,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1468,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1468
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1644,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1623,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1623
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1799,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1778,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1778
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1962.078125,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1941.078125,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1941.078125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 305
+      }
+    },
+    {
+      "width": 390,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 2384,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 259.15625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 238.15625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 238.15625
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 434.46875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 413.46875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 413.46875
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 609.78125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 588.78125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 588.78125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 785.09375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 764.09375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 764.09375
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 960.40625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 939.40625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 939.40625
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1135.71875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1114.71875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1114.71875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1311.03125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1290.03125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1290.03125
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1486.34375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1465.34375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1465.34375
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1661.65625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1640.65625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1640.65625
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1836.96875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1815.96875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1815.96875
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 2012.28125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1991.28125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1991.28125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 2197.59375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 2176.59375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 2176.59375
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 375
+      }
+    },
+    {
+      "width": 390,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 2384,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 259.15625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 238.15625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 238.15625
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 434.46875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 413.46875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 413.46875
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 609.78125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 588.78125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 588.78125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 785.09375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 764.09375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 764.09375
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 960.40625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 939.40625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 939.40625
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1135.71875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1114.71875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1114.71875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1311.03125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1290.03125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1290.03125
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1486.34375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1465.34375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1465.34375
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1661.65625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1640.65625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1640.65625
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1836.96875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1815.96875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1815.96875
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 2012.28125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1991.28125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1991.28125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 2197.59375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 2176.59375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 2176.59375
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 375
+      }
+    },
+    {
+      "width": 1023,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 1624,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 262.484375
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 262.484375
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 486.453125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 486.453125
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 710.421875
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 710.421875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 934.390625
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 934.390625
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1158.359375
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1158.359375
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1403.328125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1382.328125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1382.328125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1413.328125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1392.328125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1392.328125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 1008
+      }
+    },
+    {
+      "width": 1023,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 1624,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 262.484375
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 262.484375
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 486.453125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 486.453125
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 710.421875
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 710.421875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 934.390625
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 934.390625
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1158.359375
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1158.359375
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1403.328125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1382.328125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1382.328125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1413.328125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1392.328125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1392.328125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 1008
+      }
+    }
+  ],
+  "after": [
+    {
+      "width": 320,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 2136,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 249,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 228,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 228
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 404,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 383,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 383
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 559,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 538,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 538
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 714,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 693,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 693
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 869,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 848,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 848
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1024,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1003,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1003
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1179,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1158,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1158
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1334,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1313,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1313
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1489,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1468,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1468
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1644,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1623,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1623
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1799,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1778,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1778
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1962.078125,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1941.078125,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1941.078125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 305
+      }
+    },
+    {
+      "width": 320,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 2136,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 249,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 228,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 228
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 404,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 383,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 383
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 559,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 538,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 538
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 714,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 693,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 693
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 869,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 848,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 848
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1024,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1003,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1003
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1179,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1158,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1158
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1334,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1313,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1313
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1489,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1468,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1468
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1644,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1623,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1623
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1799,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1778,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1778
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1962.078125,
+              "height": 21,
+              "left": 149.578125,
+              "right": 277,
+              "top": 1941.078125,
+              "width": 127.421875,
+              "x": 149.578125,
+              "y": 1941.078125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 305
+      }
+    },
+    {
+      "width": 390,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 2384,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 259.15625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 238.15625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 238.15625
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 434.46875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 413.46875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 413.46875
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 609.78125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 588.78125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 588.78125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 785.09375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 764.09375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 764.09375
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 960.40625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 939.40625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 939.40625
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1135.71875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1114.71875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1114.71875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1311.03125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1290.03125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1290.03125
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1486.34375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1465.34375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1465.34375
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1661.65625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1640.65625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1640.65625
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1836.96875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1815.96875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1815.96875
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 2012.28125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1991.28125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1991.28125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 2197.59375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 2176.59375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 2176.59375
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 375
+      }
+    },
+    {
+      "width": 390,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 2384,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 259.15625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 238.15625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 238.15625
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 434.46875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 413.46875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 413.46875
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 609.78125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 588.78125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 588.78125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 785.09375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 764.09375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 764.09375
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 960.40625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 939.40625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 939.40625
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1135.71875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1114.71875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1114.71875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 1311.03125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1290.03125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1290.03125
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 1486.34375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1465.34375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1465.34375
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1661.65625,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1640.65625,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1640.65625
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1836.96875,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1815.96875,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1815.96875
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 2012.28125,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 1991.28125,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 1991.28125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 2197.59375,
+              "height": 21,
+              "left": 181.765625,
+              "right": 347,
+              "top": 2176.59375,
+              "width": 165.234375,
+              "x": 181.765625,
+              "y": 2176.59375
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 375
+      }
+    },
+    {
+      "width": 1023,
+      "route": "/bg",
+      "geometry": {
+        "bodyHeight": 1624,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 262.484375
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 262.484375
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 486.453125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 486.453125
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 710.421875
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 710.421875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 934.390625
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 934.390625
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1158.359375
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1158.359375
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1403.328125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1382.328125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1382.328125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1413.328125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1392.328125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1392.328125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 1008
+      }
+    },
+    {
+      "width": 1023,
+      "route": "/bg/cars",
+      "geometry": {
+        "bodyHeight": 1624,
+        "headings": [
+          {
+            "rect": {
+              "bottom": 196,
+              "height": 1,
+              "left": 15,
+              "right": 16,
+              "top": 195,
+              "width": 1,
+              "x": 15,
+              "y": 195
+            },
+            "text": "Автомобили за продажба"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 262.484375
+            },
+            "text": "X5 M50d"
+          },
+          {
+            "rect": {
+              "bottom": 283.484375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 262.484375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 262.484375
+            },
+            "text": "GLS 400d 4MATIC AMG"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 486.453125
+            },
+            "text": "M4 Competition"
+          },
+          {
+            "rect": {
+              "bottom": 507.453125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 486.453125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 486.453125
+            },
+            "text": "750e xDrive M Sport"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 710.421875
+            },
+            "text": "E 63 S AMG"
+          },
+          {
+            "rect": {
+              "bottom": 731.421875,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 710.421875,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 710.421875
+            },
+            "text": "CLS 400d 4MATIC"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 934.390625
+            },
+            "text": "Q8 50 TDI quattro S line"
+          },
+          {
+            "rect": {
+              "bottom": 955.390625,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 934.390625,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 934.390625
+            },
+            "text": "GLE 400d Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1158.359375
+            },
+            "text": "S 350d Long AMG"
+          },
+          {
+            "rect": {
+              "bottom": 1179.359375,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1158.359375,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1158.359375
+            },
+            "text": "Range Rover Sport SVR"
+          },
+          {
+            "rect": {
+              "bottom": 1403.328125,
+              "height": 21,
+              "left": 246.625,
+              "right": 488,
+              "top": 1382.328125,
+              "width": 241.375,
+              "x": 246.625,
+              "y": 1382.328125
+            },
+            "text": "430i xDrive Gran Coupe"
+          },
+          {
+            "rect": {
+              "bottom": 1413.328125,
+              "height": 21,
+              "left": 738.625,
+              "right": 980,
+              "top": 1392.328125,
+              "width": 241.375,
+              "x": 738.625,
+              "y": 1392.328125
+            },
+            "text": "X5 xDrive40d"
+          }
+        ],
+        "scrollWidth": 1008
+      }
+    }
+  ]
+}

@@ -1,32 +1,33 @@
 # Cars integration
 
-This repository owns reusable Modern source. Open it for shared frontend/code work. Open [Cars](https://github.com/darkapoparka/cars) for dealer builds, corrections, release promotion and publication. Canonical dealer source is clients/<slug>/ in Cars; dedicated dealer repositories are publishing mirrors.
+## Authoritative source
 
-Cars snapshots use an approved immutable commit from this repository. Main is a development head, not automatic release approval. After shared polish is reviewed, use the [Cars release procedure](https://github.com/darkapoparka/cars/blob/main/docs/TEMPLATE-PROMOTION.md). New dealers consume the selected lock; existing dealers do not receive automatic updates. Cars-only refinements must be compared and ported upstream before replacing a snapshot.
+The reusable Modern master is **darkapoparka/cars, main, templates/modern**. The saved checkout is L:/CODEX/cars/templates/modern. The standalone cars-template-modern repository is a publishing mirror/history, not a second editable master. Former J:/template-repos copies are recovery-only.
 
-## Compatibility
+Shared code and design improvements belong in this source boundary. Dealer work belongs in Cars clients/<slug>. Do not personalize the master, overwrite independent dealer work, or infer permission to deploy from a shared refactor.
 
-Standalone entry: /cars. Use Node >=22.22.0 <23, pnpm 11.4.0, and the complete pnpm workspace. Read docs/QA.md for static-demo environment and Prisma generation; keep every workspace package. A documentation-only workflow change needs focused link/command checks, not the whole application suite.
+## Releases and dealer copies
 
-Native localization candidate: legacy /cars and /variant-2/cars entries negotiate to explicit /en/cars or /bg/cars, with the locale immediately after the configured design base. Build this Next application with NEXT_PUBLIC_BASE_PATH empty for standalone or /variant-2 for its native mounted form. The value is a build-time setting, not a visitor preference. Native Link/router destinations remain base-relative; raw anchors, public image URLs, API fetches and metadata use the explicit raw-URL helper.
+Cars owns approved immutable source selection and publishing. Follow its [template release contract](https://github.com/darkapoparka/cars/blob/main/docs/TEMPLATE-PROMOTION.md) and [current ownership instructions](https://github.com/darkapoparka/cars/blob/main/AGENTS.md). Main is a development head, not automatic release or visual approval. Existing dealers remain independent of master changes until an explicitly accepted refresh.
 
-The legacy Cars packager that forces Modern to its default locale is incompatible with this candidate. A future Cars-owned adoption must preserve native Next routing, route the preference endpoint under this app's base, and separately verify the existing cross-design FAB/Admin destination contract. This template session did not change that packager, pins, Services mapping or dealer applications. See docs/localization/HANDOFF.md for the actual standalone/mounted acceptance status. A standalone build is not mounted or public acceptance.
+The current five-design direction and hosting qualification belong to Cars, not a duplicated template-specific trio list. Preserve each dealer manifest and the approved lock until the relevant migration is accepted. Do not silently substitute, omit or bulk-publish designs.
 
-## Dealer adaptation
+## Runtime and adaptation
 
-Use Cars new-client.mjs with approved releases. Standard trio: auto-best,modern,carwow. Intentional Import trio: auto-best,import,carwow. Import replaces Modern in Design 2; it is not an automatic fourth design. Preserve existing dealer manifests and identities.
+Use Node >=22.22.0 <23, pnpm 11.4.0 and the complete workspace. Preserve the lockfile, licenses and provenance. [QA](QA.md) owns preview environment and verification commands; [architecture](architecture.md) owns code boundaries.
 
-The actual content boundaries include `packages/marketplace/lead-site.ts`, `packages/marketplace/`, `apps/web/app/`, `apps/web/public/`. Read TEMPLATE.md and the reuse/QA references for complete technical detail. A fact-pack JSON is not an application setting unless code reads it. Source/demo identity and forms remain unverified until the dealer implementation establishes them.
+The adaptation inputs include packages/marketplace/lead-site.ts, packages/marketplace/, apps/web/app/ and apps/web/public/. site-config.ts preserves supported older artwork configuration. A fact-pack is not runtime configuration unless code consumes it. Every dealer requires its own complete identity and truthful inventory/form configuration.
 
-## Historical documents
+Public Home is /[locale]; inventory is /[locale]/cars. Legacy /cars negotiates to the configured locale. Native mounted builds use NEXT_PUBLIC_BASE_PATH=/variant-2; standalone builds leave it empty. This is a build-time decision, not a visitor preference. Native Link/router destinations remain base-relative; raw anchors, images, API requests and metadata use the existing raw-URL helpers.
 
-Source-era roadmaps, audits, execution logs, migration plans, legacy copies and dated refactor evidence retain their original context. They are not new assignments. AGENTS routes current tasks. Preserve licenses and provenance; do not rewrite old results as fresh verification.
-## Main is the working branch
+Mounted release acceptance also checks locale routing, preference requests, image paths and cross-design/Admin destinations. A standalone localhost build or this architectural refactor does not qualify a dealer publisher. Retain the recorded localization/mounted limits until that separate acceptance is completed.
 
-The owner chose a main-only workflow on 13 September 2026. Use the saved checkout on `main` for routine work. Do not create another branch or worktree unless the owner explicitly requests one. One task owns writes to a checkout; concurrent tasks may review read-only or work in a different repository. Fetch and inspect status before writing, preserve other tasks' work, and finish authorized implementation with scoped commits and a non-force push to main.
+## Working safely on main
 
-An explicitly requested temporary branch/worktree must be integrated, verified and removed before the task is called complete. If blocked, record its exact repository, ref, commit, paths and next action in the handoff. Do not leave unfinished source discoverable only through a task title or old branch. Source consolidation preserves work; template release, owner visual acceptance and dealer deployment keep their separate checks.
+Use the existing main checkout, inspect relevant changes and preserve independent work. Do not create another source copy, branch or worktree without authorization. Scope commits to reviewed task-owned paths; avoid blanket staging, reset, clean or force-push. Serialize shared Git/index and build-output writes.
 
-## Source consolidation, 13 September 2026
+When the shared checkout contains unrelated work, do not synchronize it destructively merely to make a template commit. Verify the source being edited against the selected GitHub parent, test locally, and publish only the reviewed paths. Record the exact commit and what was actually checked.
 
-The owner requested integration of all preserved source into main and removal of obsolete branches. Existing implementation checkpoints are committed on main; earlier reports describing an uncommitted checkout are historical. Owner visual review and an approved Cars template release remain separate requirements.
+## Evidence
+
+Historical task ledgers are not an active queue and must not be reported as current verification. Keep concise accepted findings and unresolved reproductions; put new raw QA output in ignored runtime/. Preserve intentional test baselines and asset provenance. Local success, owner visual approval, source release and public deployment are separate facts.

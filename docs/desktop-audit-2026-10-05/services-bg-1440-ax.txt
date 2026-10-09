@@ -1,0 +1,68 @@
+Browser tab: 1, Title: "Услуги | Day & Night | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg/services".
+1 AXWebArea Услуги | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/services
+	2 container
+		3 link Description: Към основното съдържание, Value: 127.0.0.1:6482/bg/services#main-content
+		4 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		5 container Основни действия
+			6 link Description: Начало, Value: 127.0.0.1:6482/bg
+			7 link Description: Автомобили, Value: 127.0.0.1:6482/bg/cars
+			8 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			9 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			10 link Description: Контакти, Value: 127.0.0.1:6482/bg/contact
+		11 pop up button Запазени
+		12 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		13 container main-content
+			14 container Нашите услуги
+				15 container
+					16 heading Нашите услуги, Value: 1, ID: desktop-page-title
+						17 text Нашите услуги
+					18 container Търсене на услуги
+						19 text Търсене на услуги
+						20 search text field (settable) Търсене на услуги
+					21 container Вид услуга
+						22 checkbox Всички, Value: 1
+						23 checkbox Наличности, Value: 0
+						24 checkbox Внос, Value: 0
+						25 checkbox Лизинг, Value: 0
+						26 checkbox Продажба, Value: 0
+			27 container
+				28 text Намерени услуги: 4
+				29 container Description: Нашите услуги, ID: dealer-services
+					30 link Description: Автомобили в наличност Разгледайте предложенията и планирайте оглед. Разгледайте, Value: 127.0.0.1:6482/bg/cars
+					31 link Description: Внос по заявка Кажете какво търсите и започнете разговор. Разгледайте, Value: 127.0.0.1:6482/bg/imports
+					32 link Description: Собствен лизинг Обсъдете вариант според автомобила и бюджета ви. Разгледайте, Value: 127.0.0.1:6482/bg/lease
+					33 link Description: Продайте автомобила си Изпратете данни за автомобила и заявете оценка. Разгледайте, Value: 127.0.0.1:6482/bg/sell
+		34 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		35 text Открийте следващия си автомобил.
+		36 container Открийте автомобил
+			37 heading Открийте автомобил, Value: 2
+				38 text Открийте автомобил
+			39 link Description: Всички автомобили, Value: 127.0.0.1:6482/bg/cars
+			40 link Description: Най-нови автомобили, Value: 127.0.0.1:6482/bg/cars?sort=newest
+			41 link Description: По цена, Value: 127.0.0.1:6482/bg/cars?sort=price_asc
+			42 link Description: Финансиране, Value: 127.0.0.1:6482/bg/lease
+			43 pop up button Запазени
+		44 container Разгледайте
+			45 heading Разгледайте, Value: 2
+				46 text Разгледайте
+			47 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			48 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			49 link Description: Съвети за покупка, Value: 127.0.0.1:6482/bg/blog
+			50 link Description: Ръководства, Value: 127.0.0.1:6482/bg/guides
+			51 link Description: Внос на автомобил, Value: 127.0.0.1:6482/bg/imports
+			52 link Description: Продайте автомобила си, Value: 127.0.0.1:6482/bg/sell
+		53 heading Посетете автосалона, Value: 2
+			54 text Посетете автосалона
+		55 container
+			56 text ул. „Атанас Манчев“ 18, Студентски град ,  София
+		57 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		58 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+		59 link Description: 0877 733 110, Value: tel:+359877733110
+		60 text ©  2026 Modern . Всички права запазени.
+		61 link Description: Поверителност, Value: 127.0.0.1:6482/bg/legal/privacy
+		62 link Description: Условия, Value: 127.0.0.1:6482/bg/legal/terms
+		63 link Description: Държава и език, Value: 127.0.0.1:6482/bg/locale-settings?returnTo=%2Fbg%2Fservices
+		64 text Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.
+		65 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea Услуги | Day & Night | Day & Night Auto Group, URL: 127.0.0.1:6482/bg/services

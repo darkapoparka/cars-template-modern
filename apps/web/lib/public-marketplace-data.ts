@@ -97,11 +97,7 @@ const getDemoListings = (
       (categoryCountMap.get(listing.category) ?? 0) + 1
     );
   }
-  const filtered = getMockListings({ ...filters, page: 1 })
-    .map(withLeadSiteDemoIdentity)
-    .map(
-      (listing) => withDemoDestination(listing, filters.deliverTo) ?? listing
-    );
+  const filtered = getMockListings({ ...filters, page: 1 });
   const modelCountListings = getMockListings({
     ...filters,
     derivative: undefined,
@@ -137,7 +133,12 @@ const getDemoListings = (
       ),
       status: "exact",
     },
-    listings: filtered.slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE),
+    listings: filtered
+      .slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE)
+      .map(withLeadSiteDemoIdentity)
+      .map(
+        (listing) => withDemoDestination(listing, filters.deliverTo) ?? listing
+      ),
     totalListings: filtered.length,
   };
 };
@@ -410,13 +411,13 @@ const isChineseCollectionListing = (listing: VehicleListing) =>
 
 export const getChineseEvHybridCollection = async (page: number) => {
   if (requireDatabaseOrDemo() === "demo") {
-    const matches = mockListings
-      .filter(isChineseCollectionListing)
-      .map(withLeadSiteDemoIdentity);
+    const matches = mockListings.filter(isChineseCollectionListing);
     const offset = (page - 1) * PUBLIC_LISTING_PAGE_SIZE;
 
     return {
-      listings: matches.slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE),
+      listings: matches
+        .slice(offset, offset + PUBLIC_LISTING_PAGE_SIZE)
+        .map(withLeadSiteDemoIdentity),
       totalListings: matches.length,
     };
   }

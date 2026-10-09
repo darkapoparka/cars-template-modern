@@ -1,0 +1,38 @@
+[
+  {
+    "name": "home",
+    "width": 1425,
+    "height": 3185,
+    "afterWidth": 1425,
+    "afterHeight": 3185,
+    "changedPixels": 125164,
+    "totalPixels": 4538625
+  },
+  {
+    "name": "pdp",
+    "width": 1425,
+    "height": 2721,
+    "afterWidth": 1425,
+    "afterHeight": 2721,
+    "changedPixels": 0,
+    "totalPixels": 3877425
+  },
+  {
+    "name": "about",
+    "width": 1425,
+    "height": 2035,
+    "afterWidth": 1425,
+    "afterHeight": 2035,
+    "changedPixels": 218897,
+    "totalPixels": 2899875
+  },
+  {
+    "name": "contact",
+    "width": 1425,
+    "height": 2175,
+    "afterWidth": 1425,
+    "afterHeight": 2175,
+    "changedPixels": 220808,
+    "totalPixels": 3099375
+  }
+]

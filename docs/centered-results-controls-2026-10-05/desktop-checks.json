@@ -1,0 +1,122 @@
+[
+  {
+    "width": 1024,
+    "locale": "bg",
+    "geometry": {
+      "chipCount": 7,
+      "chipRows": 2,
+      "chipsFrame": {
+        "bottom": 618,
+        "height": 88,
+        "left": 64,
+        "right": 945,
+        "top": 530,
+        "width": 881,
+        "x": 64,
+        "y": 530
+      },
+      "controlOffset": -0.0078125,
+      "controls": {
+        "bottom": 518,
+        "height": 44,
+        "left": 304.375,
+        "right": 704.609375,
+        "top": 474,
+        "width": 400.234375,
+        "x": 304.375,
+        "y": 474
+      },
+      "overflow": false
+    }
+  },
+  {
+    "width": 1024,
+    "locale": "en",
+    "geometry": {
+      "chipCount": 7,
+      "chipRows": 2,
+      "chipsFrame": {
+        "bottom": 618,
+        "height": 88,
+        "left": 64,
+        "right": 945,
+        "top": 530,
+        "width": 881,
+        "x": 64,
+        "y": 530
+      },
+      "controlOffset": 0,
+      "controls": {
+        "bottom": 518,
+        "height": 44,
+        "left": 310.25,
+        "right": 698.75,
+        "top": 474,
+        "width": 388.5,
+        "x": 310.25,
+        "y": 474
+      },
+      "overflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "bg",
+    "geometry": {
+      "chipCount": 7,
+      "chipRows": 1,
+      "chipsFrame": {
+        "bottom": 570,
+        "height": 40,
+        "left": 76.5,
+        "right": 1348.5,
+        "top": 530,
+        "width": 1272,
+        "x": 76.5,
+        "y": 530
+      },
+      "controlOffset": -0.0078125,
+      "controls": {
+        "bottom": 518,
+        "height": 44,
+        "left": 512.375,
+        "right": 912.609375,
+        "top": 474,
+        "width": 400.234375,
+        "x": 512.375,
+        "y": 474
+      },
+      "overflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "locale": "en",
+    "geometry": {
+      "chipCount": 7,
+      "chipRows": 1,
+      "chipsFrame": {
+        "bottom": 570,
+        "height": 40,
+        "left": 76.5,
+        "right": 1348.5,
+        "top": 530,
+        "width": 1272,
+        "x": 76.5,
+        "y": 530
+      },
+      "controlOffset": 0,
+      "controls": {
+        "bottom": 518,
+        "height": 44,
+        "left": 518.25,
+        "right": 906.75,
+        "top": 474,
+        "width": 388.5,
+        "x": 518.25,
+        "y": 474
+      },
+      "overflow": false
+    }
+  }
+]

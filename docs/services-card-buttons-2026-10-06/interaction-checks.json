@@ -1,0 +1,14 @@
+{
+  "focus": {
+    "card": "dealer-service-card",
+    "focusVisible": true,
+    "href": "/bg/cars",
+    "nestedControls": 0,
+    "outlineStyle": "solid",
+    "outlineWidth": "2px"
+  },
+  "keyboardDestination": "http://127.0.0.1:6482/bg/cars",
+  "filteredServiceCount": 1,
+  "filteredServiceHref": "/bg/imports",
+  "restoredServiceCount": 4
+}

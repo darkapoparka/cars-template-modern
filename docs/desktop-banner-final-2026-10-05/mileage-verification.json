@@ -1,0 +1,237 @@
+{
+  "origin": "http://127.0.0.1:6499",
+  "records": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "passed",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "height": 600,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "covered by 1440 state",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "passed",
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "height": 600,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "covered by 1440 state",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "height": 1000,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "passed",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "height": 600,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "covered by 1440 state",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "height": 1000,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        },
+        {
+          "y": 373,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "passed",
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1024,
+      "height": 600,
+      "noRedundantLabel": true,
+      "summaryGeometry": [
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        },
+        {
+          "y": 275,
+          "fontSize": "20px"
+        }
+      ],
+      "numericEdit": true,
+      "keyboardSlider": true,
+      "preset": true,
+      "apply": true,
+      "reset": true,
+      "focusReturn": true,
+      "accessibility": "covered by 1440 state",
+      "errors": []
+    }
+  ]
+}

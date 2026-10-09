@@ -57,7 +57,7 @@ export const MobileSellVehicleExperience = ({
               {mobileSellVehicleCopy[locale].howSteps.map(
                 ({ title, description }, index) => (
                   <li key={title}>
-                    <p className="font-semibold text-compact-control text-zinc-950">
+                    <p className="font-medium text-compact-control text-zinc-950">
                       <span className="mr-2 text-micro text-muted-foreground tabular-nums">
                         {String(index + 1).padStart(2, "0")}
                       </span>

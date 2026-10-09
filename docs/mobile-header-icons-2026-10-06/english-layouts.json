@@ -1,0 +1,98 @@
+[
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/cars",
+    "title": "Find your next car",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/services",
+    "title": "Our services",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/sell",
+    "title": "Sell your vehicle",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/imports",
+    "title": "Import a vehicle",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/lease",
+    "title": "Vehicle financing",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/guides",
+    "title": "Guides and articles",
+    "width": 320
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/cars",
+    "title": "Find your next car",
+    "width": 390
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/services",
+    "title": "Our services",
+    "width": 390
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/sell",
+    "title": "Sell your vehicle",
+    "width": 390
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/imports",
+    "title": "Import a vehicle",
+    "width": 390
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/lease",
+    "title": "Vehicle financing",
+    "width": 390
+  },
+  {
+    "font": "18px",
+    "height": 28,
+    "overflow": false,
+    "path": "/en/guides",
+    "title": "Guides and articles",
+    "width": 390
+  }
+]

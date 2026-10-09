@@ -1,27 +1,16 @@
 {
   "generated": "2026-10-06",
   "source": "source.png",
-  "sourceDimensions": [
-    1254,
-    1254
-  ],
+  "sourceDimensions": [1254, 1254],
   "sourceSha256": "49c5f4c6f48328ca2ab619e8d1fffe49144427c3f9bb87350bcccec066a109a2",
-  "deliveryCanvas": [
-    112,
-    112
-  ],
+  "deliveryCanvas": [112, 112],
   "cssSize": 28,
   "alignment": "One centered 28px artwork slot. Vehicles share a 24px wheel baseline and a 22px height limit, with the slot lifted 2px to clear the common chevron. Other symbols are centered by visible alpha bounds.",
   "assets": [
     {
       "role": "car",
       "path": "/images/services/header-system-car-v3.webp",
-      "sourceCell": [
-        0,
-        0,
-        418,
-        418
-      ],
+      "sourceCell": [0, 0, 418, 418],
       "crop": {
         "left": 63,
         "top": 123,
@@ -30,35 +19,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        2.25,
-        5,
-        23.5,
-        19
-      ],
-      "centerCss": [
-        14,
-        14.5
-      ],
+      "visibleCssBounds": [2.25, 5, 23.5, 19],
+      "centerCss": [14, 14.5],
       "vehicleBaselineCss": 24,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 4478,
       "sha256": "b27c32abcf465727124ac77ce6bdca7fdefc2d6e81e611288d51d006a644bb79"
     },
     {
       "role": "bike",
       "path": "/images/services/header-system-bike-v3.webp",
-      "sourceCell": [
-        418,
-        0,
-        418,
-        418
-      ],
+      "sourceCell": [418, 0, 418, 418],
       "crop": {
         "left": 490,
         "top": 86,
@@ -67,35 +38,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        4.75,
-        2.5,
-        18.25,
-        21.5
-      ],
-      "centerCss": [
-        13.875,
-        13.25
-      ],
+      "visibleCssBounds": [4.75, 2.5, 18.25, 21.5],
+      "centerCss": [13.875, 13.25],
       "vehicleBaselineCss": 24,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 4426,
       "sha256": "1aec2756f4efcba952c8e157b16d2dce5c092b9413323ef629faa7c55da9913e"
     },
     {
       "role": "truck",
       "path": "/images/services/header-system-truck-v3.webp",
-      "sourceCell": [
-        836,
-        0,
-        418,
-        418
-      ],
+      "sourceCell": [836, 0, 418, 418],
       "crop": {
         "left": 869,
         "top": 76,
@@ -104,35 +57,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        4,
-        2.5,
-        19.75,
-        21.5
-      ],
-      "centerCss": [
-        13.875,
-        13.25
-      ],
+      "visibleCssBounds": [4, 2.5, 19.75, 21.5],
+      "centerCss": [13.875, 13.25],
       "vehicleBaselineCss": 24,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 3718,
       "sha256": "7d0be37710147ca936c4feeb3fc85a923c99dc62a5b3d173f078bbb14e7daf9d"
     },
     {
       "role": "van",
       "path": "/images/services/header-system-van-v3.webp",
-      "sourceCell": [
-        0,
-        418,
-        418,
-        418
-      ],
+      "sourceCell": [0, 418, 418, 418],
       "crop": {
         "left": 70,
         "top": 470,
@@ -141,35 +76,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        3.25,
-        2.5,
-        21.5,
-        21.5
-      ],
-      "centerCss": [
-        14,
-        13.25
-      ],
+      "visibleCssBounds": [3.25, 2.5, 21.5, 21.5],
+      "centerCss": [14, 13.25],
       "vehicleBaselineCss": 24,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 4104,
       "sha256": "6d1426c1c5e71a14f35f4a5a9a0d4a864be2b0a6a5172221b941a9f4d1b048b5"
     },
     {
       "role": "guides",
       "path": "/images/services/header-system-guides-v3.webp",
-      "sourceCell": [
-        418,
-        418,
-        418,
-        418
-      ],
+      "sourceCell": [418, 418, 418, 418],
       "crop": {
         "left": 454,
         "top": 517,
@@ -178,35 +95,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        2.25,
-        5.25,
-        23.5,
-        17.5
-      ],
-      "centerCss": [
-        14,
-        14
-      ],
+      "visibleCssBounds": [2.25, 5.25, 23.5, 17.5],
+      "centerCss": [14, 14],
       "vehicleBaselineCss": null,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 3572,
       "sha256": "7cae56f334f087c6f5ce918355736f4079900b7710b81c0a996241d0e4cf2c67"
     },
     {
       "role": "filters",
       "path": "/images/services/header-system-filters-v3.webp",
-      "sourceCell": [
-        836,
-        418,
-        418,
-        418
-      ],
+      "sourceCell": [836, 418, 418, 418],
       "crop": {
         "left": 875,
         "top": 477,
@@ -215,35 +114,17 @@
       },
       "significantComponents": 3,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        3,
-        2.25,
-        22,
-        23.5
-      ],
-      "centerCss": [
-        14,
-        14
-      ],
+      "visibleCssBounds": [3, 2.25, 22, 23.5],
+      "centerCss": [14, 14],
       "vehicleBaselineCss": null,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 5254,
       "sha256": "7025d2759cd8e96d04a5f1020bcb7dfb480ec6d5b4e10dfafc4f1f829d52cbc6"
     },
     {
       "role": "info",
       "path": "/images/services/header-system-info-v3.webp",
-      "sourceCell": [
-        0,
-        836,
-        418,
-        418
-      ],
+      "sourceCell": [0, 836, 418, 418],
       "crop": {
         "left": 133,
         "top": 853,
@@ -252,35 +133,17 @@
       },
       "significantComponents": 2,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        6.25,
-        2.25,
-        15.5,
-        23.5
-      ],
-      "centerCss": [
-        14,
-        14
-      ],
+      "visibleCssBounds": [6.25, 2.25, 15.5, 23.5],
+      "centerCss": [14, 14],
       "vehicleBaselineCss": null,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 3700,
       "sha256": "4921717dcc4aafd079a7780a91d734d29af335b5f7abb33e87713cac21d33355"
     },
     {
       "role": "location",
       "path": "/images/services/header-system-location-v3.webp",
-      "sourceCell": [
-        418,
-        836,
-        418,
-        418
-      ],
+      "sourceCell": [418, 836, 418, 418],
       "crop": {
         "left": 515,
         "top": 856,
@@ -289,35 +152,17 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        5.25,
-        2.25,
-        17.25,
-        23.5
-      ],
-      "centerCss": [
-        13.875,
-        14
-      ],
+      "visibleCssBounds": [5.25, 2.25, 17.25, 23.5],
+      "centerCss": [13.875, 14],
       "vehicleBaselineCss": null,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 3824,
       "sha256": "e92b929210a686ceda2e493e8b9a65e823102ec3c133c49126b53a8c35fbd2df"
     },
     {
       "role": "phone",
       "path": "/images/services/header-system-phone-v3.webp",
-      "sourceCell": [
-        836,
-        836,
-        418,
-        418
-      ],
+      "sourceCell": [836, 836, 418, 418],
       "crop": {
         "left": 879,
         "top": 857,
@@ -326,23 +171,10 @@
       },
       "significantComponents": 1,
       "tinyComponentsIgnoredForFraming": 0,
-      "visibleCssBounds": [
-        3,
-        2.25,
-        22,
-        23.5
-      ],
-      "centerCss": [
-        14,
-        14
-      ],
+      "visibleCssBounds": [3, 2.25, 22, 23.5],
+      "centerCss": [14, 14],
       "vehicleBaselineCss": null,
-      "cornerAlpha": [
-        0,
-        0,
-        0,
-        0
-      ],
+      "cornerAlpha": [0, 0, 0, 0],
       "bytes": 3702,
       "sha256": "dda1de50bd008d31f8cbbe5ce2d2dc3eee0f32c9c237ec0e156fa6a6cbe0c359"
     }

@@ -1,0 +1,145 @@
+{
+  "assets": [
+    {
+      "category": "car",
+      "canvas": [
+        132,
+        72
+      ],
+      "canvasAspectRatio": 1.8333333333333333,
+      "renderedSlot": [
+        44,
+        24
+      ],
+      "visibleBoundsAlpha64": [
+        2,
+        5,
+        130,
+        70
+      ],
+      "visibleSizePx": [
+        42.666666666666664,
+        21.666666666666668
+      ],
+      "visibleCentrePx": [
+        22.0,
+        12.5
+      ],
+      "wheelBaselinePx": 23.333333333333332,
+      "alphaEdgeCount": 503,
+      "visibleCoverage": 0.6518308080808081,
+      "channelSpreadMedian": 3,
+      "channelSpreadP95": 6,
+      "sha256": "5f62208f95edfe92de37b11cec31b6a9bb7c3f50dfb74fe4523742d38b48c613",
+      "matchesManifestHash": true,
+      "sourceHashMatchesManifest": true,
+      "bytes": 4992
+    },
+    {
+      "category": "motorbike",
+      "canvas": [
+        132,
+        72
+      ],
+      "canvasAspectRatio": 1.8333333333333333,
+      "renderedSlot": [
+        44,
+        24
+      ],
+      "visibleBoundsAlpha64": [
+        20,
+        2,
+        111,
+        70
+      ],
+      "visibleSizePx": [
+        30.333333333333332,
+        22.666666666666668
+      ],
+      "visibleCentrePx": [
+        21.833333333333332,
+        12.0
+      ],
+      "wheelBaselinePx": 23.333333333333332,
+      "alphaEdgeCount": 674,
+      "visibleCoverage": 0.4100378787878788,
+      "channelSpreadMedian": 2,
+      "channelSpreadP95": 7,
+      "sha256": "3a43a4efb5967a5b352b9d8b69d1c1589cb23d8a3004796027d4f4fa4b5e105f",
+      "matchesManifestHash": true,
+      "sourceHashMatchesManifest": true,
+      "bytes": 5214
+    },
+    {
+      "category": "van",
+      "canvas": [
+        132,
+        72
+      ],
+      "canvasAspectRatio": 1.8333333333333333,
+      "renderedSlot": [
+        44,
+        24
+      ],
+      "visibleBoundsAlpha64": [
+        2,
+        2,
+        129,
+        70
+      ],
+      "visibleSizePx": [
+        42.333333333333336,
+        22.666666666666668
+      ],
+      "visibleCentrePx": [
+        21.833333333333332,
+        12.0
+      ],
+      "wheelBaselinePx": 23.333333333333332,
+      "alphaEdgeCount": 510,
+      "visibleCoverage": 0.7058080808080808,
+      "channelSpreadMedian": 4,
+      "channelSpreadP95": 9,
+      "sha256": "b7274dec566b63ca94c407ea2c0cf154c1c252bd3d94f60c3be66a1cc4abc944",
+      "matchesManifestHash": true,
+      "sourceHashMatchesManifest": true,
+      "bytes": 5422
+    },
+    {
+      "category": "truck",
+      "canvas": [
+        132,
+        72
+      ],
+      "canvasAspectRatio": 1.8333333333333333,
+      "renderedSlot": [
+        44,
+        24
+      ],
+      "visibleBoundsAlpha64": [
+        17,
+        2,
+        115,
+        70
+      ],
+      "visibleSizePx": [
+        32.666666666666664,
+        22.666666666666668
+      ],
+      "visibleCentrePx": [
+        22.0,
+        12.0
+      ],
+      "wheelBaselinePx": 23.333333333333332,
+      "alphaEdgeCount": 478,
+      "visibleCoverage": 0.571969696969697,
+      "channelSpreadMedian": 4,
+      "channelSpreadP95": 6,
+      "sha256": "20a22c79adbb3b0304c0c725d54aeafba9fd5c0c5237b46842122612f3bc00b1",
+      "matchesManifestHash": true,
+      "sourceHashMatchesManifest": true,
+      "bytes": 4328
+    }
+  ],
+  "totalBytes": 19956
+}

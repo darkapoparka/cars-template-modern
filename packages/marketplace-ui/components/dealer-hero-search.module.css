@@ -108,8 +108,12 @@
     box-shadow: none;
   }
   .desktopSearch .submit:hover {
-    color: var(--brand-foreground);
+    color: var(--brand-hover-foreground);
     background: var(--lead-site-accent-hover);
+  }
+  .desktopSearch .submit:active {
+    color: var(--brand-active-foreground);
+    background: var(--lead-site-accent-active);
   }
   .footer {
     display: flex;
@@ -177,14 +181,13 @@
     + .filterField::before {
     opacity: 0;
   }
-  .desktopSearch[data-search-context="hero"] [data-field="category"],
-  .desktopSearch[data-search-context="hero"] [data-field="make"]::before {
-    display: none;
-  }
   .desktopSearch[data-surface="hero"] .field {
     height: calc(var(--spacing) * 12);
     min-height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 6);
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 6)
+    );
     font-size: calc(var(--spacing) * 3.75);
     background: transparent;
     border: 0;
@@ -211,11 +214,11 @@
     height: calc(var(--spacing) * 5);
   }
   .desktopSearch[data-surface="hero"] {
-    gap: calc(var(--spacing) * 6);
+    gap: var(--desktop-hero-pills-gap);
   }
   .categoryPills {
     display: flex;
-    gap: calc(var(--spacing) * 3);
+    gap: var(--desktop-hero-pill-gap);
     align-items: center;
     justify-content: center;
     min-width: 0;
@@ -225,10 +228,10 @@
   }
   .desktopSearch .categoryPill {
     gap: calc(var(--spacing) * 2);
-    height: calc(var(--spacing) * 9);
-    min-height: calc(var(--spacing) * 9);
-    padding: 0 calc(var(--spacing) * 3.5);
-    font-size: calc(var(--spacing) * 3.5);
+    height: var(--desktop-hero-pill-height);
+    min-height: var(--desktop-hero-pill-height);
+    padding: 0 var(--desktop-hero-pill-padding);
+    font-size: var(--text-desktop-control);
     font-weight: var(--font-weight-medium);
     color: var(--desktop-hero-type-foreground, var(--inverse-foreground));
     background: var(--desktop-hero-type-background);
@@ -276,10 +279,38 @@
   .desktopSearch[data-surface="hero"][data-search-context="inventory"] .field {
     height: calc(var(--spacing) * 12);
     min-height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 5);
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 5)
+    );
+  }
+  .desktopSearch[data-surface="hero"] .field.typeField {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .typeValue {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    min-width: 0;
+  }
+  .typeArtwork {
+    flex: none;
+    width: calc(var(--spacing) * 9);
+    height: calc(var(--spacing) * 5);
+  }
+  .typeArtwork img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .typeLabel {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .desktopSearch[data-surface="hero"] :is(.field, .submit):focus-visible {
-    outline: var(--desktop-focus-width) solid var(--foreground);
+    outline: var(--desktop-focus-width) solid var(--ring);
     outline-offset: var(--desktop-focus-offset);
     border-radius: calc(var(--spacing) * 10);
   }
@@ -287,7 +318,10 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .desktopSearch[data-surface="hero"] .field {
-    padding-inline: calc(var(--spacing) * 3.5);
+    padding-inline: var(
+      --desktop-discovery-field-padding,
+      calc(var(--spacing) * 3.5)
+    );
     font-size: calc(var(--spacing) * 3.5);
   }
 }

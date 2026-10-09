@@ -1,0 +1,76 @@
+[
+  {
+    "route": "about",
+    "width": 1440,
+    "data": {
+      "actions": {
+        "bottom": 310,
+        "height": 48,
+        "left": 76.5,
+        "right": 1348.5,
+        "top": 262,
+        "width": 1272,
+        "x": 76.5,
+        "y": 262
+      },
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "right": 1372.5,
+        "top": 90,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "title": {
+        "bottom": 238,
+        "height": 48,
+        "left": 262.5,
+        "right": 1162.5,
+        "top": 190,
+        "width": 900,
+        "x": 262.5,
+        "y": 190
+      }
+    }
+  },
+  {
+    "route": "contact",
+    "width": 1440,
+    "data": {
+      "actions": {
+        "bottom": 310,
+        "height": 48,
+        "left": 76.5,
+        "right": 1348.5,
+        "top": 262,
+        "width": 1272,
+        "x": 76.5,
+        "y": 262
+      },
+      "banner": {
+        "bottom": 410,
+        "height": 320,
+        "left": 52.5,
+        "right": 1372.5,
+        "top": 90,
+        "width": 1320,
+        "x": 52.5,
+        "y": 90
+      },
+      "overflow": false,
+      "title": {
+        "bottom": 238,
+        "height": 48,
+        "left": 262.5,
+        "right": 1162.5,
+        "top": 190,
+        "width": 900,
+        "x": 262.5,
+        "y": 190
+      }
+    }
+  }
+]

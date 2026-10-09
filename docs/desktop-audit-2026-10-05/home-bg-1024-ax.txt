@@ -1,0 +1,112 @@
+Browser tab: 1, Title: "Автомобили от Day & Night Auto Group | Day & Night Auto Group", URL: "http://127.0.0.1:6482/bg".
+1 AXWebArea Автомобили от Day & Night Auto Group | Day & Night Auto Group, URL: 127.0.0.1:6482/bg
+	2 container
+		3 link Description: Към основното съдържание, Value: 127.0.0.1:6482/bg#main-content
+		4 container main-content
+			5 container
+				6 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+				7 container Основни действия
+					8 link Description: Начало, Value: 127.0.0.1:6482/bg
+					9 link Description: Автомобили, Value: 127.0.0.1:6482/bg/cars
+					10 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+					11 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+					12 link Description: Контакти, Value: 127.0.0.1:6482/bg/contact
+				13 pop up button Запазени
+				14 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+			15 container Намерете своя автомобил
+				16 heading Намерете своя автомобил, Value: 1, ID: desktop-home-title
+					17 text Намерете своя автомобил
+				18 container
+					19 container Търсене на автомобили
+						20 checkbox (collapsed) Всички марки, Value: 0, Secondary Actions: Expand
+						21 checkbox (collapsed) Всички модели, Value: 0, Secondary Actions: Expand
+						22 checkbox (collapsed) Description: Всяка цена, Value: 0, Secondary Actions: Expand
+						23 button Търси
+					24 container Тип превозно средство
+						25 checkbox Автомобили, Value: 1
+						26 checkbox Мотори, Value: 0
+						27 checkbox Бусове, Value: 0
+						28 checkbox Камиони, Value: 0
+			29 container Разгледайте автомобилите
+				30 heading Разгледайте автомобилите, Value: 2, ID: desktop-inventory-heading
+					31 text Разгледайте автомобилите
+				32 tab group Разгледайте автомобилите
+					33 tab (selected, settable, boolean) Всички, Value: 1, ID: radix-_r_3d_-trigger-all
+					34 tab (selectable, settable, boolean) Препоръчани, Value: 0, ID: radix-_r_3d_-trigger-recommended
+					35 tab (selectable, settable, boolean) Последни, Value: 0, ID: radix-_r_3d_-trigger-recent
+				36 container Description: Всички, ID: radix-_r_3d_-content-all
+					37 container
+						38 link Description: Виж 2020 BMW X5 M50d, Value: 127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020
+						39 text Препоръчана
+						40 checkbox Description: Запази 2020 BMW X5, Value: 0
+						41 link Description: BMW X5 Основни характеристики 89 379 лв. от 1360 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-x5-m50d-sofia-2020
+					42 container
+						43 link Description: Виж 2021 Mercedes-Benz GLS 400d 4MATIC AMG, Value: 127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021
+						44 text Препоръчана
+						45 checkbox Description: Запази 2021 Mercedes-Benz GLS, Value: 0
+						46 link Description: Mercedes-Benz GLS Основни характеристики 122 629 лв. от 1870 лв./мес., Value: 127.0.0.1:6482/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021
+					47 container
+						48 link Description: Виж 2021 BMW M4 Competition, Value: 127.0.0.1:6482/bg/listing/bmw-m4-competition-sofia-2021
+						49 text Препоръчана
+						50 checkbox Description: Запази 2021 BMW M4, Value: 0
+						51 link Description: BMW M4 Основни характеристики 128 496 лв. от 1960 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-m4-competition-sofia-2021
+					52 container
+						53 link Description: Виж 2024 BMW 750e xDrive M Sport, Value: 127.0.0.1:6482/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024
+						54 checkbox Description: Запази 2024 BMW 7 Series, Value: 0
+						55 link Description: BMW 7 Series Основни характеристики 175 436 лв. от 2680 лв./мес., Value: 127.0.0.1:6482/bg/listing/bmw-750e-xdrive-m-sport-sofia-2024
+				56 link Description: Виж всички автомобили, Value: 127.0.0.1:6482/bg/cars
+				57 text Показани 4 от 12 автомобила: Всички.
+			58 container По-лесен път към следващия ви автомобил
+				59 heading По-лесен път към следващия ви автомобил, Value: 2, ID: desktop-services-heading
+					60 text По-лесен път към следващия ви автомобил
+				61 text Покупка, продажба и планиране на следващата стъпка — на едно място.
+				62 link Description: Разгледайте автомобили Открийте автомобил за вашия бюджет и начин на живот. Виж автомобилите, Value: 127.0.0.1:6482/bg/cars?sort=newest
+				63 link Description: Продайте автомобила си Обсъдете продажба или замяна с нашия екип. Свържете се с нас, Value: 127.0.0.1:6482/bg/sell
+				64 link Description: Внос на автомобил Намерете и внесете автомобил по ваш избор. Разгледай вноса, Value: 127.0.0.1:6482/bg/imports
+				65 link Description: Планирайте бюджета си Изчислете ориентировъчна месечна вноска. Изчисли вноската, Value: 127.0.0.1:6482/bg/lease
+			66 container
+				67 heading Следващият ви автомобил. По-лесно., Value: 2
+					68 text Следващият ви автомобил. По-лесно.
+				69 text Харесахте автомобил? Елате да го видите. Задайте въпросите си и открийте дали е подходящ за вас.
+				70 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+			71 container Съвети за пътя напред
+				72 heading Съвети за пътя напред, Value: 2, ID: desktop-journal-heading
+					73 text Съвети за пътя напред
+				74 link Description: Покупка 5 мин четене Какво да проверите преди покупка на премиум автомобил, Value: 127.0.0.1:6482/bg/blog/premium-used-car-checklist
+				75 link Description: Внос 4 мин четене Внос на автомобил: кои разходи и срокове често се пропускат, Value: 127.0.0.1:6482/bg/blog/import-costs-and-timing
+				76 link Description: Финансиране 4 мин четене 5 въпроса преди да приемете оферта за финансиране, Value: 127.0.0.1:6482/bg/blog/financing-offer-questions
+				77 link Description: Виж всички статии, Value: 127.0.0.1:6482/bg/blog
+		78 link Description: Modern начало, Value: 127.0.0.1:6482/bg
+		79 text Открийте следващия си автомобил.
+		80 container Открийте автомобил
+			81 heading Открийте автомобил, Value: 2
+				82 text Открийте автомобил
+			83 link Description: Всички автомобили, Value: 127.0.0.1:6482/bg/cars
+			84 link Description: Най-нови автомобили, Value: 127.0.0.1:6482/bg/cars?sort=newest
+			85 link Description: По цена, Value: 127.0.0.1:6482/bg/cars?sort=price_asc
+			86 link Description: Финансиране, Value: 127.0.0.1:6482/bg/lease
+			87 pop up button Запазени
+		88 container Разгледайте
+			89 heading Разгледайте, Value: 2
+				90 text Разгледайте
+			91 link Description: За нас, Value: 127.0.0.1:6482/bg/about
+			92 link Description: Услуги, Value: 127.0.0.1:6482/bg/services
+			93 link Description: Съвети за покупка, Value: 127.0.0.1:6482/bg/blog
+			94 link Description: Ръководства, Value: 127.0.0.1:6482/bg/guides
+			95 link Description: Внос на автомобил, Value: 127.0.0.1:6482/bg/imports
+			96 link Description: Продайте автомобила си, Value: 127.0.0.1:6482/bg/sell
+		97 heading Посетете автосалона, Value: 2
+			98 text Посетете автосалона
+		99 container
+			100 text ул. „Атанас Манчев“ 18, Студентски град ,  София
+		101 link Description: Свържете се, Value: 127.0.0.1:6482/bg/contact
+		102 link Description: Уговорете оглед, Value: 127.0.0.1:6482/bg/contact?intent=viewing
+		103 link Description: 0877 733 110, Value: tel:+359877733110
+		104 text ©  2026 Modern . Всички права запазени.
+		105 link Description: Поверителност, Value: 127.0.0.1:6482/bg/legal/privacy
+		106 link Description: Условия, Value: 127.0.0.1:6482/bg/legal/terms
+		107 link Description: Държава и език, Value: 127.0.0.1:6482/bg/locale-settings?returnTo=%2Fbg
+		108 text Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.
+		109 container Notifications alt+T
+
+The focused UI element is 1 AXWebArea Автомобили от Day & Night Auto Group | Day & Night Auto Group, URL: 127.0.0.1:6482/bg

@@ -1,6 +1,7 @@
 "use client";
 
-import { isLocale, type Locale } from "@repo/internationalization/config";
+import { cn } from "@repo/design-system/lib/utils";
+import type { Locale } from "@repo/internationalization/config";
 import { containDialogTab } from "@repo/internationalization/focus";
 import {
   isCountry,
@@ -15,6 +16,9 @@ import {
   isPreferenceField,
   nativeValidationMessage,
 } from "../lib/locale-validation";
+import { mobileControlFocusClassName } from "../lib/mobile-overlay-styles";
+import { DealerUiIcon } from "./dealer-ui-icon";
+import { LanguageFlag } from "./language-flag";
 
 type LocaleState = ResolvedLocale<Locale>;
 
@@ -142,6 +146,21 @@ export function LocalePreferencesProvider({
       element.close();
     }
   }, [open]);
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+    const root = document.documentElement;
+    const { overflow, scrollbarGutter } = root.style;
+    root.style.overflow = "hidden";
+    root.style.scrollbarGutter = window.matchMedia("(min-width: 640px)").matches
+      ? "stable"
+      : "auto";
+    return () => {
+      root.style.overflow = overflow;
+      root.style.scrollbarGutter = scrollbarGutter;
+    };
+  }, [open]);
 
   const close = () => {
     setOpen(false);
@@ -244,7 +263,7 @@ export function LocalePreferencesProvider({
       <dialog
         aria-describedby="locale-preferences-description"
         aria-labelledby="locale-preferences-title"
-        className="fixed inset-x-0 top-auto bottom-0 m-0 max-h-[90dvh] w-full max-w-full overflow-y-auto rounded-t-2xl border-0 bg-white p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] text-zinc-950 shadow-2xl backdrop:bg-black/50 sm:inset-0 sm:m-auto sm:h-fit sm:w-[28rem] sm:rounded-2xl"
+        className="fixed inset-x-0 top-auto bottom-0 m-0 max-h-[90dvh] w-screen max-w-[100vw] overflow-hidden rounded-t-3xl border-0 bg-white p-0 text-zinc-950 shadow-2xl backdrop:bg-black/50 sm:inset-0 sm:m-auto sm:h-fit sm:w-[28rem] sm:rounded-2xl"
         data-locale-dialog
         data-locale-ready={ready}
         data-preference-country={state.country}
@@ -259,120 +278,161 @@ export function LocalePreferencesProvider({
         }
         ref={dialog}
       >
-        <div className="flex items-start justify-between gap-2">
-          <h2 className="font-semibold text-xl" id="locale-preferences-title">
-            {t(manual ? "locale.title" : "locale.welcome", {
-              dealer: dealerName,
-            })}
-          </h2>
-          <button
-            aria-label={t("locale.close")}
-            className="min-h-11 min-w-11 rounded-lg border border-zinc-300 text-xl"
-            onClick={() => persist("dismiss")}
-            type="button"
-          >
-            ×
-          </button>
-        </div>
-        <p className="mt-3 text-sm" id="locale-preferences-description">
-          {t("locale.description")}
-        </p>
-        <p className="mt-3 font-medium">
-          {t("locale.suggestion", {
-            country:
-              options.find((option) => option.code === state.suggestedCountry)
-                ?.name ?? state.suggestedCountry,
-          })}
-        </p>
-        {manual ? null : (
-          <button
-            className="min-h-11 rounded-lg px-3 underline"
-            onClick={() => document.getElementById("locale-country")?.focus()}
-            type="button"
-          >
-            {t("locale.trigger")}
-          </button>
-        )}
-        <form
-          aria-busy={busy}
-          className="mt-4 grid gap-4"
-          onSubmit={(event) => {
-            event.preventDefault();
-            persist("save");
-          }}
-        >
-          <label className="grid gap-2" htmlFor="locale-country">
-            {t("locale.country")}
-            <select
-              className="min-h-11 w-full min-w-0 rounded-lg border border-zinc-400 bg-white px-3"
-              id="locale-country"
-              name="country"
-              onChange={(event) => {
-                if (isCountry(event.target.value)) {
-                  setCountry(event.target.value);
-                }
-              }}
-              value={country}
+        <div className="flex max-h-[90dvh] flex-col">
+          <div
+            aria-hidden="true"
+            className="mx-auto mt-3 h-1 w-9 shrink-0 rounded-full bg-zinc-200 sm:hidden"
+          />
+          <div className="flex shrink-0 items-center justify-between gap-3 px-4 pt-3 pb-4 sm:px-6 sm:pt-5">
+            <h2
+              className="min-w-0 font-semibold text-lg leading-6 max-lg:font-medium"
+              id="locale-preferences-title"
             >
-              {options.map((option) => (
-                <option key={option.code} value={option.code}>
-                  {option.name}
-                  {option.code === state.suggestedCountry
-                    ? ` — ${t("locale.suggested")}`
-                    : ""}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-2" htmlFor="locale-language">
-            {t("locale.language")}
-            <select
-              className="min-h-11 w-full rounded-lg border border-zinc-400 bg-white px-3"
-              id="locale-language"
-              name="locale"
-              onChange={(event) => {
-                if (
-                  isLocale(event.target.value) &&
-                  enabledLocales.includes(event.target.value)
-                ) {
-                  setLocale(event.target.value);
-                }
-              }}
-              value={locale}
+              <span className="lg:hidden">{t("locale.mobileTitle")}</span>
+              <span className="hidden lg:inline">{t("locale.title")}</span>
+            </h2>
+            <button
+              aria-label={t("locale.close")}
+              className={cn(
+                "inline-flex size-11 shrink-0 items-center justify-center rounded-md bg-transparent text-zinc-950 hover:opacity-70",
+                mobileControlFocusClassName
+              )}
+              onClick={() => persist("dismiss")}
+              title={t("locale.close")}
+              type="button"
             >
-              {enabledLocales.map((value) => (
-                <option key={value} lang={value} value={value}>
-                  {value === "bg" ? "Български" : "English"}
-                </option>
-              ))}
-            </select>
-          </label>
-          <p className="text-sm text-zinc-600">
-            {t("locale.facts", {
-              country: dealerCountry,
-              currency: inventoryCurrency,
-            })}
+              <DealerUiIcon className="size-4 lg:size-5" name="close" />
+            </button>
+          </div>
+          <p className="sr-only" id="locale-preferences-description">
+            {t("locale.description")}
           </p>
-          {error ? (
-            <p className="text-red-700 text-sm" role="alert">
-              {t("locale.error")}
-            </p>
-          ) : null}
-          <button
-            className="min-h-11 rounded-lg bg-zinc-950 px-4 py-3 font-medium text-white"
-            disabled={busy}
-            type="submit"
+          <form
+            aria-busy={busy}
+            className="flex min-h-0 flex-col"
+            onSubmit={(event) => {
+              event.preventDefault();
+              persist("save");
+            }}
           >
-            {t(busy ? "locale.saving" : "locale.save")}
-          </button>
-          <button
-            className="min-h-11 rounded-lg border border-zinc-400 px-4 py-3"
-            onClick={() => persist("dismiss")}
-            type="button"
-          >
-            {t("locale.dismiss")}
-          </button>
-        </form>
+            <div
+              className="min-h-0 overflow-y-auto overscroll-contain px-4 pb-4 sm:px-6"
+              data-locale-fields
+            >
+              {manual ? null : (
+                <p className="mb-5 text-sm text-zinc-600 leading-5">
+                  {t("locale.welcome", { dealer: dealerName })}
+                </p>
+              )}
+              <label
+                className="grid gap-2 font-medium text-sm"
+                htmlFor="locale-country"
+              >
+                {t("locale.country")}
+                <span className="relative block">
+                  <select
+                    className={cn(
+                      "h-12 w-full min-w-0 appearance-none truncate rounded-lg border border-zinc-300 bg-white pr-12 pl-4 font-normal text-base",
+                      mobileControlFocusClassName
+                    )}
+                    id="locale-country"
+                    name="country"
+                    onChange={(event) => {
+                      if (isCountry(event.target.value)) {
+                        setCountry(event.target.value);
+                      }
+                    }}
+                    value={country}
+                  >
+                    {options.map((option) => (
+                      <option key={option.code} value={option.code}>
+                        {option.name}
+                      </option>
+                    ))}
+                  </select>
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute top-1/2 right-3 inline-flex size-5 -translate-y-1/2 text-zinc-700"
+                    data-locale-country-chevron
+                  >
+                    <DealerUiIcon className="size-5" name="chevronDown" />
+                  </span>
+                </span>
+              </label>
+              <fieldset className="mt-5 min-w-0">
+                <legend className="mb-2 font-medium text-sm">
+                  {t("locale.language")}
+                </legend>
+                <div className="grid gap-2">
+                  {enabledLocales.map((value) => (
+                    <label
+                      className={cn(
+                        "flex min-h-14 cursor-pointer items-center gap-3 rounded-lg border px-4 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-ring has-[:focus-visible]:ring-offset-2",
+                        locale === value
+                          ? "border-zinc-950 bg-zinc-50"
+                          : "border-zinc-200 bg-white hover:bg-zinc-50"
+                      )}
+                      data-language-option={value}
+                      key={value}
+                    >
+                      <LanguageFlag locale={value} />
+                      <span
+                        className="min-w-0 flex-1 font-medium text-base"
+                        lang={value}
+                      >
+                        {value === "bg" ? "Български" : "English"}
+                      </span>
+                      <input
+                        checked={locale === value}
+                        className="size-4 shrink-0 accent-zinc-950"
+                        name="locale"
+                        onChange={() => setLocale(value)}
+                        type="radio"
+                        value={value}
+                      />
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+              <p className="mt-4 text-xs text-zinc-500 leading-5">
+                {t("locale.facts", {
+                  country: dealerCountry,
+                  currency: inventoryCurrency,
+                })}
+              </p>
+              {error ? (
+                <p className="mt-3 text-red-700 text-sm" role="alert">
+                  {t("locale.error")}
+                </p>
+              ) : null}
+            </div>
+            <div
+              className="flex shrink-0 justify-end gap-2 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6"
+              data-locale-actions
+            >
+              <button
+                className={cn(
+                  "h-11 w-28 shrink-0 rounded-md px-4 font-medium text-sm text-zinc-600 hover:text-zinc-950",
+                  mobileControlFocusClassName
+                )}
+                onClick={() => persist("dismiss")}
+                type="button"
+              >
+                {t(manual ? "locale.cancel" : "locale.dismiss")}
+              </button>
+              <button
+                className={cn(
+                  "h-11 w-28 shrink-0 rounded-md bg-zinc-950 px-4 font-medium text-sm text-white hover:bg-zinc-800 disabled:opacity-60",
+                  mobileControlFocusClassName
+                )}
+                disabled={busy}
+                type="submit"
+              >
+                {t(busy ? "locale.saving" : "locale.confirm")}
+              </button>
+            </div>
+          </form>
+        </div>
       </dialog>
     </PreferenceContext.Provider>
   );

@@ -1,0 +1,357 @@
+{
+  "layouts": {
+    "bg320": {
+      "body": 305,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "165 657 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "73 733 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "124 584 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 0,
+        "scrollLeft": 0,
+        "scrollWidth": 843,
+        "snap": "x mandatory",
+        "width": 273
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 273,
+        "y": 1095.75
+      },
+      "viewport": 320
+    },
+    "bg390": {
+      "body": 375,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "165 657 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "73 733 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "124 584 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 36,
+        "scrollLeft": 0,
+        "scrollWidth": 909,
+        "snap": "x mandatory",
+        "width": 343
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 343,
+        "y": 1124.25
+      },
+      "viewport": 390
+    },
+    "en320": {
+      "body": 305,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "BGN 165,657",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "BGN 73,733",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "BGN 124,584",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 273
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 0,
+        "scrollLeft": 0,
+        "scrollWidth": 843,
+        "snap": "x mandatory",
+        "width": 273
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 273,
+        "y": 1095.75
+      },
+      "viewport": 320
+    },
+    "en360": {
+      "body": 345,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "BGN 165,657",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "BGN 73,733",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "BGN 124,584",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 29,
+        "scrollLeft": 0,
+        "scrollWidth": 840,
+        "snap": "x mandatory",
+        "width": 313
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 313,
+        "y": 1125.75
+      },
+      "viewport": 360
+    },
+    "en390": {
+      "body": 375,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "BGN 165,657",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "BGN 73,733",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/en/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "BGN 124,584",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 295
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 36,
+        "scrollLeft": 0,
+        "scrollWidth": 909,
+        "snap": "x mandatory",
+        "width": 343
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 343,
+        "y": 1124.25
+      },
+      "viewport": 390
+    },
+    "bg360": {
+      "body": 345,
+      "cards": [
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-e-63-s-amg-sofia-2021",
+          "price": "165 657 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+          "price": "73 733 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        },
+        {
+          "articleRadius": "20px",
+          "bg": "lab(96.1634 0.0993013 -0.364029)",
+          "border": "0px",
+          "factsFit": true,
+          "height": 147,
+          "href": "/bg/listing/mercedes-benz-gle-400d-coupe-sofia-2021",
+          "price": "124 584 лв.",
+          "priceFits": true,
+          "radius": "20px",
+          "width": 272
+        }
+      ],
+      "overflow": false,
+      "rail": {
+        "peek": 29,
+        "scrollLeft": 0,
+        "scrollWidth": 840,
+        "snap": "x mandatory",
+        "width": 313
+      },
+      "section": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "height": 211,
+        "width": 313,
+        "y": 1101.75
+      },
+      "viewport": 360
+    }
+  },
+  "desktop": {
+    "columns": "315px 315px 315px 315px",
+    "mobileCardsVisible": false,
+    "overflow": false,
+    "viewport": 1440,
+    "visibleCards": 3
+  },
+  "horizontalScroll": {
+    "scrollLeft": 307,
+    "snap": "x mandatory",
+    "width": 343
+  },
+  "action": {
+    "url": "http://127.0.0.1:6482/bg/listing/mercedes-benz-cls-400d-4matic-sofia-2020",
+    "heading": "2020 Mercedes-Benz CLS 400d 4MATIC"
+  },
+  "errors": []
+}

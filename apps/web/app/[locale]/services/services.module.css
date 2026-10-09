@@ -124,10 +124,6 @@
   background: var(--desktop-surface-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-desktop-frame);
-  transition: border-color var(--duration-interaction);
-}
-.card:hover {
-  border-color: var(--desktop-border-hover);
 }
 .card:focus-visible {
   outline: var(--desktop-focus-width) solid var(--brand);
@@ -177,6 +173,54 @@
   }
 }
 @media (min-width: 1024px) {
+  .discovery {
+    display: grid;
+    gap: var(--desktop-hero-pills-gap);
+  }
+  .pills {
+    gap: var(--desktop-hero-pill-gap);
+    margin-top: 0;
+  }
+  .search:focus-within,
+  .pills button:focus-visible {
+    outline-color: var(--desktop-hero-focus, var(--brand));
+  }
+  .pills button {
+    min-height: var(--desktop-hero-pill-height);
+    padding: 0 var(--desktop-hero-pill-padding);
+    font-size: var(--text-desktop-control);
+    color: var(--desktop-hero-type-foreground, var(--inverse-foreground));
+    background: var(
+      --desktop-hero-type-background,
+      var(--desktop-editorial-control-background)
+    );
+    border-color: var(
+      --desktop-hero-type-border,
+      var(--desktop-discovery-glass-border)
+    );
+    transition:
+      background-color var(--duration-interaction),
+      border-color var(--duration-interaction);
+  }
+  .pills button:hover {
+    background: var(
+      --desktop-hero-type-hover,
+      var(--desktop-editorial-control-hover)
+    );
+    border-color: var(
+      --desktop-hero-type-hover-border,
+      var(--desktop-discovery-glass-hover-border)
+    );
+  }
+  .pills button[aria-pressed="true"] {
+    color: var(--brand-text);
+    background: var(--panel);
+    border-color: var(--panel);
+  }
+  .pills button[aria-pressed="true"]:hover {
+    background: var(--desktop-discovery-selected-hover);
+    border-color: var(--desktop-discovery-selected-hover);
+  }
   .artwork {
     height: calc(var(--spacing) * 36);
     margin: calc(var(--spacing) * 6) calc(var(--spacing) * 6) 0;
@@ -215,9 +259,15 @@
     background: var(--lead-site-accent-hover);
   }
   .services {
-    gap: calc(var(--spacing) * 6);
+    gap: var(--desktop-page-grid-gap);
     width: var(--desktop-content-width);
-    margin-block: calc(var(--spacing) * 10) calc(var(--spacing) * 22.5);
+    padding: var(--desktop-page-grid-gap);
+    margin-block: var(--desktop-page-content-offset) calc(var(--spacing) * 22.5);
+    background: var(--desktop-surface-subtle);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .card {
+    background: var(--panel);
   }
 }
 @media (min-width: 1200px) {
@@ -278,9 +328,6 @@
     border-color: transparent;
     border-radius: calc(var(--spacing) * 4);
   }
-  .card:hover {
-    border-color: var(--border);
-  }
   .artwork {
     height: calc(var(--spacing) * 21);
     margin: calc(var(--spacing) * 3) calc(var(--spacing) * 2) 0;
@@ -296,6 +343,7 @@
   .copy h2 {
     min-width: 0;
     font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
     line-height: 1.4;
     text-wrap: initial;
   }

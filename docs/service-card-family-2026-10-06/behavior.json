@@ -1,0 +1,16 @@
+{
+  "filtered": [
+    {
+      "href": "/bg/imports",
+      "image": "http://127.0.0.1:6482/images/services/desktop-imports-v1.webp"
+    }
+  ],
+  "restored": 4,
+  "empty": 0,
+  "focus": {
+    "href": "/bg/cars",
+    "nestedControls": 0,
+    "outline": "2px"
+  },
+  "keyboardDestination": "http://127.0.0.1:6482/bg/cars"
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-info-v2.webp"
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-phone-v2.webp"
+      }
+    ],
+    "url": "http://127.0.0.1:6482/bg/imports"
+  },
+  {
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-car-v2.webp"
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-filters-v2.webp"
+      }
+    ],
+    "url": "http://127.0.0.1:6482/bg/cars"
+  },
+  {
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-location-v2.webp"
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-phone-v2.webp"
+      }
+    ],
+    "url": "http://127.0.0.1:6482/bg/services"
+  },
+  {
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-guides-v2.webp"
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "loaded": true,
+        "src": "/images/services/header-silver-filters-v2.webp"
+      }
+    ],
+    "url": "http://127.0.0.1:6482/bg/guides"
+  }
+]

@@ -21,7 +21,9 @@ for (const width of [320, 390]) {
     await page.goto("/en/cars");
     const welcome = page.getByRole("dialog");
     await expect(welcome).toBeVisible();
-    await expect(welcome.getByLabel("Website language")).toHaveValue("en");
+    await expect(
+      welcome.getByRole("radio", { name: "English", exact: true })
+    ).toBeChecked();
     const response = page.waitForResponse(
       (result) =>
         new URL(result.url()).pathname === "/api/preferences" &&

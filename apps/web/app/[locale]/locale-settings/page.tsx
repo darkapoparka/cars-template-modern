@@ -1,5 +1,6 @@
 import { isLocale } from "@repo/internationalization/config";
 import { localizedPath, withBasePath } from "@repo/internationalization/paths";
+import { LanguageSelect } from "@repo/marketplace-ui/components/language-select";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRequestPreferences, localePolicy } from "@/lib/locale-preferences";
@@ -63,11 +64,12 @@ export default async function LocaleSettings({
             ))}
           </select>
         </label>
-        <label className="grid gap-2">
+        <label className="grid gap-2" htmlFor="locale-settings-language">
           {t["locale.language"]}
-          <select
+          <LanguageSelect
             className="min-h-11 w-full rounded-lg border bg-background p-2"
             defaultValue={locale}
+            id="locale-settings-language"
             name="locale"
           >
             {preferences.enabledLocales.map((value) => (
@@ -75,7 +77,7 @@ export default async function LocaleSettings({
                 {value === "bg" ? "Български" : "English"}
               </option>
             ))}
-          </select>
+          </LanguageSelect>
         </label>
         <p>
           {t["locale.facts"]

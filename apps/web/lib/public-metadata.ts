@@ -56,8 +56,15 @@ export const createPublicLocalizedMetadata = (
     ? leadSite.heroPath
     : PUBLIC_SOCIAL_IMAGE_PATH;
   const image = withBasePath(properties.image ?? defaultImage);
+  const brandSuffix = [` | ${leadSite.name}`, ` | ${leadSite.shortName}`].find(
+    (suffix) => properties.title.endsWith(suffix)
+  );
+  const title = brandSuffix
+    ? properties.title.slice(0, -brandSuffix.length)
+    : properties.title;
   const metadata = createSeoLocalizedMetadata({
     ...properties,
+    title,
     alternateLocales: (
       properties.alternateLocales ?? getPublicLocales()
     ).filter((locale) => getPublicLocales().includes(locale)),
@@ -72,7 +79,7 @@ export const createPublicLocalizedMetadata = (
       ...(metadata.twitter ?? {}),
       images:
         properties.twitter?.images ??
-        ([{ alt: properties.title, url: image }] satisfies NonNullable<
+        ([{ alt: title, url: image }] satisfies NonNullable<
           Metadata["twitter"]
         >["images"]),
     },

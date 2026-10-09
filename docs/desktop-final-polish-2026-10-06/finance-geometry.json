@@ -1,0 +1,240 @@
+[
+  {
+    "tag": "DIV",
+    "text": "ПокупкаФинансиранеОриентировъчна вноска~1870 лв./мес.Срокът и първоначалната вноска се уточняват с екипа.Вижте възможностите",
+    "class": "flex flex-col gap-2 listing-detail-desktop-module__rqIRAq__purchaseOptions",
+    "hidden": null,
+    "w": 292,
+    "h": 256,
+    "style": {
+      "font": "16px",
+      "line": "24px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "minHeight": "0px",
+      "gap": "20px"
+    }
+  },
+  {
+    "tag": "DIV",
+    "text": "ПокупкаФинансиране",
+    "class": "bg-muted text-muted-foreground inline-flex h-9 w-fit items-center justify-center rounded-lg p-[3px] listing-detail-desktop-module__rqIRAq__purchaseTabList",
+    "hidden": null,
+    "w": 292,
+    "h": 44,
+    "style": {
+      "font": "16px",
+      "line": "24px",
+      "padding": "4px",
+      "margin": "0px",
+      "display": "flex",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "text": "Покупка",
+    "class": "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 listing-detail-desktop-module__rqIRAq__purchaseTab",
+    "hidden": null,
+    "w": 142,
+    "h": 36,
+    "style": {
+      "font": "15px",
+      "line": "20px",
+      "padding": "0px 8px",
+      "margin": "0px",
+      "display": "flex",
+      "minHeight": "auto",
+      "gap": "6px"
+    }
+  },
+  {
+    "tag": "BUTTON",
+    "text": "Финансиране",
+    "class": "data-[state=active]:bg-background dark:data-[state=active]:text-foreground focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:outline-ring dark:data-[state=active]:border-input dark:data-[state=active]:bg-input/30 text-foreground dark:text-muted-foreground inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-sm font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 listing-detail-desktop-module__rqIRAq__purchaseTab",
+    "hidden": null,
+    "w": 142,
+    "h": 36,
+    "style": {
+      "font": "15px",
+      "line": "20px",
+      "padding": "0px 8px",
+      "margin": "0px",
+      "display": "flex",
+      "minHeight": "auto",
+      "gap": "6px"
+    }
+  },
+  {
+    "tag": "DIV",
+    "text": "Ориентировъчна вноска~1870 лв./мес.Срокът и първоначалната вноска се уточняват с екипа.Вижте възможностите",
+    "class": "flex-1 outline-none listing-detail-desktop-module__rqIRAq__purchasePanel",
+    "hidden": null,
+    "w": 292,
+    "h": 192,
+    "style": {
+      "font": "16px",
+      "line": "24px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "flex",
+      "minHeight": "192px",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "P",
+    "text": "Ориентировъчна вноска",
+    "class": "listing-detail-desktop-module__rqIRAq__purchaseLabel",
+    "hidden": null,
+    "w": 292,
+    "h": 22,
+    "style": {
+      "font": "14px",
+      "line": "22px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "P",
+    "text": "~1870 лв./мес.",
+    "class": "listing-detail-desktop-module__rqIRAq__financePrice",
+    "hidden": null,
+    "w": 292,
+    "h": 38.390625,
+    "style": {
+      "font": "32px",
+      "line": "38.4px",
+      "padding": "0px",
+      "margin": "8px 0px 0px",
+      "display": "block",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "SPAN",
+    "text": "/мес.",
+    "class": "",
+    "hidden": null,
+    "w": 38.59375,
+    "h": 19,
+    "style": {
+      "font": "15px",
+      "line": "18px",
+      "padding": "0px",
+      "margin": "0px 0px 0px 4px",
+      "display": "inline",
+      "minHeight": "0px",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "P",
+    "text": "Срокът и първоначалната вноска се уточняват с екипа.",
+    "class": "listing-detail-desktop-module__rqIRAq__purchaseHint",
+    "hidden": null,
+    "w": 292,
+    "h": 44,
+    "style": {
+      "font": "14px",
+      "line": "22px",
+      "padding": "0px",
+      "margin": "8px 0px 0px",
+      "display": "block",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "DIV",
+    "text": "Вижте възможностите",
+    "class": "listing-detail-desktop-module__rqIRAq__purchaseActions",
+    "hidden": null,
+    "w": 292,
+    "h": 68,
+    "style": {
+      "font": "16px",
+      "line": "24px",
+      "padding": "20px 0px 0px",
+      "margin": "3.60938px 0px 0px",
+      "display": "block",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "A",
+    "text": "Вижте възможностите",
+    "class": "inline-flex shrink-0 items-center justify-center whitespace-nowrap text-sm font-medium outline-none transition-[background-color,border-color,color,box-shadow,opacity] focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/35 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-45 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 has-[>svg]:px-3 h-12 w-full gap-2 rounded-lg",
+    "hidden": null,
+    "w": 292,
+    "h": 48,
+    "style": {
+      "font": "14px",
+      "line": "20px",
+      "padding": "8px 12px",
+      "margin": "0px",
+      "display": "inline-flex",
+      "minHeight": "48px",
+      "gap": "8px"
+    }
+  },
+  {
+    "tag": "svg",
+    "text": "",
+    "class": {},
+    "hidden": null,
+    "w": 16,
+    "h": 16,
+    "style": {
+      "font": "14px",
+      "line": "20px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "block",
+      "minHeight": "auto",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "circle",
+    "text": "",
+    "class": {},
+    "hidden": null,
+    "w": 13.333251953125,
+    "h": 13.33331298828125,
+    "style": {
+      "font": "14px",
+      "line": "20px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "inline",
+      "minHeight": "0px",
+      "gap": "normal"
+    }
+  },
+  {
+    "tag": "path",
+    "text": "",
+    "class": {},
+    "hidden": null,
+    "w": 5.333251953125,
+    "h": 5.33331298828125,
+    "style": {
+      "font": "14px",
+      "line": "20px",
+      "padding": "0px",
+      "margin": "0px",
+      "display": "inline",
+      "minHeight": "0px",
+      "gap": "normal"
+    }
+  }
+]

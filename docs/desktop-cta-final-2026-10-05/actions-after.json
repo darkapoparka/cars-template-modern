@@ -1,0 +1,35 @@
+[
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "height": 48,
+    "href": null,
+    "radius": "12px",
+    "text": "Запазени",
+    "width": 123.09375,
+    "x": 1083.5625,
+    "y": 21
+  },
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "height": 48,
+    "href": "/bg/cars",
+    "radius": "12px",
+    "text": "Виж всички автомобили",
+    "width": 240.9375,
+    "x": 592.03125,
+    "y": 1019
+  },
+  {
+    "background": "rgb(245, 246, 248)",
+    "color": "rgb(5, 11, 32)",
+    "height": 48,
+    "href": "/bg/blog",
+    "radius": "12px",
+    "text": "Виж всички статии",
+    "width": 203.6875,
+    "x": 610.65625,
+    "y": 2894.09375
+  }
+]

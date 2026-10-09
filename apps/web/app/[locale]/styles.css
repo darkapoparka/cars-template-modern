@@ -1,4 +1,5 @@
 @import "@repo/design-system/styles/globals.css";
+/* Desktop theme aliases, photography and controls share the 1024px boundary. */
 @import "./desktop.css";
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
 

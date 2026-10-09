@@ -1,16 +1,10 @@
 {
   "generated": "2026-10-06",
   "source": "source.png",
-  "sourceDimensions": [
-    1774,
-    887
-  ],
+  "sourceDimensions": [1774, 887],
   "sourceSha256": "b4bf9c7349cd88613aefcb831494a9f346a6a0c8c57ab15ac0448c6fd64f3918",
   "deliveryPath": "/images/lease/mobile-pdp-finance-studio-v2.webp",
-  "deliveryDimensions": [
-    1080,
-    540
-  ],
+  "deliveryDimensions": [1080, 540],
   "deliverySha256": "c65424182d3de1d0d59a8f21fb1febc90a0ab068ba7e4bf59542cafa3d6b7d2a",
   "bytes": 51350,
   "preparation": "Resize to 1080px and encode WebP. No crop, repainting or semantic edits."

@@ -1,0 +1,122 @@
+{
+  "evidence": "Summary of completed checks.mjs cases reported by the direct browser run; incomplete WebKit English cases are excluded.",
+  "records": [
+    {
+      "browserName": "chromium",
+      "locale": "bg",
+      "width": 1024,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search clamps to available frame"
+      ]
+    },
+    {
+      "browserName": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search width 900px",
+        "enabled field keyboard focus"
+      ]
+    },
+    {
+      "browserName": "chromium",
+      "locale": "en",
+      "width": 1024,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search clamps to available frame"
+      ]
+    },
+    {
+      "browserName": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search width 900px",
+        "enabled field keyboard focus"
+      ]
+    },
+    {
+      "browserName": "webkit",
+      "locale": "bg",
+      "width": 1024,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search clamps to available frame"
+      ]
+    },
+    {
+      "browserName": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "routes": [
+        "home",
+        "cars"
+      ],
+      "completed": true,
+      "verified": [
+        "matching centered capsule widths and vertical positions",
+        "three fields",
+        "capsule height 64px",
+        "field height 48px",
+        "hero height 352px",
+        "no horizontal overflow",
+        "search width 900px",
+        "enabled field keyboard focus"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2785 @@
+[
+  {
+    "route": "services",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Нашите услуги"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "sell",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Продайте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как протича продажбата",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "guides",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Съвети и статии"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "/bg/guides",
+        "kind": "guides",
+        "label": "Съвети и статии",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-guides-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Филтрирай материалите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "cars",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Открийте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "category",
+        "label": "Избери категория превозно средство",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-car-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Отвори филтрите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "imports",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Внос на автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как работи вносът",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "lease",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Лизинг на автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как работи лизингът",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "about",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "contact",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "",
+    "locale": "bg",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Открийте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "category",
+        "label": "Избери категория превозно средство",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-car-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Отвори филтрите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "cars",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Открийте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "category",
+        "label": "Избери категория превозно средство",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-car-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Отвори филтрите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "services",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Нашите услуги"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "sell",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Продайте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как протича продажбата",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "guides",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Съвети и статии"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "/bg/guides",
+        "kind": "guides",
+        "label": "Съвети и статии",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-guides-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Филтрирай материалите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "imports",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Внос на автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как работи вносът",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "lease",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Лизинг на автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "Как работи лизингът",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "about",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "contact",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 22,
+        "width": 22
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 20,
+        "width": 20
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "За нас и контакти"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Отвори местоположението",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Обадете се на 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "",
+    "locale": "bg",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Открийте автомобил"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "category",
+        "label": "Избери категория превозно средство",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-car-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Отвори филтрите",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "cars",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Find your next car"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "category",
+        "label": "Choose vehicle category",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-car-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Open filters",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "services",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Our services"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Open location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "sell",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Sell your vehicle"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "How selling works",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "imports",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 0,
+        "width": 0
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Import a vehicle"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "How importing works",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "lease",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 16,
+        "width": 16
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 14,
+        "width": 14
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Vehicle financing"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "How financing works",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "guides",
+    "locale": "en",
+    "width": 320,
+    "bodyWidth": 305,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Guides and articles"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "/en/guides",
+        "kind": "guides",
+        "label": "Guides and articles",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-guides-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          253,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Filter content",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "route": "services",
+    "locale": "en",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Our services"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+        "kind": "location",
+        "label": "Open location",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-location-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "sell",
+    "locale": "en",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "hugeicons-stroke-rounded",
+        "height": 18,
+        "width": 18
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Sell your vehicle"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "info",
+        "label": "How selling works",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-info-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": "tel:+359877733110",
+        "kind": "phone",
+        "label": "Call 0877 733 110",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-phone-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "route": "guides",
+    "locale": "en",
+    "width": 390,
+    "bodyWidth": 375,
+    "bottom": [
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      },
+      {
+        "family": "generated-assets",
+        "height": 24,
+        "width": 30
+      }
+    ],
+    "h1": [
+      {
+        "font": "18px",
+        "lineHeight": "28px",
+        "text": "Guides and articles"
+      }
+    ],
+    "icons": [
+      {
+        "box": [
+          24,
+          20,
+          28,
+          28
+        ],
+        "href": "/en/guides",
+        "kind": "guides",
+        "label": "Guides and articles",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-guides-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      },
+      {
+        "box": [
+          323,
+          20,
+          28,
+          28
+        ],
+        "href": null,
+        "kind": "filters",
+        "label": "Filter content",
+        "loaded": true,
+        "natural": [
+          112,
+          112
+        ],
+        "src": "/images/services/header-silver-filters-v2.webp",
+        "target": [
+          44,
+          44
+        ]
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  }
+]

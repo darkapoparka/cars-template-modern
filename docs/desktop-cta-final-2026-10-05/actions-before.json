@@ -1,0 +1,24 @@
+[
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "color": "rgb(5, 11, 32)",
+    "height": 48,
+    "href": null,
+    "radius": "0px",
+    "text": "Запазени",
+    "width": 100.390625,
+    "x": 1106.265625,
+    "y": 21
+  },
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "color": "rgb(64, 95, 242)",
+    "height": 40,
+    "href": "/bg/cars",
+    "radius": "0px",
+    "text": "Виж всички автомобили",
+    "width": 216.9375,
+    "x": 604.03125,
+    "y": 1019
+  }
+]

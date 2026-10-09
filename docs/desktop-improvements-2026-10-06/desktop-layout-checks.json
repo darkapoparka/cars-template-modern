@@ -1,0 +1,26 @@
+[
+  {
+    "label": "cars-bg-1024",
+    "viewOverlapsDetailsArea": 0,
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "label": "cars-bg-1280",
+    "viewOverlapsDetailsArea": 0,
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "label": "cars-bg-1440",
+    "viewOverlapsDetailsArea": 0,
+    "horizontalOverflow": false,
+    "brokenImages": []
+  },
+  {
+    "label": "cars-bg-1920",
+    "viewOverlapsDetailsArea": 0,
+    "horizontalOverflow": false,
+    "brokenImages": []
+  }
+]

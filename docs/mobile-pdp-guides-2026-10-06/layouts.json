@@ -1,0 +1,932 @@
+[
+  {
+    "description": "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
+    "extras": [],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        855.75,
+        273,
+        160
+      ],
+      "copy": "Лизинг\n\nОт ~1870 лв.\n/мес.\n\nУсловия",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/bg/lease?vehicle=am-1010"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1047.75,
+        273,
+        213
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          426.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Година",
+        "value": "2021"
+      },
+      {
+        "box": [
+          156.5,
+          426.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Пробег",
+        "value": "166 000 км"
+      },
+      {
+        "box": [
+          29,
+          498.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Гориво",
+        "value": "Дизел"
+      },
+      {
+        "box": [
+          156.5,
+          498.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Купе",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          570.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Скорости",
+        "value": "Автоматик"
+      },
+      {
+        "box": [
+          156.5,
+          570.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Мощност",
+        "value": "330 к.с."
+      },
+      {
+        "box": [
+          29,
+          642.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Версия",
+        "value": "AMG Line\n400d 4MATIC AMG Line"
+      },
+      {
+        "box": [
+          156.5,
+          642.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Цвят",
+        "value": "Черен"
+      }
+    ],
+    "tabs": [
+      "Детайли",
+      "Снимки"
+    ],
+    "url": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 320,
+    "file": "bg-listing-mercedes-benz-gls-400d-4matic-amg-sofia-2021-after-320.jpg"
+  },
+  {
+    "description": "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
+    "extras": [
+      "360° камери",
+      "Панорамен покрив",
+      "Head-up display",
+      "Обдухване на седалките"
+    ],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        1110.75,
+        273,
+        160
+      ],
+      "copy": "Лизинг\n\nОт ~1360 лв.\n/мес.\n\nУсловия",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/bg/lease?vehicle=am-1001"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1302.75,
+        273,
+        213
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          398.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Година",
+        "value": "2020"
+      },
+      {
+        "box": [
+          156.5,
+          398.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Пробег",
+        "value": "167 000 км"
+      },
+      {
+        "box": [
+          29,
+          470.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Гориво",
+        "value": "Дизел"
+      },
+      {
+        "box": [
+          156.5,
+          470.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Купе",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          542.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Скорости",
+        "value": "Автоматик"
+      },
+      {
+        "box": [
+          156.5,
+          542.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Мощност",
+        "value": "400 к.с."
+      },
+      {
+        "box": [
+          29,
+          614.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Версия",
+        "value": "M50d"
+      }
+    ],
+    "tabs": [
+      "Детайли",
+      "Снимки"
+    ],
+    "url": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "width": 320,
+    "file": "bg-listing-bmw-x5-m50d-sofia-2020-after-320.jpg"
+  },
+  {
+    "description": "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from Day & Night, available to view in Sofia.",
+    "extras": [],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        855.75,
+        273,
+        160
+      ],
+      "copy": "Finance\n\nFrom ~BGN 1,870\n/mo\n\nOptions",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/en/lease?vehicle=am-1010"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1047.75,
+        273,
+        213
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          426.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Year",
+        "value": "2021"
+      },
+      {
+        "box": [
+          156.5,
+          426.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Mileage",
+        "value": "166,000 km"
+      },
+      {
+        "box": [
+          29,
+          498.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Fuel",
+        "value": "Diesel"
+      },
+      {
+        "box": [
+          156.5,
+          498.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Body",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          570.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Gearbox",
+        "value": "Automatic"
+      },
+      {
+        "box": [
+          156.5,
+          570.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Power",
+        "value": "330 hp"
+      },
+      {
+        "box": [
+          29,
+          642.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Trim",
+        "value": "AMG Line\n400d 4MATIC AMG Line"
+      },
+      {
+        "box": [
+          156.5,
+          642.75,
+          119.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Colour",
+        "value": "Черен"
+      }
+    ],
+    "tabs": [
+      "Details",
+      "Photos"
+    ],
+    "url": "/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 320,
+    "file": "en-listing-mercedes-benz-gls-400d-4matic-amg-sofia-2021-after-320.jpg"
+  },
+  {
+    "extras": [],
+    "finance": null,
+    "guideCount": [
+      "(6)"
+    ],
+    "guideMeta": [
+      {
+        "text": "Покупка",
+        "transform": "none"
+      },
+      {
+        "text": "Внос",
+        "transform": "none"
+      },
+      {
+        "text": "Финансиране",
+        "transform": "none"
+      },
+      {
+        "text": "Покупка",
+        "transform": "none"
+      },
+      {
+        "text": "EV и хибрид",
+        "transform": "none"
+      },
+      {
+        "text": "Обяви",
+        "transform": "none"
+      }
+    ],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": null,
+    "specs": [],
+    "tabs": [],
+    "url": "/bg/guides",
+    "width": 320,
+    "file": "bg-guides-after-320.jpg"
+  },
+  {
+    "extras": [],
+    "finance": null,
+    "guideCount": [
+      "(6)"
+    ],
+    "guideMeta": [
+      {
+        "text": "Buying",
+        "transform": "none"
+      },
+      {
+        "text": "Import",
+        "transform": "none"
+      },
+      {
+        "text": "Finance",
+        "transform": "none"
+      },
+      {
+        "text": "Buying",
+        "transform": "none"
+      },
+      {
+        "text": "EV & hybrid",
+        "transform": "none"
+      },
+      {
+        "text": "Listings",
+        "transform": "none"
+      }
+    ],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": null,
+    "specs": [],
+    "tabs": [],
+    "url": "/en/guides",
+    "width": 320,
+    "file": "en-guides-after-320.jpg"
+  },
+  {
+    "description": "GLS 400d 4MATIC AMG Line с Burmester и панорама. Голям семеен SUV от Day & Night - наличен за оглед в София.",
+    "extras": [],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        884.25,
+        343,
+        160
+      ],
+      "copy": "Лизинг\n\nОт ~1870 лв.\n/мес.\n\nУсловия",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/bg/lease?vehicle=am-1010"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1076.25,
+        343,
+        232.640625
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          479.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Година",
+        "value": "2021"
+      },
+      {
+        "box": [
+          191.5,
+          479.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Пробег",
+        "value": "166 000 км"
+      },
+      {
+        "box": [
+          29,
+          551.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Гориво",
+        "value": "Дизел"
+      },
+      {
+        "box": [
+          191.5,
+          551.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Купе",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          623.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Скорости",
+        "value": "Автоматик"
+      },
+      {
+        "box": [
+          191.5,
+          623.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Мощност",
+        "value": "330 к.с."
+      },
+      {
+        "box": [
+          29,
+          695.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Версия",
+        "value": "AMG Line\n400d 4MATIC AMG Line"
+      },
+      {
+        "box": [
+          191.5,
+          695.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Цвят",
+        "value": "Черен"
+      }
+    ],
+    "tabs": [
+      "Детайли",
+      "Снимки"
+    ],
+    "url": "/bg/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 390,
+    "file": "bg-listing-mercedes-benz-gls-400d-4matic-amg-sofia-2021-after-390.jpg"
+  },
+  {
+    "description": "Примерна обява за BMW X5 M50d с 360 камери, панорама, HUD и обдухване. Снимката е илюстративна; наличност и условия се потвърждават с автокъщата.",
+    "extras": [
+      "360° камери",
+      "Панорамен покрив",
+      "Head-up display",
+      "Обдухване на седалките"
+    ],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        1083.25,
+        343,
+        160
+      ],
+      "copy": "Лизинг\n\nОт ~1360 лв.\n/мес.\n\nУсловия",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/bg/lease?vehicle=am-1001"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1275.25,
+        343,
+        232.640625
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          451.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Година",
+        "value": "2020"
+      },
+      {
+        "box": [
+          191.5,
+          451.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Пробег",
+        "value": "167 000 км"
+      },
+      {
+        "box": [
+          29,
+          523.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Гориво",
+        "value": "Дизел"
+      },
+      {
+        "box": [
+          191.5,
+          523.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Купе",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          595.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Скорости",
+        "value": "Автоматик"
+      },
+      {
+        "box": [
+          191.5,
+          595.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Мощност",
+        "value": "400 к.с."
+      },
+      {
+        "box": [
+          29,
+          667.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Версия",
+        "value": "M50d"
+      }
+    ],
+    "tabs": [
+      "Детайли",
+      "Снимки"
+    ],
+    "url": "/bg/listing/bmw-x5-m50d-sofia-2020",
+    "width": 390,
+    "file": "bg-listing-bmw-x5-m50d-sofia-2020-after-390.jpg"
+  },
+  {
+    "description": "GLS 400d 4MATIC AMG Line with Burmester audio and a panoramic roof. A large family SUV from Day & Night, available to view in Sofia.",
+    "extras": [],
+    "finance": {
+      "artLoaded": true,
+      "box": [
+        16,
+        884.25,
+        343,
+        160
+      ],
+      "copy": "Finance\n\nFrom ~BGN 1,870\n/mo\n\nOptions",
+      "currentSource": "http://127.0.0.1:6482/_next/image?url=%2Fimages%2Flease%2Fmobile-pdp-finance-silver-v1.webp&w=256&q=75",
+      "href": "/en/lease?vehicle=am-1010"
+    },
+    "guideCount": [],
+    "guideMeta": [],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": {
+      "background": "rgba(0, 0, 0, 0)",
+      "box": [
+        16,
+        1076.25,
+        343,
+        232.640625
+      ],
+      "radius": "0px"
+    },
+    "showroom": "https://www.google.com/maps/search/?api=1&query=%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018%2C%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D0%B8%D1%8F",
+    "specs": [
+      {
+        "box": [
+          29,
+          479.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Year",
+        "value": "2021"
+      },
+      {
+        "box": [
+          191.5,
+          479.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Mileage",
+        "value": "166,000 km"
+      },
+      {
+        "box": [
+          29,
+          551.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Fuel",
+        "value": "Diesel"
+      },
+      {
+        "box": [
+          191.5,
+          551.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Body",
+        "value": "SUV"
+      },
+      {
+        "box": [
+          29,
+          623.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Gearbox",
+        "value": "Automatic"
+      },
+      {
+        "box": [
+          191.5,
+          623.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Power",
+        "value": "330 hp"
+      },
+      {
+        "box": [
+          29,
+          695.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Trim",
+        "value": "AMG Line\n400d 4MATIC AMG Line"
+      },
+      {
+        "box": [
+          191.5,
+          695.25,
+          154.5,
+          64
+        ],
+        "clipped": false,
+        "label": "Colour",
+        "value": "Черен"
+      }
+    ],
+    "tabs": [
+      "Details",
+      "Photos"
+    ],
+    "url": "/en/listing/mercedes-benz-gls-400d-4matic-amg-sofia-2021",
+    "width": 390,
+    "file": "en-listing-mercedes-benz-gls-400d-4matic-amg-sofia-2021-after-390.jpg"
+  },
+  {
+    "extras": [],
+    "finance": null,
+    "guideCount": [
+      "(6)"
+    ],
+    "guideMeta": [
+      {
+        "text": "Покупка",
+        "transform": "none"
+      },
+      {
+        "text": "Внос",
+        "transform": "none"
+      },
+      {
+        "text": "Финансиране",
+        "transform": "none"
+      },
+      {
+        "text": "Покупка",
+        "transform": "none"
+      },
+      {
+        "text": "EV и хибрид",
+        "transform": "none"
+      },
+      {
+        "text": "Обяви",
+        "transform": "none"
+      }
+    ],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": null,
+    "specs": [],
+    "tabs": [],
+    "url": "/bg/guides",
+    "width": 390,
+    "file": "bg-guides-after-390.jpg"
+  },
+  {
+    "extras": [],
+    "finance": null,
+    "guideCount": [
+      "(6)"
+    ],
+    "guideMeta": [
+      {
+        "text": "Buying",
+        "transform": "none"
+      },
+      {
+        "text": "Import",
+        "transform": "none"
+      },
+      {
+        "text": "Finance",
+        "transform": "none"
+      },
+      {
+        "text": "Buying",
+        "transform": "none"
+      },
+      {
+        "text": "EV & hybrid",
+        "transform": "none"
+      },
+      {
+        "text": "Listings",
+        "transform": "none"
+      }
+    ],
+    "height": 844,
+    "legacyVisibleCount": false,
+    "overflow": false,
+    "related": null,
+    "specs": [],
+    "tabs": [],
+    "url": "/en/guides",
+    "width": 390,
+    "file": "en-guides-after-390.jpg"
+  }
+]

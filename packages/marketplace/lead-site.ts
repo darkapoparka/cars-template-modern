@@ -111,6 +111,7 @@ export const leadSite: LeadSiteConfig = {
     },
   },
   accent: "#30343b",
+  desktopAccent: "#4b5057",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",

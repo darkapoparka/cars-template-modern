@@ -19,7 +19,7 @@ const serviceArtwork: Record<string, string> = {
 const serviceActions: Record<string, { bg: string; en: string }> = {
   "/cars?sort=newest": { bg: "Виж автомобилите", en: "Explore cars" },
   "/sell": { bg: "Свържете се с нас", en: "Get in touch" },
-  "/lease": { bg: "Изчисли вноската", en: "Calculate payments" },
+  "/lease": { bg: "Разгледай лизинга", en: "Explore financing" },
   "/imports": { bg: "Разгледай вноса", en: "Explore imports" },
 };
 
@@ -88,8 +88,8 @@ export function DealerDesktopServiceLinks({
             icon: HandCoins,
             title: text("Планирайте бюджета си", "Plan Your Budget"),
             detail: text(
-              "Изчислете ориентировъчна месечна вноска.",
-              "Estimate a monthly payment before your next step."
+              "Разгледайте възможностите за финансиране.",
+              "Explore the finance options for your next car."
             ),
           },
         ];

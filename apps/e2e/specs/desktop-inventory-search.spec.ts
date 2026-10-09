@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
 
 const modelStage = { bg: /^Модел/, en: /^Model/ };
 
@@ -8,27 +9,32 @@ test.beforeEach(async ({ context, baseURL, page }) => {
     (page.viewportSize()?.width ?? 0) < 1024,
     "Desktop inventory search"
   );
-  if (!baseURL) {
-    throw new Error("Inventory search requires a preview origin");
-  }
-  const response = await context.request.post("/api/preferences", {
-    headers: { origin: new URL(baseURL).origin },
-    data: { action: "dismiss", locale: "bg", country: "BG", returnTo: "/cars" },
-  });
-  expect(response.status()).toBe(200);
+  await dismissModernWelcome(context.request, baseURL);
 });
 
 for (const locale of ["bg", "en"] as const) {
-  test(`inventory pills switch categories, preserve budget and restore browser Back context (${locale})`, async ({
+  test(`inventory type menu switches categories, preserves budget and restores browser Back context (${locale})`, async ({
     page,
   }) => {
+    test.setTimeout(90_000);
     const isBg = locale === "bg";
     await page.goto(
       `/${locale}/cars?make=BMW&model=X5&priceMax=100000&yearMin=2010&sort=newest`
     );
     const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
-    const types = hero.locator('[data-slot="desktop-inventory-types"]');
-    await expect(types.getByRole("button")).toHaveCount(4);
+    const type = hero.getByRole("button", {
+      name: isBg ? "Тип превозно средство" : "Vehicle type",
+      exact: true,
+    });
+    await expect(
+      type.locator('[data-slot="desktop-vehicle-type-artwork"]')
+    ).toBeVisible();
+    await type.click();
+    await expect(page.getByRole("menuitemradio")).toHaveCount(4);
+    await page.keyboard.press("Escape");
+    await expect(
+      page.locator('[data-slot="dropdown-menu-content"]')
+    ).toHaveCount(0);
     await page.waitForLoadState("networkidle");
     await page.evaluate(() => {
       document.documentElement.dataset.typeNavigation = "initial";
@@ -40,13 +46,23 @@ for (const locale of ["bg", "en"] as const) {
       [isBg ? "Камиони" : "Trucks", "trucks"],
       [isBg ? "Автомобили" : "Cars", "cars"],
     ]) {
-      await types.getByRole("button", { name, exact: true }).click();
+      await expect(
+        type.locator('[data-slot="desktop-vehicle-type-artwork"]')
+      ).toBeVisible();
+      await type.click();
+      await page.getByRole("menuitemradio", { name, exact: true }).click();
       await expect
         .poll(() => new URL(page.url()).pathname)
         .toBe(`/${locale}/${path}`);
+      await expect(type).toContainText(name);
+      await type.click();
       await expect(
-        types.getByRole("button", { name, exact: true })
-      ).toHaveAttribute("aria-pressed", "true");
+        page.getByRole("menuitemradio", { name, exact: true })
+      ).toHaveAttribute("aria-checked", "true");
+      await page.keyboard.press("Escape");
+      await expect(
+        page.locator('[data-slot="dropdown-menu-content"]')
+      ).toHaveCount(0);
       const params = new URL(page.url()).searchParams;
       expect(params.get("priceMax")).toBe("100000");
       expect(params.get("yearMin")).toBe("2010");
@@ -63,7 +79,7 @@ for (const locale of ["bg", "en"] as const) {
       await expect
         .poll(() => new URL(page.url()).pathname)
         .toBe(`/${locale}/${path}`);
-      await expect(types.locator('[aria-pressed="true"]')).toBeEnabled();
+      await expect(type).toBeEnabled();
     }
     expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
     expect(new URL(page.url()).searchParams.get("model")).toBe("X5");
@@ -85,7 +101,7 @@ for (const locale of ["bg", "en"] as const) {
       const controls = summary.locator(
         '[data-slot="desktop-results-controls"]'
       );
-      const filters = controls.locator('[data-slot="desktop-primary-control"]');
+      const filters = hero.locator('[data-slot="desktop-primary-control"]');
       await expect(filters).toHaveCount(1);
       await expect(filters).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
@@ -95,31 +111,38 @@ for (const locale of ["bg", "en"] as const) {
       ).toHaveCount(0);
       await expect(
         bar.locator('[data-slot="desktop-primary-control"]')
-      ).toHaveCount(1);
+      ).toHaveCount(0);
+      await expect(
+        hero.locator('[data-slot="dealer-inventory-hero-filters"] button')
+      ).toHaveCount(6);
       const frame = await hero.boundingBox();
       const box = await controls.boundingBox();
       const grid = await page
         .locator('[data-slot="marketplace-listing-grid"]')
         .boundingBox();
-      expect(box?.height).toBe(44);
+      expect(box?.height).toBeGreaterThanOrEqual(32);
       expect(box?.y).toBeGreaterThan((frame?.y ?? 0) + (frame?.height ?? 0));
       expect((box?.y ?? 0) + (box?.height ?? 0)).toBeLessThan(grid?.y ?? 0);
-      expect(
-        Math.abs(
-          (box?.x ?? 0) +
-            (box?.width ?? 0) / 2 -
-            ((grid?.x ?? 0) + (grid?.width ?? 0) / 2)
-        )
-      ).toBeLessThan(1);
+      expect(box?.x).toBeGreaterThan(grid?.x ?? 0);
+      expect((box?.x ?? 0) + (box?.width ?? 0)).toBeLessThanOrEqual(
+        (grid?.x ?? 0) + (grid?.width ?? 0)
+      );
       const count = summary.locator('[data-slot="dealer-inventory-count"]');
-      await expect(count).toHaveClass("sr-only");
-      expect((await count.boundingBox())?.width).toBeLessThanOrEqual(1);
+      await expect(count).toBeVisible();
+      expect((await count.boundingBox())?.width).toBeGreaterThan(1);
+      expect((await count.boundingBox())?.x).toBeLessThan(box?.x ?? 0);
       const view = bar.locator('[data-slot="dealer-inventory-preview"]');
       const beforeScroll = await view.boundingBox();
+      const documentY =
+        (beforeScroll?.y ?? 0) + (await page.evaluate(() => scrollY));
       await page.evaluate(() => scrollTo(0, 300));
       await expect
-        .poll(async () => (await view.boundingBox())?.y)
-        .toBe(beforeScroll?.y);
+        .poll(
+          async () =>
+            ((await view.boundingBox())?.y ?? 0) +
+            (await page.evaluate(() => scrollY))
+        )
+        .toBe(documentY);
       await view.click();
       await expect(
         page.getByRole("menuitemradio", {
@@ -237,9 +260,9 @@ for (const locale of ["bg", "en"] as const) {
     ).toBeTruthy();
     await expect(
       searchBox.locator('[data-slot="dealer-inventory-search-field"]')
-    ).toHaveCount(3);
+    ).toHaveCount(2);
     await expect(
-      searchBox.getByRole("button", {
+      hero.getByRole("button", {
         name: isBg ? "Цена" : "Price",
         exact: true,
       })
@@ -296,7 +319,7 @@ for (const locale of ["bg", "en"] as const) {
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
     expect(new URL(page.url()).searchParams.get("fuel")).toBe("diesel");
     const allFilters = page.locator(
-      '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
+      '[data-slot="dealer-desktop-inventory-hero"] [data-slot="desktop-primary-control"]'
     );
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');

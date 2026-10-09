@@ -1,0 +1,65 @@
+[
+  {
+    "name": "home",
+    "width": 320,
+    "height": 2176,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "home",
+    "width": 390,
+    "height": 2424,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "home",
+    "width": 1023,
+    "height": 1664,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "about",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 38,
+    "changedPercent": 0.013194444444444444
+  },
+  {
+    "name": "about",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "about",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "contact",
+    "width": 320,
+    "height": 900,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "contact",
+    "width": 390,
+    "height": 900,
+    "changedPixels": 0,
+    "changedPercent": 0
+  },
+  {
+    "name": "contact",
+    "width": 1023,
+    "height": 900,
+    "changedPixels": 0,
+    "changedPercent": 0
+  }
+]

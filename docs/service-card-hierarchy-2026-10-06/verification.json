@@ -1,0 +1,157 @@
+{
+  "desktopChecks": [
+    {
+      "route": "services",
+      "locale": "bg",
+      "width": 1440,
+      "cardShrinkPx": 44,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "home",
+      "locale": "bg",
+      "width": 1440,
+      "cardShrinkPx": 32,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "home",
+      "locale": "en",
+      "width": 1440,
+      "cardShrinkPx": 32,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "services",
+      "locale": "en",
+      "width": 1440,
+      "cardShrinkPx": 44,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "home",
+      "locale": "bg",
+      "width": 1024,
+      "cardShrinkPx": 32,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "services",
+      "locale": "bg",
+      "width": 1024,
+      "cardShrinkPx": 44,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "home",
+      "locale": "en",
+      "width": 1024,
+      "cardShrinkPx": 32,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    },
+    {
+      "route": "services",
+      "locale": "en",
+      "width": 1024,
+      "cardShrinkPx": 44,
+      "artworkToTitlePx": 12,
+      "titleToDescriptionPx": 8,
+      "minimumDescriptionToActionPx": 16,
+      "buttonSizePreserved": true,
+      "rowButtonAlignment": true
+    }
+  ],
+  "mobilePairs": [
+    {
+      "route": "home",
+      "width": 320,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": false,
+      "changedPixelBounds": [
+        15,
+        191,
+        145,
+        289
+      ]
+    },
+    {
+      "route": "services",
+      "width": 320,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": true,
+      "changedPixelBounds": null
+    },
+    {
+      "route": "home",
+      "width": 390,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": false,
+      "changedPixelBounds": [
+        15,
+        191,
+        177,
+        312
+      ]
+    },
+    {
+      "route": "services",
+      "width": 390,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": true,
+      "changedPixelBounds": null
+    },
+    {
+      "route": "home",
+      "width": 1023,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": false,
+      "changedPixelBounds": [
+        15,
+        64,
+        241,
+        369
+      ]
+    },
+    {
+      "route": "services",
+      "width": 1023,
+      "measuredLayoutIdentical": true,
+      "jpegPixelsIdentical": true,
+      "changedPixelBounds": null
+    }
+  ],
+  "source": {
+    "servicesCss": "apps/web/app/[locale]/services/services.module.css",
+    "homeCss": "packages/marketplace-ui/components/dealer-desktop-discovery.module.css",
+    "exactTaskDeltaConfirmed": true
+  },
+  "assetFilesUnchanged": true
+}

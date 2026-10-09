@@ -1,0 +1,398 @@
+[
+  {
+    "route": "about",
+    "bodyHeight": 844,
+    "boxes": [
+      {
+        "rect": {
+          "height": 780,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 312,
+          "width": 273,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 273,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 320,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  },
+  {
+    "route": "about",
+    "bodyHeight": 844,
+    "boxes": [
+      {
+        "rect": {
+          "height": 780,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 276,
+          "width": 343,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 343,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 390,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  },
+  {
+    "route": "about",
+    "bodyHeight": 1000,
+    "boxes": [
+      {
+        "rect": {
+          "height": 936,
+          "width": 1008,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 1008,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 276,
+          "width": 976,
+          "x": 16,
+          "y": 315
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 976,
+          "x": 16,
+          "y": 315
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 1000,
+    "overflow": false,
+    "width": 1023,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  },
+  {
+    "route": "contact",
+    "bodyHeight": 844,
+    "boxes": [
+      {
+        "rect": {
+          "height": 780,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 273,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 312,
+          "width": 273,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 273,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 320,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  },
+  {
+    "route": "contact",
+    "bodyHeight": 844,
+    "boxes": [
+      {
+        "rect": {
+          "height": 780,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 343,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 276,
+          "width": 343,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 343,
+          "x": 16,
+          "y": 335
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 844,
+    "overflow": false,
+    "width": 390,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  },
+  {
+    "route": "contact",
+    "bodyHeight": 1000,
+    "boxes": [
+      {
+        "rect": {
+          "height": 936,
+          "width": 1008,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-about-contact",
+        "tag": "DIV",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 126,
+          "width": 1008,
+          "x": 0,
+          "y": 0
+        },
+        "slot": "mobile-service-hero",
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 34,
+          "width": 976,
+          "x": 16,
+          "y": 68
+        },
+        "slot": null,
+        "tag": "H1",
+        "text": "За нас и контакти"
+      },
+      {
+        "rect": {
+          "height": 276,
+          "width": 976,
+          "x": 16,
+          "y": 315
+        },
+        "slot": null,
+        "tag": "SECTION",
+        "text": null
+      },
+      {
+        "rect": {
+          "height": 24,
+          "width": 976,
+          "x": 16,
+          "y": 315
+        },
+        "slot": null,
+        "tag": "H2",
+        "text": "С какво можем да помогнем"
+      }
+    ],
+    "height": 1000,
+    "overflow": false,
+    "width": 1023,
+    "geometryEqual": true,
+    "bannerBackground": "none"
+  }
+]
