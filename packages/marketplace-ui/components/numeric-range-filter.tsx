@@ -150,6 +150,7 @@ export const NumericRangeFilter = ({
     <div
       className={cn("space-y-5 data-[compact=true]:space-y-4", className)}
       data-compact={compact}
+      data-slot="numeric-range-filter"
       style={{ "--ring": "var(--lead-site-accent)" } as CSSProperties}
     >
       <div

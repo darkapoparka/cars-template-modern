@@ -16,11 +16,12 @@ function StockGrid({
 }) {
   return (
     <div className={styles.stockGrid} data-slot="home-stock-grid">
-      {listings.slice(0, 4).map((listing) => (
+      {listings.slice(0, 5).map((listing) => (
         <VehicleCard
+          compactDesktopGrid
           density="compact"
           desktopHeadingLevel={3}
-          desktopImageSizes="(max-width: 1199px) calc((100vw - 100px) / 2), (max-width: 1399px) calc((100vw - 152px) / 4), 312px"
+          desktopImageSizes="(max-width: 1199px) calc((100vw - 148px) / 2), (max-width: 1399px) calc((100vw - 176px) / 4), (max-width: 1494px) calc((100vw - 192px) / 5), 258px"
           desktopLayout="grid"
           desktopSurface="landing"
           href={getLocalizedPublicPath(locale, getListingPath(listing))}
@@ -66,10 +67,14 @@ export function DealerDesktopStock({
         <ArrowRight aria-hidden size={16} />
       </Link>
       <output aria-atomic="true" aria-live="polite" className="sr-only">
-        {text(
-          `Показани ${Math.min(listings.length, 4)} от ${totalListings} автомобила.`,
-          `Showing ${Math.min(listings.length, 4)} of ${totalListings} cars.`
-        )}
+        {text("Показани ", "Showing ")}
+        <span className="min-[1400px]:hidden">
+          {Math.min(listings.length, 4)}
+        </span>
+        <span className="hidden min-[1400px]:inline">
+          {Math.min(listings.length, 5)}
+        </span>
+        {text(` от ${totalListings} автомобила.`, ` of ${totalListings} cars.`)}
       </output>
     </section>
   );

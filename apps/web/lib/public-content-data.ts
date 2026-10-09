@@ -13,8 +13,8 @@ const desktopCardTitles: Record<string, { bg: string; en: string }> = {
     en: "Car imports: costs and timelines",
   },
   "financing-offer-questions": {
-    bg: "5 въпроса преди офертата за финансиране",
-    en: "Five questions before a finance offer",
+    bg: "Въпроси преди офертата за финансиране",
+    en: "Questions before a finance offer",
   },
   "ev-hybrid-ownership-checklist": {
     bg: "Проверки при EV и хибрид",
@@ -39,6 +39,29 @@ const desktopCardArtwork: Record<string, string> = {
     "/images/categories/day-night-category-car-v2.png",
   "dealer-listing-transparency": "/images/services/desktop-sell-v1.webp",
 };
+
+export const getPublicContentArtwork = (slug: string, fallbackImage: string) =>
+  desktopCardArtwork[slug] ?? fallbackImage;
+
+const articleCovers: Record<string, { image?: string; position: string }> = {
+  "premium-used-car-checklist": { position: "center 80%" },
+  "buying-used-car-bulgaria": { position: "center 80%" },
+  "ev-hybrid-ownership-checklist": { position: "center 70%" },
+  "financing-offer-questions": {
+    image: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+    position: "right center",
+  },
+  "import-costs-and-timing": { position: "right center" },
+  "dealer-listing-transparency": {
+    image: "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
+    position: "center",
+  },
+};
+
+export const getPublicContentCover = (slug: string, fallbackImage: string) => ({
+  image: articleCovers[slug]?.image ?? fallbackImage,
+  position: articleCovers[slug]?.position ?? "center",
+});
 
 export const getDesktopContentCardTitle = (
   card: Pick<PublicContentCard, "slug" | "title">,
@@ -78,6 +101,6 @@ export const getPublicContentCards = (
     ),
   ].map((card) => ({
     ...card,
-    desktopImage: desktopCardArtwork[card.slug] ?? card.image,
+    desktopImage: getPublicContentArtwork(card.slug, card.image),
     desktopTitle: getDesktopContentCardTitle(card, locale),
   }));

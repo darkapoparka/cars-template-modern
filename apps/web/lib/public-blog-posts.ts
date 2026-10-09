@@ -29,7 +29,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
     image: "/images/directory/sofia-premium-cars-profile.webp",
     published: "2026-09-08",
     category: { bg: "Покупка", en: "Buying" },
-    readTime: { bg: "5 мин четене", en: "5 min read" },
+    readTime: { bg: "1 мин четене", en: "1 min read" },
     title: {
       bg: "Какво да проверите преди покупка на премиум автомобил",
       en: "What to check before buying a premium used car",
@@ -74,7 +74,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
     image: "/images/import/day-night-mobile-terminal-v2.webp",
     published: "2026-09-04",
     category: { bg: "Внос", en: "Import" },
-    readTime: { bg: "4 мин четене", en: "4 min read" },
+    readTime: { bg: "1 мин четене", en: "1 min read" },
     title: {
       bg: "Внос на автомобил: кои разходи и срокове често се пропускат",
       en: "Importing a car: the costs and timelines people often miss",
@@ -122,10 +122,10 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
     image: "/images/lease/day-night-mobile-studio-v2.webp",
     published: "2026-08-29",
     category: { bg: "Финансиране", en: "Finance" },
-    readTime: { bg: "4 мин четене", en: "4 min read" },
+    readTime: { bg: "1 мин четене", en: "1 min read" },
     title: {
-      bg: "5 въпроса преди да приемете оферта за финансиране",
-      en: "5 questions before accepting a vehicle finance offer",
+      bg: "Въпроси преди оферта за финансиране",
+      en: "Questions before accepting a finance offer",
     },
     excerpt: {
       bg: "Не гледайте само месечната вноска. Срокът, първоначалната сума и крайната цена са също толкова важни.",

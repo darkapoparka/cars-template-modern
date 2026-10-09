@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: min(calc(var(--spacing) * 240), calc(100vw - var(--spacing) * 16));
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
     max-width: none;
-    height: min(calc(var(--spacing) * 185), calc(100dvh - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 160), calc(100dvh - var(--spacing) * 16));
     padding: 0;
     overflow: hidden;
     background: var(--panel);
@@ -46,6 +46,13 @@
   .close:hover {
     background: var(--control-hover);
   }
+  .dialog[data-focused="false"] .header {
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+  }
+  .dialog[data-focused="false"] .header :global([data-slot="dialog-title"]) {
+    font-size: calc(var(--spacing) * 4.5);
+    line-height: calc(var(--spacing) * 6);
+  }
   .workspace {
     display: flex;
     flex: 1;
@@ -61,13 +68,13 @@
     width: auto;
     height: auto;
     padding: var(--spacing);
-    margin: calc(var(--spacing) * 5) calc(var(--spacing) * 6) 0;
+    margin: calc(var(--spacing) * 4) calc(var(--spacing) * 5) 0;
     background: var(--control);
     border: 0;
     border-radius: calc(var(--spacing) * 3);
   }
   .menuItem {
-    min-height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 10);
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
     font-size: calc(var(--spacing) * 3.5);
     color: var(--muted-foreground);
@@ -94,7 +101,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding-top: calc(var(--spacing) * 5);
+    padding-top: calc(var(--spacing) * 4);
   }
   .focusedContent {
     display: flex;
@@ -121,14 +128,14 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: calc(var(--spacing) * 4);
     min-height: 0;
-    padding: 0 calc(var(--spacing) * 6) calc(var(--spacing) * 6);
+    padding: 0 calc(var(--spacing) * 5) calc(var(--spacing) * 5);
   }
   .vehiclePanel {
     display: flex;
     flex-direction: column;
     min-width: 0;
     min-height: 0;
-    padding-top: calc(var(--spacing) * 4);
+    padding-top: calc(var(--spacing) * 3.5);
     overflow: hidden;
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
@@ -149,21 +156,30 @@
     color: var(--muted-foreground);
   }
   .vehicleSearch {
-    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 3.5);
   }
   .vehicleSearch > div {
     margin: 0;
   }
+  .vehicleSearch input {
+    height: calc(var(--spacing) * 10);
+  }
   .makeOptions,
   .modelOptions {
-    padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+    padding: 0 calc(var(--spacing) * 3.5) calc(var(--spacing) * 3.5);
   }
   .makeOptions > div:first-child {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .makeOptions button {
+    height: auto;
     padding-inline: calc(var(--spacing) * 2);
     white-space: normal;
+  }
+  .makeOptions button,
+  .modelOptions :global([data-slot="model-option"]) {
+    min-height: calc(var(--spacing) * 10);
+    font-weight: 500;
   }
   .vehiclePanel
     :global(button[aria-pressed="false"] [data-slot="picker-option-meta"]) {
@@ -185,23 +201,50 @@
   .groupGrid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 4);
-    padding: 0 calc(var(--spacing) * 6) calc(var(--spacing) * 6);
+    gap: calc(var(--spacing) * 3);
+    padding: 0 calc(var(--spacing) * 5) calc(var(--spacing) * 5);
   }
   .groupGrid .options {
     min-width: 0;
-    padding: calc(var(--spacing) * 4) 0 0;
+    padding: calc(var(--spacing) * 3.5) 0 0;
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
   }
-  .groupGrid .options[data-filter-section="category"] {
+  .groupGrid .options[data-filter-section="category"],
+  .groupGrid .options[data-filter-section="transmission"] {
     grid-column: 1 / -1;
+  }
+  .groupGrid
+    .options[data-filter-section="transmission"]
+    :global([data-slot="marketplace-option-grid"]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .groupGrid:has(> [data-filter-section="price"]) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .groupGrid :global([data-slot="numeric-range-presets"]) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .groupGrid :global([data-slot="numeric-range-filter"]) {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid :global([data-slot="numeric-range-filter"] > :not(:last-child)) {
+    margin-block-end: calc(var(--spacing) * 4);
+  }
+  .groupGrid :global([data-slot="numeric-range-summary"]) {
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: 500;
+    line-height: calc(var(--spacing) * 6);
+  }
+  .groupGrid :global([data-slot="numeric-range-presets"] button) {
+    height: calc(var(--spacing) * 10);
+    min-height: calc(var(--spacing) * 10);
+    font-weight: 500;
+  }
+  .groupGrid :global([data-slot="numeric-range-filter"] input),
+  .groupGrid
+    :global([data-slot="numeric-range-filter"] label > span[aria-hidden]) {
+    height: calc(var(--spacing) * 13);
   }
   .groupGrid
     .options[data-filter-section="price"]
@@ -211,6 +254,66 @@
   }
   .groupGrid :global([data-slot="marketplace-category-options"]) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid
+    :global(
+      :is(
+        [data-slot="marketplace-option-grid"],
+        [data-slot="marketplace-country-option-grid"]
+      )
+    ) {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid
+    :global(
+      :is(
+        [data-slot="marketplace-option-grid"],
+        [data-slot="marketplace-country-option-grid"]
+      )
+      button
+    ) {
+    min-height: calc(var(--spacing) * 10);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    font-weight: 500;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid :global([data-slot="marketplace-category-option"]) {
+    grid-template-columns: calc(var(--spacing) * 15) minmax(0, 1fr) calc(
+        var(--spacing) *
+        5
+      );
+    gap: calc(var(--spacing) * 2.5);
+    min-height: calc(var(--spacing) * 18);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid
+    :global([data-slot="marketplace-category-option"] > span:first-child) {
+    width: calc(var(--spacing) * 15);
+    height: calc(var(--spacing) * 11);
+  }
+  .groupGrid
+    :global(
+      [data-slot="marketplace-category-option"]
+      > span:nth-child(2)
+      > span:first-child
+    ) {
+    font-weight: 500;
+  }
+  .groupGrid
+    :global(
+      [data-slot="marketplace-category-option"]
+      > span:nth-child(2)
+      > span:last-child
+    ) {
+    font-size: calc(var(--spacing) * 3);
+    font-weight: 400;
+    line-height: calc(var(--spacing) * 4);
+  }
+  .groupGrid
+    :global([data-slot="marketplace-category-option"] > span:last-child) {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
   }
   .optionsHeading {
     display: flex;
@@ -227,6 +330,20 @@
     height: calc(var(--spacing) * 9);
     box-shadow: none;
   }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading {
+    gap: calc(var(--spacing) * 2);
+    min-height: calc(var(--spacing) * 8);
+    margin-inline: calc(var(--spacing) * 3.5);
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading h2 {
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: 500;
+    line-height: calc(var(--spacing) * 5);
+  }
+  :is(.groupGrid, .vehicleColumns) .optionsHeading button {
+    height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
   .keyword {
     display: grid;
     gap: calc(var(--spacing) * 2);
@@ -238,7 +355,10 @@
     border-radius: calc(var(--spacing) * 3);
   }
   .groupGrid .keyword {
-    padding: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .groupGrid .keyword input {
+    height: calc(var(--spacing) * 10);
   }
   .footer {
     display: flex;
@@ -260,5 +380,11 @@
   }
   .apply {
     min-width: calc(var(--spacing) * 56);
+  }
+  .dialog[data-focused="false"] .footer {
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 5);
+  }
+  .dialog[data-focused="false"] .apply {
+    min-width: calc(var(--spacing) * 52);
   }
 }

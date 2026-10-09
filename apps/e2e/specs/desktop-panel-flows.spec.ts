@@ -148,21 +148,25 @@ for (const width of [1024, 1280, 1440, 1920]) {
         (heroBox?.y ?? 0) + (heroBox?.height ?? 0)
       );
       const stockGrid = page.locator('[data-slot="home-stock-grid"]');
+      const stockColumns = width >= 1400 ? 5 : 4;
+      const stockColumnCount = width < 1200 ? 2 : stockColumns;
       expect(
         await stockGrid.evaluate(
           (element) =>
             getComputedStyle(element).gridTemplateColumns.split(" ").length
         )
-      ).toBe(width < 1200 ? 2 : 4);
-      await expect(stockGrid.locator("article")).toHaveCount(4);
+      ).toBe(stockColumnCount);
+      await expect(stockGrid.locator("article:visible")).toHaveCount(
+        width >= 1400 ? 5 : 4
+      );
       const stockActionBox = await stock
         .getByRole("link", {
           name: locale === "bg" ? "Виж всички автомобили" : "View all cars",
         })
         .boundingBox();
       const stockGridBox = await stockGrid.boundingBox();
-      expect(stockGridBox?.x).toBe(stockBox?.x);
-      expect(stockGridBox?.width).toBe(stockBox?.width);
+      expect(stockGridBox?.x).toBe((stockBox?.x ?? 0) + 24);
+      expect(stockGridBox?.width).toBe((stockBox?.width ?? 0) - 48);
       expect(stockActionBox?.y).toBeGreaterThanOrEqual(
         (stockGridBox?.y ?? 0) + (stockGridBox?.height ?? 0) + 20
       );
@@ -203,7 +207,7 @@ for (const width of [1024, 1280, 1440, 1920]) {
       expect(
         Math.abs(imageSizes.hintedWidth - imageSizes.renderedWidth)
         // Image hints use viewport units; the grid also reserves the OS gutter.
-      ).toBeLessThanOrEqual(2 + (width - pageWidth) / (width < 1200 ? 2 : 4));
+      ).toBeLessThanOrEqual(2 + (width - pageWidth) / stockColumnCount);
       expect(
         (await stockGrid.locator("article").first().boundingBox())?.y
       ).toBeLessThan(800);

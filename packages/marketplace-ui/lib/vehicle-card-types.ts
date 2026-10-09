@@ -14,6 +14,7 @@ export interface VehicleCardTrustSignal {
 }
 
 export interface VehicleCardProps {
+  compactDesktopGrid?: boolean;
   density?: "default" | "compact";
   desktopHeadingLevel?: 2 | 3;
   desktopImageSizes?: string;

@@ -619,17 +619,25 @@ const ComparisonVehicleCardContent = ({
 
 /** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
 const ShowroomVehicleCardContent = ({
+  compactDesktopGrid,
   listing,
   listingHref,
   locale,
 }: {
+  compactDesktopGrid: boolean;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
 }) => {
   const heading = getShowroomVehicleHeading(listing, locale);
   const title = heading.title.slice(`${listing.spec.year} `.length);
-  const facts = getShowroomVehicleCardSpecFacts(listing, locale);
+  const fullTitle = heading.detail ? `${title} ${heading.detail}` : title;
+  const facts = compactDesktopGrid
+    ? getVehicleCardSpecFacts(listing, locale).map((fact) => ({
+        ...fact,
+        displayValue: fact.mobileDisplayValue ?? fact.displayValue,
+      }))
+    : getShowroomVehicleCardSpecFacts(listing, locale);
   return (
     <Link
       className="min-w-0"
@@ -637,7 +645,13 @@ const ShowroomVehicleCardContent = ({
       href={listingHref}
     >
       <div data-slot="showroom-vehicle-heading">
-        <h3 data-slot="vehicle-card-title">{title}</h3>
+        <h3
+          aria-label={compactDesktopGrid ? fullTitle : undefined}
+          data-slot="vehicle-card-title"
+          title={compactDesktopGrid ? fullTitle : undefined}
+        >
+          {title}
+        </h3>
       </div>
       <ul
         aria-label={getVehicleCardCopy(locale).specs}
@@ -737,6 +751,7 @@ const ListVehicleCardContent = ({
 };
 
 export const VehicleCardContent = ({
+  compactDesktopGrid,
   desktopHeadingLevel,
   isDesktopComparison,
   listing,
@@ -748,6 +763,7 @@ export const VehicleCardContent = ({
   trustSignals,
   variant,
 }: {
+  compactDesktopGrid: boolean;
   desktopHeadingLevel: 2 | 3;
   isDesktopComparison: boolean;
   listing: VehicleListing;
@@ -763,6 +779,7 @@ export const VehicleCardContent = ({
   if (presentation === "showroom") {
     desktopContent = (
       <ShowroomVehicleCardContent
+        compactDesktopGrid={compactDesktopGrid}
         listing={listing}
         listingHref={listingHref}
         locale={locale}

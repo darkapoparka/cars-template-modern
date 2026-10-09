@@ -352,6 +352,101 @@
 }
 
 @media (min-width: 1024px) {
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="vehicle-card-content"] {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="vehicle-card-title"] {
+    display: block;
+    min-height: calc(var(--spacing) * 5.5);
+    margin-bottom: calc(var(--spacing) * 3);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(var(--spacing) * 4.25);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 5.5);
+    white-space: nowrap;
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-facts"] {
+    flex-wrap: nowrap;
+    gap: var(--spacing);
+    font-size: calc(var(--spacing) * 3);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-facts"]
+    li {
+    min-height: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 0.75) var(--spacing);
+    white-space: nowrap;
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-facts"]
+    li
+    span {
+    overflow-wrap: normal;
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-price-row"] {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    min-height: calc(var(--spacing) * 12);
+    padding-top: 0;
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="vehicle-card-price"] {
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
+    font-variant-numeric: tabular-nums;
+    line-height: calc(var(--spacing) * 8);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-price-row"]
+    > div
+    > p:not([data-slot]) {
+    margin-top: 0;
+    font-size: calc(var(--spacing) * 3);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-open"],
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="desktop-save-car"] {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="showroom-vehicle-open"]
+    svg,
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="desktop-save-car"]
+    svg {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="desktop-save-car"] {
+    top: calc(var(--spacing) * 3);
+    right: calc(var(--spacing) * 3);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="vehicle-card-media-badges"] {
+    top: calc(var(--spacing) * 4);
+    left: calc(var(--spacing) * 3);
+    max-width: calc(100% - var(--spacing) * 15);
+  }
+  .card[data-desktop-compact="true"][data-view-mode="grid"]
+    [data-slot="vehicle-card-media-badges"]
+    > span {
+    height: calc(var(--spacing) * 6);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 2.75);
+  }
+}
+
+@media (min-width: 1024px) {
   .card[data-presentation="showroom"][data-view-mode="list"] {
     display: grid;
     grid-template-columns: var(--desktop-list-media-width) minmax(0, 1fr);

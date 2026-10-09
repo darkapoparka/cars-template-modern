@@ -42,7 +42,10 @@ export const MarketplaceOptionGrid = ({
   options: [string, string][];
   selected?: string;
 }) => (
-  <div className="grid grid-cols-2 gap-2 p-4">
+  <div
+    className="grid grid-cols-2 gap-2 p-4"
+    data-slot="marketplace-option-grid"
+  >
     {options.map(([value, label]) => (
       <Button
         aria-pressed={selected === value}
@@ -74,7 +77,10 @@ export const MarketplaceCountryOptionGrid = ({
   const copy = getMarketplaceControlCopy(locale);
 
   return (
-    <div className="grid grid-cols-2 gap-2 p-4">
+    <div
+      className="grid grid-cols-2 gap-2 p-4"
+      data-slot="marketplace-country-option-grid"
+    >
       <Button
         aria-pressed={!selected}
         className={cn(

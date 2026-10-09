@@ -184,8 +184,8 @@ for (const locale of ["bg", "en"] as const) {
   }) => {
     await page.goto(`/${locale}/cars?sort=price_asc`);
     const original = page.url();
-    const makeTrigger = page.locator(
-      '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
+    const filtersTrigger = page.locator(
+      '[data-slot="desktop-primary-control"]'
     );
     const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     const navigation = dialog.locator(
@@ -213,8 +213,9 @@ for (const locale of ["bg", "en"] as const) {
     });
     const apply = dialog.getByRole("button", { name: applyLabel, exact: true });
     for (const commit of [false, true]) {
-      await makeTrigger.click();
+      await filtersTrigger.click();
       await expect(navigation.getByRole("tab")).toHaveCount(5);
+      await vehicleTab.click();
       await expect(
         dialog.getByRole("button", {
           name: isBg ? "Всички марки" : "All makes",
@@ -259,7 +260,7 @@ for (const locale of ["bg", "en"] as const) {
         await apply.click();
       } else {
         await page.keyboard.press("Escape");
-        await expect(makeTrigger).toBeFocused();
+        await expect(filtersTrigger).toBeFocused();
       }
     }
     await expect
@@ -271,7 +272,7 @@ for (const locale of ["bg", "en"] as const) {
     expect(selected.get("fuel")).toBe("diesel");
     expect(selected.get("transmission")).toBe("automatic");
     expect(selected.get("sort")).toBe("price_asc");
-    await makeTrigger.click();
+    await filtersTrigger.click();
     await fuelTab.click();
     await dialog
       .getByRole("button", {
@@ -285,7 +286,7 @@ for (const locale of ["bg", "en"] as const) {
       .toBeNull();
     expect(new URL(page.url()).searchParams.get("model")).toBe("X5");
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
-    await makeTrigger.click();
+    await filtersTrigger.click();
     await dialog.locator('[data-slot="desktop-full-filter-reset"]').click();
     await expect(dialog).toBeVisible();
     await apply.click();
@@ -314,16 +315,23 @@ for (const locale of ["bg", "en"] as const) {
     const initialCount = await summary
       .locator('[data-slot="dealer-inventory-count"]')
       .textContent();
-    const initialVehicles = await grid.locator("article").allTextContents();
+    const listingLinks = grid.locator(
+      'article [data-slot="vehicle-card-media"] a[href*="/listing/"]'
+    );
+    const initialVehicles = await listingLinks.evaluateAll((links) =>
+      links.map((link) => link.getAttribute("href"))
+    );
     await selectInventoryViewMode(page, "list", locale);
     await expect(grid).toHaveAttribute("data-view", "list");
     await selectInventoryFilterLayout(page, "sidebar", locale);
     await expect(sidebar).toBeVisible();
     await expect(bar).toHaveAttribute("data-filter-layout", "sidebar");
     expect(page.url()).toBe(initialUrl);
-    expect(await grid.locator("article").allTextContents()).toEqual(
-      initialVehicles
-    );
+    expect(
+      await listingLinks.evaluateAll((links) =>
+        links.map((link) => link.getAttribute("href"))
+      )
+    ).toEqual(initialVehicles);
     await expect(
       summary.locator('[data-slot="dealer-inventory-count"]')
     ).toHaveText(initialCount ?? "");

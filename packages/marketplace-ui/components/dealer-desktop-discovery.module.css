@@ -48,11 +48,14 @@
   .stockGrid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--desktop-page-grid-gap);
+    gap: calc(var(--spacing) * 4);
     align-items: stretch;
   }
   .stockGrid article {
     min-width: 0;
+  }
+  .stockGrid article:nth-child(5) {
+    display: none;
   }
   .bannerAction {
     display: flex;
@@ -355,6 +358,15 @@
   .discoveryContent a:focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
     outline-offset: calc(var(--spacing) * 1);
+  }
+}
+
+@media (min-width: 1400px) {
+  .stockGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .stockGrid article:nth-child(5) {
+    display: flex;
   }
 }
 

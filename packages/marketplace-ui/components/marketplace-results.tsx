@@ -32,9 +32,9 @@ import { VehicleCard } from "./vehicle-card";
 // Dealer grid: frame gutters, panel padding, sidebar, grid gaps and card borders.
 const dealerImageSizes = {
   sidebar:
-    "(max-width: 1279px) calc((100vw - 416px) / 2), (max-width: 1399px) calc((100vw - 478px) / 3), 308px",
+    "(max-width: 1279px) calc((100vw - 412px) / 2), (max-width: 1494px) calc((100vw - 470px) / 3), 337px",
   quick:
-    "(max-width: 1279px) calc((100vw - 174px) / 3), (max-width: 1399px) calc((100vw - 196px) / 4), 301px",
+    "(max-width: 1199px) calc((100vw - 166px) / 3), (max-width: 1399px) calc((100vw - 184px) / 4), (max-width: 1494px) calc((100vw - 202px) / 5), 256px",
   list: "272px",
 } as const;
 
@@ -182,6 +182,7 @@ export const MarketplaceResults = ({
             >
               {listings.map((listing, index) => (
                 <VehicleCard
+                  compactDesktopGrid={isDealershipSite}
                   density="compact"
                   desktopImageSizes={
                     isDealershipSite

@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { dismissModernWelcome } from "../fixtures/modern-session.setup";
 
 test("master desktop wordmarks stay within the existing frame", async ({
   page,
@@ -143,11 +144,14 @@ test("narrow desktop related cards keep price actions and facts inside each card
   }
 });
 
-test("home stock preview opens cars and the complete inventory", async ({
-  page,
-}) => {
-  for (const locale of ["bg", "en"]) {
-    for (const width of [1024, 1440]) {
+for (const locale of ["bg", "en"]) {
+  for (const width of [1024, 1440]) {
+    test(`home stock preview opens cars and the complete inventory (${locale}, ${width}px)`, async ({
+      baseURL,
+      context,
+      page,
+    }) => {
+      await dismissModernWelcome(context.request, baseURL, locale);
       await page.setViewportSize({ width, height: 900 });
       await page.goto(`/${locale}`);
       const stock = page.locator('[data-slot="home-stock-panel"]');
@@ -156,8 +160,11 @@ test("home stock preview opens cars and the complete inventory", async ({
       const cards = stock.locator(
         '[data-slot="home-stock-grid"] article:visible'
       );
-      await expect(cards).toHaveCount(4);
-      await expect(stock.getByRole("status")).toContainText("4");
+      const visibleCount = width >= 1400 ? 5 : 4;
+      await expect(cards).toHaveCount(visibleCount);
+      expect(await stock.getByRole("status").innerText()).toContain(
+        String(visibleCount)
+      );
       const carLink = cards.first().locator('a[href*="/listing/"]').first();
       const carHref = await carLink.getAttribute("href");
       await carLink.focus();
@@ -179,6 +186,6 @@ test("home stock preview opens cars and the complete inventory", async ({
       await expect(
         page.locator('[data-slot="marketplace-listing-grid"] article').first()
       ).toBeVisible();
-    }
+    });
   }
-});
+}

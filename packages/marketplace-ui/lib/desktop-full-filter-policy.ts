@@ -81,6 +81,9 @@ export function getDesktopFullFilterLabel(
   if (section === "category") {
     return isBg ? "Какво търсите?" : "Vehicle type";
   }
+  if (section === "mileage" && isBg) {
+    return "Макс пробег";
+  }
   return getMarketplaceControlCopy(locale).filters[section];
 }
 

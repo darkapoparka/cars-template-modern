@@ -303,7 +303,7 @@
         var(--inventory-grid-columns),
         minmax(0, 1fr)
       );
-    gap: var(--desktop-page-grid-gap);
+    gap: calc(var(--spacing) * 4);
     align-items: stretch;
     width: 100%;
     max-width: none;
@@ -311,6 +311,11 @@
   .grid[data-view="list"] {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--desktop-page-grid-gap);
+  }
+  .grid[data-view]
+    [data-presentation="showroom"]
+    [data-slot="showroom-vehicle-open"] {
+    display: none;
   }
 }
 
@@ -323,7 +328,16 @@
   .sidebar {
     padding: calc(var(--spacing) * 5);
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
   .results[data-filter-layout="quick"] {
     --inventory-grid-columns: 3;
+  }
+}
+
+@media (min-width: 1400px) {
+  .results[data-filter-layout="quick"] {
+    --inventory-grid-columns: 5;
   }
 }
