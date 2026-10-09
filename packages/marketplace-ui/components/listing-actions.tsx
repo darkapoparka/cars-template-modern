@@ -10,6 +10,7 @@ import {
   isListingShareCancellation,
   shareListing,
 } from "../lib/listing-action-policy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
 
 interface ListingActionsProps {
   readonly compactLabel?: boolean;
@@ -37,9 +38,7 @@ export const ListingActions = ({
   const [sharePending, setSharePending] = useState(false);
   const [shareStatus, setShareStatus] = useState("");
   const actionClassName = cn(
-    floating
-      ? "size-11 rounded-full border border-border/70 bg-card/95 shadow-sm backdrop-blur"
-      : "size-10 rounded-lg"
+    floating ? mobileImageIconActionClassName : "size-10 rounded-lg"
   );
 
   const handleShare = async () => {

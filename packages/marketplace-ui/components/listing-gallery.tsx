@@ -15,6 +15,7 @@ import {
   getNextGalleryIndex,
   getPreviousGalleryIndex,
 } from "../lib/listing-gallery-policy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
 import { ListingGalleryLightbox } from "./listing-gallery-lightbox";
 import { GalleryImageFallback } from "./listing-gallery-primitives";
 import Image from "./public-image";
@@ -124,13 +125,28 @@ export const ListingGallery = ({
                   unoptimized={unoptimized}
                 />
               )}
-              <span className="absolute right-3 bottom-7 inline-flex h-9 items-center gap-2 rounded-full bg-background px-3 font-medium text-foreground text-micro shadow-sm lg:bottom-3 lg:rounded-md lg:bg-background/90 lg:backdrop-blur">
+              <span
+                aria-hidden="true"
+                className={cn(
+                  mobileImageIconActionClassName,
+                  "absolute right-4 bottom-7 grid place-items-center lg:hidden"
+                )}
+                data-slot="listing-gallery-expand"
+              >
+                <Expand aria-hidden="true" className="size-[18px]" />
+              </span>
+              <span
+                aria-hidden="true"
+                className="absolute bottom-9 left-4 rounded-full bg-black/65 px-2 py-0.5 font-medium text-micro text-white lg:hidden"
+              >
+                {selectedIndex + 1} / {imageCount}
+              </span>
+              <span className="absolute right-3 bottom-3 hidden h-9 items-center gap-2 rounded-md bg-background/90 px-3 font-medium text-foreground text-micro shadow-sm backdrop-blur lg:inline-flex">
                 <Expand aria-hidden="true" className="size-4" />
-                <span className="hidden lg:inline">{copy.viewFullScreen}</span>
-                <span aria-hidden="true" className="hidden lg:inline">
+                <span>{copy.viewFullScreen}</span>
+                <span aria-hidden="true">
                   {selectedIndex + 1} / {imageCount}
                 </span>
-                <span className="lg:hidden">{imageCount}</span>
               </span>
             </button>
           </DialogTrigger>

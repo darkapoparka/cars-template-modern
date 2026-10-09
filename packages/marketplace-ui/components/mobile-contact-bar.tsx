@@ -3,6 +3,7 @@ import type { VehicleListing } from "@repo/marketplace";
 import { Flag, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
 import { getListingContactAction } from "../lib/listing-truth";
+import { mobileIconActionGeometryClassName } from "../lib/mobile-header-icon-action";
 import { DealerMobileHeaderIcon } from "./dealer-mobile-header-icon";
 
 interface MobileContactBarProps {
@@ -68,7 +69,7 @@ export const MobileContactBar = ({
           asChild
           className={
             directPhone
-              ? "size-13 shrink-0 rounded-full bg-zinc-950 p-0 text-white shadow-[0_4px_12px_rgba(0,0,0,0.18)] hover:bg-black active:scale-95"
+              ? `${mobileIconActionGeometryClassName} bg-zinc-950 text-white shadow-none hover:bg-black active:scale-95`
               : "h-12 flex-1 gap-2 rounded-xl bg-zinc-950 font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.14)] transition-[background-color,transform,box-shadow] hover:bg-black active:scale-[0.99] active:bg-black"
           }
         >

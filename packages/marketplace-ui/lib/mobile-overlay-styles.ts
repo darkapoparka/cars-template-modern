@@ -1,9 +1,11 @@
+import { mobileIconActionGeometryClassName } from "./mobile-header-icon-action";
+
 /** Shared mobile control geometry; keep route components focused on behavior. */
 export const mobileControlFocusClassName =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
-/** A 32px visible circle and 16px icon within the unchanged 44px tap target. */
-export const mobileMarketplaceOverlayIconActionClassName = `size-11 shrink-0 rounded-full bg-zinc-200 bg-clip-content p-1.5 text-zinc-950 shadow-none transition-[background-color,transform] duration-150 hover:bg-zinc-300 active:scale-[0.96] active:bg-zinc-300 motion-reduce:transform-none [&_svg]:size-4 ${mobileControlFocusClassName}`;
+/** Match header geometry with a 40px circle and 18px glyph in a 44px target. */
+export const mobileMarketplaceOverlayIconActionClassName = `${mobileIconActionGeometryClassName} bg-zinc-200 text-zinc-950 shadow-none transition-[background-color,transform] duration-150 hover:bg-zinc-300 active:scale-[0.96] active:bg-zinc-300 motion-reduce:transform-none [&_svg]:size-[18px] ${mobileControlFocusClassName}`;
 
 export const mobileMarketplaceOverlayFieldClassName =
   "flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-4 ring-1 ring-inset ring-black/5 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2";

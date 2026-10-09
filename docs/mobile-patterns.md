@@ -11,6 +11,11 @@ their data and actions rather than copying control markup.
   18px icons through `lib/mobile-form-control.ts`; inventory, import, VIN,
   financing and guides reuse it. The compact scrolling inventory bar keeps
   44px controls. Guides use a 44px clear action and retain typing focus.
+- `lib/mobile-header-icon-action.ts` owns the 44px icon target with a 40px
+  painted circle. Main-page header actions, mobile listing back/share/expand,
+  the floating phone action and overlay back/close controls share this geometry.
+  Vector action glyphs use 18px; the existing header artwork keeps its normalized
+  slot. Full-screen gallery controls apply the same inset only below `lg`.
 - `packages/marketplace-ui/lib/mobile-overlay-styles.ts` owns focus, field,
   icon-action, scrolling and primary-action geometry. Icon targets are 44px;
   primary actions have a 48px minimum and allow translated labels to wrap.

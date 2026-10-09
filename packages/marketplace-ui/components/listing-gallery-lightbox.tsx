@@ -5,10 +5,12 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@repo/design-system/components/ui/dialog";
+import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListingImage } from "@repo/marketplace";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { KeyboardEvent } from "react";
 import type { ListingGalleryCopy } from "../lib/listing-gallery-policy";
+import { mobileGalleryIconInsetClassName } from "../lib/mobile-header-icon-action";
 import { GalleryImageFallback } from "./listing-gallery-primitives";
 import Image from "./public-image";
 
@@ -61,7 +63,10 @@ export const ListingGalleryLightbox = ({
       </DialogDescription>
       <DialogClose
         aria-label={copy.closeGallery}
-        className="absolute top-[calc(0.75rem+env(safe-area-inset-top))] right-3 z-20 grid size-11 place-items-center rounded-full bg-black/65 text-white transition-colors hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black max-lg:bg-clip-content max-lg:p-1.5"
+        className={cn(
+          "absolute top-[calc(0.75rem+env(safe-area-inset-top))] right-3 z-20 grid size-11 place-items-center rounded-full bg-black/65 text-white transition-colors hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black",
+          mobileGalleryIconInsetClassName
+        )}
       >
         <X aria-hidden="true" className="size-4 lg:size-5" />
       </DialogClose>
@@ -91,7 +96,10 @@ export const ListingGalleryLightbox = ({
         <>
           <Button
             aria-label={copy.previousPhoto}
-            className="absolute top-1/2 left-3 z-10 size-11 -translate-y-1/2 rounded-full bg-black/65 text-white hover:bg-black/80"
+            className={cn(
+              "absolute top-1/2 left-3 z-10 size-11 -translate-y-1/2 rounded-full bg-black/65 text-white hover:bg-black/80",
+              mobileGalleryIconInsetClassName
+            )}
             onClick={onPrevious}
             size="icon"
             type="button"
@@ -101,7 +109,10 @@ export const ListingGalleryLightbox = ({
           </Button>
           <Button
             aria-label={copy.nextPhoto}
-            className="absolute top-1/2 right-3 z-10 size-11 -translate-y-1/2 rounded-full bg-black/65 text-white hover:bg-black/80"
+            className={cn(
+              "absolute top-1/2 right-3 z-10 size-11 -translate-y-1/2 rounded-full bg-black/65 text-white hover:bg-black/80",
+              mobileGalleryIconInsetClassName
+            )}
             onClick={onNext}
             size="icon"
             type="button"

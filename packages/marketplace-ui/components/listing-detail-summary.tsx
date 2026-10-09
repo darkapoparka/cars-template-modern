@@ -25,6 +25,7 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
+import { mobileImageIconActionClassName } from "../lib/mobile-header-icon-action";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { getShowroomVehicleHeading } from "../lib/vehicle-card-policy";
 import { DesktopSaveCarButton } from "./desktop-saved-cars";
@@ -140,11 +141,14 @@ export const MobileListingGalleryActions = ({
   const copy = getListingDetailCopy(locale);
 
   return (
-    <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-3 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-3 lg:hidden min-[360px]:px-4 min-[360px]:pt-[calc(1rem+env(safe-area-inset-top))] min-[360px]:pb-4">
+    <div
+      className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-3 lg:hidden"
+      data-slot="listing-mobile-gallery-actions"
+    >
       <Button
         aria-label={copy.backToSearch}
         asChild
-        className="size-11 rounded-full border border-border/70 bg-card/95 shadow-sm backdrop-blur"
+        className={mobileImageIconActionClassName}
         size="icon"
         variant="secondary"
       >
