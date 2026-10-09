@@ -10,6 +10,7 @@ import {
 import {
   getPublicContentCards,
   getPublicContentCover,
+  getRelatedContentCardTitle,
 } from "@/lib/public-content-data";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { requirePublicSitePath } from "@/lib/public-site-access";
@@ -70,8 +71,7 @@ export default async function GuideOrArticlePage({
   const description =
     post?.excerpt[language] ?? guide?.description[language] ?? "";
   const sections = post?.sections ?? guide?.sections ?? [];
-  const guideEyebrow =
-    language === "bg" ? "Практично ръководство" : "Practical guide";
+  const guideEyebrow = language === "bg" ? "Ръководство" : "Guide";
   const eyebrow = post ? post.category[language] : guideEyebrow;
   const cover = getPublicContentCover(slug, entry.image);
   const backQuery = serializeContentSearch(
@@ -89,6 +89,7 @@ export default async function GuideOrArticlePage({
       category: card.category,
       href: `${getLocalizedPath(normalizedLocale, `/guides/${card.slug}`)}${backQuery}`,
       image: card.image,
+      shortTitle: getRelatedContentCardTitle(card, language),
       title: card.title,
     }));
 

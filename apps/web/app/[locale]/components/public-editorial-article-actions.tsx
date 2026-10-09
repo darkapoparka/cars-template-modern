@@ -100,7 +100,7 @@ export function PublicEditorialMobileChrome({
 }: {
   backHref: string;
   carsHref: string;
-  contents: readonly { heading: string; href: string }[];
+  contents: readonly { heading: string; href: string; label: string }[];
   language: ArticleLanguage;
   title: string;
 }) {
@@ -196,6 +196,11 @@ export function PublicEditorialMobileChrome({
           {contents.map((entry, index) => (
             <li key={entry.href}>
               <Link
+                aria-label={
+                  entry.label === entry.heading
+                    ? entry.heading
+                    : `${entry.label}: ${entry.heading}`
+                }
                 href={entry.href}
                 onNavigate={() => {
                   selectedSectionRef.current = entry.href.slice(1);
@@ -206,7 +211,7 @@ export function PublicEditorialMobileChrome({
                 <span aria-hidden className={styles.contentsNumber}>
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span>{entry.heading}</span>
+                <span className={styles.contentsLabel}>{entry.label}</span>
                 <ArrowRight aria-hidden className={styles.icon} />
               </Link>
             </li>

@@ -30,6 +30,33 @@ const desktopCardTitles: Record<string, { bg: string; en: string }> = {
   },
 };
 
+const relatedCardTitles: Record<string, { bg: string; en: string }> = {
+  "premium-used-car-checklist": {
+    bg: "Проверки преди покупка",
+    en: "Premium car checks",
+  },
+  "import-costs-and-timing": {
+    bg: "Разходи и срокове",
+    en: "Costs and timelines",
+  },
+  "financing-offer-questions": {
+    bg: "Въпроси за финансиране",
+    en: "Finance offer questions",
+  },
+  "ev-hybrid-ownership-checklist": {
+    bg: "EV и хибрид: проверки",
+    en: "EV and hybrid checks",
+  },
+  "dealer-listing-transparency": {
+    bg: "Проверка на обява",
+    en: "Checking a listing",
+  },
+  "buying-used-car-bulgaria": {
+    bg: "Покупка на автомобил",
+    en: "Buying a used car",
+  },
+};
+
 const desktopCardArtwork: Record<string, string> = {
   "premium-used-car-checklist": "/images/desktop/cutout-m4-v1.webp",
   "import-costs-and-timing": "/images/services/desktop-imports-v1.webp",
@@ -67,6 +94,11 @@ export const getDesktopContentCardTitle = (
   card: Pick<PublicContentCard, "slug" | "title">,
   locale: "bg" | "en"
 ) => desktopCardTitles[card.slug]?.[locale] ?? card.title;
+
+export const getRelatedContentCardTitle = (
+  card: Pick<PublicContentCard, "slug" | "title">,
+  locale: "bg" | "en"
+) => relatedCardTitles[card.slug]?.[locale] ?? card.title;
 
 /** Only serializable card summaries cross the client boundary, never article bodies. */
 export const getPublicContentCards = (

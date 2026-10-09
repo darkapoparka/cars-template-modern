@@ -17,6 +17,7 @@ export interface PublicBlogPost {
   sections: readonly {
     body: LocalizedText;
     heading: LocalizedText;
+    navigationLabel?: LocalizedText;
   }[];
   slug: string;
   title: LocalizedText;
@@ -41,6 +42,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
     sections: [
       {
         heading: { bg: "Започнете с историята", en: "Start with the history" },
+        navigationLabel: { bg: "История", en: "History" },
         body: {
           bg: "VIN, сервизната история и фактурите трябва да разказват една и съща история. Проверете дали пробегът, периодичните обслужвания и ремонтите са логични за възрастта на автомобила.",
           en: "The VIN, service history, and invoices should tell the same story. Check that mileage, scheduled maintenance, and repairs make sense for the vehicle's age.",
@@ -51,6 +53,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Гледайте скъпите консумативи",
           en: "Check the expensive wear items",
         },
+        navigationLabel: { bg: "Консумативи", en: "Wear items" },
         body: {
           bg: "При премиум автомобил гуми, спирачки, въздушно окачване и адаптивни системи могат да променят реалната цена на покупката. Оценете ги преди преговорите, а не след сделката.",
           en: "On a premium car, tyres, brakes, air suspension, and adaptive systems can materially change the real purchase cost. Assess them before negotiating, not after the deal.",
@@ -61,6 +64,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Направете независим оглед",
           en: "Get an independent inspection",
         },
+        navigationLabel: { bg: "Независим оглед", en: "Inspection" },
         body: {
           bg: "Кратък тест драйв не е достатъчен. Диагностика, оглед на подемник и проверка на боята дават много по-ясна представа за състоянието и бъдещите разходи.",
           en: "A short test drive is not enough. Diagnostics, an inspection on a lift, and paint-depth checks give a much clearer picture of condition and future costs.",
@@ -89,6 +93,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Сметнете крайната цена",
           en: "Calculate the landed cost",
         },
+        navigationLabel: { bg: "Крайна цена", en: "Total cost" },
         body: {
           bg: "Сравнявайте оферти по крайна цена до България, а не само по цената в обявата. Транспорт, застраховка, такси, данъци и регистрационни разходи могат да променят избора.",
           en: "Compare offers by landed cost in Bulgaria, not only by the listing price. Transport, insurance, fees, taxes, and registration costs can change which vehicle is actually the better buy.",
@@ -99,6 +104,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Оставете резерв във времето",
           en: "Leave time contingency",
         },
+        navigationLabel: { bg: "Срокове", en: "Timelines" },
         body: {
           bg: "Срокът зависи от държавата, транспорта и документите. Добрата оферта трябва да има реалистичен диапазон за доставка, а не обещание за точна дата без резерв.",
           en: "Timing depends on the origin country, transport, and paperwork. A credible offer should include a realistic delivery window rather than an exact date with no contingency.",
@@ -109,6 +115,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Проверете документите предварително",
           en: "Check paperwork early",
         },
+        navigationLabel: { bg: "Документи", en: "Paperwork" },
         body: {
           bg: "Произход, фактура, експортни документи и данни за регистрация е по-добре да се проверят преди автомобилът да тръгне. Така проблемите се решават преди да станат скъпи.",
           en: "Origin, invoice, export papers, and registration information are best checked before the car moves. That gives you time to resolve problems before they become expensive.",
@@ -137,6 +144,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Каква е общата цена?",
           en: "What is the total payable?",
         },
+        navigationLabel: { bg: "Обща цена", en: "Total cost" },
         body: {
           bg: "Поискайте крайна сума за целия срок, включително такси и допълнителни плащания. Ниска месечна вноска може да изглежда добре, но да скрива по-висока обща цена.",
           en: "Ask for the total amount payable over the full term, including fees and additional payments. A low monthly payment can look attractive while hiding a higher overall cost.",
@@ -147,6 +155,7 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
           bg: "Какво става при промяна?",
           en: "What happens if plans change?",
         },
+        navigationLabel: { bg: "Промяна на условията", en: "Changing terms" },
         body: {
           bg: "Уточнете предварително условията при предсрочно погасяване, забавяне или промяна на автомобила. Най-добрата оферта е тази, чиито правила са ясни още преди подписването.",
           en: "Clarify early repayment, late-payment, and vehicle-change terms in advance. The best offer is one whose rules are clear before you sign.",
@@ -154,8 +163,12 @@ export const publicBlogPosts: readonly PublicBlogPost[] = [
       },
       {
         heading: {
-          bg: "Сравнявайте еднакви параметри",
+          bg: "Сравнявайте параметри",
           en: "Compare like with like",
+        },
+        navigationLabel: {
+          bg: "Сравнявайте параметри",
+          en: "Compare parameters",
         },
         body: {
           bg: "Когато сравнявате две оферти, използвайте еднакъв срок и еднаква първоначална вноска. Иначе месечните плащания не показват реалната разлика между вариантите.",

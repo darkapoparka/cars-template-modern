@@ -13,6 +13,7 @@ interface RelatedArticle {
   category: string;
   href: string;
   image: string;
+  shortTitle: string;
   title: string;
 }
 
@@ -29,6 +30,7 @@ interface PublicEditorialArticleProps {
   sections: readonly {
     body: Record<ArticleLanguage, string>;
     heading: Record<ArticleLanguage, string>;
+    navigationLabel?: Record<ArticleLanguage, string>;
   }[];
   title: string;
 }
@@ -64,18 +66,19 @@ function RelatedArticles({
       <div className={styles.relatedGrid}>
         {related.map((entry) => (
           <Link
+            aria-label={`${entry.shortTitle}: ${entry.title}`}
             className={styles.relatedLink}
             href={entry.href}
             key={entry.href}
+            title={entry.title}
           >
             <span className={styles.relatedImage}>
               <Image alt="" fill sizes="72px" src={entry.image} />
             </span>
-            <div>
+            <div className={styles.relatedText}>
               <p className={styles.relatedCategory}>{entry.category}</p>
-              <h3>{entry.title}</h3>
+              <h3>{entry.shortTitle}</h3>
             </div>
-            <ArrowRight aria-hidden className={styles.icon} />
           </Link>
         ))}
       </div>
@@ -139,6 +142,9 @@ export function PublicEditorialArticle({
               contents={sections.map((section, index) => ({
                 heading: section.heading[language],
                 href: `#editorial-section-${index + 1}`,
+                label:
+                  section.navigationLabel?.[language] ??
+                  section.heading[language],
               }))}
               language={language}
               title={title}
@@ -211,13 +217,24 @@ export function PublicEditorialArticle({
                 {sections.map((section, index) => (
                   <li key={section.heading.en}>
                     <Link
+                      aria-label={
+                        section.navigationLabel &&
+                        section.navigationLabel[language] !==
+                          section.heading[language]
+                          ? `${section.navigationLabel[language]}: ${section.heading[language]}`
+                          : section.heading[language]
+                      }
                       href={`#editorial-section-${index + 1}`}
                       prefetch={false}
+                      title={section.heading[language]}
                     >
                       <span aria-hidden className={styles.contentsNumber}>
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span>{section.heading[language]}</span>
+                      <span className={styles.contentsLabel}>
+                        {section.navigationLabel?.[language] ??
+                          section.heading[language]}
+                      </span>
                     </Link>
                   </li>
                 ))}
@@ -225,15 +242,13 @@ export function PublicEditorialArticle({
             </nav>
             <RelatedArticles language={language} related={related} sidebar />
             <div className={styles.nextStep}>
-              <h2>{isBg ? "Следващият ти автомобил" : "Your next vehicle"}</h2>
+              <h2>{isBg ? "Следващ автомобил" : "Your next car"}</h2>
               <Link
                 className={styles.action}
                 data-slot="editorial-article-action"
                 href={carsHref}
               >
-                <span>
-                  {isBg ? "Разгледай автомобилите" : "Browse vehicles"}
-                </span>
+                <span>{isBg ? "Автомобили" : "Vehicles"}</span>
                 <ArrowRight aria-hidden className={styles.icon} />
               </Link>
             </div>
