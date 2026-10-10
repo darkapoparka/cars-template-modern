@@ -188,6 +188,7 @@ export const getPublicContentCards = (
     ...card,
     desktopImage: getPublicContentArtwork(card.slug, card.image),
     desktopTitle: getDesktopContentCardTitle(card, locale),
+    mobileImage: articleHeroArtwork[card.slug]?.image,
   }));
 
 export interface DesktopEditorialReading {

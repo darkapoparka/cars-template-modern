@@ -430,51 +430,106 @@ test("Sell overlay resolves semantic type and primary-action contrast", async ({
   ).toEqual([]);
 });
 
-test("320px guide cards keep metadata and primary content readable", async ({
+test("mobile guide cards keep artwork and primary content readable", async ({
   page,
 }) => {
-  await page.setViewportSize({ width: 320, height: 700 });
-  await page.goto("/guides");
-  await page.evaluate(() => document.fonts.ready);
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 700 });
+    await page.goto("/guides");
+    await page.evaluate(() => document.fonts.ready);
 
-  const card = page.locator('[data-slot="content-card"]').first();
-  const media = card.locator('[data-slot="content-card-media"]');
-  const mediaBounds = await media.boundingBox();
-  expect(mediaBounds?.width).toBeLessThanOrEqual(97);
-
-  const metadata = card.locator(
-    '[data-slot="content-card-meta"] > span:visible'
-  );
-  const metrics = await metadata.evaluateAll((elements) =>
-    elements.map((element) => ({
-      text: element.textContent,
-      clientWidth: element.clientWidth,
-      scrollWidth: element.scrollWidth,
-    }))
-  );
-  expect(metrics).toHaveLength(1);
-  for (const metric of metrics) {
+    const cards = page.locator('[data-slot="content-card"]');
+    const card = cards.first();
+    await expect(card).toBeVisible();
+    await expect(card).toHaveAttribute(
+      "aria-label",
+      "Какво да проверите преди покупка на премиум автомобил"
+    );
+    const cardMetrics = await cards.evaluateAll((elements) =>
+      elements.map((element) => {
+        const bounds = element.getBoundingClientRect();
+        const media = element
+          .querySelector('[data-slot="content-card-media"]')
+          ?.getBoundingClientRect();
+        const body = element
+          .querySelector('[data-slot="content-card-body"]')
+          ?.getBoundingClientRect();
+        const title = element.querySelector("h2");
+        return {
+          label: element.getAttribute("aria-label"),
+          width: bounds.width,
+          mediaWidth: media?.width ?? 0,
+          mediaHeight: media?.height ?? 0,
+          mediaBottom: media?.bottom ?? 0,
+          bodyTop: body?.top ?? 0,
+          titleHeight: title?.getBoundingClientRect().height ?? 0,
+          titleLineHeight: title
+            ? Number.parseFloat(getComputedStyle(title).lineHeight)
+            : 0,
+          clientWidth: element.clientWidth,
+          scrollWidth: element.scrollWidth,
+        };
+      })
+    );
+    for (const metric of cardMetrics) {
+      expect(metric.label).toBeTruthy();
+      expect(Math.abs(metric.mediaWidth - metric.width)).toBeLessThan(1);
+      expect(metric.mediaHeight).toBeGreaterThan(0);
+      expect(metric.mediaHeight).toBeLessThan(metric.mediaWidth);
+      expect(metric.mediaBottom).toBeLessThanOrEqual(metric.bodyTop + 1);
+      expect(metric.titleHeight).toBeGreaterThan(0);
+      expect(metric.titleHeight).toBeLessThanOrEqual(
+        metric.titleLineHeight * 2 + 1
+      );
+      expect(
+        metric.scrollWidth,
+        metric.label ?? "content card"
+      ).toBeLessThanOrEqual(metric.clientWidth);
+    }
     expect(
-      metric.scrollWidth,
-      metric.text ?? "content metadata"
-    ).toBeLessThanOrEqual(metric.clientWidth);
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= window.innerWidth
+      )
+    ).toBe(true);
+
+    const metadata = card.locator(
+      '[data-slot="content-card-meta"] > span:visible'
+    );
+    const metrics = await metadata.evaluateAll((elements) =>
+      elements.map((element) => ({
+        text: element.textContent,
+        clientWidth: element.clientWidth,
+        scrollWidth: element.scrollWidth,
+      }))
+    );
+    expect(metrics).toHaveLength(1);
+    for (const metric of metrics) {
+      expect(
+        metric.scrollWidth,
+        metric.text ?? "content metadata"
+      ).toBeLessThanOrEqual(metric.clientWidth);
+    }
+    await expect(
+      card.locator('[data-slot="content-card-description"]')
+    ).toBeHidden();
+    await expect(card.getByText("Прочети", { exact: true })).toBeHidden();
+    const headingArrow = card.locator('[data-slot="content-card-heading"] svg');
+    await expect(headingArrow).toBeVisible();
+    await expect(headingArrow).toHaveAttribute("aria-hidden", "true");
+
+    const count = page.locator('[data-slot="content-search-count"]');
+    const total = await cards.count();
+    await expect(count).toHaveText(`(${total})`);
+    await page
+      .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
+      .fill("no-guide-matches-this-query");
+    await expect(count).toHaveText("(0)");
+    await expect(cards).toHaveCount(0);
+    await page
+      .getByRole("button", { name: "Изчисти търсенето", exact: true })
+      .click();
+    await expect(count).toHaveText(`(${total})`);
   }
-  await expect(
-    card.locator('[data-slot="content-card-description"]')
-  ).toBeHidden();
-  await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
-  const count = page.locator('[data-slot="content-search-count"]');
-  const total = await page.locator('[data-slot="content-card"]').count();
-  await expect(count).toHaveText(`(${total})`);
-  await page
-    .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
-    .fill("no-guide-matches-this-query");
-  await expect(count).toHaveText("(0)");
-  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(0);
-  await page
-    .getByRole("button", { name: "Изчисти търсенето", exact: true })
-    .click();
-  await expect(count).toHaveText(`(${total})`);
 });
 
 test("320px inventory keeps semantic type and complete vehicle facts", async ({

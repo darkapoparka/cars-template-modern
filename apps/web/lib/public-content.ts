@@ -16,6 +16,7 @@ export interface PublicContentCard {
   readonly filter: ContentCategory;
   readonly image: string;
   readonly meta: string;
+  readonly mobileImage?: string;
   readonly slug: string;
   readonly title: string;
   readonly type: "article" | "guide";

@@ -372,20 +372,20 @@ export const MobileContentHub = ({
           </div>
 
           <div
-            className="mt-3 grid gap-2 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
+            className="mt-3 grid gap-3 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
             data-slot="editorial-content-grid"
           >
             {visibleItems.map((item, index) => (
               <Link
                 aria-label={item.title}
-                className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
+                className="group flex min-h-[124px] flex-col overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
                 data-slot="content-card"
                 href={`${localize(`/guides/${item.slug}`)}${serializeContentSearch({ query, filter })}`}
                 key={`${item.type}-${item.slug}`}
                 prefetch={false}
               >
                 <div
-                  className="relative w-20 min-w-20 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[28%] min-[360px]:min-w-24"
+                  className="relative aspect-[2/1] w-full min-w-0 shrink-0 overflow-hidden bg-secondary"
                   data-slot="content-card-media"
                 >
                   <picture className="absolute inset-0 block">
@@ -397,16 +397,20 @@ export const MobileContentHub = ({
                     )}
                     <Image
                       alt=""
-                      className="object-cover object-right"
+                      className={
+                        item.mobileImage
+                          ? "object-contain object-center p-3"
+                          : "object-cover object-center"
+                      }
                       fill
                       loading={index === 0 ? "eager" : "lazy"}
-                      sizes="(max-width: 359px) 80px, (max-width: 768px) 120px, (max-width: 1023px) 260px, (min-width: 1600px) 260px, (min-width: 1280px) 330px, 30vw"
-                      src={item.image}
+                      sizes="(max-width: 511px) calc(100vw - 32px), (max-width: 767px) 480px, (max-width: 1023px) 240px, (min-width: 1600px) 260px, (min-width: 1280px) 330px, 30vw"
+                      src={item.mobileImage ?? item.image}
                     />
                   </picture>
                 </div>
                 <div
-                  className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3"
+                  className="flex min-w-0 flex-1 flex-col p-3"
                   data-slot="content-card-body"
                 >
                   <div
@@ -415,19 +419,29 @@ export const MobileContentHub = ({
                   >
                     <span className="whitespace-nowrap">{item.category}</span>
                   </div>
-                  <h2 className="mt-1 font-semibold text-card-title tracking-heading max-lg:font-medium lg:line-clamp-2 lg:text-card-title-lg">
-                    <span className="lg:hidden">{item.title}</span>
-                    <span className="hidden lg:inline">
+                  <div
+                    className="mt-1 flex items-center gap-3 lg:mt-0 lg:block"
+                    data-slot="content-card-heading"
+                  >
+                    <h2
+                      aria-label={item.title}
+                      className="line-clamp-2 min-w-0 flex-1 font-medium text-card-title tracking-heading lg:font-semibold lg:text-card-title-lg"
+                      title={item.title}
+                    >
                       {item.desktopTitle ?? item.title}
-                    </span>
-                  </h2>
+                    </h2>
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="size-4 shrink-0 text-muted-foreground lg:hidden"
+                    />
+                  </div>
                   <p
-                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2 min-[360px]:line-clamp-1"
+                    className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2"
                     data-slot="content-card-description"
                   >
                     {item.description}
                   </p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control max-lg:font-medium">
+                  <span className="mt-auto hidden items-center gap-1 pt-1.5 font-semibold text-compact-control lg:inline-flex">
                     {isBg ? "Прочети" : "Read"}
                     <ArrowRight aria-hidden="true" className="size-3.5" />
                   </span>
