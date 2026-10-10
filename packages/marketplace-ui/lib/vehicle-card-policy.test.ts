@@ -84,6 +84,7 @@ describe("vehicle card policy", () => {
         id: "transmission",
         value: "Автоматик",
         mobileDisplayValue: "Автом.",
+        mobileMediumDisplayValue: "Автомат",
       },
     ]);
   });

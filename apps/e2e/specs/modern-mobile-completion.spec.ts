@@ -610,8 +610,18 @@ for (const width of [320, 375, 390, 430]) {
         }
       }
       const automatic = cards.locator('[data-fact="transmission"]').first();
+      const factsWidth = await automatic.evaluate(
+        (element) => element.parentElement?.getBoundingClientRect().width ?? 0
+      );
+      let automaticLabel = "Автом.";
+      if (factsWidth >= 310) {
+        automaticLabel = "Автоматик";
+      } else if (factsWidth >= 280) {
+        automaticLabel = "Автомат";
+      }
       await expect(automatic.locator("span").first()).toHaveText(
-        locale === "bg" ? "Автом." : "Auto"
+        locale === "bg" ? automaticLabel : "Auto",
+        { useInnerText: true }
       );
       await expect(automatic.locator(".sr-only")).toHaveText(
         locale === "bg" ? "Автоматик" : "Automatic"

@@ -7,12 +7,13 @@ export function DealerVehicleFacts({
     value: string;
     displayValue?: string;
     mobileDisplayValue?: string;
+    mobileMediumDisplayValue?: string;
   }[];
   readonly label: string;
 }) {
   return (
     <>
-      <div className="lg:hidden">
+      <div className="@container/vehicle-facts lg:hidden">
         <ul
           aria-label={label}
           className="flex gap-1 text-micro text-secondary-foreground min-[360px]:text-card-spec"
@@ -34,7 +35,21 @@ export function DealerVehicleFacts({
                 }
                 className="whitespace-nowrap"
               >
-                {fact.mobileDisplayValue ?? fact.displayValue ?? fact.value}
+                {fact.mobileMediumDisplayValue ? (
+                  <>
+                    <span className="@min-[280px]/vehicle-facts:hidden">
+                      {fact.mobileDisplayValue}
+                    </span>
+                    <span className="@min-[280px]/vehicle-facts:inline @min-[310px]/vehicle-facts:hidden hidden">
+                      {fact.mobileMediumDisplayValue}
+                    </span>
+                    <span className="@min-[310px]/vehicle-facts:inline hidden">
+                      {fact.value}
+                    </span>
+                  </>
+                ) : (
+                  (fact.mobileDisplayValue ?? fact.displayValue ?? fact.value)
+                )}
               </span>
               {fact.mobileDisplayValue || fact.displayValue ? (
                 <span className="sr-only">{fact.value}</span>
