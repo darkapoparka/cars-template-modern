@@ -14,6 +14,7 @@ import type {
 import type { PublicInventoryFilterLayout } from "@repo/marketplace/inventory-presentation";
 import { publicSite } from "@repo/marketplace/site-config";
 import {
+  ChevronDown,
   LayoutGrid,
   List,
   PanelLeft,
@@ -75,10 +76,15 @@ export function DealerInventoryFilters({
               type="button"
             >
               {viewMode === "list" ? (
-                <List aria-hidden="true" size={18} />
+                <List aria-hidden="true" size={16} />
               ) : (
-                <LayoutGrid aria-hidden="true" size={18} />
+                <LayoutGrid aria-hidden="true" size={16} />
               )}
+              <ChevronDown
+                aria-hidden="true"
+                className={styles.menuIcon}
+                size={12}
+              />
             </button>
           </DropdownMenuTrigger>
           <DropdownMenuContent

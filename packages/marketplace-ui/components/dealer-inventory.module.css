@@ -51,18 +51,41 @@
   .previewTrigger {
     display: inline-flex;
     flex: none;
+    gap: calc(var(--spacing) * 1.5);
     align-items: center;
     justify-content: center;
-    width: calc(var(--spacing) * 8);
-    min-width: calc(var(--spacing) * 8);
+    min-width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 8);
-    padding: 0;
+    padding: 0 calc(var(--spacing) * 2);
     color: var(--foreground);
     cursor: pointer;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-pill);
-    box-shadow: var(--desktop-surface-shadow);
+    border-radius: calc(var(--spacing) * 2);
+    box-shadow: none;
+  }
+  .sort,
+  .previewTrigger {
+    position: relative;
+  }
+  /* Extend the compact utilities to 44 px targets without enlarging the row. */
+  .sort::before,
+  .previewTrigger::before {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline: 0;
+    height: calc(var(--spacing) * 11);
+    content: "";
+    transform: translateY(-50%);
+  }
+  .previewTrigger > svg:not(.menuIcon) {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+  .previewTrigger > .menuIcon {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+    color: var(--muted-foreground);
   }
   .previewTrigger:hover,
   .previewTrigger[data-state="open"] {
@@ -229,19 +252,20 @@
     justify-self: end;
   }
   .sort {
-    gap: calc(var(--spacing) * 2);
+    gap: calc(var(--spacing) * 1.5);
     justify-content: center;
     width: auto;
     min-width: 0;
     max-width: calc(var(--spacing) * 48);
     height: calc(var(--spacing) * 8);
     min-height: calc(var(--spacing) * 8);
-    padding-inline: calc(var(--spacing) * 2);
-    font-size: calc(var(--spacing) * 3.5);
+    padding-inline: calc(var(--spacing) * 2.5);
+    font-size: calc(var(--spacing) * 3.25);
     color: var(--foreground);
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    box-shadow: var(--desktop-surface-shadow);
+    border-radius: calc(var(--spacing) * 2);
+    box-shadow: none;
   }
   .controls :is(.filters, .sort) > .controlIcon {
     flex: none;
@@ -249,8 +273,14 @@
     height: calc(var(--spacing) * 4.5);
     color: currentcolor;
   }
+  .controls .sort > .controlIcon {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
   .sort > svg:not(.controlIcon) {
-    display: none;
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+    color: var(--muted-foreground);
   }
   .sortValue {
     flex: 0 1 auto;
