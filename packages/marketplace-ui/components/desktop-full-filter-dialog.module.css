@@ -196,6 +196,9 @@
   .vehiclePanel .modelOptions :global(button[aria-pressed]) {
     font-weight: 500;
     border: var(--desktop-border-width) solid var(--border);
+  }
+  .vehiclePanel .makeOptions :global(button[aria-pressed]),
+  .vehiclePanel .modelOptions :global(button[aria-pressed]) {
     border-radius: var(--radius-pill);
   }
   .modelOptions :global([data-slot="model-option"]),
