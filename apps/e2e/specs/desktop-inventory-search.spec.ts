@@ -2,6 +2,8 @@ import { expect, test } from "@playwright/test";
 import { dismissModernWelcome } from "../fixtures/modern-session.setup";
 
 const modelStage = { bg: /^Модел/, en: /^Model/ };
+const mobileVehicleRow = { bg: /^Автомобил,/, en: /^Vehicle,/ };
+const mobileMakeModelRow = { bg: /^Марка и модел,/, en: /^Make and model,/ };
 
 test.beforeEach(async ({ context, baseURL, page }) => {
   // biome-ignore lint/suspicious/noSkippedTests: This control is hidden below the desktop breakpoint.
@@ -13,6 +15,119 @@ test.beforeEach(async ({ context, baseURL, page }) => {
 });
 
 for (const locale of ["bg", "en"] as const) {
+  test(`mobile full filters use the draft category taxonomy and route on Apply (${locale})`, async ({
+    page,
+  }) => {
+    test.setTimeout(90_000);
+    const isBg = locale === "bg";
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(
+      `/${locale}/cars?make=BMW&model=X5&priceMax=150000&yearMin=2010&sort=newest`
+    );
+    await page.locator('[data-slot="mobile-discovery-filters"]').click();
+    const dialog = page.getByRole("dialog");
+    await dialog
+      .getByRole("button", { name: mobileVehicleRow[locale] })
+      .click();
+    await dialog
+      .locator('[data-slot="marketplace-category-option"]')
+      .filter({ hasText: isBg ? "Мотоциклети" : "Motorbikes" })
+      .click();
+    await dialog
+      .getByRole("button", {
+        name: mobileMakeModelRow[locale],
+      })
+      .click();
+    await expect(
+      dialog.getByRole("button", { name: "Audi", exact: true })
+    ).toHaveCount(0);
+    await dialog
+      .getByRole("button", {
+        name: isBg ? "Всички марки" : "All makes",
+        exact: true,
+      })
+      .click();
+    await dialog
+      .getByRole("button", {
+        name: isBg ? "Покажи обявите" : "Show results",
+        exact: true,
+      })
+      .click();
+    await expect
+      .poll(() => new URL(page.url()).pathname, { timeout: 60_000 })
+      .toBe(`/${locale}/motorbikes`);
+    const query = new URL(page.url()).searchParams;
+    expect(query.get("category")).toBe("motorbike");
+    expect(query.get("make")).toBeNull();
+    expect(query.get("model")).toBeNull();
+    expect(query.get("priceMax")).toBe("150000");
+    expect(query.get("yearMin")).toBe("2010");
+    expect(query.get("sort")).toBe("newest");
+    expect(query.get("page")).toBeNull();
+  });
+
+  test(`desktop filter dialogs discard drafts when crossing the mobile breakpoint (${locale})`, async ({
+    page,
+  }) => {
+    test.setTimeout(90_000);
+    const isBg = locale === "bg";
+    await page.goto(`/${locale}/cars?make=BMW&priceMax=150000`);
+    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
+    const originalUrl = page.url();
+    const triggers = {
+      vehicle: hero.locator('[data-slot="desktop-primary-control"]'),
+      make: hero.getByRole("button", {
+        name: isBg ? "Марка" : "Make",
+        exact: true,
+      }),
+      search: hero.locator('[data-slot="dealer-inventory-search-open"]'),
+    };
+
+    for (const entry of ["vehicle", "make", "search"] as const) {
+      const trigger = triggers[entry];
+      await trigger.click();
+      const dialog = page.getByRole("dialog");
+      await expect(dialog).toBeVisible();
+      if (entry === "make") {
+        await dialog.getByRole("button", { name: "Audi", exact: true }).click();
+      } else {
+        if (entry === "vehicle") {
+          await dialog
+            .getByRole("tab", {
+              name: isBg ? "Още опции" : "More options",
+              exact: true,
+            })
+            .click();
+        }
+        await dialog.getByRole("searchbox").fill("cancelled draft");
+      }
+      expect(page.url()).toBe(originalUrl);
+      await page.setViewportSize({ width: 390, height: 844 });
+      await expect(page.getByRole("dialog")).toHaveCount(0);
+      expect(page.url()).toBe(originalUrl);
+      await page.setViewportSize({ width: 1440, height: 1100 });
+      await trigger.click();
+      await expect(dialog).toBeVisible();
+      if (entry === "make") {
+        await expect(
+          dialog.getByRole("button", { name: "BMW", exact: true })
+        ).toHaveAttribute("aria-pressed", "true");
+      } else {
+        if (entry === "vehicle") {
+          await dialog
+            .getByRole("tab", {
+              name: isBg ? "Още опции" : "More options",
+              exact: true,
+            })
+            .click();
+        }
+        await expect(dialog.getByRole("searchbox")).toHaveValue("");
+      }
+      await page.keyboard.press("Escape");
+      await expect(dialog).toBeHidden();
+    }
+  });
+
   test(`inventory type menu switches categories, preserves budget and restores browser Back context (${locale})`, async ({
     page,
   }) => {

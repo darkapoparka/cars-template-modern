@@ -16,8 +16,9 @@ function StockGrid({
 }) {
   return (
     <div className={styles.stockGrid} data-slot="home-stock-grid">
-      {listings.slice(0, 5).map((listing) => (
+      {listings.slice(0, 5).map((listing, index) => (
         <VehicleCard
+          className={index === 4 ? styles.expandedStockPreview : undefined}
           compactDesktopGrid
           density="compact"
           desktopHeadingLevel={3}

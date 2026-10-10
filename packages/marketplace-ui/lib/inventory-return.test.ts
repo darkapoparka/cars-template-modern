@@ -12,7 +12,7 @@ afterEach(() => {
   vi.unstubAllGlobals();
 });
 
-const localePrefix = /^\/(?:bg|en)(?=\/)/;
+const localePrefix = /^\/(?:bg|en)(?=\/|$)/;
 
 const stubSavedReturn = (scrollY = 1000) => {
   vi.stubGlobal("sessionStorage", {
@@ -149,6 +149,11 @@ it("retains the current explicit locale when returning across languages", () => 
 
 // Listing Back must retain the browsing route, query and position.
 it.each([
+  "/",
+  "/bg",
+  "/en",
+  "/bg/",
+  "/en/",
   "/bg/cars/bmw",
   "/en/cars/bmw/x5",
   "/cars/mercedes-benz/c-class",
@@ -173,12 +178,13 @@ it.each([
   rememberInventoryReturn("/en/listing/selected-car");
   expect(readInventoryReturn()?.href).toBe(`${pathname}${search}`);
   vi.stubGlobal("location", { pathname: "/en/listing/selected-car" });
-  const expectedPath = pathname.replace(localePrefix, "");
-  const href = `/en${expectedPath}${search}`;
+  const expectedPath = pathname.replace(localePrefix, "") || "/";
+  const localized = expectedPath === "/" ? "/en" : `/en${expectedPath}`;
+  const href = `${localized}${search}`;
   expect(getInventoryReturnHref("/en/cars")).toBe(href);
   prepareInventoryReturn(href);
   vi.stubGlobal("location", {
-    pathname: `/en${expectedPath}`,
+    pathname: localized,
     search,
   });
   expect(takeInventoryReturnScrollY()).toBe(480);
@@ -186,6 +192,9 @@ it.each([
 });
 
 it.each([
+  "",
+  "/bg#javascript:alert(1)",
+  "/en/contact",
   "/cars/bmw/x5/edit",
   "/cars/../contact",
   "/cars/%2e%2e/contact",

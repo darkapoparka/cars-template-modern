@@ -12,6 +12,7 @@ import type { InventorySearchListing } from "@repo/marketplace/inventory-search"
 import { CarFront, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   getMobileInventorySearchGroups,
   type MobileSearchItem,
@@ -82,8 +83,10 @@ export const MobileInventorySearch = ({
     }
 
     if (item.kind === "listing") {
+      const href = getLocalizedPublicPath(locale, getListingPath(item.listing));
+      rememberInventoryReturn(href);
       onOpenChange(false);
-      router.push(getLocalizedPublicPath(locale, getListingPath(item.listing)));
+      router.push(href);
       return;
     }
 

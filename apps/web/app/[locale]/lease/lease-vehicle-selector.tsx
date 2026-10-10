@@ -60,8 +60,9 @@ export const LeaseVehicleSelector = ({
     window.history.replaceState(null, "", url);
   };
   const selectVehicle = (id: string) => updatePreference("vehicle", id);
-  const setDeposit = (value: string) => updatePreference("deposit", value);
-  const setTerm = (value: string) => updatePreference("term", value);
+  const setDeposit = (value: string) =>
+    updatePreference("deposit", value, true);
+  const setTerm = (value: string) => updatePreference("term", value, true);
   const clearVehicle = () => {
     selectVehicle("");
     requestAnimationFrame(() => {

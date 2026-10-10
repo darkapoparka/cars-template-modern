@@ -191,10 +191,10 @@
   .modelOptions :global([data-slot="model-option"]),
   .modelOptions :global([data-slot="model-any-option"]) {
     min-height: calc(var(--spacing) * 11);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
   }
   .vehiclePanel .modelOptions :global(button[aria-pressed]) {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border: var(--desktop-border-width) solid var(--border);
   }
   .vehiclePanel .makeOptions :global(button[aria-pressed]),
@@ -278,14 +278,14 @@
   :is(.groupGrid, .focusedContent)
     :global([data-slot="numeric-range-summary"]) {
     font-size: calc(var(--spacing) * 4.5);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 6);
   }
   :is(.groupGrid, .focusedContent)
     :global([data-slot="numeric-range-presets"] button) {
     height: calc(var(--spacing) * 11);
     min-height: calc(var(--spacing) * 11);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
   }
   :is(.groupGrid, .focusedContent)
     :global([data-slot="numeric-range-filter"] input),
@@ -322,7 +322,7 @@
     ) {
     min-height: calc(var(--spacing) * 11);
     padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     border-radius: calc(var(--spacing) * 3);
   }
   .groupGrid :global([data-slot="marketplace-category-option"]) {
@@ -345,7 +345,7 @@
       > span:nth-child(2)
       > span:first-child
     ) {
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
   }
   .groupGrid
     :global(
@@ -354,7 +354,7 @@
       > span:last-child
     ) {
     font-size: calc(var(--spacing) * 3);
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     line-height: calc(var(--spacing) * 4);
   }
   .groupGrid
@@ -384,7 +384,7 @@
   }
   :is(.groupGrid, .vehicleColumns) .optionsHeading h2 {
     font-size: calc(var(--spacing) * 3.75);
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 5);
   }
   :is(.groupGrid, .vehicleColumns) .optionsHeading button {

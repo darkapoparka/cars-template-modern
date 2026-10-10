@@ -55,8 +55,10 @@ for (const width of [390, 1440]) {
   test(`search uses the supplied inventory beyond the filtered results at ${width}px`, async ({
     page,
   }) => {
+    test.setTimeout(90_000);
     await page.setViewportSize({ width, height: 844 });
     await page.goto("/cars?make=BMW&model=X5");
+    let inventoryUrl = page.url();
     if (width < 1024) {
       await page.locator('[data-slot="mobile-discovery-search"]').tap();
       const dialog = page.getByRole("dialog");
@@ -73,7 +75,9 @@ for (const width of [390, 1440]) {
       const dialog = page.locator(
         '[data-slot="desktop-focused-filter-dialog"]'
       );
-      await dialog.getByRole("searchbox").fill("M4");
+      await dialog
+        .getByRole("searchbox", { name: "Търси модели", exact: true })
+        .fill("M4");
       await dialog
         .locator('[data-slot="model-option"]')
         .filter({ hasText: "M4" })
@@ -86,6 +90,7 @@ for (const width of [390, 1440]) {
         .poll(() => new URL(page.url()).searchParams.get("model"))
         .toBe("M4");
       expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
+      inventoryUrl = page.url();
       await page
         .locator(
           '[data-slot="marketplace-listing-grid"] a[href*="/listing/"]:visible'
@@ -97,5 +102,9 @@ for (const width of [390, 1440]) {
     await expect(page.locator("h1").first()).toContainText(
       "BMW M4 Competition"
     );
+    await page
+      .getByRole("link", { name: "Назад към търсенето", exact: true })
+      .click();
+    await expect(page).toHaveURL(inventoryUrl);
   });
 }

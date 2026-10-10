@@ -144,7 +144,7 @@ test("narrow desktop related cards keep price actions and facts inside each card
   }
 });
 
-for (const locale of ["bg", "en"]) {
+for (const locale of ["bg", "en"] as const) {
   for (const width of [1024, 1440]) {
     test(`home stock preview opens cars and the complete inventory (${locale}, ${width}px)`, async ({
       baseURL,

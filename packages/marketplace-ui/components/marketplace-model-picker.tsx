@@ -463,7 +463,7 @@ export const MarketplaceMakeModelPicker = ({
   open: boolean;
   taxonomy: VehicleTaxonomyMakeOption[];
 }) => {
-  const isDesktop = useDesktopMarketplaceViewport();
+  const isDesktop = useDesktopMarketplaceViewport(() => onOpenChange(false));
   const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
   const [step, setStep] = useState<"derivative" | "make" | "model">("make");
   const [make, setMake] = useState<string | undefined>(filters.make);

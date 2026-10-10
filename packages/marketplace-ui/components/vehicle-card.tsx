@@ -39,6 +39,7 @@ export type {
 } from "../lib/vehicle-card-types";
 
 export const VehicleCard = ({
+  className,
   compactDesktopGrid = false,
   density = "default",
   desktopHeadingLevel = 2,
@@ -96,7 +97,8 @@ export const VehicleCard = ({
           : "lg:**:data-[slot=vehicle-card-title]:line-clamp-1",
         variant === "compact-list" &&
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
-        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
+        isDesktopComparison && "lg:flex lg:flex-col lg:gap-0",
+        className
       )}
       data-desktop-compact={hasCompactDesktopGrid}
       data-desktop-surface={desktopSurface}

@@ -1,4 +1,7 @@
-import type { MarketplaceSearchParams } from "@repo/marketplace";
+import {
+  type MarketplaceSearchParams,
+  parseMarketplaceSearchParams,
+} from "@repo/marketplace";
 import { getMarketplaceControlCopy } from "./marketplace-control-copy";
 import { getMarketplaceFilterSummary } from "./marketplace-filter-summary";
 
@@ -125,6 +128,14 @@ export const clearDesktopFullFilterSection = (
 ): MarketplaceSearchParams => ({
   ...draft,
   ...(clearUpdates[section] ?? { [section]: undefined }),
+});
+
+/** Reset criteria from schema defaults while retaining the selected ordering. */
+export const resetMarketplaceFullFilters = (
+  filters: MarketplaceSearchParams
+): MarketplaceSearchParams => ({
+  ...parseMarketplaceSearchParams({}),
+  sort: filters.sort,
 });
 
 /** Facets describe the applied result set, excluding the vehicle selection. */

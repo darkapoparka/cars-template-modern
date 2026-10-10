@@ -1,15 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export const useDesktopMarketplaceViewport = () => {
+export const useDesktopMarketplaceViewport = (onLeaveDesktop?: () => void) => {
   const [isDesktop, setIsDesktop] = useState(false);
+  const onLeaveDesktopRef = useRef(onLeaveDesktop);
+  onLeaveDesktopRef.current = onLeaveDesktop;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    const updateViewport = () => setIsDesktop(mediaQuery.matches);
+    const updateViewport = () => {
+      if (!mediaQuery.matches) {
+        onLeaveDesktopRef.current?.();
+      }
+      setIsDesktop(mediaQuery.matches);
+    };
 
-    updateViewport();
+    setIsDesktop(mediaQuery.matches);
     mediaQuery.addEventListener("change", updateViewport);
 
     return () => mediaQuery.removeEventListener("change", updateViewport);

@@ -2,7 +2,6 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import {
-  defaultVehicleCategory,
   type MarketplaceSearchParams,
   type VehicleCategory,
   type VehicleTaxonomyMakeOption,
@@ -11,7 +10,10 @@ import {
 import { RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
-import { canUseDesktopFilterModelCounts } from "../lib/desktop-full-filter-policy";
+import {
+  canUseDesktopFilterModelCounts,
+  resetMarketplaceFullFilters,
+} from "../lib/desktop-full-filter-policy";
 import {
   getMarketplaceControlCopy,
   isBulgarianMarketplaceLocale,
@@ -63,7 +65,7 @@ export const MarketplaceFullFilterOverlay = ({
     Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
   >;
 }) => {
-  const isDesktop = useDesktopMarketplaceViewport();
+  const isDesktop = useDesktopMarketplaceViewport(() => onOpenChange(false));
   const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
   const triggerRef = useRef<HTMLElement | null>(null);
   const [view, setView] = useState<DiscoveryFilterView>("main");
@@ -87,32 +89,11 @@ export const MarketplaceFullFilterOverlay = ({
   };
 
   const applyAndClose = () => {
-    applyFilters(draft);
+    applyFilters({ ...draft, page: 1 });
     onOpenChange(false);
   };
 
-  const resetDraft = () =>
-    setDraft({
-      ...filters,
-      body: undefined,
-      category: defaultVehicleCategory,
-      deliverTo: undefined,
-      derivative: undefined,
-      fuel: undefined,
-      location: undefined,
-      make: undefined,
-      mileageMax: undefined,
-      model: undefined,
-      origin: undefined,
-      priceMax: undefined,
-      priceMin: undefined,
-      q: undefined,
-      seller: undefined,
-      trim: undefined,
-      transmission: undefined,
-      yearMax: undefined,
-      yearMin: undefined,
-    });
+  const resetDraft = () => setDraft(resetMarketplaceFullFilters(filters));
 
   const overlayTitle = isDesktop
     ? getDiscoveryOverlayTitle(view, draft, locale, isBg)
@@ -140,7 +121,7 @@ export const MarketplaceFullFilterOverlay = ({
       locale={locale}
       setDraft={setNormalizedDraft}
       setView={setView}
-      taxonomy={taxonomy}
+      taxonomy={taxonomyByCategory?.[draft.category] ?? taxonomy}
       view={view}
     />
   );
@@ -170,10 +151,7 @@ export const MarketplaceFullFilterOverlay = ({
           })
         }
         onOpenChange={onOpenChange}
-        onReset={() => {
-          resetDraft();
-          setDraft((current) => ({ ...current, currency: undefined }));
-        }}
+        onReset={resetDraft}
         open={open}
         taxonomy={taxonomyByCategory?.[draft.category] ?? taxonomy}
       />

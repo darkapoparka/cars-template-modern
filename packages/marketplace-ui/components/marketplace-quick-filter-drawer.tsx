@@ -66,7 +66,7 @@ export const MarketplaceQuickFilterDrawer = ({
   }, [activeFilter, filters]);
 
   const apply = () => {
-    onApply(draft);
+    onApply({ ...draft, page: 1 });
     onClose();
   };
 

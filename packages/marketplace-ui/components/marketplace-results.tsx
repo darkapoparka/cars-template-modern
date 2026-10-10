@@ -51,6 +51,7 @@ export const MarketplaceResults = ({
   locale,
   searchListings,
   taxonomy,
+  taxonomyByCategory,
   onChooseCategory,
   onApply,
   onClearFilters,
@@ -72,6 +73,9 @@ export const MarketplaceResults = ({
   locale?: string;
   searchListings?: readonly InventorySearchListing[];
   taxonomy?: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<MarketplaceSearchParams["category"], VehicleTaxonomyMakeOption[]>
+  >;
   onChooseCategory: () => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
@@ -138,6 +142,7 @@ export const MarketplaceResults = ({
             locale={locale}
             searchListings={searchListings}
             taxonomy={taxonomy}
+            taxonomyByCategory={taxonomyByCategory}
           />
         </aside>
       )}

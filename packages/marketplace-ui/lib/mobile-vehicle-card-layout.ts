@@ -1,8 +1,8 @@
-/** Shared mobile geometry for inventory links and financing selection cards. */
+/** Shared mobile geometry; cap the photo column so wider phones favor copy. */
 export const mobileVehicleCardClassName =
-  "grid grid-cols-[46%_minmax(0,1fr)] lg:flex lg:flex-row";
+  "grid grid-cols-[min(42%,8.5rem)_minmax(0,1fr)] lg:flex lg:flex-row";
 
-export const mobileVehicleCardImageSizes = "46vw";
+export const mobileVehicleCardImageSizes = "124px";
 
 export const mobileVehicleCardMediaClassName =
   "relative col-start-1 row-start-1 z-10 mt-3 ml-3 aspect-[4/3] min-w-0 self-start overflow-hidden rounded-lg bg-secondary lg:z-auto lg:m-0 lg:aspect-auto lg:min-h-28 lg:w-[40%] lg:min-w-24 lg:max-w-44 lg:shrink-0 lg:self-stretch lg:rounded-none";
@@ -24,9 +24,9 @@ export const mobileVehicleCardFactsClassName =
 export const mobileVehicleCardPriceSummaryClassName =
   "flex min-w-0 flex-col gap-0.5 lg:block";
 
-/** Single-line mobile titles retain their full text in the accessible heading. */
+/** Longer mobile model names use two lines and retain their accessible title. */
 export const mobileVehicleCardTitleClassName =
-  "truncate font-medium text-card-title text-foreground tracking-normal lg:line-clamp-2 lg:whitespace-normal";
+  "line-clamp-2 font-medium text-card-title text-foreground tracking-normal lg:line-clamp-2 lg:whitespace-normal";
 
 export const mobileVehicleCardPriceClassName =
   "font-semibold text-price text-foreground tabular-nums tracking-normal";

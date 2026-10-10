@@ -54,7 +54,7 @@
   .stockGrid article {
     min-width: 0;
   }
-  .stockGrid article:nth-child(5) {
+  .stockGrid article.expandedStockPreview {
     display: none;
   }
   .bannerAction {
@@ -365,7 +365,7 @@
   .stockGrid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
-  .stockGrid article:nth-child(5) {
+  .stockGrid article.expandedStockPreview {
     display: flex;
   }
 }

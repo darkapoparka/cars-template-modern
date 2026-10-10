@@ -468,6 +468,7 @@ export const MarketplaceShell = ({
           onViewModeChange={changeViewMode}
           searchListings={searchListings}
           taxonomy={taxonomy}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
           viewMode={viewMode}
         />
@@ -542,7 +543,7 @@ export const MarketplaceShell = ({
               ? inventoryFacets.modelCounts
               : undefined
           }
-          onApply={commitFilters}
+          onApply={commitDesktopFilters}
           onDesktopApply={commitDesktopFilters}
           onOpenChange={setFilterOpen}
           open={filterOpen}

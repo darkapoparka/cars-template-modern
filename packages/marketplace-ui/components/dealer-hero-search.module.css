@@ -216,16 +216,6 @@
   .desktopSearch[data-surface="hero"] {
     gap: var(--desktop-hero-pills-gap);
   }
-  .categoryPills {
-    display: flex;
-    gap: var(--desktop-hero-pill-gap);
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-  }
   .desktopSearch .categoryPill {
     gap: calc(var(--spacing) * 2);
     height: var(--desktop-hero-pill-height);
@@ -265,12 +255,6 @@
       --desktop-hero-type-selected-hover-background,
       var(--lead-site-accent-hover)
     );
-  }
-  .desktopSearch .categoryArtwork {
-    flex: none;
-    width: calc(var(--spacing) * 11);
-    height: calc(var(--spacing) * 6);
-    object-fit: contain;
   }
   .desktopSearch[data-surface="hero"][data-search-context="inventory"] .form {
     min-inline-size: 0;

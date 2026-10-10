@@ -4,15 +4,27 @@ import {
 } from "@repo/internationalization/paths";
 
 const storageKey = "modern-inventory-return-v1";
-const localePrefix = /^\/(bg|en)(?=\/)/;
-const normalizePath = (path: string) =>
-  withoutBasePath(path).replace(localePrefix, "");
+const localePrefix = /^\/(bg|en)(?=\/|$)/;
+const suffixStart = /[?#]/;
+const normalizePath = (path: string) => {
+  const unmounted = withoutBasePath(path);
+  const suffixIndex = unmounted.search(suffixStart);
+  const pathname =
+    suffixIndex < 0 ? unmounted : unmounted.slice(0, suffixIndex);
+  const suffix = suffixIndex < 0 ? "" : unmounted.slice(suffixIndex);
+  return (pathname.replace(localePrefix, "") || "/") + suffix;
+};
 
 // Retain the existing category, make/model and editorial collection routes.
 const inventoryPath =
   /^\/(?:cars(?:\/[a-z0-9]+(?:-[a-z0-9]+)*){0,2}|motorbikes|trucks|vans|lease|collections\/chinese-ev-hybrids)$/;
-const isInventoryHref = (href: string) =>
-  inventoryPath.test(normalizePath(href).split("?")[0] ?? "");
+const isInventoryHref = (href: string) => {
+  if (!href.startsWith("/") || href.startsWith("//")) {
+    return false;
+  }
+  const pathname = normalizePath(href).split("?")[0] ?? "";
+  return pathname === "/" || inventoryPath.test(pathname);
+};
 
 interface InventoryReturn {
   href: string;
