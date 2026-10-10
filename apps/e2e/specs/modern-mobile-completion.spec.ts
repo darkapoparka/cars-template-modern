@@ -521,7 +521,7 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
 });
 
 for (const width of [320, 375, 390, 430]) {
-  test(`mobile cards keep landscape photos and one complete badge row at ${width}px`, async ({
+  test(`mobile cards keep single-line titles, matching photo height and one complete badge row at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 844 });
@@ -533,6 +533,9 @@ for (const width of [320, 375, 390, 430]) {
       const metrics = await cards.evaluateAll((elements) =>
         elements.map((card) => {
           const title = card.querySelector('[data-slot="vehicle-card-title"]');
+          const titleStyle = title ? getComputedStyle(title) : null;
+          const titleRect = title?.getBoundingClientRect();
+          const info = title?.parentElement?.getBoundingClientRect();
           const media = card
             .closest("article")
             ?.querySelector('[data-slot="vehicle-card-media"]')
@@ -543,6 +546,13 @@ for (const width of [320, 375, 390, 430]) {
           return {
             titleName: title?.getAttribute("aria-label"),
             fullTitle: title?.getAttribute("title"),
+            titleHeight: titleRect?.height ?? 0,
+            titleLineHeight: Number.parseFloat(titleStyle?.lineHeight ?? "0"),
+            titleWhiteSpace: titleStyle?.whiteSpace,
+            titleTextOverflow: titleStyle?.textOverflow,
+            infoTop: info?.top ?? 0,
+            infoHeight: info?.height ?? 0,
+            mediaTop: media?.top ?? 0,
             mediaWidth: media?.width ?? 0,
             mediaHeight: media?.height ?? 0,
             factsGap: (facts?.top ?? 0) - (media?.bottom ?? 0),
@@ -571,8 +581,21 @@ for (const width of [320, 375, 390, 430]) {
       );
       expect(metrics.length).toBeGreaterThan(0);
       for (const card of metrics) {
+        expect(card.fullTitle).toBeTruthy();
         expect(card.titleName).toBe(card.fullTitle);
-        expect(card.mediaWidth).toBeGreaterThan(card.mediaHeight);
+        expect(
+          card.titleHeight,
+          card.fullTitle ?? "vehicle title"
+        ).toBeGreaterThan(0);
+        expect(
+          card.titleHeight,
+          card.fullTitle ?? "single-line vehicle title"
+        ).toBeLessThanOrEqual(card.titleLineHeight + 1);
+        expect(card.titleWhiteSpace).toBe("nowrap");
+        expect(card.titleTextOverflow).toBe("ellipsis");
+        expect(Math.abs(card.mediaTop - card.infoTop)).toBeLessThan(1);
+        expect(Math.abs(card.mediaHeight - card.infoHeight)).toBeLessThan(1);
+        expect(card.mediaHeight).toBeLessThanOrEqual(card.mediaWidth + 1);
         expect(card.factsGap).toBeGreaterThanOrEqual(8);
         expect(card.pills).toHaveLength(4);
         for (const pill of card.pills) {
