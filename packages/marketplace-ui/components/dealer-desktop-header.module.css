@@ -80,7 +80,7 @@
   }
   .moreItem {
     gap: calc(var(--spacing) * 3);
-    min-height: calc(var(--spacing) * 10);
+    min-height: calc(var(--spacing) * 11);
     padding-inline: calc(var(--spacing) * 3);
     font-size: var(--text-desktop-control);
     color: var(--foreground);

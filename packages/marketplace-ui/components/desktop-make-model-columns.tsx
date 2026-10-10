@@ -85,7 +85,7 @@ function ModelBodyStyles({
   );
 }
 
-/** Parallel choices for the full draft; hero dialogs retain their staged picker. */
+/** Shared compact choices for full and focused desktop filter drafts. */
 export function DesktopMakeModelColumns({
   draft,
   locale,
@@ -93,7 +93,7 @@ export function DesktopMakeModelColumns({
   onChooseCategory,
   onChange,
   taxonomy,
-}: DesktopFullFilterDraftProps & { onChooseCategory: () => void }) {
+}: DesktopFullFilterDraftProps & { onChooseCategory?: () => void }) {
   const copy = getMarketplaceControlCopy(locale);
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const id = useId();
@@ -193,9 +193,11 @@ export function DesktopMakeModelColumns({
               ? "Няма налични марки и модели за този вид превозно средство."
               : "No makes or models are available for this vehicle type."}
           </p>
-          <Button onClick={onChooseCategory} variant="secondary">
-            {isBg ? "Изберете друг вид" : "Choose another type"}
-          </Button>
+          {onChooseCategory ? (
+            <Button onClick={onChooseCategory} variant="secondary">
+              {isBg ? "Изберете друг вид" : "Choose another type"}
+            </Button>
+          ) : null}
         </div>
       </section>
     );

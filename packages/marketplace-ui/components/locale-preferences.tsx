@@ -18,6 +18,7 @@ import {
 } from "../lib/locale-validation";
 import { mobileControlFocusClassName } from "../lib/mobile-overlay-styles";
 import { DealerUiIcon } from "./dealer-ui-icon";
+import overlayStyles from "./desktop-overlay.module.css";
 import { LanguageFlag } from "./language-flag";
 
 type LocaleState = ResolvedLocale<Locale>;
@@ -263,7 +264,10 @@ export function LocalePreferencesProvider({
       <dialog
         aria-describedby="locale-preferences-description"
         aria-labelledby="locale-preferences-title"
-        className="fixed inset-x-0 top-auto bottom-0 m-0 max-h-[90dvh] w-screen max-w-[100vw] overflow-hidden rounded-t-3xl border-0 bg-white p-0 text-zinc-950 shadow-2xl backdrop:bg-black/50 sm:inset-0 sm:m-auto sm:h-fit sm:w-[28rem] sm:rounded-2xl"
+        className={cn(
+          "fixed inset-x-0 top-auto bottom-0 m-0 max-h-[90dvh] w-screen max-w-[100vw] overflow-hidden rounded-t-3xl border-0 bg-white p-0 text-zinc-950 shadow-2xl backdrop:bg-black/50 sm:inset-0 sm:m-auto sm:h-fit sm:w-[28rem] sm:rounded-2xl",
+          overlayStyles.localeDialog
+        )}
         data-locale-dialog
         data-locale-ready={ready}
         data-preference-country={state.country}
@@ -283,7 +287,12 @@ export function LocalePreferencesProvider({
             aria-hidden="true"
             className="mx-auto mt-3 h-1 w-9 shrink-0 rounded-full bg-zinc-200 sm:hidden"
           />
-          <div className="flex shrink-0 items-center justify-between gap-3 px-4 pt-3 pb-4 sm:px-6 sm:pt-5">
+          <div
+            className={cn(
+              "flex shrink-0 items-center justify-between gap-3 px-4 pt-3 pb-4 sm:px-6 sm:pt-5",
+              overlayStyles.header
+            )}
+          >
             <h2
               className="min-w-0 font-semibold text-lg leading-6 max-lg:font-medium"
               id="locale-preferences-title"
@@ -295,6 +304,7 @@ export function LocalePreferencesProvider({
               aria-label={t("locale.close")}
               className={cn(
                 "inline-flex size-11 shrink-0 items-center justify-center rounded-md bg-transparent text-zinc-950 hover:opacity-70",
+                overlayStyles.close,
                 mobileControlFocusClassName
               )}
               onClick={() => persist("dismiss")}
@@ -407,12 +417,16 @@ export function LocalePreferencesProvider({
               ) : null}
             </div>
             <div
-              className="flex shrink-0 justify-end gap-2 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6"
+              className={cn(
+                "flex shrink-0 justify-end gap-2 px-4 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6",
+                overlayStyles.footer
+              )}
               data-locale-actions
             >
               <button
                 className={cn(
                   "h-11 w-28 shrink-0 rounded-md px-4 font-medium text-sm text-zinc-600 hover:text-zinc-950",
+                  overlayStyles.reset,
                   mobileControlFocusClassName
                 )}
                 onClick={() => persist("dismiss")}
@@ -423,6 +437,7 @@ export function LocalePreferencesProvider({
               <button
                 className={cn(
                   "h-11 w-28 shrink-0 rounded-md bg-zinc-950 px-4 font-medium text-sm text-white hover:bg-zinc-800 disabled:opacity-60",
+                  overlayStyles.apply,
                   mobileControlFocusClassName
                 )}
                 disabled={busy}

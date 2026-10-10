@@ -55,7 +55,7 @@
     box-shadow: var(--elevation-overlay);
   }
   .typeOption {
-    min-height: calc(var(--spacing) * 10);
+    min-height: calc(var(--spacing) * 11);
     padding-left: calc(var(--spacing) * 8);
     font-size: calc(var(--spacing) * 3.5);
     border-radius: calc(var(--spacing) * 2);

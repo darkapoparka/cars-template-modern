@@ -2,7 +2,6 @@
 
 import { Button } from "@repo/design-system/components/ui/button";
 import { Input } from "@repo/design-system/components/ui/input";
-import { ScrollArea } from "@repo/design-system/components/ui/scroll-area";
 import { cn } from "@repo/design-system/lib/utils";
 import {
   formatBodyType,
@@ -600,41 +599,28 @@ export const MarketplaceMakeModelPicker = ({
     />
   );
 
-  const pickerBody = isDesktop ? (
-    <ScrollArea
-      className={cn(
-        "min-h-0 p-4",
-        step === "derivative"
-          ? "h-[var(--desktop-model-derivatives-height)] flex-none"
-          : "h-[var(--desktop-model-options-height)] flex-none"
-      )}
-      key={`${step}:${search}`}
-    >
-      {pickerContent}
-    </ScrollArea>
-  ) : (
-    <div className="p-4">{pickerContent}</div>
-  );
+  const pickerBody = <div className="p-4">{pickerContent}</div>;
   if (isDesktop) {
     return (
       <DesktopMakeModelDialog
         applyLabel={applyLabel}
         clearSelection={clearSelection}
         derivative={derivative}
+        filters={filters}
         handleApply={handleApply}
-        hasDerivatives={(selectedModel?.derivatives.length ?? 0) > 0}
+        initialStep={initialStep}
         locale={locale}
         make={make}
         model={model}
-        onOpenChange={onOpenChange}
-        onStepChange={(nextStep) => {
-          setStep(nextStep);
-          setSearch("");
+        modelCounts={modelCounts}
+        onChange={(draft) => {
+          setMake(draft.make);
+          setModel(draft.model);
+          setDerivative(draft.derivative);
         }}
+        onOpenChange={onOpenChange}
         open={open}
-        pickerBody={pickerBody}
-        searchField={searchField}
-        step={step}
+        taxonomy={taxonomy}
       />
     );
   }

@@ -14,6 +14,7 @@ import {
   isoCountryCodeSchema,
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
+import { desktopOverlayStyles } from "@repo/marketplace-ui";
 import { log } from "@repo/observability/log";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowLeftIcon, MessageSquareText } from "lucide-react";
@@ -256,7 +257,7 @@ const ContactSellerForm = ({
         <SelectTrigger className="w-full bg-control" id="intent">
           <SelectValue />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className={desktopOverlayStyles.menu}>
           <SelectItem value="availability">{copy.availability}</SelectItem>
           <SelectItem value="test_drive">{copy.testDrive}</SelectItem>
           <SelectItem value="finance">{copy.finance}</SelectItem>

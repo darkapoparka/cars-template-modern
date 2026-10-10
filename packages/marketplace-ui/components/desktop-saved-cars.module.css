@@ -51,44 +51,43 @@
     color: var(--brand);
   }
   .dialog[open] {
-    display: block;
-    width: min(100% - calc(var(--spacing) * 20), calc(var(--spacing) * 260));
-    max-height: 80dvh;
-    padding: calc(var(--spacing) * 8);
+    display: flex;
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
+    height: fit-content;
+    max-height: min(
+      calc(var(--spacing) * 160),
+      calc(100dvh - var(--spacing) * 16)
+    );
     margin: auto;
-    overflow: auto;
-    color: var(--foreground);
-    background: var(--desktop-surface);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 6);
+  }
+  .dialog:not([open]) {
+    display: none;
+  }
+  .dialog[data-empty="true"] {
+    width: min(calc(var(--spacing) * 140), calc(100vw - var(--spacing) * 16));
+  }
+  .empty {
+    display: grid;
+    place-content: center;
+    min-height: calc(var(--spacing) * 32);
+    padding: calc(var(--spacing) * 5);
+    margin: 0;
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--muted-foreground);
+    text-align: center;
   }
   .dialog::backdrop {
     background: var(--desktop-dialog-backdrop);
   }
-  .heading {
-    display: flex;
-    gap: calc(var(--spacing) * 6);
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .heading h2 {
-    font-size: calc(var(--spacing) * 7.5);
-    font-weight: var(--font-weight-bold);
-  }
-  .heading button {
-    display: grid;
-    place-items: center;
-    width: calc(var(--spacing) * 11);
-    height: calc(var(--spacing) * 11);
-    cursor: pointer;
-    background: var(--control);
-    border-radius: 50%;
-  }
   .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 6);
+    gap: calc(var(--spacing) * 4);
+    min-height: 0;
+    padding: calc(var(--spacing) * 5);
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   .grid article {
     overflow: hidden;
@@ -103,17 +102,27 @@
   .grid h3,
   .grid p {
     margin: calc(var(--spacing) * 3) calc(var(--spacing) * 4.5);
-    font-size: calc(var(--spacing) * 4.5);
+    font-size: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 6);
     overflow-wrap: anywhere;
   }
   .grid h3 {
     font-weight: var(--font-weight-medium);
   }
   .grid button {
+    width: calc(100% - var(--spacing) * 8);
     min-height: calc(var(--spacing) * 11);
-    padding: 0 calc(var(--spacing) * 4.5);
-    color: var(--brand-text);
+    padding: 0 calc(var(--spacing) * 4);
+    margin: calc(var(--spacing) * 2) calc(var(--spacing) * 4)
+      calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--foreground);
     cursor: pointer;
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .grid button:hover {
+    background: var(--control-hover);
   }
   .bookmark:focus-visible,
   .saved:focus-visible,

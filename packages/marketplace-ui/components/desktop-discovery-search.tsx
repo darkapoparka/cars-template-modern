@@ -28,6 +28,7 @@ import {
   marketplaceCategorySelectorOptions,
 } from "../lib/marketplace-filter-config";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import filterStyles from "./desktop-full-filter-dialog.module.css";
 import { formatVehicleCount } from "./desktop-marketplace-controls";
 import {
   DesktopSearchAssistant,
@@ -132,12 +133,16 @@ export const DesktopCategoryPickerContent = ({
   onClose: () => void;
 }) => (
   <DialogContent
-    className="max-h-[var(--desktop-dialog-max-height)] w-[var(--desktop-dialog-width)] max-w-3xl gap-0 overflow-hidden rounded-2xl border-border bg-panel p-0 shadow-overlay"
+    className={cn(
+      filterStyles.dialog,
+      filterStyles.quickDialog,
+      filterStyles.categoryDialog
+    )}
     data-slot="lead-category-dialog"
     showCloseButton={false}
   >
-    <DialogHeader className="px-5 py-4 text-left">
-      <div className="flex items-start justify-between gap-4">
+    <DialogHeader className={filterStyles.header}>
+      <div className="flex w-full items-center justify-between gap-4">
         <div>
           <DialogTitle className="text-dialog-title text-foreground">
             {localizeMarketplace(
@@ -146,7 +151,7 @@ export const DesktopCategoryPickerContent = ({
               "Choose vehicle category"
             )}
           </DialogTitle>
-          <DialogDescription className="mt-1 text-body text-muted-foreground">
+          <DialogDescription className="sr-only">
             {localizeMarketplace(
               isBg,
               "Категорията определя наличностите и филтрите в търсенето.",
@@ -157,7 +162,7 @@ export const DesktopCategoryPickerContent = ({
         <DialogClose asChild>
           <Button
             aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-            className="-mr-2 size-10 rounded-full text-muted-foreground hover:bg-control hover:text-foreground"
+            className={filterStyles.close}
             size="icon"
             type="button"
             variant="ghost"

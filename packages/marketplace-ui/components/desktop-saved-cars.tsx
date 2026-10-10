@@ -8,6 +8,7 @@ import type { DesktopSavedCar } from "../lib/desktop-saved-car";
 import { desktopSavedCarsStore } from "../lib/desktop-saved-cars-store";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { formatVehicleCardMoney } from "../lib/vehicle-card-policy";
+import overlayStyles from "./desktop-overlay.module.css";
 import styles from "./desktop-saved-cars.module.css";
 import Image from "./public-image";
 
@@ -117,7 +118,9 @@ export function DesktopSavedCars({
       </button>
       <dialog
         aria-labelledby={titleId}
-        className={styles.dialog}
+        className={cn(styles.dialog, overlayStyles.dialog)}
+        data-empty={saved.length === 0}
+        data-slot="desktop-saved-cars-dialog"
         onClose={() => {
           if (window.matchMedia("(min-width: 1024px)").matches) {
             opener.current?.focus();
@@ -125,10 +128,11 @@ export function DesktopSavedCars({
         }}
         ref={dialog}
       >
-        <div className={styles.heading}>
+        <div className={overlayStyles.header}>
           <h2 id={titleId}>{isBg ? "Запазени автомобили" : "Saved cars"}</h2>
           <button
             aria-label={isBg ? "Затвори" : "Close saved cars"}
+            className={overlayStyles.close}
             onClick={() => dialog.current?.close()}
             type="button"
           >
@@ -136,7 +140,7 @@ export function DesktopSavedCars({
           </button>
         </div>
         {saved.length === 0 ? (
-          <p>
+          <p className={styles.empty}>
             {isBg
               ? "Запазете автомобил с отметката върху снимката, за да го намерите тук."
               : "Bookmark a car to keep your shortlist here."}
@@ -160,6 +164,7 @@ export function DesktopSavedCars({
                   </p>
                 </Link>
                 <button
+                  aria-label={`${isBg ? "Премахни" : "Remove"}: ${car.title}`}
                   onClick={() => desktopSavedCarsStore.toggleCar(car)}
                   type="button"
                 >

@@ -8,6 +8,9 @@ import {
   serializeContentSearch,
 } from "@/lib/public-content";
 import {
+  getContentHeroArtwork,
+  getDesktopEditorialReading,
+  getMobileContentHeroTitle,
   getPublicContentCards,
   getPublicContentCover,
   getRelatedContentCardTitle,
@@ -115,10 +118,13 @@ export default async function GuideOrArticlePage({
         <PublicEditorialArticle
           backHref={`${getLocalizedPath(normalizedLocale, "/guides")}${backQuery}`}
           description={description}
+          desktopReading={getDesktopEditorialReading(slug, language)}
           eyebrow={eyebrow}
+          heroArtwork={getContentHeroArtwork(slug, language)}
           image={cover.image}
           imagePosition={cover.position}
           language={language}
+          mobileTitle={getMobileContentHeroTitle({ slug, title }, language)}
           published={post?.published}
           readTime={post?.readTime[language]}
           related={related}

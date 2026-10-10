@@ -35,6 +35,8 @@
   }
   .filterBar {
     display: grid;
+    /* Keep the compact row stable when the taller applied-filter rail appears. */
+    grid-template-rows: calc(var(--spacing) * 8);
     grid-template-columns: auto minmax(0, 1fr) auto auto;
     grid-column: 1 / -1;
     gap: calc(var(--spacing) * 2);
@@ -289,7 +291,7 @@
     box-shadow: var(--elevation-overlay);
   }
   .sortOption {
-    min-height: calc(var(--spacing) * 10);
+    min-height: calc(var(--spacing) * 11);
     padding-left: calc(var(--spacing) * 3);
     font-size: calc(var(--spacing) * 3.5);
     border-radius: calc(var(--spacing) * 2);

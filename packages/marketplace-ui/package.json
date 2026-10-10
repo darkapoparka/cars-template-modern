@@ -6,6 +6,8 @@
   "types": "./index.ts",
   "exports": {
     ".": "./index.ts",
+    "./lib/dealer-vehicle-types": "./lib/dealer-vehicle-types.ts",
+    "./lib/listing-action-policy": "./lib/listing-action-policy.ts",
     "./lib/mobile-form-control": "./lib/mobile-form-control.ts",
     "./lib/mobile-overlay-styles": "./lib/mobile-overlay-styles.ts",
     "./components/listing-price-intelligence": "./components/listing-price-intelligence.tsx",

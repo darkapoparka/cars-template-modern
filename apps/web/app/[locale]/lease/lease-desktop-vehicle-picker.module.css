@@ -406,3 +406,25 @@
     color: var(--brand-text);
   }
 }
+
+@media (min-width: 1024px) {
+  .dialog {
+    gap: 0;
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 160), calc(100dvh - var(--spacing) * 16));
+    max-height: calc(100dvh - var(--spacing) * 16);
+    padding: 0;
+    border-radius: calc(var(--spacing) * 5);
+  }
+  .dialog .search {
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 3.5);
+    margin: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .dialog .results {
+    flex: 1;
+    gap: calc(var(--spacing) * 4);
+    padding: 0 calc(var(--spacing) * 5) calc(var(--spacing) * 5);
+  }
+}

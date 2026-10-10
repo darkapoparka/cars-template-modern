@@ -24,6 +24,7 @@ import {
   type DesktopCategoryInventoryCount,
   DesktopDiscoverySearch,
 } from "./desktop-discovery-search";
+import overlayStyles from "./desktop-overlay.module.css";
 import { getDesktopQuickFilterClassName } from "./desktop-quick-filters";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import Image from "./public-image";
@@ -298,7 +299,10 @@ const DesktopImportSurface = ({
         </PopoverTrigger>
         <PopoverContent
           align="start"
-          className="w-[var(--desktop-sidebar-width)] p-2"
+          className={cn(
+            "w-[var(--desktop-sidebar-width)] p-2",
+            overlayStyles.menu
+          )}
         >
           <p className="px-2 pt-1 pb-2 font-semibold text-meta text-muted-foreground">
             {localizeMarketplace(

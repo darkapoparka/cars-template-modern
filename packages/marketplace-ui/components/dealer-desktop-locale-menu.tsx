@@ -20,7 +20,7 @@ export function DealerDesktopLocaleMenu({
   const localeLabel = isBg ? "Държава и език" : "Country and language";
   const triggerClassName =
     tone === "light"
-      ? "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-control text-foreground shadow-none hover:bg-control-hover focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
+      ? "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-control text-foreground shadow-none lg:h-11 lg:w-11 lg:rounded-xl hover:bg-control-hover focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2"
       : "inline-flex min-h-11 min-w-11 items-center justify-center rounded-md border border-transparent bg-transparent text-inherit hover:bg-panel/10 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2";
 
   useEffect(() => {

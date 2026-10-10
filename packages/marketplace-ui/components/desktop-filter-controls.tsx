@@ -16,6 +16,7 @@ import { Check, ChevronDown, X } from "lucide-react";
 import { type ReactNode, useState } from "react";
 import { localizeMarketplace } from "../lib/marketplace-filter-config";
 import styles from "./desktop-filter-controls.module.css";
+import filterStyles from "./desktop-full-filter-dialog.module.css";
 import {
   NumericRangeFilter,
   type NumericRangePreset,
@@ -259,17 +260,17 @@ export const DesktopQuickFilterDialog = ({
         trigger
       )}
       <DialogContent
-        className="max-h-[var(--desktop-dialog-max-height)] w-[var(--desktop-dialog-width)] max-w-lg gap-0 overflow-hidden rounded-2xl border-border bg-panel p-0 shadow-overlay"
+        className={cn(filterStyles.dialog, filterStyles.quickDialog)}
         data-slot="desktop-quick-filter-dialog"
         showCloseButton={false}
       >
-        <DialogHeader className="px-5 py-4 text-left">
-          <div className="flex items-start justify-between gap-4">
+        <DialogHeader className={filterStyles.header}>
+          <div className="flex w-full items-center justify-between gap-4">
             <div>
               <DialogTitle className="text-dialog-title text-foreground">
                 {title}
               </DialogTitle>
-              <DialogDescription className="mt-1 text-body text-muted-foreground">
+              <DialogDescription className="sr-only">
                 {localizeMarketplace(
                   isBg,
                   "Изберете една опция и приложете филтъра.",
@@ -280,7 +281,7 @@ export const DesktopQuickFilterDialog = ({
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-                className="-mr-2 size-10 rounded-full text-muted-foreground hover:bg-control hover:text-foreground"
+                className={filterStyles.close}
                 size="icon"
                 type="button"
                 variant="ghost"
@@ -328,9 +329,11 @@ export const DesktopQuickFilterDialog = ({
             </Button>
           ))}
         </div>
-        <DialogFooter className="bg-canvas px-5 py-4 sm:justify-end">
+        <DialogFooter
+          className={cn(filterStyles.footer, filterStyles.singleActionFooter)}
+        >
           <Button
-            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+            className={filterStyles.apply}
             onClick={applySelection}
             type="button"
           >
@@ -489,12 +492,16 @@ export const DesktopQuickRangeDialog = ({
         trigger
       )}
       <DialogContent
-        className="max-h-[var(--desktop-dialog-max-height)] w-[var(--desktop-dialog-width)] max-w-xl gap-0 overflow-hidden rounded-2xl border-border bg-panel p-0 shadow-overlay"
+        className={cn(
+          filterStyles.dialog,
+          filterStyles.quickDialog,
+          filterStyles.quickRangeDialog
+        )}
         data-slot="desktop-quick-range-dialog"
         showCloseButton={false}
       >
-        <DialogHeader className="px-5 py-3 text-left">
-          <div className="flex items-center justify-between gap-4">
+        <DialogHeader className={filterStyles.header}>
+          <div className="flex w-full items-center justify-between gap-4">
             <DialogTitle className="text-card-title-lg text-foreground">
               {title}
             </DialogTitle>
@@ -504,7 +511,7 @@ export const DesktopQuickRangeDialog = ({
             <DialogClose asChild>
               <Button
                 aria-label={localizeMarketplace(isBg, "Затвори", "Close")}
-                className="-mr-2 size-10 rounded-full text-muted-foreground hover:bg-control hover:text-foreground"
+                className={filterStyles.close}
                 size="icon"
                 type="button"
                 variant="ghost"
@@ -536,9 +543,9 @@ export const DesktopQuickRangeDialog = ({
             value={draftRange}
           />
         </div>
-        <DialogFooter className="flex-row justify-between bg-canvas px-5 py-4 sm:justify-between">
+        <DialogFooter className={filterStyles.footer}>
           <Button
-            className="h-11 rounded-xl px-4 font-semibold text-compact-control"
+            className={filterStyles.reset}
             onClick={() => setDraftRange(range)}
             type="button"
             variant="ghost"
@@ -546,7 +553,7 @@ export const DesktopQuickRangeDialog = ({
             {localizeMarketplace(isBg, "Изчисти", "Clear")}
           </Button>
           <Button
-            className="h-11 rounded-xl bg-brand px-6 font-semibold text-brand-foreground text-compact-control hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+            className={filterStyles.apply}
             onClick={applyRange}
             type="button"
           >

@@ -1,0 +1,183 @@
+/* Shared desktop presentation; mobile retains its current controls. */
+@media (min-width: 1024px) {
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: none;
+    max-height: calc(100dvh - var(--spacing) * 16);
+    padding: 0;
+    overflow: hidden;
+    color: var(--foreground);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 5);
+    box-shadow: var(--elevation-overlay);
+  }
+  .header {
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    gap: calc(var(--spacing) * 4);
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+    margin: 0;
+    text-align: left;
+    border-bottom: var(--desktop-border-width) solid var(--border);
+  }
+  .header :is(h2, :global([data-slot="dialog-title"])) {
+    min-width: 0;
+    margin: 0;
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+  }
+  .close {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    padding: 0;
+    color: var(--foreground);
+    cursor: pointer;
+    background: var(--control);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .close:hover,
+  .reset:hover {
+    background: var(--control-hover);
+  }
+  .close svg {
+    width: calc(var(--spacing) * 4.5);
+    height: calc(var(--spacing) * 4.5);
+  }
+  .footer {
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 5);
+    background: var(--panel);
+    border-top: var(--desktop-border-width) solid var(--border);
+  }
+  .apply,
+  .reset {
+    width: auto;
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 5);
+    cursor: pointer;
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .apply {
+    min-width: calc(var(--spacing) * 52);
+    color: var(--brand-foreground);
+    background: var(--brand);
+  }
+  .apply:hover {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .reset {
+    color: var(--foreground);
+    background: var(--control);
+  }
+  :is(.close, .apply, .reset):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
+  }
+  .body {
+    flex: 1;
+    min-height: 0;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .field {
+    height: calc(var(--spacing) * 11);
+    font-size: calc(var(--spacing) * 3.5);
+    background: var(--control);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .searchDialog {
+    width: min(calc(var(--spacing) * 230), calc(100vw - var(--spacing) * 16));
+    height: min(calc(var(--spacing) * 142), calc(100dvh - var(--spacing) * 16));
+  }
+  .searchHeader {
+    flex: none;
+    padding: 0;
+    text-align: left;
+  }
+  .searchFieldBlock {
+    margin: calc(var(--spacing) * 4) calc(var(--spacing) * 5) 0;
+  }
+  .searchBodyGrid {
+    display: grid;
+    gap: calc(var(--spacing) * 4);
+  }
+  .searchOption {
+    min-height: calc(var(--spacing) * 11);
+  }
+  .localeDialog {
+    width: min(calc(var(--spacing) * 128), calc(100vw - var(--spacing) * 16));
+    max-width: none;
+    max-height: min(
+      calc(var(--spacing) * 160),
+      calc(100dvh - var(--spacing) * 16)
+    );
+    color: var(--foreground);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 5);
+    box-shadow: var(--elevation-overlay);
+  }
+  .localeDialog > div {
+    max-height: inherit;
+  }
+  .localeDialog :global([data-locale-fields]) {
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+  }
+  .localeDialog :global([data-language-option]),
+  .localeDialog select {
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .localeDialog :global([data-language-option]) span,
+  .localeDialog select {
+    font-size: calc(var(--spacing) * 3.5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    padding: var(--spacing);
+    color: var(--foreground);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: var(--elevation-overlay);
+  }
+  .menu :global([role="option"]),
+  .menu :global(button[aria-pressed]) {
+    height: auto;
+    min-height: calc(var(--spacing) * 11);
+    padding-block: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    border-radius: calc(var(--spacing) * 2);
+  }
+}

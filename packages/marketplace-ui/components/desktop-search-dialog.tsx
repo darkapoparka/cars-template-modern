@@ -36,6 +36,7 @@ import type {
   getDesktopSearchSuggestionGroups,
   SearchSuggestionItem,
 } from "../lib/desktop-search-policy";
+import overlayStyles from "./desktop-overlay.module.css";
 import Image from "./public-image";
 
 export type DesktopSearchAppearance = "standard" | "toolbar" | "hero";
@@ -104,7 +105,7 @@ export const DesktopSearchDialog = ({
   return (
     <Dialog onOpenChange={handleOpenChange} open={open}>
       <DialogContent
-        className="fixed top-1/2 left-1/2 z-[var(--desktop-layer-dialog)] flex h-[var(--desktop-search-dialog-height)] w-[var(--desktop-search-dialog-width)] max-w-none -translate-x-1/2 -translate-y-1/2 flex-col gap-0 overflow-hidden rounded-3xl border border-border/75 bg-panel p-0 shadow-overlay sm:max-w-none"
+        className={cn(overlayStyles.dialog, overlayStyles.searchDialog)}
         data-slot="desktop-search-dialog"
         id={dialogId}
         onCloseAutoFocus={onCloseAutoFocus}
@@ -114,20 +115,20 @@ export const DesktopSearchDialog = ({
         }}
         showCloseButton={false}
       >
-        <DialogHeader className="shrink-0 bg-panel px-6 pt-5 text-left sm:px-8">
+        <DialogHeader className={overlayStyles.searchHeader}>
           <DialogDescription className="sr-only">
             {isBg
               ? "Търсете автомобили или задайте филтри. Натиснете Escape, за да затворите търсенето."
               : "Search vehicles or set filters. Press Escape to close search."}
           </DialogDescription>
-          <div className="mx-auto flex w-full max-w-[var(--desktop-search-dialog-content)] items-center justify-between gap-4">
+          <div className={overlayStyles.header}>
             <DialogTitle className="font-semibold text-foreground text-xl tracking-tight">
               {dialogTitle}
             </DialogTitle>
             <DialogClose asChild>
               <Button
                 aria-label={isBg ? "Затвори търсенето" : "Close search"}
-                className="size-10 shrink-0 rounded-full border-0 bg-control text-muted-foreground hover:bg-control-hover hover:text-foreground"
+                className={overlayStyles.close}
                 size="icon"
                 type="button"
                 variant="ghost"
@@ -136,7 +137,7 @@ export const DesktopSearchDialog = ({
               </Button>
             </DialogClose>
           </div>
-          <div className="mx-auto w-full max-w-[var(--desktop-search-dialog-content)] pt-4 pb-5">
+          <div className={overlayStyles.searchFieldBlock}>
             <div className="relative flex min-w-0 items-center">
               <Search
                 aria-hidden="true"
@@ -153,7 +154,10 @@ export const DesktopSearchDialog = ({
                 aria-expanded={open && showSuggestions}
                 aria-label={ariaLabel}
                 autoComplete="off"
-                className="h-12 min-w-0 flex-1 rounded-xl border border-border bg-control pr-5 pl-12 text-body text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-foreground/40 focus-visible:ring-2 focus-visible:ring-ring/30"
+                className={cn(
+                  "min-w-0 flex-1 pr-5 pl-12 text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-foreground/40 focus-visible:ring-2 focus-visible:ring-ring/30",
+                  overlayStyles.field
+                )}
                 name="q"
                 onChange={(event) => {
                   onQueryChange(event.target.value);
@@ -170,8 +174,8 @@ export const DesktopSearchDialog = ({
             </div>
           </div>
         </DialogHeader>
-        <div className="min-h-0 flex-1 overflow-y-auto bg-panel">
-          <div className="mx-auto grid w-full gap-5 px-6 pb-5 sm:px-8">
+        <div className={overlayStyles.body}>
+          <div className={overlayStyles.searchBodyGrid}>
             {filterSlot}
             {showSuggestions ? (
               <div
@@ -204,11 +208,11 @@ export const DesktopSearchDialog = ({
             ) : null}
           </div>
         </div>
-        <footer className="shrink-0 bg-panel px-6 pb-5 sm:px-8">
+        <footer className={overlayStyles.footer}>
           {filterSlot ? (
             <div className="mx-auto flex w-full max-w-[var(--desktop-search-dialog-content)] items-center justify-end">
               <Button
-                className="h-11 gap-2 rounded-full bg-brand px-6 font-semibold text-brand-foreground shadow-none hover:bg-[var(--lead-site-accent-hover)] hover:text-[var(--brand-hover-foreground)]"
+                className={cn("gap-2", overlayStyles.apply)}
                 data-slot="desktop-search-submit"
                 onClick={onSearchSubmit}
                 type="button"
@@ -393,6 +397,7 @@ const SearchSuggestionOption = ({
       aria-selected={selected}
       className={cn(
         "h-auto w-full justify-start text-left font-normal",
+        overlayStyles.searchOption,
         surfaceClassName,
         selectedClassName,
         spansWidePanel && "desktop-wide:col-span-2"

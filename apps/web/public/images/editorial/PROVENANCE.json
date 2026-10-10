@@ -1,0 +1,48 @@
+{
+  "generatedOn": "2026-10-10",
+  "generator": "Built-in image_gen.imagegen",
+  "reference": "/images/services/desktop-finance-v1.webp",
+  "scope": "Decorative article-detail hero artwork at mobile and desktop widths. Collection artwork remains unchanged.",
+  "description": "Coordinated pearl-white car cutouts with topic props: inspection scanner and checklist, electric charging equipment, or a listing laptop and magnifier. No inventory, certification, availability or pricing claims.",
+  "conversion": "PNG to WebP, quality 86 and alpha quality 100, original dimensions retained. No cropping, resizing, compositing or colour edits. Generated originals preserved.",
+  "reusedAssets": [
+    "/images/services/desktop-imports-v1.webp",
+    "/images/services/desktop-finance-v1.webp",
+    "/images/services/desktop-sell-v1.webp"
+  ],
+  "assets": [
+    {
+      "role": "inspection",
+      "path": "/images/editorial/article-inspection-v1.webp",
+      "original": "C:/Users/radev/.codex/generated_images/01a12019-1ec7-7fa1-ac39-9058d1285864/exec-4e1d2b2f-992e-4eaa-8766-0bfad7285f5d.png",
+      "originalSha256": "0bdbdbb2938ace7887783b1c9c2ac166ab9f1e9aed15356235ecf40464c2ce4e",
+      "sha256": "81847f0e87099efa6a16e0a959512e1310b0fcae1561fd47247d11febebfa548",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": true,
+      "bytes": 153260
+    },
+    {
+      "role": "charging",
+      "path": "/images/editorial/article-charging-v1.webp",
+      "original": "C:/Users/radev/.codex/generated_images/01a12019-1ec7-7fa1-ac39-9058d1285864/exec-47e16614-486e-49ee-8d29-20fe0dec83c1.png",
+      "originalSha256": "78b263dba948bff4d57883f25f5df246858f0813677153e2e3c838154b1a1001",
+      "sha256": "1dad34eabc4afa5b612c8f665eed1b87d43cfee48c6afefe025a3dd9286f61fc",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": true,
+      "bytes": 151362
+    },
+    {
+      "role": "listing",
+      "path": "/images/editorial/article-listing-v1.webp",
+      "original": "C:/Users/radev/.codex/generated_images/01a12019-1ec7-7fa1-ac39-9058d1285864/exec-7fc1d5f9-4c77-488b-9759-630975f1ad81.png",
+      "originalSha256": "9f2cfa50e757f2705cdd5db2b50d1a1174e7f331395409257824328e8597be0b",
+      "sha256": "63595cfd80958c87e39286680d1b194224b05af2d80e234865ecae249265f13c",
+      "width": 1672,
+      "height": 941,
+      "hasAlpha": true,
+      "bytes": 143018
+    }
+  ]
+}

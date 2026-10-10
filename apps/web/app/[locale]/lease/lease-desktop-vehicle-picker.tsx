@@ -10,13 +10,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@repo/design-system/components/ui/dialog";
+import { desktopOverlayStyles as overlayStyles } from "@repo/marketplace-ui";
 import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehicle-facts";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { getDealerVehicleTypeArtwork } from "@repo/marketplace-ui/lib/dealer-vehicle-types";
 import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { ChevronRight, RefreshCw, Search, Trash2, X } from "lucide-react";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./lease-desktop-vehicle-picker.module.css";
 import {
   type FinancingVehicleOption,
@@ -38,6 +39,16 @@ export function LeaseDesktopVehiclePicker({
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnMobile = () => {
+      if (!desktop.matches) {
+        setOpen(false);
+      }
+    };
+    desktop.addEventListener("change", closeOnMobile);
+    return () => desktop.removeEventListener("change", closeOnMobile);
+  }, []);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const copy = leaseSelectorCopy[locale];
   const matches = searchLeaseVehicles(vehicles, query, locale);
@@ -185,13 +196,26 @@ export function LeaseDesktopVehiclePicker({
         )}
       </div>
       <DialogContent
-        className={styles.dialog}
+        className={`${overlayStyles.dialog} ${styles.dialog}`}
         data-slot="lease-desktop-vehicle-dialog"
         showCloseButton={false}
       >
-        <DialogHeader>
+        <DialogHeader className={overlayStyles.header}>
           <DialogTitle>{copy.searchTitle}</DialogTitle>
-          <DialogDescription>{text.description}</DialogDescription>
+          <DialogDescription className="sr-only">
+            {text.description}
+          </DialogDescription>
+          <DialogClose asChild>
+            <button
+              aria-label={
+                locale === "bg" ? "Затвори избора" : "Close vehicle selection"
+              }
+              className={overlayStyles.close}
+              type="button"
+            >
+              <X aria-hidden="true" size={18} />
+            </button>
+          </DialogClose>
         </DialogHeader>
         <label className={styles.search}>
           <Search aria-hidden="true" size={18} />
@@ -221,17 +245,6 @@ export function LeaseDesktopVehiclePicker({
             <output className={styles.empty}>{text.empty}</output>
           )}
         </div>
-        <DialogClose asChild>
-          <button
-            aria-label={
-              locale === "bg" ? "Затвори избора" : "Close vehicle selection"
-            }
-            className={styles.close}
-            type="button"
-          >
-            <X aria-hidden="true" size={18} />
-          </button>
-        </DialogClose>
       </DialogContent>
     </Dialog>
   );

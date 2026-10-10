@@ -31,6 +31,7 @@ export * from "./components/related-listing-card";
 export * from "./components/seller-contact-panel";
 export * from "./components/vehicle-card";
 export * from "./lib/account-save-flow";
+export { desktopOverlayStyles } from "./lib/desktop-overlay-styles";
 export * from "./lib/listing-truth";
 export * from "./lib/marketplace-filter-summary";
 export * from "./lib/marketplace-layout";

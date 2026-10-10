@@ -34,6 +34,7 @@ import {
 } from "./desktop-full-filter-content";
 import styles from "./desktop-full-filter-dialog.module.css";
 import { DesktopFullFilterGroupContent } from "./desktop-full-filter-group";
+import { DesktopMakeModelColumns } from "./desktop-make-model-columns";
 
 export type {
   DesktopFullFilterEntry,
@@ -124,10 +125,15 @@ export function DesktopFullFilterDialog({
           event.preventDefault();
           const target =
             contentRef.current?.querySelector<HTMLElement>(
-              '[data-slot="desktop-full-filter-content"] input:not([disabled])'
+              initialEntry === "model" && draft.make
+                ? '[data-slot="desktop-filter-model-panel"] input:not([disabled])'
+                : '[data-slot="desktop-full-filter-content"] input:not([disabled])'
             ) ??
             contentRef.current?.querySelector<HTMLElement>(
               '[data-slot="desktop-full-filter-navigation"] [data-state="active"]'
+            ) ??
+            contentRef.current?.querySelector<HTMLElement>(
+              '[data-slot="desktop-full-filter-close"]'
             );
           target?.focus({ preventScroll: true });
         }}
@@ -153,14 +159,27 @@ export function DesktopFullFilterDialog({
         </DialogHeader>
         {focused ? (
           <div
-            className={styles.focusedContent}
+            className={
+              section === "vehicle"
+                ? styles.focusedVehicleContent
+                : styles.focusedContent
+            }
             data-slot="desktop-full-filter-content"
           >
-            <DesktopFullFilterContent
-              {...vehicleProps}
-              section={section}
-              showHeading={false}
-            />
+            {section === "vehicle" ? (
+              <DesktopMakeModelColumns
+                {...fieldProps}
+                key={`${draft.category}:${resetVersion}`}
+                modelCounts={modelCounts}
+                taxonomy={taxonomy}
+              />
+            ) : (
+              <DesktopFullFilterContent
+                {...vehicleProps}
+                section={section}
+                showHeading={false}
+              />
+            )}
           </div>
         ) : (
           <Tabs
