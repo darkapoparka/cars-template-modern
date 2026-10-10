@@ -214,7 +214,7 @@
     color: var(--accent-foreground);
     background: var(--accent);
   }
-  .modelOptions :global(button[aria-pressed="true"]) {
+  .vehiclePanel .modelOptions :global(button[aria-pressed="true"]) {
     color: var(--brand-foreground);
     background: var(--brand);
     border-color: var(--brand);
