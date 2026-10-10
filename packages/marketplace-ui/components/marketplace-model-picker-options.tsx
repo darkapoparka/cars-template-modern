@@ -2,6 +2,7 @@ import { Button } from "@repo/design-system/components/ui/button";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleTaxonomyModelOption } from "@repo/marketplace";
 import { ChevronRight } from "lucide-react";
+import type { ReactNode } from "react";
 import { getMarketplaceModelInventoryKey } from "../lib/model-picker-options";
 
 export const marketplaceOptionButtonClassName =
@@ -79,6 +80,7 @@ const ModelPickerOptionGrid = ({
   countByKey,
   isDesktop,
   items,
+  leadingOption,
   make,
   model,
   onSelect,
@@ -86,11 +88,13 @@ const ModelPickerOptionGrid = ({
   countByKey?: ReadonlyMap<string, number>;
   isDesktop: boolean;
   items: VehicleTaxonomyModelOption[];
+  leadingOption?: ReactNode;
   make?: string;
   model?: string;
   onSelect: (item: VehicleTaxonomyModelOption) => void;
 }) => (
   <div className={cn("grid gap-2", isDesktop ? "grid-cols-2" : "grid-cols-1")}>
+    {leadingOption}
     {items.map((item) => (
       <ModelPickerOptionButton
         inventoryCount={getModelInventoryCount({
@@ -111,6 +115,7 @@ export const ModelPickerSections = ({
   additionalModelsLabel,
   countByKey,
   isDesktop,
+  leadingOption,
   make,
   model,
   onSelect,
@@ -121,6 +126,7 @@ export const ModelPickerSections = ({
   additionalModelsLabel: string;
   countByKey?: ReadonlyMap<string, number>;
   isDesktop: boolean;
+  leadingOption?: ReactNode;
   make?: string;
   model?: string;
   onSelect: (item: VehicleTaxonomyModelOption) => void;
@@ -135,6 +141,7 @@ export const ModelPickerSections = ({
           countByKey={countByKey}
           isDesktop
           items={[...popular, ...remaining]}
+          leadingOption={leadingOption}
           make={make}
           model={model}
           onSelect={onSelect}

@@ -188,7 +188,8 @@
     white-space: normal;
   }
   .makeOptions button,
-  .modelOptions :global([data-slot="model-option"]) {
+  .modelOptions :global([data-slot="model-option"]),
+  .modelOptions :global([data-slot="model-any-option"]) {
     min-height: calc(var(--spacing) * 11);
     font-weight: 500;
   }
@@ -197,14 +198,10 @@
     border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-pill);
   }
-  .vehiclePanel .modelOptions > :global(button[aria-pressed]),
-  .modelOptions :global([data-slot="model-option"]) {
+  .modelOptions :global([data-slot="model-option"]),
+  .modelOptions :global([data-slot="model-any-option"]) {
     height: calc(var(--spacing) * 11);
     min-height: calc(var(--spacing) * 11);
-  }
-  .vehiclePanel .modelOptions > :global(button[aria-pressed]) {
-    width: auto;
-    padding-inline: calc(var(--spacing) * 3);
   }
   .modelOptions :global(button[aria-pressed="false"]) {
     color: var(--secondary-foreground);

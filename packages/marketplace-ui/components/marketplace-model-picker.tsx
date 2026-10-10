@@ -250,11 +250,13 @@ interface MakeModelPickerOptionsProps {
 }
 function AnyMakeModelOption({
   className,
+  dataSlot,
   label,
   onSelect,
   selected,
 }: {
   className: string;
+  dataSlot?: string;
   label: string;
   onSelect: () => void;
   selected: boolean;
@@ -270,6 +272,7 @@ function AnyMakeModelOption({
         selected &&
           "border-brand bg-brand text-brand-foreground hover:bg-brand hover:text-brand-foreground"
       )}
+      data-slot={dataSlot}
       onClick={onSelect}
       variant={selected ? "default" : "secondary"}
     >
@@ -342,20 +345,26 @@ function ModelPickerOptions({
 >) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const copy = getMarketplaceControlCopy(locale);
+  const anyModelOption = onSelectAny ? (
+    <AnyMakeModelOption
+      className={cn(
+        "h-12 w-full rounded-lg",
+        isDesktop ? "justify-start px-3" : "mb-2"
+      )}
+      dataSlot={isDesktop ? "model-any-option" : undefined}
+      label={isBg ? "Всички модели" : "All models"}
+      onSelect={onSelectAny}
+      selected={!model}
+    />
+  ) : null;
   return (
     <>
-      {onSelectAny ? (
-        <AnyMakeModelOption
-          className="mb-2 h-12 w-full rounded-lg"
-          label={isBg ? "Всички модели" : "All models"}
-          onSelect={onSelectAny}
-          selected={!model}
-        />
-      ) : null}
+      {isDesktop ? null : anyModelOption}
       <ModelPickerSections
         additionalModelsLabel={copy.makeModel.additionalModels}
         countByKey={modelInventoryCountByKey}
         isDesktop={isDesktop}
+        leadingOption={isDesktop ? anyModelOption : undefined}
         make={make}
         model={model}
         onSelect={onSelectModel}
