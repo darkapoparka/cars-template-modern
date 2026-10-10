@@ -61,7 +61,7 @@
     cursor: pointer;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 2);
+    border-radius: var(--radius-pill);
     box-shadow: none;
   }
   .sort,
@@ -264,7 +264,7 @@
     color: var(--foreground);
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 2);
+    border-radius: var(--radius-pill);
     box-shadow: none;
   }
   .controls :is(.filters, .sort) > .controlIcon {
