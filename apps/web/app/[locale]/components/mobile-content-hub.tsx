@@ -316,7 +316,7 @@ export const MobileContentHub = ({
                 onChange={(event) =>
                   updateSearch({ query: event.target.value, filter })
                 }
-                placeholder={isBg ? "Търси статии" : "Search articles"}
+                placeholder={`${isBg ? "Търси статии" : "Search articles"} (${visibleItems.length})`}
                 ref={searchInput}
                 type="search"
                 value={query}
@@ -325,7 +325,11 @@ export const MobileContentHub = ({
                 aria-atomic="true"
                 aria-label={contentResultsLabels[locale]}
                 aria-live="polite"
-                className="shrink-0 px-2 text-meta text-muted-foreground tabular-nums"
+                className={cn({
+                  "shrink-0 px-2 text-meta text-muted-foreground tabular-nums":
+                    query,
+                  "sr-only": !query,
+                })}
                 data-slot="content-search-count"
               >
                 ({visibleItems.length})
@@ -385,7 +389,7 @@ export const MobileContentHub = ({
                 prefetch={false}
               >
                 <div
-                  className="relative aspect-[2/1] w-full min-w-0 shrink-0 overflow-hidden bg-secondary"
+                  className="relative aspect-[7/3] w-full min-w-0 shrink-0 overflow-hidden bg-secondary"
                   data-slot="content-card-media"
                 >
                   <picture className="absolute inset-0 block">
@@ -399,7 +403,7 @@ export const MobileContentHub = ({
                       alt=""
                       className={
                         item.mobileImage
-                          ? "object-contain object-center p-3"
+                          ? "object-contain object-center p-2.5"
                           : "object-cover object-center"
                       }
                       fill
@@ -410,7 +414,7 @@ export const MobileContentHub = ({
                   </picture>
                 </div>
                 <div
-                  className="flex min-w-0 flex-1 flex-col p-3"
+                  className="flex min-w-0 flex-1 flex-col p-2.5"
                   data-slot="content-card-body"
                 >
                   <div
@@ -420,7 +424,7 @@ export const MobileContentHub = ({
                     <span className="whitespace-nowrap">{item.category}</span>
                   </div>
                   <div
-                    className="mt-1 flex items-center gap-3 lg:mt-0 lg:block"
+                    className="mt-1 flex items-end gap-3 lg:mt-0 lg:block"
                     data-slot="content-card-heading"
                   >
                     <h2
@@ -432,7 +436,7 @@ export const MobileContentHub = ({
                     </h2>
                     <ArrowRight
                       aria-hidden="true"
-                      className="size-4 shrink-0 text-muted-foreground lg:hidden"
+                      className="mb-0.5 size-4 shrink-0 text-muted-foreground lg:hidden"
                     />
                   </div>
                   <p
