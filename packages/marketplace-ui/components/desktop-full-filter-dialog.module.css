@@ -192,6 +192,37 @@
     min-height: calc(var(--spacing) * 11);
     font-weight: 500;
   }
+  .vehiclePanel .modelOptions :global(button[aria-pressed]) {
+    font-weight: 500;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-pill);
+  }
+  .vehiclePanel .modelOptions > :global(button[aria-pressed]),
+  .modelOptions :global([data-slot="model-option"]) {
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
+  }
+  .vehiclePanel .modelOptions > :global(button[aria-pressed]) {
+    width: auto;
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .modelOptions :global(button[aria-pressed="false"]) {
+    color: var(--secondary-foreground);
+    background: var(--secondary);
+  }
+  .modelOptions :global(button[aria-pressed="false"]:hover) {
+    color: var(--accent-foreground);
+    background: var(--accent);
+  }
+  .modelOptions :global(button[aria-pressed="true"]) {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .modelOptions :global(button[aria-pressed="true"]:hover) {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
   .vehiclePanel
     :global(button[aria-pressed="false"] [data-slot="picker-option-meta"]) {
     color: var(--desktop-prose-text);

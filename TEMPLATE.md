@@ -36,6 +36,8 @@ Use [QA](docs/QA.md) for route/interaction checks. Current rendered source and o
 
 Article controls use concise localized navigation labels on one line, with full section headings retained in accessible link names. Mobile contents rows use 14 px labels and 44 px tap targets. Related-reading cards use short display titles limited to two lines, full accessible article names, a wider text column and 56 px square thumbnails on mobile. Their mobile cards are 88 px high; desktop retains 64 px thumbnails and rows. Topic badges and vehicle actions keep single-line labels. This compact article treatment applies to both locales and all six detail routes.
 
+The shared desktop make/model panels use matching 44 px pill choices, quiet neutral fills and borders, and the configured brand for selection. All models is a content-sized option above the model groups. Standalone Make/Model and the Home/Cars full Filters dialog reuse these panels; their close and footer actions share the pill treatment. Mobile retains its existing choices.
+
 ## Code and content boundaries
 
 [Architecture](docs/architecture.md) describes server/client ownership, browser preferences and public request handling. Primary personalization surfaces remain packages/marketplace/lead-site.ts, packages/marketplace/, apps/web/app/ and apps/web/public/. site-config.ts validates the adapted public site and preserves supported older artwork overrides.
