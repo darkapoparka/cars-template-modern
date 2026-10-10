@@ -127,50 +127,67 @@ export const ModelPickerSections = ({
   popular: VehicleTaxonomyModelOption[];
   popularModelsLabel: string;
   remaining: VehicleTaxonomyModelOption[];
-}) => (
-  <div className="space-y-4" data-slot="model-options">
-    {popular.length > 0 ? (
-      <section aria-labelledby="popular-models-heading">
-        <p
-          className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
-          id="popular-models-heading"
-        >
-          {popularModelsLabel}
-        </p>
+}) => {
+  if (isDesktop) {
+    return (
+      <div data-slot="model-options">
         <ModelPickerOptionGrid
           countByKey={countByKey}
-          isDesktop={isDesktop}
-          items={popular}
+          isDesktop
+          items={[...popular, ...remaining]}
           make={make}
           model={model}
           onSelect={onSelect}
         />
-      </section>
-    ) : null}
+      </div>
+    );
+  }
 
-    {remaining.length > 0 ? (
-      <section
-        aria-labelledby={
-          popular.length > 0 ? "additional-models-heading" : undefined
-        }
-      >
-        {popular.length > 0 ? (
+  return (
+    <div className="space-y-4" data-slot="model-options">
+      {popular.length > 0 ? (
+        <section aria-labelledby="popular-models-heading">
           <p
             className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
-            id="additional-models-heading"
+            id="popular-models-heading"
           >
-            {additionalModelsLabel}
+            {popularModelsLabel}
           </p>
-        ) : null}
-        <ModelPickerOptionGrid
-          countByKey={countByKey}
-          isDesktop={isDesktop}
-          items={remaining}
-          make={make}
-          model={model}
-          onSelect={onSelect}
-        />
-      </section>
-    ) : null}
-  </div>
-);
+          <ModelPickerOptionGrid
+            countByKey={countByKey}
+            isDesktop={isDesktop}
+            items={popular}
+            make={make}
+            model={model}
+            onSelect={onSelect}
+          />
+        </section>
+      ) : null}
+
+      {remaining.length > 0 ? (
+        <section
+          aria-labelledby={
+            popular.length > 0 ? "additional-models-heading" : undefined
+          }
+        >
+          {popular.length > 0 ? (
+            <p
+              className="mb-2 px-1 font-semibold text-micro text-muted-foreground uppercase tracking-label"
+              id="additional-models-heading"
+            >
+              {additionalModelsLabel}
+            </p>
+          ) : null}
+          <ModelPickerOptionGrid
+            countByKey={countByKey}
+            isDesktop={isDesktop}
+            items={remaining}
+            make={make}
+            model={model}
+            onSelect={onSelect}
+          />
+        </section>
+      ) : null}
+    </div>
+  );
+};
