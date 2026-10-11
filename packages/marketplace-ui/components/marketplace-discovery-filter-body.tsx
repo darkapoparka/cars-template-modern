@@ -457,6 +457,7 @@ export const DiscoveryFilterBody = ({
       draft={draft}
       locale={locale}
       setDraft={setDraft}
+      showSummaryLabel={false}
       view={view}
     />
   );

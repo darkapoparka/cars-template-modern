@@ -23,6 +23,7 @@ interface NumericRangeFieldProps {
   ariaLabel: string;
   fieldId: string;
   formattedValue: string;
+  isDefaultValue: boolean;
   label: string;
   maximum: number;
   minimum: number;
@@ -36,6 +37,7 @@ const NumericRangeField = ({
   ariaLabel,
   fieldId,
   formattedValue,
+  isDefaultValue,
   label,
   maximum,
   minimum,
@@ -48,12 +50,12 @@ const NumericRangeField = ({
     className="group relative block font-medium text-meta text-zinc-600"
     htmlFor={fieldId}
   >
-    <span className="pointer-events-none absolute top-2 left-3 z-10 font-normal text-xs text-zinc-600">
+    <span className="pointer-events-none absolute top-2 left-3 z-10 font-normal text-xs text-zinc-600 max-lg:hidden">
       {label}
     </span>
     <Input
       aria-label={ariaLabel}
-      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-2 focus-visible:ring-ring/15 focus-visible:ring-offset-0 group-focus-within:text-zinc-950 md:text-base"
+      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-2 focus-visible:ring-ring/15 focus-visible:ring-offset-0 group-focus-within:text-zinc-950 max-lg:h-12 max-lg:py-3 md:text-base"
       id={fieldId}
       inputMode="numeric"
       max={maximum}
@@ -66,9 +68,18 @@ const NumericRangeField = ({
     />
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute right-3 bottom-0 left-3 flex h-14 items-end pb-1.5 text-base text-zinc-950 tabular-nums group-focus-within:hidden"
+      className="pointer-events-none absolute right-3 bottom-0 left-3 flex h-14 items-end pb-1.5 text-base text-zinc-950 tabular-nums group-focus-within:hidden max-lg:hidden"
     >
       {formattedValue}
+    </span>
+    <span
+      aria-hidden="true"
+      className={cn(
+        "pointer-events-none absolute right-3 bottom-0 left-3 hidden h-12 items-center text-base text-zinc-950 tabular-nums group-focus-within:hidden max-lg:flex",
+        isDefaultValue && "font-normal text-muted-foreground"
+      )}
+    >
+      {isDefaultValue ? label : formattedValue}
     </span>
   </label>
 );
@@ -208,6 +219,7 @@ export const NumericRangeFilter = ({
             ariaLabel={thumbLabels[0]}
             fieldId={`${inputId}-minimum`}
             formattedValue={formatValue(minimum)}
+            isDefaultValue={minimum === rangeMinimum}
             label={minimumLabel}
             maximum={maximum}
             minimum={rangeMinimum}
@@ -221,6 +233,7 @@ export const NumericRangeFilter = ({
           ariaLabel={thumbLabels[1]}
           fieldId={`${inputId}-maximum`}
           formattedValue={formatValue(maximum)}
+          isDefaultValue={maximum === rangeMaximum}
           label={maximumLabel}
           maximum={rangeMaximum}
           minimum={minimum}

@@ -66,6 +66,7 @@ export function LocalePreferencesProvider({
 }) {
   const promptKey = `cars.prompt.${promptVersion}`;
   const dialog = useRef<HTMLDialogElement>(null);
+  const title = useRef<HTMLHeadingElement>(null);
   const returnFocus = useRef<HTMLElement | null>(null);
   const attempted = useRef(false);
   const requestVersion = useRef(0);
@@ -142,6 +143,7 @@ export function LocalePreferencesProvider({
     const element = dialog.current;
     if (open && element && !element.open) {
       element.showModal();
+      title.current?.focus({ preventScroll: true });
     }
     if (!open && element?.open) {
       element.close();
@@ -294,8 +296,10 @@ export function LocalePreferencesProvider({
             )}
           >
             <h2
-              className="min-w-0 font-semibold text-lg leading-6 max-lg:font-medium"
+              className="min-w-0 font-semibold text-lg leading-6 outline-none max-lg:font-medium"
               id="locale-preferences-title"
+              ref={title}
+              tabIndex={-1}
             >
               <span className="lg:hidden">{t("locale.mobileTitle")}</span>
               <span className="hidden lg:inline">{t("locale.title")}</span>

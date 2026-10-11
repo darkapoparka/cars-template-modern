@@ -1,4 +1,5 @@
 "use client";
+import { cn } from "@repo/design-system/lib/utils";
 import { publicSite } from "@repo/marketplace/site-config";
 
 import { mobileDealerContentClassName } from "@repo/marketplace-ui";
@@ -74,7 +75,7 @@ export const MobileSellVehicleHero = ({
         </div>
       </MobileDealerServiceHero>
       <div
-        className={`${mobileDealerContentClassName} pb-3`}
+        className={cn(mobileDealerContentClassName, "pt-2 pb-2")}
         data-slot="mobile-dealer-content"
       >
         <button

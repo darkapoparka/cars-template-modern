@@ -318,7 +318,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           </div>
         </MobileDealerServiceHero>
         <div
-          className={`${mobileDealerContentClassName} pb-3 lg:hidden`}
+          className={cn(
+            mobileDealerContentClassName,
+            "pt-2.5 pb-2.5 lg:hidden"
+          )}
           data-slot="mobile-dealer-content"
         >
           <section
@@ -459,7 +462,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
 
           <section
             aria-labelledby="external-import-listings-heading"
-            className="-mx-3 bg-background px-4 pb-3 sm:-mx-4 sm:px-4 lg:mx-0 lg:mt-8 lg:rounded-2xl lg:border lg:border-border lg:bg-card lg:p-6"
+            className={cn(
+              "-mx-3 bg-background px-4 pb-3 sm:-mx-4 sm:px-4 lg:mx-0 lg:mt-8 lg:rounded-2xl lg:border lg:border-border lg:bg-card lg:p-6",
+              !showImportRequest && "max-lg:pt-0!"
+            )}
             data-slot="external-import-listings"
           >
             <ExternalImportListings

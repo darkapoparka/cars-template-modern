@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@repo/design-system/components/ui/button";
+import { cn } from "@repo/design-system/lib/utils";
 import {
   fallbackVehicleTaxonomy,
   type MarketplaceSearchParams,
@@ -211,7 +212,7 @@ export const LeaseMobileSelection = ({
         </div>
       </MobileDealerServiceHero>
       <div
-        className={`${mobileDealerContentClassName} pb-6`}
+        className={cn(mobileDealerContentClassName, "pt-2.5 pb-6")}
         data-slot="mobile-dealer-content"
       >
         {
@@ -227,7 +228,7 @@ export const LeaseMobileSelection = ({
 
         {selectedVehicle ? (
           <>
-            <div className="mt-3">
+            <div className="mt-2.5">
               <LeaseSelectedVehicle
                 locale={locale}
                 onClear={onClearVehicle}
@@ -250,7 +251,10 @@ export const LeaseMobileSelection = ({
             </Button>
           </>
         ) : (
-          <div className="mt-3 grid gap-2" data-slot="lease-vehicle-inventory">
+          <div
+            className="mt-2.5 grid gap-2"
+            data-slot="lease-vehicle-inventory"
+          >
             {filtered.length ? (
               filtered.map((vehicle, index) => (
                 <LeaseSelectedVehicle

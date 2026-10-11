@@ -116,7 +116,7 @@ export const ImportOriginField = ({
         }
         title={drawerTitle}
       >
-        <div className="grid gap-2 px-3 pb-[calc(1rem+env(safe-area-inset-bottom))]">
+        <div className="grid gap-2 px-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
           {importRequestOrigins.map((option) => {
             const optionLabel = locale === "bg" ? option.bg : option.en;
             return (

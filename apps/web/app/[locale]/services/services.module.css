@@ -308,7 +308,7 @@
   .mobileQuickFilters {
     position: relative;
     display: block;
-    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4) 0;
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4) 0;
     margin-top: calc(var(--spacing) * -3);
     background: var(--canvas);
     border-radius: calc(var(--spacing) * 4) calc(var(--spacing) * 4) 0 0;
@@ -317,7 +317,7 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: calc(var(--spacing) * 3);
     max-width: 32rem;
-    margin-block: calc(var(--spacing) * 3) calc(var(--spacing) * 6);
+    margin-block: calc(var(--spacing) * 2.5) calc(var(--spacing) * 6);
   }
   .card {
     position: relative;

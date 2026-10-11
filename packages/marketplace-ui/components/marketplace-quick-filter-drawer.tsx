@@ -170,6 +170,7 @@ export const MarketplaceQuickFilterDrawer = ({
             draft={draft}
             locale={locale}
             setDraft={setDraft}
+            showSummaryLabel={false}
             view={activeFilter}
           />
         ) : null}

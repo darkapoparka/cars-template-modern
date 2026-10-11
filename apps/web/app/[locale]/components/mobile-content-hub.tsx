@@ -361,7 +361,7 @@ export const MobileContentHub = ({
       >
         <div
           className={cn(
-            "relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8",
+            "relative -mt-3 rounded-t-2xl bg-background pt-2.5 lg:mt-0 lg:rounded-none lg:pt-8",
             desktopStyles.editorialPanel
           )}
         >
@@ -376,7 +376,7 @@ export const MobileContentHub = ({
           </div>
 
           <div
-            className="mt-3 grid gap-3 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
+            className="mt-2.5 grid gap-3 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
             data-slot="editorial-content-grid"
           >
             {visibleItems.map((item, index) => (

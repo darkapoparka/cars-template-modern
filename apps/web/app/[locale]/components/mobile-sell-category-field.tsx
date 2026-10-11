@@ -88,7 +88,7 @@ export function MobileSellCategoryField({
         }
         title={title}
       >
-        <div className="grid gap-2 px-3 pb-4">
+        <div className="grid gap-2 px-4 pb-4">
           {options.map((option) => (
             <button
               aria-pressed={value === option.value}

@@ -111,7 +111,7 @@ const MobileLoadingHeader = ({
       </div>
     )}
     <div
-      className={`${mobileDealerContentClassName} pb-3`}
+      className={cn(mobileDealerContentClassName, "pt-2.5 pb-2.5")}
       data-slot="mobile-dealer-content"
     >
       <div className="flex gap-2 overflow-hidden">

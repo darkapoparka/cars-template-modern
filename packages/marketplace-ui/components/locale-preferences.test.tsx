@@ -52,6 +52,7 @@ describe("locale preference choices", () => {
       expect(markup).toContain("<fieldset");
       expect(markup).toContain("<legend");
       expect(markup).toContain('aria-labelledby="locale-preferences-title"');
+      expect(markup).toContain('id="locale-preferences-title" tabindex="-1"');
       expect(markup).toContain("data-locale-actions");
     });
   }
